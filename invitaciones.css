@@ -1,0 +1,10 @@
+body {
+    background-color: black;
+    color: aliceblue;
+}
+
+.titulo {
+    width: 100%;
+    flex-direction: column;
+    
+}
