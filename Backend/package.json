@@ -1,0 +1,11 @@
+{
+  "name": "alezzia-backend",
+  "version": "1.0.0",
+  "description": "Este proyecto se dedicara a la gestion de invitados, a travez de codigos QR, esperamos que en la version terminada, este cumpla con optimizar los tiempos de organizacion de los invitados.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josadac Castañeda",
+  "license": "ISC"
+}
