@@ -1,0 +1,78 @@
+body {
+  background-color: #3e4144;
+}
+
+.navbar {
+  margin-bottom: 30px;
+}
+.navbar .icon {
+  margin: 2px;
+}
+
+.about-container {
+  max-height: 800px;
+  margin: 50px 0px;
+  padding: 40px;
+  background-color: #212529;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-container .img-about {
+  width: 500px;
+}
+.about-container .text-about {
+  width: 500px;
+}
+
+.tarjetas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 30px;
+}
+.tarjetas .card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #36393d;
+  color: aliceblue;
+  max-width: 300px;
+  margin: 10px;
+  margin-bottom: 30px;
+}
+.tarjetas .card .card-img {
+  height: 280px;
+  max-height: 280px;
+  object-fit: cover;
+}
+.tarjetas .card .card-body {
+  padding: 0px;
+}
+.tarjetas .card .card-body .card-title {
+  border-bottom: 5px;
+  border-color: black;
+  padding: 14px;
+  margin-top: 10px;
+}
+.tarjetas .card .card-body .card-text {
+  padding: 0px 14px 14px 14px;
+}
+
+.carrusel {
+  margin-top: 55px;
+  width: 100%;
+  max-width: 100%;
+}
+.carrusel .img-carrusel {
+  width: 100%;
+  max-height: 400px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=styles.css.map */
