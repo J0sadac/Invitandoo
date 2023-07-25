@@ -7,40 +7,40 @@ function carrusel() {
     <div>
       <div
         id="carouselExampleAutoplaying"
-        class="carousel slide carrusel carousel-fade"
+        className="carousel slide carrusel carousel-fade"
         data-bs-ride="carousel"
       >
 
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src={ImgCandyBar} class="d-block w-100 img-carrusel" alt="..." />
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img src={ImgCandyBar} className="d-block w-100 img-carrusel" alt="..." />
           </div>
-          <div class="carousel-item">
-            <img src={ImgMesas} class="d-block w-100 img-carrusel" alt="..." />
+          <div className="carousel-item">
+            <img src={ImgMesas} className="d-block w-100 img-carrusel" alt="..." />
           </div>
-          <div class="carousel-item">
-            <img src={ImgNovios} class="d-block w-100 img-carrusel" alt="..." />
+          <div className="carousel-item">
+            <img src={ImgNovios} className="d-block w-100 img-carrusel" alt="..." />
           </div>
         </div>
 
         <button
-          class="carousel-control-prev"
+          className="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExampleAutoplaying"
           data-bs-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Anterior</span>
         </button>
 
         <button
-          class="carousel-control-next"
+          className="carousel-control-next"
           type="button"
           data-bs-target="#carouselExampleAutoplaying"
           data-bs-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Siguiente</span>
         </button>
       </div>
     </div>

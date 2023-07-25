@@ -1,18 +1,18 @@
-import ImgPred from '../../images/img-boda-pred.png';
+
 
 function tarjeta() {
   return (
-      <div class="card shadow">
-        <img src={ImgPred} class="card-img-top card-img" alt="img predeterminada" />
+      <div className="card">
+        
 
-        <div class="card-body">
-          <h5 class="card-title">Titulo</h5>
+        <div className="card-body">
+          <h5 className="card-title">Titulo</h5>
 
-          <p class="card-text">
+          <p className="card-text">
             Texto de ejemplo para apreciar como se veria la descripcion del contenido de la tarjeta.
           </p>
 
-          {/* <a href="." class="btn btn-primary">
+          {/* <a href="." className="btn btn-primary">
             Go somewhere
           </a> */}
           {/* Boton con el enlace al sitio del que se hace referencia */}

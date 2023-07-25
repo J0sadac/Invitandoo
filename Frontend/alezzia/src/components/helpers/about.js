@@ -3,10 +3,10 @@ import ImgEquipo from "../../images/equipo alezzia.jpg"
 function about (){
 
     return(
-        <div class="about-container">
-            <img src={ImgEquipo} class="img-about object-fit-lg-contain" alt="Equipo Alezzia" />
+        <div className="about-container">
+            <img src={ImgEquipo} className="img-about object-fit-lg-contain" alt="Equipo Alezzia" />
 
-            <div class="text-about">
+            <div className="text-about">
                 <h4>Equipo Alezzia!</h4>
                 <p>
                     Somos una empresa dedicada a la organizacion y gestion de eventos, como XV años, cumpleaños,

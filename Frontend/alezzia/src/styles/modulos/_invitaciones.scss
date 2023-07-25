@@ -1,0 +1,436 @@
+//Variables
+$color-main: #212529;
+$color-second: #3e4144;
+$color-font: black;
+
+.inv-carousel{
+    margin-top: 30px;
+
+    .inv-img{
+        height: 620px;
+        object-fit: cover;
+    }
+
+    .inv-frase{
+        color: white;
+        font-family: 'smooch', cursive;
+        font-size: 35px;
+    }
+}
+
+.container-inv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .date-container{
+        margin: 50px 0px;
+        padding: 50px 20px;
+        width: 55%;
+        height: 500px;
+    
+        font-family: Arial, Helvetica, sans-serif;
+        color: $color-font;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    
+        position: relative;
+    
+        .inv-date-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+    
+    
+            .inv-date{
+                font-family: 'smooch', cursive;
+                font-size: 55px;
+            }
+        }
+
+        .place-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .time-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+    
+            margin-top: 30px;
+            width: 50%;
+    
+            .time{
+                width: 100px;
+                height: 100px;
+                border-color: white;
+                border-style: solid;
+                border-width: 2px;
+    
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+    
+                .times{
+                    font-size: 15px;
+                }
+            }
+        }
+    
+        .img-flor-tr{
+            width: 180px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    
+        .img-flor-tl{
+            width: 180px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scaleX(-1);
+        }
+    
+        .img-flor-br{
+            width: 180px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: scaleY(-1);
+        }
+    
+        .img-flor-bl{
+            width: 180px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(-1);
+            transform: rotate(180deg);
+        }
+    }
+
+    .qr-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        //box-shadow: 0.5px 0.5px 4px 1.5px gray;
+
+        width: 25%;
+        height: 500px;
+        padding: 40px 20px;
+
+        color: $color-font;
+
+        .img-qr{
+            width: 200px;
+        }
+
+        .nombre-inv{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .anuncio{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.container-nov{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: 80px 20px;
+    
+    .img-nov{
+        border-radius: 50%;
+
+        width: 290px;
+        height: 290px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 200px;
+        }
+    }
+
+    p{
+        color: $color-font;
+        font-size: 45px;
+        font-family: 'smooch', cursive;
+    }
+}
+
+.container-itinerario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    h3{
+        color: $color-font;
+        font-size: 40px;
+        font-family: 'smooch', cursive;
+
+        margin: 30px;
+    }
+
+    .cont{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        width: 100%;
+    
+        .itinerario{
+            width: 20%;
+            height: 350px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
+
+            color: $color-font;
+    
+            //box-shadow: 0.5px 0.5px 8px lightgray;
+
+            img{
+                width: 50px;
+            }
+
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+            }
+
+
+        }
+    }
+}
+
+.container-maps_conf{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    color: $color-font;
+
+    margin: 50px 20px;
+
+    .confirmacion{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        //box-shadow: 0.5px 0.5px 8px lightgray;
+
+        width: 30%;
+        height: 350px;
+
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        .botones{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            width: 70%;
+
+            .si{
+                background-color: lightgreen;
+                border: 1px solid lightgreen;
+                border-radius: 5px;
+
+                width: 75px;
+                height: 40px;
+
+                color: black;
+            }
+
+            .no{
+                background-color: lightcoral;
+                border: 1px solid lightcoral;
+                border-radius: 5px;
+
+                width: 75px;
+                height: 40px;
+
+                color: black;
+            }
+        }
+    }
+
+    .maps{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        padding: 15px;
+        width: 30%;
+        height: 350px;
+
+        //box-shadow: 0.5px 0.5px 8px lightgray;
+
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        .caja-maps{
+
+            width: 350px;
+            height: 250px;
+        }
+    }
+}
+
+.container-dresscode{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 60px 20px 40px;
+
+    h3{
+        font-family: 'smooch', cursive;
+        font-size: 40px;
+    }
+}
+
+
+
+@media (max-width:551px){
+    
+}
+
+@media (max-width:426px){
+    
+}
+
+@media (max-width:376px){
+    
+}
+
+@media (max-width:321px){ 
+    .inv-carousel{
+        .inv-img{
+            height: 600px;
+        }
+
+        div{
+            .inv-frase{
+                font-size: 10px;
+            }
+        }  
+    }
+
+    .container-inv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        margin: 0px;
+
+        .date-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 90%;
+            height: 500px;
+            margin: 40px 0px;
+            padding: 50px 0px;
+
+            .inv-date-container{
+                .inv-date{
+                    font-size: 30px;
+                }
+            }
+
+            .place-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                p{
+                    font-size: 12px;
+                }
+            }
+
+            .time-container{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                width: 100%;
+
+                .time{
+                    width: 70px;
+                    height: 85px;
+
+                    .times{
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .img-flor{
+                width: 115px;
+            }
+        }
+
+        .qr-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+
+            width: 90%;
+            margin: 40px 0px;
+            padding: 15px;
+        }
+    }
+}

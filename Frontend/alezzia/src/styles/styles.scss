@@ -1,95 +1,16 @@
+//Modulos
+@use './modulos/navbar';
+@use './modulos/main';
+@use './modulos/invitaciones';
 
+
+//Variables
+$color-main: #212529;
+$color-second: #3e4144;
 
 body{
-    background-color: #3e4144;
-}
-
-.navbar{
-    margin-bottom: 30px;
-
-    .icon{
-        margin: 2px;
-    }
-}
-
-.about-container{
-    max-height: 800px;
-    margin: 50px 0px;
-    padding: 40px;
-
-    background-color: #212529;
-    color: white;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-
-    .img-about{
-        width: 500px;
-    }
-
-    .text-about{
-        width: 500px;
-    }
-}
-
-.tarjetas{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-    margin: 30px;
-    
-    .card{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-
-        background-color: #36393d;
-        color: aliceblue;
-
-        max-width: 300px;
-        margin: 10px;
-        margin-bottom: 30px;
-    
-        .card-img{
-            height: 280px;
-            max-height: 280px;
-            object-fit: cover;
-        }
-    
-        .card-body{
-            padding: 0px;
-    
-            .card-title{
-                // background-color: blue;
-                border-bottom: 5px;
-                border-color: black;
-    
-                padding: 14px;
-                margin-top: 10px;
-            }
-    
-            .card-text{
-                padding: 0px 14px 14px 14px;
-            }
-        }
-    }
-}
-
-.carrusel{
-    margin-top: 55px;
-    width: 100%;
-    max-width: 100%;
-
-    .img-carrusel{
-        width: 100%;
-        max-height: 400px;
-        max-width: 100%;
-
-        object-fit: cover;
-    }
+    //background: url('../images/Background/background-prueba.jpg');
+    background: url('../images/Background/pexels-eberhard-grossgasteiger-2088170.jpg');
+    //background: url('../images/Background/pexels-fwstudio-129731.jpg');
+    //background: url('../images/Background/pexels-mitchell-luo-3694711.jpg');
 }
