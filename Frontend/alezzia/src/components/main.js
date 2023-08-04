@@ -4,9 +4,7 @@ function main (){
 
     return(
         <div>
-            <div className="tarjetas">
                 <Tarjeta />
-            </div>
         </div>
     );
 }

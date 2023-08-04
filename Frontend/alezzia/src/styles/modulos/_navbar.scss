@@ -10,10 +10,11 @@ $color-second: #3e4144;
     color: black;
 
     .nav-cont{
-
-       // width: 100%;
-
         color: black;
+
+        .navbar-collapse{
+            padding: 10px;
+        }
     }
 
     .nav-home{
@@ -24,7 +25,7 @@ $color-second: #3e4144;
     }
 
     .nav-section{
-        height: 50px;
+        height: 35px;
         margin: 0px 2px;
         padding-top: 12px;
     }

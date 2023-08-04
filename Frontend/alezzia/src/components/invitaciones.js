@@ -51,7 +51,7 @@ function invitaciones() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src={Img1} className="d-block w-100 inv-img" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
+            <div className="carousel-caption d-md-block">
               <h5 className="inv-frase">
                 Comienza nuestra historia de amor.
               </h5>
@@ -59,7 +59,7 @@ function invitaciones() {
           </div>
           <div className="carousel-item">
             <img src={Img2} className="d-block w-100 inv-img" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
+            <div className="carousel-caption d-md-block">
               <h5 className="inv-frase">
                 Dos almas, un solo destino.
               </h5>
@@ -67,7 +67,7 @@ function invitaciones() {
           </div>
           <div className="carousel-item">
             <img src={Img3} className="d-block w-100 inv-img" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
+            <div className="carousel-caption d-md-block">
               <h5 className="inv-frase">
                 Gracias por ser parte de nuestro día inolvidable.
               </h5>
@@ -203,7 +203,7 @@ function invitaciones() {
 
       <div className="container-maps_conf">
         <div className="maps shadow">
-          <p>Direccion del salon en google maps</p>
+          <p>Direccion en google maps</p>
 
           <div id="maps" className='caja-maps'>
 
