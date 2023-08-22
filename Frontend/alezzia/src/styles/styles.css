@@ -1,14 +1,17 @@
 .navbar {
   margin-bottom: 30px;
   padding: 0;
-  background-color: seashell;
+  background-color: #3e4144;
   color: black;
 }
 .navbar .nav-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   color: black;
 }
 .navbar .nav-cont .navbar-collapse {
-  padding: 10px;
+  padding: 5px;
 }
 .navbar .nav-home {
   font-family: "Smooch", cursive;
@@ -19,7 +22,6 @@
 .navbar .nav-section {
   height: 35px;
   margin: 0px 2px;
-  padding-top: 12px;
 }
 .navbar .icon {
   margin: 2px;
@@ -97,8 +99,34 @@
 }
 .inv-carousel .inv-frase {
   color: white;
-  font-family: "smooch", cursive;
+  font-family: "Dancing Script", Times;
   font-size: 35px;
+}
+
+.container-nov {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px 20px;
+  padding: 40px;
+  color: black;
+}
+.container-nov .img-nov {
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-nov .img-nov img {
+  width: 180px;
+}
+.container-nov p {
+  font-size: 45px;
+  font-family: "Dancing Script", Times;
 }
 
 .container-inv {
@@ -107,14 +135,15 @@
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  margin: 50px 20px;
+  color: black;
 }
 .container-inv .date-container {
   margin: 50px 0px;
   padding: 50px 20px;
   width: 55%;
   height: 500px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
+  font-family: "Cormorant Garamond", Georgia;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -129,8 +158,9 @@
   flex-wrap: wrap;
 }
 .container-inv .date-container .inv-date-container .inv-date {
-  font-family: "smooch", cursive;
-  font-size: 55px;
+  font-family: "Dancing Script", Times;
+  font-size: 50px;
+  font-weight: 600;
 }
 .container-inv .date-container .place-container {
   display: flex;
@@ -142,19 +172,23 @@
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-top: 30px;
-  width: 50%;
+  margin-top: 20px;
+  width: 75%;
 }
 .container-inv .date-container .time-container .time {
   width: 100px;
   height: 100px;
-  border-color: white;
-  border-style: solid;
-  border-width: 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+.container-inv .date-container .time-container .time .regresivo {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 40px;
+  height: 100%;
+  width: 100%;
 }
 .container-inv .date-container .time-container .time .times {
   font-size: 15px;
@@ -192,8 +226,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   width: 25%;
-  height: 500px;
+  height: 540px;
   padding: 40px 20px;
   color: black;
 }
@@ -204,36 +239,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Dancing Script", Times;
+}
+.container-inv .qr-container .nombre-inv h3 {
+  font-weight: 600;
+}
+.container-inv .qr-container .num-mesa {
+  font-family: "Cormorant Garamond", Georgia;
+  font-size: 20px;
+}
+.container-inv .qr-container .num-mesa p {
+  font-weight: 600;
 }
 .container-inv .qr-container .anuncio {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.container-nov {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 80px 20px 20px;
-}
-.container-nov .img-nov {
-  border-radius: 50%;
-  width: 290px;
-  height: 290px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.container-nov .img-nov img {
-  width: 200px;
-}
-.container-nov p {
-  color: black;
-  font-size: 45px;
-  font-family: "smooch", cursive;
+  font-family: "Cormorant Garamond", Georgia;
 }
 
 .container-itinerario {
@@ -242,12 +264,14 @@
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  margin: 50px 20px;
+  padding: 30px;
+  color: black;
 }
 .container-itinerario h3 {
-  color: black;
-  font-size: 40px;
-  font-family: "smooch", cursive;
-  margin: 30px;
+  font-family: "Dancing Script", Times;
+  font-size: 35px;
+  font-weight: 600;
 }
 .container-itinerario .cont {
   display: flex;
@@ -256,6 +280,7 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  font-family: "Cormorant Garamond", Georgia;
 }
 .container-itinerario .cont .itinerario {
   width: 20%;
@@ -265,7 +290,6 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  color: black;
 }
 .container-itinerario .cont .itinerario img {
   width: 50px;
@@ -276,6 +300,51 @@
   align-items: center;
 }
 
+.container-dresscode_mesa-inv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 30px;
+  margin: 20px;
+}
+.container-dresscode_mesa-inv .dresscode {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 45%;
+  color: black;
+  text-align: center;
+}
+.container-dresscode_mesa-inv .dresscode h3 {
+  font-family: "Dancing Script", Times;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-dresscode_mesa-inv .dresscode p {
+  font-family: "Cormorant Garamond", Georgia;
+  font-size: 20px;
+}
+.container-dresscode_mesa-inv .dresscode .img-dresscode img {
+  width: 270px;
+}
+.container-dresscode_mesa-inv .mesa-inv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 45%;
+  color: black;
+}
+.container-dresscode_mesa-inv .mesa-inv h3 {
+  font-family: "Dancing Script", Times;
+  font-size: 35px;
+  font-weight: 600;
+}
+
 .container-maps_conf {
   display: flex;
   flex-direction: row;
@@ -284,6 +353,7 @@
   flex-wrap: wrap;
   color: black;
   margin: 50px 20px;
+  padding: 40px;
 }
 .container-maps_conf .confirmacion {
   display: flex;
@@ -294,7 +364,7 @@
   height: 350px;
 }
 .container-maps_conf .confirmacion p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Cormorant Garamond", Georgia;
   font-size: 18px;
 }
 .container-maps_conf .confirmacion .botones {
@@ -302,6 +372,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   width: 70%;
+  font-family: "Cormorant Garamond", Georgia;
 }
 .container-maps_conf .confirmacion .botones .si {
   background-color: lightgreen;
@@ -329,25 +400,12 @@
   height: 350px;
 }
 .container-maps_conf .maps p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Cormorant Garamond", Georgia;
   font-size: 18px;
 }
 .container-maps_conf .maps .caja-maps {
   width: 350px;
   height: 250px;
-}
-
-.container-dresscode {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 60px 20px 40px;
-}
-.container-dresscode h3 {
-  font-family: "smooch", cursive;
-  font-size: 40px;
 }
 
 @media (max-width: 551px) {
@@ -356,8 +414,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    height: 670px;
-    margin-top: 5px;
+    height: 800px;
+    padding: 15px 20px;
+    margin: 15px 10px;
   }
   .container-nov p {
     font-size: 40px;
@@ -380,7 +439,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 0px;
+    margin: 20px 10px;
   }
   .container-inv .date-container {
     display: flex;
@@ -393,7 +452,8 @@
     padding: 50px 0px;
   }
   .container-inv .date-container .inv-date-container .inv-date {
-    font-size: 30px;
+    text-align: center;
+    font-size: 27px;
   }
   .container-inv .date-container .place-container {
     display: flex;
@@ -402,13 +462,14 @@
     align-items: center;
   }
   .container-inv .date-container .place-container p {
-    font-size: 12px;
+    text-align: center;
+    font-size: 17px;
   }
   .container-inv .date-container .time-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
   }
   .container-inv .date-container .time-container .time {
@@ -429,6 +490,19 @@
     margin: 40px 0px;
     padding: 15px;
   }
+  .container-inv .qr-container .num-mesa {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .container-inv .qr-container .anuncio {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+  }
+  .container-itinerario {
+    margin: 20px 10px;
+  }
   .container-itinerario .cont {
     display: flex;
     flex-direction: column;
@@ -439,19 +513,42 @@
     width: 280px;
     margin: 10px 0px;
   }
-  .container-dresscode h3 {
+  .container-dresscode_mesa-inv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px 10px;
+    padding: 20px 10px;
+  }
+  .container-dresscode_mesa-inv .dresscode {
+    width: 280px;
+    text-align: center;
+  }
+  .container-dresscode_mesa-inv .dresscode h3 {
     font-size: 30px;
   }
-  .container-dresscode div img {
-    width: 200px;
+  .container-dresscode_mesa-inv .dresscode .img-dresscode img {
+    width: 100px;
+  }
+  .container-dresscode_mesa-inv .mesa-inv {
+    width: 280px;
+  }
+  .container-dresscode_mesa-inv .mesa-inv h3 {
+    font-size: 30px;
   }
   .container-maps_conf {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin: 20px 5px;
+    padding: 15px 5px;
   }
   .container-maps_conf .maps {
     width: 280px;
+  }
+  .container-maps_conf .maps .caja-maps {
+    width: 260px;
   }
   .container-maps_conf .confirmacion {
     width: 280px;
@@ -463,8 +560,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    height: 670px;
-    margin-top: 5px;
+    height: 800px;
+    padding: 15px 20px;
+    margin: 15px 10px;
   }
   .container-nov p {
     font-size: 40px;
@@ -487,7 +585,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 0px;
+    margin: 20px 10px;
   }
   .container-inv .date-container {
     display: flex;
@@ -500,7 +598,8 @@
     padding: 50px 0px;
   }
   .container-inv .date-container .inv-date-container .inv-date {
-    font-size: 30px;
+    text-align: center;
+    font-size: 27px;
   }
   .container-inv .date-container .place-container {
     display: flex;
@@ -509,13 +608,14 @@
     align-items: center;
   }
   .container-inv .date-container .place-container p {
-    font-size: 12px;
+    text-align: center;
+    font-size: 17px;
   }
   .container-inv .date-container .time-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
   }
   .container-inv .date-container .time-container .time {
@@ -536,6 +636,19 @@
     margin: 40px 0px;
     padding: 15px;
   }
+  .container-inv .qr-container .num-mesa {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .container-inv .qr-container .anuncio {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+  }
+  .container-itinerario {
+    margin: 20px 10px;
+  }
   .container-itinerario .cont {
     display: flex;
     flex-direction: column;
@@ -546,19 +659,42 @@
     width: 280px;
     margin: 10px 0px;
   }
-  .container-dresscode h3 {
+  .container-dresscode_mesa-inv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px 10px;
+    padding: 20px 10px;
+  }
+  .container-dresscode_mesa-inv .dresscode {
+    width: 280px;
+    text-align: center;
+  }
+  .container-dresscode_mesa-inv .dresscode h3 {
     font-size: 30px;
   }
-  .container-dresscode div img {
-    width: 200px;
+  .container-dresscode_mesa-inv .dresscode .img-dresscode img {
+    width: 100px;
+  }
+  .container-dresscode_mesa-inv .mesa-inv {
+    width: 280px;
+  }
+  .container-dresscode_mesa-inv .mesa-inv h3 {
+    font-size: 30px;
   }
   .container-maps_conf {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin: 20px 5px;
+    padding: 15px 5px;
   }
   .container-maps_conf .maps {
     width: 280px;
+  }
+  .container-maps_conf .maps .caja-maps {
+    width: 260px;
   }
   .container-maps_conf .confirmacion {
     width: 280px;
@@ -570,8 +706,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    height: 670px;
-    margin-top: 5px;
+    height: 800px;
+    padding: 15px 20px;
+    margin: 15px 10px;
   }
   .container-nov p {
     font-size: 40px;
@@ -594,7 +731,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 0px;
+    margin: 20px 10px;
   }
   .container-inv .date-container {
     display: flex;
@@ -607,7 +744,8 @@
     padding: 50px 0px;
   }
   .container-inv .date-container .inv-date-container .inv-date {
-    font-size: 30px;
+    text-align: center;
+    font-size: 27px;
   }
   .container-inv .date-container .place-container {
     display: flex;
@@ -616,13 +754,14 @@
     align-items: center;
   }
   .container-inv .date-container .place-container p {
-    font-size: 12px;
+    text-align: center;
+    font-size: 17px;
   }
   .container-inv .date-container .time-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
   }
   .container-inv .date-container .time-container .time {
@@ -643,6 +782,19 @@
     margin: 40px 0px;
     padding: 15px;
   }
+  .container-inv .qr-container .num-mesa {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .container-inv .qr-container .anuncio {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+  }
+  .container-itinerario {
+    margin: 20px 10px;
+  }
   .container-itinerario .cont {
     display: flex;
     flex-direction: column;
@@ -653,19 +805,42 @@
     width: 280px;
     margin: 10px 0px;
   }
-  .container-dresscode h3 {
+  .container-dresscode_mesa-inv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px 10px;
+    padding: 20px 10px;
+  }
+  .container-dresscode_mesa-inv .dresscode {
+    width: 280px;
+    text-align: center;
+  }
+  .container-dresscode_mesa-inv .dresscode h3 {
     font-size: 30px;
   }
-  .container-dresscode div img {
-    width: 200px;
+  .container-dresscode_mesa-inv .dresscode .img-dresscode img {
+    width: 100px;
+  }
+  .container-dresscode_mesa-inv .mesa-inv {
+    width: 280px;
+  }
+  .container-dresscode_mesa-inv .mesa-inv h3 {
+    font-size: 30px;
   }
   .container-maps_conf {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin: 20px 5px;
+    padding: 15px 5px;
   }
   .container-maps_conf .maps {
     width: 280px;
+  }
+  .container-maps_conf .maps .caja-maps {
+    width: 260px;
   }
   .container-maps_conf .confirmacion {
     width: 280px;
@@ -677,8 +852,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    height: 670px;
-    margin-top: 5px;
+    height: 800px;
+    padding: 15px 20px;
+    margin: 15px 10px;
   }
   .container-nov p {
     font-size: 40px;
@@ -701,7 +877,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 0px;
+    margin: 20px 10px;
   }
   .container-inv .date-container {
     display: flex;
@@ -714,7 +890,8 @@
     padding: 50px 0px;
   }
   .container-inv .date-container .inv-date-container .inv-date {
-    font-size: 30px;
+    text-align: center;
+    font-size: 27px;
   }
   .container-inv .date-container .place-container {
     display: flex;
@@ -723,13 +900,14 @@
     align-items: center;
   }
   .container-inv .date-container .place-container p {
-    font-size: 12px;
+    text-align: center;
+    font-size: 17px;
   }
   .container-inv .date-container .time-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
   }
   .container-inv .date-container .time-container .time {
@@ -750,6 +928,19 @@
     margin: 40px 0px;
     padding: 15px;
   }
+  .container-inv .qr-container .num-mesa {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .container-inv .qr-container .anuncio {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+  }
+  .container-itinerario {
+    margin: 20px 10px;
+  }
   .container-itinerario .cont {
     display: flex;
     flex-direction: column;
@@ -760,26 +951,49 @@
     width: 280px;
     margin: 10px 0px;
   }
-  .container-dresscode h3 {
+  .container-dresscode_mesa-inv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px 10px;
+    padding: 20px 10px;
+  }
+  .container-dresscode_mesa-inv .dresscode {
+    width: 280px;
+    text-align: center;
+  }
+  .container-dresscode_mesa-inv .dresscode h3 {
     font-size: 30px;
   }
-  .container-dresscode div img {
-    width: 200px;
+  .container-dresscode_mesa-inv .dresscode .img-dresscode img {
+    width: 100px;
+  }
+  .container-dresscode_mesa-inv .mesa-inv {
+    width: 280px;
+  }
+  .container-dresscode_mesa-inv .mesa-inv h3 {
+    font-size: 30px;
   }
   .container-maps_conf {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin: 20px 5px;
+    padding: 15px 5px;
   }
   .container-maps_conf .maps {
     width: 280px;
+  }
+  .container-maps_conf .maps .caja-maps {
+    width: 260px;
   }
   .container-maps_conf .confirmacion {
     width: 280px;
   }
 }
 body {
-  background: url("../images/Background/pexels-eberhard-grossgasteiger-2088170.jpg");
+  background-color: #3e4144;
 }
 
 /*# sourceMappingURL=styles.css.map */

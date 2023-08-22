@@ -2,6 +2,8 @@
 $color-main: #212529;
 $color-second: #3e4144;
 $color-font: black;
+$font-main: 'Dancing Script', Times;
+$font-second: 'Cormorant Garamond', Georgia;
 
 .inv-carousel{
     margin-top: 30px;
@@ -13,8 +15,41 @@ $color-font: black;
 
     .inv-frase{
         color: white;
-        font-family: 'smooch', cursive;
+        font-family: $font-main;
         font-size: 35px;
+    }
+}
+
+.container-nov{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    margin: 50px 20px;
+    padding: 40px;
+
+    color: $color-font;
+    
+    .img-nov{
+        border-radius: 50%;
+        
+        width: 240px;
+        height: 240px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        img{
+            width: 180px;
+        }
+    }
+    
+    p{
+        font-size: 45px;
+        font-family: $font-main;
     }
 }
 
@@ -25,14 +60,16 @@ $color-font: black;
     align-items: center;
     flex-wrap: wrap;
 
+    margin: 50px 20px;
+    color: $color-font;
+
     .date-container{
         margin: 50px 0px;
         padding: 50px 20px;
         width: 55%;
         height: 500px;
     
-        font-family: Arial, Helvetica, sans-serif;
-        color: $color-font;
+        font-family: $font-second;
     
         display: flex;
         flex-direction: column;
@@ -50,8 +87,9 @@ $color-font: black;
     
     
             .inv-date{
-                font-family: 'smooch', cursive;
-                font-size: 55px;
+                font-family: $font-main;
+                font-size: 50px;
+                font-weight: 600;
             }
         }
 
@@ -67,20 +105,26 @@ $color-font: black;
             justify-content: space-evenly;
             flex-wrap: wrap;
     
-            margin-top: 30px;
-            width: 50%;
+            margin-top: 20px;
+            width: 75%;
     
             .time{
                 width: 100px;
                 height: 100px;
-                border-color: white;
-                border-style: solid;
-                border-width: 2px;
     
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
+
+                .regresivo{
+                    font-family: 'Times New Roman', Times, serif;
+                    text-align: center;
+                    font-size: 40px;
+
+                    height: 100%;
+                    width: 100%;
+                }
     
                 .times{
                     font-size: 15px;
@@ -126,11 +170,10 @@ $color-font: black;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-
-        //box-shadow: 0.5px 0.5px 4px 1.5px gray;
+        text-align: center;
 
         width: 25%;
-        height: 500px;
+        height: 540px;
         padding: 40px 20px;
 
         color: $color-font;
@@ -143,44 +186,30 @@ $color-font: black;
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            font-family: $font-main;
+            
+            h3{
+                font-weight: 600;
+            }
+        }
+
+        .num-mesa{
+            font-family: $font-second;
+            font-size: 20px;
+
+            p{
+                font-weight: 600;
+            }
         }
 
         .anuncio{
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            font-family: $font-second;
         }
-    }
-}
-
-.container-nov{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-    margin: 80px 20px 20px;
-    
-    .img-nov{
-        border-radius: 50%;
-
-        width: 290px;
-        height: 290px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        img{
-            width: 200px;
-        }
-    }
-
-    p{
-        color: $color-font;
-        font-size: 45px;
-        font-family: 'smooch', cursive;
     }
 }
 
@@ -191,12 +220,16 @@ $color-font: black;
     align-items: center;
     flex-wrap: wrap;
 
-    h3{
-        color: $color-font;
-        font-size: 40px;
-        font-family: 'smooch', cursive;
+    margin: 50px 20px;
 
-        margin: 30px;
+    padding: 30px;
+
+    color: $color-font;
+
+    h3{
+        font-family: $font-main;
+        font-size: 35px;
+        font-weight: 600;
     }
 
     .cont{
@@ -207,6 +240,8 @@ $color-font: black;
         flex-wrap: wrap;
 
         width: 100%;
+
+        font-family: $font-second;
     
         .itinerario{
             width: 20%;
@@ -217,10 +252,6 @@ $color-font: black;
             justify-content: space-evenly;
             flex-wrap: wrap;
             align-items: center;
-
-            color: $color-font;
-    
-            //box-shadow: 0.5px 0.5px 8px lightgray;
 
             img{
                 width: 50px;
@@ -238,6 +269,66 @@ $color-font: black;
     }
 }
 
+.container-dresscode_mesa-inv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    padding: 30px;
+    margin: 20px;
+
+    .dresscode{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        
+        padding: 20px;
+        width: 45%;
+    
+        color: $color-font;
+        text-align: center;
+    
+        h3{
+            font-family: $font-main;
+            font-size: 35px;
+            font-weight: 600;
+        }
+    
+        p{
+            font-family: $font-second;
+            font-size: 20px;
+            
+        }
+    
+        .img-dresscode{
+    
+            img{
+                width: 270px;
+            }
+        }
+    }
+
+    .mesa-inv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+
+        padding: 20px;
+        width: 45%;
+    
+        color: $color-font;
+
+        h3{
+            font-family: $font-main;
+            font-size: 35px;
+            font-weight: 600;
+        }
+    } 
+}
+
 .container-maps_conf{
     display: flex;
     flex-direction: row;
@@ -248,6 +339,7 @@ $color-font: black;
     color: $color-font;
 
     margin: 50px 20px;
+    padding: 40px;
 
     .confirmacion{
         display: flex;
@@ -255,13 +347,11 @@ $color-font: black;
         justify-content: space-evenly;
         align-items: center;
 
-        //box-shadow: 0.5px 0.5px 8px lightgray;
-
         width: 30%;
         height: 350px;
 
         p{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $font-second;
             font-size: 18px;
         }
 
@@ -271,6 +361,8 @@ $color-font: black;
             justify-content: space-evenly;
 
             width: 70%;
+
+            font-family: $font-second;
 
             .si{
                 background-color: lightgreen;
@@ -306,10 +398,8 @@ $color-font: black;
         width: 30%;
         height: 350px;
 
-        //box-shadow: 0.5px 0.5px 8px lightgray;
-
         p{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: $font-second;
             font-size: 18px;
         }
 
@@ -321,22 +411,8 @@ $color-font: black;
     }
 }
 
-.container-dresscode{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
 
-    margin: 60px 20px 40px;
-
-    h3{
-        font-family: 'smooch', cursive;
-        font-size: 40px;
-    }
-}
-
-
+//Adaptacion responsiva en diferentes telefonos
 
 @media (max-width:551px){
     .container-nov{
@@ -344,9 +420,10 @@ $color-font: black;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
-        height: 670px;
+        height: 800px;
 
-        margin-top: 5px;
+        padding: 15px 20px;
+        margin: 15px 10px;
 
         p{
             font-size: 40px;
@@ -380,7 +457,7 @@ $color-font: black;
         justify-content: space-between;
         align-items: center;
 
-        margin: 0px;
+        margin: 20px 10px;
 
         .date-container{
             display: flex;
@@ -395,7 +472,8 @@ $color-font: black;
 
             .inv-date-container{
                 .inv-date{
-                    font-size: 30px;
+                    text-align: center;
+                    font-size: 27px;
                 }
             }
 
@@ -406,7 +484,8 @@ $color-font: black;
                 align-items: center;
 
                 p{
-                    font-size: 12px;
+                    text-align: center;
+                    font-size: 17px;
                 }
             }
 
@@ -414,7 +493,7 @@ $color-font: black;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: space-evenly;
 
                 width: 100%;
 
@@ -438,14 +517,27 @@ $color-font: black;
             flex-direction: column;
             justify-content: space-around;
 
-
             width: 90%;
             margin: 40px 0px;
             padding: 15px;
+
+            .num-mesa{
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            .anuncio{
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 18px;
+            }
         }
     }
 
     .container-itinerario{
+        margin: 20px 10px;
+
         .cont{
             display: flex;
             flex-direction: column;
@@ -460,14 +552,35 @@ $color-font: black;
         }
     }
 
-    .container-dresscode{
-        h3{
-            font-size: 30px;
+    .container-dresscode_mesa-inv{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+
+        margin: 20px 10px;
+        padding: 20px 10px;
+
+        .dresscode{
+            width: 280px;
+            text-align: center;
+            
+            h3{
+                font-size: 30px;
+            }
+    
+            .img-dresscode{
+                img{
+                    width: 100px;
+                }
+            }
         }
 
-        div{
-            img{
-                width: 200px;
+        .mesa-inv{
+            width: 280px;
+            
+            h3{
+                font-size: 30px;
             }
         }
     }
@@ -477,14 +590,21 @@ $color-font: black;
         flex-direction: column;
         justify-content: space-evenly;
 
+        margin: 20px 5px;
+        padding: 15px 5px;
+
         .maps{
             width: 280px;
+
+            .caja-maps{
+                width: 260px;
+            }
         }
 
         .confirmacion{
             width: 280px;
         }
-    }  
+    }
 }
 
 @media (max-width:426px){
@@ -493,9 +613,10 @@ $color-font: black;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
-        height: 670px;
+        height: 800px;
 
-        margin-top: 5px;
+        padding: 15px 20px;
+        margin: 15px 10px;
 
         p{
             font-size: 40px;
@@ -529,7 +650,7 @@ $color-font: black;
         justify-content: space-between;
         align-items: center;
 
-        margin: 0px;
+        margin: 20px 10px;
 
         .date-container{
             display: flex;
@@ -544,7 +665,8 @@ $color-font: black;
 
             .inv-date-container{
                 .inv-date{
-                    font-size: 30px;
+                    text-align: center;
+                    font-size: 27px;
                 }
             }
 
@@ -555,7 +677,8 @@ $color-font: black;
                 align-items: center;
 
                 p{
-                    font-size: 12px;
+                    text-align: center;
+                    font-size: 17px;
                 }
             }
 
@@ -563,7 +686,7 @@ $color-font: black;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: space-evenly;
 
                 width: 100%;
 
@@ -587,14 +710,27 @@ $color-font: black;
             flex-direction: column;
             justify-content: space-around;
 
-
             width: 90%;
             margin: 40px 0px;
             padding: 15px;
+
+            .num-mesa{
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            .anuncio{
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 18px;
+            }
         }
     }
 
     .container-itinerario{
+        margin: 20px 10px;
+
         .cont{
             display: flex;
             flex-direction: column;
@@ -609,14 +745,35 @@ $color-font: black;
         }
     }
 
-    .container-dresscode{
-        h3{
-            font-size: 30px;
+    .container-dresscode_mesa-inv{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+
+        margin: 20px 10px;
+        padding: 20px 10px;
+
+        .dresscode{
+            width: 280px;
+            text-align: center;
+            
+            h3{
+                font-size: 30px;
+            }
+    
+            .img-dresscode{
+                img{
+                    width: 100px;
+                }
+            }
         }
 
-        div{
-            img{
-                width: 200px;
+        .mesa-inv{
+            width: 280px;
+            
+            h3{
+                font-size: 30px;
             }
         }
     }
@@ -626,8 +783,15 @@ $color-font: black;
         flex-direction: column;
         justify-content: space-evenly;
 
+        margin: 20px 5px;
+        padding: 15px 5px;
+
         .maps{
             width: 280px;
+
+            .caja-maps{
+                width: 260px;
+            }
         }
 
         .confirmacion{
@@ -642,9 +806,10 @@ $color-font: black;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
-        height: 670px;
+        height: 800px;
 
-        margin-top: 5px;
+        padding: 15px 20px;
+        margin: 15px 10px;
 
         p{
             font-size: 40px;
@@ -678,7 +843,7 @@ $color-font: black;
         justify-content: space-between;
         align-items: center;
 
-        margin: 0px;
+        margin: 20px 10px;
 
         .date-container{
             display: flex;
@@ -693,7 +858,8 @@ $color-font: black;
 
             .inv-date-container{
                 .inv-date{
-                    font-size: 30px;
+                    text-align: center;
+                    font-size: 27px;
                 }
             }
 
@@ -704,7 +870,8 @@ $color-font: black;
                 align-items: center;
 
                 p{
-                    font-size: 12px;
+                    text-align: center;
+                    font-size: 17px;
                 }
             }
 
@@ -712,7 +879,7 @@ $color-font: black;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: space-evenly;
 
                 width: 100%;
 
@@ -736,14 +903,27 @@ $color-font: black;
             flex-direction: column;
             justify-content: space-around;
 
-
             width: 90%;
             margin: 40px 0px;
             padding: 15px;
+
+            .num-mesa{
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            .anuncio{
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 18px;
+            }
         }
     }
 
     .container-itinerario{
+        margin: 20px 10px;
+
         .cont{
             display: flex;
             flex-direction: column;
@@ -758,14 +938,35 @@ $color-font: black;
         }
     }
 
-    .container-dresscode{
-        h3{
-            font-size: 30px;
+    .container-dresscode_mesa-inv{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+
+        margin: 20px 10px;
+        padding: 20px 10px;
+
+        .dresscode{
+            width: 280px;
+            text-align: center;
+            
+            h3{
+                font-size: 30px;
+            }
+    
+            .img-dresscode{
+                img{
+                    width: 100px;
+                }
+            }
         }
 
-        div{
-            img{
-                width: 200px;
+        .mesa-inv{
+            width: 280px;
+            
+            h3{
+                font-size: 30px;
             }
         }
     }
@@ -775,161 +976,213 @@ $color-font: black;
         flex-direction: column;
         justify-content: space-evenly;
 
+        margin: 20px 5px;
+        padding: 15px 5px;
+
         .maps{
             width: 280px;
+
+            .caja-maps{
+                width: 260px;
+            }
+        }
+
+        .confirmacion{
+            width: 280px;
+        }
+    }
+}
+
+@media (max-width:321px){ 
+
+   .container-nov{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 800px;
+
+        padding: 15px 20px;
+        margin: 15px 10px;
+
+        p{
+            font-size: 40px;
+        }
+
+        .img-nov{
+            width: 230px;
+            height: 230px;
+
+            img{
+                width: 160px;
+            }
+        }
+    }
+
+    .inv-carousel{
+        .inv-img{
+            height: 600px;
+        }
+
+        div{
+            .inv-frase{
+                font-size: 25px;
+            }
+        }  
+    }
+
+    .container-inv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        margin: 20px 10px;
+
+        .date-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 90%;
+            height: 500px;
+            margin: 40px 0px;
+            padding: 50px 0px;
+
+            .inv-date-container{
+                .inv-date{
+                    text-align: center;
+                    font-size: 27px;
+                }
+            }
+
+            .place-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                p{
+                    text-align: center;
+                    font-size: 17px;
+                }
+            }
+
+            .time-container{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                width: 100%;
+
+                .time{
+                    width: 70px;
+                    height: 85px;
+
+                    .times{
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .img-flor{
+                width: 115px;
+            }
+        }
+
+        .qr-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            width: 90%;
+            margin: 40px 0px;
+            padding: 15px;
+
+            .num-mesa{
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            .anuncio{
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .container-itinerario{
+        margin: 20px 10px;
+
+        .cont{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+
+            width: 100%;
+
+            .itinerario{
+                width: 280px;
+                margin: 10px 0px;
+            }
+        }
+    }
+
+    .container-dresscode_mesa-inv{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+
+        margin: 20px 10px;
+        padding: 20px 10px;
+
+        .dresscode{
+            width: 280px;
+            text-align: center;
+            
+            h3{
+                font-size: 30px;
+            }
+    
+            .img-dresscode{
+                img{
+                    width: 100px;
+                }
+            }
+        }
+
+        .mesa-inv{
+            width: 280px;
+            
+            h3{
+                font-size: 30px;
+            }
+        }
+    }
+    
+    .container-maps_conf{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        margin: 20px 5px;
+        padding: 15px 5px;
+
+        .maps{
+            width: 280px;
+
+            .caja-maps{
+                width: 260px;
+            }
         }
 
         .confirmacion{
             width: 280px;
         }
     } 
-}
-
-@media (max-width:321px){ 
-    .container-nov{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        height: 670px;
-
-        margin-top: 5px;
-
-        p{
-            font-size: 40px;
-        }
-
-        .img-nov{
-            width: 230px;
-            height: 230px;
-
-            img{
-                width: 160px;
-            }
-        }
-    }
-
-    .inv-carousel{
-        .inv-img{
-            height: 600px;
-        }
-
-        div{
-            .inv-frase{
-                font-size: 25px;
-            }
-        }  
-    }
-
-    .container-inv{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-
-        margin: 0px;
-
-        .date-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-
-            width: 90%;
-            height: 500px;
-            margin: 40px 0px;
-            padding: 50px 0px;
-
-            .inv-date-container{
-                .inv-date{
-                    font-size: 30px;
-                }
-            }
-
-            .place-container{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-
-                p{
-                    font-size: 12px;
-                }
-            }
-
-            .time-container{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;
-
-                width: 100%;
-
-                .time{
-                    width: 70px;
-                    height: 85px;
-
-                    .times{
-                        font-size: 12px;
-                    }
-                }
-            }
-
-            .img-flor{
-                width: 115px;
-            }
-        }
-
-        .qr-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-
-
-            width: 90%;
-            margin: 40px 0px;
-            padding: 15px;
-        }
-    }
-
-    .container-itinerario{
-        .cont{
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-
-            width: 100%;
-
-            .itinerario{
-                width: 280px;
-                margin: 10px 0px;
-            }
-        }
-    }
-
-    .container-dresscode{
-        h3{
-            font-size: 30px;
-        }
-
-        div{
-            img{
-                width: 200px;
-            }
-        }
-    }
-    
-    .container-maps_conf{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-
-        .maps{
-            width: 280px;
-        }
-
-        .confirmacion{
-            width: 280px;
-        }
-    }
 }
