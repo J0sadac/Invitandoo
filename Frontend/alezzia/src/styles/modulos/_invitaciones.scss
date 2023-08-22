@@ -67,7 +67,7 @@ $font-second: 'Cormorant Garamond', Georgia;
         margin: 50px 0px;
         padding: 50px 20px;
         width: 55%;
-        height: 500px;
+        height: 550px;
     
         font-family: $font-second;
     
@@ -100,10 +100,8 @@ $font-second: 'Cormorant Garamond', Georgia;
         }
     
         .time-container{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
     
             margin-top: 20px;
             width: 75%;
@@ -133,14 +131,14 @@ $font-second: 'Cormorant Garamond', Georgia;
         }
     
         .img-flor-tr{
-            width: 180px;
+            width: 170px;
             position: absolute;
             top: 0;
             right: 0;
         }
     
         .img-flor-tl{
-            width: 180px;
+            width: 170px;
             position: absolute;
             top: 0;
             left: 0;
@@ -148,7 +146,7 @@ $font-second: 'Cormorant Garamond', Georgia;
         }
     
         .img-flor-br{
-            width: 180px;
+            width: 170px;
             position: absolute;
             bottom: 0;
             right: 0;
@@ -156,7 +154,7 @@ $font-second: 'Cormorant Garamond', Georgia;
         }
     
         .img-flor-bl{
-            width: 180px;
+            width: 170px;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -1046,7 +1044,7 @@ $font-second: 'Cormorant Garamond', Georgia;
             align-items: center;
 
             width: 90%;
-            height: 500px;
+            height: 600px;
             margin: 40px 0px;
             padding: 50px 0px;
 
@@ -1070,16 +1068,16 @@ $font-second: 'Cormorant Garamond', Georgia;
             }
 
             .time-container{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
                 justify-content: space-evenly;
 
                 width: 100%;
 
                 .time{
                     width: 70px;
-                    height: 85px;
+                    height: 98px;
 
                     .times{
                         font-size: 12px;

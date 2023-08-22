@@ -49,7 +49,7 @@ const Timer = (limite) => {
         setDays(days - 1);
       };
       
-    }, 1000)
+    }, 1000);
 
     return () => clearInterval(Countdown);
 
@@ -60,9 +60,10 @@ const Timer = (limite) => {
     minutes,
     hours,
     days}
-  
-
 }
+
+//Funcion para la generacion de codigos QR del codigo QR
+
 
 function Invitacion(){
 
@@ -130,7 +131,7 @@ function Invitacion(){
           <img src={ImgQR} alt="..." className="img-qr"/>
 
           <div className="anuncio">
-            <p>No olvides guardar tu codigo QR ¡Sera muy importante para tu recepcion! </p>
+            <p>No olvides guardar tu codigo QR ¡Sera muy importante para tu recepcion!</p>
           </div>
         </div>
         </div>
