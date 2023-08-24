@@ -94,7 +94,7 @@
   margin-top: 30px;
 }
 .inv-carousel .inv-img {
-  height: 620px;
+  height: 650px;
   object-fit: cover;
 }
 .inv-carousel .inv-frase {
@@ -302,14 +302,14 @@
   align-items: center;
 }
 
-.container-dresscode_mesa-inv {
+.container-dresscode_mesa {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 30px;
   margin: 20px;
 }
-.container-dresscode_mesa-inv .dresscode {
+.container-dresscode_mesa .dresscode {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -320,19 +320,19 @@
   color: black;
   text-align: center;
 }
-.container-dresscode_mesa-inv .dresscode h3 {
+.container-dresscode_mesa .dresscode h3 {
   font-family: "Dancing Script", Times;
   font-size: 35px;
   font-weight: 600;
 }
-.container-dresscode_mesa-inv .dresscode p {
-  font-family: "Cormorant Garamond", Georgia;
+.container-dresscode_mesa .dresscode p {
+  font-family: georgia;
   font-size: 20px;
 }
-.container-dresscode_mesa-inv .dresscode .img-dresscode img {
+.container-dresscode_mesa .dresscode .img-dresscode img {
   width: 270px;
 }
-.container-dresscode_mesa-inv .mesa-inv {
+.container-dresscode_mesa .mesa {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -341,10 +341,23 @@
   width: 45%;
   color: black;
 }
-.container-dresscode_mesa-inv .mesa-inv h3 {
+.container-dresscode_mesa .mesa h3 {
   font-family: "Dancing Script", Times;
   font-size: 35px;
   font-weight: 600;
+}
+.container-dresscode_mesa .mesa .codigoRegalo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container-dresscode_mesa .mesa .codigoRegalo .imgLogo {
+  width: 450px;
+}
+.container-dresscode_mesa .mesa .codigoRegalo p {
+  font-family: georgia;
+  font-size: 20px;
 }
 
 .container-maps_conf {
@@ -367,12 +380,13 @@
 }
 .container-maps_conf .confirmacion p {
   font-family: "Cormorant Garamond", Georgia;
-  font-size: 18px;
+  font-size: 24px;
 }
 .container-maps_conf .confirmacion .botones {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 70%;
   font-family: "Cormorant Garamond", Georgia;
 }
@@ -403,7 +417,7 @@
 }
 .container-maps_conf .maps p {
   font-family: "Cormorant Garamond", Georgia;
-  font-size: 18px;
+  font-size: 24px;
 }
 .container-maps_conf .maps .caja-maps {
   width: 350px;
@@ -411,6 +425,12 @@
 }
 
 @media (max-width: 551px) {
+  .inv-carousel .inv-img {
+    height: 635px;
+  }
+  .inv-carousel div .inv-frase {
+    font-size: 25px;
+  }
   .container-nov {
     display: flex;
     flex-direction: column;
@@ -430,12 +450,6 @@
   .container-nov .img-nov img {
     width: 160px;
   }
-  .inv-carousel .inv-img {
-    height: 600px;
-  }
-  .inv-carousel div .inv-frase {
-    font-size: 25px;
-  }
   .container-inv {
     display: flex;
     flex-direction: column;
@@ -449,7 +463,7 @@
     justify-content: space-evenly;
     align-items: center;
     width: 90%;
-    height: 500px;
+    height: 600px;
     margin: 40px 0px;
     padding: 50px 0px;
   }
@@ -468,15 +482,15 @@
     font-size: 17px;
   }
   .container-inv .date-container .time-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
     justify-content: space-evenly;
     width: 100%;
   }
   .container-inv .date-container .time-container .time {
     width: 70px;
-    height: 85px;
+    height: 98px;
   }
   .container-inv .date-container .time-container .time .times {
     font-size: 12px;
@@ -512,10 +526,10 @@
     width: 100%;
   }
   .container-itinerario .cont .itinerario {
-    width: 280px;
+    width: 430px;
     margin: 10px 0px;
   }
-  .container-dresscode_mesa-inv {
+  .container-dresscode_mesa {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -523,21 +537,43 @@
     margin: 20px 10px;
     padding: 20px 10px;
   }
-  .container-dresscode_mesa-inv .dresscode {
-    width: 280px;
+  .container-dresscode_mesa .dresscode {
+    width: 430px;
     text-align: center;
   }
-  .container-dresscode_mesa-inv .dresscode h3 {
+  .container-dresscode_mesa .dresscode h3 {
     font-size: 30px;
   }
-  .container-dresscode_mesa-inv .dresscode .img-dresscode img {
-    width: 100px;
+  .container-dresscode_mesa .dresscode .img-dresscode img {
+    width: 150px;
   }
-  .container-dresscode_mesa-inv .mesa-inv {
-    width: 280px;
+  .container-dresscode_mesa .mesa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 20px;
+    width: 430px;
+    color: black;
   }
-  .container-dresscode_mesa-inv .mesa-inv h3 {
-    font-size: 30px;
+  .container-dresscode_mesa .mesa h3 {
+    font-family: "Dancing Script", Times;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .container-dresscode_mesa .mesa .codigoRegalo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .container-dresscode_mesa .mesa .codigoRegalo .imgLogo {
+    width: 200px;
+  }
+  .container-dresscode_mesa .mesa .codigoRegalo p {
+    font-family: georgia;
+    font-size: 20px;
   }
   .container-maps_conf {
     display: flex;
@@ -547,16 +583,31 @@
     padding: 15px 5px;
   }
   .container-maps_conf .maps {
-    width: 280px;
+    width: 430px;
   }
   .container-maps_conf .maps .caja-maps {
     width: 260px;
   }
   .container-maps_conf .confirmacion {
-    width: 280px;
+    width: 430px;
+  }
+  .container-maps_conf .confirmacion p {
+    text-align: center;
+  }
+  .container-maps_conf .confirmacion .botones {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
   }
 }
 @media (max-width: 426px) {
+  .inv-carousel .inv-img {
+    height: 635px;
+  }
+  .inv-carousel div .inv-frase {
+    font-size: 25px;
+  }
   .container-nov {
     display: flex;
     flex-direction: column;
@@ -576,12 +627,6 @@
   .container-nov .img-nov img {
     width: 160px;
   }
-  .inv-carousel .inv-img {
-    height: 600px;
-  }
-  .inv-carousel div .inv-frase {
-    font-size: 25px;
-  }
   .container-inv {
     display: flex;
     flex-direction: column;
@@ -595,7 +640,7 @@
     justify-content: space-evenly;
     align-items: center;
     width: 90%;
-    height: 500px;
+    height: 600px;
     margin: 40px 0px;
     padding: 50px 0px;
   }
@@ -614,15 +659,15 @@
     font-size: 17px;
   }
   .container-inv .date-container .time-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
     justify-content: space-evenly;
     width: 100%;
   }
   .container-inv .date-container .time-container .time {
     width: 70px;
-    height: 85px;
+    height: 98px;
   }
   .container-inv .date-container .time-container .time .times {
     font-size: 12px;
@@ -658,10 +703,10 @@
     width: 100%;
   }
   .container-itinerario .cont .itinerario {
-    width: 280px;
+    width: 330px;
     margin: 10px 0px;
   }
-  .container-dresscode_mesa-inv {
+  .container-dresscode_mesa {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -669,21 +714,43 @@
     margin: 20px 10px;
     padding: 20px 10px;
   }
-  .container-dresscode_mesa-inv .dresscode {
-    width: 280px;
+  .container-dresscode_mesa .dresscode {
+    width: 330px;
     text-align: center;
   }
-  .container-dresscode_mesa-inv .dresscode h3 {
+  .container-dresscode_mesa .dresscode h3 {
     font-size: 30px;
   }
-  .container-dresscode_mesa-inv .dresscode .img-dresscode img {
-    width: 100px;
+  .container-dresscode_mesa .dresscode .img-dresscode img {
+    width: 150px;
   }
-  .container-dresscode_mesa-inv .mesa-inv {
-    width: 280px;
+  .container-dresscode_mesa .mesa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 20px;
+    width: 330px;
+    color: black;
   }
-  .container-dresscode_mesa-inv .mesa-inv h3 {
-    font-size: 30px;
+  .container-dresscode_mesa .mesa h3 {
+    font-family: "Dancing Script", Times;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .container-dresscode_mesa .mesa .codigoRegalo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .container-dresscode_mesa .mesa .codigoRegalo .imgLogo {
+    width: 200px;
+  }
+  .container-dresscode_mesa .mesa .codigoRegalo p {
+    font-family: georgia;
+    font-size: 20px;
   }
   .container-maps_conf {
     display: flex;
@@ -693,16 +760,31 @@
     padding: 15px 5px;
   }
   .container-maps_conf .maps {
-    width: 280px;
+    width: 330px;
   }
   .container-maps_conf .maps .caja-maps {
     width: 260px;
   }
   .container-maps_conf .confirmacion {
-    width: 280px;
+    width: 330px;
+  }
+  .container-maps_conf .confirmacion p {
+    text-align: center;
+  }
+  .container-maps_conf .confirmacion .botones {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
   }
 }
 @media (max-width: 376px) {
+  .inv-carousel .inv-img {
+    height: 635px;
+  }
+  .inv-carousel div .inv-frase {
+    font-size: 25px;
+  }
   .container-nov {
     display: flex;
     flex-direction: column;
@@ -721,158 +803,6 @@
   }
   .container-nov .img-nov img {
     width: 160px;
-  }
-  .inv-carousel .inv-img {
-    height: 600px;
-  }
-  .inv-carousel div .inv-frase {
-    font-size: 25px;
-  }
-  .container-inv {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 10px;
-  }
-  .container-inv .date-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 90%;
-    height: 500px;
-    margin: 40px 0px;
-    padding: 50px 0px;
-  }
-  .container-inv .date-container .inv-date-container .inv-date {
-    text-align: center;
-    font-size: 27px;
-  }
-  .container-inv .date-container .place-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .container-inv .date-container .place-container p {
-    text-align: center;
-    font-size: 17px;
-  }
-  .container-inv .date-container .time-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-  .container-inv .date-container .time-container .time {
-    width: 70px;
-    height: 85px;
-  }
-  .container-inv .date-container .time-container .time .times {
-    font-size: 12px;
-  }
-  .container-inv .date-container .img-flor {
-    width: 115px;
-  }
-  .container-inv .qr-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 90%;
-    margin: 40px 0px;
-    padding: 15px;
-  }
-  .container-inv .qr-container .num-mesa {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 25px;
-    font-weight: 600;
-  }
-  .container-inv .qr-container .anuncio {
-    text-align: center;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 18px;
-  }
-  .container-itinerario {
-    margin: 20px 10px;
-  }
-  .container-itinerario .cont {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    width: 100%;
-  }
-  .container-itinerario .cont .itinerario {
-    width: 280px;
-    margin: 10px 0px;
-  }
-  .container-dresscode_mesa-inv {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 20px 10px;
-    padding: 20px 10px;
-  }
-  .container-dresscode_mesa-inv .dresscode {
-    width: 280px;
-    text-align: center;
-  }
-  .container-dresscode_mesa-inv .dresscode h3 {
-    font-size: 30px;
-  }
-  .container-dresscode_mesa-inv .dresscode .img-dresscode img {
-    width: 100px;
-  }
-  .container-dresscode_mesa-inv .mesa-inv {
-    width: 280px;
-  }
-  .container-dresscode_mesa-inv .mesa-inv h3 {
-    font-size: 30px;
-  }
-  .container-maps_conf {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin: 20px 5px;
-    padding: 15px 5px;
-  }
-  .container-maps_conf .maps {
-    width: 280px;
-  }
-  .container-maps_conf .maps .caja-maps {
-    width: 260px;
-  }
-  .container-maps_conf .confirmacion {
-    width: 280px;
-  }
-}
-@media (max-width: 321px) {
-  .container-nov {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 800px;
-    padding: 15px 20px;
-    margin: 15px 10px;
-  }
-  .container-nov p {
-    font-size: 40px;
-  }
-  .container-nov .img-nov {
-    width: 230px;
-    height: 230px;
-  }
-  .container-nov .img-nov img {
-    width: 160px;
-  }
-  .inv-carousel .inv-img {
-    height: 600px;
-  }
-  .inv-carousel div .inv-frase {
-    font-size: 25px;
   }
   .container-inv {
     display: flex;
@@ -953,7 +883,7 @@
     width: 280px;
     margin: 10px 0px;
   }
-  .container-dresscode_mesa-inv {
+  .container-dresscode_mesa {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -961,21 +891,220 @@
     margin: 20px 10px;
     padding: 20px 10px;
   }
-  .container-dresscode_mesa-inv .dresscode {
+  .container-dresscode_mesa .dresscode {
+    width: 300px;
+    text-align: center;
+  }
+  .container-dresscode_mesa .dresscode h3 {
+    font-size: 30px;
+  }
+  .container-dresscode_mesa .dresscode .img-dresscode img {
+    width: 150px;
+  }
+  .container-dresscode_mesa .mesa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 20px;
+    width: 300px;
+    color: black;
+  }
+  .container-dresscode_mesa .mesa h3 {
+    font-family: "Dancing Script", Times;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .container-dresscode_mesa .mesa .codigoRegalo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .container-dresscode_mesa .mesa .codigoRegalo .imgLogo {
+    width: 200px;
+  }
+  .container-dresscode_mesa .mesa .codigoRegalo p {
+    font-family: georgia;
+    font-size: 20px;
+  }
+  .container-maps_conf {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 20px 10px;
+    padding: 15px 5px;
+  }
+  .container-maps_conf .maps {
+    width: 300px;
+  }
+  .container-maps_conf .maps .caja-maps {
+    width: 260px;
+  }
+  .container-maps_conf .confirmacion {
+    width: 300px;
+  }
+  .container-maps_conf .confirmacion p {
+    text-align: center;
+  }
+  .container-maps_conf .confirmacion .botones {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+  }
+}
+@media (max-width: 321px) {
+  .inv-carousel .inv-img {
+    height: 635px;
+  }
+  .inv-carousel div .inv-frase {
+    font-size: 25px;
+  }
+  .container-nov {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 800px;
+    padding: 15px 20px;
+    margin: 15px 10px;
+  }
+  .container-nov p {
+    font-size: 40px;
+  }
+  .container-nov .img-nov {
+    width: 230px;
+    height: 230px;
+  }
+  .container-nov .img-nov img {
+    width: 160px;
+  }
+  .container-inv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 10px;
+  }
+  .container-inv .date-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    height: 600px;
+    margin: 40px 0px;
+    padding: 50px 0px;
+  }
+  .container-inv .date-container .inv-date-container .inv-date {
+    text-align: center;
+    font-size: 27px;
+  }
+  .container-inv .date-container .place-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .container-inv .date-container .place-container p {
+    text-align: center;
+    font-size: 17px;
+  }
+  .container-inv .date-container .time-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .container-inv .date-container .time-container .time {
+    width: 70px;
+    height: 98px;
+  }
+  .container-inv .date-container .time-container .time .times {
+    font-size: 12px;
+  }
+  .container-inv .date-container .img-flor {
+    width: 115px;
+  }
+  .container-inv .qr-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    margin: 40px 0px;
+    padding: 15px;
+  }
+  .container-inv .qr-container .num-mesa {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .container-inv .qr-container .anuncio {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+  }
+  .container-itinerario {
+    margin: 20px 10px;
+  }
+  .container-itinerario .cont {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+  }
+  .container-itinerario .cont .itinerario {
+    width: 280px;
+    margin: 10px 0px;
+  }
+  .container-dresscode_mesa {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px 10px;
+    padding: 20px 10px;
+  }
+  .container-dresscode_mesa .dresscode {
     width: 280px;
     text-align: center;
   }
-  .container-dresscode_mesa-inv .dresscode h3 {
+  .container-dresscode_mesa .dresscode h3 {
     font-size: 30px;
   }
-  .container-dresscode_mesa-inv .dresscode .img-dresscode img {
-    width: 100px;
+  .container-dresscode_mesa .dresscode .img-dresscode img {
+    width: 150px;
   }
-  .container-dresscode_mesa-inv .mesa-inv {
+  .container-dresscode_mesa .mesa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 20px;
     width: 280px;
+    color: black;
   }
-  .container-dresscode_mesa-inv .mesa-inv h3 {
-    font-size: 30px;
+  .container-dresscode_mesa .mesa h3 {
+    font-family: "Dancing Script", Times;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .container-dresscode_mesa .mesa .codigoRegalo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .container-dresscode_mesa .mesa .codigoRegalo .imgLogo {
+    width: 200px;
+  }
+  .container-dresscode_mesa .mesa .codigoRegalo p {
+    font-family: georgia;
+    font-size: 20px;
   }
   .container-maps_conf {
     display: flex;
@@ -992,6 +1121,15 @@
   }
   .container-maps_conf .confirmacion {
     width: 280px;
+  }
+  .container-maps_conf .confirmacion p {
+    text-align: center;
+  }
+  .container-maps_conf .confirmacion .botones {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
   }
 }
 body {
