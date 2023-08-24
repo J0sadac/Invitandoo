@@ -1,7 +1,7 @@
 .navbar {
   margin-bottom: 30px;
   padding: 0;
-  background-color: #3e4144;
+  background-color: rgb(250, 228, 213);
   color: black;
 }
 .navbar .nav-cont {
@@ -231,7 +231,11 @@
   color: black;
 }
 .container-inv .qr-container .img-qr {
-  width: 200px;
+  width: 180px;
+  height: 180px;
+  background-color: white;
+  padding: 25px 15px 15px;
+  border-radius: 10px;
 }
 .container-inv .qr-container .nombre-inv {
   display: flex;
@@ -991,7 +995,7 @@
   }
 }
 body {
-  background-color: #3e4144;
+  background: url("../images/Background/background-prueba.jpg");
 }
 
 /*# sourceMappingURL=styles.css.map */

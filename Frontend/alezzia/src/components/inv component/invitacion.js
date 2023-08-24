@@ -3,16 +3,17 @@ import {useEffect, useState} from 'react';
 //Imagen ESTATICA para adorno de la fecha y lugar
 import ImgFlor from '../../images/inv-flor.png';
 
-//Imagen de EJEMPLO para el codigo QR
-import ImgQR from '../../images/ejemplo QR.png';
-
-//Variables de la fecha y lugar
-var diaBoda= "Nov 12 2023 19:30:00";
-var day = "Nov 12 2023"
+//Dependencia para la generacion de codigos QR del codigo QR
+import QRCode from 'qrcode.react';
 
 //Variables del codigo QR
 var numMesa= 7;
 var nombreInv= "Castellanos Lopez";
+var qrSitio = 'https://grand-nasturtium-1f0d17.netlify.app';
+
+//Variables de la fecha y lugar
+var diaBoda= "Nov 12 2023 19:30:00";
+var day = "12 Nov 2023"
 
 //Funcion de cuenta regresiva de la fecha y lugar
 const Timer = (limite) => {
@@ -62,78 +63,78 @@ const Timer = (limite) => {
     days}
 }
 
-//Funcion para la generacion de codigos QR del codigo QR
-
+//Funcion para la generacion de codigos QR
 
 function Invitacion(){
 
     return(
         <div className="container-inv shadow">
-
-        <div className="date-container">
-          <div className="inv-date-container">
-            <h3 className="inv-date">{day}</h3>
-          </div>
-
-          <div className="place-container">
-            <p>Salon Country club</p>
-            <p>Calle 3a. Ote. 33, Los Naranjos, Centro, 30830</p>
-            <p>Tapachula, Chiapas, Mexico</p>
-          </div>
-          
-          <div className="time-container">
-            <div className="time shadow">
-              <p className="regresivo">
-              {Timer(diaBoda).days}
-              </p>
-              <p className="times">DIAS</p>
+          <div className="date-container">
+            <div className="inv-date-container">
+              <h3 className="inv-date">{day}</h3>
             </div>
-            <div className="time shadow">
-              <p className="regresivo">
-              {Timer(diaBoda).hours}
-              </p>
-              <p className="times">HRS</p>
+
+            <div className="place-container">
+              <p>Salon Country club</p>
+              <p>Calle 3a. Ote. 33, Los Naranjos, Centro, 30830</p>
+              <p>Tapachula, Chiapas, Mexico</p>
             </div>
-            <div className="time shadow">
-              <p className="regresivo">
-              {Timer(diaBoda).minutes}
-              </p>
-              <p className="times">MNS</p>
+            
+            <div className="time-container">
+              <div className="time shadow">
+                <p className="regresivo">
+                {Timer(diaBoda).days}
+                </p>
+                <p className="times">DIAS</p>
+              </div>
+              <div className="time shadow">
+                <p className="regresivo">
+                {Timer(diaBoda).hours}
+                </p>
+                <p className="times">HRS</p>
+              </div>
+              <div className="time shadow">
+                <p className="regresivo">
+                {Timer(diaBoda).minutes}
+                </p>
+                <p className="times">MNS</p>
+              </div>
+              <div className="time shadow">
+                <p className="regresivo">
+                  {Timer(diaBoda).seconds}
+                </p>
+                <p className="times">SEG</p>
+              </div>
             </div>
-            <div className="time shadow">
-              <p className="regresivo">
-                {Timer(diaBoda).seconds}
+
+            <img src={ImgFlor} className="img-flor img-flor-tr" alt="..."/>
+            <img src={ImgFlor} className="img-flor img-flor-tl" alt="..."/>
+            <img src={ImgFlor} className="img-flor img-flor-br" alt="..."/>
+            <img src={ImgFlor} className="img-flor img-flor-bl" alt="..."/>
+          </div>
+
+          <div className="qr-container shadow">
+            <div className="nombre-inv">
+              <h3>Familia:</h3>
+              <h3>
+                {nombreInv}
+              </h3>
+            </div>
+
+            <div className='num-mesa'>
+              <p>
+                Mesa: {numMesa}
               </p>
-              <p className="times">SEG</p>
+            </div>
+            
+            <div className='img-qr'>
+              <QRCode value={qrSitio}/>
+            </div>
+            
+            <div className="anuncio">
+              <p>No olvides guardar tu codigo QR ¡Sera muy importante para tu recepcion!</p>
             </div>
           </div>
-
-          <img src={ImgFlor} className="img-flor img-flor-tr" alt="..."/>
-          <img src={ImgFlor} className="img-flor img-flor-tl" alt="..."/>
-          <img src={ImgFlor} className="img-flor img-flor-br" alt="..."/>
-          <img src={ImgFlor} className="img-flor img-flor-bl" alt="..."/>
-        </div>
-
-        <div className="qr-container shadow">
-          <div className="nombre-inv">
-            <h3>Familia:</h3>
-            <h3>
-              {nombreInv}
-            </h3>
-          </div>
-
-          <div className='num-mesa'>
-            <p>
-              Mesa: {numMesa}
-            </p>
-          </div>
-          
-          <img src={ImgQR} alt="..." className="img-qr"/>
-
-          <div className="anuncio">
-            <p>No olvides guardar tu codigo QR ¡Sera muy importante para tu recepcion!</p>
-          </div>
-        </div>
         </div>
     )
 };

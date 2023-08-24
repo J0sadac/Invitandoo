@@ -177,7 +177,13 @@ $font-second: 'Cormorant Garamond', Georgia;
         color: $color-font;
 
         .img-qr{
-            width: 200px;
+            width: 180px;
+            height: 180px;
+
+            background-color: white;
+            padding: 25px 15px 15px;
+
+            border-radius: 10px;
         }
 
         .nombre-inv{
