@@ -9,7 +9,8 @@ import QRCode from 'qrcode.react';
 //Variables del codigo QR
 var numMesa= 7;
 var nombreInv= "Castellanos Lopez";
-var qrSitio = 'https://grand-nasturtium-1f0d17.netlify.app/invitaciones';
+var pase = 6;
+var qrDatos = "Invitado: " + nombreInv + "\nMesa: " + numMesa + "\nPase para " + pase;
 
 //Variables de la fecha y lugar
 var diaBoda= "Nov 12 2023 19:30:00";
@@ -126,7 +127,7 @@ function Invitacion(){
             </div>
             
             <div className='img-qr'>
-              <QRCode value={qrSitio}/>
+              <QRCode value={qrDatos}/>
             </div>
             
             <div className="anuncio">

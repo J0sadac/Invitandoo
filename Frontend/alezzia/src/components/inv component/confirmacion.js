@@ -1,4 +1,10 @@
- 
+ const Confirmar = () => {
+  alert("¡Estamos muy felices por contar con tu presencia!")
+ };
+
+ const Faltar = () => {
+  alert("¡Lamentamos mucho tu ausencia en este evento!")
+ }
 
 function Confirmacion(){
 
@@ -16,8 +22,8 @@ function Confirmacion(){
             <p>Por favor, confirma tu asistencia</p>
 
             <div id="confirmacion" className='botones'>
-              <button type='button' className='si'>Asistiré</button>
-              <button type='button' className='no'>Faltaré</button>
+              <button type='button' onClick={Confirmar} className='si'>Asistiré</button>
+              <button type='button' onClick={Faltar} className='no'>Faltaré</button>
             </div>
         </div>
       </div>
