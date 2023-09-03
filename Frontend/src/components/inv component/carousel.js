@@ -2,11 +2,11 @@ import Img1 from '../../images/Inv-1.jpg';
 import Img2 from '../../images/inv-3.jpg';
 import Img3 from '../../images/inv-2.jpg';
 
-var frase1="Comienza nuestra historia de amor.";
+
 var frase2="Dos almas, un solo destino.";
 var frase3="Gracias por ser parte de nuestro día inolvidable.";
 
-function Carousel(){
+function Carousel(frase){
 
     return(
         <div id="carouselExampleAutoplaying" className="carousel carousel-fade slide inv-carousel" data-bs-ride="carousel">
@@ -37,7 +37,7 @@ function Carousel(){
             <img src={Img1} className="d-block w-100 inv-img" alt="..." />
             <div className="carousel-caption d-md-block">
               <h5 className="inv-frase">
-                {frase1}
+                {frase}
               </h5>
             </div>
           </div>

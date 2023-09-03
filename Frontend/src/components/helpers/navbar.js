@@ -7,7 +7,7 @@ function navbar() {
       >
         <div className="container nav-cont">
           <Link className="navbar-brand nav-home" to="/">
-            Alezzia
+            Invitandoo
           </Link>
           <button
             className="navbar-toggler"
