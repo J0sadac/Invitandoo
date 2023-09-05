@@ -1,23 +1,17 @@
-import ImgNovio from '../../images/novio-icon.png';
-import ImgNovia from '../../images/novia-icon.png';
-
-var novio= "Daniel";
-var novia= "Jazmin";
-
-function Novios(){
+function Novios({nombres, imagen}){
 
     return(
         <div className='container-nov shadow'>
         <div className='img-nov shadow'>
-          <img src={ImgNovio} alt='...' />
+          <img src={imagen[1]} alt='...' />
         </div>
         
-        <p>{novio}</p>
+        <p>{nombres.novia}</p>
         <p>&</p>
-        <p>{novia}</p>
+        <p>{nombres.novio}</p>
 
         <div className='img-nov shadow'>
-          <img src={ImgNovia} alt='...' />
+          <img src={imagen[0]} alt='...' />
         </div>
         </div>
     )
