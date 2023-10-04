@@ -445,7 +445,7 @@
 
 @media (max-width: 551px) {
   .inv-carousel .inv-img {
-    height: 700px;
+    height: 715px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -454,7 +454,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 800px;
     padding: 15px 20px;
     margin: 15px 10px;
@@ -625,7 +625,7 @@
 }
 @media (max-width: 426px) {
   .inv-carousel .inv-img {
-    height: 700px;
+    height: 715px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -634,7 +634,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 800px;
     padding: 15px 20px;
     margin: 15px 10px;
@@ -805,7 +805,7 @@
 }
 @media (max-width: 376px) {
   .inv-carousel .inv-img {
-    height: 700px;
+    height: 715px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -814,7 +814,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 800px;
     padding: 15px 20px;
     margin: 15px 10px;
@@ -985,7 +985,7 @@
 }
 @media (max-width: 321px) {
   .inv-carousel .inv-img {
-    height: 700px;
+    height: 715px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -994,7 +994,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 800px;
     padding: 15px 20px;
     margin: 15px 10px;
