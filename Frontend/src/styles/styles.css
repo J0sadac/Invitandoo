@@ -97,7 +97,7 @@
   margin-top: 30px;
 }
 .inv-carousel .inv-img {
-  height: 690px;
+  height: 730px;
   object-fit: cover;
 }
 .inv-carousel .inv-frase {
@@ -113,7 +113,7 @@
   align-items: center;
   margin: 50px 20px;
   padding: 40px;
-  color: #212529;
+  color: #fafbfd;
 }
 .container-nov .img-nov {
   border-radius: 50%;
@@ -146,7 +146,7 @@
   align-items: center;
   flex-wrap: wrap;
   margin: 50px 20px;
-  color: #212529;
+  color: #fafbfd;
 }
 .container-inv .date-container {
   margin: 50px 0px;
@@ -238,7 +238,7 @@
   width: 25%;
   height: 540px;
   padding: 40px 20px;
-  color: #212529;
+  color: #fafbfd;
 }
 .container-inv .qr-container .img-qr {
   width: 180px;
@@ -278,7 +278,7 @@
   flex-wrap: wrap;
   margin: 50px 20px;
   padding: 30px;
-  color: #212529;
+  color: #fafbfd;
 }
 .container-itinerario h3 {
   font-family: "Dancing Script", Times;
@@ -327,7 +327,7 @@
   flex-wrap: wrap;
   padding: 20px;
   width: 45%;
-  color: #212529;
+  color: #fafbfd;
   text-align: center;
 }
 .container-dresscode_mesa .dresscode h3 {
@@ -350,7 +350,7 @@
   flex-wrap: wrap;
   padding: 20px;
   width: 45%;
-  color: #212529;
+  color: #fafbfd;
 }
 .container-dresscode_mesa .mesa h3 {
   font-family: "Dancing Script", Times;
@@ -377,7 +377,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  color: #212529;
+  color: #fafbfd;
   margin: 50px 20px;
   padding: 40px;
 }
@@ -445,7 +445,7 @@
 
 @media (max-width: 551px) {
   .inv-carousel .inv-img {
-    height: 730px;
+    height: 740px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -577,7 +577,7 @@
     margin-top: 20px;
     padding: 20px;
     width: 430px;
-    color: #212529;
+    color: #fafbfd;
   }
   .container-dresscode_mesa .mesa h3 {
     font-family: "Dancing Script", Times;
@@ -625,7 +625,7 @@
 }
 @media (max-width: 426px) {
   .inv-carousel .inv-img {
-    height: 730px;
+    height: 740px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -757,7 +757,7 @@
     margin-top: 20px;
     padding: 20px;
     width: 330px;
-    color: #212529;
+    color: #fafbfd;
   }
   .container-dresscode_mesa .mesa h3 {
     font-family: "Dancing Script", Times;
@@ -805,7 +805,7 @@
 }
 @media (max-width: 376px) {
   .inv-carousel .inv-img {
-    height: 730px;
+    height: 740px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -937,7 +937,7 @@
     margin-top: 20px;
     padding: 20px;
     width: 300px;
-    color: #212529;
+    color: #fafbfd;
   }
   .container-dresscode_mesa .mesa h3 {
     font-family: "Dancing Script", Times;
@@ -985,7 +985,7 @@
 }
 @media (max-width: 321px) {
   .inv-carousel .inv-img {
-    height: 730px;
+    height: 740px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -1117,7 +1117,7 @@
     margin-top: 20px;
     padding: 20px;
     width: 280px;
-    color: #212529;
+    color: #fafbfd;
   }
   .container-dresscode_mesa .mesa h3 {
     font-family: "Dancing Script", Times;
@@ -1164,7 +1164,7 @@
   }
 }
 body {
-  background: url("../images/Background/2do-intento.jpg");
+  background: url("../images/Background/5ta-opcion.jpg");
 }
 
 /*# sourceMappingURL=styles.css.map */
