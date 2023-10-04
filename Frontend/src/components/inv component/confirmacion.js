@@ -1,3 +1,5 @@
+ import ImgGoogleMaps from "../../images/google maps - referencia.png";
+ 
  const Confirmar = () => {
   alert("¡Estamos muy felices por contar con tu presencia!")
  };
@@ -14,7 +16,7 @@ function Confirmacion(){
           <p>Direccion en google maps</p>
 
           <div id="maps" className='caja-maps'>
-
+              <img className="img-googlemaps" src={ImgGoogleMaps} alt="..." />
           </div>
         </div>
 

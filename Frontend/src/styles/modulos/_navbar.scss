@@ -1,38 +1,47 @@
 //Variables
-$color-main: rgb(249, 220, 201);
-$color-second: rgb(250, 228, 213);
+$color-main: #170000;
+$font-color: #fafbfd;
+
+$font-main: 'Dancing Script', Times;
+$font-second: 'Cormorant Garamond', Georgia;
 
 .navbar{
     margin-bottom: 30px;
     padding: 0;
 
-    background-color: $color-second;
-    color: black;
+    background-color: $color-main;
+    color: $font-color;
 
     .nav-cont{
         display: flex;
         flex-direction: row;
         align-items: center;
-        color: black;
 
         .navbar-collapse{
             padding: 5px;
         }
+
+        .nav-home{
+            font-family: $font-main;
+            font-size: 32px;
+            margin: 0px 10px;
+            padding: 0px;
+    
+            color: $font-color;
+        }
+    
+        .nav-section{
+            height: 35px;
+            margin: 0px 2px;
+
+            font-family: $font-second;
+            font-size: 18px;
+            color: $font-color;
+        }
+    
+        .icon{
+            margin: 2px;
+        }
     }
 
-    .nav-home{
-        font-family: 'Smooch', cursive;
-        font-size: 32px;
-        margin: 0px 10px;
-        padding: 0px;
-    }
-
-    .nav-section{
-        height: 35px;
-        margin: 0px 2px;
-    }
-
-    .icon{
-        margin: 2px;
-    }
 }

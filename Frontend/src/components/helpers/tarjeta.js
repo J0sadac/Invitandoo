@@ -1,4 +1,4 @@
-import ImgNovios from '../../images/Inv-1.jpg';
+import ImgNovios from '../../images/Boda - Ana y Angel/Boda - Ana y Angel - img09.jpg';
 
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ function tarjeta() {
       <h3>Nuestros proximos eventos</h3>
 
       <div className='tarjetas'>
-        <Link className='link' to='/invitaciones'>
+        <Link className='link' to='/invitado'>
           <div className="card shadow">
             <img className='card-img' src={ImgNovios} alt='...' />
 

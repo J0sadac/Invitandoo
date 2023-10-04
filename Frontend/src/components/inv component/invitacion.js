@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 
 //Imagen ESTATICA para adorno de la fecha y lugar
-import ImgFlor from '../../images/inv-flor.png';
+import ImgFlor from '../../images/inv-flor-vino.png';
 
 //Dependencia para la generacion de codigos QR del codigo QR
 import QRCode from 'qrcode.react';
@@ -10,11 +10,11 @@ import QRCode from 'qrcode.react';
 var numMesa= 7;
 var nombreInv= "Castellanos Lopez";
 var pase = 6;
-var qrDatos = "Invitado: " + nombreInv + "\nMesa: " + numMesa + "\nPase para " + pase;
+
 
 //Variables de la fecha y lugar
-var diaBoda= "Nov 12 2023 19:30:00";
-var day = "12 Nov 2023"
+var diaBoda= "Nov 03 2023 19:30:00";
+var day = "03 Nov 2023"
 
 //Funcion de cuenta regresiva de la fecha y lugar
 const Timer = (limite) => {
@@ -65,6 +65,7 @@ const Timer = (limite) => {
 }
 
 function Invitacion(){
+  var qrDatos = "Invitado: " + nombreInv + "\nMesa: " + numMesa + "\nPase para " + pase;
 
     return(
         <div className="container-inv shadow">
@@ -74,8 +75,8 @@ function Invitacion(){
             </div>
 
             <div className="place-container">
-              <p>Salon Country club</p>
-              <p>Calle 3a. Ote. 33, Los Naranjos, Centro, 30830</p>
+              <p>Salon Bellavita</p>
+              <p>11va sur, entre 8va y 6ta rpivada oriente</p>
               <p>Tapachula, Chiapas, Mexico</p>
             </div>
             

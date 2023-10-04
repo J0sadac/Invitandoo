@@ -1,7 +1,8 @@
 //Variables
 $color-main: #212529;
 $color-second: #3e4144;
-$color-font: black;
+$color-font: #fafbfd;
+$color-carousel: #fafbfd;
 $font-main: 'Dancing Script', Times;
 $font-second: 'Cormorant Garamond', Georgia;
 
@@ -9,12 +10,12 @@ $font-second: 'Cormorant Garamond', Georgia;
     margin-top: 30px;
 
     .inv-img{
-        height: 650px;
+        height: 660px;
         object-fit: cover;
     }
 
     .inv-frase{
-        color: white;
+        color: $color-carousel;
         font-family: $font-main;
         font-size: 35px;
     }
@@ -43,13 +44,22 @@ $font-second: 'Cormorant Garamond', Georgia;
         align-items: center;
         
         img{
-            width: 180px;
+            width: 240px;
+            border-radius: 50%;
         }
     }
     
-    p{
-        font-size: 45px;
-        font-family: $font-main;
+    .nombre-nov{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        width: 50%;
+
+        p{
+            font-size: 45px;
+            font-family: $font-main;
+        }
     }
 }
 
@@ -131,35 +141,36 @@ $font-second: 'Cormorant Garamond', Georgia;
         }
     
         .img-flor-tr{
-            width: 170px;
+            width: 220px;
             position: absolute;
             top: 0;
             right: 0;
+            transform: scaleX(-1);
+            transform: rotate(180deg);
         }
     
         .img-flor-tl{
-            width: 170px;
+            width: 210px;
             position: absolute;
             top: 0;
             left: 0;
-            transform: scaleX(-1);
-        }
-    
-        .img-flor-br{
-            width: 170px;
-            position: absolute;
-            bottom: 0;
-            right: 0;
             transform: scaleY(-1);
         }
     
+        .img-flor-br{
+            width: 210px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: scaleX(-1);
+        }
+    
         .img-flor-bl{
-            width: 170px;
+            width: 210px;
             position: absolute;
             bottom: 0;
             left: 0;
-            transform: scaleX(-1);
-            transform: rotate(180deg);
+            
         }
     }
 
@@ -309,7 +320,8 @@ $font-second: 'Cormorant Garamond', Georgia;
         .img-dresscode{
     
             img{
-                width: 270px;
+                width: 300px;
+                margin: 10px;
             }
         }
     }
@@ -360,6 +372,18 @@ $font-second: 'Cormorant Garamond', Georgia;
 
     margin: 50px 20px;
     padding: 40px;
+
+    .caja-maps{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        .img-googlemaps{
+                width: 300px;
+
+            
+        }
+    }
 
     .confirmacion{
         display: flex;
@@ -1155,8 +1179,11 @@ $font-second: 'Cormorant Garamond', Georgia;
         padding: 15px 20px;
         margin: 15px 10px;
 
-        p{
-            font-size: 40px;
+        .nombre-nov{
+            width: 100%;
+            p{
+                font-size: 40px;
+            }
         }
 
         .img-nov{
@@ -1164,7 +1191,7 @@ $font-second: 'Cormorant Garamond', Georgia;
             height: 230px;
 
             img{
-                width: 160px;
+                width: 225px;
             }
         }
     }
@@ -1226,7 +1253,7 @@ $font-second: 'Cormorant Garamond', Georgia;
             }
 
             .img-flor{
-                width: 115px;
+                width: 135px;
             }
         }
 

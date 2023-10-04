@@ -6,9 +6,10 @@ function Novios({nombres, imagen}){
           <img src={imagen[1]} alt='...' />
         </div>
         
-        <p>{nombres.novia}</p>
-        <p>&</p>
-        <p>{nombres.novio}</p>
+        <div className="nombre-nov">
+          <p>{nombres.novia} & {nombres.novio}</p>
+          
+        </div>
 
         <div className='img-nov shadow'>
           <img src={imagen[0]} alt='...' />

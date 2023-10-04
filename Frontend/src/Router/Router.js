@@ -15,7 +15,7 @@ const Router = () => {
             
             <Routes>                
                 <Route exact path='/' element={<Main />} />
-                <Route exact path='/invitaciones' element={<Invitaciones />} />
+                <Route exact path='/invitado' element={<Invitaciones />} />
             </Routes>
 
         </BrowserRouter>
