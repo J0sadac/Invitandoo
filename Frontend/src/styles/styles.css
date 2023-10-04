@@ -445,7 +445,7 @@
 
 @media (max-width: 551px) {
   .inv-carousel .inv-img {
-    height: 635px;
+    height: 700px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -459,7 +459,10 @@
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-nov p {
+  .container-nov .nombre-nov {
+    width: 100%;
+  }
+  .container-nov .nombre-nov p {
     font-size: 40px;
   }
   .container-nov .img-nov {
@@ -467,7 +470,7 @@
     height: 230px;
   }
   .container-nov .img-nov img {
-    width: 160px;
+    width: 235px;
   }
   .container-inv {
     display: flex;
@@ -515,7 +518,7 @@
     font-size: 12px;
   }
   .container-inv .date-container .img-flor {
-    width: 115px;
+    width: 135px;
   }
   .container-inv .qr-container {
     display: flex;
@@ -622,7 +625,7 @@
 }
 @media (max-width: 426px) {
   .inv-carousel .inv-img {
-    height: 635px;
+    height: 700px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -636,7 +639,10 @@
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-nov p {
+  .container-nov .nombre-nov {
+    width: 100%;
+  }
+  .container-nov .nombre-nov p {
     font-size: 40px;
   }
   .container-nov .img-nov {
@@ -644,7 +650,7 @@
     height: 230px;
   }
   .container-nov .img-nov img {
-    width: 160px;
+    width: 225px;
   }
   .container-inv {
     display: flex;
@@ -692,7 +698,7 @@
     font-size: 12px;
   }
   .container-inv .date-container .img-flor {
-    width: 115px;
+    width: 135px;
   }
   .container-inv .qr-container {
     display: flex;
@@ -799,7 +805,7 @@
 }
 @media (max-width: 376px) {
   .inv-carousel .inv-img {
-    height: 635px;
+    height: 700px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -813,7 +819,10 @@
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-nov p {
+  .container-nov .nombre-nov {
+    width: 100%;
+  }
+  .container-nov .nombre-nov p {
     font-size: 40px;
   }
   .container-nov .img-nov {
@@ -821,7 +830,7 @@
     height: 230px;
   }
   .container-nov .img-nov img {
-    width: 160px;
+    width: 225px;
   }
   .container-inv {
     display: flex;
@@ -869,7 +878,7 @@
     font-size: 12px;
   }
   .container-inv .date-container .img-flor {
-    width: 115px;
+    width: 135px;
   }
   .container-inv .qr-container {
     display: flex;
@@ -976,7 +985,7 @@
 }
 @media (max-width: 321px) {
   .inv-carousel .inv-img {
-    height: 635px;
+    height: 700px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
