@@ -1,7 +1,7 @@
 //Variables
 $color-main: #212529;
 $color-second: #3e4144;
-$color-font: #fafbfd;
+$color-font: #212529;
 $color-carousel: #fafbfd;
 $font-main: 'Dancing Script', Times;
 $font-second: 'Cormorant Garamond', Georgia;
@@ -10,7 +10,7 @@ $font-second: 'Cormorant Garamond', Georgia;
     margin-top: 30px;
 
     .inv-img{
-        height: 660px;
+        height: 690px;
         object-fit: cover;
     }
 
@@ -462,7 +462,7 @@ $font-second: 'Cormorant Garamond', Georgia;
 @media (max-width:551px){
     .inv-carousel{
         .inv-img{
-            height: 715px;
+            height: 730px;
         }
 
         div{
@@ -697,7 +697,7 @@ $font-second: 'Cormorant Garamond', Georgia;
 @media (max-width:426px){
     .inv-carousel{
         .inv-img{
-            height: 715px;
+            height: 730px;
         }
 
         div{
@@ -932,7 +932,7 @@ $font-second: 'Cormorant Garamond', Georgia;
 @media (max-width:376px){
     .inv-carousel{
         .inv-img{
-            height: 715px;
+            height: 730px;
         }
 
         div{
@@ -1168,7 +1168,7 @@ $font-second: 'Cormorant Garamond', Georgia;
 
     .inv-carousel{
         .inv-img{
-            height: 715px;
+            height: 730px;
         }
 
         div{
