@@ -7,12 +7,6 @@ import ImgFlor from '../../images/inv-flor-vino.png';
 //Dependencia para la generacion de codigos QR del codigo QR
 import QRCode from 'qrcode.react';
 
-//Variables del codigo QR
-var numMesa= 7;
-var nombreInv= "Castellanos Lopez";
-var pase = 6;
-
-
 //Variables de la fecha y lugar
 var diaBoda= "Nov 03 2023 19:30:00";
 var day = "03 Nov 2023"
@@ -71,26 +65,23 @@ function Invitacion(){
   //const datoId = match.params.id;
   
   useEffect(() => {
-    const urlApi = `https://invitandoodb.onrender.com/invitacion/`; 
+    const urlApi = `https://invitandoodb.onrender.com/invitacion/${datoId}`;
 
-     async function fetchApi(){
-      try{
+    async function fetchApi() {
+      try {
+
         const respuesta = await fetch(urlApi);
-    
         const respuestaJson = await respuesta.json();
         setDatos(respuestaJson);
+        
+      } catch (error) {
 
-        console.log(respuesta.status);
-        console.log(respuestaJson);
-      }catch(error) {
-          console.error('Error al recuperar datos de la API:', error);
-        }
+        console.error('Error al recuperar datos de la API:', error);
       }
+    }
 
     fetchApi();
   }, [datoId]);
-
-  var qrDatos = "Invitado: " + nombreInv + "\nMesa: " + numMesa + "\nPase para " + pase;
 
     return(
         <div className="container-inv shadow">
@@ -100,7 +91,7 @@ function Invitacion(){
             </div>
 
             <div className="place-container">
-              <p>Salon Bella vita</p>
+              <p>Salon Bella Vita</p>
               <p>11A. sur, entre 8A. y 6A. Privada oriente</p>
               <p>Tapachula, Chiapas, Mexico</p>
             </div>
@@ -160,7 +151,9 @@ function Invitacion(){
             </div>
           
             <div className='img-qr'>
-              <QRCode value={qrDatos}/>
+              <QRCode value={
+                "Invitado: " + datos.nombreInvitado + "\nMesa: " + datos.mesa + "\nPase para " + datos.cantidadInvitados
+              }/>
             </div>
           
             <div className="anuncio">

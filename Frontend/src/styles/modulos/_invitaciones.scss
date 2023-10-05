@@ -3,14 +3,16 @@ $color-main: #212529;
 $color-second: #3e4144;
 $color-font: #fafbfd;
 $color-carousel: #fafbfd;
-$font-main: 'Dancing Script', Times;
-$font-second: 'Cormorant Garamond', Georgia;
+$font-main: 'Tangerine', cursive;
+$font-second: 'Abel', sans-serif;
+$font-family-main: 'Dancing Script', Times;
+$font-family-second: 'Cormorant Garamond', Georgia;
 
 .inv-carousel{
     margin-top: 30px;
 
     .inv-img{
-        height: 720px;
+        height: 710px;
         object-fit: cover;
     }
 
@@ -115,7 +117,7 @@ $font-second: 'Cormorant Garamond', Georgia;
     
             .inv-date{
                 font-family: $font-main;
-                font-size: 50px;
+                font-size: 70px;
                 font-weight: 600;
             }
         }
@@ -267,13 +269,13 @@ $font-second: 'Cormorant Garamond', Georgia;
 
         .title{
             font-size: 30px;
-            font-family: $font-main;
+            font-family: $font-second;
     
             color: $color-font;
         }
 
         audio{
-            margin-left: -15px;
+            margin-left: -12px;
         }
 
     }
@@ -541,7 +543,7 @@ $font-second: 'Cormorant Garamond', Georgia;
 @media (max-width:551px){
     .inv-carousel{
         .inv-img{
-            height: 720px;
+            height: 705px;
         }
 
         div{
@@ -616,7 +618,7 @@ $font-second: 'Cormorant Garamond', Georgia;
             .inv-date-container{
                 .inv-date{
                     text-align: center;
-                    font-size: 27px;
+                    font-size: 42px;
                 }
             }
 
@@ -664,18 +666,34 @@ $font-second: 'Cormorant Garamond', Georgia;
             margin: 40px 0px;
             padding: 15px;
 
+            .nombre-inv{
+                h3{
+                    font-size: 40px;
+                }
+            }
             .num-mesa{
-                font-family: 'Times New Roman', Times, serif;
+                font-family: $font-second;
                 font-size: 25px;
                 font-weight: 600;
             }
 
             .anuncio{
                 text-align: center;
-                font-family: 'Times New Roman', Times, serif;
+                font-family: $font-second;
                 font-size: 18px;
             }
         }
+    }
+
+    .container-reproductor{
+        .reproductor{
+            .title{
+                font-size: 30px;
+                font-family: $font-second;
+                text-align: center;
+            }
+        }
+    
     }
 
     .container-itinerario{
@@ -792,7 +810,7 @@ $font-second: 'Cormorant Garamond', Georgia;
 @media (max-width:426px){
     .inv-carousel{
         .inv-img{
-            height: 720px;
+            height: 705px;
         }
 
         div{
@@ -867,7 +885,7 @@ $font-second: 'Cormorant Garamond', Georgia;
             .inv-date-container{
                 .inv-date{
                     text-align: center;
-                    font-size: 27px;
+                    font-size: 42px;
                 }
             }
 
@@ -915,18 +933,35 @@ $font-second: 'Cormorant Garamond', Georgia;
             margin: 40px 0px;
             padding: 15px;
 
+            .nombre-inv{
+                h3{
+                    font-size: 40px;
+                }
+            }
+
             .num-mesa{
-                font-family: 'Times New Roman', Times, serif;
+                font-family: $font-second;
                 font-size: 25px;
                 font-weight: 600;
             }
 
             .anuncio{
                 text-align: center;
-                font-family: 'Times New Roman', Times, serif;
+                font-family: $font-second;
                 font-size: 18px;
             }
         }
+    }
+
+    .container-reproductor{
+        .reproductor{
+            .title{
+                font-size: 30px;
+                font-family: $font-second;
+                text-align: center;
+            }
+        }
+    
     }
 
     .container-itinerario{
@@ -1043,7 +1078,7 @@ $font-second: 'Cormorant Garamond', Georgia;
 @media (max-width:376px){
     .inv-carousel{
         .inv-img{
-            height: 720px;
+            height: 705px;
         }
 
         div{
@@ -1118,7 +1153,7 @@ $font-second: 'Cormorant Garamond', Georgia;
             .inv-date-container{
                 .inv-date{
                     text-align: center;
-                    font-size: 27px;
+                    font-size: 42px;
                 }
             }
 
@@ -1166,18 +1201,35 @@ $font-second: 'Cormorant Garamond', Georgia;
             margin: 40px 0px;
             padding: 15px;
 
+            .nombre-inv{
+                h3{
+                    font-size: 40px;
+                }
+            }
+
             .num-mesa{
-                font-family: 'Times New Roman', Times, serif;
+                font-family: $font-second;
                 font-size: 25px;
                 font-weight: 600;
             }
 
             .anuncio{
                 text-align: center;
-                font-family: 'Times New Roman', Times, serif;
+                font-family: $font-second;
                 font-size: 18px;
             }
         }
+    }
+
+    .container-reproductor{
+        .reproductor{
+            .title{
+                font-size: 30px;
+                font-family: $font-second;
+                text-align: center;
+            }
+        }
+    
     }
 
     .container-itinerario{
@@ -1295,7 +1347,7 @@ $font-second: 'Cormorant Garamond', Georgia;
 
     .inv-carousel{
         .inv-img{
-            height: 720px;
+            height: 705px;
         }
 
         div{
@@ -1370,7 +1422,7 @@ $font-second: 'Cormorant Garamond', Georgia;
             .inv-date-container{
                 .inv-date{
                     text-align: center;
-                    font-size: 27px;
+                    font-size: 42px;
                 }
             }
 
@@ -1418,18 +1470,35 @@ $font-second: 'Cormorant Garamond', Georgia;
             margin: 40px 0px;
             padding: 15px;
 
+            .nombre-inv{
+                h3{
+                    font-size: 40px;
+                }
+            }
+
             .num-mesa{
-                font-family: 'Times New Roman', Times, serif;
+                font-family: $font-second;
                 font-size: 25px;
                 font-weight: 600;
             }
 
             .anuncio{
                 text-align: center;
-                font-family: 'Times New Roman', Times, serif;
+                font-family: $font-second;
                 font-size: 18px;
             }
         }
+    }
+
+    .container-reproductor{
+        .reproductor{
+            .title{
+                font-size: 30px;
+                font-family: $font-second;
+                text-align: center;
+            }
+        }
+    
     }
 
     .container-itinerario{

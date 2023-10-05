@@ -8,7 +8,7 @@ function tarjeta() {
       <h3>Nuestros proximos eventos</h3>
 
       <div className='tarjetas'>
-        <Link className='link' to='/ana-y-angel'>
+        <Link className='link' to='/ana-y-angel/651b768e27b73af448b3085c'>
           <div className="card shadow">
             <img className='card-img' src={ImgNovios} alt='...' />
 
