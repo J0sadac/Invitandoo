@@ -1,35 +1,78 @@
  import ImgGoogleMaps from "../../images/google maps - referencia.png";
- 
- const Confirmar = () => {
-  alert("¡Estamos muy felices por contar con tu presencia!")
- };
+ import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
- const Faltar = () => {
-  alert("¡Lamentamos mucho tu ausencia en este evento!")
- }
+function Confirmacion() {
+  const { datoId } = useParams();
+  const [datos, setDatos] = useState(null);
 
-function Confirmacion(){
+  useEffect(() => {
+    const urlApi = `https://tu-api-endpoint/invitacion/${datoId}`;
 
-    return(
-        <div className="container-maps_conf shadow">
-        <div className="maps shadow">
-          <p>Direccion en google maps</p>
+    async function fetchApi() {
+      try {
+        const respuesta = await fetch(urlApi);
+        const respuestaJson = await respuesta.json();
+        setDatos(respuestaJson);
+      } catch (error) {
+        console.error('Error al recuperar datos de la API:', error);
+      }
+    }
 
-          <div id="maps" className='caja-maps'>
-              <img className="img-googlemaps" src={ImgGoogleMaps} alt="..." />
-          </div>
-        </div>
+    fetchApi();
+  }, [datoId]);
 
-        <div className="confirmacion shadow">
-            <p>Por favor, confirma tu asistencia</p>
+  const actualizarAsistencia = (asistira) => {
+    const urlApi = `https://invitandoodb.onrender.com/invitacion/${datoId}`;
+    const data = {
+      asistir: asistira
+    };
 
-            <div id="confirmacion" className='botones'>
-              <button type='button' onClick={Confirmar} className='si'>Asistiré</button>
-              <button type='button' onClick={Faltar} className='no'>Faltaré</button>
-            </div>
-        </div>
+    fetch(urlApi, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => {
+        if (response.ok) {
+          setDatos({ ...datos, asistir: asistira });
+
+          if (asistira) {
+            alert('¡Gracias por confirmar tu asistencia! Nos vemos en el evento.');
+          } else {
+            alert('Lamentamos que no puedas asistir. Esperamos verte en otra ocasión.');
+          }
+
+        } else {
+          console.error('Error al actualizar la propiedad "asistir".');
+        }
+      })
+      .catch(error => {
+        console.error('Error al realizar la solicitud PUT:', error);
+      });
+  };
+
+  return(
+    <div className="container-maps_conf shadow">
+    <div className="maps shadow">
+      <p>Direccion en google maps</p>
+
+      <div id="maps" className='caja-maps'>
+          <img className="img-googlemaps" src={ImgGoogleMaps} alt="..." />
       </div>
-    )
-};
+    </div>
+
+    <div className="confirmacion shadow">
+        <p>Por favor, confirma tu asistencia</p>
+
+        <div id="confirmacion" className='botones'>
+          <button type='button' onClick={() => actualizarAsistencia(true)} className='si'>Asistiré</button>
+          <button type='button' onClick={() => actualizarAsistencia(false)} className='no'>Faltaré</button>
+        </div>
+    </div>
+  </div>
+)}
 
 export default Confirmacion;
