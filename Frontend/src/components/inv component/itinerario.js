@@ -24,7 +24,7 @@ function Itinerario(){
             <p>Inicio del evento</p>
 
             <div>
-              <p>Salon Bellavita</p>
+              <p>Salon Bella vita</p>
               <p>8:00 pm</p>
             </div>
           </div>
