@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import { useParams } from 'react-router-dom';
 
 //Imagen ESTATICA para adorno de la fecha y lugar
 import ImgFlor from '../../images/inv-flor-vino.png';
@@ -65,6 +66,30 @@ const Timer = (limite) => {
 }
 
 function Invitacion(){
+  const [datos, setDatos] = useState();
+  const { datoId } = useParams();
+  //const datoId = match.params.id;
+  
+  useEffect(() => {
+    const urlApi = `https://invitandoodb.onrender.com/invitacion/`; 
+
+     async function fetchApi(){
+      try{
+        const respuesta = await fetch(urlApi);
+    
+        const respuestaJson = await respuesta.json();
+        setDatos(respuestaJson);
+
+        console.log(respuesta.status);
+        console.log(respuestaJson);
+      }catch(error) {
+          console.error('Error al recuperar datos de la API:', error);
+        }
+      }
+
+    fetchApi();
+  }, [datoId]);
+
   var qrDatos = "Invitado: " + nombreInv + "\nMesa: " + numMesa + "\nPase para " + pase;
 
     return(
@@ -113,28 +138,40 @@ function Invitacion(){
             <img src={ImgFlor} className="img-flor img-flor-bl" alt="..."/>
           </div>
 
-          <div className="qr-container shadow">
+          {datos ? (
+            <div className="qr-container shadow">
             <div className="nombre-inv">
               <h3>Familia:</h3>
               <h3>
-                {nombreInv}
+                {datos.nombreInvitado}
               </h3>
             </div>
 
             <div className='num-mesa'>
               <p>
-                Mesa: {numMesa}
+                Mesa: {datos.mesa}
               </p>
             </div>
-            
+
+            <div className='num-mesa'>
+              <p>
+                Pase para {datos.cantidadInvitados}
+              </p>
+            </div>
+          
             <div className='img-qr'>
               <QRCode value={qrDatos}/>
             </div>
-            
+          
             <div className="anuncio">
               <p>No olvides guardar tu codigo QR ¡Sera muy importante para tu recepcion!</p>
             </div>
           </div>
+          ) : (
+            <p>Cargando...</p>
+          )}
+          
+              
         </div>
     )
 };

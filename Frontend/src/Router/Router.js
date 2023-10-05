@@ -15,7 +15,7 @@ const Router = () => {
             
             <Routes>                
                 <Route exact path='/' element={<Main />} />
-                <Route exact path='/ana-y-angel' element={<Invitaciones />} />
+                <Route exact path='/ana-y-angel/:id' element={<Invitaciones />} />
             </Routes>
 
         </BrowserRouter>
