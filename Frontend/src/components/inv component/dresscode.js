@@ -20,7 +20,7 @@ function Dresscode() {
         <div>
           <div>
             <p className="titulo">
-              Muejeres
+              Mujeres
             </p>
             <p>
               Vestido Largo

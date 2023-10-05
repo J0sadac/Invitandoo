@@ -8,6 +8,7 @@ import Galeria from './inv component/galeria';
 import Itinerario from './inv component/itinerario';
 import Dresscode from './inv component/dresscode';
 import Confirmacion from './inv component/confirmacion';
+import ReproductorDeCancion from './helpers/cancion';
 
 //importacion de imagines del Carousel
 import ImgCar1 from '../images/Boda - Ana y Angel/Boda - Ana y Angel - img09.jpg';
@@ -84,6 +85,8 @@ function Invitaciones() {
         imagen={imgNovios}/>
 
       <Invitacion />
+
+      <ReproductorDeCancion />
 
       <Galeria 
         imagen={imgGaleria} />

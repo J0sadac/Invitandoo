@@ -108,14 +108,26 @@
 
 .container-nov {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   margin: 50px 20px;
   padding: 40px;
   color: #fafbfd;
 }
-.container-nov .img-nov {
+.container-nov h3 {
+  font-family: "Dancing Script", Times;
+  font-size: 55px;
+  border-bottom: 1px solid white;
+}
+.container-nov div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.container-nov div .img-nov {
   border-radius: 50%;
   width: 240px;
   height: 240px;
@@ -124,17 +136,17 @@
   justify-content: center;
   align-items: center;
 }
-.container-nov .img-nov img {
+.container-nov div .img-nov img {
   width: 240px;
   border-radius: 50%;
 }
-.container-nov .nombre-nov {
+.container-nov div .nombre-nov {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 50%;
 }
-.container-nov .nombre-nov p {
+.container-nov div .nombre-nov p {
   font-size: 45px;
   font-family: "Dancing Script", Times;
 }
@@ -176,6 +188,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.container-inv .date-container .place-container p {
+  font-family: "Cormorant Garamond", Georgia;
+  font-size: 20px;
 }
 .container-inv .date-container .time-container {
   display: grid;
@@ -270,6 +286,28 @@
   font-family: "Cormorant Garamond", Georgia;
 }
 
+.container-reproductor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 20px;
+  padding: 40px;
+  height: 220px;
+}
+.container-reproductor .reproductor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-reproductor .reproductor .title {
+  font-size: 30px;
+  font-family: "Dancing Script", Times;
+  color: #fafbfd;
+}
+.container-reproductor .reproductor audio {
+  margin-left: -20px;
+}
+
 .container-itinerario {
   display: flex;
   flex-direction: column;
@@ -306,10 +344,16 @@
 .container-itinerario .cont .itinerario img {
   width: 50px;
 }
+.container-itinerario .cont .itinerario p {
+  font-size: 22px;
+}
 .container-itinerario .cont .itinerario div {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.container-itinerario .cont .itinerario div p {
+  font-size: 20px;
 }
 
 .container-dresscode_mesa {
@@ -474,17 +518,29 @@
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-nov .nombre-nov {
+  .container-nov h3 {
+    font-family: "Dancing Script", Times;
+    font-size: 45px;
+    border-bottom: 1px solid white;
+  }
+  .container-nov div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
   }
-  .container-nov .nombre-nov p {
+  .container-nov div .nombre-nov {
+    width: 100%;
+  }
+  .container-nov div .nombre-nov p {
     font-size: 40px;
   }
-  .container-nov .img-nov {
+  .container-nov div .img-nov {
     width: 230px;
     height: 230px;
   }
-  .container-nov .img-nov img {
+  .container-nov div .img-nov img {
     width: 235px;
   }
   .container-inv {
@@ -516,7 +572,7 @@
   }
   .container-inv .date-container .place-container p {
     text-align: center;
-    font-size: 17px;
+    font-size: 20px;
   }
   .container-inv .date-container .time-container {
     display: grid;
@@ -654,18 +710,30 @@
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-nov .nombre-nov {
+  .container-nov h3 {
+    font-family: "Dancing Script", Times;
+    font-size: 45px;
+    border-bottom: 1px solid white;
+  }
+  .container-nov div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
   }
-  .container-nov .nombre-nov p {
+  .container-nov div .nombre-nov {
+    width: 100%;
+  }
+  .container-nov div .nombre-nov p {
     font-size: 40px;
   }
-  .container-nov .img-nov {
+  .container-nov div .img-nov {
     width: 230px;
     height: 230px;
   }
-  .container-nov .img-nov img {
-    width: 225px;
+  .container-nov div .img-nov img {
+    width: 235px;
   }
   .container-inv {
     display: flex;
@@ -696,7 +764,7 @@
   }
   .container-inv .date-container .place-container p {
     text-align: center;
-    font-size: 17px;
+    font-size: 20px;
   }
   .container-inv .date-container .time-container {
     display: grid;
@@ -834,18 +902,30 @@
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-nov .nombre-nov {
+  .container-nov h3 {
+    font-family: "Dancing Script", Times;
+    font-size: 45px;
+    border-bottom: 1px solid white;
+  }
+  .container-nov div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
   }
-  .container-nov .nombre-nov p {
+  .container-nov div .nombre-nov {
+    width: 100%;
+  }
+  .container-nov div .nombre-nov p {
     font-size: 40px;
   }
-  .container-nov .img-nov {
+  .container-nov div .img-nov {
     width: 230px;
     height: 230px;
   }
-  .container-nov .img-nov img {
-    width: 225px;
+  .container-nov div .img-nov img {
+    width: 235px;
   }
   .container-inv {
     display: flex;
@@ -876,7 +956,7 @@
   }
   .container-inv .date-container .place-container p {
     text-align: center;
-    font-size: 17px;
+    font-size: 20px;
   }
   .container-inv .date-container .time-container {
     display: grid;
@@ -1014,18 +1094,30 @@
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-nov .nombre-nov {
+  .container-nov h3 {
+    font-family: "Dancing Script", Times;
+    font-size: 45px;
+    border-bottom: 1px solid white;
+  }
+  .container-nov div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
   }
-  .container-nov .nombre-nov p {
+  .container-nov div .nombre-nov {
+    width: 100%;
+  }
+  .container-nov div .nombre-nov p {
     font-size: 40px;
   }
-  .container-nov .img-nov {
+  .container-nov div .img-nov {
     width: 230px;
     height: 230px;
   }
-  .container-nov .img-nov img {
-    width: 225px;
+  .container-nov div .img-nov img {
+    width: 235px;
   }
   .container-inv {
     display: flex;
@@ -1056,7 +1148,7 @@
   }
   .container-inv .date-container .place-container p {
     text-align: center;
-    font-size: 17px;
+    font-size: 20px;
   }
   .container-inv .date-container .time-container {
     display: grid;
