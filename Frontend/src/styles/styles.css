@@ -97,7 +97,7 @@
   margin-top: 30px;
 }
 .inv-carousel .inv-img {
-  height: 730px;
+  height: 720px;
   object-fit: cover;
 }
 .inv-carousel .inv-frase {
@@ -335,8 +335,23 @@
   font-size: 35px;
   font-weight: 600;
 }
-.container-dresscode_mesa .dresscode p {
-  font-family: georgia;
+.container-dresscode_mesa .dresscode div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.container-dresscode_mesa .dresscode div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-dresscode_mesa .dresscode div div .titulo {
+  font-family: "Dancing Script", Times;
+  font-size: 27px;
+}
+.container-dresscode_mesa .dresscode div div p {
+  font-family: "Cormorant Garamond", Georgia;
   font-size: 20px;
 }
 .container-dresscode_mesa .dresscode .img-dresscode img {
@@ -445,7 +460,7 @@
 
 @media (max-width: 551px) {
   .inv-carousel .inv-img {
-    height: 740px;
+    height: 720px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -625,7 +640,7 @@
 }
 @media (max-width: 426px) {
   .inv-carousel .inv-img {
-    height: 740px;
+    height: 720px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -805,7 +820,7 @@
 }
 @media (max-width: 376px) {
   .inv-carousel .inv-img {
-    height: 740px;
+    height: 720px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -985,7 +1000,7 @@
 }
 @media (max-width: 321px) {
   .inv-carousel .inv-img {
-    height: 740px;
+    height: 720px;
   }
   .inv-carousel div .inv-frase {
     font-size: 25px;
@@ -1164,7 +1179,7 @@
   }
 }
 body {
-  background: url("../images/Background/5ta-opcion.jpg");
+  background: url("../images/Background/5ta-opcion-2.jpg");
 }
 
 /*# sourceMappingURL=styles.css.map */

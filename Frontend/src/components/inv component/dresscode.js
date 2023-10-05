@@ -1,11 +1,11 @@
 //imagen del codigo de vestimenta
 //import ImgDresscode from "../../images/codigo de vestimenta.png";
-import ImgDresscodeSemiformal from "../../images/defde.avif";
+//import ImgDresscodeSemiformal from "../../images/defde.avif";
 
 //imagen de la mesa de regalos
 //import ImgLogo from "../../images/liverpool.png";
 
-var vestimenta = "Semi-formal";
+//var vestimenta = "Semi-formal";
 
 function Dresscode() {
   return (
@@ -13,11 +13,30 @@ function Dresscode() {
       <div className="dresscode shadow">
         <h3>Codigo de Vestimenta</h3>
 
-        <div className="img-dresscode">
+        {/* <div className="img-dresscode">
           <img src={ImgDresscodeSemiformal} alt="..." />
+        </div> */}
+
+        <div>
+          <div>
+            <p className="titulo">
+              Muejeres
+            </p>
+            <p>
+              Vestido Largo
+            </p>
+          </div>
+          <div>
+          <p className="titulo">
+              Hombres
+            </p>
+            <p>
+              Ropa casual
+            </p>
+          </div>
         </div>
 
-        <p>{vestimenta}</p>
+        
       </div>
 
       {/* <div className="mesa shadow">

@@ -26,8 +26,32 @@ function Carousel({ frase, imagen }) {
           data-bs-slide-to="2"
           aria-label="Slide 3"
         ></button>
+
+        <button
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide-to="4"
+          aria-label="Slide 5"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide-to="5"
+          aria-label="Slide 6"
+        ></button>
+
       </div>
+
       <div className="carousel-inner">
+
         <div className="carousel-item active">
           <img src={imagen[0]} className="d-block w-100 inv-img" alt="..." />
           <div className="carousel-caption d-md-block">
@@ -46,7 +70,30 @@ function Carousel({ frase, imagen }) {
             <h5 className="inv-frase">{frase[2]}</h5>
           </div>
         </div>
+        
+        <div className="carousel-item">
+          <img src={imagen[3]} className="d-block w-100 inv-img" alt="..." />
+          <div className="carousel-caption d-md-block">
+            <h5 className="inv-frase">{frase[3]}</h5>
+          </div>
+        </div>
+
+        <div className="carousel-item">
+          <img src={imagen[4]} className="d-block w-100 inv-img" alt="..." />
+          <div className="carousel-caption d-md-block">
+            <h5 className="inv-frase">{frase[4]}</h5>
+          </div>
+        </div>
+
+        <div className="carousel-item">
+          <img src={imagen[5]} className="d-block w-100 inv-img" alt="..." />
+          <div className="carousel-caption d-md-block">
+            <h5 className="inv-frase">{frase[5]}</h5>
+          </div>
+        </div>
+      
       </div>
+
       <button
         className="carousel-control-prev"
         type="button"

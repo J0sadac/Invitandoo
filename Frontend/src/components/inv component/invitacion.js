@@ -76,7 +76,7 @@ function Invitacion(){
 
             <div className="place-container">
               <p>Salon Bellavita</p>
-              <p>11va sur, entre 8va y 6ta rpivada oriente</p>
+              <p>11va sur, entre 8va y 6ta privada oriente</p>
               <p>Tapachula, Chiapas, Mexico</p>
             </div>
             
