@@ -1,13 +1,14 @@
- import ImgGoogleMaps from "../../images/google maps - referencia.png";
- import React, { useState, useEffect } from 'react';
+import ImgGoogleMaps from "../../images/google maps - referencia.png";
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 function Confirmacion() {
   const { datoId } = useParams();
-  const [datos, setDatos] = useState(null);
+  const [datos, setDatos] = useState({ asistir: 'pendiente' });
+
 
   useEffect(() => {
-    const urlApi = `https://tu-api-endpoint/invitacion/${datoId}`;
+    const urlApi = `https://invitandoodb.onrender.com/invitacion/${datoId}`;
 
     async function fetchApi() {
       try {
@@ -22,12 +23,12 @@ function Confirmacion() {
     fetchApi();
   }, [datoId]);
 
-  const actualizarAsistencia = (asistira) => {
+  const actualizarAsistencia = (asistencia) => {
     const urlApi = `https://invitandoodb.onrender.com/invitacion/${datoId}`;
     const data = {
-      asistir: asistira
+      asistir: asistencia
     };
-
+  
     fetch(urlApi, {
       method: 'PUT',
       headers: {
@@ -37,14 +38,14 @@ function Confirmacion() {
     })
       .then(response => {
         if (response.ok) {
-          setDatos({ ...datos, asistir: asistira });
-
-          if (asistira) {
+          setDatos({ ...datos, asistir: asistencia });
+  
+          if (asistencia === 'asistire') {
             alert('¡Gracias por confirmar tu asistencia! Nos vemos en el evento.');
-          } else {
+          } else if (asistencia === 'faltare') {
             alert('Lamentamos que no puedas asistir. Esperamos verte en otra ocasión.');
           }
-
+  
         } else {
           console.error('Error al actualizar la propiedad "asistir".');
         }
@@ -53,6 +54,7 @@ function Confirmacion() {
         console.error('Error al realizar la solicitud PUT:', error);
       });
   };
+  
 
   return(
     <div className="container-maps_conf shadow">
@@ -68,8 +70,8 @@ function Confirmacion() {
         <p>Por favor, confirma tu asistencia</p>
 
         <div id="confirmacion" className='botones'>
-          <button type='button' onClick={() => actualizarAsistencia(true)} className='si'>Asistiré</button>
-          <button type='button' onClick={() => actualizarAsistencia(false)} className='no'>Faltaré</button>
+          <button type='button' onClick={() => actualizarAsistencia("asistire")} className='si'>Asistiré</button>
+          <button type='button' onClick={() => actualizarAsistencia("faltare")} className='no'>Faltaré</button>
         </div>
     </div>
   </div>
