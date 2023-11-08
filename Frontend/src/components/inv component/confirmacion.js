@@ -3,32 +3,34 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 function Confirmacion() {
-  const { datoId } = useParams();
-  const [datos, setDatos] = useState({ asistir: 'pendiente' });
-
+  const { anfitrion, invitadoId } = useParams();
+  const [evento, setEvento] = useState({ invitados: [{ asistir: 'pendiente' }] });
 
   useEffect(() => {
-    const urlApi = `https://invitandoodb.onrender.com/invitacion/${datoId}`;
+    const urlApi = `https://invitandoodb.onrender.com/eventos?anfitrion=${anfitrion}&invitadoId=${invitadoId}`;
 
     async function fetchApi() {
       try {
         const respuesta = await fetch(urlApi);
         const respuestaJson = await respuesta.json();
-        setDatos(respuestaJson);
+        setEvento(respuestaJson);
       } catch (error) {
         console.error('Error al recuperar datos de la API:', error);
       }
     }
 
     fetchApi();
-  }, [datoId]);
+  }, [anfitrion, invitadoId]);
 
   const actualizarAsistencia = (asistencia) => {
-    const urlApi = `https://invitandoodb.onrender.com/invitacion/${datoId}`;
+    const urlApi = `https://invitandoodb.onrender.com/eventos?anfitrion=${anfitrion}&invitadoId=${invitadoId}`;
     const data = {
       asistir: asistencia
     };
-  
+
+    // Hacer una copia del objeto evento
+    const eventoCopia = { ...evento };
+
     fetch(urlApi, {
       method: 'PUT',
       headers: {
@@ -38,14 +40,15 @@ function Confirmacion() {
     })
       .then(response => {
         if (response.ok) {
-          setDatos({ ...datos, asistir: asistencia });
-  
+          // Actualizar el estado con la copia actualizada del evento
+          eventoCopia.invitados[0].asistir = asistencia;
+          setEvento(eventoCopia);
+
           if (asistencia === 'asistire') {
             alert('¡Gracias por confirmar tu asistencia! Nos vemos en el evento.');
           } else if (asistencia === 'faltare') {
             alert('Lamentamos que no puedas asistir. Esperamos verte en otra ocasión.');
           }
-  
         } else {
           console.error('Error al actualizar la propiedad "asistir".');
         }
@@ -54,27 +57,27 @@ function Confirmacion() {
         console.error('Error al realizar la solicitud PUT:', error);
       });
   };
-  
 
-  return(
+  return (
     <div className="container-maps_conf shadow">
-    <div className="maps shadow">
-      <p>Direccion en google maps</p>
+      <div className="maps shadow">
+        <p>Direccion en google maps</p>
 
-      <div id="maps" className='caja-maps'>
+        <div id="maps" className='caja-maps'>
           <img className="img-googlemaps" src={ImgGoogleMaps} alt="..." />
+        </div>
       </div>
-    </div>
 
-    <div className="confirmacion shadow">
+      <div className="confirmacion shadow">
         <p>Por favor, confirma tu asistencia</p>
 
         <div id="confirmacion" className='botones'>
           <button type='button' onClick={() => actualizarAsistencia("asistire")} className='si'>Asistiré</button>
           <button type='button' onClick={() => actualizarAsistencia("faltare")} className='no'>Faltaré</button>
         </div>
+      </div>
     </div>
-  </div>
-)}
+  );
+}
 
 export default Confirmacion;

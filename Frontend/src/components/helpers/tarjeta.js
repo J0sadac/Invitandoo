@@ -13,7 +13,7 @@ function tarjeta() {
             <img className='card-img' src={ImgNovios} alt='...' />
 
             <div className="card-body">
-              <h5 className="card-title">Daniel y Jazmin</h5>
+              <h5 className="card-title">Ana & Angel</h5>
 
               <p className="card-text">
                 Acompañanos en este momento tan especial para nosotros!!!

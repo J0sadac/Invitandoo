@@ -1,35 +1,63 @@
+import {useEffect, useState} from 'react';
+import { useParams } from 'react-router-dom';
 
-import IconRecepcionista from '../../images/recepcionista.png';
-import IconCena from '../../images/salud.png';
+import Recepcion from '../../images/recepcionista.png';
+import Inicio from '../../images/salud.png';
+
 
 function Itinerario(){
+    const { anfitrion, invitadoId } = useParams();
+    const [evento, setEvento] = useState(null);
+
+  useEffect(() => {
+    async function fetchEvento() {
+      try {
+        const eventoResponse = await fetch(`https://invitandoodb.onrender.com/eventos?anfitrion=${anfitrion}&invitadoId=${invitadoId}`);
+        const eventoData = await eventoResponse.json();
+        setEvento(eventoData);
+
+        console.log(eventoData)
+      } catch (error) {
+        console.error('Error al recuperar datos del evento:', error);
+      }
+    }
+
+    fetchEvento();
+  }, [anfitrion, invitadoId]);
 
     return(
-        <div className='container-itinerario shadow'>
-        <h3>Itinerario</h3>
-        <div className='cont'>
-          <div className='itinerario shadow'>
-          <img src={IconRecepcionista} alt='...' />
+      <div>
+        {evento ? (
+          <div className='container-itinerario shadow'>
+            <h3>Itinerario</h3>
+            <div className='cont'>
+              <div className='itinerario shadow'>
+              <img src={Recepcion} alt='...' />
 
-          <p>Recepcion</p>
+              <p>{evento.itinerario.uno.accion}</p>
 
-            <div>
-              <p>Salon Bella Vita</p>
-              <p>7:00 pm - 8:00 pm</p>
+                <div>
+                  <p>{evento.itinerario.uno.ubicacion}</p>
+                  <p>{evento.itinerario.uno.hora}</p>
+                </div>
+              </div>
+
+              <div className='itinerario shadow'>
+                <img src={Inicio} alt='...' />
+
+                <p>{evento.itinerario.dos.accion}</p>
+
+                <div>
+                  <p>{evento.itinerario.dos.ubicacion}</p>
+                  <p>{evento.itinerario.dos.hora}</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className='itinerario shadow'>
-            <img src={IconCena} alt='...' />
-
-            <p>Inicio del evento</p>
-
-            <div>
-              <p>Salon Bella Vita</p>
-              <p>8:00 pm</p>
-            </div>
-          </div>
         </div>
-        </div>
+        ) : (
+          <p>Cargando...</p>
+        )}
+      </div>
     )
 };
 

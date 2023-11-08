@@ -1,4 +1,9 @@
+//import {useEffect, useState} from 'react';
+//import { useParams } from 'react-router-dom';
+
 function Galeria({ imagen }) {
+    
+
     return (
      <div id="carouselExampleInterval" className="carousel slide inv-carousel" data-bs-ride="carousel">
         <div className="carousel-inner">

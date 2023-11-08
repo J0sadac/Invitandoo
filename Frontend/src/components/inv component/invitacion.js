@@ -7,117 +7,102 @@ import ImgFlor from '../../images/inv-flor-vino.png';
 //Dependencia para la generacion de codigos QR del codigo QR
 import QRCode from 'qrcode.react';
 
-//Variables de la fecha y lugar
-var diaBoda= "Nov 03 2023 19:30:00";
-var day = "03 Nov 2023"
-
 //Funcion de cuenta regresiva de la fecha y lugar
-const Timer = (limite) => {
-  var [seconds, setSeconds] = useState(0);
-  var [minutes, setMinutes] = useState(0);
-  var [hours, setHours] = useState(0);
-  var [days, setDays] = useState(0);
-
-  var today = new Date();
-  var fecha = new Date(limite);
-
-  var tiempo = (fecha - today + 1000) / 1000;
-
-  seconds = ("0" + Math.floor(tiempo % 60)).slice(-2);
-  minutes = ("0" + Math.floor(tiempo / 60 % 60)).slice(-2);
-  hours = ("0" + Math.floor(tiempo /3600 % 24)).slice(-2);
-  days = ("0" + Math.floor(tiempo / (3600 * 24))).slice(-2);
 
 
-  useEffect(() => {
-
-    const Countdown = setInterval(() => {
-      setSeconds(seconds - 1);
-
-      if(setSeconds === "00"){
-        setMinutes(minutes - 1);
-      };
-
-      if(setMinutes === "00"){
-        setHours(hours - 1);
-      };
-
-      if(setHours === "00"){
-        setDays(days - 1);
-      };
-      
-    }, 1000);
-
-    return () => clearInterval(Countdown);
-
-  });
-
-  return{
-    seconds,
-    minutes,
-    hours,
-    days}
-}
 
 function Invitacion(){
-  const [datos, setDatos] = useState();
-  const { datoId } = useParams();
-  //const datoId = match.params.id;
-  
+  const [evento, setEvento] = useState();
+  const { anfitrion, invitadoId } = useParams()
+  const [timer, setTimer] = useState({
+    days: '00',
+    hours: '00',
+    minutes: '00',
+    seconds: '00'
+  });
+
   useEffect(() => {
-    const urlApi = `https://invitandoodb.onrender.com/invitacion/${datoId}`;
-
-    async function fetchApi() {
+    async function fetchEvento() {
       try {
+        const eventoResponse = await fetch(`https://invitandoodb.onrender.com/eventos?anfitrion=${anfitrion}&invitadoId=${invitadoId}`);
+        const eventoData = await eventoResponse.json();
+        setEvento(eventoData);
 
-        const respuesta = await fetch(urlApi);
-        const respuestaJson = await respuesta.json();
-        setDatos(respuestaJson);
-        
+        const deadline = new Date(eventoData.datos.fechas).getTime();
+
+        const interval = setInterval(() => {
+          const now = new Date().getTime();
+          const timeLeft = Math.max(deadline - now, 0);
+
+          const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+          const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000).toString().padStart(2, '0');
+
+          setTimer({
+            days,
+            hours,
+            minutes,
+            seconds
+          });
+
+          if (timeLeft <= 0) {
+            clearInterval(interval);
+            setTimer({
+              days: '00',
+              hours: '00',
+              minutes: '00',
+              seconds: '00'
+            });
+          }
+        }, 1000);
+
+        return () => clearInterval(interval);
       } catch (error) {
-
-        console.error('Error al recuperar datos de la API:', error);
+        console.error('Error al recuperar datos del evento:', error);
       }
     }
 
-    fetchApi();
-  }, [datoId]);
+    fetchEvento();
+  }, [anfitrion, invitadoId]);
+
 
     return(
         <div className="container-inv shadow">
-          <div className="date-container">
+          {evento ? (
+            <div className="date-container">
             <div className="inv-date-container">
-              <h3 className="inv-date">{day}</h3>
+              <h3 className="inv-date">{evento.datos.dia}</h3>
             </div>
 
             <div className="place-container">
-              <p>Salon Bella Vita</p>
-              <p>11A. sur, entre 8A. y 6A. Privada oriente</p>
-              <p>Tapachula, Chiapas, Mexico</p>
+              <p>{evento.datos.direccion.salon}</p>
+              <p>{evento.datos.direccion.address}</p>
+              <p>{evento.datos.direccion.ciudad}</p>
             </div>
             
             <div className="time-container">
               <div className="time shadow">
                 <p className="regresivo">
-                {Timer(diaBoda).days}
+                {timer.days}
                 </p>
                 <p className="times">DIAS</p>
               </div>
               <div className="time shadow">
                 <p className="regresivo">
-                {Timer(diaBoda).hours}
+                {timer.hours}
                 </p>
                 <p className="times">HRS</p>
               </div>
               <div className="time shadow">
                 <p className="regresivo">
-                {Timer(diaBoda).minutes}
+                {timer.minutes}
                 </p>
                 <p className="times">MNS</p>
               </div>
               <div className="time shadow">
                 <p className="regresivo">
-                  {Timer(diaBoda).seconds}
+                  {timer.seconds}
                 </p>
                 <p className="times">SEG</p>
               </div>
@@ -128,31 +113,36 @@ function Invitacion(){
             <img src={ImgFlor} className="img-flor img-flor-br" alt="..."/>
             <img src={ImgFlor} className="img-flor img-flor-bl" alt="..."/>
           </div>
+          ) : (
+            <p>Cargando...</p>
+          )}
 
-          {datos ? (
+          {evento ? (
             <div className="qr-container shadow">
             <div className="nombre-inv">
               <h3>Familia:</h3>
               <h3>
-                {datos.nombreInvitado}
+                {evento.invitados[0].nombreInvitado}
               </h3>
             </div>
 
             <div className='num-mesa'>
               <p>
-                Mesa: {datos.mesa}
+                Mesa: {evento.invitados[0].mesa}
               </p>
             </div>
 
             <div className='num-mesa'>
               <p>
-                Pase para {datos.cantidadInvitados}
+                Pase para {evento.invitados[0].cantidadInvitados}
               </p>
             </div>
           
             <div className='img-qr'>
               <QRCode value={
-                "Invitado: " + datos.nombreInvitado + "\nMesa: " + datos.mesa + "\nPase para " + datos.cantidadInvitados
+                "Invitado: " + evento.invitados[0].nombreInvitado + 
+                "\nMesa: " + evento.invitados[0].mesa + 
+                "\nPase para " + evento.invitados[0].cantidadInvitados
               }/>
             </div>
           

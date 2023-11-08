@@ -1,30 +1,24 @@
-import React from 'react';
-import cancion from '../../images/Boda - Ana y Angel/Sugar - Maroon 5.mp3';
+import React, { useEffect, useRef } from 'react';
+import cancion from '../../images/XV años - Jimena/Taylor Swift - You Belong With Me.mp3';
 
-class ReproductorDeCancion extends React.Component {
-    constructor(props) {
-        super(props);
-        this.audioRef = React.createRef();
-      }
-    
-      componentDidMount() {
-        // Establecer el volumen al 50% cuando el componente se monta
-        this.audioRef.current.volume = 0.2;
-      }
+const ReproductorDeCancion = () => {
+  const audioRef = useRef(null);
 
-    render() {
-      return (
-        <div className='container-reproductor shadow'>
-            <div className='reproductor'>
-                <h1 className='title'>¡NUESTRA CANCIÓN!</h1>
-                <audio controls ref={this.audioRef} autoPlay>
-                    <source src={cancion} type="audio/mpeg" />
-                </audio>
-            </div>
-        </div>
-      );
-    }
-  }
-  
-  export default ReproductorDeCancion;
-  
+  useEffect(() => {
+    // Iniciar la reproducción automática cuando el componente se monta
+    audioRef.current.play();
+  }, []); // El segundo argumento de useEffect es un array vacío para que se ejecute solo una vez al montar el componente
+
+  return (
+    <div className='container-reproductor shadow'>
+      <div className='reproductor'>
+        <h1 className='title'>¡MI CANCIÓN!</h1>
+        <audio controls ref={audioRef}>
+          <source src={cancion} type="audio/mpeg" />
+        </audio>
+      </div>
+    </div>
+  );
+};
+
+export default ReproductorDeCancion;

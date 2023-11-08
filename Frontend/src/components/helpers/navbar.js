@@ -2,12 +2,10 @@ import { Link } from "react-router-dom";
 
 function navbar() {
   return (
-      <nav
-        className="navbar fixed-top navbar-expand-lg navbar-light"
-      >
+      <nav className="navbar fixed-top navbar-expand-lg navbar-light">
         <div className="container nav-cont">
           <Link className="navbar-brand nav-home" to="/">
-            Ivitandoo
+            Invitandoo
           </Link>
           <button
             className="navbar-toggler"
@@ -21,23 +19,19 @@ function navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse m-auto navbar-collapse" id="navbarSupportedContent">
-            {/* <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active nav-section" aria-current="page" to="/">
-                  Eventos
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link active nav-section" to="/invitaciones">
+                <Link className="nav-link active nav-section" aria-current="page" to="/invitaciones">
                   Invitaciones
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active nav-section" to="/">
-                  Paquetes
+                <Link className="nav-link active nav-section" to="/confirmaciones">
+                  Confirmaciones
                 </Link>
               </li>
-              <li className="nav-item dropdown">
+
+              {/* <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
                   to="."
@@ -67,13 +61,10 @@ function navbar() {
                     </Link>
                   </li>
                 </ul>
-              </li> 
+              </li>  */}
           
-            </ul> */}
+            </ul>
 
-            {/* <button type="button" className="btn btn-outline-dark">
-              
-            </button> */}
           </div>
         </div>
       </nav>

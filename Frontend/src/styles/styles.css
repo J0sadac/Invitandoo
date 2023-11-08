@@ -13,7 +13,7 @@
   padding: 5px;
 }
 .navbar .nav-cont .nav-home {
-  font-family: "Tangerine", cursive;
+  font-family: "Tangerine", Times;
   font-size: 40px;
   margin: 0px 10px;
   padding: 0px;
@@ -113,7 +113,7 @@
   align-items: center;
   margin: 50px 20px;
   padding: 40px;
-  color: #fafbfd;
+  color: #212529;
 }
 .container-nov h3 {
   font-family: "Tangerine", cursive;
@@ -144,6 +144,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  text-align: center;
   width: 50%;
 }
 .container-nov div .nombre-nov p {
@@ -158,7 +159,7 @@
   align-items: center;
   flex-wrap: wrap;
   margin: 50px 20px;
-  color: #fafbfd;
+  color: #212529;
 }
 .container-inv .date-container {
   margin: 50px 0px;
@@ -254,7 +255,7 @@
   width: 25%;
   height: 540px;
   padding: 40px 20px;
-  color: #fafbfd;
+  color: #212529;
 }
 .container-inv .qr-container .img-qr {
   width: 180px;
@@ -302,7 +303,8 @@
 .container-reproductor .reproductor .title {
   font-size: 30px;
   font-family: "Abel", sans-serif;
-  color: #fafbfd;
+  text-align: center;
+  color: #212529;
 }
 .container-reproductor .reproductor audio {
   margin-left: -12px;
@@ -316,7 +318,7 @@
   flex-wrap: wrap;
   margin: 50px 20px;
   padding: 30px;
-  color: #fafbfd;
+  color: #212529;
 }
 .container-itinerario h3 {
   font-family: "Tangerine", cursive;
@@ -371,7 +373,7 @@
   flex-wrap: wrap;
   padding: 20px;
   width: 45%;
-  color: #fafbfd;
+  color: #212529;
   text-align: center;
 }
 .container-dresscode_mesa .dresscode h3 {
@@ -409,7 +411,7 @@
   flex-wrap: wrap;
   padding: 20px;
   width: 45%;
-  color: #fafbfd;
+  color: #212529;
 }
 .container-dresscode_mesa .mesa h3 {
   font-family: "Tangerine", cursive;
@@ -436,7 +438,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  color: #fafbfd;
+  color: #212529;
   margin: 50px 20px;
   padding: 40px;
 }
@@ -514,7 +516,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 800px;
+    height: 750px;
     padding: 15px 20px;
     margin: 15px 10px;
   }
@@ -656,7 +658,7 @@
     margin-top: 20px;
     padding: 20px;
     width: 430px;
-    color: #fafbfd;
+    color: #212529;
   }
   .container-dresscode_mesa .mesa h3 {
     font-family: "Tangerine", cursive;
@@ -714,7 +716,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 800px;
+    height: 750px;
     padding: 15px 20px;
     margin: 15px 10px;
   }
@@ -856,7 +858,7 @@
     margin-top: 20px;
     padding: 20px;
     width: 330px;
-    color: #fafbfd;
+    color: #212529;
   }
   .container-dresscode_mesa .mesa h3 {
     font-family: "Tangerine", cursive;
@@ -914,7 +916,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 800px;
+    height: 750px;
     padding: 15px 20px;
     margin: 15px 10px;
   }
@@ -1056,7 +1058,7 @@
     margin-top: 20px;
     padding: 20px;
     width: 300px;
-    color: #fafbfd;
+    color: #212529;
   }
   .container-dresscode_mesa .mesa h3 {
     font-family: "Tangerine", cursive;
@@ -1114,7 +1116,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 800px;
+    height: 750px;
     padding: 15px 20px;
     margin: 15px 10px;
   }
@@ -1256,7 +1258,7 @@
     margin-top: 20px;
     padding: 20px;
     width: 280px;
-    color: #fafbfd;
+    color: #212529;
   }
   .container-dresscode_mesa .mesa h3 {
     font-family: "Tangerine", cursive;
@@ -1302,8 +1304,188 @@
     height: 100px;
   }
 }
+.container-confirmaciones {
+  height: 100%;
+  margin: 25px 10px;
+}
+.container-confirmaciones .mesa {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  margin-top: 70px;
+  padding: 15px;
+  color: #fafbfd;
+}
+.container-confirmaciones .mesa .title-mesa {
+  font-family: "Abel", sans-serif;
+  margin: 5px;
+}
+.container-confirmaciones .mesa .invitado {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Abel", sans-serif;
+  height: 100%;
+  width: 30%;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.container-confirmaciones .mesa .invitado .nombre-inv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container-confirmaciones .mesa .invitado .nombre-inv p {
+  margin: 0px 4px;
+}
+
+@media (max-width: 551px) {
+  .container-confirmaciones {
+    height: 100%;
+    margin: 25px 10px;
+  }
+  .container-confirmaciones .mesa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    margin-top: 70px;
+    color: #fafbfd;
+  }
+  .container-confirmaciones .mesa .title-mesa {
+    margin: 15px 0px;
+  }
+  .container-confirmaciones .mesa .invitado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-confirmaciones .mesa .invitado .nombre-inv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 426px) {
+  .container-confirmaciones {
+    height: 100%;
+    margin: 25px 10px;
+  }
+  .container-confirmaciones .mesa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    margin-top: 70px;
+    color: #fafbfd;
+  }
+  .container-confirmaciones .mesa .title-mesa {
+    margin: 15px 0px;
+  }
+  .container-confirmaciones .mesa .invitado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-confirmaciones .mesa .invitado .nombre-inv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 376px) {
+  .container-confirmaciones {
+    height: 100%;
+    margin: 25px 10px;
+  }
+  .container-confirmaciones .mesa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    margin-top: 70px;
+    color: #fafbfd;
+  }
+  .container-confirmaciones .mesa .title-mesa {
+    margin: 15px 0px;
+  }
+  .container-confirmaciones .mesa .invitado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-confirmaciones .mesa .invitado .nombre-inv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 321px) {
+  .container-confirmaciones {
+    height: 100%;
+    margin: 25px 10px;
+  }
+  .container-confirmaciones .mesa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    margin-top: 70px;
+    color: #fafbfd;
+  }
+  .container-confirmaciones .mesa .title-mesa {
+    margin: 15px 0px;
+  }
+  .container-confirmaciones .mesa .invitado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-confirmaciones .mesa .invitado .nombre-inv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
 body {
-  background: url("../images/Background/5ta-opcion-2.jpg");
+  background: url("../images/Background/fondo-jimena.jpg");
 }
 
 /*# sourceMappingURL=styles.css.map */
