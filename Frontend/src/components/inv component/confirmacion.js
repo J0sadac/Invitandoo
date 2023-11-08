@@ -61,7 +61,7 @@ function Confirmacion() {
   return (
     <div className="container-maps_conf shadow">
       <div className="maps shadow">
-        <p>Direccion en google maps</p>
+        <p className="title">Ubicacion</p>
 
         <div id="maps" className='caja-maps'>
           <img className="img-googlemaps" src={ImgGoogleMaps} alt="..." />
@@ -69,7 +69,7 @@ function Confirmacion() {
       </div>
 
       <div className="confirmacion shadow">
-        <p>Por favor, confirma tu asistencia</p>
+        <p className="title">Confirma tu asistencia</p>
 
         <div id="confirmacion" className='botones'>
           <button type='button' onClick={() => actualizarAsistencia("asistire")} className='si'>Asistiré</button>

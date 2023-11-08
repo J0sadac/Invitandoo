@@ -8,6 +8,7 @@ import Itinerario from './inv component/itinerario';
 import Dresscode from './inv component/dresscode';
 import Confirmacion from './inv component/confirmacion';
 import ReproductorDeCancion from './helpers/cancion';
+import Padrinos from './inv component/padrinos';
 
 
 function Invitaciones() {
@@ -24,6 +25,8 @@ function Invitaciones() {
       <ReproductorDeCancion />
 
       <Itinerario />
+
+      <Padrinos />
       
       <Dresscode />
 

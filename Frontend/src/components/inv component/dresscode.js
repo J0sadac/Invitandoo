@@ -24,6 +24,7 @@ function Dresscode() {
   return (
     
     <div className="container-dresscode_mesa shadow">
+      
        {evento ? (
         <div className="dresscode shadow">
           <h3>Codigo de Vestimenta</h3>
@@ -70,10 +71,7 @@ function Dresscode() {
         <p>Cargando...</p>
        )}
 
-  
-         
-    </div>
-      
+    </div> 
   );
 }
 

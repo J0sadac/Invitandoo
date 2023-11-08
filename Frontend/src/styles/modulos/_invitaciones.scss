@@ -267,7 +267,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
     justify-content: center;
 
     margin: 50px 20px;
-    padding: 40px;
+    padding: 30px;
 
     height: 220px;
 
@@ -353,6 +353,66 @@ $font-family-second: 'Cormorant Garamond', Georgia;
             }
 
 
+        }
+    }
+}
+
+.container-padrinos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 50px 20px;
+
+    padding: 30px;
+
+
+    .contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+
+        width: 100%;
+
+        .title{
+            font-family: $font-main;
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .padrinoDe{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                padding: 10px;
+                margin: 15px;
+
+                height: 30%;
+                width: 90%;
+
+                .de{
+                    font-family: $font-main;
+                    font-size: 35px;
+                    font-weight: 500;
+                }
+
+                .padrino{
+                    font-family: $font-second;
+                    font-size: 25px;
+                }
+
+            }
         }
     }
 }
@@ -465,17 +525,6 @@ $font-family-second: 'Cormorant Garamond', Georgia;
     margin: 50px 20px;
     padding: 40px;
 
-    .caja-maps{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        
-        .img-googlemaps{
-                width: 300px;
-
-            
-        }
-    }
 
     .confirmacion{
         display: flex;
@@ -484,11 +533,12 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         align-items: center;
 
         width: 30%;
-        height: 350px;
+        height: 300px;
 
-        p{
-            font-family: $font-second;
-            font-size: 24px;
+        .title{
+            font-family: $font-main;
+            font-size: 40px;
+            font-weight: 600;
         }
 
         .botones{
@@ -536,14 +586,25 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         height: 350px;
 
         p{
-            font-family: $font-second;
-            font-size: 24px;
+            font-family: $font-main;
+            font-size: 40px;
+            font-weight: 600;
         }
 
-        .caja-maps{
+        
 
+        .caja-maps{
             width: 350px;
             height: 250px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+    
+            
+            .img-googlemaps{
+                    width: 300px;    
+            }
         }
     }
 }
@@ -808,9 +869,9 @@ $font-family-second: 'Cormorant Garamond', Georgia;
             }
 
             .botones{
-                flex-direction: column;
+                flex-direction: row;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: space-evenly;
 
                 height: 100px;
             }
@@ -1077,9 +1138,9 @@ $font-family-second: 'Cormorant Garamond', Georgia;
             }
 
             .botones{
-                flex-direction: column;
+                flex-direction: row;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: space-evenly;
 
                 height: 100px;
             }
@@ -1349,9 +1410,9 @@ $font-family-second: 'Cormorant Garamond', Georgia;
             }
 
             .botones{
-                flex-direction: column;
+                flex-direction: row;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: space-evenly;
 
                 height: 100px;
             }
@@ -1622,9 +1683,9 @@ $font-family-second: 'Cormorant Garamond', Georgia;
             }
 
             .botones{
-                flex-direction: column;
+                flex-direction: row;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: space-evenly;
 
                 height: 100px;
             }
