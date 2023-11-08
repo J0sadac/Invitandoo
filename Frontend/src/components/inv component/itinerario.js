@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import Recepcion from '../../images/recepcionista.png';
 import Inicio from '../../images/salud.png';
+import Misa from '../../images/capilla.png';
 
 
 function Itinerario(){
@@ -31,8 +32,8 @@ function Itinerario(){
           <div className='container-itinerario shadow'>
             <h3>Itinerario</h3>
             <div className='cont'>
-              <div className='itinerario shadow'>
-              <img src={Recepcion} alt='...' />
+            <div className='itinerario shadow'>
+              <img src={Misa} alt='...' />
 
               <p>{evento.itinerario.uno.accion}</p>
 
@@ -43,13 +44,24 @@ function Itinerario(){
               </div>
 
               <div className='itinerario shadow'>
-                <img src={Inicio} alt='...' />
+              <img src={Recepcion} alt='...' />
 
-                <p>{evento.itinerario.dos.accion}</p>
+              <p>{evento.itinerario.dos.accion}</p>
 
                 <div>
                   <p>{evento.itinerario.dos.ubicacion}</p>
                   <p>{evento.itinerario.dos.hora}</p>
+                </div>
+              </div>
+
+              <div className='itinerario shadow'>
+                <img src={Inicio} alt='...' />
+
+                <p>{evento.itinerario.tres.accion}</p>
+
+                <div>
+                  <p>{evento.itinerario.tres.ubicacion}</p>
+                  <p>{evento.itinerario.tres.hora}</p>
                 </div>
               </div>
             </div>

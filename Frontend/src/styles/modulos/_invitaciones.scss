@@ -1,8 +1,8 @@
 //Variables
 $color-main: #212529;
 $color-second: #3e4144;
-$color-font: #212529;
-$color-carousel: #fafbfd;
+$color-font: #3e4144;
+$color-carousel: #212529;
 $font-main: 'Tangerine', cursive;
 $font-second: 'Abel', sans-serif;
 $font-family-main: 'Dancing Script', Times;
@@ -19,7 +19,12 @@ $font-family-second: 'Cormorant Garamond', Georgia;
     .inv-frase{
         color: $color-carousel;
         font-family: $font-main;
-        font-size: 35px;
+        font-size: 38px;
+        font-weight: 600;
+    }
+
+    .frase3{
+        color: #fff;
     }
 }
 
@@ -37,6 +42,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
     h3{
         font-family: $font-main;
         font-size: 55px;
+        font-weight: 800;
 
         border-bottom: 1px solid white;
     }
@@ -78,6 +84,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
             p{
                 font-size: 45px;
                 font-family: $font-main;
+                font-weight: 600;
             }
         }
     }
@@ -278,8 +285,9 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         }
 
         audio{
-            margin-left: -12px;
+            width: 280px;
         }
+
 
     }
 
@@ -546,7 +554,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 @media (max-width:551px){
     .inv-carousel{
         .inv-img{
-            height: 705px;
+            height: 690px;
         }
 
         div{
@@ -561,7 +569,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        height: 750px;
+        height: 700px;
 
         padding: 15px 20px;
         margin: 15px 10px;
@@ -813,7 +821,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 @media (max-width:426px){
     .inv-carousel{
         .inv-img{
-            height: 705px;
+            height: 690px;
         }
 
         div{
@@ -828,7 +836,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        height: 750px;
+        height: 700px;
 
         padding: 15px 20px;
         margin: 15px 10px;
@@ -1057,6 +1065,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 
             .caja-maps{
                 width: 260px;
+
             }
         }
 
@@ -1081,7 +1090,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 @media (max-width:376px){
     .inv-carousel{
         .inv-img{
-            height: 705px;
+            height: 690px;
         }
 
         div{
@@ -1096,7 +1105,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        height: 750px;
+        height: 700px;
 
         padding: 15px 20px;
         margin: 15px 10px;
@@ -1325,6 +1334,10 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 
             .caja-maps{
                 width: 260px;
+
+                img{
+                    width: 250px;
+                }
             }
         }
 
@@ -1350,7 +1363,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 
     .inv-carousel{
         .inv-img{
-            height: 705px;
+            height: 690px;
         }
 
         div{
@@ -1365,7 +1378,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        height: 750px;
+        height: 700px;
 
         padding: 15px 20px;
         margin: 15px 10px;
@@ -1594,6 +1607,10 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 
             .caja-maps{
                 width: 260px;
+
+                img{
+                    width: 250px;
+                }
             }
         }
 

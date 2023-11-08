@@ -76,7 +76,7 @@ function Invitacion(){
             </div>
 
             <div className="place-container">
-              <p>{evento.datos.direccion.salon}</p>
+              <p>Salon {evento.datos.direccion.salon}</p>
               <p>{evento.datos.direccion.address}</p>
               <p>{evento.datos.direccion.ciudad}</p>
             </div>

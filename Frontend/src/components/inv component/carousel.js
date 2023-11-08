@@ -74,7 +74,7 @@ function Carousel() {
           <div className="carousel-item">
             <img src={Img3} className="d-block w-100 inv-img" alt="..." />
             <div className="carousel-caption d-md-block">
-              <h5 className="inv-frase">{evento.frases[2]}</h5>
+              <h5 className="inv-frase frase3">{evento.frases[2]}</h5>
             </div>
           </div>
         

@@ -1,4 +1,4 @@
-import ImgNovios from '../../images/Boda - Ana y Angel/Boda - Ana y Angel - img09.jpg';
+import ImgNovios from '../../images/XV años - Jimena/XV años - Jimena - img01.jpg';
 
 import { Link } from "react-router-dom";
 
@@ -8,12 +8,12 @@ function tarjeta() {
       <h3>Nuestros proximos eventos</h3>
 
       <div className='tarjetas'>
-        <Link className='link' to='/ana-y-angel/651b768e27b73af448b3085c'>
+        <Link className='link' to='/invitacion/Jimena/a11'>
           <div className="card shadow">
             <img className='card-img' src={ImgNovios} alt='...' />
 
             <div className="card-body">
-              <h5 className="card-title">Ana & Angel</h5>
+              <h5 className="card-title">XV años - Jimena</h5>
 
               <p className="card-text">
                 Acompañanos en este momento tan especial para nosotros!!!
