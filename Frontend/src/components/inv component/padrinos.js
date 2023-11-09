@@ -29,15 +29,15 @@ const {anfitrion, invitadoId} = useParams();
 
                     <div>
                         <div className='padrinoDe shadow'>
-                            <h3 className='de'>Padrino de {evento.datos.padrinos[0].de}</h3>
+                            <h3 className='de'>Padrinos</h3>
 
-                            <p className='padrino'>{evento.datos.padrinos[0].padrino}</p>
+                            <p className='padrino'>{evento.datos.padrinos[1].padrino}</p>
                         </div>
 
                         <div className='padrinoDe shadow'>
-                            <h3 className='de'>Padrino de {evento.datos.padrinos[1].de}</h3>
+                            <h3 className='de'>Padrino de {evento.datos.padrinos[0].de}</h3>
 
-                            <p className='padrino'>{evento.datos.padrinos[1].padrino}</p>
+                            <p className='padrino'>{evento.datos.padrinos[0].padrino}</p>
                         </div>
                     </div>
                 </div>

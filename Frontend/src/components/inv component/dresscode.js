@@ -36,18 +36,10 @@ function Dresscode() {
           <div>
             <div>
               <p className="titulo">
-                Mujeres
+                Hombres y Mujeres
               </p>
               <p>
                 {evento.codigoDeVestimenta.mujer}
-              </p>
-            </div>
-            <div>
-            <p className="titulo">
-                Hombres
-              </p>
-              <p>
-              {evento.codigoDeVestimenta.hombre}
               </p>
             </div>
           </div>
