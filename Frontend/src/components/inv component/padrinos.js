@@ -29,7 +29,7 @@ const {anfitrion, invitadoId} = useParams();
 
                     <div>
                         <div className='padrinoDe shadow'>
-                            <h3 className='de'>Padrinos</h3>
+                            <h3 className='de'>Padres</h3>
 
                             <p className='padrino'>{evento.datos.padrinos[1].padrino}</p>
                         </div>

@@ -6,7 +6,7 @@ import Novios from './inv component/novios';
 import Invitacion from './inv component/invitacion';
 import Itinerario from './inv component/itinerario';
 import Dresscode from './inv component/dresscode';
-import Confirmacion from './inv component/confirmacion';
+//import Confirmacion from './inv component/confirmacion';
 import ReproductorDeCancion from './helpers/cancion';
 import Padrinos from './inv component/padrinos';
 
@@ -30,7 +30,7 @@ function Invitaciones() {
       
       <Dresscode />
 
-      <Confirmacion />
+      {/* <Confirmacion /> */}
     </div>
   );
 }

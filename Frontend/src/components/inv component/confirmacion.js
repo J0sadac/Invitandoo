@@ -1,35 +1,19 @@
-import ImgGoogleMaps from "../../images/google maps - referencia.png";
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import ImgGoogleMaps from "../../images/google maps - referencia.png";
+
 function Confirmacion() {
   const { anfitrion, invitadoId } = useParams();
-  const [evento, setEvento] = useState({ invitados: [{ asistir: 'pendiente' }] });
-
-  useEffect(() => {
-    const urlApi = `https://invitandoodb.onrender.com/eventos?anfitrion=${anfitrion}&invitadoId=${invitadoId}`;
-
-    async function fetchApi() {
-      try {
-        const respuesta = await fetch(urlApi);
-        const respuestaJson = await respuesta.json();
-        setEvento(respuestaJson);
-      } catch (error) {
-        console.error('Error al recuperar datos de la API:', error);
-      }
-    }
-
-    fetchApi();
-  }, [anfitrion, invitadoId]);
+  const [confirmacion, setConfirmacion] = useState('');
 
   const actualizarAsistencia = (asistencia) => {
     const urlApi = `https://invitandoodb.onrender.com/eventos?anfitrion=${anfitrion}&invitadoId=${invitadoId}`;
     const data = {
+      anfitrion,
+      invitadoId,
       asistir: asistencia
     };
-
-    // Hacer una copia del objeto evento
-    const eventoCopia = { ...evento };
 
     fetch(urlApi, {
       method: 'PUT',
@@ -40,17 +24,14 @@ function Confirmacion() {
     })
       .then(response => {
         if (response.ok) {
-          // Actualizar el estado con la copia actualizada del evento
-          eventoCopia.invitados[0].asistir = asistencia;
-          setEvento(eventoCopia);
-
+          setConfirmacion(asistencia);
           if (asistencia === 'asistire') {
             alert('¡Gracias por confirmar tu asistencia! Nos vemos en el evento.');
           } else if (asistencia === 'faltare') {
             alert('Lamentamos que no puedas asistir. Esperamos verte en otra ocasión.');
           }
         } else {
-          console.error('Error al actualizar la propiedad "asistir".');
+          console.error('Error al actualizar la confirmación de asistencia.');
         }
       })
       .catch(error => {
@@ -70,7 +51,6 @@ function Confirmacion() {
 
       <div className="confirmacion shadow">
         <p className="title">Confirma tu asistencia</p>
-
         <div id="confirmacion" className='botones'>
           <button type='button' onClick={() => actualizarAsistencia("asistire")} className='si'>Asistiré</button>
           <button type='button' onClick={() => actualizarAsistencia("faltare")} className='no'>Faltaré</button>
