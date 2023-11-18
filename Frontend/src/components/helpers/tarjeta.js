@@ -1,4 +1,4 @@
-import ImgNovios from '../../images/XV años - Jimena/XV años - Jimena - img01.jpg';
+import ImgNovios from '../../multimedia/XV años - Jimena/imagenes/XV años - Jimena - img01.jpg';
 
 import { Link } from "react-router-dom";
 

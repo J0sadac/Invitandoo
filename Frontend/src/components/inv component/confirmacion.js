@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import ImgGoogleMaps from "../../images/google maps - referencia.png";
+import ImgGoogleMaps from "../../multimedia/herramientas/google maps - referencia.png";
 
 function Confirmacion() {
   const { anfitrion, invitadoId } = useParams();

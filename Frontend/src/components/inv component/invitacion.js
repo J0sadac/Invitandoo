@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 
 //Imagen ESTATICA para adorno de la fecha y lugar
-import ImgFlor from '../../images/inv-flor-vino.png';
+import ImgFlor from '../../multimedia/herramientas/inv-flor-vino.png';
 
 //Dependencia para la generacion de codigos QR del codigo QR
 import QRCode from 'qrcode.react';

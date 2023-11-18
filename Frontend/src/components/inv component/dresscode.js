@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 
-import Liverpool from '../../images/liverpool.png'
+const img = require.context('../../multimedia', true);
 
 function Dresscode() {
   const { anfitrion, invitadoId } = useParams();
@@ -54,7 +54,7 @@ function Dresscode() {
           <h3>Mesa de regalos</h3>
 
           <div className="codigoRegalo">
-            <img src={Liverpool} alt="..." className="imgLogo" />
+            <img src={img(evento.datos.imgMesaDeRegalos)} alt="..." className="imgLogo" />
 
             <p>{evento.datos.mesaDeRegalos}</p>
           </div>

@@ -1,30 +1,53 @@
-import React from 'react';
-import cancion from '../../images/XV años - Jimena/Taylor Swift - Fifteen.mp3';
+import { useEffect, useState, useRef } from 'react';
+import { useParams } from 'react-router-dom';
 
-class ReproductorDeCancion extends React.Component {
-    constructor(props) {
-        super(props);
-        this.audioRef = React.createRef();
-      }
-    
-      componentDidMount() {
-        // Establecer el volumen al 50% cuando el componente se monta
-        this.audioRef.current.volume = 0.75;
-      }
 
-    render() {
-      return (
-        <div className='container-reproductor shadow'>
-            <div className='reproductor'>
-                <h3 className='title'>¡MI CANCION!</h3>
-                <audio controls ref={this.audioRef} autoPlay>
-                    <source src={cancion} type="audio/mpeg" />
-                </audio>
-            </div>
-        </div>
-      );
+const cancion = require.context('../../multimedia', true);
+
+function ReproductorDeCancion() {
+  const { anfitrion, invitadoId } = useParams();
+    const [evento, setEvento] = useState(null);
+
+  useEffect(() => {
+    async function fetchEvento() {
+      try {
+        const eventoResponse = await fetch(`https://invitandoodb.onrender.com/eventos?anfitrion=${anfitrion}&invitadoId=${invitadoId}`);
+        const eventoData = await eventoResponse.json();
+        setEvento(eventoData);
+      } catch (error) {
+        console.error('Error al recuperar datos del evento:', error);
+      }
     }
-  }
-  
-  export default ReproductorDeCancion;
+
+    fetchEvento();
+  }, [anfitrion, invitadoId]);
+
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.75;
+    }
+  }, []);
+
+  return (
+    <div>
+      {evento ? (
+        <div className='container-reproductor shadow'>
+        <div className='reproductor'>
+          <h3 className='title'>¡MI CANCION!</h3>
+          <audio controls ref={audioRef} autoPlay>
+            <source src={cancion(evento.multimedia.canciones)} type="audio/mpeg" />
+          </audio>
+        </div>
+      </div>
+      ):(
+        <p>Cargando...</p>
+      )}
+    </div>
+  );
+}
+
+export default ReproductorDeCancion;
+
   

@@ -1,9 +1,8 @@
 import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 
-import Img1 from '../../images/XV años - Jimena/XV años - Jimena - img02.jpg';
-import Img2 from '../../images/XV años - Jimena/XV años - Jimena - img03.jpg';
-import Img3 from '../../images/XV años - Jimena/XV años - Jimena - img04.jpg';
+const img = require.context('../../multimedia', true);
+
 
 function Carousel() {
   const { anfitrion, invitadoId } = useParams();
@@ -60,19 +59,19 @@ function Carousel() {
         <div className="carousel-inner">
   
           <div className="carousel-item active">
-            <img src={Img1} className="d-block w-100 inv-img" alt="..." />
+            <img src={img(evento.multimedia.imagenesCarousel[0])} className="d-block w-100 inv-img" alt="..." />
             <div className="carousel-caption d-md-block">
               <h5 className="inv-frase">{evento.frases[0]}</h5>
             </div>
           </div>
           <div className="carousel-item">
-            <img src={Img2} className="d-block w-100 inv-img" alt="..." />
+            <img src={img(evento.multimedia.imagenesCarousel[1])} className="d-block w-100 inv-img" alt="..." />
             <div className="carousel-caption d-md-block">
               <h5 className="inv-frase">{evento.frases[1]}</h5>
             </div>
           </div>
           <div className="carousel-item">
-            <img src={Img3} className="d-block w-100 inv-img" alt="..." />
+            <img src={img(evento.multimedia.imagenesCarousel[2])} className="d-block w-100 inv-img" alt="..." />
             <div className="carousel-caption d-md-block">
               <h5 className="inv-frase frase3">{evento.frases[2]}</h5>
             </div>

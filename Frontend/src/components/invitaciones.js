@@ -2,7 +2,7 @@
 
 //componentes
 import Carousel from './inv component/carousel';
-import Novios from './inv component/novios';
+import Portada from './inv component/portada';
 import Invitacion from './inv component/invitacion';
 import Itinerario from './inv component/itinerario';
 import Dresscode from './inv component/dresscode';
@@ -18,7 +18,7 @@ function Invitaciones() {
     <div>
       <Carousel />
 
-      <Novios />
+      <Portada />
 
       <Invitacion />
 

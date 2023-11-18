@@ -1,9 +1,7 @@
 import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 
-import Recepcion from '../../images/recepcionista.png';
-import Inicio from '../../images/salud.png';
-import Misa from '../../images/capilla.png';
+const img = require.context('../../multimedia', true);
 
 
 function Itinerario(){
@@ -33,7 +31,7 @@ function Itinerario(){
             <h3>Itinerario</h3>
             <div className='cont'>
             <div className='itinerario shadow'>
-              <img src={Misa} alt='...' />
+              <img src={img(evento.itinerario.uno.icono)} alt='...' />
 
               <p>{evento.itinerario.uno.accion}</p>
 
@@ -44,7 +42,7 @@ function Itinerario(){
               </div>
 
               <div className='itinerario shadow'>
-              <img src={Recepcion} alt='...' />
+              <img src={img(evento.itinerario.dos.icono)} alt='...' />
 
               <p>{evento.itinerario.dos.accion}</p>
 
@@ -55,7 +53,7 @@ function Itinerario(){
               </div>
 
               <div className='itinerario shadow'>
-                <img src={Inicio} alt='...' />
+                <img src={img(evento.itinerario.tres.icono)} alt='...' />
 
                 <p>{evento.itinerario.tres.accion}</p>
 
