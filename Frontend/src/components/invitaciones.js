@@ -10,6 +10,7 @@ import Dresscode from './inv component/dresscode';
 //import Confirmacion from './inv component/confirmacion';
 import ReproductorDeCancion from './helpers/cancion';
 import Padrinos from './inv component/padrinos';
+import Galeria from './inv component/galeria';
 
 
 function Invitaciones() {
@@ -48,6 +49,8 @@ function Invitaciones() {
         <Invitacion />
   
         <ReproductorDeCancion />
+
+        <Galeria />
   
         <Itinerario />
   
