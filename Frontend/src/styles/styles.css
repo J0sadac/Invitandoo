@@ -1544,7 +1544,18 @@
   }
 }
 body {
+  background: url("../multimedia/fondos/fondo-main.jpg");
+  background-size: cover;
+}
+
+.fondo-karla {
+  background: url("../multimedia/fondos/fondo-karla.png");
+  background-size: contain;
+}
+
+.fondo-jimena {
   background: url("../multimedia/fondos/fondo-jimena.jpg");
+  background-size: contain;
 }
 
 /*# sourceMappingURL=styles.css.map */

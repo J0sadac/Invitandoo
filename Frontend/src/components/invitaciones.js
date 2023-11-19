@@ -1,4 +1,5 @@
-//import { useParams } from 'react-router-dom';
+import {useEffect, useState} from 'react';
+import { useParams } from 'react-router-dom';
 
 //componentes
 import Carousel from './inv component/carousel';
@@ -12,25 +13,55 @@ import Padrinos from './inv component/padrinos';
 
 
 function Invitaciones() {
-  //const {id} = useParams();
+  const { anfitrion, invitadoId } = useParams();
+  const [evento, setEvento] = useState(null);
+
+  useEffect(() => {
+    async function fetchEvento() {
+      try {
+        const eventoResponse = await fetch(`https://invitandoodb.onrender.com/eventos?anfitrion=${anfitrion}&invitadoId=${invitadoId}`);
+        const eventoData = await eventoResponse.json();
+        setEvento(eventoData);
+      } catch (error) {
+        console.error('Error al recuperar datos del evento:', error);
+      }
+    }
+
+    fetchEvento();
+  }, [anfitrion, invitadoId]);
+
+  const fondoDinamico = (url) => {
+    
+    const urlDinamica = url.replace(/\//g, '-');
+
+    return `fondo-${urlDinamica}`;
+  };
 
   return (
     <div>
-      <Carousel />
-
-      <Portada />
-
-      <Invitacion />
-
-      <ReproductorDeCancion />
-
-      <Itinerario />
-
-      <Padrinos />
-      
-      <Dresscode />
-
-      {/* <Confirmacion /> */}
+      {evento ? (
+        <div className={fondoDinamico(evento.multimedia.fondo)}>
+        <Carousel />
+  
+        <Portada />
+  
+        <Invitacion />
+  
+        <ReproductorDeCancion />
+  
+        <Itinerario />
+  
+        <Padrinos />
+        
+        <Dresscode />
+  
+        {/* <Confirmacion /> */}
+      </div>
+      ):(
+        <p>
+          Cargando...
+        </p>
+      )}
     </div>
   );
 }

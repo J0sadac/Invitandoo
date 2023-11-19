@@ -6,7 +6,7 @@ const img = require.context('../../multimedia', true);
 
 function Carousel() {
   const { anfitrion, invitadoId } = useParams();
-    const [evento, setEvento] = useState(null);
+  const [evento, setEvento] = useState(null);
 
   useEffect(() => {
     async function fetchEvento() {

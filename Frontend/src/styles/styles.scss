@@ -10,11 +10,16 @@ $color-main: #212529;
 $color-second: #3e4144;
 
 body{
-    //background-color: #3e4144;
+    background: url('../multimedia/fondos/fondo-main.jpg');
+    background-size: cover;
+ }
+
+.fondo-karla{
+    background: url('../multimedia/fondos/fondo-karla.png');
+    background-size: contain; 
+}
+
+.fondo-jimena{
     background: url('../multimedia/fondos/fondo-jimena.jpg');
-    //background: url('../images/Background/fondo-second.jpg');
-    //background: url('../images/Background/fondo-celeste.jpg');
-    //background: url('../images/Background/fondo-azul.jpg');    
-    //background: url('../images/Background/5ta-opcion-2.jpg');
-    //background: url('../images/Background/fondo-azul.jpg');
+    background-size: contain; 
 }
