@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 const img = require.context('../../multimedia', true);
 
-function Galeria({ imagen }) {
+function Galeria() {
     const { anfitrion, invitadoId } = useParams();
     const [evento, setEvento] = useState(null);
 

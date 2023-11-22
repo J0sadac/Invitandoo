@@ -7,11 +7,10 @@ import Portada from './inv component/portada';
 import Invitacion from './inv component/invitacion';
 import Itinerario from './inv component/itinerario';
 import Dresscode from './inv component/dresscode';
-//import Confirmacion from './inv component/confirmacion';
-import ReproductorDeCancion from './helpers/cancion';
 import Padrinos from './inv component/padrinos';
 import Galeria from './inv component/galeria';
-
+import AlertaConReproductor from './helpers/cancion/alertaReproductor';
+import Confirmacion from './inv component/confirmacion';
 
 function Invitaciones() {
   const { anfitrion, invitadoId } = useParams();
@@ -38,32 +37,37 @@ function Invitaciones() {
     return `fondo-${urlDinamica}`;
   };
 
+
   return (
     <div>
       {evento ? (
         <div className={fondoDinamico(evento.multimedia.fondo)}>
-        <Carousel />
-  
-        <Portada />
-  
-        <Invitacion />
-  
-        <ReproductorDeCancion />
 
-        <Galeria />
-  
-        <Itinerario />
-  
-        <Padrinos />
-        
-        <Dresscode />
-  
-        {/* <Confirmacion /> */}
-      </div>
+          <AlertaConReproductor />
+
+
+          <Carousel />
+    
+          <Portada />
+
+          <Padrinos />
+    
+          <Invitacion />
+
+          <Galeria />
+    
+          <Itinerario />
+          
+          <Dresscode />
+
+          <Confirmacion />
+        </div>
       ):(
-        <p>
-          Cargando...
-        </p>
+        <div className='loading'>
+          <p>
+            Cargando...
+          </p>
+        </div>
       )}
     </div>
   );

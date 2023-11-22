@@ -1,13 +1,11 @@
 import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 
-//Imagen ESTATICA para adorno de la fecha y lugar
-import ImgFlor from '../../multimedia/herramientas/inv-flor-vino.png';
-
 //Dependencia para la generacion de codigos QR del codigo QR
 import QRCode from 'qrcode.react';
 
-//Funcion de cuenta regresiva de la fecha y lugar
+const img = require.context('../../multimedia', true);
+
 
 
 
@@ -108,10 +106,10 @@ function Invitacion(){
               </div>
             </div>
 
-            <img src={ImgFlor} className="img-flor img-flor-tr" alt="..."/>
-            <img src={ImgFlor} className="img-flor img-flor-tl" alt="..."/>
-            <img src={ImgFlor} className="img-flor img-flor-br" alt="..."/>
-            <img src={ImgFlor} className="img-flor img-flor-bl" alt="..."/>
+            <img src={img(evento.multimedia.flor)} className="img-flor img-flor-tr" alt="..."/>
+            <img src={img(evento.multimedia.flor)} className="img-flor img-flor-tl" alt="..."/>
+            <img src={img(evento.multimedia.flor)} className="img-flor img-flor-br" alt="..."/>
+            <img src={img(evento.multimedia.flor)} className="img-flor img-flor-bl" alt="..."/>
           </div>
           ) : (
             <p>Cargando...</p>

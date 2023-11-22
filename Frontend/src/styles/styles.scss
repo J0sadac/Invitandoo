@@ -12,6 +12,16 @@ $color-second: #3e4144;
 body{
     background: url('../multimedia/fondos/fondo-main.jpg');
     background-size: cover;
+
+    .loading{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+        margin: 100px 20px auto;
+    }
  }
 
 .fondo-karla{

@@ -101,7 +101,7 @@
   object-fit: cover;
 }
 .inv-carousel .inv-frase {
-  color: #212529;
+  color: white;
   font-family: "Tangerine", cursive;
   font-size: 38px;
   font-weight: 600;
@@ -170,7 +170,7 @@
 .container-inv .date-container {
   margin: 50px 0px;
   padding: 50px 20px;
-  width: 55%;
+  width: 65%;
   height: 550px;
   font-family: "Abel", sans-serif;
   display: flex;
@@ -225,7 +225,7 @@
   font-size: 15px;
 }
 .container-inv .date-container .img-flor-tr {
-  width: 220px;
+  width: 190px;
   position: absolute;
   top: 0;
   right: 0;
@@ -233,21 +233,21 @@
   transform: rotate(180deg);
 }
 .container-inv .date-container .img-flor-tl {
-  width: 210px;
+  width: 190px;
   position: absolute;
   top: 0;
   left: 0;
   transform: scaleY(-1);
 }
 .container-inv .date-container .img-flor-br {
-  width: 210px;
+  width: 190px;
   position: absolute;
   bottom: 0;
   right: 0;
   transform: scaleX(-1);
 }
 .container-inv .date-container .img-flor-bl {
-  width: 210px;
+  width: 190px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -314,6 +314,69 @@
 }
 .container-reproductor .reproductor audio {
   width: 280px;
+}
+
+.alerta-reproductor {
+  flex-direction: row;
+  padding: 30px;
+  height: 220px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alerta-reproductor .alert-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.alerta-reproductor .reproductor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 250px;
+}
+.alerta-reproductor .reproductor .title {
+  font-size: 30px;
+  font-family: "Abel", sans-serif;
+  text-align: center;
+  color: #3e4144;
+}
+.alerta-reproductor .reproductor audio {
+  width: 280px;
+}
+.alerta-reproductor .reproductor .boton-cerrar {
+  margin-top: 10px;
+  padding: 5px;
+  color: #fff;
+  background-color: #3e4144;
+  border-color: #3e4144;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.minimized {
+  width: 50px;
+  height: 50px;
+  box-shadow: none;
+}
+
+.minimize-button {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 8px;
+  font-family: "Abel", sans-serif;
 }
 
 .container-itinerario {
@@ -610,7 +673,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 90%;
+    width: 97%;
     height: 600px;
     margin: 40px 0px;
     padding: 50px 0px;
@@ -644,7 +707,7 @@
     font-size: 12px;
   }
   .container-inv .date-container .img-flor {
-    width: 135px;
+    width: 120px;
   }
   .container-inv .qr-container {
     display: flex;
@@ -810,7 +873,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 90%;
+    width: 97%;
     height: 600px;
     margin: 40px 0px;
     padding: 50px 0px;
@@ -844,7 +907,7 @@
     font-size: 12px;
   }
   .container-inv .date-container .img-flor {
-    width: 135px;
+    width: 120px;
   }
   .container-inv .qr-container {
     display: flex;
@@ -1010,7 +1073,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 90%;
+    width: 97%;
     height: 600px;
     margin: 40px 0px;
     padding: 50px 0px;
@@ -1044,7 +1107,7 @@
     font-size: 12px;
   }
   .container-inv .date-container .img-flor {
-    width: 135px;
+    width: 120px;
   }
   .container-inv .qr-container {
     display: flex;
@@ -1213,7 +1276,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 90%;
+    width: 97%;
     height: 600px;
     margin: 40px 0px;
     padding: 50px 0px;
@@ -1247,7 +1310,7 @@
     font-size: 12px;
   }
   .container-inv .date-container .img-flor {
-    width: 135px;
+    width: 120px;
   }
   .container-inv .qr-container {
     display: flex;
@@ -1546,6 +1609,14 @@
 body {
   background: url("../multimedia/fondos/fondo-main.jpg");
   background-size: cover;
+}
+body .loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 100px 20px auto;
 }
 
 .fondo-karla {
