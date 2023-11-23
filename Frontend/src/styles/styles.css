@@ -110,7 +110,7 @@
   color: #fff;
 }
 
-.container-nov {
+.container-portada {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -119,20 +119,46 @@
   padding: 40px;
   color: #3e4144;
 }
-.container-nov h3 {
-  font-family: "Tangerine", cursive;
-  font-size: 55px;
-  font-weight: 800;
-  border-bottom: 1px solid white;
+.container-portada .nombre-evento {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
 }
-.container-nov div {
+.container-portada .nombre-evento .te-invito {
+  font-family: "Tangerine", cursive;
+  font-weight: 600;
+  font-size: 45px;
+}
+.container-portada .nombre-evento .mis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-portada .nombre-evento .mis h4 {
+  margin: -10px 0px;
+  font-family: "Tangerine", cursive;
+  font-weight: 600;
+  font-size: 40px;
+}
+.container-portada .nombre-evento .mis h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 600;
+  padding: 0px;
+  margin: 0px;
+}
+.container-portada .nombre-evento .mis .anios {
+  margin-top: -20px;
+}
+.container-portada div {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
-.container-nov div .img-nov {
+.container-portada div .img-portada {
   border-radius: 50%;
   width: 240px;
   height: 240px;
@@ -141,18 +167,18 @@
   justify-content: center;
   align-items: center;
 }
-.container-nov div .img-nov img {
+.container-portada div .img-portada img {
   width: 240px;
   border-radius: 50%;
 }
-.container-nov div .nombre-nov {
+.container-portada div .nombre-portada {
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
   width: 50%;
 }
-.container-nov div .nombre-nov p {
+.container-portada div .nombre-portada p {
   font-size: 45px;
   font-family: "Tangerine", cursive;
   font-weight: 600;
@@ -427,6 +453,34 @@
   font-size: 20px;
 }
 
+.container-padres {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 30px;
+  margin: 50px 20px;
+  text-align: center;
+}
+.container-padres .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.container-padres .contenido .title {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 700;
+}
+.container-padres .contenido .padres {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 15px;
+  text-align: center;
+  font-family: "Abel", sans-serif;
+  font-size: 25px;
+}
+
 .container-padrinos {
   display: flex;
   flex-direction: column;
@@ -467,7 +521,7 @@
 .container-padrinos .contenido div .padrinoDe .de {
   font-family: "Tangerine", cursive;
   font-size: 35px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .container-padrinos .contenido div .padrinoDe .padrino {
   font-family: "Abel", sans-serif;
@@ -627,7 +681,7 @@
   .inv-carousel div .inv-frase {
     font-size: 25px;
   }
-  .container-nov {
+  .container-portada {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -636,29 +690,28 @@
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-nov h3 {
+  .container-portada h3 {
     font-family: "Tangerine", cursive;
     font-size: 45px;
-    border-bottom: 1px solid white;
   }
-  .container-nov div {
+  .container-portada div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
   }
-  .container-nov div .nombre-nov {
+  .container-portada div .nombre-portada {
     width: 100%;
   }
-  .container-nov div .nombre-nov p {
+  .container-portada div .nombre-portada p {
     font-size: 40px;
   }
-  .container-nov div .img-nov {
+  .container-portada div .img-portada {
     width: 230px;
     height: 230px;
   }
-  .container-nov div .img-nov img {
+  .container-portada div .img-portada img {
     width: 235px;
   }
   .container-inv {
@@ -827,7 +880,7 @@
   .inv-carousel div .inv-frase {
     font-size: 25px;
   }
-  .container-nov {
+  .container-portada {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -836,29 +889,28 @@
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-nov h3 {
+  .container-portada h3 {
     font-family: "Tangerine", cursive;
     font-size: 45px;
-    border-bottom: 1px solid white;
   }
-  .container-nov div {
+  .container-portada div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
   }
-  .container-nov div .nombre-nov {
+  .container-portada div .nombre-portada {
     width: 100%;
   }
-  .container-nov div .nombre-nov p {
+  .container-portada div .nombre-portada p {
     font-size: 40px;
   }
-  .container-nov div .img-nov {
+  .container-portada div .img-portada {
     width: 230px;
     height: 230px;
   }
-  .container-nov div .img-nov img {
+  .container-portada div .img-portada img {
     width: 235px;
   }
   .container-inv {
@@ -1027,7 +1079,7 @@
   .inv-carousel div .inv-frase {
     font-size: 25px;
   }
-  .container-nov {
+  .container-portada {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -1036,29 +1088,28 @@
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-nov h3 {
+  .container-portada h3 {
     font-family: "Tangerine", cursive;
     font-size: 45px;
-    border-bottom: 1px solid white;
   }
-  .container-nov div {
+  .container-portada div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
   }
-  .container-nov div .nombre-nov {
+  .container-portada div .nombre-portada {
     width: 100%;
   }
-  .container-nov div .nombre-nov p {
+  .container-portada div .nombre-portada p {
     font-size: 40px;
   }
-  .container-nov div .img-nov {
+  .container-portada div .img-portada {
     width: 230px;
     height: 230px;
   }
-  .container-nov div .img-nov img {
+  .container-portada div .img-portada img {
     width: 235px;
   }
   .container-inv {
@@ -1230,7 +1281,7 @@
   .inv-carousel div .inv-frase {
     font-size: 25px;
   }
-  .container-nov {
+  .container-portada {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -1239,29 +1290,28 @@
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-nov h3 {
+  .container-portada h3 {
     font-family: "Tangerine", cursive;
     font-size: 45px;
-    border-bottom: 1px solid white;
   }
-  .container-nov div {
+  .container-portada div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
   }
-  .container-nov div .nombre-nov {
+  .container-portada div .nombre-portada {
     width: 100%;
   }
-  .container-nov div .nombre-nov p {
+  .container-portada div .nombre-portada p {
     font-size: 40px;
   }
-  .container-nov div .img-nov {
+  .container-portada div .img-portada {
     width: 230px;
     height: 230px;
   }
-  .container-nov div .img-nov img {
+  .container-portada div .img-portada img {
     width: 235px;
   }
   .container-inv {

@@ -28,7 +28,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
     }
 }
 
-.container-nov{
+.container-portada{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -39,12 +39,44 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 
     color: $color-font;
 
-    h3{
-        font-family: $font-main;
-        font-size: 55px;
-        font-weight: 800;
+    .nombre-evento{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
 
-        border-bottom: 1px solid white;
+        text-align: center;
+
+        .te-invito{
+            font-family: $font-main;
+            font-weight: 600;
+            font-size: 45px;
+        }
+
+        .mis{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h4{
+                margin: -10px 0px;
+
+                font-family: $font-main;
+                font-weight: 600;
+                font-size: 40px;
+            }
+
+            h3{
+                font-family: $font-main;
+                font-size: 45px;
+                font-weight: 600;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .anios{
+                margin-top: -20px;
+            }
+        }
     }
 
     div{
@@ -55,7 +87,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 
         width: 100%;
 
-        .img-nov{
+        .img-portada{
             border-radius: 50%;
             
             width: 240px;
@@ -72,7 +104,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
             }
         }
         
-        .nombre-nov{
+        .nombre-portada{
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -435,6 +467,42 @@ $font-family-second: 'Cormorant Garamond', Georgia;
     }
 }
 
+.container-padres{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding: 30px;
+    margin: 50px 20px;
+
+    text-align: center;
+
+    .contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .title{
+            font-family: $font-main;
+            font-size: 45px;
+            font-weight: 700;
+        }
+
+        .padres{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            padding: 15px;
+
+            text-align: center;
+            font-family: $font-second;
+            font-size: 25px;
+        }
+    }
+
+}
+
 .container-padrinos{
     display: flex;
     flex-direction: column;
@@ -482,7 +550,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
                 .de{
                     font-family: $font-main;
                     font-size: 35px;
-                    font-weight: 500;
+                    font-weight: 600;
                 }
 
                 .padrino{
@@ -703,7 +771,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         }  
     }
 
-   .container-nov{
+   .container-portada{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -716,8 +784,6 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         h3{
             font-family: $font-main;
             font-size: 45px;
-    
-            border-bottom: 1px solid white;
         }
     
         div{
@@ -728,14 +794,14 @@ $font-family-second: 'Cormorant Garamond', Georgia;
     
             width: 100%;
     
-            .nombre-nov{
+            .nombre-portada{
                 width: 100%;
                 p{
                     font-size: 40px;
                 }
             }
     
-            .img-nov{
+            .img-portada{
                 width: 230px;
                 height: 230px;
     
@@ -970,7 +1036,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         }  
     }
 
-   .container-nov{
+   .container-portada{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -983,8 +1049,6 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         h3{
             font-family: $font-main;
             font-size: 45px;
-    
-            border-bottom: 1px solid white;
         }
     
         div{
@@ -995,14 +1059,14 @@ $font-family-second: 'Cormorant Garamond', Georgia;
     
             width: 100%;
     
-            .nombre-nov{
+            .nombre-portada{
                 width: 100%;
                 p{
                     font-size: 40px;
                 }
             }
     
-            .img-nov{
+            .img-portada{
                 width: 230px;
                 height: 230px;
     
@@ -1239,7 +1303,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         }  
     }
 
-   .container-nov{
+   .container-portada{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -1252,8 +1316,6 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         h3{
             font-family: $font-main;
             font-size: 45px;
-    
-            border-bottom: 1px solid white;
         }
     
         div{
@@ -1264,14 +1326,14 @@ $font-family-second: 'Cormorant Garamond', Georgia;
     
             width: 100%;
     
-            .nombre-nov{
+            .nombre-portada{
                 width: 100%;
                 p{
                     font-size: 40px;
                 }
             }
     
-            .img-nov{
+            .img-portada{
                 width: 230px;
                 height: 230px;
     
@@ -1512,7 +1574,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         }  
     }
 
-   .container-nov{
+   .container-portada{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -1525,8 +1587,6 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         h3{
             font-family: $font-main;
             font-size: 45px;
-    
-            border-bottom: 1px solid white;
         }
     
         div{
@@ -1537,14 +1597,14 @@ $font-family-second: 'Cormorant Garamond', Georgia;
     
             width: 100%;
     
-            .nombre-nov{
+            .nombre-portada{
                 width: 100%;
                 p{
                     font-size: 40px;
                 }
             }
     
-            .img-nov{
+            .img-portada{
                 width: 230px;
                 height: 230px;
     

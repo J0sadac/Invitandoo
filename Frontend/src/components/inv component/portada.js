@@ -24,18 +24,24 @@ function Novios(){
     return(
       <div>
         {evento ? (
-          <div className='container-nov shadow'>
-          <h3>{evento.evento}</h3>
-
-          <div>
-            <div className='img-nov shadow'>
-              <img src={img(evento.multimedia.portada)} alt='...' />
+          <div className='container-portada shadow'>
+            <div className='nombre-evento'>
+              <h4 className='te-invito'>Te invito a</h4>
+              <div className='mis'>
+                <h4>mis</h4>
+                <h3>{evento.evento}</h3>
+                <h4 className='anios'>años</h4>
+              </div>
             </div>
-            
-            <div className="nombre-nov">
-              <p>{evento.datos.festejado}</p>
+            <div>
+              <div className='img-portada shadow'>
+                <img src={img(evento.multimedia.portada)} alt='...' />
+              </div>
+              
+              <div className="nombre-portada">
+                <p>{evento.datos.festejado}</p>
+              </div>
             </div>
-          </div>
         </div>
         ) : (
           <p>Cargando ...</p>

@@ -19,33 +19,25 @@ const {anfitrion, invitadoId} = useParams();
     fetchEvento();
   }, [anfitrion, invitadoId]);
 
-    return(
-        <div className='container-padrinos shadow'>
-            {evento ? (
-                <div className='contenido'>
-                    <h3 className='title'>
-                        ¡Mis padrinos!
-                    </h3>
-
-                    <div>
-                        <div className='padrinoDe shadow'>
-                            <h3 className='de'>Padres</h3>
-
-                            <p className='padrino'>{evento.datos.padrinos[1].padrino}</p>
-                        </div>
-
-                        <div className='padrinoDe shadow'>
-                            <h3 className='de'>Padrino de {evento.datos.padrinos[0].de}</h3>
-
-                            <p className='padrino'>{evento.datos.padrinos[0].padrino}</p>
-                        </div>
-                    </div>
-                </div>
-            ) : (
-                <p>Cargando...</p>
-            )}
+  return (
+    <div className='container-padrinos shadow'>
+      {evento ? (
+        <div className='contenido'>
+          <h3 className='title'>¡Mis padrinos!</h3>
+          <div>
+            {evento.datos.padrinos.map((padrino, index) => (
+              <div key={index} className='padrinoDe shadow'>
+                <h3 className='de'>Padrino de {padrino.de}</h3>
+                <p className='padrino'>{padrino.padrino}</p>
+              </div>
+            ))}
+          </div>
         </div>
-    )
+      ) : (
+        <p>Cargando...</p>
+      )}
+    </div>
+  );
 }
 
 export default Padrinos;

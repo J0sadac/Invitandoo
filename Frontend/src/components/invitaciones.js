@@ -11,6 +11,7 @@ import Padrinos from './inv component/padrinos';
 import Galeria from './inv component/galeria';
 import AlertaConReproductor from './helpers/cancion/alertaReproductor';
 import Confirmacion from './inv component/confirmacion';
+import Padres from './inv component/padres';
 
 function Invitaciones() {
   const { anfitrion, invitadoId } = useParams();
@@ -45,10 +46,11 @@ function Invitaciones() {
 
           <AlertaConReproductor />
 
-
           <Carousel />
     
           <Portada />
+
+          <Padres />
 
           <Padrinos />
     
