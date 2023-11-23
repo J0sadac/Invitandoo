@@ -6,6 +6,7 @@ const img = require.context('../../multimedia', true);
 function Dresscode() {
   const { anfitrion, invitadoId } = useParams();
   const [evento, setEvento] = useState(null);
+  const [showExplanation, setShowExplanation] = useState(false);
 
   useEffect(() => {
     async function fetchEvento() {
@@ -20,6 +21,11 @@ function Dresscode() {
 
     fetchEvento();
   }, [anfitrion, invitadoId]);
+
+  const toggleExplanation = () => {
+    setShowExplanation(!showExplanation);
+  };
+
 
   return (
     
@@ -50,14 +56,29 @@ function Dresscode() {
        )}
 
        {evento ? (
-        <div className="mesa shadow">
-          <h3>Mesa de regalos</h3>
+        <div className={`mesa shadow ${showExplanation ? 'flip' : ''}`}>
 
-          <div className="codigoRegalo">
-            <img src={img(evento.datos.imgMesaDeRegalos)} alt="..." className="imgLogo" />
+          <div className={`mesaDeRegalos ${showExplanation ? 'hidden' : ''}`}>
+            <h3>Mesa de regalos</h3>
 
-            <p>{evento.datos.mesaDeRegalos}</p>
+            <div className="codigoRegalo">
+              <img src={img(evento.datos.mesaDeRegalos.img)} alt="..." className="imgLogo" />
+
+              <p>{evento.datos.mesaDeRegalos.modalidad} {evento.datos.mesaDeRegalos.codigo}</p>
+            </div>
           </div>
+
+          <div className={`explicacion ${showExplanation ? 'visible' : ''}`}>
+            <h3>{evento.datos.mesaDeRegalos.modalidad} {evento.datos.mesaDeRegalos.codigo}</h3>
+            <p>
+            {evento.datos.mesaDeRegalos.explicacion}
+            </p>
+          </div>
+
+          <button className="explicacion-button" onClick={toggleExplanation}>
+            {showExplanation ? '➜' : '¿Qué es?'}
+          </button>
+
       </div>
        ) : (
         <p>Cargando...</p>

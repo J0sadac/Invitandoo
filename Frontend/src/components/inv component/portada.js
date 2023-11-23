@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 
+import marco from '../../multimedia/herramientas/marco dorado.svg'
+
 const img = require.context('../../multimedia', true)
 
 function Novios(){
@@ -36,6 +38,7 @@ function Novios(){
             <div>
               <div className='img-portada shadow'>
                 <img src={img(evento.multimedia.portada)} alt='...' />
+                <img src={marco} className='img-superpuesta' alt='...' />
               </div>
               
               <div className="nombre-portada">

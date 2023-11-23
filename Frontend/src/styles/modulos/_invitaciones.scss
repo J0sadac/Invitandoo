@@ -39,6 +39,8 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 
     color: $color-font;
 
+    color: rgb(160, 124, 31);
+
     .nombre-evento{
         display: flex;
         flex-direction: column;
@@ -89,19 +91,29 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 
         .img-portada{
             border-radius: 50%;
+            border-width: 50px;
+            border-style: solid;
             
-            width: 240px;
-            height: 240px;
+            width: 255px;
+            height: 255px;
             
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            position: relative;
             
             img{
-                width: 240px;
+                width: 255px;
                 border-radius: 50%;
             }
+
+            .img-superpuesta {
+                position: absolute;
+                width: 320px; /* Ajusta el ancho según sea necesario */
+                height: 320px; /* Ajusta la altura según sea necesario */
+              }
         }
         
         .nombre-portada{
@@ -402,7 +414,6 @@ $font-family-second: 'Cormorant Garamond', Georgia;
     font-family: $font-second;
   }
   
-
 .container-itinerario{
     display: flex;
     flex-direction: column;
@@ -568,6 +579,8 @@ $font-family-second: 'Cormorant Garamond', Georgia;
     flex-direction: row;
     justify-content: space-evenly;
 
+    text-align: center;
+
     padding: 30px;
     margin: 20px;
 
@@ -635,28 +648,92 @@ $font-family-second: 'Cormorant Garamond', Georgia;
     
         color: $color-font;
 
-        h3{
-            font-family: $font-main;
-            font-size: 35px;
-            font-weight: 600;
+        transition: transform 0.5s, visibility 0s 0.5s;
+
+        .mesaDeRegalo{
+            h3{
+                font-family: $font-main;
+                font-size: 35px;
+                font-weight: 600;
+            }
+    
+            .codigoRegalo{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+    
+                .imgLogo{
+                    width: 450px;
+                }
+    
+                p{
+                    font-family: georgia;
+                    font-size: 20px;
+                }
+            }
         }
 
-        .codigoRegalo{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
 
-            .imgLogo{
-                width: 450px;
+        .explicacion {
+            display: none; 
+            transform: rotateY(-180deg);
+
+            text-align: center;
+
+            h3{
+                font-family: $font-main;
+                font-size: 35px;
+                font-weight: 600;
             }
 
             p{
-                font-family: georgia;
+                font-family: $font-second;
                 font-size: 20px;
+                font-weight: 500;
             }
-        }
-    } 
+          }
+
+          .hidden {
+            display: none; 
+          }
+          
+          .visible {
+            display: block; 
+          }
+
+          .explicacion-button {
+            border-radius: 10px;
+            border: 1px solid #fff;
+
+            padding: 8px;
+
+            font-family: $font-second;
+            font-size: 16px;
+            
+            background-color: #fff;
+            color: #333;
+
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+          }
+          
+          .explicacion-button:hover {
+            background-color: #333;
+            color: #fff;
+            border-color: #333;
+          }
+    }
+
+    .flip {
+        transform: rotateY(180deg);
+    }
+
+    .mesa.flip{
+        .explicacion {
+            display: block; 
+          }
+    }
 }
 
 .container-maps_conf{
@@ -802,11 +879,11 @@ $font-family-second: 'Cormorant Garamond', Georgia;
             }
     
             .img-portada{
-                width: 230px;
-                height: 230px;
+                width: 245px;
+                height: 245px;
     
                 img{
-                    width: 235px;
+                    width: 250px;
                 }
             }
         }
@@ -1067,11 +1144,11 @@ $font-family-second: 'Cormorant Garamond', Georgia;
             }
     
             .img-portada{
-                width: 230px;
-                height: 230px;
+                width: 25px;
+                height: 250px;
     
                 img{
-                    width: 235px;
+                    width: 250px;
                 }
             }
         }
