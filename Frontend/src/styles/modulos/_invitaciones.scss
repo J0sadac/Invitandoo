@@ -443,6 +443,8 @@ $font-family-second: 'Cormorant Garamond', Georgia;
         width: 100%;
 
         font-family: $font-second;
+
+        transition: transform 0.5s, visibility 0s 0.5s;
     
         .itinerario{
             width: 20%;
@@ -453,6 +455,8 @@ $font-family-second: 'Cormorant Garamond', Georgia;
             justify-content: space-evenly;
             flex-wrap: wrap;
             align-items: center;
+
+            text-align: center;
 
             img{
                 width: 50px;
@@ -475,6 +479,65 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 
 
         }
+
+        .direccion{
+            display: none; 
+            transform: rotateY(-180deg);
+
+            text-align: center;
+
+            h3{
+                font-family: $font-main;
+                font-size: 35px;
+                font-weight: 600;
+            }
+
+            p{
+                font-family: $font-second;
+                font-size: 20px;
+                font-weight: 500;
+            }
+          }
+
+          .hidden {
+            display: none; 
+          }
+          
+          .visible {
+            display: block; 
+          }
+
+          .explicacion-button {
+            border-radius: 10px;
+            border: 1px solid #fff;
+
+            padding: 8px;
+
+            font-family: $font-second;
+            font-size: 16px;
+            
+            background-color: #fff;
+            color: #333;
+
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+          }
+          
+          .explicacion-button:hover {
+            background-color: #333;
+            color: #fff;
+            border-color: #333;
+          }
+    }
+
+    .flip {
+        transform: rotateY(180deg);
+    }
+
+    .cont.flip{
+        .direccion {
+            display: block; 
+          }
     }
 }
 
@@ -617,12 +680,14 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 
                 .titulo{
                     font-family: $font-main;
-                    font-size: 27px;
+                    font-size: 40px;
+                    font-weight: 600;
                 }
 
                 p{
                     font-family: $font-second;
-                    font-size: 20px;    
+                    font-size: 30px; 
+                    font-weight: 600;   
                 }
             
             }
@@ -650,7 +715,7 @@ $font-family-second: 'Cormorant Garamond', Georgia;
 
         transition: transform 0.5s, visibility 0s 0.5s;
 
-        .mesaDeRegalo{
+        .mesaDeRegalos{
             h3{
                 font-family: $font-main;
                 font-size: 35px;
@@ -1048,19 +1113,21 @@ $font-family-second: 'Cormorant Garamond', Georgia;
                 font-weight: 600;
             }
     
-            .codigoRegalo{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-    
-                .imgLogo{
-                    width: 200px;
-                }
-    
-                p{
-                    font-family: georgia;
-                    font-size: 20px;
+            .mesaDeRegalos{
+                .codigoRegalo{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+        
+                    .imgLogo{
+                        width: 200px;
+                    }
+        
+                    p{
+                        font-family: georgia;
+                        font-size: 20px;
+                    }
                 }
             }
         } 
@@ -1314,19 +1381,21 @@ $font-family-second: 'Cormorant Garamond', Georgia;
                 font-weight: 600;
             }
     
-            .codigoRegalo{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-    
-                .imgLogo{
-                    width: 200px;
-                }
-    
-                p{
-                    font-family: georgia;
-                    font-size: 20px;
+            .mesaDeRegalos{
+                .codigoRegalo{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+        
+                    .imgLogo{
+                        width: 200px;
+                    }
+        
+                    p{
+                        font-family: georgia;
+                        font-size: 20px;
+                    }
                 }
             }
         } 
@@ -1581,19 +1650,21 @@ $font-family-second: 'Cormorant Garamond', Georgia;
                 font-weight: 600;
             }
     
-            .codigoRegalo{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-    
-                .imgLogo{
-                    width: 200px;
-                }
-    
-                p{
-                    font-family: georgia;
-                    font-size: 20px;
+            .mesaDeRegalos{
+                .codigoRegalo{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+        
+                    .imgLogo{
+                        width: 200px;
+                    }
+        
+                    p{
+                        font-family: georgia;
+                        font-size: 20px;
+                    }
                 }
             }
         } 
@@ -1852,19 +1923,21 @@ $font-family-second: 'Cormorant Garamond', Georgia;
                 font-weight: 600;
             }
     
-            .codigoRegalo{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-    
-                .imgLogo{
-                    width: 200px;
-                }
-    
-                p{
-                    font-family: georgia;
-                    font-size: 20px;
+            .mesaDeRegalos{
+                .codigoRegalo{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+        
+                    .imgLogo{
+                        width: 200px;
+                    }
+        
+                    p{
+                        font-family: georgia;
+                        font-size: 20px;
+                    }
                 }
             }
         } 

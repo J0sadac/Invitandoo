@@ -3,28 +3,25 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 function Confirmacion() {
-  const { datoId } = useParams();
-  const [datos, setDatos] = useState({ asistir: 'pendiente' });
-
+  const { anfitrion, invitadoId } = useParams();
+  const [evento, setEvento] = useState(null);
 
   useEffect(() => {
-    const urlApi = `https://invitandoodb.onrender.com/invitacion/${datoId}`;
-
-    async function fetchApi() {
+    async function fetchEvento() {
       try {
-        const respuesta = await fetch(urlApi);
-        const respuestaJson = await respuesta.json();
-        setDatos(respuestaJson);
+        const eventoResponse = await fetch(`https://invitandoodb.onrender.com/eventos?anfitrion=${anfitrion}&invitadoId=${invitadoId}`);
+        const eventoData = await eventoResponse.json();
+        setEvento(eventoData);
       } catch (error) {
-        console.error('Error al recuperar datos de la API:', error);
+        console.error('Error al recuperar datos del evento:', error);
       }
     }
 
-    fetchApi();
-  }, [datoId]);
+    fetchEvento();
+  }, [anfitrion, invitadoId]);
 
   const actualizarAsistencia = (asistencia) => {
-    const urlApi = `https://invitandoodb.onrender.com/invitacion/${datoId}`;
+    const urlApi = `https://invitandoodb.onrender.com/eventos?anfitrion=${anfitrion}&invitadoId=${invitadoId}`;
     const data = {
       asistir: asistencia
     };
@@ -38,16 +35,19 @@ function Confirmacion() {
     })
       .then(response => {
         if (response.ok) {
-          setDatos({ ...datos, asistir: asistencia });
-  
-          if (asistencia === 'asistire') {
-            alert('¡Gracias por confirmar tu asistencia! Nos vemos en el evento.');
-          } else if (asistencia === 'faltare') {
-            alert('Lamentamos que no puedas asistir. Esperamos verte en otra ocasión.');
-          }
-  
+          return response.json();
         } else {
-          console.error('Error al actualizar la propiedad "asistir".');
+          throw new Error('Error al actualizar la propiedad "asistir".');
+        }
+      })
+      .then(data => {
+        setEvento({ ...evento, asistir: asistencia });
+        console.log('Evento actualizado en el frontend:', evento); // Agregamos este console.log
+  
+        if (asistencia === 'asistire') {
+          alert('¡Gracias por confirmar tu asistencia! Nos vemos en el evento.');
+        } else if (asistencia === 'faltare') {
+          alert('Lamentamos que no puedas asistir. Esperamos verte en otra ocasión.');
         }
       })
       .catch(error => {
@@ -55,8 +55,8 @@ function Confirmacion() {
       });
   };
   
-
-  return(
+  
+  return (
     <div className="container-maps_conf shadow">
     <div className="maps shadow">
       <p>Direccion en google maps</p>
@@ -75,6 +75,9 @@ function Confirmacion() {
         </div>
     </div>
   </div>
-)}
+  );
+}
 
 export default Confirmacion;
+
+

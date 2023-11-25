@@ -10,7 +10,6 @@ import Dresscode from './inv component/dresscode';
 import Padrinos from './inv component/padrinos';
 import Galeria from './inv component/galeria';
 import AlertaConReproductor from './helpers/cancion/alertaReproductor';
-import Confirmacion from './inv component/confirmacion';
 import Padres from './inv component/padres';
 
 function Invitaciones() {
@@ -32,7 +31,6 @@ function Invitaciones() {
   }, [anfitrion, invitadoId]);
 
   const fondoDinamico = (url) => {
-    
     const urlDinamica = url.replace(/\//g, '-');
 
     return `fondo-${urlDinamica}`;
@@ -62,7 +60,7 @@ function Invitaciones() {
           
           <Dresscode />
 
-          <Confirmacion />
+          
         </div>
       ):(
         <div className='loading'>

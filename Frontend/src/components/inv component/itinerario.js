@@ -4,9 +4,10 @@ import { useParams } from 'react-router-dom';
 const img = require.context('../../multimedia', true);
 
 
-function Itinerario(){
-    const { anfitrion, invitadoId } = useParams();
-    const [evento, setEvento] = useState(null);
+function Itinerario() {
+  const { anfitrion, invitadoId } = useParams();
+  const [evento, setEvento] = useState(null);
+  const [showExplanation, setShowExplanation] = useState([]);
 
   useEffect(() => {
     async function fetchEvento() {
@@ -15,7 +16,8 @@ function Itinerario(){
         const eventoData = await eventoResponse.json();
         setEvento(eventoData);
 
-        console.log(eventoData)
+        // Inicializar showExplanation con un array de 'false' de igual longitud que evento.itinerario
+        setShowExplanation(new Array(eventoData.itinerario.length).fill(false));
       } catch (error) {
         console.error('Error al recuperar datos del evento:', error);
       }
@@ -24,51 +26,47 @@ function Itinerario(){
     fetchEvento();
   }, [anfitrion, invitadoId]);
 
-    return(
-      <div>
-        {evento ? (
-          <div className='container-itinerario shadow'>
-            <h3>Itinerario</h3>
-            <div className='cont'>
-            <div className='itinerario shadow'>
-              <img src={img(evento.itinerario.uno.icono)} alt='...' />
+  const toggleExplanation = (index) => {
+    const updatedExplanation = [...showExplanation]; // Hace una copia del array de estados
+    updatedExplanation[index] = !updatedExplanation[index]; // Modifica el estado del elemento correspondiente al índice
+    setShowExplanation(updatedExplanation); // Actualiza el estado
+  };
 
-              <p>{evento.itinerario.uno.accion}</p>
-
+  return (
+    <div>
+      {evento ? (
+        <div className='container-itinerario shadow'>
+          <h3>Itinerario</h3>
+          {evento.itinerario.map((item, index) => (
+            <div className={`cont ${showExplanation[index] ? 'flip' : ''}`} key={index}>
+              <div className={`itinerario shadow ${showExplanation[index] ? 'hidden' : ''}`}>
+                <img src={img(item.icono)} alt='...' />
+                <p>{item.accion}</p>
                 <div>
-                  <p>{evento.itinerario.uno.ubicacion}</p>
-                  <p>{evento.itinerario.uno.hora}</p>
+                  <p>{item.ubicacion}</p>
+                  <p>{item.hora}</p>
                 </div>
               </div>
 
-              <div className='itinerario shadow'>
-              <img src={img(evento.itinerario.dos.icono)} alt='...' />
-
-              <p>{evento.itinerario.dos.accion}</p>
-
-                <div>
-                  <p>{evento.itinerario.dos.ubicacion}</p>
-                  <p>{evento.itinerario.dos.hora}</p>
-                </div>
+              <div className={`direccion ${showExplanation[index] ? 'visible' : ''}`}>
+                <h3>Direccion</h3>
+                <p> {item.direccion} </p>
               </div>
 
-              <div className='itinerario shadow'>
-                <img src={img(evento.itinerario.tres.icono)} alt='...' />
-
-                <p>{evento.itinerario.tres.accion}</p>
-
-                <div>
-                  <p>{evento.itinerario.tres.ubicacion}</p>
-                  <p>{evento.itinerario.tres.hora}</p>
-                </div>
-              </div>
+              <button className="explicacion-button" onClick={() => toggleExplanation(index)}>
+                {showExplanation[index] ? '➜' : '¿Donde es?'}
+              </button>
             </div>
+          ))}
         </div>
-        ) : (
-          <p>Cargando...</p>
-        )}
-      </div>
-    )
+      ) : (
+        <p>Cargando...</p>
+      )}
+    </div>
+  );
 };
 
+
 export default Itinerario;
+
+

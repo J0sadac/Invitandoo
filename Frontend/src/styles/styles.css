@@ -438,6 +438,7 @@
   flex-wrap: wrap;
   width: 100%;
   font-family: "Abel", sans-serif;
+  transition: transform 0.5s, visibility 0s 0.5s;
 }
 .container-itinerario .cont .itinerario {
   width: 20%;
@@ -447,6 +448,7 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
+  text-align: center;
 }
 .container-itinerario .cont .itinerario img {
   width: 50px;
@@ -461,6 +463,49 @@
 }
 .container-itinerario .cont .itinerario div p {
   font-size: 20px;
+}
+.container-itinerario .cont .direccion {
+  display: none;
+  transform: rotateY(-180deg);
+  text-align: center;
+}
+.container-itinerario .cont .direccion h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-itinerario .cont .direccion p {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+.container-itinerario .cont .hidden {
+  display: none;
+}
+.container-itinerario .cont .visible {
+  display: block;
+}
+.container-itinerario .cont .explicacion-button {
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 8px;
+  font-family: "Abel", sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.container-itinerario .cont .explicacion-button:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+.container-itinerario .flip {
+  transform: rotateY(180deg);
+}
+.container-itinerario .cont.flip .direccion {
+  display: block;
 }
 
 .container-padres {
@@ -575,11 +620,13 @@
 }
 .container-dresscode_mesa .dresscode div div .titulo {
   font-family: "Tangerine", cursive;
-  font-size: 27px;
+  font-size: 40px;
+  font-weight: 600;
 }
 .container-dresscode_mesa .dresscode div div p {
   font-family: "Abel", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: 600;
 }
 .container-dresscode_mesa .dresscode .img-dresscode img {
   width: 300px;
@@ -595,21 +642,21 @@
   color: #3e4144;
   transition: transform 0.5s, visibility 0s 0.5s;
 }
-.container-dresscode_mesa .mesa .mesaDeRegalo h3 {
+.container-dresscode_mesa .mesa .mesaDeRegalos h3 {
   font-family: "Tangerine", cursive;
   font-size: 35px;
   font-weight: 600;
 }
-.container-dresscode_mesa .mesa .mesaDeRegalo .codigoRegalo {
+.container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
-.container-dresscode_mesa .mesa .mesaDeRegalo .codigoRegalo .imgLogo {
+.container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo .imgLogo {
   width: 450px;
 }
-.container-dresscode_mesa .mesa .mesaDeRegalo .codigoRegalo p {
+.container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo p {
   font-family: georgia;
   font-size: 20px;
 }
@@ -889,16 +936,16 @@
     font-size: 35px;
     font-weight: 600;
   }
-  .container-dresscode_mesa .mesa .codigoRegalo {
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
   }
-  .container-dresscode_mesa .mesa .codigoRegalo .imgLogo {
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo .imgLogo {
     width: 200px;
   }
-  .container-dresscode_mesa .mesa .codigoRegalo p {
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo p {
     font-family: georgia;
     font-size: 20px;
   }
@@ -1088,16 +1135,16 @@
     font-size: 35px;
     font-weight: 600;
   }
-  .container-dresscode_mesa .mesa .codigoRegalo {
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
   }
-  .container-dresscode_mesa .mesa .codigoRegalo .imgLogo {
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo .imgLogo {
     width: 200px;
   }
-  .container-dresscode_mesa .mesa .codigoRegalo p {
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo p {
     font-family: georgia;
     font-size: 20px;
   }
@@ -1287,16 +1334,16 @@
     font-size: 35px;
     font-weight: 600;
   }
-  .container-dresscode_mesa .mesa .codigoRegalo {
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
   }
-  .container-dresscode_mesa .mesa .codigoRegalo .imgLogo {
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo .imgLogo {
     width: 200px;
   }
-  .container-dresscode_mesa .mesa .codigoRegalo p {
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo p {
     font-family: georgia;
     font-size: 20px;
   }
@@ -1489,16 +1536,16 @@
     font-size: 35px;
     font-weight: 600;
   }
-  .container-dresscode_mesa .mesa .codigoRegalo {
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
   }
-  .container-dresscode_mesa .mesa .codigoRegalo .imgLogo {
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo .imgLogo {
     width: 200px;
   }
-  .container-dresscode_mesa .mesa .codigoRegalo p {
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo p {
     font-family: georgia;
     font-size: 20px;
   }
