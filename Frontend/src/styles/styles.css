@@ -782,7 +782,8 @@
     height: 690px;
   }
   .inv-carousel div .inv-frase {
-    font-size: 25px;
+    font-size: 32px;
+    font-weight: 600;
   }
   .container-portada {
     display: flex;
@@ -981,7 +982,8 @@
     height: 690px;
   }
   .inv-carousel div .inv-frase {
-    font-size: 25px;
+    font-size: 32px;
+    font-weight: 600;
   }
   .container-portada {
     display: flex;
@@ -1180,7 +1182,8 @@
     height: 690px;
   }
   .inv-carousel div .inv-frase {
-    font-size: 25px;
+    font-size: 32px;
+    font-weight: 600;
   }
   .container-portada {
     display: flex;
@@ -1261,7 +1264,7 @@
     font-size: 12px;
   }
   .container-inv .date-container .img-flor {
-    width: 120px;
+    width: 100px;
   }
   .container-inv .qr-container {
     display: flex;
@@ -1382,7 +1385,8 @@
     height: 690px;
   }
   .inv-carousel div .inv-frase {
-    font-size: 25px;
+    font-size: 32px;
+    font-weight: 600;
   }
   .container-portada {
     display: flex;
