@@ -462,7 +462,8 @@
   align-items: center;
 }
 .container-itinerario .cont .itinerario div p {
-  font-size: 20px;
+  font-size: 23px;
+  font-weight: 600;
 }
 .container-itinerario .cont .direccion {
   display: none;
