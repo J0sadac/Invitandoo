@@ -118,7 +118,7 @@ function Invitacion(){
           {evento ? (
             <div className="qr-container shadow">
             <div className="nombre-inv">
-              <h3>Familia:</h3>
+              <h3>Invitado:</h3>
               <h3>
                 {evento.invitados[0].nombreInvitado}
               </h3>
