@@ -807,7 +807,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 800px;
+    height: 750px;
     padding: 15px 20px;
     margin: 15px 10px;
   }
@@ -829,11 +829,36 @@
     font-size: 40px;
   }
   .container-portada .portada-xv div .img-portada {
-    width: 245px;
-    height: 245px;
+    width: 230px;
+    height: 230px;
   }
   .container-portada .portada-xv div .img-portada img {
-    width: 250px;
+    width: 235px;
+  }
+  .container-portada .portada-boda .head {
+    display: flex;
+  }
+  .container-portada .portada-boda .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container-portada .portada-boda .body .nombres {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+  }
+  .container-portada .portada-boda .body .nombres p {
+    font-size: 38px;
+  }
+  .container-portada .portada-boda .body .img img {
+    width: 220px;
+  }
+  .container-portada .portada-boda .body .img .marco {
+    position: absolute;
+    right: 0;
+    width: 290px;
   }
   .container-inv {
     display: flex;
@@ -1007,33 +1032,58 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 700px;
+    height: 750px;
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-portada h3 {
+  .container-portada .portada-xv h3 {
     font-family: "Tangerine", cursive;
     font-size: 45px;
   }
-  .container-portada div {
+  .container-portada .portada-xv div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
   }
-  .container-portada div .nombre-portada {
+  .container-portada .portada-xv div .nombre-portada {
     width: 100%;
   }
-  .container-portada div .nombre-portada p {
+  .container-portada .portada-xv div .nombre-portada p {
     font-size: 40px;
   }
-  .container-portada div .img-portada {
-    width: 25px;
-    height: 250px;
+  .container-portada .portada-xv div .img-portada {
+    width: 230px;
+    height: 230px;
   }
-  .container-portada div .img-portada img {
-    width: 250px;
+  .container-portada .portada-xv div .img-portada img {
+    width: 235px;
+  }
+  .container-portada .portada-boda .head {
+    display: flex;
+  }
+  .container-portada .portada-boda .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container-portada .portada-boda .body .nombres {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+  }
+  .container-portada .portada-boda .body .nombres p {
+    font-size: 38px;
+  }
+  .container-portada .portada-boda .body .img img {
+    width: 220px;
+  }
+  .container-portada .portada-boda .body .img .marco {
+    position: absolute;
+    right: 0;
+    width: 290px;
   }
   .container-inv {
     display: flex;
@@ -1435,33 +1485,58 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 700px;
+    height: 750px;
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-portada h3 {
+  .container-portada .portada-xv h3 {
     font-family: "Tangerine", cursive;
     font-size: 45px;
   }
-  .container-portada div {
+  .container-portada .portada-xv div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
   }
-  .container-portada div .nombre-portada {
+  .container-portada .portada-xv div .nombre-portada {
     width: 100%;
   }
-  .container-portada div .nombre-portada p {
+  .container-portada .portada-xv div .nombre-portada p {
     font-size: 40px;
   }
-  .container-portada div .img-portada {
+  .container-portada .portada-xv div .img-portada {
     width: 230px;
     height: 230px;
   }
-  .container-portada div .img-portada img {
+  .container-portada .portada-xv div .img-portada img {
     width: 235px;
+  }
+  .container-portada .portada-boda .head {
+    display: flex;
+  }
+  .container-portada .portada-boda .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container-portada .portada-boda .body .nombres {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+  }
+  .container-portada .portada-boda .body .nombres p {
+    font-size: 38px;
+  }
+  .container-portada .portada-boda .body .img img {
+    width: 220px;
+  }
+  .container-portada .portada-boda .body .img .marco {
+    position: absolute;
+    right: 0;
+    width: 290px;
   }
   .container-inv {
     display: flex;

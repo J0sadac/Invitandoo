@@ -988,12 +988,12 @@ $font-second: 'Abel', sans-serif;
         }  
     }
 
-   .container-portada{
+    .container-portada{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        height: 800px;
+        height: 750px;
 
         padding: 15px 20px;
         margin: 15px 10px;
@@ -1020,17 +1020,53 @@ $font-second: 'Abel', sans-serif;
                 }
         
                 .img-portada{
-                    width: 245px;
-                    height: 245px;
+                    width: 230px;
+                    height: 230px;
         
                     img{
-                        width: 250px;
+                        width: 235px;
                     }
                 }
             }
         }
 
+        .portada-boda{
 
+            .head{
+                display: flex;
+            }
+
+            .body{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .nombres{
+                    display: flex;
+                    flex-direction: row;
+
+                    width: 100%;
+
+                    text-align: center;
+                    
+                    p{
+                        font-size: 38px;
+                    }
+                }
+
+                .img{
+                    img{
+                        width: 220px;
+                    }
+    
+                    .marco{
+                        position: absolute;
+                        right: 0;
+                        width: 290px;
+                    }
+                }
+            }
+        }
     }
     
     .container-inv{
@@ -1260,42 +1296,82 @@ $font-second: 'Abel', sans-serif;
         }  
     }
 
-   .container-portada{
+    .container-portada{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        height: 700px;
+        height: 750px;
 
         padding: 15px 20px;
         margin: 15px 10px;
 
-        h3{
-            font-family: $font-main;
-            font-size: 45px;
-        }
-    
-        div{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-    
-            width: 100%;
-    
-            .nombre-portada{
+        .portada-xv{
+            h3{
+                font-family: $font-main;
+                font-size: 45px;
+            }
+        
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+        
                 width: 100%;
-                p{
-                    font-size: 40px;
+        
+                .nombre-portada{
+                    width: 100%;
+                    p{
+                        font-size: 40px;
+                    }
+                }
+        
+                .img-portada{
+                    width: 230px;
+                    height: 230px;
+        
+                    img{
+                        width: 235px;
+                    }
                 }
             }
+        }
+
+        .portada-boda{
+
+            .head{
+                display: flex;
+            }
+
+            .body{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .nombres{
+                    display: flex;
+                    flex-direction: row;
+
+                    width: 100%;
+
+                    text-align: center;
+                    
+                    p{
+                        font-size: 38px;
+                    }
+                }
+
+                .img{
+                    img{
+                        width: 220px;
+                    }
     
-            .img-portada{
-                width: 25px;
-                height: 250px;
-    
-                img{
-                    width: 250px;
+                    .marco{
+                        position: absolute;
+                        right: 0;
+                        width: 290px;
+                    }
                 }
             }
         }
@@ -1844,42 +1920,82 @@ $font-second: 'Abel', sans-serif;
         }  
     }
 
-   .container-portada{
+    .container-portada{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        height: 700px;
+        height: 750px;
 
         padding: 15px 20px;
         margin: 15px 10px;
 
-        h3{
-            font-family: $font-main;
-            font-size: 45px;
-        }
-    
-        div{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-    
-            width: 100%;
-    
-            .nombre-portada{
+        .portada-xv{
+            h3{
+                font-family: $font-main;
+                font-size: 45px;
+            }
+        
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+        
                 width: 100%;
-                p{
-                    font-size: 40px;
+        
+                .nombre-portada{
+                    width: 100%;
+                    p{
+                        font-size: 40px;
+                    }
+                }
+        
+                .img-portada{
+                    width: 230px;
+                    height: 230px;
+        
+                    img{
+                        width: 235px;
+                    }
                 }
             }
+        }
+
+        .portada-boda{
+
+            .head{
+                display: flex;
+            }
+
+            .body{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .nombres{
+                    display: flex;
+                    flex-direction: row;
+
+                    width: 100%;
+
+                    text-align: center;
+                    
+                    p{
+                        font-size: 38px;
+                    }
+                }
+
+                .img{
+                    img{
+                        width: 220px;
+                    }
     
-            .img-portada{
-                width: 230px;
-                height: 230px;
-    
-                img{
-                    width: 235px;
+                    .marco{
+                        position: absolute;
+                        right: 0;
+                        width: 290px;
+                    }
                 }
             }
         }
