@@ -1,4 +1,4 @@
-import Tarjeta from './helpers/tarjeta';
+import Tarjeta from './tools/tarjeta';
 
 function main (){
 

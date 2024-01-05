@@ -1,89 +1,48 @@
 @charset "UTF-8";
-.navbar {
-  margin-bottom: 30px;
-  padding: 0;
-  background-color: #170000;
-  color: #fafbfd;
+.contenedor-navbar {
+  background-color: #170000 !important;
 }
-.navbar .nav-cont {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.contenedor-navbar .titulo-link {
+  text-decoration: none;
+  color: white;
+  margin-top: 7px;
 }
-.navbar .nav-cont .navbar-collapse {
-  padding: 5px;
+.contenedor-navbar .titulo-link .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
 }
-.navbar .nav-cont .nav-home {
-  font-family: "Tangerine", Times;
-  font-size: 40px;
-  margin: 0px 10px;
-  padding: 0px;
-  color: #fafbfd;
-}
-.navbar .nav-cont .nav-section {
-  height: 35px;
-  margin: 0px 2px;
-  font-family: "Cormorant Garamond", Georgia;
-  font-size: 18px;
-  color: #fafbfd;
-}
-.navbar .nav-cont .icon {
-  margin: 2px;
+.contenedor-navbar .links {
+  font-family: "Abel", sans-serif;
+  color: white;
 }
 
-.menu-eventos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 100px 0px;
-}
-.menu-eventos h3 {
-  color: black;
-  font-family: "smooch", cursive;
-  font-size: 40px;
-}
-.menu-eventos .tarjetas {
+.contenedor-tarjeta {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 30px;
+  justify-content: center;
+  margin-top: 100px;
 }
-.menu-eventos .tarjetas .link {
+.contenedor-tarjeta .tarjeta-link {
   text-decoration: none;
 }
-.menu-eventos .tarjetas .link .card {
+.contenedor-tarjeta .tarjeta-link .tarjeta {
+  width: 250px;
+}
+.contenedor-tarjeta .tarjeta-link .tarjeta .descripcion {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  background-color: aliceblue;
-  color: black;
-  max-width: 300px;
-  margin: 10px;
-  margin-bottom: 30px;
+  justify-content: center;
 }
-.menu-eventos .tarjetas .link .card .card-img {
-  height: 280px;
-  max-height: 280px;
-  object-fit: cover;
-}
-.menu-eventos .tarjetas .link .card .card-body {
-  padding: 0px;
-}
-.menu-eventos .tarjetas .link .card .card-body .card-title {
-  border-bottom: 5px;
-  border-color: black;
-  font-family: "smooch", cursive;
+.contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .titulo {
+  text-align: center;
+  font-family: "Tangerine", cursive;
   font-size: 30px;
-  padding: 14px;
-  margin-top: 10px;
+  font-weight: 600;
+  color: #3e4144;
 }
-.menu-eventos .tarjetas .link .card .card-body .card-text {
-  padding: 0px 14px 14px 14px;
-}
-.menu-eventos .tarjetas .link .card:hover {
-  transform: scale(1.03);
+.contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .texto {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
 }
 
 @media (max-width: 321px) {
@@ -94,6 +53,10 @@
     font-size: 30px;
   }
 }
+.container-invitaciones {
+  background-size: contain;
+}
+
 .inv-carousel {
   margin-top: 30px;
 }
@@ -121,46 +84,46 @@
   color: #3e4144;
   color: rgb(160, 124, 31);
 }
-.container-portada .nombre-evento {
+.container-portada .portada-xv .nombre-evento {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
 }
-.container-portada .nombre-evento .te-invito {
+.container-portada .portada-xv .nombre-evento .te-invito {
   font-family: "Tangerine", cursive;
   font-weight: 600;
   font-size: 45px;
 }
-.container-portada .nombre-evento .mis {
+.container-portada .portada-xv .nombre-evento .mis {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.container-portada .nombre-evento .mis h4 {
+.container-portada .portada-xv .nombre-evento .mis h4 {
   margin: -10px 0px;
   font-family: "Tangerine", cursive;
   font-weight: 600;
   font-size: 40px;
 }
-.container-portada .nombre-evento .mis h3 {
+.container-portada .portada-xv .nombre-evento .mis h3 {
   font-family: "Tangerine", cursive;
   font-size: 45px;
   font-weight: 600;
   padding: 0px;
   margin: 0px;
 }
-.container-portada .nombre-evento .mis .anios {
+.container-portada .portada-xv .nombre-evento .mis .anios {
   margin-top: -20px;
 }
-.container-portada div {
+.container-portada .portada-xv div {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
-.container-portada div .img-portada {
+.container-portada .portada-xv div .img-portada {
   border-radius: 50%;
   border-width: 50px;
   border-style: solid;
@@ -172,25 +135,79 @@
   align-items: center;
   position: relative;
 }
-.container-portada div .img-portada img {
+.container-portada .portada-xv div .img-portada img {
   width: 255px;
   border-radius: 50%;
 }
-.container-portada div .img-portada .img-superpuesta {
+.container-portada .portada-xv div .img-portada .img-superpuesta {
   position: absolute;
   width: 320px; /* Ajusta el ancho según sea necesario */
   height: 320px; /* Ajusta la altura según sea necesario */
 }
-.container-portada div .nombre-portada {
+.container-portada .portada-xv div .nombre-portada {
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
   width: 50%;
 }
-.container-portada div .nombre-portada p {
+.container-portada .portada-xv div .nombre-portada p {
   font-size: 45px;
   font-family: "Tangerine", cursive;
+  font-weight: 600;
+}
+.container-portada .portada-boda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+.container-portada .portada-boda .head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-portada .portada-boda .head .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+}
+.container-portada .portada-boda .head .subtitulo {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 600;
+}
+.container-portada .portada-boda .body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+}
+.container-portada .portada-boda .body .img {
+  position: relative;
+}
+.container-portada .portada-boda .body .img img {
+  width: 250px;
+  border-radius: 50%;
+}
+.container-portada .portada-boda .body .img .marco {
+  position: absolute;
+  right: -35px;
+  top: -35px;
+  width: 330px;
+}
+.container-portada .portada-boda .body .nombres {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 40%;
+}
+.container-portada .portada-boda .body .nombres p {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
   font-weight: 600;
 }
 
@@ -790,32 +807,32 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 700px;
+    height: 800px;
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-portada h3 {
+  .container-portada .portada-xv h3 {
     font-family: "Tangerine", cursive;
     font-size: 45px;
   }
-  .container-portada div {
+  .container-portada .portada-xv div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
   }
-  .container-portada div .nombre-portada {
+  .container-portada .portada-xv div .nombre-portada {
     width: 100%;
   }
-  .container-portada div .nombre-portada p {
+  .container-portada .portada-xv div .nombre-portada p {
     font-size: 40px;
   }
-  .container-portada div .img-portada {
+  .container-portada .portada-xv div .img-portada {
     width: 245px;
     height: 245px;
   }
-  .container-portada div .img-portada img {
+  .container-portada .portada-xv div .img-portada img {
     width: 250px;
   }
   .container-inv {
@@ -1190,33 +1207,58 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 700px;
+    height: 750px;
     padding: 15px 20px;
     margin: 15px 10px;
   }
-  .container-portada h3 {
+  .container-portada .portada-xv h3 {
     font-family: "Tangerine", cursive;
     font-size: 45px;
   }
-  .container-portada div {
+  .container-portada .portada-xv div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
   }
-  .container-portada div .nombre-portada {
+  .container-portada .portada-xv div .nombre-portada {
     width: 100%;
   }
-  .container-portada div .nombre-portada p {
+  .container-portada .portada-xv div .nombre-portada p {
     font-size: 40px;
   }
-  .container-portada div .img-portada {
+  .container-portada .portada-xv div .img-portada {
     width: 230px;
     height: 230px;
   }
-  .container-portada div .img-portada img {
+  .container-portada .portada-xv div .img-portada img {
     width: 235px;
+  }
+  .container-portada .portada-boda .head {
+    display: flex;
+  }
+  .container-portada .portada-boda .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container-portada .portada-boda .body .nombres {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+  }
+  .container-portada .portada-boda .body .nombres p {
+    font-size: 38px;
+  }
+  .container-portada .portada-boda .body .img img {
+    width: 220px;
+  }
+  .container-portada .portada-boda .body .img .marco {
+    position: absolute;
+    right: 0;
+    width: 290px;
   }
   .container-inv {
     display: flex;
@@ -1764,26 +1806,32 @@
   }
 }
 body {
-  background: url("../multimedia/fondos/fondo-main.jpg");
+  background: url("../multimedia/fondos/Invitandoo.svg");
   background-size: cover;
 }
 body .loading {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
-  margin: 100px 20px auto;
+  text-align: center;
+  margin-top: 60px;
+  padding: 150px 20px 290px;
+  background: url("../multimedia/fondos/background.jpg");
+  background-size: cover;
+  color: #3e4144;
 }
-
-.fondo-karla {
-  background: url("../multimedia/fondos/fondo-karla.png");
-  background-size: contain;
+body .loading p {
+  font-family: "Abel", sans-serif;
+  font-size: 28px;
+  margin: 0px;
 }
-
-.fondo-jimena {
-  background: url("../multimedia/fondos/fondo-jimena.jpg");
-  background-size: contain;
+body .loading .spin {
+  width: 120px;
+  height: 120px;
+  border-width: 7px;
 }
 
 /*# sourceMappingURL=styles.css.map */

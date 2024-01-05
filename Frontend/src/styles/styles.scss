@@ -8,28 +8,44 @@
 //Variables
 $color-main: #212529;
 $color-second: #3e4144;
+$color-font: #3e4144;
+$color-carousel: #ffff;
+$font-main: 'Tangerine', cursive;
+$font-second: 'Abel', sans-serif;
 
 body{
-    background: url('../multimedia/fondos/fondo-main.jpg');
+    background: url('../multimedia/fondos/Invitandoo.svg');
     background-size: cover;
 
     .loading{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         height: 100%;
         width: 100%;
 
-        margin: 100px 20px auto;
+        text-align: center;
+
+        margin-top: 60px;
+        padding: 150px 20px 290px;
+
+        background: url('../multimedia/fondos/background.jpg');
+        background-size: cover;
+
+        color: #3e4144;
+
+        p{
+            font-family: $font-second;
+            font-size: 28px;
+
+            margin: 0px;
+        }
+
+        .spin{
+            width: 120px;
+            height: 120px;
+            border-width: 7px;
+        }
     }
  }
-
-.fondo-karla{
-    background: url('../multimedia/fondos/fondo-karla.png');
-    background-size: contain; 
-}
-
-.fondo-jimena{
-    background: url('../multimedia/fondos/fondo-jimena.jpg');
-    background-size: contain; 
-}
