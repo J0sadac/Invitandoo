@@ -973,6 +973,313 @@ $font-second: 'Abel', sans-serif;
 
 
 //Adaptacion responsiva en diferentes telefonos
+@media (max-width:769px){
+    .inv-carousel{
+        .inv-img{
+            height: 690px;
+        }
+
+        div{
+            .inv-frase{
+                font-size: 32px;
+                font-weight: 600;
+            }
+        }  
+    }
+
+    .container-portada{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: 750px;
+
+        padding: 15px 20px;
+        margin: 15px 10px;
+
+        .portada-xv{
+            h3{
+                font-family: $font-main;
+                font-size: 45px;
+            }
+        
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+        
+                width: 100%;
+        
+                .nombre-portada{
+                    width: 100%;
+                    p{
+                        font-size: 40px;
+                    }
+                }
+        
+                .img-portada{
+                    width: 230px;
+                    height: 230px;
+        
+                    img{
+                        width: 235px;
+                    }
+                }
+            }
+        }
+
+        .portada-boda{
+
+            .head{
+                display: flex;
+            }
+
+            .body{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .nombres{
+                    display: flex;
+                    flex-direction: row;
+
+                    width: 100%;
+
+                    text-align: center;
+                    
+                    p{
+                        font-size: 38px;
+                    }
+                }
+
+                .img{
+                    img{
+                        width: 220px;
+                    }
+    
+                    .marco{
+                        position: absolute;
+                        right: -30px;
+                        width: 290px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .container-inv{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        margin: 20px 10px;
+
+        .date-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 97%;
+            height: 600px;
+            margin: 40px 0px;
+            padding: 50px 0px;
+
+            .inv-date-container{
+                .inv-date{
+                    text-align: center;
+                    font-size: 42px;
+                }
+            }
+
+            .place-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                p{
+                    text-align: center;
+                    font-size: 21px;
+                }
+            }
+
+            .time-container{
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+                justify-content: space-evenly;
+
+                width: 100%;
+
+                .time{
+                    width: 70px;
+                    height: 98px;
+
+                    .times{
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .img-flor{
+                width: 120px;
+            }
+        }
+
+        .qr-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            width: 90%;
+            margin: 40px 0px;
+            padding: 15px;
+
+            .nombre-inv{
+                h3{
+                    font-size: 40px;
+                }
+            }
+            .num-mesa{
+                font-family: $font-second;
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            .anuncio{
+                text-align: center;
+                font-family: $font-second;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .container-reproductor{
+        .reproductor{
+            .title{
+                font-size: 30px;
+                font-family: $font-second;
+                text-align: center;
+            }
+        }
+    
+    }
+
+    .container-itinerario{
+        margin: 20px 10px;
+
+        .cont{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+
+            width: 100%;
+
+            .itinerario{
+                width: 430px;
+                margin: 10px 0px;
+            }
+        }
+    }
+
+    .container-dresscode_mesa{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+
+        margin: 20px 10px;
+        padding: 20px 10px;
+
+        .dresscode{
+            width: 430px;
+            text-align: center;
+            
+            h3{
+                font-size: 30px;
+            }
+    
+            .img-dresscode{
+                img{
+                    width: 150px;
+                }
+            }
+        }
+
+        .mesa{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+    
+            margin-top: 20px;
+            padding: 20px;
+            width: 430px;
+        
+            color: $color-font;
+    
+            h3{
+                font-family: $font-main;
+                font-size: 35px;
+                font-weight: 600;
+            }
+    
+            .mesaDeRegalos{
+                .codigoRegalo{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+        
+                    .imgLogo{
+                        width: 200px;
+                    }
+        
+                    p{
+                        font-family: georgia;
+                        font-size: 20px;
+                    }
+                }
+            }
+        } 
+    }
+    
+    .container-maps_conf{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        margin: 20px 5px;
+        padding: 15px 5px;
+
+        .maps{
+            width: 430px;
+
+            .caja-maps{
+                width: 260px;
+            }
+        }
+
+        .confirmacion{
+            width: 430px;
+
+            p{
+                text-align: center;
+            }
+
+            .botones{
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+
+                height: 100px;
+            }
+        }
+    }
+}
 
 @media (max-width:551px){
     .inv-carousel{
@@ -1061,7 +1368,7 @@ $font-second: 'Abel', sans-serif;
     
                     .marco{
                         position: absolute;
-                        right: 0;
+                        right: -30px;
                         width: 290px;
                     }
                 }
@@ -1369,7 +1676,7 @@ $font-second: 'Abel', sans-serif;
     
                     .marco{
                         position: absolute;
-                        right: 0;
+                        right: -30px;
                         width: 290px;
                     }
                 }
@@ -1679,7 +1986,7 @@ $font-second: 'Abel', sans-serif;
     
                     .marco{
                         position: absolute;
-                        right: 0;
+                        right: -30px;
                         width: 290px;
                     }
                 }
@@ -1993,7 +2300,7 @@ $font-second: 'Abel', sans-serif;
     
                     .marco{
                         position: absolute;
-                        right: 0;
+                        right: -30px;
                         width: 290px;
                     }
                 }

@@ -13,7 +13,7 @@ function navbar() {
         <div className="collapse justify-content-end navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link links" to="/mi_evento">Mi evento</Link>
+              <Link className="nav-link links" to="/mi-evento">Mi evento</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link links" to="/">Ingresar</Link>

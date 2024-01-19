@@ -1,9 +1,16 @@
+import React from 'react';
+
+import FormularioDatos from './components/datos';
 
 const MiEvento = function(){
 
     return(
-        <div>
-            <h3>Esta es la seccion de eventos</h3>
+        <div className="contenedor-miEvento">
+    
+            <div className='formularios'>
+                <FormularioDatos />
+            </div>
+            
         </div>
     )
 }

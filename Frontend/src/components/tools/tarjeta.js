@@ -1,43 +1,44 @@
 import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 
-import Img from '../../multimedia/XV años - Jimena/imagenes/XV años - Jimena - img01.jpg';
-
 import { Link } from "react-router-dom";
 
 function Tarjeta() {
-  const { anfitrion, invitadoId } = useParams();
-  const [evento, setEvento] = useState();
+  const { eventoId, invitadoId } = useParams();
+  const [evento, setEvento] = useState(null);
 
   useEffect(() => {
     async function fetchEvento() {
       try {
-        const eventoResponse = await fetch(`https://invitandoodb.onrender.com/eventos?anfitrion=${anfitrion}&invitadoId=${invitadoId}`);
+        const eventoResponse = await fetch(`https://nueva-invitandodb.onrender.com/eventos`);
         const eventoData = await eventoResponse.json();
         setEvento(eventoData);
+        console.log(eventoData)
       } catch (error) {
-        console.error('Error al recuperar datos del evento:', error);
+        console.log(error);
       }
     }
 
     fetchEvento();
-  }, [anfitrion, invitadoId]);
+  }, [eventoId, invitadoId]);
 
   return (
     <div className='contenedor-tarjeta'>
-      {evento? (
-        <Link className='tarjeta-link' to="/invitacion/Jimena/a11">
-          <div className="card tarjeta">
-            <img src={Img} className="card-img-top" alt="..." />
-            <div className="card-body descripcion">
-              <h5 className="titulo">Jimena Dominguez</h5>
-              <p className="texto">XV años</p>
+      {evento ? (
+        evento.map((evento, index) => (
+          <Link key={index} className='tarjeta-link' to={`/evento/${evento._id}/invitado/${evento.invitados[0]._id}`}>
+            <div className="card tarjeta">
+              <img src={evento.multimedia.carousel[0].imageURL} className="card-img-top" alt="Evento" />
+              <div className="card-body descripcion">
+                <h5 className="titulo">{evento.datos.festejado}</h5>
+                <p className="texto">{evento.evento}</p>
+              </div>
             </div>
-          </div>
-        </Link>
-      ):(
+          </Link>
+        ))
+      ) : (
         <div>
-          cargando...
+          Cargando...
         </div>
       )}
     </div>

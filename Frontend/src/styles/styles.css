@@ -794,6 +794,231 @@
   width: 300px;
 }
 
+@media (max-width: 769px) {
+  .inv-carousel .inv-img {
+    height: 690px;
+  }
+  .inv-carousel div .inv-frase {
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .container-portada {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 750px;
+    padding: 15px 20px;
+    margin: 15px 10px;
+  }
+  .container-portada .portada-xv h3 {
+    font-family: "Tangerine", cursive;
+    font-size: 45px;
+  }
+  .container-portada .portada-xv div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  .container-portada .portada-xv div .nombre-portada {
+    width: 100%;
+  }
+  .container-portada .portada-xv div .nombre-portada p {
+    font-size: 40px;
+  }
+  .container-portada .portada-xv div .img-portada {
+    width: 230px;
+    height: 230px;
+  }
+  .container-portada .portada-xv div .img-portada img {
+    width: 235px;
+  }
+  .container-portada .portada-boda .head {
+    display: flex;
+  }
+  .container-portada .portada-boda .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container-portada .portada-boda .body .nombres {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+  }
+  .container-portada .portada-boda .body .nombres p {
+    font-size: 38px;
+  }
+  .container-portada .portada-boda .body .img img {
+    width: 220px;
+  }
+  .container-portada .portada-boda .body .img .marco {
+    position: absolute;
+    right: -30px;
+    width: 290px;
+  }
+  .container-inv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 10px;
+  }
+  .container-inv .date-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 97%;
+    height: 600px;
+    margin: 40px 0px;
+    padding: 50px 0px;
+  }
+  .container-inv .date-container .inv-date-container .inv-date {
+    text-align: center;
+    font-size: 42px;
+  }
+  .container-inv .date-container .place-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .container-inv .date-container .place-container p {
+    text-align: center;
+    font-size: 21px;
+  }
+  .container-inv .date-container .time-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .container-inv .date-container .time-container .time {
+    width: 70px;
+    height: 98px;
+  }
+  .container-inv .date-container .time-container .time .times {
+    font-size: 12px;
+  }
+  .container-inv .date-container .img-flor {
+    width: 120px;
+  }
+  .container-inv .qr-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    margin: 40px 0px;
+    padding: 15px;
+  }
+  .container-inv .qr-container .nombre-inv h3 {
+    font-size: 40px;
+  }
+  .container-inv .qr-container .num-mesa {
+    font-family: "Abel", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .container-inv .qr-container .anuncio {
+    text-align: center;
+    font-family: "Abel", sans-serif;
+    font-size: 18px;
+  }
+  .container-reproductor .reproductor .title {
+    font-size: 30px;
+    font-family: "Abel", sans-serif;
+    text-align: center;
+  }
+  .container-itinerario {
+    margin: 20px 10px;
+  }
+  .container-itinerario .cont {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+  }
+  .container-itinerario .cont .itinerario {
+    width: 430px;
+    margin: 10px 0px;
+  }
+  .container-dresscode_mesa {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px 10px;
+    padding: 20px 10px;
+  }
+  .container-dresscode_mesa .dresscode {
+    width: 430px;
+    text-align: center;
+  }
+  .container-dresscode_mesa .dresscode h3 {
+    font-size: 30px;
+  }
+  .container-dresscode_mesa .dresscode .img-dresscode img {
+    width: 150px;
+  }
+  .container-dresscode_mesa .mesa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 20px;
+    width: 430px;
+    color: #3e4144;
+  }
+  .container-dresscode_mesa .mesa h3 {
+    font-family: "Tangerine", cursive;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo .imgLogo {
+    width: 200px;
+  }
+  .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo p {
+    font-family: georgia;
+    font-size: 20px;
+  }
+  .container-maps_conf {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 20px 5px;
+    padding: 15px 5px;
+  }
+  .container-maps_conf .maps {
+    width: 430px;
+  }
+  .container-maps_conf .maps .caja-maps {
+    width: 260px;
+  }
+  .container-maps_conf .confirmacion {
+    width: 430px;
+  }
+  .container-maps_conf .confirmacion p {
+    text-align: center;
+  }
+  .container-maps_conf .confirmacion .botones {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100px;
+  }
+}
 @media (max-width: 551px) {
   .inv-carousel .inv-img {
     height: 690px;
@@ -857,7 +1082,7 @@
   }
   .container-portada .portada-boda .body .img .marco {
     position: absolute;
-    right: 0;
+    right: -30px;
     width: 290px;
   }
   .container-inv {
@@ -1082,7 +1307,7 @@
   }
   .container-portada .portada-boda .body .img .marco {
     position: absolute;
-    right: 0;
+    right: -30px;
     width: 290px;
   }
   .container-inv {
@@ -1307,7 +1532,7 @@
   }
   .container-portada .portada-boda .body .img .marco {
     position: absolute;
-    right: 0;
+    right: -30px;
     width: 290px;
   }
   .container-inv {
@@ -1535,7 +1760,7 @@
   }
   .container-portada .portada-boda .body .img .marco {
     position: absolute;
-    right: 0;
+    right: -30px;
     width: 290px;
   }
   .container-inv {
@@ -1880,6 +2105,29 @@
     flex-wrap: wrap;
   }
 }
+.contenedor-miEvento {
+  margin-top: 100px;
+}
+.contenedor-miEvento .formularios {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.contenedor-miEvento .formularios .formulario {
+  width: 500px;
+  margin: 20px;
+}
+.contenedor-miEvento .formularios .formulario .titulo {
+  font-size: 30px;
+  font-family: "Abel", sans-serif;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.contenedor-miEvento .formularios .formulario .dato {
+  font-family: "Abel", sans-serif;
+  margin-bottom: 15px;
+}
+
 body {
   background: url("../multimedia/fondos/Invitandoo.svg");
   background-size: cover;

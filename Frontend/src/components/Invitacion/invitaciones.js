@@ -23,7 +23,6 @@ function Invitaciones() {
         const eventoResponse = await fetch(`https://nueva-invitandodb.onrender.com/evento/${eventoId}/invitado/${invitadoId}`);
         const eventoData = await eventoResponse.json();
         setEvento(eventoData);
-        console.log(eventoData)
       } catch (error) {
         console.log(error);
       }
@@ -37,7 +36,7 @@ function Invitaciones() {
   return (
     <div>
       {evento ? (
-        <div className='container-invitaciones' style={{ backgroundImage: `url(${evento.multimedia.fondo.imageURL})` }}>
+        <div className='container-invitaciones' style={{ backgroundImage: `url(${evento.multimedia.fondo.url})` }}>
 
           <AlertaConReproductor />
 
