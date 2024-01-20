@@ -73,9 +73,13 @@ function Invitaciones() {
             datos={evento.invitados}
           />
 
-          <Galeria 
-            foto={evento.multimedia.galeria}
-          />
+          {evento?.multimedia?.galeria && evento.multimedia.galeria.length > 0 && (
+            <Galeria 
+              foto={evento.multimedia.galeria}
+            />
+          )}
+
+          
     
           <Itinerario 
             datos={evento.itinerario}
