@@ -40,7 +40,7 @@ function Modal({ onClose }) {
         <div className={`reproductor alert-box ${minimized ? 'invisible' : ''}`}>
           <h3 className='title'>¡Dale play!</h3>
           <audio controls ref={audioRef} autoPlay>
-            <source src={evento.multimedia.cancion.audioURL} type="audio/mpeg" />
+            <source src={evento.multimedia.cancion.url} type="audio/mpeg" />
           </audio>
         </div>
         <button className='minimize-button' onClick={toggleMinimize}>

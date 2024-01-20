@@ -28,7 +28,7 @@ function Tarjeta() {
         evento.map((evento, index) => (
           <Link key={index} className='tarjeta-link' to={`/evento/${evento._id}/invitado/${evento.invitados[0]._id}`}>
             <div className="card tarjeta">
-              <img src={evento.multimedia.carousel[0].imageURL} className="card-img-top" alt="Evento" />
+              <img src={evento.multimedia.carousel[0].url} className="card-img-top portada" alt="Evento" />
               <div className="card-body descripcion">
                 <h5 className="titulo">{evento.datos.festejado}</h5>
                 <p className="texto">{evento.evento}</p>

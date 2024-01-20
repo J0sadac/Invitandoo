@@ -6,7 +6,7 @@ function Galeria({foto}) {
       <div className="carousel-inner">
         {foto.map((img, index) => (
           <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`} data-bs-interval="3500">
-            <img src={img.imageURL} className="d-block w-100 inv-img" alt={`Slide ${index + 1}`} />
+            <img src={img.url} className="d-block w-100 inv-img" alt={`Slide ${index + 1}`} />
           </div>
         ))}
       </div>

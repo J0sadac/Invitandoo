@@ -19,7 +19,7 @@ function Carousel({foto, frase}) {
       <div className="carousel-inner">
         {foto.map((imagen, index) => (
           <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-            <img src={imagen.imageURL} className="d-block w-100 inv-img" alt={`Slide ${index + 1}`} />
+            <img src={imagen.url} className="d-block w-100 inv-img" alt={`Slide ${index + 1}`} />
             <div className="carousel-caption d-md-block">
               <h5 className="inv-frase">{frase[index]}</h5>
             </div>

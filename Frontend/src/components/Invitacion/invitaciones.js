@@ -9,9 +9,9 @@ import Portada from './components/portada';
 import Invitacion from './components/invitacion';
 import Itinerario from './components/itinerario';
 import Dresscode from './components/dresscode';
-//import Padrinos from './components/padrinos';
+import Padrinos from './components/padrinos';
 import Galeria from './components/galeria';
-//import Padres from './components/padres';
+import Padres from './components/padres';
 
 import AlertaConReproductor from '../tools/cancion/alertaReproductor';
 
@@ -26,6 +26,7 @@ function Invitaciones() {
         const res = await axios.get(`https://nueva-invitandodb.onrender.com/evento/${eventoId}/invitado/${invitadoId}`);
       
         setEvento(res.data);
+
       }catch(err){
         console.log(err)
       }
@@ -34,7 +35,6 @@ function Invitaciones() {
     getInvitacion();
 
   },[eventoId, invitadoId])
-
 
   return (
     <div>
@@ -55,9 +55,16 @@ function Invitaciones() {
             novios={evento.datos.novios}
           />
 
-          {/* <Padres /> */}
+          {evento?.datos?.padres && (
+            <Padres 
+              padres={evento.datos.padres}
+            />
+          )}
 
-          {/* <Padrinos /> */}
+          {evento?.datos?.padrinos && evento.datos.padrinos.length > 0 && (
+            <Padrinos padrinos={evento.datos.padrinos} />
+          )}
+
     
           <Invitacion 
             fecha={evento.datos.fecha}

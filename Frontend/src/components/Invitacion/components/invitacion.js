@@ -94,10 +94,10 @@ function Invitacion({fecha, lugar, flor, datos}){
               </div>
             </div>
 
-            <img src={flor.imageURL} className="img-flor img-flor-tr" alt="..."/>
-            <img src={flor.imageURL} className="img-flor img-flor-tl" alt="..."/>
-            <img src={flor.imageURL} className="img-flor img-flor-br" alt="..."/>
-            <img src={flor.imageURL} className="img-flor img-flor-bl" alt="..."/>
+            <img src={flor.url} className="img-flor img-flor-tr" alt="..."/>
+            <img src={flor.url} className="img-flor img-flor-tl" alt="..."/>
+            <img src={flor.url} className="img-flor img-flor-br" alt="..."/>
+            <img src={flor.url} className="img-flor img-flor-bl" alt="..."/>
           </div>
 
           <div className="qr-container shadow">
