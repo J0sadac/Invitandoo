@@ -10,7 +10,7 @@ function Tarjeta() {
   useEffect(() => {
     async function fetchEvento() {
       try {
-        const eventoResponse = await fetch(`https://nueva-invitandodb.onrender.com/eventos`);
+        const eventoResponse = await fetch('https://nueva-invitandodb.onrender.com/eventos');
         const eventoData = await eventoResponse.json();
         setEvento(eventoData);
         console.log(eventoData)
@@ -37,8 +37,8 @@ function Tarjeta() {
           </Link>
         ))
       ) : (
-        <div>
-          Cargando...
+        <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
         </div>
       )}
     </div>

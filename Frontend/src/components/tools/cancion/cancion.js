@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 
 
-function ReproductorDeCancion({ cancionReproduciendose, setCancionReproduciendose }) {
+function ReproductorDeCancion() {
   const { eventoId, invitadoId } = useParams();
   const [evento, setEvento] = useState(null);
 

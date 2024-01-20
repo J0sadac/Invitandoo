@@ -1,27 +1,8 @@
-import {useEffect, useState} from 'react';
-import { useParams } from 'react-router-dom';
+import { useState } from "react";
 
-function Itinerario() {
-  const { eventoId, invitadoId } = useParams();
-  const [evento, setEvento] = useState(null);
+function Itinerario({datos}) {
+
   const [showExplanation, setShowExplanation] = useState([]);
-
-  useEffect(() => {
-    async function fetchEvento() {
-      try {
-        const eventoResponse = await fetch(`https://nueva-invitandodb.onrender.com/evento/${eventoId}/invitado/${invitadoId}`);
-        const eventoData = await eventoResponse.json();
-        setEvento(eventoData);
-
-        // Inicializar showExplanation con un array de 'false' de igual longitud que evento.itinerario
-        setShowExplanation(new Array(eventoData.itinerario.length).fill(false));
-      } catch (error) {
-        console.error('Error al recuperar datos del evento:', error);
-      }
-    }
-
-    fetchEvento();
-  }, [eventoId, invitadoId]);
 
   const toggleExplanation = (index) => {
     const updatedExplanation = [...showExplanation]; // Hace una copia del array de estados
@@ -30,11 +11,9 @@ function Itinerario() {
   };
 
   return (
-    <div>
-      {evento ? (
-        <div className='container-itinerario shadow'>
+    <div className='container-itinerario shadow'>
           <h3>Itinerario</h3>
-          {evento.itinerario.map((item, index) => (
+          {datos.map((item, index) => (
             <div className={`cont ${showExplanation[index] ? 'flip' : ''}`} key={index}>
               <div className={`itinerario shadow ${showExplanation[index] ? 'hidden' : ''}`}>
                 <img src={item.icono} alt='...' />
@@ -55,12 +34,6 @@ function Itinerario() {
               </button>
             </div>
           ))}
-        </div>
-      ) : (
-        <div className="spinner-border spin" role="status">
-            <span className="visually-hidden">Loading...</span>
-        </div>
-      )}
     </div>
   );
 };

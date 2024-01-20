@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 
+import axios from 'axios';
+
 //componentes
 import Carousel from './components/carousel';
 import Portada from './components/portada';
@@ -15,22 +17,23 @@ import AlertaConReproductor from '../tools/cancion/alertaReproductor';
 
 function Invitaciones() {
   const { eventoId, invitadoId } = useParams();
-  const [evento, setEvento] = useState(null);
+  const [evento, setEvento] = useState();
 
   useEffect(() => {
-    async function fetchEvento() {
-      try {
-        const eventoResponse = await fetch(`https://nueva-invitandodb.onrender.com/evento/${eventoId}/invitado/${invitadoId}`);
-        const eventoData = await eventoResponse.json();
-        setEvento(eventoData);
-      } catch (error) {
-        console.log(error);
+
+    const getInvitacion = async () => {
+      try{
+        const res = await axios.get(`https://nueva-invitandodb.onrender.com/evento/${eventoId}/invitado/${invitadoId}`);
+      
+        setEvento(res.data);
+      }catch(err){
+        console.log(err)
       }
-    }
+    };
 
-    fetchEvento();
-  }, [eventoId, invitadoId]);
+    getInvitacion();
 
+  },[eventoId, invitadoId])
 
 
   return (
@@ -40,21 +43,41 @@ function Invitaciones() {
 
           <AlertaConReproductor />
 
-          <Carousel />
+          <Carousel
+            foto={evento.multimedia.carousel} 
+            frase={evento.frases}
+          />
     
-          <Portada />
+          <Portada 
+            tipoDeEvento={evento.evento}
+            imgPortada={evento.multimedia.portada}
+            festejado={evento.datos.festejado}
+            novios={evento.datos.novios}
+          />
 
           {/* <Padres /> */}
 
           {/* <Padrinos /> */}
     
-          <Invitacion />
+          <Invitacion 
+            fecha={evento.datos.fecha}
+            lugar={evento.datos.lugar}
+            flor={evento.multimedia.flor}
+            datos={evento.invitados}
+          />
 
-          <Galeria />
+          <Galeria 
+            foto={evento.multimedia.galeria}
+          />
     
-          <Itinerario />
+          <Itinerario 
+            datos={evento.itinerario}
+          />
           
-          <Dresscode />
+          <Dresscode 
+            vestimenta={evento.vestimenta.mujer}
+            mesa={evento.mesaDeRegalos}
+          />
 
           
         </div>

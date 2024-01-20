@@ -1,12 +1,10 @@
 import {useEffect, useState} from 'react';
-import { useParams } from 'react-router-dom';
 
 //Dependencia para la generacion de codigos QR del codigo QR
 import QRCode from 'qrcode.react';
 
-function Invitacion(){
-  const [evento, setEvento] = useState();
-  const { eventoId, invitadoId } = useParams()
+function Invitacion({fecha, lugar, flor, datos}){
+
   const [timer, setTimer] = useState({
     days: '00',
     hours: '00',
@@ -15,13 +13,9 @@ function Invitacion(){
   });
 
   useEffect(() => {
-    async function fetchEvento() {
+    function timer() {
       try {
-        const eventoResponse = await fetch(`https://nueva-invitandodb.onrender.com/evento/${eventoId}/invitado/${invitadoId}`);
-        const eventoData = await eventoResponse.json();
-        setEvento(eventoData);
-
-        const deadline = new Date(eventoData.datos.fecha).getTime();
+        const deadline = new Date(fecha).getTime();
 
         const interval = setInterval(() => {
           const now = new Date().getTime();
@@ -56,22 +50,21 @@ function Invitacion(){
       }
     }
 
-    fetchEvento();
-  }, [eventoId, invitadoId]);
+    timer();
+  });
 
 
     return(
         <div className="container-inv shadow">
-          {evento ? (
-            <div className="date-container">
+          <div className="date-container">
             <div className="inv-date-container">
               <h3 className="inv-date">22 de diciembre del 2024</h3>
             </div>
 
             <div className="place-container">
-              <p>Salon {evento.datos.lugar.salon}</p>
-              <p>{evento.datos.lugar.address}</p>
-              <p>{evento.datos.lugar.ciudad}</p>
+              <p>Salon {lugar.salon}</p>
+              <p>{lugar.address}</p>
+              <p>{lugar.ciudad}</p>
             </div>
             
             <div className="time-container">
@@ -101,57 +94,44 @@ function Invitacion(){
               </div>
             </div>
 
-            <img src={evento.multimedia.flor.imageURL} className="img-flor img-flor-tr" alt="..."/>
-            <img src={evento.multimedia.flor.imageURL} className="img-flor img-flor-tl" alt="..."/>
-            <img src={evento.multimedia.flor.imageURL} className="img-flor img-flor-br" alt="..."/>
-            <img src={evento.multimedia.flor.imageURL} className="img-flor img-flor-bl" alt="..."/>
+            <img src={flor.imageURL} className="img-flor img-flor-tr" alt="..."/>
+            <img src={flor.imageURL} className="img-flor img-flor-tl" alt="..."/>
+            <img src={flor.imageURL} className="img-flor img-flor-br" alt="..."/>
+            <img src={flor.imageURL} className="img-flor img-flor-bl" alt="..."/>
           </div>
-          ) : (
-            <div className="spinner-border spin" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-          )}
 
-          {evento ? (
-            <div className="qr-container shadow">
+          <div className="qr-container shadow">
             <div className="nombre-inv">
               <h3>Invitado:</h3>
               <h3>
-                {evento.invitados.invitado}
+                {datos.invitado}
               </h3>
             </div>
 
             <div className='num-mesa'>
               <p>
-                Mesa: {evento.invitados.mesa}
+                Mesa: {datos.mesa}
               </p>
             </div>
 
             <div className='num-mesa'>
               <p>
-                Pase para {evento.invitados.pase}
+                Pase para {datos.pase}
               </p>
             </div>
           
             <div className='img-qr'>
               <QRCode value={
-                "Invitado: " + evento.invitados.invitado + 
-                "\nMesa: " + evento.invitados.mesa + 
-                "\nPase para " + evento.invitados.pase
+                "Invitado: " + datos.invitado + 
+                "\nMesa: " + datos.mesa + 
+                "\nPase para " + datos.pase
               }/>
             </div>
           
             <div className="anuncio">
               <p>No olvides guardar tu codigo QR ¡Sera muy importante para tu recepcion!</p>
             </div>
-          </div>
-          ) : (
-            <div className="spinner-border spin" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-          )}
-          
-              
+          </div>    
         </div>
     )
 };
