@@ -1,5 +1,5 @@
-import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
+import {useEffect, useState} from 'react';
 
 import axios from 'axios';
 
@@ -16,7 +16,7 @@ import Padres from './components/padres';
 import AlertaConReproductor from '../tools/cancion/alertaReproductor';
 
 function Invitaciones() {
-  const { eventoId, invitadoId } = useParams();
+  const {eventoId, invitadoId} = useParams();
   const [evento, setEvento] = useState();
 
   useEffect(() => {
@@ -35,6 +35,8 @@ function Invitaciones() {
     getInvitacion();
 
   },[eventoId, invitadoId])
+
+  console.log(evento)
 
   return (
     <div>
@@ -94,7 +96,7 @@ function Invitaciones() {
         </div>
       ):(
         <div className='loading'>
-          <p>Cargando</p>
+          <p>Cargando invitación</p>
 
           <div className="spinner-border spin" role="status">
             <span className="visually-hidden">Loading...</span>

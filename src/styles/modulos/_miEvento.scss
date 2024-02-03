@@ -16,7 +16,7 @@ $font-second: 'Abel', sans-serif;
         .formulario{
             width: 500px;
 
-            margin: 20px;            
+            margin: 0 20px;            
 
             .titulo{
                 font-size: 30px;
@@ -32,6 +32,36 @@ $font-second: 'Abel', sans-serif;
                 margin-bottom: 15px;
             }
         }
+    }
+}
+
+.contenedor-editarEvento{
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .formulario{
+        width: 400px;
+        height: 600px;
+
+        background-color: lightcoral;
+    }
+
+    .invitacion{
+        width: 400px;
+        height: 600px;
+
+        margin: 20px;
+
+    }
+
+    .datos{
+        width: 400px;
+        height: 600px;
+
+        background-color: lightblue;
     }
 }
 

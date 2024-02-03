@@ -6,7 +6,7 @@ function Portada({tipoDeEvento, imgPortada, festejado, novios}){
       <div className='container-portada shadow'>
       {tipoDeEvento === 'XV Años' ? (
         <div className='portada-xv'>
-              <div className='nombre-evento'>
+              <div className='evento'>
                 <h4 className='te-invito'>Te invito a</h4>
                 <div className='mis'>
                   <h4>mis</h4>
@@ -14,7 +14,7 @@ function Portada({tipoDeEvento, imgPortada, festejado, novios}){
                   <h4 className='anios'>años</h4>
                 </div>
               </div>
-              <div>
+              <div className='festejada'>
                 <div className='img-portada shadow'>
                   <img src={imgPortada[0].url} alt='...' />
                   <img src={marco} className='img-superpuesta' alt='...' />

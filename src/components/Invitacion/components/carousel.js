@@ -1,7 +1,7 @@
 function Carousel({foto, frase}) {
 
   return (
-    <div id="carouselExampleAutoplaying" className="carousel carousel-fade slide inv-carousel" data-bs-ride="carousel">
+    <div id="carouselExampleAutoplaying" className="carousel carousel-fade slide carousel-container" data-bs-ride="carousel">
       <div className="carousel-indicators">
         {foto.map((imagen, index) => (
           <button

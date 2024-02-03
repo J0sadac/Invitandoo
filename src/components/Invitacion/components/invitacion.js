@@ -55,7 +55,7 @@ function Invitacion({fecha, lugar, flor, datos}){
 
 
     return(
-        <div className="container-inv shadow">
+        <div className="container-invitacion shadow">
           <div className="date-container">
             <div className="inv-date-container">
               <h3 className="inv-date">22 de diciembre del 2024</h3>
@@ -69,28 +69,28 @@ function Invitacion({fecha, lugar, flor, datos}){
             
             <div className="time-container">
               <div className="time shadow">
-                <p className="regresivo">
+                <h3 className="regresivo">
                 {timer.days}
-                </p>
-                <p className="times">DIAS</p>
+                </h3>
+                <h3 className="times">DIAS</h3>
               </div>
               <div className="time shadow">
-                <p className="regresivo">
+                <h3 className="regresivo">
                 {timer.hours}
-                </p>
-                <p className="times">HRS</p>
+                </h3>
+                <h3 className="times">HRS</h3>
               </div>
               <div className="time shadow">
-                <p className="regresivo">
+                <h3 className="regresivo">
                 {timer.minutes}
-                </p>
-                <p className="times">MNS</p>
+                </h3>
+                <h3 className="times">MNS</h3>
               </div>
               <div className="time shadow">
-                <p className="regresivo">
+                <h3 className="regresivo">
                   {timer.seconds}
-                </p>
-                <p className="times">SEG</p>
+                </h3>
+                <h3 className="times">SEG</h3>
               </div>
             </div>
 
@@ -103,7 +103,7 @@ function Invitacion({fecha, lugar, flor, datos}){
           <div className="qr-container shadow">
             <div className="nombre-inv">
               <h3>Invitado:</h3>
-              <h3>
+              <h3 className='nombre'>
                 {datos.invitado}
               </h3>
             </div>

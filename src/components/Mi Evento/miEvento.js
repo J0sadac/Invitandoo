@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FormularioDatos from './components/datos';
+import FormularioDatos from './components/iniciarEvento';
 
 const MiEvento = function(){
 

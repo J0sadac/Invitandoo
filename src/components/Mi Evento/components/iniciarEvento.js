@@ -77,7 +77,6 @@ const FormularioDatos = function(){
                         type='datetime-local'
                         className='form-control'
                         placeholder='Selecciona el dia del evento'
-                        required
                         name='fecha'
                         value={eventoNuevo.fecha}
                         onChange={capturarDatos}
@@ -105,7 +104,6 @@ const FormularioDatos = function(){
                         type='text'
                         className='form-control'
                         placeholder='ingresa la direccion del salon'
-                        required
                         name='direccion'
                         value={eventoNuevo.direccion}
                         onChange={capturarDatos}

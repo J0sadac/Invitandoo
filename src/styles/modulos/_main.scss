@@ -1,0 +1,109 @@
+//Variables
+$color-main: #212529;
+$color-second: #3e4144;
+$color-font: #3e4144;
+$color-carousel: #ffff;
+$font-main: 'Tangerine', cursive;
+$font-second: 'Abel', sans-serif;
+
+.contenedor-main{
+
+    .contenedor-tarjeta{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        margin-top: 100px;
+    
+        .tarjeta-link{
+            text-decoration: none;
+    
+            margin-right: 40px;
+    
+            .portada{
+                height: 200px;
+    
+                object-fit: cover;
+    
+            }
+    
+            .tarjeta{
+                width: 250px;
+        
+                .descripcion{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+        
+                    .titulo{
+                        text-align: center;
+                        font-family: $font-main;
+                        font-size: 30px;
+                        font-weight: 600;
+        
+                        color: $color-font;
+                    }
+        
+                    .contenedor{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        .texto{
+                            font-family: $font-second;
+                            font-size: 20px;
+                        }
+
+                        .editar{
+                            background-color: #fff7eb;
+
+                            height: 40px;
+                            width: 40px;
+                            
+                            svg{
+                                margin-top: -5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:769px){
+    
+}
+
+@media (max-width:551px){
+    .contenedor-main{
+
+        .contenedor-tarjeta{
+
+            .tarjeta-link{
+                margin-right: 0px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width:426px){
+    
+}
+
+@media (max-width:376px){
+    
+}
+
+@media (max-width:321px){
+
+    .menu-eventos{
+        width: 100%;
+
+        h3{
+            font-size: 30px;
+        }
+    }
+}

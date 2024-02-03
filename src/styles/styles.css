@@ -1,0 +1,1212 @@
+@charset "UTF-8";
+.contenedor-navbar {
+  background-color: #170000 !important;
+}
+.contenedor-navbar .titulo-link {
+  text-decoration: none;
+  color: white;
+  margin-top: 7px;
+}
+.contenedor-navbar .titulo-link .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+}
+.contenedor-navbar .links {
+  font-family: "Abel", sans-serif;
+  color: white;
+}
+
+.contenedor-main .contenedor-tarjeta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link {
+  text-decoration: none;
+  margin-right: 40px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .portada {
+  height: 200px;
+  object-fit: cover;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta {
+  width: 250px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .titulo {
+  text-align: center;
+  font-family: "Tangerine", cursive;
+  font-size: 30px;
+  font-weight: 600;
+  color: #3e4144;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .texto {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .editar {
+  background-color: #fff7eb;
+  height: 40px;
+  width: 40px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .editar svg {
+  margin-top: -5px;
+}
+
+@media (max-width: 551px) {
+  .contenedor-main .contenedor-tarjeta .tarjeta-link {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 321px) {
+  .menu-eventos {
+    width: 100%;
+  }
+  .menu-eventos h3 {
+    font-size: 30px;
+  }
+}
+.container-invitaciones {
+  background-size: contain;
+}
+.container-invitaciones .carousel-container {
+  margin-top: 30px;
+}
+.container-invitaciones .carousel-container .inv-img {
+  height: 710px;
+  object-fit: cover;
+}
+.container-invitaciones .carousel-container .inv-frase {
+  color: white;
+  font-family: "Tangerine", cursive;
+  font-size: 38px;
+  font-weight: 600;
+}
+.container-invitaciones .carousel-container .frase3 {
+  color: #fff;
+}
+.container-invitaciones .container-portada {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px 20px;
+  padding: 40px;
+  color: rgb(160, 124, 31);
+}
+.container-invitaciones .container-portada .portada-xv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 430px;
+  width: 80%;
+}
+.container-invitaciones .container-portada .portada-xv .evento {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.container-invitaciones .container-portada .portada-xv .evento .te-invito {
+  font-family: "Tangerine", cursive;
+  font-weight: 600;
+  font-size: 45px;
+}
+.container-invitaciones .container-portada .portada-xv .evento .mis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-invitaciones .container-portada .portada-xv .evento .mis h4 {
+  margin: -10px 0px;
+  font-family: "Tangerine", cursive;
+  font-weight: 600;
+  font-size: 40px;
+}
+.container-invitaciones .container-portada .portada-xv .evento .mis h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 600;
+  padding: 0px;
+  margin: 0px;
+}
+.container-invitaciones .container-portada .portada-xv .evento .mis .anios {
+  margin-top: -20px;
+}
+.container-invitaciones .container-portada .portada-xv .festejada {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container-invitaciones .container-portada .portada-xv .festejada .img-portada {
+  border-radius: 50%;
+  width: 272px;
+  height: 272px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container-invitaciones .container-portada .portada-xv .festejada .img-portada img {
+  width: 265px;
+  border-radius: 50%;
+}
+.container-invitaciones .container-portada .portada-xv .festejada .img-portada .img-superpuesta {
+  position: absolute;
+  width: 330px; /* Ajusta el ancho según sea necesario */
+  height: 330px; /* Ajusta la altura según sea necesario */
+}
+.container-invitaciones .container-portada .portada-xv .festejada .nombre-portada {
+  text-align: center;
+}
+.container-invitaciones .container-portada .portada-xv .festejada .nombre-portada p {
+  font-size: 45px;
+  font-family: "Tangerine", cursive;
+  font-weight: 600;
+}
+.container-invitaciones .container-portada .portada-boda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+.container-invitaciones .container-portada .portada-boda .head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-invitaciones .container-portada .portada-boda .head .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+}
+.container-invitaciones .container-portada .portada-boda .head .subtitulo {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 600;
+}
+.container-invitaciones .container-portada .portada-boda .body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+}
+.container-invitaciones .container-portada .portada-boda .body .img {
+  position: relative;
+}
+.container-invitaciones .container-portada .portada-boda .body .img img {
+  width: 250px;
+  border-radius: 50%;
+}
+.container-invitaciones .container-portada .portada-boda .body .img .marco {
+  position: absolute;
+  right: -35px;
+  top: -35px;
+  width: 330px;
+}
+.container-invitaciones .container-portada .portada-boda .body .nombres {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 40%;
+}
+.container-invitaciones .container-portada .portada-boda .body .nombres p {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 600;
+}
+.container-invitaciones .container-invitacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px 20px;
+  color: #3e4144;
+}
+.container-invitaciones .container-invitacion .date-container {
+  margin: 50px 0px;
+  padding: 50px 20px;
+  width: 65%;
+  height: 550px;
+  font-family: "Abel", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.container-invitaciones .container-invitacion .date-container .inv-date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container-invitaciones .container-invitacion .date-container .inv-date-container .inv-date {
+  font-family: "Tangerine", cursive;
+  font-size: 70px;
+  font-weight: 600;
+}
+.container-invitaciones .container-invitacion .date-container .place-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-invitaciones .container-invitacion .date-container .place-container p {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+.container-invitaciones .container-invitacion .date-container .time-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  width: 75%;
+}
+.container-invitaciones .container-invitacion .date-container .time-container .time {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container-invitaciones .container-invitacion .date-container .time-container .time .regresivo {
+  font-family: "Abel", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  width: 100%;
+}
+.container-invitaciones .container-invitacion .date-container .time-container .time .times {
+  font-size: 15px;
+}
+.container-invitaciones .container-invitacion .date-container .img-flor-tr {
+  width: 190px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+  transform: rotate(180deg);
+}
+.container-invitaciones .container-invitacion .date-container .img-flor-tl {
+  width: 190px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleY(-1);
+}
+.container-invitaciones .container-invitacion .date-container .img-flor-br {
+  width: 190px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: scaleX(-1);
+}
+.container-invitaciones .container-invitacion .date-container .img-flor-bl {
+  width: 190px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.container-invitaciones .container-invitacion .qr-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 25%;
+  height: 540px;
+  padding: 40px 20px;
+  margin-bottom: 20px;
+  color: #3e4144;
+}
+.container-invitaciones .container-invitacion .qr-container .img-qr {
+  width: 180px;
+  height: 180px;
+  background-color: white;
+  padding: 25px 15px 15px;
+  border-radius: 10px;
+}
+.container-invitaciones .container-invitacion .qr-container .nombre-inv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Tangerine", cursive;
+}
+.container-invitaciones .container-invitacion .qr-container .nombre-inv h3 {
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-invitacion .qr-container .num-mesa {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+.container-invitaciones .container-invitacion .qr-container .num-mesa p {
+  font-size: 25px;
+  font-weight: 600;
+}
+.container-invitaciones .container-invitacion .qr-container .anuncio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+}
+.container-invitaciones .container-reproductor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 20px;
+  padding: 30px;
+  height: 220px;
+}
+.container-invitaciones .container-reproductor .reproductor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-invitaciones .container-reproductor .reproductor .title {
+  font-size: 30px;
+  font-family: "Abel", sans-serif;
+  text-align: center;
+  color: #3e4144;
+}
+.container-invitaciones .container-reproductor .reproductor audio {
+  width: 280px;
+}
+.container-invitaciones .alerta-reproductor {
+  flex-direction: row;
+  padding: 30px;
+  height: 220px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-invitaciones .alerta-reproductor .alert-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container-invitaciones .alerta-reproductor .reproductor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 250px;
+}
+.container-invitaciones .alerta-reproductor .reproductor .title {
+  font-size: 30px;
+  font-family: "Abel", sans-serif;
+  text-align: center;
+  color: #3e4144;
+}
+.container-invitaciones .alerta-reproductor .reproductor audio {
+  width: 280px;
+}
+.container-invitaciones .alerta-reproductor .reproductor .boton-cerrar {
+  margin-top: 10px;
+  padding: 5px;
+  color: #fff;
+  background-color: #3e4144;
+  border-color: #3e4144;
+  border-radius: 10px;
+  border-style: solid;
+}
+.container-invitaciones .minimized {
+  width: 50px;
+  height: 50px;
+  box-shadow: none;
+}
+.container-invitaciones .minimize-button {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 8px;
+  font-family: "Abel", sans-serif;
+}
+.container-invitaciones .container-itinerario {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px 20px;
+  padding: 30px;
+  color: #3e4144;
+}
+.container-invitaciones .container-itinerario h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-itinerario .cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  font-family: "Abel", sans-serif;
+  transition: transform 0.5s, visibility 0s 0.5s;
+}
+.container-invitaciones .container-itinerario .cont .itinerario {
+  width: 20%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container-invitaciones .container-itinerario .cont .itinerario img {
+  width: 50px;
+}
+.container-invitaciones .container-itinerario .cont .itinerario p {
+  font-size: 22px;
+}
+.container-invitaciones .container-itinerario .cont .itinerario div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-invitaciones .container-itinerario .cont .itinerario div p {
+  font-size: 23px;
+  font-weight: 600;
+}
+.container-invitaciones .container-itinerario .cont .direccion {
+  display: none;
+  transform: rotateY(-180deg);
+  width: 20%;
+  height: 350px;
+  margin-bottom: 20px;
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+.container-invitaciones .container-itinerario .cont .direccion h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-itinerario .cont .direccion p {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+.container-invitaciones .container-itinerario .cont .hidden {
+  display: none;
+}
+.container-invitaciones .container-itinerario .cont .visible {
+  display: block;
+}
+.container-invitaciones .container-itinerario .cont .explicacion-button {
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 8px;
+  font-family: "Abel", sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.container-invitaciones .container-itinerario .cont .explicacion-button:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+.container-invitaciones .container-itinerario .flip {
+  transform: rotateY(180deg);
+}
+.container-invitaciones .container-itinerario .cont.flip .direccion {
+  display: block;
+}
+.container-invitaciones .container-padres {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 30px;
+  margin: 50px 20px;
+  text-align: center;
+}
+.container-invitaciones .container-padres .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.container-invitaciones .container-padres .contenido .title {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 700;
+}
+.container-invitaciones .container-padres .contenido .padres {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 15px;
+  text-align: center;
+  font-family: "Abel", sans-serif;
+  font-size: 25px;
+}
+.container-invitaciones .container-padrinos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px 20px;
+  padding: 30px;
+}
+.container-invitaciones .container-padrinos .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.container-invitaciones .container-padrinos .contenido .title {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 600;
+}
+.container-invitaciones .container-padrinos .contenido div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container-invitaciones .container-padrinos .contenido div .padrinoDe {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin: 15px;
+  height: 30%;
+  width: 90%;
+}
+.container-invitaciones .container-padrinos .contenido div .padrinoDe .de {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-padrinos .contenido div .padrinoDe .padrino {
+  font-family: "Abel", sans-serif;
+  font-size: 25px;
+}
+.container-invitaciones .container-dresscode_mesa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 30px;
+  margin: 20px;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 45%;
+  color: #3e4144;
+  text-align: center;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode div div .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 600;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode div div p {
+  font-family: "Abel", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode .img-dresscode img {
+  width: 300px;
+  margin: 10px;
+}
+.container-invitaciones .container-dresscode_mesa .mesa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 45%;
+  color: #3e4144;
+  transition: transform 0.5s, visibility 0s 0.5s;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .mesaDeRegalos h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo .imgLogo {
+  width: 450px;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo p {
+  font-family: georgia;
+  font-size: 20px;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .explicacion {
+  display: none;
+  transform: rotateY(-180deg);
+  text-align: center;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .explicacion h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .explicacion p {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .hidden {
+  display: none;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .visible {
+  display: block;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .explicacion-button {
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 8px;
+  font-family: "Abel", sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .explicacion-button:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+.container-invitaciones .container-dresscode_mesa .flip {
+  transform: rotateY(180deg);
+}
+.container-invitaciones .container-dresscode_mesa .mesa.flip .explicacion {
+  display: block;
+}
+.container-invitaciones .container-maps_conf {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #3e4144;
+  margin: 50px 20px;
+  padding: 40px;
+}
+.container-invitaciones .container-maps_conf .confirmacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30%;
+  height: 300px;
+}
+.container-invitaciones .container-maps_conf .confirmacion .title {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 600;
+}
+.container-invitaciones .container-maps_conf .confirmacion .botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 70%;
+  font-family: "Abel", sans-serif;
+}
+.container-invitaciones .container-maps_conf .confirmacion .botones .si {
+  background-color: lightgreen;
+  border: 1px solid lightgreen;
+  border-radius: 5px;
+  width: 75px;
+  height: 40px;
+  color: black;
+}
+.container-invitaciones .container-maps_conf .confirmacion .botones .no {
+  background-color: lightcoral;
+  border: 1px solid lightcoral;
+  border-radius: 5px;
+  width: 75px;
+  height: 40px;
+  color: black;
+}
+.container-invitaciones .container-maps_conf .maps {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px;
+  width: 30%;
+  height: 350px;
+}
+.container-invitaciones .container-maps_conf .maps p {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 600;
+}
+.container-invitaciones .container-maps_conf .maps .caja-maps {
+  width: 350px;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container-invitaciones .container-maps_conf .maps .caja-maps .img-googlemaps {
+  width: 300px;
+}
+
+@media (max-width: 769px) {
+  .container-invitaciones .container-portada .portada-boda .body {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .container-invitaciones .container-portada .portada-boda .body .nombres {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .container-invitaciones .container-portada .portada-boda .body .nombres p {
+    margin-right: 18px;
+  }
+  .container-invitaciones .container-invitacion {
+    flex-direction: column;
+  }
+  .container-invitaciones .container-invitacion .date-container {
+    width: 100%;
+  }
+  .container-invitaciones .container-invitacion .qr-container {
+    width: 90%;
+  }
+  .container-invitaciones .container-invitacion .qr-container .nombre-inv {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
+  }
+  .container-invitaciones .container-invitacion .qr-container .nombre-inv h3 {
+    font-size: 48px;
+    font-weight: 600;
+  }
+  .container-invitaciones .container-invitacion .qr-container .num-mesa p {
+    font-size: 28px;
+  }
+  .container-invitaciones .container-invitacion .qr-container .anuncio p {
+    font-size: 20px;
+  }
+  .container-invitaciones .container-itinerario .cont .itinerario {
+    width: 70%;
+  }
+  .container-invitaciones .container-itinerario .cont .direccion {
+    width: 70%;
+  }
+  .container-invitaciones .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo .imgLogo {
+    width: 240px;
+  }
+}
+@media (max-width: 721px) {
+  .container-invitaciones .container-invitacion .qr-container .nombre-inv {
+    flex-direction: column;
+  }
+  .container-invitaciones .container-portada .portada-xv {
+    width: 90%;
+  }
+}
+@media (max-width: 661px) {
+  .container-invitaciones .container-portada .portada-xv {
+    height: 560px;
+  }
+  .container-invitaciones .container-portada .portada-xv .festejada {
+    flex-wrap: wrap;
+  }
+  .container-invitaciones .container-itinerario .cont .itinerario {
+    width: 90%;
+  }
+  .container-invitaciones .container-itinerario .cont .direccion {
+    width: 90%;
+  }
+  .container-invitaciones .container-dresscode_mesa {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .container-invitaciones .container-dresscode_mesa .dresscode {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .container-invitaciones .container-dresscode_mesa .mesa {
+    width: 90%;
+  }
+}
+@media (max-width: 561px) {
+  .container-invitaciones .container-invitacion .date-container {
+    justify-content: space-evenly;
+  }
+  .container-invitaciones .container-invitacion .qr-container .nombre-inv h3 {
+    font-size: 42px;
+  }
+  .container-invitaciones .container-invitacion .qr-container .num-mesa p {
+    font-size: 24px;
+  }
+  .container-invitaciones .container-invitacion .qr-container .anuncio p {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  .container-invitaciones .container-portada .portada-boda .body {
+    margin: 25px 10px;
+  }
+  .container-invitaciones .container-portada .portada-boda .body .nombres {
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 5px;
+  }
+  .container-invitaciones .container-portada .portada-boda .body .nombres p {
+    margin-bottom: -15px;
+  }
+}
+@media (max-width: 472px) {
+  .container-invitaciones .container-invitacion .date-container {
+    height: 700px;
+  }
+  .container-invitaciones .container-invitacion .date-container .inv-date-container {
+    margin-top: 25px;
+  }
+  .container-invitaciones .container-invitacion .date-container .inv-date-container .inv-date {
+    font-size: 50px;
+  }
+  .container-invitaciones .container-invitacion .date-container .time-container {
+    flex-wrap: wrap;
+  }
+  .container-invitaciones .container-invitacion .date-container .time-container .time .regresivo {
+    font-size: 30px;
+  }
+  .container-invitaciones .container-invitacion .qr-container {
+    height: 560px;
+  }
+  .container-invitaciones .container-portada .portada-xv {
+    height: 630px;
+  }
+  .container-invitaciones .container-dresscode_mesa {
+    padding: 10px;
+  }
+  .container-invitaciones .container-dresscode_mesa .dresscode {
+    padding: 10px;
+  }
+  .container-invitaciones .container-dresscode_mesa .mesa {
+    padding: 10px;
+  }
+}
+.container-confirmaciones {
+  height: 100%;
+  margin: 25px 10px;
+}
+.container-confirmaciones .mesa {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  margin-top: 70px;
+  padding: 15px;
+  color: #fafbfd;
+}
+.container-confirmaciones .mesa .title-mesa {
+  font-family: "Abel", sans-serif;
+  margin: 5px;
+}
+.container-confirmaciones .mesa .invitado {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Abel", sans-serif;
+  height: 100%;
+  width: 30%;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.container-confirmaciones .mesa .invitado .nombre-inv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container-confirmaciones .mesa .invitado .nombre-inv p {
+  margin: 0px 4px;
+}
+
+@media (max-width: 551px) {
+  .container-confirmaciones {
+    height: 100%;
+    margin: 25px 10px;
+  }
+  .container-confirmaciones .mesa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    margin-top: 70px;
+    color: #fafbfd;
+  }
+  .container-confirmaciones .mesa .title-mesa {
+    margin: 15px 0px;
+  }
+  .container-confirmaciones .mesa .invitado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-confirmaciones .mesa .invitado .nombre-inv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 426px) {
+  .container-confirmaciones {
+    height: 100%;
+    margin: 25px 10px;
+  }
+  .container-confirmaciones .mesa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    margin-top: 70px;
+    color: #fafbfd;
+  }
+  .container-confirmaciones .mesa .title-mesa {
+    margin: 15px 0px;
+  }
+  .container-confirmaciones .mesa .invitado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-confirmaciones .mesa .invitado .nombre-inv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 376px) {
+  .container-confirmaciones {
+    height: 100%;
+    margin: 25px 10px;
+  }
+  .container-confirmaciones .mesa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    margin-top: 70px;
+    color: #fafbfd;
+  }
+  .container-confirmaciones .mesa .title-mesa {
+    margin: 15px 0px;
+  }
+  .container-confirmaciones .mesa .invitado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-confirmaciones .mesa .invitado .nombre-inv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 321px) {
+  .container-confirmaciones {
+    height: 100%;
+    margin: 25px 10px;
+  }
+  .container-confirmaciones .mesa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    margin-top: 70px;
+    color: #fafbfd;
+  }
+  .container-confirmaciones .mesa .title-mesa {
+    margin: 15px 0px;
+  }
+  .container-confirmaciones .mesa .invitado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-confirmaciones .mesa .invitado .nombre-inv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+.contenedor-miEvento {
+  margin-top: 100px;
+}
+.contenedor-miEvento .formularios {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.contenedor-miEvento .formularios .formulario {
+  width: 500px;
+  margin: 0 20px;
+}
+.contenedor-miEvento .formularios .formulario .titulo {
+  font-size: 30px;
+  font-family: "Abel", sans-serif;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.contenedor-miEvento .formularios .formulario .dato {
+  font-family: "Abel", sans-serif;
+  margin-bottom: 15px;
+}
+
+.contenedor-editarEvento {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.contenedor-editarEvento .formulario {
+  width: 400px;
+  height: 600px;
+  background-color: lightcoral;
+}
+.contenedor-editarEvento .invitacion {
+  width: 400px;
+  height: 600px;
+  margin: 20px;
+}
+.contenedor-editarEvento .datos {
+  width: 400px;
+  height: 600px;
+  background-color: lightblue;
+}
+
+body {
+  background: url("../multimedia/fondos/Invitandoo.svg");
+  background-size: cover;
+}
+body .loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  padding: 150px 20px 290px;
+  background: url("../multimedia/fondos/background.jpg");
+  background-size: cover;
+  color: #3e4144;
+}
+body .loading p {
+  font-family: "Abel", sans-serif;
+  font-size: 28px;
+  margin: 0px;
+}
+body .loading .spin {
+  width: 120px;
+  height: 120px;
+  border-width: 7px;
+}
+
+/*# sourceMappingURL=styles.css.map */

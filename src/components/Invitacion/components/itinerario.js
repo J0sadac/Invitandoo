@@ -24,7 +24,7 @@ function Itinerario({datos}) {
                 </div>
               </div>
 
-              <div className={`direccion ${showExplanation[index] ? 'visible' : ''}`}>
+              <div className={`direccion shadow ${showExplanation[index] ? 'visible' : ''}`}>
                 <h3>Direccion</h3>
                 <p> {item.direccion} </p>
               </div>
