@@ -50,12 +50,14 @@ function Invitaciones() {
             frase={evento.frases}
           />
     
-          <Portada 
-            tipoDeEvento={evento.evento}
-            imgPortada={evento.multimedia.portada}
-            festejado={evento.datos.festejado}
-            novios={evento.datos.novios}
-          />
+          {evento?.multimedia?.portada && evento.multimedia.portada.length > 0 &&(
+            <Portada 
+              tipoDeEvento={evento.evento}
+              imgPortada={evento.multimedia.portada}
+              festejado={evento.datos.festejado}
+              novios={evento.datos.novios}
+            />
+          )}
 
           {evento?.datos?.padres && (
             <Padres 
@@ -83,9 +85,11 @@ function Invitaciones() {
 
           
     
-          <Itinerario 
+          {evento?.itinerario && (
+            <Itinerario 
             datos={evento.itinerario}
           />
+          )}
           
           <Dresscode 
             vestimenta={evento.vestimenta.mujer}
