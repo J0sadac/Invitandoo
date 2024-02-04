@@ -37,8 +37,10 @@ $font-second: 'Abel', sans-serif;
         flex-wrap: wrap;
         
         margin: 50px 20px;
-        padding: 40px;
-    
+        padding: 20px;
+
+        text-align: center;
+
         color: rgb(160, 124, 31);
     
         .portada-xv{
@@ -635,22 +637,36 @@ $font-second: 'Abel', sans-serif;
             flex-direction: column;
             justify-content: space-evenly;
     
-            .title{
-                font-family: $font-main;
-                font-size: 45px;
-                font-weight: 700;
+            .novio{
+                margin-bottom: 35px;
+
+                //color: rgb(139, 138, 138);
+
+                .title{
+                    font-family: $font-main;
+                    font-size: 45px;
+                    font-weight: 700;
+
+                    margin: 0;
+                }
+
+                .padres{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+        
+                    padding: 15px;
+        
+                    text-align: center;
+                    font-family: $font-second;
+                    font-size: 25px;
+                }
             }
-    
-            .padres{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-    
-                padding: 15px;
-    
-                text-align: center;
-                font-family: $font-second;
-                font-size: 25px;
+
+            .mensaje{
+                p{
+                    font-family: $font-second;
+                }
             }
         }
     
@@ -1180,6 +1196,24 @@ $font-second: 'Abel', sans-serif;
                         }
                     }
                 }
+            }
+        }
+
+        .container-maps_conf{
+            flex-direction: column;
+
+            .maps{
+                width: 100%;
+
+                .caja-maps{
+                    .img-googlemaps{
+                        width: 270px;
+                    }
+                }
+            }
+
+            .confirmacion{
+                width: 100%;
             }
         }
     } 

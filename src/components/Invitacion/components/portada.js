@@ -32,19 +32,23 @@ function Portada({tipoDeEvento, imgPortada, festejado, novios}){
             <h4 className='subtitulo'>{tipoDeEvento}</h4>
           </div>
           <div className='body'>
-            <div className='img'>
-              <img src={imgPortada[0].url} alt='novia' />
-              <img src={marco} className='marco' alt='...' />
-            </div>
+            {imgPortada?.url && imgPortada.length > 0 (
+              <div className='img'>
+                <img src={imgPortada[0].url} alt='novia' />
+                <img src={marco} className='marco' alt='...' />
+              </div>
+            )}
             <div className='nombres'>
-              <p>{novios.novia}</p>
-              <p>&</p>
               <p>{novios.novio}</p>
+              <p>&</p>
+              <p>{novios.novia}</p>
             </div>
-            <div className='img'>
-              <img src={imgPortada[1].url} alt='novio' />
-              <img src={marco} className='marco' alt='...' />
-            </div>
+            {imgPortada?.url && imgPortada.length > 0 (
+              <div className='img'>
+                <img src={imgPortada[0].url} alt='novia' />
+                <img src={marco} className='marco' alt='...' />
+              </div>
+            )}
           </div>
         </div>
       ) : tipoDeEvento === 'Cumpleaños' ? (

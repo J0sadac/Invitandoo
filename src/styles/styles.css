@@ -104,7 +104,8 @@
   align-items: center;
   flex-wrap: wrap;
   margin: 50px 20px;
-  padding: 40px;
+  padding: 20px;
+  text-align: center;
   color: rgb(160, 124, 31);
 }
 .container-invitaciones .container-portada .portada-xv {
@@ -563,12 +564,16 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
-.container-invitaciones .container-padres .contenido .title {
+.container-invitaciones .container-padres .contenido .novio {
+  margin-bottom: 35px;
+}
+.container-invitaciones .container-padres .contenido .novio .title {
   font-family: "Tangerine", cursive;
   font-size: 45px;
   font-weight: 700;
+  margin: 0;
 }
-.container-invitaciones .container-padres .contenido .padres {
+.container-invitaciones .container-padres .contenido .novio .padres {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -576,6 +581,9 @@
   text-align: center;
   font-family: "Abel", sans-serif;
   font-size: 25px;
+}
+.container-invitaciones .container-padres .contenido .mensaje p {
+  font-family: "Abel", sans-serif;
 }
 .container-invitaciones .container-padrinos {
   display: flex;
@@ -921,6 +929,18 @@
   }
   .container-invitaciones .container-portada .portada-boda .body .nombres p {
     margin-bottom: -15px;
+  }
+  .container-invitaciones .container-maps_conf {
+    flex-direction: column;
+  }
+  .container-invitaciones .container-maps_conf .maps {
+    width: 100%;
+  }
+  .container-invitaciones .container-maps_conf .maps .caja-maps .img-googlemaps {
+    width: 270px;
+  }
+  .container-invitaciones .container-maps_conf .confirmacion {
+    width: 100%;
   }
 }
 @media (max-width: 472px) {

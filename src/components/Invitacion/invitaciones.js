@@ -12,6 +12,7 @@ import Dresscode from './components/dresscode';
 import Padrinos from './components/padrinos';
 import Galeria from './components/galeria';
 import Padres from './components/padres';
+import Confirmacion from './components/confirmacion';
 
 import AlertaConReproductor from '../tools/cancion/alertaReproductor';
 
@@ -50,14 +51,12 @@ function Invitaciones() {
             frase={evento.frases}
           />
     
-          {evento?.multimedia?.portada && evento.multimedia.portada.length > 0 &&(
-            <Portada 
-              tipoDeEvento={evento.evento}
-              imgPortada={evento.multimedia.portada}
-              festejado={evento.datos.festejado}
-              novios={evento.datos.novios}
-            />
-          )}
+          <Portada 
+            tipoDeEvento={evento.evento}
+            imgPortada={evento.multimedia.portada}
+            festejado={evento.datos.festejado}
+            novios={evento.datos.novios}
+          />
 
           {evento?.datos?.padres && (
             <Padres 
@@ -95,6 +94,8 @@ function Invitaciones() {
             vestimenta={evento.vestimenta.mujer}
             mesa={evento.mesaDeRegalos}
           />
+
+          <Confirmacion />
 
           
         </div>
