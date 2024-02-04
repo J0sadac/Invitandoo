@@ -58,7 +58,7 @@ function Invitacion({fecha, lugar, flor, datos}){
         <div className="container-invitacion shadow">
           <div className="date-container">
             <div className="inv-date-container">
-              <h3 className="inv-date">22 de diciembre del 2024</h3>
+              <h3 className="inv-date">06 de abril del 2024</h3>
             </div>
 
             <div className="place-container">
