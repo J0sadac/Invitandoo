@@ -58,9 +58,10 @@ function Invitaciones() {
             novios={evento.datos.novios}
           />
 
-          {evento?.datos?.padres && (
+          {evento?.datos?.padres && evento.datos.padres.length > 0 && (
             <Padres 
               padres={evento.datos.padres}
+              tipoDeEvento={evento.evento}
             />
           )}
 

@@ -32,7 +32,7 @@ function Dresscode({vestimenta, mesa}) {
           <h3>Mesa de regalos</h3>
 
           <div className="codigoRegalo">
-            <img src={mesa[0].icono} alt="..." className="imgLogo" />
+            <img src={mesa[0].icono} alt="..." className="imgLogo img-fluid" />
 
             <p>{mesa[0].modalidad}: {mesa[0].codigo}</p>
           </div>

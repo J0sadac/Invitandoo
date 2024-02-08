@@ -2,9 +2,9 @@ import maps from '../../../multimedia/herramientas/maps - boda - jaqui.png';
 
 function Confirmacion() {
 
-  const actualizarAsistencia = (par) => {
+  const actualizarAsistencia = (param) => {
 
-    if(par === 'asistire'){
+    if(param === 'asistire'){
       alert('Gracias por confirmar tu asistencia')
     }else{
       alert('Sentimos mucho tu ausencia, esperamos verte en otra ocasion')

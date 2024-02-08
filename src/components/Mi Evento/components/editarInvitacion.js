@@ -1,5 +1,3 @@
-
-
 //componentes
 import Carousel from '../../Invitacion/components/carousel';
 import Portada from '../../Invitacion/components/portada';
@@ -52,8 +50,6 @@ function EditarInvitacion({inv}) {
                 foto={inv.multimedia.galeria}
             />
             )}
-
-
 
             <Itinerario 
             datos={inv.itinerario}

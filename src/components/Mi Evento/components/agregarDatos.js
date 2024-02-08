@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-//import Invitacion from "./editarInvitacion";
+import Invitacion from "./editarInvitacion";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -31,7 +31,7 @@ const AgregarDatos = function(){
 
             </div>
 
-            {/* <div className="invitacion">
+            <div className="invitacion">
                 {evento? (
                     <Invitacion 
                             inv={evento.invitacion}
@@ -47,7 +47,7 @@ const AgregarDatos = function(){
                         <p>¡Por favor espere!</p>
                     </div>
                 )}
-            </div> */}
+            </div> 
 
             <div className="datos">
 
