@@ -1021,7 +1021,7 @@
   font-family: "Tangerine", cursive;
   color: white;
   background-color: rgba(78, 74, 67, 0.2666666667);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   border-radius: 10px;
 }
 .modelo .portada .encabezado h3 {
@@ -1546,13 +1546,13 @@ body .modelo .fondo {
   height: 100vh;
 }
 body .modelo .portada {
-  background: url("../multimedia/Boda - Jaqui y Fredi/img - 02.jpg");
+  background: url("../multimedia/Boda - Jaqui y Fredi/img - 01.jpg");
   background-size: cover;
   background-position: center top;
 }
 body .modelo .fondo1 {
   height: 650px;
-  background: url("../multimedia/Boda - Jaqui y Fredi/img - 01.jpg");
+  background: url("../multimedia/Boda - Jaqui y Fredi/img - 02.jpg");
   background-size: cover;
   background-position: center top;
 }

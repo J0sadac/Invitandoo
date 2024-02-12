@@ -8,7 +8,7 @@ function Portada (){
             <div className="contenido">
                 <span>Fredi</span>
                 <span>&</span>
-                <span>Jaqueline</span>
+                <span>Jacqueline</span>
             </div>
         </div>
     )
