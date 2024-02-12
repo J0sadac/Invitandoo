@@ -11,7 +11,7 @@ import Regalo from './components/modelo 2/regalo';
 function Invitaciones () {
 
     return(
-        <div className='modelo2'>
+        <div className='modelo'>
             <Portada />
             <Invitacion />
             <Padres />

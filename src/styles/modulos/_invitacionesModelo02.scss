@@ -5,7 +5,7 @@ $color-carousel: #ffff;
 $font-main: 'Tangerine', cursive;
 $font-second: 'Abel', sans-serif;
 
-.modelo2{
+.modelo{
     margin-top: 70px;
 
     .portada{
@@ -19,7 +19,8 @@ $font-second: 'Abel', sans-serif;
         padding: 35px;
         margin-bottom: 20px;
 
-        height: 685px;
+        width: 100%; /* Ajusta el ancho según sea necesario */
+        height: 100vh;
 
         .encabezado{
             margin-bottom: 30px;
@@ -116,6 +117,9 @@ $font-second: 'Abel', sans-serif;
 
         margin: 40px 15px 20px;
         padding: 20px;
+
+        position: relative;
+        z-index: 1;
 
         .fecha{
             font-size: 55px;
