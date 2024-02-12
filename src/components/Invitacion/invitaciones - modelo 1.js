@@ -4,15 +4,15 @@ import {useEffect, useState} from 'react';
 import axios from 'axios';
 
 //componentes
-import Carousel from './components/carousel';
-import Portada from './components/portada';
-import Invitacion from './components/invitacion';
-import Itinerario from './components/itinerario';
-import Dresscode from './components/dresscode';
-import Padrinos from './components/padrinos';
-import Galeria from './components/galeria';
-import Padres from './components/padres';
-import Confirmacion from './components/confirmacion';
+import Carousel from './components/modelo 1/carousel';
+import Portada from './components/modelo 1/portada';
+import Invitacion from './components/modelo 1/invitacion';
+import Itinerario from './components/modelo 1/itinerario';
+import Dresscode from './components/modelo 1/dresscode';
+import Padrinos from './components/modelo 1/padrinos';
+import Galeria from './components/modelo 1/galeria';
+import Padres from './components/modelo 1/padres';
+import Confirmacion from './components/modelo 1/confirmacion';
 
 import AlertaConReproductor from '../tools/cancion/alertaReproductor';
 
@@ -35,9 +35,7 @@ function Invitaciones() {
 
     getInvitacion();
 
-  },[eventoId, invitadoId])
-
-  console.log(evento)
+  },[eventoId, invitadoId]);
 
   return (
     <div>

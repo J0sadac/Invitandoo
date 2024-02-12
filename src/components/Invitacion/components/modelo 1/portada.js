@@ -1,4 +1,4 @@
-import marco from '../../../multimedia/herramientas/marco dorado.svg'
+import marco from '../../../../multimedia/herramientas/marco dorado.svg';
 
 function Portada({tipoDeEvento, imgPortada, festejado, novios}){
 

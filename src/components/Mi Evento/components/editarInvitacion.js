@@ -1,12 +1,12 @@
 //componentes
-import Carousel from '../../Invitacion/components/carousel';
-import Portada from '../../Invitacion/components/portada';
-import Invitacion from '../../Invitacion/components/invitacion';
-import Itinerario from '../../Invitacion/components/itinerario';
-import Dresscode from '../../Invitacion/components/dresscode';
-import Padrinos from '../../Invitacion/components/padrinos';
-import Galeria from '../../Invitacion/components/galeria';
-import Padres from '../../Invitacion/components/padres';
+import Carousel from '../../Invitacion/components/modelo 1/carousel';
+import Portada from '../../Invitacion/components/modelo 1/portada';
+import Invitacion from '../../Invitacion/components/modelo 1/invitacion';
+import Itinerario from '../../Invitacion/components/modelo 1/itinerario';
+import Dresscode from '../../Invitacion/components/modelo 1/dresscode';
+import Padrinos from '../../Invitacion/components/modelo 1/padrinos';
+import Galeria from '../../Invitacion/components/modelo 1/galeria';
+import Padres from '../../Invitacion/components/modelo 1/padres';
 
 function EditarInvitacion({inv}) {
 

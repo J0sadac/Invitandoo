@@ -1,7 +1,8 @@
 //Modulos
 @use './modulos/navbar';
 @use './modulos/main';
-@use './modulos/invitaciones';
+@use './modulos/invitacionesModelo01';
+@use './modulos/invitacionesModelo02';
 @use './modulos/confirmaciones';
 @use './modulos/miEvento';
 
@@ -47,6 +48,38 @@ body{
             width: 120px;
             height: 120px;
             border-width: 7px;
+        }
+    }
+
+    .modelo2{
+        background: url('../multimedia/fondos/fondo2.png');
+        background-size: cover;
+        background-position: center top;
+        background-attachment: fixed;
+
+        .portada{
+            background: url('../multimedia/Boda\ -\ Jaqui\ y\ Fredi/img - 02.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+        }
+
+        .fondo1{
+            height: 650px;
+
+            background: url('../multimedia/Boda\ -\ Jaqui\ y\ Fredi/img - 01.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+        }
+
+        .fondo2{
+            height: 650px;
+
+            background: url('../multimedia/Boda\ -\ Jaqui\ y\ Fredi/img - 03.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
         }
     }
  }

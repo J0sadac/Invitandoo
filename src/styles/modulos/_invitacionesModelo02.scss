@@ -1,0 +1,377 @@
+$color-main: #212529;
+$color-second: #3e4144;
+$color-font: #3e4144;
+$color-carousel: #ffff;
+$font-main: 'Tangerine', cursive;
+$font-second: 'Abel', sans-serif;
+
+.modelo2{
+    margin-top: 70px;
+
+    .portada{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+
+        text-align: center;
+
+        padding: 35px;
+        margin-bottom: 20px;
+
+        height: 685px;
+
+        .encabezado{
+            margin-bottom: 30px;
+            padding: 10px;
+
+            font-family: $font-main;
+            color: #ffff;
+
+            background-color: #000000BD;
+
+            h3{
+                font-size: 50px;
+                font-weight: 500;
+
+                width: 100%;
+
+                background: linear-gradient(
+                    to right,
+                    rgb(180, 159, 105),
+                    rgb(211, 178, 95),
+                    rgb(185, 155, 80),
+                    rgb(137, 103, 16),
+                    rgb(150, 127, 70),
+                    rgb(211, 178, 95),
+                    rgb(180, 159, 105)
+                );
+                background-position: 0;
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: move 6s linear alternate infinite;
+            }
+
+        }
+
+        .contenido{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            text-align: center;
+            font-family: $font-main;
+            font-weight: 600;
+            font-size: 50px;
+
+            color: #ffff;
+            
+
+            padding: 30px;
+
+            span{
+                margin-top: -25px;
+                width: 100%;
+
+                background: linear-gradient(
+                    to right,
+                    rgb(180, 159, 105),
+                    rgb(211, 178, 95),
+                    rgb(185, 155, 80),
+                    rgb(137, 103, 16),
+                    rgb(150, 127, 70),
+                    rgb(211, 178, 95),
+                    rgb(180, 159, 105)
+                );
+                background-position: 0;
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: move 8s linear alternate infinite;
+            }
+
+            @keyframes move {
+                0%{
+                    background-position: 0;
+                }
+        
+                60%{
+                    background-position: 180px;
+                }
+        
+                100%{
+                    background-position: 440px;
+                }
+            }
+        }
+    }
+
+    .invitacion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        text-align: center;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+
+        .fecha{
+            font-size: 55px;
+            font-family: $font-main;
+            font-weight: 600;
+        }
+
+        .direccion{
+            font-family: $font-second;
+            font-size: 22px;
+
+            width: 80%;
+        }
+
+        .contador{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            align-items: center;
+            justify-content: center;
+
+            .tiempo{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                margin: 8px;
+                padding: 10px;
+                width: 60px;
+
+                span{
+                    font-family: $font-second;
+                    font-size: 15PX;
+                }
+
+                .segundero{
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+
+    .padres{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        text-align: center;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+
+        h3{
+            font-family: $font-main;
+            font-size: 45px;
+            font-weight: 600;
+
+            margin-bottom: 20px;
+        }
+
+        .contenedor{
+            padding: 10px;
+            margin-bottom: 25px;
+
+            .titulo{
+                font-family: $font-main;
+                font-size: 40px;
+            }
+            
+            .papas{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                padding: 20px;
+                margin-top: -20px;
+
+                font-family: $font-second;
+                font-size: 22px;
+            }
+        }
+
+        .mensaje{
+            font-family: $font-second;
+            font-size: 18px;   
+        }
+    }
+
+    .pase{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        font-family: $font-second;
+        font-size: 22px;
+        text-align: center;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+
+        .invitado{
+            font-family: $font-main;
+            font-size: 40px;
+            font-weight: 600;
+        }
+    }
+
+    .fondo1{
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       
+       .frase{
+        background-color: #000000BD;
+        color: #ffff;
+
+        padding: 15px;
+        margin-top: 40px;
+
+        font-family: $font-second;
+        font-size: 20px;
+       }
+    }
+
+    .itinerario{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+
+        .titulo{
+            font-family: $font-main;
+            
+            h3{
+                font-size: 45px;
+                font-weight: 600;
+            }
+        }
+
+        .contenido{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 100%;
+            margin-top: 20px;
+
+            .icono{
+                width: 60px;
+                margin-top: -20px;
+            }
+
+            .accion{
+                width: 50%;
+                p{
+                    font-family: $font-second;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+    }
+
+    .codigo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+
+        .titulo{
+            font-family: $font-main;
+            font-size: 45px;
+            font-weight: 600;
+        }
+
+        .contenido{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .imagenes{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                width: 90%;
+                img{
+                    width: 40%;
+                }
+            }
+
+            .vestimenta{
+                font-family: $font-second;
+                font-size: 24px;
+                font-weight: 600;
+
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .regalo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+
+        .titulo{
+            font-family: $font-main;
+            font-size: 45px;
+            font-weight: 600;
+        }
+
+        .codigo{
+            font-family: $font-second;
+            font-size: 22px;
+
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .fondo2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        .frase{
+         background-color: #000000BD;
+         color: #ffff;
+ 
+         padding: 10px;
+         margin-top: 40px;
+ 
+         font-family: $font-second;
+         font-size: 20px;
+        }
+     }
+}

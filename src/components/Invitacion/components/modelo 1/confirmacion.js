@@ -1,4 +1,4 @@
-import maps from '../../../multimedia/herramientas/maps - boda - jaqui.png';
+import maps from '../../../../multimedia/herramientas/maps - boda - jaqui.png';
 
 function Confirmacion() {
 
