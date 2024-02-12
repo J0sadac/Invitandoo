@@ -13,7 +13,7 @@ function Itinerario () {
             <div className="contenido">
                 <img className='icono' src={icono1} alt="..." />
                 <div className="accion">
-                    <p>Recepcion cotel</p>
+                    <p>Cóctel de bienvenida</p>
                     <p>6:30 pm - 7:00 pm</p>
                 </div>
             </div>

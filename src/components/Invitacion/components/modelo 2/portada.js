@@ -2,14 +2,13 @@ function Portada (){
 
     return(
         <div className="portada">
-            <div className="fondo"></div>
             <div className="encabezado">
-                <h3>Te invitamos a nuestra boda</h3>
+                <h3>Nuestra boda</h3>
             </div>
             <div className="contenido">
-                <span>Fredi Hernandez</span>
+                <span>Fredi</span>
                 <span>&</span>
-                <span>Jaqueline Vázquez</span>
+                <span>Jaqueline</span>
             </div>
         </div>
     )

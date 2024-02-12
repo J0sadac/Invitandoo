@@ -1013,7 +1013,7 @@
   padding: 35px;
   margin-bottom: 20px;
   width: 100%;
-  height: 100vh;
+  height: 85vh;
 }
 .modelo .portada .encabezado {
   margin-bottom: 30px;
@@ -1037,14 +1037,15 @@
 }
 .modelo .portada .contenido {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
   text-align: center;
   font-family: "Tangerine", cursive;
   font-weight: 600;
   font-size: 50px;
   color: white;
-  padding: 30px;
 }
 .modelo .portada .contenido span {
   margin-top: -25px;
@@ -1140,10 +1141,6 @@
   font-family: "Abel", sans-serif;
   font-size: 22px;
 }
-.modelo .padres .mensaje {
-  font-family: "Abel", sans-serif;
-  font-size: 18px;
-}
 .modelo .pase {
   display: flex;
   flex-direction: column;
@@ -1168,13 +1165,14 @@
 }
 .modelo .fondo1 .frase {
   background-color: rgba(78, 74, 67, 0.2666666667);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   border-radius: 10px;
-  color: rgb(196, 164, 82);
+  color: white;
   padding: 15px;
   margin-top: 40px;
   font-family: "Abel", sans-serif;
   font-size: 20px;
+  text-align: center;
 }
 .modelo .itinerario {
   display: flex;
@@ -1269,17 +1267,18 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 .modelo .fondo2 .frase {
   background-color: rgba(78, 74, 67, 0.2666666667);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   border-radius: 10px;
-  color: rgb(196, 164, 82);
+  color: white;
   padding: 10px;
-  margin-top: 40px;
+  margin: 50px 15px;
   font-family: "Abel", sans-serif;
   font-size: 20px;
+  text-align: center;
 }
 
 .container-confirmaciones {
@@ -1535,10 +1534,16 @@ body .loading .spin {
   height: 120px;
   border-width: 7px;
 }
-body .modelo {
+body .modelo .fondo {
   background: url("../multimedia/fondos/fondo2.png");
   background-size: cover;
   background-position: center top;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 }
 body .modelo .portada {
   background: url("../multimedia/Boda - Jaqui y Fredi/img - 02.jpg");

@@ -12,18 +12,21 @@ function Invitaciones () {
 
     return(
         <div className='modelo'>
+            <div className='fondo'></div>
             <Portada />
             <Invitacion />
             <Padres />
+            <Itinerario />
             <Pase />
             <div className='fondo1'>
                 <p className='frase'>En tus ojos encuentro mi paz y mi felicidad.</p>
             </div>
-            <Itinerario />
             <Vestimenta />
             <Regalo />
             <div className='fondo2'>
-                <p className='frase'>Eres el amor de mi vida, mi compañero eterno.</p>
+                <p className='frase'>Nos haría muy felices contar con su compañía 
+                en este momento tan especial para nosotros. 
+                Su presencia sería realmente especial. ¡NO FALTEN!</p>
             </div>
         </div>
     )

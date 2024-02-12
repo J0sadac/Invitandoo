@@ -20,7 +20,7 @@ $font-second: 'Abel', sans-serif;
         margin-bottom: 20px;
 
         width: 100%;
-        height: 100vh;
+        height: 85vh;
 
         .encabezado{
             margin-bottom: 30px;
@@ -60,8 +60,11 @@ $font-second: 'Abel', sans-serif;
 
         .contenido{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
+            justify-content: space-evenly;
+
+            width: 100%;
 
             text-align: center;
             font-family: $font-main;
@@ -70,8 +73,6 @@ $font-second: 'Abel', sans-serif;
 
             color: #ffff;
             
-
-            padding: 30px;
 
             span{
                 margin-top: -25px;
@@ -203,11 +204,6 @@ $font-second: 'Abel', sans-serif;
                 font-size: 22px;
             }
         }
-
-        .mensaje{
-            font-family: $font-second;
-            font-size: 18px;   
-        }
     }
 
     .pase{
@@ -235,19 +231,20 @@ $font-second: 'Abel', sans-serif;
        flex-direction: row;
        justify-content: center;
        align-items: center;
-       
+
        .frase{
         background-color: #4e4a4344;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(3px);
         border-radius: 10px;
 
-        color: rgb(196, 164, 82);
+        color: #ffff;
 
         padding: 15px;
         margin-top: 40px;
 
         font-family: $font-second;
         font-size: 20px;
+        text-align: center;
        }
     }
 
@@ -367,20 +364,21 @@ $font-second: 'Abel', sans-serif;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         
         .frase{
             background-color: #4e4a4344;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(3px);
             border-radius: 10px;
         
-            color: rgb(196, 164, 82);
+            color: #ffff;
     
             padding: 10px;
-            margin-top: 40px;
+            margin: 50px 15px;
     
             font-family: $font-second;
             font-size: 20px;
+            text-align: center;
         }
      }
 }

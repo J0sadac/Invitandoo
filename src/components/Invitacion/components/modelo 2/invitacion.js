@@ -4,11 +4,11 @@ function Invitacion (){
     return(
         <div className="invitacion shadow">
             <div className="fecha">
-                <p>06 Abril 2024</p>
+                <p>06 de Abril 2024</p>
             </div>
             <div className="direccion">
-                <p>Pichanchas mirador.</p>
-                <p>Carr. Tuxtla Villaflores Km. 2, Ejido de, 29089 Copoya, Chis.</p>
+                <p>Terraza, Pichanchas mirador.</p>
+                <p>Carretera Tuxtla Copoya km2</p>
                 <p>Tuxtla Gutierrez, Chiapas, México</p>
             </div>
             <div className="contador">
