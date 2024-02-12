@@ -18,9 +18,6 @@ function Invitaciones () {
             <Padres />
             <Itinerario />
             <Pase />
-            <div className='fondo1'>
-                <p className='frase'>En tus ojos encuentro mi paz y mi felicidad.</p>
-            </div>
             <Vestimenta />
             <Regalo />
             <div className='fondo2'>
