@@ -1,5 +1,54 @@
+import { useEffect, useState } from "react";
 
-function Invitacion (){
+
+function Invitacion ({lugar, fecha}){
+    const [timer, setTimer] = useState({
+        days: '00',
+        hours: '00',
+        minutes: '00',
+        seconds: '00'
+      });
+    
+      useEffect(() => {
+        function timer() {
+          try {
+            const deadline = new Date(fecha).getTime();
+    
+            const interval = setInterval(() => {
+              const now = new Date().getTime();
+              const timeLeft = Math.max(deadline - now, 0);
+    
+              const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+              const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+              const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+              const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000).toString().padStart(2, '0');
+    
+              setTimer({
+                days,
+                hours,
+                minutes,
+                seconds
+              });
+    
+              if (timeLeft <= 0) {
+                clearInterval(interval);
+                setTimer({
+                  days: '00',
+                  hours: '00',
+                  minutes: '00',
+                  seconds: '00'
+                });
+              }
+            }, 1000);
+    
+            return () => clearInterval(interval);
+          } catch (err) {
+            console.log(err);
+          }
+        }
+    
+        timer();
+      });
 
     return(
         <div className="invitacion shadow">
@@ -7,14 +56,14 @@ function Invitacion (){
                 <p>06 de Abril 2024</p>
             </div>
             <div className="direccion">
-                <p>Terraza, Pichanchas mirador.</p>
-                <p>Carretera Tuxtla Copoya km2</p>
-                <p>Tuxtla Gutierrez, Chiapas, México</p>
+                <p>{lugar.salon}</p>
+                <p>{lugar.direccion}</p>
+                <p>{lugar.ciudad}</p>
             </div>
             <div className="contador">
                 <div className="tiempo shadow">
                     <span className="segundero">
-                        56
+                        {timer.days}
                     </span>
                     <span>
                         DIAS
@@ -22,7 +71,7 @@ function Invitacion (){
                 </div>
                 <div className="tiempo shadow">
                     <span className="segundero">
-                        20
+                        {timer.hours}
                     </span>
                     <span>
                         HRS
@@ -30,7 +79,7 @@ function Invitacion (){
                 </div>
                 <div className="tiempo shadow">
                     <span className="segundero">
-                        59
+                        {timer.minutes}
                     </span>
                     <span>
                         MNTS
@@ -38,7 +87,7 @@ function Invitacion (){
                 </div>
                 <div className="tiempo shadow">
                     <span className="segundero">
-                        30
+                        {timer.seconds}
                     </span>
                     <span>
                         SEG

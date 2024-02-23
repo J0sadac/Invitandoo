@@ -19,16 +19,11 @@ function Main (){
         getEventos();
     }, []);
 
-    console.log(evento)
-
     const filtro = evento?.filter((e) => (
         e.multimedia?.preportada.length !== 0 &&
         e.datos?.festejado !== 'null' &&
         e?.evento !== 'null'
-        ));
-
-    console.log(filtro);
-    
+        )); 
 
     return(
         <div className='contenedor-main'>

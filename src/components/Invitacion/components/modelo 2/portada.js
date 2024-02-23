@@ -1,14 +1,14 @@
-function Portada (){
+function Portada ({portada, novios}){
 
     return(
-        <div className="portada">
+        <div className="portada" style={{ backgroundImage: `url(${portada[2].url})`}}>
             <div className="encabezado">
                 <h3>Nuestra boda</h3>
             </div>
             <div className="contenido">
-                <span>Fredi</span>
+                <span>{novios.novio}</span>
                 <span>&</span>
-                <span>Jacqueline</span>
+                <span>{novios.novia}</span>
             </div>
         </div>
     )

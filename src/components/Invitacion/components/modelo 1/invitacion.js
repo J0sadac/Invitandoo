@@ -45,8 +45,8 @@ function Invitacion({fecha, lugar, flor, datos}){
         }, 1000);
 
         return () => clearInterval(interval);
-      } catch (error) {
-        console.error('Error al recuperar datos del evento:', error);
+      } catch (err) {
+        console.log(err);
       }
     }
 

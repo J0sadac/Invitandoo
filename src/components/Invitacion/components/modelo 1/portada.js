@@ -2,8 +2,6 @@ import marco from '../../../../multimedia/herramientas/marco dorado.svg';
 
 function Portada({tipoDeEvento, imgPortada, festejado, novios}){
 
-  console.log(imgPortada)
-
     return(
       <div className='container-portada shadow'>
       {tipoDeEvento === 'XV Años' ? (
@@ -54,15 +52,15 @@ function Portada({tipoDeEvento, imgPortada, festejado, novios}){
           </div>
         </div>
       ) : tipoDeEvento === 'Cumpleaños' ? (
-        <div className='nombre-evento'>
+        <div>
           Seccion de cumpleaños
         </div>
       ) : tipoDeEvento === 'Bautizo' ? (
-        <div className='nombre-evento'>
+        <div>
           Seccion de bautizo
         </div>
       ) : (
-        <div className='nombre-evento'>
+        <div>
           Estructura por default
         </div>
       )}

@@ -1,5 +1,5 @@
 
-function Padres (){
+function Padres ({padres}){
 
     return(
         <div className="padres shadow">
@@ -8,9 +8,9 @@ function Padres (){
                 <p className="titulo">Padres del novio</p>
 
                 <div className="papas shadow">
-                    <span>Fredi Hernández Ramos</span>
+                    <span>{padres[0].papa}</span>
                     <span>y</span>
-                    <span>Guadalupe Espinosa Cordova</span>
+                    <span>{padres[0].mama}</span>
                 </div>
             </div>
 
@@ -18,9 +18,9 @@ function Padres (){
                 <p className="titulo">Padres de la novia</p>
 
                 <div className="papas shadow">
-                    <span>Humberto Vázquez Vázquez</span>
+                    <span>{padres[1].papa}</span>
                     <span>y</span>
-                    <span>Emilia Meneses Vázquez</span>
+                    <span>{padres[1].mama}</span>
                 </div>
             </div>
         </div>

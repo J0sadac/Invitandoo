@@ -1001,10 +1001,10 @@
     padding: 10px;
   }
 }
-.modelo {
+.modeloDos {
   margin-top: 70px;
 }
-.modelo .portada {
+.modeloDos .portada {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1015,7 +1015,7 @@
   width: 100%;
   height: 85vh;
 }
-.modelo .portada .encabezado {
+.modeloDos .portada .encabezado {
   margin-bottom: 30px;
   padding: 10px;
   font-family: "Tangerine", cursive;
@@ -1024,7 +1024,7 @@
   backdrop-filter: blur(3px);
   border-radius: 10px;
 }
-.modelo .portada .encabezado h3 {
+.modeloDos .portada .encabezado h3 {
   font-size: 50px;
   font-weight: 600;
   width: 100%;
@@ -1035,7 +1035,7 @@
   -webkit-text-fill-color: transparent;
   animation: move 6s linear alternate infinite;
 }
-.modelo .portada .contenido {
+.modeloDos .portada .contenido {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1047,7 +1047,7 @@
   font-size: 50px;
   color: white;
 }
-.modelo .portada .contenido span {
+.modeloDos .portada .contenido span {
   margin-top: -25px;
   width: 100%;
   background: linear-gradient(to right, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));
@@ -1068,7 +1068,7 @@
     background-position: 440px;
   }
 }
-.modelo .invitacion {
+.modeloDos .invitacion {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1076,24 +1076,24 @@
   margin: 40px 15px 20px;
   padding: 20px;
 }
-.modelo .invitacion .fecha {
+.modeloDos .invitacion .fecha {
   font-size: 55px;
   font-family: "Tangerine", cursive;
   font-weight: 600;
 }
-.modelo .invitacion .direccion {
+.modeloDos .invitacion .direccion {
   font-family: "Abel", sans-serif;
   font-size: 22px;
   width: 80%;
 }
-.modelo .invitacion .contador {
+.modeloDos .invitacion .contador {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.modelo .invitacion .contador .tiempo {
+.modeloDos .invitacion .contador .tiempo {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1101,14 +1101,14 @@
   padding: 10px;
   width: 60px;
 }
-.modelo .invitacion .contador .tiempo span {
+.modeloDos .invitacion .contador .tiempo span {
   font-family: "Abel", sans-serif;
   font-size: 15PX;
 }
-.modelo .invitacion .contador .tiempo .segundero {
+.modeloDos .invitacion .contador .tiempo .segundero {
   font-size: 28px;
 }
-.modelo .padres {
+.modeloDos .padres {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1117,21 +1117,21 @@
   margin: 40px 15px 20px;
   padding: 20px;
 }
-.modelo .padres h3 {
+.modeloDos .padres h3 {
   font-family: "Tangerine", cursive;
   font-size: 45px;
   font-weight: 600;
   margin-bottom: 20px;
 }
-.modelo .padres .contenedor {
+.modeloDos .padres .contenedor {
   padding: 10px;
   margin-bottom: 25px;
 }
-.modelo .padres .contenedor .titulo {
+.modeloDos .padres .contenedor .titulo {
   font-family: "Tangerine", cursive;
   font-size: 40px;
 }
-.modelo .padres .contenedor .papas {
+.modeloDos .padres .contenedor .papas {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1141,7 +1141,7 @@
   font-family: "Abel", sans-serif;
   font-size: 22px;
 }
-.modelo .pase {
+.modeloDos .pase {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1152,29 +1152,12 @@
   margin: 40px 15px 20px;
   padding: 20px;
 }
-.modelo .pase .invitado {
+.modeloDos .pase .invitado {
   font-family: "Tangerine", cursive;
   font-size: 40px;
   font-weight: 600;
 }
-.modelo .fondo1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.modelo .fondo1 .frase {
-  background-color: rgba(78, 74, 67, 0.2666666667);
-  backdrop-filter: blur(3px);
-  border-radius: 10px;
-  color: white;
-  padding: 15px;
-  margin-top: 40px;
-  font-family: "Abel", sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
-.modelo .itinerario {
+.modeloDos .itinerario {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1182,14 +1165,14 @@
   margin: 40px 15px 20px;
   padding: 20px;
 }
-.modelo .itinerario .titulo {
+.modeloDos .itinerario .titulo {
   font-family: "Tangerine", cursive;
 }
-.modelo .itinerario .titulo h3 {
+.modeloDos .itinerario .titulo h3 {
   font-size: 45px;
   font-weight: 600;
 }
-.modelo .itinerario .contenido {
+.modeloDos .itinerario .contenido {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -1197,19 +1180,19 @@
   width: 100%;
   margin-top: 20px;
 }
-.modelo .itinerario .contenido .icono {
+.modeloDos .itinerario .contenido .icono {
   width: 60px;
   margin-top: -20px;
 }
-.modelo .itinerario .contenido .accion {
+.modeloDos .itinerario .contenido .accion {
   width: 50%;
 }
-.modelo .itinerario .contenido .accion p {
+.modeloDos .itinerario .contenido .accion p {
   font-family: "Abel", sans-serif;
   font-size: 20px;
   font-weight: 600;
 }
-.modelo .codigo {
+.modeloDos .codigo {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1217,34 +1200,34 @@
   margin: 40px 15px 20px;
   padding: 20px;
 }
-.modelo .codigo .titulo {
+.modeloDos .codigo .titulo {
   font-family: "Tangerine", cursive;
   font-size: 45px;
   font-weight: 600;
 }
-.modelo .codigo .contenido {
+.modeloDos .codigo .contenido {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
-.modelo .codigo .contenido .imagenes {
+.modeloDos .codigo .contenido .imagenes {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 90%;
 }
-.modelo .codigo .contenido .imagenes img {
+.modeloDos .codigo .contenido .imagenes img {
   width: 40%;
 }
-.modelo .codigo .contenido .vestimenta {
+.modeloDos .codigo .contenido .vestimenta {
   font-family: "Abel", sans-serif;
   font-size: 24px;
   font-weight: 600;
   margin-top: 20px;
 }
-.modelo .regalo {
+.modeloDos .regalo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1252,30 +1235,47 @@
   margin: 40px 15px 20px;
   padding: 20px;
 }
-.modelo .regalo .titulo {
+.modeloDos .regalo .titulo {
   font-family: "Tangerine", cursive;
   font-size: 45px;
   font-weight: 600;
 }
-.modelo .regalo .codigo {
+.modeloDos .regalo .codigo {
   font-family: "Abel", sans-serif;
   font-size: 22px;
   margin: 0;
   padding: 0;
 }
-.modelo .fondo2 {
+.modeloDos .imagen {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
 }
-.modelo .fondo2 .frase {
+.modeloDos .imagen .frase {
   background-color: rgba(78, 74, 67, 0.2666666667);
   backdrop-filter: blur(3px);
   border-radius: 10px;
   color: white;
   padding: 10px;
   margin: 50px 15px;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+.modeloDos .fondo1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.modeloDos .fondo1 .frase {
+  background-color: rgba(78, 74, 67, 0.2666666667);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
   font-family: "Abel", sans-serif;
   font-size: 20px;
   text-align: center;
@@ -1534,8 +1534,89 @@ body .loading .spin {
   height: 120px;
   border-width: 7px;
 }
-body .modelo .fondo {
-  background: url("../multimedia/fondos/fondo2.png");
+body .modeloDos .container-reproductor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 20px;
+  padding: 30px;
+  height: 220px;
+}
+body .modeloDos .container-reproductor .reproductor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .modeloDos .container-reproductor .reproductor .title {
+  font-size: 30px;
+  font-family: "Abel", sans-serif;
+  text-align: center;
+  color: #3e4144;
+}
+body .modeloDos .container-reproductor .reproductor audio {
+  width: 280px;
+}
+body .modeloDos .alerta-reproductor {
+  flex-direction: row;
+  padding: 30px;
+  height: 220px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .modeloDos .alerta-reproductor .alert-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+body .modeloDos .alerta-reproductor .reproductor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 250px;
+}
+body .modeloDos .alerta-reproductor .reproductor .title {
+  font-size: 30px;
+  font-family: "Abel", sans-serif;
+  text-align: center;
+  color: #3e4144;
+}
+body .modeloDos .alerta-reproductor .reproductor audio {
+  width: 280px;
+}
+body .modeloDos .alerta-reproductor .reproductor .boton-cerrar {
+  margin-top: 10px;
+  padding: 5px;
+  color: #fff;
+  background-color: #3e4144;
+  border-color: #3e4144;
+  border-radius: 10px;
+  border-style: solid;
+}
+body .modeloDos .minimized {
+  width: 50px;
+  height: 50px;
+  box-shadow: none;
+}
+body .modeloDos .minimize-button {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 8px;
+  font-family: "Abel", sans-serif;
+}
+body .modeloDos .fondo {
   background-size: cover;
   background-position: center top;
   position: fixed;
@@ -1545,18 +1626,18 @@ body .modelo .fondo {
   width: 100%;
   height: 100vh;
 }
-body .modelo .portada {
+body .modeloDos .portada {
   background: url("../multimedia/Boda - Jaqui y Fredi/img - 01.jpg");
   background-size: cover;
   background-position: center top;
 }
-body .modelo .fondo1 {
-  height: 650px;
+body .modeloDos .fondo1 {
+  height: 100vh;
   background: url("../multimedia/Boda - Jaqui y Fredi/img - 02.jpg");
   background-size: cover;
   background-position: center top;
 }
-body .modelo .fondo2 {
+body .modeloDos .imagen {
   height: 100vh;
   background: url("../multimedia/Boda - Jaqui y Fredi/img - 02.jpg");
   background-size: cover;
