@@ -48,7 +48,7 @@ function Modal({ onClose }) {
         </button>
       </div>
     ) : (
-      <p>Cargando...</p>
+      <></>
     )}
   </div>
   );

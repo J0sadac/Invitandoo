@@ -219,9 +219,15 @@ $font-second: 'Abel', sans-serif;
         margin: 40px 15px 20px;
         padding: 20px;
 
+        .titulo{
+            font-family: $font-main;
+            font-size: 42px;
+            text-align: center;
+        }
+
         .invitado{
             font-family: $font-main;
-            font-size: 40px;
+            font-size: 35px;
             font-weight: 600;
         }
     }

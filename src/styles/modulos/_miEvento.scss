@@ -40,28 +40,95 @@ $font-second: 'Abel', sans-serif;
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
 
-    .formulario{
-        width: 400px;
-        height: 600px;
+    .formulario{        
+        padding: 20px;
 
-        background-color: lightcoral;
+        font-family: $font-second;
+        font-size: 19px;
+        
+        .titulo{
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+
+            margin-bottom: 30px;
+        }
+
+        .dato{
+            margin-bottom: 10px;
+            input{
+                width: 320px;
+            }
+        }
+
+        button{
+            margin-top: 30px;
+        }
     }
 
-    .invitacion{
-        width: 400px;
-        height: 600px;
-
-        margin: 20px;
-
+    .caja{
+        margin: 10px 12px 50px;
     }
 
-    .datos{
-        width: 400px;
-        height: 600px;
+    .lista{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
 
-        background-color: lightblue;
+        font-family: $font-second;
+        font-size: 19px;
+        text-align: center;
+
+        .titulo{
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .invitado{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            padding: 10px 5px;
+
+            border-bottom: 1px solid black;
+
+            .nombre{
+                width: 150px;
+                margin: 0 5px;
+            }
+
+            .boton{
+                margin: 0 10px;
+                padding: 4px 8px;
+
+                border: none;
+                border-radius: 5px;
+
+                .icono{
+                    width: 21px;
+                }
+            } 
+            
+            .enlace{
+                background-color: lightblue;
+            }
+
+            .copiar{
+                background-color: lightblue;
+            }
+
+            .copiado{
+                background-color: lightgreen;
+            }
+
+            .eliminar{
+                background-color: lightcoral;
+            }
+        }
     }
 }
 

@@ -1152,9 +1152,14 @@
   margin: 40px 15px 20px;
   padding: 20px;
 }
+.modeloDos .pase .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 42px;
+  text-align: center;
+}
 .modeloDos .pase .invitado {
   font-family: "Tangerine", cursive;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 600;
 }
 .modeloDos .itinerario {
@@ -1488,22 +1493,75 @@
   margin-top: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 .contenedor-editarEvento .formulario {
-  width: 400px;
-  height: 600px;
-  background-color: lightcoral;
+  padding: 20px;
+  font-family: "Abel", sans-serif;
+  font-size: 19px;
 }
-.contenedor-editarEvento .invitacion {
-  width: 400px;
-  height: 600px;
-  margin: 20px;
+.contenedor-editarEvento .formulario .titulo {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
 }
-.contenedor-editarEvento .datos {
-  width: 400px;
-  height: 600px;
+.contenedor-editarEvento .formulario .dato {
+  margin-bottom: 10px;
+}
+.contenedor-editarEvento .formulario .dato input {
+  width: 320px;
+}
+.contenedor-editarEvento .formulario button {
+  margin-top: 30px;
+}
+.contenedor-editarEvento .caja {
+  margin: 10px 12px 50px;
+}
+.contenedor-editarEvento .lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: "Abel", sans-serif;
+  font-size: 19px;
+  text-align: center;
+}
+.contenedor-editarEvento .lista .titulo {
+  font-weight: 600;
+  font-size: 24px;
+}
+.contenedor-editarEvento .lista .invitado {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 5px;
+  border-bottom: 1px solid black;
+}
+.contenedor-editarEvento .lista .invitado .nombre {
+  width: 150px;
+  margin: 0 5px;
+}
+.contenedor-editarEvento .lista .invitado .boton {
+  margin: 0 10px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 5px;
+}
+.contenedor-editarEvento .lista .invitado .boton .icono {
+  width: 21px;
+}
+.contenedor-editarEvento .lista .invitado .enlace {
   background-color: lightblue;
+}
+.contenedor-editarEvento .lista .invitado .copiar {
+  background-color: lightblue;
+}
+.contenedor-editarEvento .lista .invitado .copiado {
+  background-color: lightgreen;
+}
+.contenedor-editarEvento .lista .invitado .eliminar {
+  background-color: lightcoral;
 }
 
 body {

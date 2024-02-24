@@ -3,7 +3,7 @@ function Pase ({invitado}) {
 
     return(
         <div className="pase shadow">
-            <p>
+            <p className="titulo">
                 Invitado:
             </p>
             <p className="invitado">{invitado.invitado}</p>
