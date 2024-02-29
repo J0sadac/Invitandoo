@@ -411,6 +411,12 @@ $font-second: 'Abel', sans-serif;
             font-family: $font-second;
             font-size: 22px;
         }
+
+        a{
+            .icono{
+                width: 60px;
+            }
+        }
     }
 
     .ubicacion{

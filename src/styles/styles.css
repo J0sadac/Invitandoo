@@ -1305,6 +1305,9 @@
   font-family: "Abel", sans-serif;
   font-size: 22px;
 }
+.modeloDos .confirmacion a .icono {
+  width: 60px;
+}
 .modeloDos .ubicacion {
   display: flex;
   flex-direction: column;

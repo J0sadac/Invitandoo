@@ -56,7 +56,7 @@ function Invitacion ({lugar, fecha}){
                 <p>06 de Abril 2024</p>
             </div>
             <div className="direccion">
-                <p>Recepcion a las 6:30</p>
+                <p>Recepcion a las 6:30 pm</p>
                 <p>{lugar.salon}</p>
                 <p>{lugar.direccion}</p>
                 <p>{lugar.ciudad}</p>
