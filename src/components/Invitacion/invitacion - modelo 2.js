@@ -2,11 +2,13 @@ import Portada from './components/modelo 2/portada';
 import Invitacion from './components/modelo 2/invitacion';
 import Padres from './components/modelo 2/padres';
 import Pase from './components/modelo 2/pase';
-import Itinerario from './components/modelo 2/itinerario';
-import Vestimenta from './components/modelo 2/vestimenta';
+//import Itinerario from './components/modelo 2/itinerario';
+//import Vestimenta from './components/modelo 2/vestimenta';
 import Regalo from './components/modelo 2/regalo';
 import Imagen from './components/modelo 2/imagen';
 import Reproductor from '../tools/cancion/alertaReproductor';
+import Confirmacion from './components/modelo 2/confirmacion';
+import Ubicacion from './components/modelo 2/ubicacion';
 
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -42,25 +44,27 @@ function Invitaciones () {
                         novios = {evento.datos.novios}
                         portada = {evento.multimedia.carousel}
                     />
+                    <Padres 
+                        padres = {evento.datos.padres}
+                    />
+                    {/* <Itinerario 
+                        itinerario = {evento.itinerario}
+                    /> */}
                     <Invitacion 
                         lugar = {evento.datos.lugar}
                         fecha = {evento.datos.fecha}
                     />
-                    <Padres 
-                        padres = {evento.datos.padres}
-                    />
-                    <Itinerario 
-                        itinerario = {evento.itinerario}
-                    />
                     <Pase 
                         invitado = {evento.invitados}
                     />
-                    <Vestimenta 
+                    {/* <Vestimenta 
                         vestimenta = {evento.vestimenta}
-                    />
+                    /> */}
                     <Regalo 
                         regalo={evento.mesaDeRegalos[0]}
                     />
+                    <Confirmacion />
+                    <Ubicacion />
                     <Imagen 
                         frase = {evento.frases}
                     />
