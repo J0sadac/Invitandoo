@@ -42,7 +42,7 @@ const AgregarDatos = function(){
             </div>
             ) : (
                 <div className='loading'>
-                    <p>Cargando menu principal</p>
+                    <p>Cargando pantalla de administrador</p>
 
                     <div className="spinner-border spin" role="status">
                         <span className="visually-hidden">Loading...</span>
