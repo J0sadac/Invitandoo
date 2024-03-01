@@ -353,7 +353,9 @@ $font-second: 'Abel', sans-serif;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
+
+        height: 100vh;
         
         .frase{
             background-color: #4e4a4344;
@@ -363,10 +365,10 @@ $font-second: 'Abel', sans-serif;
             color: #ffff;
     
             padding: 10px;
-            margin: 50px 15px;
+            margin: 100px 15px 0px;
     
-            font-family: $font-second;
-            font-size: 20px;
+            font-family: $font-main;
+            font-size: 35px;
             text-align: center;
         }
     }

@@ -23,9 +23,7 @@ const AgregarDatos = function(){
 
         getInvitacion();
 
-    }, [eventoId])
-
-    console.log(evento)
+    }, [eventoId]);
 
     return(
         <div>

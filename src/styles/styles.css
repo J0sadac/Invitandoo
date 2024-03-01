@@ -1259,7 +1259,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  height: 100vh;
 }
 .modeloDos .imagen .frase {
   background-color: rgba(78, 74, 67, 0.2666666667);
@@ -1267,9 +1268,9 @@
   border-radius: 10px;
   color: white;
   padding: 10px;
-  margin: 50px 15px;
-  font-family: "Abel", sans-serif;
-  font-size: 20px;
+  margin: 100px 15px 0px;
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
   text-align: center;
 }
 .modeloDos .fondo1 {
@@ -1614,7 +1615,7 @@ body .loading {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   text-align: center;
   margin-top: 40px;
