@@ -7,7 +7,7 @@ function Pase ({invitado}) {
                 Invitado:
             </p>
             <p className="invitado">{invitado.invitado}</p>
-            <p>Pase para {invitado.pase} adultos</p>
+            <p>Adultos: {invitado.pase}</p>
             <p>Niños: {invitado.infantes}</p>
         </div>
     );
