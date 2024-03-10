@@ -41,9 +41,11 @@ function Invitaciones ({evento}) {
                     <Pase 
                         invitado = {evento.invitados}
                     />
-                    <Carousel 
-                        imagenes = {evento.multimedia.carousel}
-                    />    
+                    {evento?.multimedia?.carousel.length > 0 &&(
+                        <Carousel 
+                            imagenes = {evento.multimedia.carousel}
+                        />    
+                    )}
                     {evento?.vestimenta?.mujer && (
                         <Vestimenta 
                             vestimenta = {evento.vestimenta}
