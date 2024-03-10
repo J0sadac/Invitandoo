@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-function Invitacion ({lugar, fecha}){
+function Invitacion ({lugar, fecha, dia, festejado}){
     const [timer, setTimer] = useState({
         days: '00',
         hours: '00',
@@ -53,10 +53,12 @@ function Invitacion ({lugar, fecha}){
     return(
         <div className="invitacion shadow">
             <div className="fecha">
-                <p>06 de Abril 2024</p>
+                <p>{dia}</p>
             </div>
             <div className="direccion">
-                <p>Recepcion a las 6:30 pm</p>
+                {festejado === 'Fredi y Jacqueline' && (
+                    <p>Recepcion a las 6:30 pm</p>
+                )}
                 <p>{lugar.salon}</p>
                 <p>{lugar.direccion}</p>
                 <p>{lugar.ciudad}</p>

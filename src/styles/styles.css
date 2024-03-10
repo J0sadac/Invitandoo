@@ -59,9 +59,7 @@
   background-color: #fff7eb;
   height: 40px;
   width: 40px;
-}
-.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .editar svg {
-  margin-top: -5px;
+  text-decoration: none;
 }
 
 @media (max-width: 551px) {
@@ -1004,6 +1002,88 @@
 .modeloDos {
   margin-top: 70px;
 }
+.modeloDos .cancion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modeloDos .cancion .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  width: 100vw;
+  height: 250px;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+}
+.modeloDos .cancion .contenedor .cerrar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  transition: 0.3 ease all;
+}
+.modeloDos .cancion .contenedor .cerrar .icono {
+  width: 100%;
+}
+.modeloDos .cancion .contenedor .cerrar:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.modeloDos .cancion .contenedor .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+}
+.modeloDos .cancion .contenedor .contenido p {
+  font-size: 25px;
+}
+.modeloDos .puerta {
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+}
+.modeloDos .puerta .abrir {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: aliceblue;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.modeloDos .puerta .abrir .icono {
+  width: 80%;
+}
+.modeloDos .cerrado {
+  display: none;
+}
 .modeloDos .portada {
   display: flex;
   flex-direction: column;
@@ -1029,7 +1109,6 @@
   font-weight: 600;
   width: 100%;
   background: linear-gradient(to right, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));
-  background-position: 0;
   background-clip: padding-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1051,7 +1130,6 @@
   margin-top: -25px;
   width: 100%;
   background: linear-gradient(to right, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));
-  background-position: 0;
   background-clip: padding-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1161,6 +1239,10 @@
   font-family: "Tangerine", cursive;
   font-size: 35px;
   font-weight: 600;
+}
+.modeloDos .carousel {
+  height: 90vh;
+  width: 100vw;
 }
 .modeloDos .itinerario {
   display: flex;
@@ -1610,6 +1692,7 @@
 body {
   background: url("../multimedia/fondos/Invitandoo.svg");
   background-size: cover;
+  scroll-behavior: smooth;
 }
 body .loading {
   display: flex;
@@ -1635,88 +1718,6 @@ body .loading .spin {
   height: 120px;
   border-width: 7px;
 }
-body .modeloDos .container-reproductor {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 50px 20px;
-  padding: 30px;
-  height: 220px;
-}
-body .modeloDos .container-reproductor .reproductor {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-body .modeloDos .container-reproductor .reproductor .title {
-  font-size: 30px;
-  font-family: "Abel", sans-serif;
-  text-align: center;
-  color: #3e4144;
-}
-body .modeloDos .container-reproductor .reproductor audio {
-  width: 280px;
-}
-body .modeloDos .alerta-reproductor {
-  flex-direction: row;
-  padding: 30px;
-  height: 220px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .modeloDos .alerta-reproductor .alert-box {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-body .modeloDos .alerta-reproductor .reproductor {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 250px;
-}
-body .modeloDos .alerta-reproductor .reproductor .title {
-  font-size: 30px;
-  font-family: "Abel", sans-serif;
-  text-align: center;
-  color: #3e4144;
-}
-body .modeloDos .alerta-reproductor .reproductor audio {
-  width: 280px;
-}
-body .modeloDos .alerta-reproductor .reproductor .boton-cerrar {
-  margin-top: 10px;
-  padding: 5px;
-  color: #fff;
-  background-color: #3e4144;
-  border-color: #3e4144;
-  border-radius: 10px;
-  border-style: solid;
-}
-body .modeloDos .minimized {
-  width: 50px;
-  height: 50px;
-  box-shadow: none;
-}
-body .modeloDos .minimize-button {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  background-color: #fff;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  padding: 8px;
-  font-family: "Abel", sans-serif;
-}
 body .modeloDos .fondo {
   background-size: cover;
   background-position: center top;
@@ -1728,7 +1729,6 @@ body .modeloDos .fondo {
   height: 100vh;
 }
 body .modeloDos .portada {
-  background: url("../multimedia/Boda - Jaqui y Fredi/img - 01.jpg");
   background-size: cover;
   background-position: center top;
 }
@@ -1740,7 +1740,6 @@ body .modeloDos .fondo1 {
 }
 body .modeloDos .imagen {
   height: 100vh;
-  background: url("../multimedia/Boda - Jaqui y Fredi/img - 02.jpg");
   background-size: cover;
   background-position: center top;
 }

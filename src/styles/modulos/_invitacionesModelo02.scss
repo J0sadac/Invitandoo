@@ -5,8 +5,118 @@ $color-carousel: #ffff;
 $font-main: 'Tangerine', cursive;
 $font-second: 'Abel', sans-serif;
 
+
 .modeloDos{
     margin-top: 70px;
+
+    .cancion{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        width: 100vw;
+        height: 100vh;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+
+        background: rgba(0, 0, 0, .5);
+
+        .contenedor{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background-color: aliceblue;
+
+            width: 100vw;
+            height: 250px;
+            margin: 25px;
+            padding: 20px;
+
+            border-radius: 12px;
+
+            position: relative;
+
+            .cerrar{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                position: absolute;
+                top: 15px;
+                right: 15px;
+
+                width: 30px;
+                height: 30px;
+
+                border: none;
+                border-radius: 5px;
+
+                background: none;
+
+                cursor: pointer;
+                transition: .3 ease all;
+
+                .icono{
+                    width: 100%;
+                }
+            }
+
+            .cerrar:hover{
+                background: rgba(0, 0, 0, .1);
+            }
+
+            .contenido{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                font-family: $font-second;
+
+                p{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    .puerta{
+        position: fixed;
+        bottom: 20px;
+        left: 10px;
+    
+        width: 50px;
+        height: 50px;
+    
+        .abrir{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+    
+            border: none;
+            background-color: aliceblue;
+            border-radius: 10px;
+    
+            width: 100%;
+            height: 100%;
+    
+            .icono{
+                width: 80%;
+            }
+        }
+    }
+
+    .cerrado{
+        display: none;
+    }
 
     .portada{
         display: flex;
@@ -49,7 +159,6 @@ $font-second: 'Abel', sans-serif;
                     rgb(211, 178, 95),
                     rgb(180, 159, 105)
                 );
-                background-position: 0;
                 background-clip: padding-box;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -88,7 +197,6 @@ $font-second: 'Abel', sans-serif;
                     rgb(211, 178, 95),
                     rgb(180, 159, 105)
                 );
-                background-position: 0;
                 background-clip: padding-box;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -230,6 +338,11 @@ $font-second: 'Abel', sans-serif;
             font-size: 35px;
             font-weight: 600;
         }
+    }
+
+    .carousel{
+        height: 90vh;
+        width: 100vw;
     }
 
     .itinerario{

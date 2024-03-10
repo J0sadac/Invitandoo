@@ -30,9 +30,13 @@ function Invitaciones (){
     return(
         <div>
             {evento?.modelo === 1 ? (
-                <Modelo1 />
+                <Modelo1 
+                    evento = {evento}
+                />
             ) : evento?.modelo === 2 ? (
-                <Modelo2 />
+                <Modelo2 
+                    evento = {evento}
+                />
             ) : (
                 <div className='loading'>
                     <p>Cargando invitación</p>

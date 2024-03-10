@@ -22,7 +22,8 @@ function Main (){
     const filtro = evento?.filter((e) => (
         e.multimedia?.preportada.length !== 0 &&
         e.datos?.festejado !== 'null' &&
-        e?.evento !== 'null'
+        e?.evento !== 'null' &&
+        e?.invitados?.invitado !== 'null' 
         )); 
 
     return(

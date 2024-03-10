@@ -1,8 +1,3 @@
-import { useParams } from 'react-router-dom';
-import {useEffect, useState} from 'react';
-
-import axios from 'axios';
-
 //componentes
 import Carousel from './components/modelo 1/carousel';
 import Portada from './components/modelo 1/portada';
@@ -16,30 +11,9 @@ import Confirmacion from './components/modelo 1/confirmacion';
 
 import AlertaConReproductor from '../tools/cancion/alertaReproductor';
 
-function Invitaciones() {
-  const {eventoId, invitadoId} = useParams();
-  const [evento, setEvento] = useState();
-
-  useEffect(() => {
-
-    const getInvitacion = async () => {
-      try{
-        const res = await axios.get(`https://nueva-invitandodb.onrender.com/evento/${eventoId}/invitado/${invitadoId}`);
-      
-        setEvento(res.data);
-
-      }catch(err){
-        console.log(err)
-      }
-    };
-
-    getInvitacion();
-
-  },[eventoId, invitadoId]);
-
+function Invitaciones({evento}) {
+  
   return (
-    <div>
-      {evento ? (
         <div className='container-invitaciones' style={{ backgroundImage: `url(${evento.multimedia.fondo.url})` }}>
 
           <AlertaConReproductor />
@@ -81,8 +55,6 @@ function Invitaciones() {
             />
           )}
 
-          
-    
           {evento?.itinerario && (
             <Itinerario 
             datos={evento.itinerario}
@@ -98,18 +70,6 @@ function Invitaciones() {
 
           
         </div>
-      ):(
-        <div className='loading'>
-          <p>Cargando invitación</p>
-
-          <div className="spinner-border spin" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-
-          <p>¡Por favor espere!</p>
-        </div>
-      )}
-    </div>
   );
 }
 
