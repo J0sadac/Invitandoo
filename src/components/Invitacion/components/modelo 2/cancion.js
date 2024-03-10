@@ -11,7 +11,7 @@ function Cancion({ url }) {
 
   return (
     <>
-        <div className={`${ventana ? "cancion" : "cerrado"}`}>
+        <div className={`${ventana ? "cancion" : "cerrado"}`} onClick={() => puerta(false)}>
             <div className="contenedor">
             <button className="cerrar" onClick={() => puerta(false)}>
                 <img src={close} alt="..." className="icono" />
