@@ -24,8 +24,9 @@ function Carousel ({imagenes}) {
                 }}
                 pagination={true}
                 autoplay={{
-                    delay: 3000,
+                    delay: 5000,
                     disableOnInteraction: false,
+                    waitForTransition: false
                   }}
                 modules={[EffectCoverflow, Pagination, Autoplay]}
                 className="carousel"

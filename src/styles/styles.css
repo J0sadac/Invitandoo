@@ -1002,7 +1002,7 @@
 .modeloDos {
   margin-top: 70px;
 }
-.modeloDos .cancion {
+.modeloDos .reproductor .cancion {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1015,7 +1015,7 @@
   z-index: 100;
   background: rgba(0, 0, 0, 0.5);
 }
-.modeloDos .cancion .contenedor {
+.modeloDos .reproductor .cancion .contenedor {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1028,7 +1028,7 @@
   border-radius: 12px;
   position: relative;
 }
-.modeloDos .cancion .contenedor .cerrar {
+.modeloDos .reproductor .cancion .contenedor .cerrar {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1036,6 +1036,7 @@
   position: absolute;
   top: 15px;
   right: 15px;
+  z-index: 90;
   width: 30px;
   height: 30px;
   border: none;
@@ -1044,30 +1045,31 @@
   cursor: pointer;
   transition: 0.3 ease all;
 }
-.modeloDos .cancion .contenedor .cerrar .icono {
+.modeloDos .reproductor .cancion .contenedor .cerrar .icono {
   width: 100%;
 }
-.modeloDos .cancion .contenedor .cerrar:hover {
+.modeloDos .reproductor .cancion .contenedor .cerrar:hover {
   background: rgba(0, 0, 0, 0.1);
 }
-.modeloDos .cancion .contenedor .contenido {
+.modeloDos .reproductor .cancion .contenedor .contenido {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   font-family: "Abel", sans-serif;
 }
-.modeloDos .cancion .contenedor .contenido p {
+.modeloDos .reproductor .cancion .contenedor .contenido p {
   font-size: 25px;
 }
-.modeloDos .puerta {
+.modeloDos .reproductor .puerta {
   position: fixed;
   bottom: 20px;
   left: 10px;
+  z-index: 90;
   width: 50px;
   height: 50px;
 }
-.modeloDos .puerta .abrir {
+.modeloDos .reproductor .puerta .abrir {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1078,10 +1080,10 @@
   width: 100%;
   height: 100%;
 }
-.modeloDos .puerta .abrir .icono {
+.modeloDos .reproductor .puerta .abrir .icono {
   width: 80%;
 }
-.modeloDos .cerrado {
+.modeloDos .reproductor .cerrado {
   display: none;
 }
 .modeloDos .portada {
@@ -1158,6 +1160,11 @@
   font-size: 55px;
   font-family: "Tangerine", cursive;
   font-weight: 600;
+  background: linear-gradient(to right, rgb(119, 96, 37), rgb(107, 86, 33), rgb(150, 118, 36), rgb(95, 71, 10), rgb(110, 86, 26), rgb(107, 84, 26), rgb(106, 83, 25));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 8s linear alternate infinite;
 }
 .modeloDos .invitacion .direccion {
   font-family: "Abel", sans-serif;
@@ -1197,9 +1204,14 @@
 }
 .modeloDos .padres h3 {
   font-family: "Tangerine", cursive;
-  font-size: 45px;
+  font-size: 48px;
   font-weight: 600;
   margin-bottom: 20px;
+  background: linear-gradient(to right, rgb(119, 96, 37), rgb(107, 86, 33), rgb(150, 118, 36), rgb(95, 71, 10), rgb(110, 86, 26), rgb(107, 84, 26), rgb(106, 83, 25));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 8s linear alternate infinite;
 }
 .modeloDos .padres .contenedor {
   padding: 10px;
@@ -1207,7 +1219,8 @@
 }
 .modeloDos .padres .contenedor .titulo {
   font-family: "Tangerine", cursive;
-  font-size: 40px;
+  font-size: 42px;
+  font-weight: 600;
 }
 .modeloDos .padres .contenedor .papas {
   display: flex;
@@ -1217,32 +1230,59 @@
   padding: 20px;
   margin-top: -20px;
   font-family: "Abel", sans-serif;
-  font-size: 22px;
+  font-size: 24px;
 }
 .modeloDos .pase {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   font-family: "Abel", sans-serif;
-  font-size: 22px;
+  font-size: 27px;
   text-align: center;
   margin: 40px 15px 20px;
   padding: 20px;
-}
-.modeloDos .pase .titulo {
-  font-family: "Tangerine", cursive;
-  font-size: 42px;
-  text-align: center;
+  height: 70vh;
 }
 .modeloDos .pase .invitado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.modeloDos .pase .invitado .titulo {
   font-family: "Tangerine", cursive;
-  font-size: 35px;
+  font-size: 48px;
+  font-weight: 600;
+  background: linear-gradient(to right, rgb(119, 96, 37), rgb(107, 86, 33), rgb(150, 118, 36), rgb(95, 71, 10), rgb(110, 86, 26), rgb(107, 84, 26), rgb(106, 83, 25));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 8s linear alternate infinite;
+}
+.modeloDos .pase .invitado .nombre {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 600;
+}
+.modeloDos .pase .mesa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30vw;
+  margin-top: 40px;
+}
+.modeloDos .pase .mesa .titulo {
+  font-weight: 600;
+}
+.modeloDos .pase .pase .titulo {
   font-weight: 600;
 }
 .modeloDos .carousel {
-  height: 90vh;
-  width: 100vw;
+  height: 85vh;
+  width: 99vw;
 }
 .modeloDos .itinerario {
   display: flex;
@@ -1291,6 +1331,11 @@
   font-family: "Tangerine", cursive;
   font-size: 45px;
   font-weight: 600;
+  background: linear-gradient(to right, rgb(119, 96, 37), rgb(107, 86, 33), rgb(150, 118, 36), rgb(95, 71, 10), rgb(110, 86, 26), rgb(107, 84, 26), rgb(106, 83, 25));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 8s linear alternate infinite;
 }
 .modeloDos .codigo .contenido {
   display: flex;
@@ -1326,6 +1371,11 @@
   font-family: "Tangerine", cursive;
   font-size: 45px;
   font-weight: 600;
+  background: linear-gradient(to right, rgb(119, 96, 37), rgb(107, 86, 33), rgb(150, 118, 36), rgb(95, 71, 10), rgb(110, 86, 26), rgb(107, 84, 26), rgb(106, 83, 25));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 8s linear alternate infinite;
 }
 .modeloDos .regalo a {
   text-decoration: none;
@@ -1342,7 +1392,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 91vh;
 }
 .modeloDos .imagen .frase {
   background-color: rgba(78, 74, 67, 0.2666666667);
@@ -1353,23 +1403,6 @@
   margin: 100px 15px 0px;
   font-family: "Tangerine", cursive;
   font-size: 35px;
-  text-align: center;
-}
-.modeloDos .fondo1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.modeloDos .fondo1 .frase {
-  background-color: rgba(78, 74, 67, 0.2666666667);
-  backdrop-filter: blur(3px);
-  border-radius: 10px;
-  color: white;
-  padding: 15px;
-  margin-top: 40px;
-  font-family: "Abel", sans-serif;
-  font-size: 20px;
   text-align: center;
 }
 .modeloDos .confirmacion {
@@ -1404,6 +1437,11 @@
   font-size: 45px;
   font-family: "Tangerine", cursive;
   font-weight: 600;
+  background: linear-gradient(to right, rgb(119, 96, 37), rgb(107, 86, 33), rgb(150, 118, 36), rgb(95, 71, 10), rgb(110, 86, 26), rgb(107, 84, 26), rgb(106, 83, 25));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 8s linear alternate infinite;
 }
 .modeloDos .ubicacion .direccion {
   width: 310px;
@@ -1739,7 +1777,6 @@ body .modeloDos .fondo1 {
   background-position: center top;
 }
 body .modeloDos .imagen {
-  height: 100vh;
   background-size: cover;
   background-position: center top;
 }

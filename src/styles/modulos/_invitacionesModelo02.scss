@@ -9,113 +9,117 @@ $font-second: 'Abel', sans-serif;
 .modeloDos{
     margin-top: 70px;
 
-    .cancion{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        width: 100vw;
-        height: 100vh;
-
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 100;
-
-        background: rgba(0, 0, 0, .5);
-
-        .contenedor{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            background-color: aliceblue;
-
-            width: 100vw;
-            height: 250px;
-            margin: 25px;
-            padding: 20px;
-
-            border-radius: 12px;
-
-            position: relative;
-
-            .cerrar{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-
-                position: absolute;
-                top: 15px;
-                right: 15px;
-
-                width: 30px;
-                height: 30px;
-
-                border: none;
-                border-radius: 5px;
-
-                background: none;
-
-                cursor: pointer;
-                transition: .3 ease all;
-
-                .icono{
-                    width: 100%;
-                }
-            }
-
-            .cerrar:hover{
-                background: rgba(0, 0, 0, .1);
-            }
-
-            .contenido{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-
-                font-family: $font-second;
-
-                p{
-                    font-size: 25px;
-                }
-            }
-        }
-    }
-
-    .puerta{
-        position: fixed;
-        bottom: 20px;
-        left: 10px;
-    
-        width: 50px;
-        height: 50px;
-    
-        .abrir{
+    .reproductor{
+        .cancion{
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
     
-            border: none;
-            background-color: aliceblue;
-            border-radius: 10px;
+            width: 100vw;
+            height: 100vh;
     
-            width: 100%;
-            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
     
-            .icono{
-                width: 80%;
+            background: rgba(0, 0, 0, .5);
+    
+            .contenedor{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+                background-color: aliceblue;
+    
+                width: 100vw;
+                height: 250px;
+                margin: 25px;
+                padding: 20px;
+    
+                border-radius: 12px;
+    
+                position: relative;
+    
+                .cerrar{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+    
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    z-index: 90;
+    
+                    width: 30px;
+                    height: 30px;
+    
+                    border: none;
+                    border-radius: 5px;
+    
+                    background: none;
+    
+                    cursor: pointer;
+                    transition: .3 ease all;
+    
+                    .icono{
+                        width: 100%;
+                    }
+                }
+    
+                .cerrar:hover{
+                    background: rgba(0, 0, 0, .1);
+                }
+    
+                .contenido{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+    
+                    font-family: $font-second;
+    
+                    p{
+                        font-size: 25px;
+                    }
+                }
             }
         }
-    }
-
-    .cerrado{
-        display: none;
+    
+        .puerta{
+            position: fixed;
+            bottom: 20px;
+            left: 10px;
+            z-index: 90;
+        
+            width: 50px;
+            height: 50px;
+        
+            .abrir{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+        
+                border: none;
+                background-color: aliceblue;
+                border-radius: 10px;
+        
+                width: 100%;
+                height: 100%;
+        
+                .icono{
+                    width: 80%;
+                }
+            }
+        }
+    
+        .cerrado{
+            display: none;
+        }
     }
 
     .portada{
@@ -233,6 +237,21 @@ $font-second: 'Abel', sans-serif;
             font-size: 55px;
             font-family: $font-main;
             font-weight: 600;
+
+            background: linear-gradient(
+                    to right,
+                    rgb(119, 96, 37),
+                    rgb(107, 86, 33),
+                    rgb(150, 118, 36),
+                    rgb(95, 71, 10),
+                    rgb(110, 86, 26),
+                    rgb(107, 84, 26),
+                    rgb(106, 83, 25)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: move 8s linear alternate infinite;
         }
 
         .direccion{
@@ -284,10 +303,25 @@ $font-second: 'Abel', sans-serif;
 
         h3{
             font-family: $font-main;
-            font-size: 45px;
+            font-size: 48px;
             font-weight: 600;
 
             margin-bottom: 20px;
+
+            background: linear-gradient(
+                    to right,
+                    rgb(119, 96, 37),
+                    rgb(107, 86, 33),
+                    rgb(150, 118, 36),
+                    rgb(95, 71, 10),
+                    rgb(110, 86, 26),
+                    rgb(107, 84, 26),
+                    rgb(106, 83, 25)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: move 8s linear alternate infinite;
         }
 
         .contenedor{
@@ -296,7 +330,8 @@ $font-second: 'Abel', sans-serif;
 
             .titulo{
                 font-family: $font-main;
-                font-size: 40px;
+                font-size: 42px;
+                font-weight: 600;
             }
             
             .papas{
@@ -309,7 +344,7 @@ $font-second: 'Abel', sans-serif;
                 margin-top: -20px;
 
                 font-family: $font-second;
-                font-size: 22px;
+                font-size: 24px;
             }
         }
     }
@@ -317,32 +352,80 @@ $font-second: 'Abel', sans-serif;
     .pase{
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
 
         font-family: $font-second;
-        font-size: 22px;
+        font-size: 27px;
         text-align: center;
 
         margin: 40px 15px 20px;
         padding: 20px;
-
-        .titulo{
-            font-family: $font-main;
-            font-size: 42px;
-            text-align: center;
-        }
+        height: 70vh;
 
         .invitado{
-            font-family: $font-main;
-            font-size: 35px;
-            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 10px;
+
+            .titulo{
+                font-family: $font-main;
+                font-size: 48px;
+                font-weight: 600;
+
+                background: linear-gradient(
+                    to right,
+                    rgb(119, 96, 37),
+                    rgb(107, 86, 33),
+                    rgb(150, 118, 36),
+                    rgb(95, 71, 10),
+                    rgb(110, 86, 26),
+                    rgb(107, 84, 26),
+                    rgb(106, 83, 25)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: move 8s linear alternate infinite;
+            }
+    
+            .nombre{
+                font-family: $font-main;
+                font-size: 40px;
+                font-weight: 600;
+            }
+
         }
+
+        .mesa{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 30vw;
+            margin-top: 40px;
+
+            .titulo{
+                font-weight: 600;
+            }
+        }
+
+        .pase{
+
+            .titulo{
+                font-weight: 600;
+            }
+        }
+
     }
 
     .carousel{
-        height: 90vh;
-        width: 100vw;
+        height: 85vh;
+        width: 99vw;
     }
 
     .itinerario{
@@ -403,6 +486,21 @@ $font-second: 'Abel', sans-serif;
             font-family: $font-main;
             font-size: 45px;
             font-weight: 600;
+
+            background: linear-gradient(
+                    to right,
+                    rgb(119, 96, 37),
+                    rgb(107, 86, 33),
+                    rgb(150, 118, 36),
+                    rgb(95, 71, 10),
+                    rgb(110, 86, 26),
+                    rgb(107, 84, 26),
+                    rgb(106, 83, 25)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: move 8s linear alternate infinite;
         }
 
         .contenido{
@@ -446,6 +544,21 @@ $font-second: 'Abel', sans-serif;
             font-family: $font-main;
             font-size: 45px;
             font-weight: 600;
+
+            background: linear-gradient(
+                    to right,
+                    rgb(119, 96, 37),
+                    rgb(107, 86, 33),
+                    rgb(150, 118, 36),
+                    rgb(95, 71, 10),
+                    rgb(110, 86, 26),
+                    rgb(107, 84, 26),
+                    rgb(106, 83, 25)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: move 8s linear alternate infinite;
         }
 
         a{
@@ -468,7 +581,7 @@ $font-second: 'Abel', sans-serif;
         justify-content: center;
         align-items: center;
 
-        height: 100vh;
+        height: 91vh;
         
         .frase{
             background-color: #4e4a4344;
@@ -483,28 +596,6 @@ $font-second: 'Abel', sans-serif;
             font-family: $font-main;
             font-size: 35px;
             text-align: center;
-        }
-    }
-
-    .fondo1{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
- 
-        .frase{
-         background-color: #4e4a4344;
-         backdrop-filter: blur(3px);
-         border-radius: 10px;
- 
-         color: #ffff;
- 
-         padding: 15px;
-         margin-top: 40px;
- 
-         font-family: $font-second;
-         font-size: 20px;
-         text-align: center;
         }
     }
 
@@ -549,6 +640,21 @@ $font-second: 'Abel', sans-serif;
             font-size: 45px;
             font-family: $font-main;
             font-weight: 600;
+
+            background: linear-gradient(
+                    to right,
+                    rgb(119, 96, 37),
+                    rgb(107, 86, 33),
+                    rgb(150, 118, 36),
+                    rgb(95, 71, 10),
+                    rgb(110, 86, 26),
+                    rgb(107, 84, 26),
+                    rgb(106, 83, 25)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: move 8s linear alternate infinite;
         }
 
         .direccion{

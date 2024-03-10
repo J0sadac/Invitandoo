@@ -3,12 +3,26 @@ function Pase ({invitado}) {
 
     return(
         <div className="pase shadow">
-            <p className="titulo">
-                Invitado:
-            </p>
-            <p className="invitado">{invitado.invitado}</p>
-            <p>Adultos: {invitado.pase}</p>
-            <p>Niños: {invitado.infantes}</p>
+            <div className="invitado">
+                <p className="titulo">
+                    Invitado:
+                </p>
+                <span className="nombre">{invitado.invitado}</span>
+            </div>
+
+            {invitado.mesa? (
+                <div className="mesa">
+                    <span className="titulo">Mesa:</span>
+                    <span>{invitado.mesa}</span>
+                </div>
+            ):(
+                <>
+                </>
+            )}
+            <div className="pase">
+                <span className="titulo">Pase para:</span>
+                <span>{invitado.pase} adultos y {invitado.infantes} niños</span>
+            </div>
         </div>
     );
 };

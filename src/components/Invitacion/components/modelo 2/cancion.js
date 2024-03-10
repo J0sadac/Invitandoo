@@ -10,7 +10,7 @@ function Cancion({ url }) {
   };
 
   return (
-    <>
+    <div className="reproductor">
         <div className={`${ventana ? "cancion" : "cerrado"}`} onClick={() => puerta(false)}>
             <div className="contenedor">
             <button className="cerrar" onClick={() => puerta(false)}>
@@ -19,7 +19,7 @@ function Cancion({ url }) {
 
             <div className="contenido">
                 <p>¡Dale play!</p>
-                <audio src={url} controls autoPlay className="reproductor" />
+                <audio src={url} controls autoPlay/>
             </div>
             </div>
         </div>
@@ -29,7 +29,7 @@ function Cancion({ url }) {
             <img src={open} alt="..." className="icono" />
             </button>
         </div>
-    </>
+    </div>
   );
 }
 

@@ -54,7 +54,10 @@ function Invitaciones ({evento}) {
                     <Regalo 
                         regalo={evento.mesaDeRegalos}
                     />
-                    <Confirmacion />
+                    <Confirmacion 
+                        nombre= {evento.datos.contacto.nombre}
+                        telefono= {evento.datos.contacto.telefono}
+                    />
                     <Ubicacion 
                         gps={evento.ubicacion}
                     />
