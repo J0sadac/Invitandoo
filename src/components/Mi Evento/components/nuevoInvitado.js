@@ -1,10 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 
 function NuevoInvitado () {
-    const eventoId = useParams();
-
+    
     const valorInicial = {
             mesa: '',
             invitado: '',
@@ -35,7 +33,7 @@ function NuevoInvitado () {
             de: nuevoInvitado.de
         };
 
-        await axios.post(`https://nueva-invitandodb.onrender.com/evento/${eventoId}/invitado`, invitadoNuevo);
+        await axios.post('https://nueva-invitandodb.onrender.com/evento/65bead5d666a4d2a082754d7/invitado', invitadoNuevo);
 
         setNuevoInvitado(valorInicial);
     }
