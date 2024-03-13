@@ -143,10 +143,6 @@ $font-second: 'Abel', sans-serif;
             font-family: $font-main;
             color: #ffff;
 
-            background-color: #4e4a4344;
-            backdrop-filter: blur(3px);
-            border-radius: 10px;
-
             h3{
                 font-size: 50px;
                 font-weight: 600;
@@ -423,9 +419,13 @@ $font-second: 'Abel', sans-serif;
 
     }
 
-    .carousel{
-        height: 85vh;
+    .mySwiper{
+        height: 87vh;
         width: 99vw;
+
+        img {
+            object-fit: cover;
+        }
     }
 
     .itinerario{
@@ -537,6 +537,8 @@ $font-second: 'Abel', sans-serif;
         align-items: center;
         justify-content: space-evenly;
 
+        text-decoration: none;
+
         margin: 40px 15px 20px;
         padding: 20px;
 
@@ -561,7 +563,7 @@ $font-second: 'Abel', sans-serif;
                 animation: move 8s linear alternate infinite;
         }
 
-        a{
+        .contenido{
             text-decoration: none;
             color: #3e4144;
 
@@ -572,6 +574,14 @@ $font-second: 'Abel', sans-serif;
                 margin: 0;
                 padding: 0;
             }
+        }
+
+        .anuncio{
+            margin-top: 15px;
+
+            color: #3e4144;
+            font-family: $font-second;
+            font-size: 17px;
         }
     }
 

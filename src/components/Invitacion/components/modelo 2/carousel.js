@@ -29,7 +29,7 @@ function Carousel ({imagenes}) {
                     waitForTransition: false
                   }}
                 modules={[EffectCoverflow, Pagination, Autoplay]}
-                className="carousel"
+                className="mySwiper"
             >
                 {imagenes.map((imagen, index) => (
                 <SwiperSlide key={index} >

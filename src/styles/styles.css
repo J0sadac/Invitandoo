@@ -1102,9 +1102,6 @@
   padding: 10px;
   font-family: "Tangerine", cursive;
   color: white;
-  background-color: rgba(78, 74, 67, 0.2666666667);
-  backdrop-filter: blur(3px);
-  border-radius: 10px;
 }
 .modeloDos .portada .encabezado h3 {
   font-size: 50px;
@@ -1280,9 +1277,12 @@
 .modeloDos .pase .pase .titulo {
   font-weight: 600;
 }
-.modeloDos .carousel {
-  height: 85vh;
+.modeloDos .mySwiper {
+  height: 87vh;
   width: 99vw;
+}
+.modeloDos .mySwiper img {
+  object-fit: cover;
 }
 .modeloDos .itinerario {
   display: flex;
@@ -1364,6 +1364,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  text-decoration: none;
   margin: 40px 15px 20px;
   padding: 20px;
 }
@@ -1377,15 +1378,21 @@
   -webkit-text-fill-color: transparent;
   animation: move 8s linear alternate infinite;
 }
-.modeloDos .regalo a {
+.modeloDos .regalo .contenido {
   text-decoration: none;
   color: #3e4144;
 }
-.modeloDos .regalo a .codigo {
+.modeloDos .regalo .contenido .codigo {
   font-family: "Abel", sans-serif;
   font-size: 22px;
   margin: 0;
   padding: 0;
+}
+.modeloDos .regalo .anuncio {
+  margin-top: 15px;
+  color: #3e4144;
+  font-family: "Abel", sans-serif;
+  font-size: 17px;
 }
 .modeloDos .imagen {
   display: flex;
