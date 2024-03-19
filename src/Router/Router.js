@@ -5,8 +5,9 @@ import NavBar from '../components/tools/navbar';
 
 import Main from '../components/main';
 import Invitaciones from '../components/Invitacion/invitaciones';
-import MiEvento from '../components/Mi Evento/miEvento';
-import AgregarDatos from '../components/Mi Evento/components/agregarDatos';
+import MiEvento from '../components/Administrar/miEvento';
+import Invitados from '../components/Administrar/components/invitados/invitados';
+
 
 const Router = () => {
 
@@ -19,7 +20,7 @@ const Router = () => {
                 <Route exact path='/' element={<Main />} />
                 <Route exact path='/evento/:eventoId/invitado/:invitadoId' element={<Invitaciones />} />
                 <Route exact path='/mi-evento' element={<MiEvento />} />
-                <Route exact path='/mi-evento/editar/:eventoId' element={<AgregarDatos />} />
+                <Route exact path='/invitados/:eventoId' element={<Invitados />} />
             </Routes>
 
         </BrowserRouter>

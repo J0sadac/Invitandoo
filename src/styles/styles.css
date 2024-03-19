@@ -38,6 +38,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 .contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .titulo {
   text-align: center;
@@ -55,11 +56,46 @@
   font-family: "Abel", sans-serif;
   font-size: 20px;
 }
-.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .editar {
-  background-color: #fff7eb;
-  height: 40px;
-  width: 40px;
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .opcion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  background-color: white;
+  width: 25px;
+  height: 30px;
+  padding: 0;
+  margin-right: -5px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .opcion img {
+  width: 70%;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .opciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  position: absolute;
+  right: 35px;
+  bottom: -15px;
+  border: 1px solid #3e4144;
+  border-radius: 5px;
+  background-color: #3e4144;
+  padding: 5px;
+  padding-left: 15px;
+  width: 110px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .opciones a {
+  margin-top: 3px;
+  width: 100%;
+  color: white;
   text-decoration: none;
+  font-size: 17px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .cerrado {
+  display: none;
 }
 
 @media (max-width: 551px) {
@@ -1021,7 +1057,8 @@
   justify-content: center;
   align-items: center;
   background-color: aliceblue;
-  width: 100vw;
+  max-width: 400px;
+  min-width: 300px;
   height: 250px;
   margin: 25px;
   padding: 20px;
@@ -1635,103 +1672,185 @@
     flex-wrap: wrap;
   }
 }
-.contenedor-miEvento {
-  margin-top: 100px;
-}
-.contenedor-miEvento .formularios {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.contenedor-miEvento .formularios .formulario {
-  width: 500px;
-  margin: 0 20px;
-}
-.contenedor-miEvento .formularios .formulario .titulo {
-  font-size: 30px;
-  font-family: "Abel", sans-serif;
-  text-align: center;
-  margin-bottom: 15px;
-}
-.contenedor-miEvento .formularios .formulario .dato {
-  font-family: "Abel", sans-serif;
-  margin-bottom: 15px;
-}
-
-.contenedor-editarEvento {
-  margin-top: 100px;
+.invitados {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 70px;
 }
-.contenedor-editarEvento .formulario {
-  padding: 20px;
-  font-family: "Abel", sans-serif;
-  font-size: 19px;
-}
-.contenedor-editarEvento .formulario .titulo {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-.contenedor-editarEvento .formulario .dato {
-  margin-bottom: 10px;
-}
-.contenedor-editarEvento .formulario .dato input {
-  width: 320px;
-}
-.contenedor-editarEvento .formulario button {
-  margin-top: 30px;
-}
-.contenedor-editarEvento .caja {
-  margin: 10px 12px 50px;
-}
-.contenedor-editarEvento .lista {
+.invitados .formulario {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
+  width: 400px;
+  padding: 12px 10px;
+  margin: 10px 15px;
+  border-radius: 10px;
+  background-color: white;
   font-family: "Abel", sans-serif;
-  font-size: 19px;
+}
+.invitados .formulario .titulo {
+  font-size: 26px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.invitados .formulario .abierto {
+  display: block;
+  width: 100%;
+}
+.invitados .formulario .abierto .captura {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  margin-top: 5px;
+}
+.invitados .formulario .abierto .captura .dato {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.invitados .formulario .abierto .captura .dato label {
+  font-size: 17px;
+}
+.invitados .formulario .abierto .captura .enviar {
+  margin-top: 10px;
+  width: 100%;
+  height: 38px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #212529;
+  font-size: 17px;
+}
+.invitados .formulario .cerrado {
+  display: none;
+}
+.invitados .lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 20px 15px;
+  width: 400px;
+  font-family: "Abel", sans-serif;
   text-align: center;
 }
-.contenedor-editarEvento .lista .titulo {
-  font-weight: 600;
-  font-size: 24px;
+.invitados .lista .titulo {
+  font-size: 26px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
-.contenedor-editarEvento .lista .invitado {
+.invitados .lista .contenido {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 72vh;
+  overflow-y: scroll;
+  margin-top: 15px;
+}
+.invitados .lista .contenido .seccion {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10px 5px;
-  border-bottom: 1px solid black;
+  align-content: center;
+  min-height: 70px;
+  border-bottom: 1px solid #3e4144;
 }
-.contenedor-editarEvento .lista .invitado .nombre {
-  width: 150px;
-  margin: 0 5px;
+.invitados .lista .contenido .seccion .invitado {
+  width: 140px;
+  font-size: 17px;
 }
-.contenedor-editarEvento .lista .invitado .boton {
-  margin: 0 10px;
-  padding: 4px 8px;
-  border: none;
+.invitados .lista .contenido .seccion .boton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
   border-radius: 5px;
-}
-.contenedor-editarEvento .lista .invitado .boton .icono {
-  width: 21px;
-}
-.contenedor-editarEvento .lista .invitado .enlace {
   background-color: lightblue;
+  width: 35px;
+  height: 35px;
+  padding: 7px;
 }
-.contenedor-editarEvento .lista .invitado .copiar {
-  background-color: lightblue;
+.invitados .lista .contenido .seccion .boton .icono {
+  width: 100%;
 }
-.contenedor-editarEvento .lista .invitado .copiado {
+.invitados .lista .contenido .seccion .copiado {
   background-color: lightgreen;
 }
-.contenedor-editarEvento .lista .invitado .eliminar {
+.invitados .lista .contenido .seccion .eliminar {
   background-color: lightcoral;
+}
+.invitados .lista .contenido .seccion .alerta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.invitados .lista .contenido .seccion .alerta .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 300px;
+  max-width: 400px;
+  height: 250px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: white;
+}
+.invitados .lista .contenido .seccion .alerta .contenedor .mensaje {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.invitados .lista .contenido .seccion .alerta .contenedor .mensaje span {
+  font-size: 20px;
+}
+.invitados .lista .contenido .seccion .alerta .contenedor .botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.invitados .lista .contenido .seccion .alerta .contenedor .botones .eliminar {
+  background-color: lightcoral;
+  border-style: none;
+  border-radius: 5px;
+  width: 65px;
+  height: 35px;
+  padding: 5px;
+}
+.invitados .lista .contenido .seccion .alerta .contenedor .botones .cancelar {
+  background-color: lightblue;
+  border-style: none;
+  border-radius: 5px;
+  width: 65px;
+  height: 35px;
+  padding: 5px;
+}
+.invitados .lista .cerrado {
+  display: none;
 }
 
 body {
@@ -1745,9 +1864,9 @@ body .loading {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   text-align: center;
-  margin-top: 40px;
+  margin: 40px 5px;
   padding: 150px 20px 290px;
   background: url("../multimedia/fondos/background.jpg");
   background-size: cover;
@@ -1761,7 +1880,7 @@ body .loading p {
 body .loading .spin {
   width: 120px;
   height: 120px;
-  border-width: 7px;
+  border-width: 6px;
 }
 body .modeloDos .fondo {
   background-size: cover;
@@ -1777,15 +1896,20 @@ body .modeloDos .portada {
   background-size: cover;
   background-position: center top;
 }
-body .modeloDos .fondo1 {
-  height: 100vh;
-  background: url("../multimedia/Boda - Jaqui y Fredi/img - 02.jpg");
-  background-size: cover;
-  background-position: center top;
-}
 body .modeloDos .imagen {
   background-size: cover;
   background-position: center top;
+}
+body .invitados .fondo {
+  background-image: url("../multimedia/herramientas/administrador.jpg");
+  background-size: cover;
+  background-position: center top;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=styles.css.map */
