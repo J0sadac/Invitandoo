@@ -85,14 +85,14 @@
   background-color: #3e4144;
   padding: 5px;
   padding-left: 15px;
-  width: 110px;
+  width: 130px;
 }
 .contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .opciones a {
-  margin-top: 3px;
+  margin: 4px;
   width: 100%;
   color: white;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 19px;
 }
 .contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .cerrado {
   display: none;
@@ -1276,7 +1276,7 @@
   text-align: center;
   margin: 40px 15px 20px;
   padding: 20px;
-  height: 70vh;
+  max-height: 550px;
 }
 .modeloDos .pase .invitado {
   display: flex;
@@ -1867,7 +1867,6 @@ body .loading {
   width: 100vw;
   text-align: center;
   margin: 40px 5px;
-  padding: 150px 20px 290px;
   background: url("../multimedia/fondos/background.jpg");
   background-size: cover;
   color: #3e4144;
@@ -1875,7 +1874,7 @@ body .loading {
 body .loading p {
   font-family: "Abel", sans-serif;
   font-size: 28px;
-  margin: 0px;
+  margin: 20px;
 }
 body .loading .spin {
   width: 120px;
@@ -1901,7 +1900,18 @@ body .modeloDos .imagen {
   background-position: center top;
 }
 body .invitados .fondo {
-  background-image: url("../multimedia/herramientas/administrador.jpg");
+  background-image: url("../multimedia/herramientas/invitados.jpg");
+  background-size: cover;
+  background-position: center top;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+body .editar .fondo {
+  background-image: url("../multimedia/herramientas/editar.jpg");
   background-size: cover;
   background-position: center top;
   position: fixed;

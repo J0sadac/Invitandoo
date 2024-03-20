@@ -38,7 +38,7 @@ function Tarjeta({evento, carousel, festejado, tipoDeEvento, i}) {
 
                   <div ref={optionRef} className={`${opciones ? 'opciones' : 'cerrado'}`}>
                     <Link to={`/invitados/${evento._id}`}>Invitados</Link>
-                    <Link to={`/evento/editar/${evento._id}`}>Editar</Link>
+                    <Link to={`/editar/${evento._id}`}>Editar</Link>
                   </div>
 
                   <button className="opcion" onClick={() => puerta(true)}> 

@@ -106,7 +106,7 @@ function Invitados () {
                 </div>
             ):(
                 <div className='loading'>
-                    <p>Cargando pantalla de administrador</p>
+                    <p>Cargando invitados</p>
 
                     <div className="spinner-border spin" role="status">
                         <span className="visually-hidden">Loading...</span>

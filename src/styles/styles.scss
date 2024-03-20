@@ -32,7 +32,7 @@ body{
         text-align: center;
 
         margin: 40px 5px;
-        padding: 150px 20px 290px;
+        //padding: 150px 20px 290px;
 
         background: url('../multimedia/fondos/background.jpg');
         background-size: cover;
@@ -43,7 +43,7 @@ body{
             font-family: $font-second;
             font-size: 28px;
 
-            margin: 0px;
+            margin: 20px;
         }
 
         .spin{
@@ -81,7 +81,7 @@ body{
     .invitados{
 
         .fondo{
-            background-image: url('../multimedia/herramientas/administrador.jpg');
+            background-image: url('../multimedia/herramientas/invitados.jpg');
 
             background-size: cover;
             background-position: center top;
@@ -95,5 +95,22 @@ body{
             height: 100vh;
         }
     }
+
+    .editar{
+        .fondo{
+            background-image: url('../multimedia/herramientas/editar.jpg');
+
+            background-size: cover;
+            background-position: center top;
+
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+
+            width: 100vw;
+            height: 100vh;
+        }
+    }    
  }
     
