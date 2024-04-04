@@ -7,7 +7,6 @@ import Dresscode from './components/modelo 1/dresscode';
 import Padrinos from './components/modelo 1/padrinos';
 import Galeria from './components/modelo 1/galeria';
 import Padres from './components/modelo 1/padres';
-import Confirmacion from './components/modelo 1/confirmacion';
 
 import AlertaConReproductor from '../tools/cancion/alertaReproductor';
 
@@ -65,9 +64,6 @@ function Invitaciones({evento}) {
             vestimenta={evento.vestimenta.mujer}
             mesa={evento.mesaDeRegalos}
           />
-
-          <Confirmacion />
-
           
         </div>
   );
