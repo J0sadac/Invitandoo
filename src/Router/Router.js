@@ -8,7 +8,10 @@ import Invitaciones from '../components/Invitacion/invitaciones';
 import MiEvento from '../components/Administrar/miEvento';
 import Invitados from '../components/Administrar/components/invitados/invitados';
 import Editar from '../components/Administrar/components/datos/evento';
+import Modelo3 from '../components/Invitacion/invitacion - modelo 3';
 
+//la ruta "principal" de las invitaciones esta en el .js: src/components/invitacion/invitaciones.js
+//ahi tenemos un if donde se enseña el modelo de invitacion que se haya escogido, y guardado en la base de datos 
 
 const Router = () => {
 
@@ -23,6 +26,7 @@ const Router = () => {
                 <Route exact path='/mi-evento' element={<MiEvento />} />
                 <Route exact path='/invitados/:eventoId' element={<Invitados />} />
                 <Route exact path='/editar/:eventoId' element={<Editar />} />
+                <Route exact path='/prototipo/modelo3' element={<Modelo3 />} />
             </Routes>
 
         </BrowserRouter>
