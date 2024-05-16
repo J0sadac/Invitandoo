@@ -1,4 +1,4 @@
-import imgPortada from '../../../../multimedia/Fotos - Veronica/portada.jpg';
+import imgPortada from '../../../../multimedia/Kristopher/portada.jpg';
 
 function Portada (){
 
@@ -7,9 +7,9 @@ function Portada (){
             <div className='nombres'>
                 <span className='titulo'>NUESTRA BODA</span>
                 <div className='contenedor'>
-                    <span>Francisco</span>
+                    <span>Kristopher</span>
                     <span>&</span>
-                    <span>Veronica</span>
+                    <span>Cristina</span>
                 </div>
             </div>
             <img className='img' src={imgPortada} alt='...' />

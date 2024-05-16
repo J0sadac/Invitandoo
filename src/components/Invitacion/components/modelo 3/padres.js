@@ -1,6 +1,5 @@
 import colgante from '../../../../multimedia/herramientas/flor colgante.gif';
 import pie from '../../../../multimedia/herramientas/flor de pie.gif';
-import trancicion from '../../../../multimedia/herramientas/flor de trancicion.svg';
 
 function Padres (){
 
@@ -10,13 +9,13 @@ function Padres (){
             <p className='titulo'>Nuestros padres</p>
             <div className='contenedor'>
                 <p>Padres del Novio</p>
-                <span>Cora Casaux López</span>
+                <span>Waldemar Flores Hintz</span>
+                <span>Ana Cristina Fernández Favila</span>
             </div>
-            <img className='transicion' src={trancicion} alt='...' />
             <div className='contenedor'>
                 <p>Padres de la Novia</p>
-                <span>Javier Velasco Diaz</span>
-                <span>Angela Arias Salas</span>
+                <span>Reyna Isabel Díaz Saldaña</span>
+                
             </div>
             <img className='pie' src={pie} alt='...' />
         </section>

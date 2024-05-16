@@ -3,11 +3,11 @@ function Invitacion (){
 
     return(
         <section className="invitacion">
-            <p className="fecha">15 de junio de 2024</p>
+            <p className="fecha">03 de agosto de 2024</p>
             <div className="lugar">
-                <p className="salon">Salon El Diamante</p>
-                <p className="direccion">Carretera Federal km 184, tramo Jitotol - Pueblo Nuevo Solistahuacan</p>
-                <p className="ciudad">Jitotol, Chiapas, México</p>
+                <p className="salon">Salon Bella Vita</p>
+                <p className="direccion">11 Sur. Entre 6ª. Privada y 8ª. Oriente</p>
+                <p className="ciudad">Tapachula, Chiapas, México</p>
             </div>
         </section>
     );

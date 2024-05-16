@@ -7,10 +7,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import brindis from '../../../../multimedia/herramientas/brindis.gif';
+import arras from '../../../../multimedia/herramientas/arras.gif';
 import velacion from '../../../../multimedia/herramientas/velacion.svg';
 import anillos from '../../../../multimedia/herramientas/anillos.gif';
-
+import lazo from '../../../../multimedia/herramientas/lazo.svg';
 
 function Padrinos() {
   return (
@@ -28,11 +28,10 @@ function Padrinos() {
 
             <SwiperSlide>
                 <div className='contenedor'>
-                    <img className='icono' src={brindis} alt='...' />
-                    <p className='accion'>Brindis</p>
+                    <img className='icono' src={arras} alt='...' />
+                    <p className='accion'>Arras</p>
                     <div className='padrino'>
-                        <span>Sr. Moisés Alejandro López Gómez</span>
-                        <span>Mtra. María Arelis Rincón Coronel</span>
+                        <span>Sra. Zafiro Ramírez Fernández</span>
                     </div>
                 </div>
             </SwiperSlide>
@@ -42,8 +41,8 @@ function Padrinos() {
                     <img className='icono' src={velacion} alt='...' />
                     <p className='accion'>Velacion</p>
                     <div className='padrino'>
-                        <span>Sr. Pedro Coronel Hernández</span>
-                        <span>Sra. Lucina Méndez Velasco</span>
+                        <span>Sr. Luis Rey Salas Barrios</span>
+                        <span>Sra. Dory Luz Escobar Martinez</span>
                     </div>
                 </div>
             </SwiperSlide>
@@ -53,7 +52,19 @@ function Padrinos() {
                     <img className='icono' src={anillos} alt='...' />
                     <p className='accion'>Anillos</p>
                     <div className='padrino'>
-                        <span>Dr. Arturo Lozano Álvarez</span>
+                        <span>Sr. Juan José Muñoz</span>
+                        <span>Sra. Gabriela Solís Trujillo</span>
+                    </div>
+                </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+                <div className='contenedor'>
+                    <img className='icono' src={lazo} alt='...' />
+                    <p className='accion'>Lazo</p>
+                    <div className='padrino'>
+                        <span>Sr. German Blanco Pérez</span>
+                        <span>Sra. Adriana Escobar Diaz</span>
                     </div>
                 </div>
             </SwiperSlide>

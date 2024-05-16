@@ -9,7 +9,7 @@ function Vestimenta (){
             <img className="icono" src={traje} alt="..." />
             <img className="icono" src={vestido} alt="..." />
             <p>Formal - Noche</p>
-            <p className='aviso'>Evitar color blanco, gama de color rosas y fiushas.</p>
+            <p className='aviso'>Evitar color blanco</p>
         </section>
     );
 };
