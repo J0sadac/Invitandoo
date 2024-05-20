@@ -11,6 +11,7 @@ import Itinerario from "./components/modelo 3/itinerario";
 import Mesa from "./components/modelo 3/mesa";
 import Vestimenta from "./components/modelo 3/vestimenta";
 import Cancion from './components/modelo 2/cancion';
+import Confirmacion from "./components/modelo 3/confirmacion";
 //import Collage from "./components/modelo 3/collage";
 
 function Invitaciones ({evento}) {
@@ -36,6 +37,7 @@ function Invitaciones ({evento}) {
                 <Mesa />
                 <Ubicacion />
                 {/* <Collage /> */}
+                <Confirmacion />
             </div>
         </div>
     )
