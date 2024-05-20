@@ -13,14 +13,14 @@ function Cancion({ url }) {
     <div className="reproductor">
         <div className={`${ventana ? "cancion" : "cerrado"}`} onClick={() => puerta(false)}>
             <div className="contenedor">
-            <button className="cerrar" onClick={() => puerta(false)}>
-                <img src={close} alt="..." className="icono" />
-            </button>
+              <button className="cerrar" onClick={() => puerta(false)}>
+                  <img src={close} alt="..." className="icono" />
+              </button>
 
-            <div className="contenido">
-                <p>¡Dale play!</p>
-                <audio src={url} controls autoPlay/>
-            </div>
+              <div className="contenido">
+                  <p>¡Dale play!</p>
+                  <audio src={url} controls autoPlay/>
+              </div>
             </div>
         </div>
 

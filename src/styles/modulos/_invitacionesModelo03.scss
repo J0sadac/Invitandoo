@@ -521,6 +521,7 @@ $font-second: 'Abel', sans-serif;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
+            align-content: center;
 
             background-color: whitesmoke;
 
@@ -529,6 +530,15 @@ $font-second: 'Abel', sans-serif;
             text-align: center;
 
             padding: 20px;
+
+            .caja{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                align-content: center;
+                
+            }
 
             .encabezado{
                 display: flex;
@@ -569,7 +579,7 @@ $font-second: 'Abel', sans-serif;
                 }
 
                 .foto{
-                    width: 75vw;
+                    width: 270px;
                     object-fit: cover;
 
                     border-radius: 50%;
@@ -593,6 +603,12 @@ $font-second: 'Abel', sans-serif;
             }
 
             button{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                align-content: center;
+                align-self: center;
+
                 background-color: rgb(201, 147, 9);
 
                 border: none;
@@ -602,16 +618,83 @@ $font-second: 'Abel', sans-serif;
                 height: 50px;
                 padding: 5px;
 
+                margin: 0 auto;
+
                 .icono{
                     width: 30px;
-                    margin-right: 10px;
+                    margin:0 10px;
                 }
 
                 .link{
+                    margin: auto 0;
                     text-decoration: none;
                     color: whitesmoke;
 
                 }
+            }
+
+            .modal{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+
+                
+
+                background-color: rgba(0, 0 , 0, .5);
+
+                width: 100%;
+                height: 100vh;
+
+                .mapa{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    align-content: center;
+
+                    width: 320px;
+                    height: 60vh;
+
+                    background-color: #fff;
+
+                    border-radius: 10px;
+
+                    .titulo{
+                        font-family: $font-main;
+                        font-size: 55px;
+                        font-weight: 800;
+                    }
+
+                    .maps{
+                        width: 280px;
+                        height: 280px;
+                    }
+                }
+
+                .cerrar{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+
+                    position: absolute;
+
+                    width: 40px;
+                    height: 40px;
+                    background-color: white;
+
+                    .icono{
+                        margin: 0;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .cerrado{
+                display: none;
             }
         }
 
