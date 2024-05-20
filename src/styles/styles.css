@@ -1038,91 +1038,6 @@
 .modeloDos {
   margin-top: 70px;
 }
-.modeloDos .reproductor .cancion {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.5);
-}
-.modeloDos .reproductor .cancion .contenedor {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: aliceblue;
-  max-width: 400px;
-  min-width: 300px;
-  height: 250px;
-  margin: 25px;
-  padding: 20px;
-  border-radius: 12px;
-  position: relative;
-}
-.modeloDos .reproductor .cancion .contenedor .cerrar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  z-index: 90;
-  width: 30px;
-  height: 30px;
-  border: none;
-  border-radius: 5px;
-  background: none;
-  cursor: pointer;
-  transition: 0.3 ease all;
-}
-.modeloDos .reproductor .cancion .contenedor .cerrar .icono {
-  width: 100%;
-}
-.modeloDos .reproductor .cancion .contenedor .cerrar:hover {
-  background: rgba(0, 0, 0, 0.1);
-}
-.modeloDos .reproductor .cancion .contenedor .contenido {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  font-family: "Abel", sans-serif;
-}
-.modeloDos .reproductor .cancion .contenedor .contenido p {
-  font-size: 25px;
-}
-.modeloDos .reproductor .puerta {
-  position: fixed;
-  bottom: 20px;
-  left: 10px;
-  z-index: 90;
-  width: 50px;
-  height: 50px;
-}
-.modeloDos .reproductor .puerta .abrir {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  background-color: aliceblue;
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-}
-.modeloDos .reproductor .puerta .abrir .icono {
-  width: 80%;
-}
-.modeloDos .reproductor .cerrado {
-  display: none;
-}
 .modeloDos .portada {
   display: flex;
   flex-direction: column;
@@ -1606,9 +1521,9 @@
 .modelo3 .caja .invitacion {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   padding: 20px;
   color: aliceblue;
   text-align: center;
@@ -1618,7 +1533,8 @@
   font-size: 20px;
 }
 .modelo3 .caja .invitacion .fecha {
-  font-size: 32px;
+  font-family: "Tangerine", cursive;
+  font-size: 60px;
   font-weight: 800;
 }
 .modelo3 .caja .padres {
@@ -1637,7 +1553,6 @@
   font-family: "Tangerine", cursive;
   font-size: 50px;
   font-weight: 800;
-  margin-top: -30px;
   background: linear-gradient(to right, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));
   background-clip: padding-box;
   -webkit-background-clip: text;
@@ -1664,6 +1579,9 @@
 }
 .modelo3 .caja .padres .contenedor p {
   font-weight: 800;
+}
+.modelo3 .caja .padres .contenedor span img {
+  width: 25px;
 }
 .modelo3 .caja .padres .colgante {
   position: absolute;
@@ -1750,6 +1668,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
   background-color: #191970;
   position: relative;
   width: 100%;
@@ -1762,6 +1682,7 @@
 .modelo3 .caja .pase .invitado {
   display: flex;
   flex-direction: column;
+  width: 70vw;
 }
 .modelo3 .caja .pase .invitado .titulo {
   font-family: "Tangerine", cursive;
@@ -1991,9 +1912,10 @@
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   text-align: center;
+  background-color: #DD969C;
 }
 .modelo3 .caja .mesa .titulo {
   color: white;
@@ -2006,9 +1928,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
   width: 90%;
-  height: 300px;
+  height: 510px;
   text-decoration: none;
+  text-align: center;
   color: white;
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
@@ -2016,16 +1941,18 @@
   backdrop-filter: blur(5px);
 }
 .modelo3 .caja .mesa .regalo .icono {
-  width: 90%;
+  width: 250px;
   margin-bottom: 30px;
 }
 .modelo3 .caja .mesa .regalo .codigo {
   font-family: "Abel", sans-serif;
-  font-size: 22px;
+  font-size: 28px;
+  font-weight: 800;
 }
 .modelo3 .caja .mesa .regalo .anuncio {
   font-family: "Abel", sans-serif;
   font-size: 20px;
+  width: 280px;
 }
 .modelo3 .caja .vestimenta {
   display: flex;
@@ -2046,11 +1973,14 @@
   font-weight: 800;
   margin-top: 20px;
 }
-.modelo3 .caja .vestimenta .icono {
-  width: 200px;
+.modelo3 .caja .vestimenta .iconos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.modelo3 .caja .vestimenta .iconos .icono {
+  width: 170px;
   padding: 10px;
-  border-radius: 50%;
-  border: 4px solid white;
 }
 .modelo3 .caja .vestimenta p {
   font-family: "Abel", sans-serif;
@@ -2490,6 +2420,91 @@ body .loading .spin {
   height: 120px;
   border-width: 6px;
 }
+body .reproductor .cancion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+}
+body .reproductor .cancion .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  max-width: 400px;
+  min-width: 300px;
+  height: 250px;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+}
+body .reproductor .cancion .contenedor .cerrar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 90;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  transition: 0.3 ease all;
+}
+body .reproductor .cancion .contenedor .cerrar .icono {
+  width: 100%;
+}
+body .reproductor .cancion .contenedor .cerrar:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+body .reproductor .cancion .contenedor .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+}
+body .reproductor .cancion .contenedor .contenido p {
+  font-size: 25px;
+}
+body .reproductor .puerta {
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  z-index: 90;
+  width: 50px;
+  height: 50px;
+}
+body .reproductor .puerta .abrir {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: aliceblue;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+body .reproductor .puerta .abrir .icono {
+  width: 80%;
+}
+body .reproductor .cerrado {
+  display: none;
+}
 body .modeloDos {
   background-size: contain;
 }
@@ -2513,10 +2528,6 @@ body .modeloDos .imagen {
 }
 body .modelo3 .invitacion {
   background-image: url(../multimedia/Kristopher/fondo.jpg);
-  background-size: cover;
-}
-body .modelo3 .mesa {
-  background-image: url(../multimedia/Fotos\ -\ Veronica/mesa.jpg);
   background-size: cover;
 }
 body .invitados .fondo {

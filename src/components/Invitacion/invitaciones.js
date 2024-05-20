@@ -1,5 +1,6 @@
 import Modelo1 from './invitacion - modelo 1';
 import Modelo2 from './invitacion - modelo 2';
+import Modelo3 from './invitacion - modelo 3';
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -35,6 +36,10 @@ function Invitaciones (){
                 />
             ) : evento?.modelo === 2 ? (
                 <Modelo2 
+                    evento = {evento}
+                />
+            ) : evento?.modelo === 3 ? (
+                <Modelo3 
                     evento = {evento}
                 />
             ) : (

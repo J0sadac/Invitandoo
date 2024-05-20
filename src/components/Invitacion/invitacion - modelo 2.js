@@ -19,7 +19,9 @@ function Invitaciones({ evento }) {
         style={{ backgroundImage: `url(${evento.multimedia.fondo.url})` }}
       ></div>
 
-      <Cancion url={evento.multimedia.cancion.url} />
+      <Cancion 
+        url={evento.multimedia.cancion.url} 
+      />
 
       <Portada
         novios={evento.datos.novios}

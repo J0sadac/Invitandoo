@@ -1,5 +1,6 @@
 import colgante from '../../../../multimedia/herramientas/flor colgante.gif';
 import pie from '../../../../multimedia/herramientas/flor de pie.gif';
+import rip from '../../../../multimedia/herramientas/rip.svg'
 
 function Padres (){
 
@@ -15,7 +16,7 @@ function Padres (){
             <div className='contenedor'>
                 <p>Padres de la Novia</p>
                 <span>Reyna Isabel Díaz Saldaña</span>
-                
+                <span>Medaro Escobar Armenta <img src={rip} alt='...' /></span>                
             </div>
             <img className='pie' src={pie} alt='...' />
         </section>

@@ -31,7 +31,7 @@ function Padrinos() {
                     <img className='icono' src={arras} alt='...' />
                     <p className='accion'>Arras</p>
                     <div className='padrino'>
-                        <span>Sra. Zafiro Ramírez Fernández</span>
+                        <span>Ing. Zafiro Ramírez Fernández</span>
                     </div>
                 </div>
             </SwiperSlide>
@@ -52,8 +52,8 @@ function Padrinos() {
                     <img className='icono' src={anillos} alt='...' />
                     <p className='accion'>Anillos</p>
                     <div className='padrino'>
-                        <span>Sr. Juan José Muñoz</span>
-                        <span>Sra. Gabriela Solís Trujillo</span>
+                        <span>Lic. Juan José Muñoz</span>
+                        <span>Lic. Gabriela Solís Trujillo</span>
                     </div>
                 </div>
             </SwiperSlide>
