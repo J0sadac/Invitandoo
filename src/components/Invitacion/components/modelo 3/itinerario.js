@@ -37,7 +37,7 @@ function Itinerario () {
             <SwiperSlide>
                 <div className='contenedor'>
                     <img className='icono' src={recepcion} alt='...' />
-                    <p className='accion'>Recepcion</p>
+                    <p className='accion'>Recepción</p>
                     <p className='hora'>8:00 pm</p>
                 </div>
             </SwiperSlide>
