@@ -14,10 +14,14 @@ function Pase ({invitado}){
             <div className="cantidad">
                 <span className="titulo">Pase para: {invitado.pase}</span>
             </div>
+
+            <p className='nin'> Ceremonia y Recepción: Solo adultos. Gracias por su comprensión.</p>
+
             <div className="flores">
                 <img className='petalo left' src={petalos} alt='...' />
                 <img className='petalo rigth' src={petalos} alt='...' />
             </div>
+            
         </section>
     );
 };

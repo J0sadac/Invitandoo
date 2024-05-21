@@ -8,6 +8,7 @@ function Mensaje () {
                 <img className='flor tl' src={flor} alt='...' />
                 <img className='flor tr' src={flor} alt='...' />
             </div>
+            <p className='fecha'>03 de agosto de 2024</p>
             <p>
                 ¡Uno de los dias más importantes de nuestra vida ha llegado!
             </p>

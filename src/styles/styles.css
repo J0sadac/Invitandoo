@@ -1500,6 +1500,11 @@
   font-family: "Abel", sans-serif;
   font-size: 25px;
 }
+.modelo3 .caja .mensaje .fecha {
+  font-family: "Tangerine", cursive;
+  font-size: 60px;
+  font-weight: 800;
+}
 .modelo3 .caja .mensaje .florero {
   display: flex;
   flex-direction: row;
@@ -1678,6 +1683,10 @@
   font-size: 28px;
   text-align: center;
   color: aliceblue;
+}
+.modelo3 .caja .pase .nin {
+  font-size: 20px;
+  width: 200px;
 }
 .modelo3 .caja .pase .invitado {
   display: flex;

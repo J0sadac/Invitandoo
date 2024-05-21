@@ -149,6 +149,12 @@ $font-second: 'Abel', sans-serif;
                 font-family: $font-second;
                 font-size: 25px;
             }
+
+            .fecha{
+                font-family: $font-main;
+                font-size: 60px;
+                font-weight: 800;
+            }
     
             .florero{
                 display: flex;
@@ -394,6 +400,12 @@ $font-second: 'Abel', sans-serif;
             font-size: 28px;
             text-align: center;
             color: aliceblue;
+
+            .nin{
+                font-size: 20px;
+
+                width: 200px;
+            }
     
             .invitado{
                 display: flex;

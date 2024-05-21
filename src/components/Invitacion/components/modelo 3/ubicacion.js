@@ -29,7 +29,7 @@ function Ubicacion() {
     return (
         <section className="ubicacion">
             <div className='encabezado'>
-                <p className="titulo">Ubicacion</p>
+                <p className="titulo">Ceremonia Religiosa</p>
                 <img className='adorno' src={adorno} alt='...' />
             </div>
 
@@ -63,6 +63,11 @@ function Ubicacion() {
                     </div>
                 </div>
             )}
+
+                <div className='encabezado'>
+                    <p className="titulo">Recepcion</p>
+                    <img className='adorno' src={adorno} alt='...' />
+                </div>
 
             <section>
                 <div className="lugar">
