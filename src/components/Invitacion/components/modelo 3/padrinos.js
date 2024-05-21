@@ -63,8 +63,8 @@ function Padrinos() {
                     <img className='icono' src={lazo} alt='...' />
                     <p className='accion'>Lazo</p>
                     <div className='padrino'>
-                        <span>Sr. German Blanco Pérez</span>
-                        <span>Sra. Adriana Escobar Diaz</span>
+                        <span>Sr. Germán Blanco Pérez</span>
+                        <span>Sra. Adriana Escobar Díaz</span>
                     </div>
                 </div>
             </SwiperSlide>

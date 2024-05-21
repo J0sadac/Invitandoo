@@ -45,14 +45,14 @@ function Ubicacion() {
 
                 <button onClick={abrirVentanaIglesia}>
                     <img className='icono' src={mapa} alt='...' />
-                    <p className='link'>Ubicacion GPS</p>
+                    <p className='link'>Ubicación GPS</p>
                 </button>
             </section>
 
             {ventanaIglesia && (
                 <div className="modal" onClick={cerrarVentanas}>
                     <div className='mapa'>
-                        <p className='titulo'>Ubicacion GPS</p>
+                        <p className='titulo'>Ubicación GPS</p>
                         <Iframe 
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15422.251053312331!2d-92.2628715!3d14.9057079!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858e0edf8d70ca99%3A0xe0e5379671746486!2sCatedral%20de%20San%20Jos%C3%A9%20de%20Tapachula!5e0!3m2!1ses-419!2smx!4v1716246624260!5m2!1ses-419!2smx" 
                             width="600" height="450" 
@@ -65,13 +65,13 @@ function Ubicacion() {
             )}
 
                 <div className='encabezado'>
-                    <p className="titulo">Recepcion</p>
+                    <p className="titulo">Recepción</p>
                     <img className='adorno' src={adorno} alt='...' />
                 </div>
 
             <section>
                 <div className="lugar">
-                    <p className="establecimiento">Salon</p>
+                    <p className="establecimiento">Salón</p>
                     <img className="foto" src={salon} alt="..." />
                     <div className='direccion'>
                         <span className='nombre'>Salon Bella Vita</span>

@@ -16,7 +16,7 @@ function Padres (){
             <div className='contenedor'>
                 <p>Padres de la Novia</p>
                 <span>Reyna Isabel Díaz Saldaña</span>
-                <span>Medaro Escobar Armenta <img src={rip} alt='...' /></span>                
+                <span>Medardo Escobar Armenta <img src={rip} alt='...' /></span>                
             </div>
             <img className='pie' src={pie} alt='...' />
         </section>

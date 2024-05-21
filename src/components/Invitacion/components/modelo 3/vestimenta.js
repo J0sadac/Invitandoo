@@ -5,7 +5,7 @@ function Vestimenta (){
 
     return(
         <section className="vestimenta">
-            <p className="titulo">Codigo de vestimenta</p>
+            <p className="titulo">Código de vestimenta</p>
             <div className='iconos'>
                 <img className="icono" src={traje} alt="..." />
                 <img className="icono" src={vestido} alt="..." />
