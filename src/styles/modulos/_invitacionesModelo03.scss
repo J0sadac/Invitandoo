@@ -1022,6 +1022,49 @@ $font-second: 'Abel', sans-serif;
                         background-color: lightcoral;
                     }
                 }
+
+                
+            }
+
+            .alerta{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                position: fixed;
+                z-index: 100;
+                bottom: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100vh;
+
+                background-color: rgba(0, 0, 0, .5);
+
+                .contenido{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+
+                    background-color: white;
+
+                    border-radius: 10px;
+
+                    width: 80%;
+                    height: 230px;
+
+                    color: black;
+
+                    padding: 15px;
+
+                    p{
+                        font-family: $font-second;
+                        font-size: 23px;
+                    }
+                }
             }
         }
     }

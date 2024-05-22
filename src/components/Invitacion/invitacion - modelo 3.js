@@ -12,6 +12,7 @@ import Mesa from "./components/modelo 3/mesa";
 import Vestimenta from "./components/modelo 3/vestimenta";
 import Cancion from './components/modelo 2/cancion';
 import Confirmacion from "./components/modelo 3/confirmacion";
+import Desplazar from "../tools/desplazar";
 //import Collage from "./components/modelo 3/collage";
 
 function Invitaciones ({evento}) {
@@ -22,6 +23,7 @@ function Invitaciones ({evento}) {
             <Cancion 
                 url={evento.multimedia.cancion.url}
             />
+            <Desplazar />
             <div className="caja">
                 <Mensaje />
                 <Invitacion />
@@ -37,7 +39,10 @@ function Invitaciones ({evento}) {
                 <Mesa />
                 <Ubicacion />
                 {/* <Collage /> */}
-                <Confirmacion />
+                <Confirmacion 
+                    invitadoId={evento.invitados._id}
+                    eventoId={evento._id}
+                />
             </div>
         </div>
     )
