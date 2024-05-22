@@ -2033,6 +2033,7 @@
   align-items: center;
   align-content: center;
   text-align: center;
+  position: relative;
   background-color: #191970;
   color: white;
   width: 100%;
@@ -2053,6 +2054,20 @@
 .modelo3 .caja .vestimenta .iconos .icono {
   width: 170px;
   padding: 10px;
+}
+.modelo3 .caja .vestimenta .flores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.modelo3 .caja .vestimenta .flores .petalo {
+  width: 120px;
+}
+.modelo3 .caja .vestimenta .flores .rigth {
+  transform: rotatey(180deg);
 }
 .modelo3 .caja .vestimenta p {
   font-family: "Abel", sans-serif;

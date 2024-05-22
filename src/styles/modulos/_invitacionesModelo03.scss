@@ -866,6 +866,8 @@ $font-second: 'Abel', sans-serif;
 
             text-align: center;
 
+            position: relative;
+
             background-color: #191970;
             color: white;
 
@@ -892,6 +894,24 @@ $font-second: 'Abel', sans-serif;
                 }
             }
 
+            .flores{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+    
+                position: absolute;
+                bottom: 0;
+    
+                width: 100%;
+    
+                .petalo{
+                    width: 120px;
+                }
+    
+                .rigth{
+                    transform: rotatey(180deg);
+                }
+            }
 
             p{
                 font-family: $font-second;
