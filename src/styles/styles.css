@@ -33,6 +33,7 @@
 }
 .contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta {
   width: 250px;
+  margin-top: 40px;
 }
 .contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion {
   display: flex;
@@ -2559,6 +2560,59 @@
   display: none;
 }
 
+.gestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10px 10px;
+}
+.gestion .mesa {
+  max-width: 350px;
+  min-width: 300px;
+  height: 100%;
+  margin-top: 25px;
+  background-color: white;
+  border-radius: 10px;
+}
+.gestion .mesa .encabezado {
+  border-bottom: 2px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  font-family: "Abel", sans-serif;
+  font-size: 23px;
+  padding: 15px;
+}
+.gestion .mesa .encabezado .icono {
+  width: 20px;
+  transform: rotate(180deg);
+}
+.gestion .mesa .contenido {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 2px solid lightgray;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+.gestion .mesa .contenido .invitado {
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+.gestion .mesa .contenido .asistencia {
+  margin-bottom: 5px;
+}
+.gestion .mesa .contenido .asistencia .icono {
+  width: 20px;
+}
+
 body {
   background: url("../multimedia/fondos/Invitandoo.svg");
   background-size: cover;
@@ -2746,7 +2800,7 @@ body .invitados .fondo {
   width: 100vw;
   height: 100vh;
 }
-body .editar .fondo {
+body .gestion .fondo {
   background-image: url("../multimedia/herramientas/editar.jpg");
   background-size: cover;
   background-position: center top;

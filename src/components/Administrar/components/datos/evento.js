@@ -1,11 +1,111 @@
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-function Editar () {
+import flecha from '../../../../multimedia/herramientas/ordenar-abajo.svg';
+import confirmado from '../../../../multimedia/herramientas/comprobado.svg';
+import rechazado from '../../../../multimedia/herramientas/rechazado.svg';
+import pendiente from '../../../../multimedia/herramientas/pendiente.svg';
 
-    return(
-        <div className="editar">
-            <div className="fondo"></div>
-        </div>
+function Administrar() {
+    const { eventoId } = useParams();
+    const [evento, setEvento] = useState({ invitados: [] });
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const getInvitacion = async () => {
+            try {
+                const res = await axios.get(`https://nueva-invitandodb.onrender.com/evento/${eventoId}`);
+                setEvento(res.data);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        getInvitacion();
+    }, [eventoId]);
+
+    const agruparPorMesa = (invitados) => {
+        return invitados.reduce((mesas, invitado) => {
+            const mesa = invitado.mesa;
+            if (!mesas[mesa]) {
+                mesas[mesa] = [];
+            }
+            mesas[mesa].push(invitado);
+            return mesas;
+        }, {});
+    };
+
+    const mesas = agruparPorMesa(evento.invitados);
+
+    if (loading) {
+        return (
+            <div className='loading'>
+                <p>Cargando invitación</p>
+                <div className="spinner-border spin" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+                <p>¡Por favor espere!</p>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className='error'>
+                <p>Error al cargar la invitación: {error}</p>
+            </div>
+        );
+    }
+
+    return (
+        <section className='gestion'>
+            {Object.keys(mesas).map(mesa => {
+                const invitados = mesas[mesa];
+                const confirmados = invitados.filter(inv => inv.asistir === 'confirmado');
+                const totalConfirmados = confirmados.reduce((total, inv) => total + inv.pase, 0);
+                const totalPases = invitados.reduce((total, inv) => total + inv.pase, 0);
+
+                return (
+                    <div key={mesa}>
+                        <div className="fondo"></div>
+                        <div className="mesa">
+                            <div className="encabezado">
+                                <span className="titulo">Mesa {mesa}</span>
+                                <span className="cantidad">{totalConfirmados}/{totalPases}</span>
+                                <img className="icono" src={flecha} alt="..." />
+                            </div>
+                            {invitados.map((inv) => (
+                                <div key={inv._id} className='contenido'>
+                                    <span className='invitado'>{inv.invitado}</span>
+                                    <span className='pase'>
+                                        {inv.pase} {inv.pase > 1 ? 'personas' : 'persona'}
+                                    </span>
+                                    {inv.asistir === 'confirmado' ? (
+                                        <div className='asistencia'>
+                                            <img className='icono' src={confirmado} alt='...' />
+                                        </div>
+                                    ) : inv.asistir === 'rechazado' ? (
+                                        <div className='asistencia'>
+                                            <img className='icono' src={rechazado} alt='...' />
+                                        </div>
+                                    ) : (
+                                        <div className='asistencia'>
+                                            <img className='icono' src={pendiente} alt='...' />
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                );
+            })}
+        </section>
     );
-};
+}
 
-export default Editar
+export default Administrar;
+

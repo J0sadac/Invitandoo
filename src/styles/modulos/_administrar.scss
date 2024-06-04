@@ -246,3 +246,75 @@ $font-second: 'Abel', sans-serif;
         }
     }
 }
+
+.gestion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 10px 10px;
+
+    .mesa{
+        max-width: 350px;
+        min-width: 300px;
+        height: 100%;
+
+        margin-top: 25px;
+        
+        background-color: white;
+
+        border-radius: 10px;
+
+        .encabezado{
+            border-bottom: 2px solid lightgrey;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+
+            font-family: $font-second;
+            font-size: 23px;
+
+            padding: 15px;
+
+            .icono{
+                width: 20px;
+
+                transform: rotate(180deg)
+            }
+        }
+
+        .contenido{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            padding: 10px;
+            width: 100%;
+
+            border-bottom: 2px solid lightgray;
+
+            font-family: $font-second;
+            font-size: 20px;
+
+            .invitado{
+                width: 100%;
+                margin: 10px;
+
+                text-align: center;
+            }
+
+            .asistencia{
+                margin-bottom: 5px;
+
+                .icono{
+                    width: 20px;
+                }
+            }
+        }
+    }
+}

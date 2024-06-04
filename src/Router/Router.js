@@ -7,7 +7,7 @@ import Main from '../components/main';
 import Invitaciones from '../components/Invitacion/invitaciones';
 import MiEvento from '../components/Administrar/miEvento';
 import Invitados from '../components/Administrar/components/invitados/invitados';
-import Editar from '../components/Administrar/components/datos/evento';
+import Administrar from '../components/Administrar/components/datos/evento';
 import Modelo3 from '../components/Invitacion/invitacion - modelo 3';
 
 //la ruta "principal" de las invitaciones esta en el .js: src/components/invitacion/invitaciones.js
@@ -25,7 +25,7 @@ const Router = () => {
                 <Route exact path='/evento/:eventoId/invitado/:invitadoId' element={<Invitaciones />} />
                 <Route exact path='/mi-evento' element={<MiEvento />} />
                 <Route exact path='/invitados/:eventoId' element={<Invitados />} />
-                <Route exact path='/editar/:eventoId' element={<Editar />} />
+                <Route exact path='/Administrar/:eventoId' element={<Administrar />} />
                 <Route exact path='/prototipo/modelo3' element={<Modelo3 />} />
             </Routes>
 
