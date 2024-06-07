@@ -1,6 +1,6 @@
 
-import iglesia from '../../../../multimedia/Kristopher/iglesia.jpg';
-import salon from '../../../../multimedia/Kristopher/salon.jpg';
+import iglesia from '../../../../multimedia/Boda - Kristopher/iglesia.jpg';
+import salon from '../../../../multimedia/Boda - Kristopher/salon.jpg';
 import adorno from '../../../../multimedia/herramientas/adorno dorado.svg';
 import mapa from '../../../../multimedia/herramientas/mapa.svg';
 //import close from '../../../../multimedia/herramientas/x-lg.svg';

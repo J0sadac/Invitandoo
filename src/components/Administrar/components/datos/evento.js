@@ -39,7 +39,7 @@ function Administrar() {
         }, {});
     };
 
-    const mesas = agruparPorMesa(evento.invitados);
+    const contenido = agruparPorMesa(evento.invitados);
 
     if (loading) {
         return (
@@ -63,16 +63,16 @@ function Administrar() {
 
     return (
         <section className='gestion'>
-            {Object.keys(mesas).map(mesa => {
-                const invitados = mesas[mesa];
+            <div className="fondo"></div>
+            {Object.keys(contenido).map(mesa => {
+                const invitados = contenido[mesa];
                 const confirmados = invitados.filter(inv => inv.asistir === 'confirmado');
                 const totalConfirmados = confirmados.reduce((total, inv) => total + inv.pase, 0);
                 const totalPases = invitados.reduce((total, inv) => total + inv.pase, 0);
 
                 return (
                     <div key={mesa}>
-                        <div className="fondo"></div>
-                        <div className="mesa">
+                        <div className={`${totalConfirmados === totalPases ? 'mesa completa' : 'mesa pendiente'}`}>
                             <div className="encabezado">
                                 <span className="titulo">Mesa {mesa}</span>
                                 <span className="cantidad">{totalConfirmados}/{totalPases}</span>
