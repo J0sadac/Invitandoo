@@ -1513,28 +1513,42 @@
 .modelo3 .caja .mensaje {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  position: relative;
+  z-index: 100;
   height: 50vh;
   width: 100%;
+  color: white;
   background-color: white;
   text-align: center;
+}
+.modelo3 .caja .mensaje .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
 }
 .modelo3 .caja .mensaje p {
   margin: 5px 30px;
   font-family: "Abel", sans-serif;
   font-size: 25px;
+  z-index: 100;
 }
 .modelo3 .caja .mensaje .fecha {
   font-family: "Tangerine", cursive;
   font-size: 60px;
   font-weight: 800;
+  z-index: 100;
 }
 .modelo3 .caja .mensaje .florero {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 90%;
+  z-index: 100;
 }
 .modelo3 .caja .mensaje .florero .flor {
   width: 120px;
@@ -1548,24 +1562,113 @@
 .modelo3 .caja .mensaje .florero .br {
   transform: rotateY(180deg);
 }
+.modelo3 .caja .mensaje .iconos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 100;
+}
+.modelo3 .caja .mensaje .iconos .icono {
+  width: 100px;
+  margin-top: -60px;
+}
+.modelo3 .caja .mensaje .iconos .adorno {
+  width: 110px;
+}
+.modelo3 .caja .mensaje .iconos .tr {
+  transform: rotateY(180deg);
+}
+.modelo3 .caja .mensaje .adorno-bajo {
+  width: 300px;
+  z-index: 100;
+}
 .modelo3 .caja .invitacion {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   height: 70vh;
   padding: 20px;
   color: aliceblue;
   text-align: center;
+  position: relative;
+  z-index: 100;
 }
-.modelo3 .caja .invitacion p {
-  font-family: "Abel", sans-serif;
-  font-size: 20px;
+.modelo3 .caja .invitacion .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  object-fit: cover;
 }
-.modelo3 .caja .invitacion .fecha {
+.modelo3 .caja .invitacion .sombra {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.modelo3 .caja .invitacion .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 100;
+  height: 100%;
+}
+.modelo3 .caja .invitacion .contenedor .fecha {
   font-family: "Tangerine", cursive;
   font-size: 60px;
   font-weight: 800;
+  transition: 0.3s linear;
+  color: transparent;
+  background-image: var(--portada-titulo);
+  background-size: 200%;
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  animation: move 20s linear infinite;
+}
+@keyframes move {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+.modelo3 .caja .invitacion .contenedor .direccion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.modelo3 .caja .invitacion .contenedor .direccion p {
+  font-family: "Abel", sans-serif;
+  font-size: 22px;
+}
+.modelo3 .caja .invitacion .contenedor .contador {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.modelo3 .caja .invitacion .contenedor .contador .tiempo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 8px;
+  padding: 10px;
+  width: 60px;
+}
+.modelo3 .caja .invitacion .contenedor .contador .tiempo span {
+  font-family: "Abel", sans-serif;
+  font-size: 15PX;
+}
+.modelo3 .caja .invitacion .contenedor .contador .tiempo .segundero {
+  font-size: 28px;
 }
 .modelo3 .caja .padres {
   display: flex;
@@ -1574,6 +1677,7 @@
   align-items: center;
   align-content: center;
   position: relative;
+  z-index: 100;
   background-color: whitesmoke;
   height: 80vh;
   width: 100%;
@@ -1583,6 +1687,7 @@
   font-family: "Tangerine", cursive;
   font-size: 50px;
   font-weight: 800;
+  z-index: 100;
   background: linear-gradient(to right, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));
   background-clip: padding-box;
   -webkit-background-clip: text;
@@ -1606,6 +1711,7 @@
   justify-content: space-evenly;
   font-family: "Abel", sans-serif;
   font-size: 25px;
+  z-index: 100;
 }
 .modelo3 .caja .padres .contenedor p {
   font-weight: 800;
@@ -1618,15 +1724,32 @@
   top: 0;
   left: 0;
   width: 175px;
+  z-index: 90;
 }
 .modelo3 .caja .padres .pie {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 175px;
+  z-index: 90;
 }
 .modelo3 .caja .padres .transicion {
   width: 200px;
+  z-index: 100;
+}
+.modelo3 .caja .padres .fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+}
+.modelo3 .caja .xv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh;
 }
 .modelo3 .caja .padrinos {
   display: flex;
@@ -1636,6 +1759,8 @@
   align-content: center;
   width: 100%;
   height: 70vh;
+  position: relative;
+  z-index: 100;
   background-color: #fff;
 }
 .modelo3 .caja .padrinos .titulo {
@@ -1645,10 +1770,21 @@
   color: rgb(201, 147, 9);
   margin-top: 20px;
   margin-bottom: 0px;
+  z-index: 100;
+}
+.modelo3 .caja .padrinos .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
 }
 .modelo3 .caja .padrinos .swiper {
-  width: 340px;
-  height: 50vh;
+  width: 100%;
+  height: 70vh;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0);
 }
 .modelo3 .caja .padrinos .swiper .contenedor {
   display: flex;
@@ -1658,10 +1794,17 @@
   align-content: center;
   font-family: "Abel", sans-serif;
   font-size: 22px;
-  margin-top: -70px;
+  margin-top: -40px;
+  height: 350px;
+  width: 270px;
+  border: 2px solid rgb(201, 147, 9);
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
 }
 .modelo3 .caja .padrinos .swiper .contenedor .icono {
-  width: 100px;
+  width: 80px;
+  height: 80px;
 }
 .modelo3 .caja .padrinos .swiper .contenedor .accion {
   font-family: "Tangerine", cursive;
@@ -1682,7 +1825,7 @@
 .modelo3 .caja .padrinos .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: rgba(0, 0, 0, 0);
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -1702,6 +1845,7 @@
   align-content: center;
   background-color: #191970;
   position: relative;
+  z-index: 100;
   width: 100%;
   height: 65vh;
   font-family: "Abel", sans-serif;
@@ -1713,10 +1857,19 @@
   font-size: 20px;
   width: 200px;
 }
+.modelo3 .caja .pase .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 40;
+}
 .modelo3 .caja .pase .invitado {
   display: flex;
   flex-direction: column;
   width: 70vw;
+  z-index: 100;
 }
 .modelo3 .caja .pase .invitado .titulo {
   font-family: "Tangerine", cursive;
@@ -1725,12 +1878,14 @@
 }
 .modelo3 .caja .pase .datos {
   font-size: 30px;
+  z-index: 100;
 }
 .modelo3 .caja .pase .cantidad {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 25px;
+  z-index: 100;
 }
 .modelo3 .caja .pase .cantidad .titulo {
   font-weight: 800;
@@ -1741,6 +1896,7 @@
   justify-content: space-between;
   position: absolute;
   bottom: 0;
+  z-index: 100;
   width: 100%;
 }
 .modelo3 .caja .pase .flores .petalo {
@@ -1758,10 +1914,21 @@
   height: 30vh;
   color: #fff;
   text-align: center;
+  position: relative;
+  z-index: 100;
 }
 .modelo3 .caja .mensajedos p {
   font-family: "Abel", sans-serif;
   font-size: 28px;
+  z-index: 100;
+}
+.modelo3 .caja .mensajedos .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
 }
 .modelo3 .caja .galeria {
   display: flex;
@@ -1770,34 +1937,45 @@
   align-items: center;
   align-content: center;
   width: 100%;
-  height: 65vh;
-  background-color: #FF0090;
+  height: 90vh;
+  position: relative;
+  z-index: 100;
+  background-color: rgb(0, 0, 0);
+}
+.modelo3 .caja .galeria .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
 }
 .modelo3 .caja .galeria .titulo {
-  color: #fff;
+  color: rgb(0, 0, 0);
   font-family: "Tangerine", cursive;
   font-size: 55px;
   font-weight: 800;
+  z-index: 100;
 }
 .modelo3 .caja .galeria .imagen {
-  border: 4px solid #fff;
+  border: 4px solid rgb(0, 0, 0);
   width: 300px;
-  height: 225px;
   object-fit: cover;
+  z-index: 100;
 }
 .modelo3 .caja .galeria .swiper {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 50px;
+  z-index: 100;
 }
 .modelo3 .caja .galeria .swiper-pagination-bullet-active {
-  background-color: #fff;
+  background-color: rgb(0, 0, 0);
 }
 .modelo3 .caja .galeria .swiper-slide {
   background-position: center;
   background-size: cover;
   width: 300px;
-  height: 225px;
 }
 .modelo3 .caja .galeria .swiper-slide img {
   display: block;
@@ -1813,6 +1991,16 @@
   width: 100%;
   text-align: center;
   padding: 20px;
+  position: relative;
+  z-index: 100;
+}
+.modelo3 .caja .ubicacion .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
 }
 .modelo3 .caja .ubicacion .caja {
   display: flex;
@@ -1820,11 +2008,13 @@
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
+  z-index: 100;
 }
 .modelo3 .caja .ubicacion .encabezado {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 100;
 }
 .modelo3 .caja .ubicacion .encabezado .titulo {
   font-family: "Tangerine", cursive;
@@ -1844,17 +2034,21 @@
   align-items: center;
   align-content: center;
   height: 80vh;
+  z-index: 100;
+  color: rgb(201, 147, 9);
 }
 .modelo3 .caja .ubicacion .lugar .establecimiento {
   font-family: "Abel", sans-serif;
   font-size: 35px;
   font-weight: 800;
+  z-index: 100;
 }
 .modelo3 .caja .ubicacion .lugar .foto {
   width: 270px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid rgb(201, 147, 9);
+  z-index: 100;
 }
 .modelo3 .caja .ubicacion .lugar .direccion {
   display: flex;
@@ -1863,6 +2057,7 @@
   align-items: center;
   font-family: "Abel", sans-serif;
   font-size: 25px;
+  z-index: 100;
 }
 .modelo3 .caja .ubicacion .lugar .direccion .nombre {
   font-size: 27px;
@@ -1877,6 +2072,7 @@
   background-color: rgb(201, 147, 9);
   border: none;
   border-radius: 10px;
+  z-index: 100;
   width: 180px;
   height: 50px;
   padding: 5px;
@@ -1885,11 +2081,13 @@
 .modelo3 .caja .ubicacion button .icono {
   width: 30px;
   margin: 0 10px;
+  z-index: 100;
 }
 .modelo3 .caja .ubicacion button .link {
   margin: auto 0;
   text-decoration: none;
   color: whitesmoke;
+  z-index: 100;
 }
 .modelo3 .caja .ubicacion .modal {
   display: flex;
@@ -1949,6 +2147,16 @@
   width: 100%;
   height: 70vh;
   background-color: #fff;
+  position: relative;
+  z-index: 100;
+}
+.modelo3 .caja .itinerario .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
 }
 .modelo3 .caja .itinerario .titulo {
   font-family: "Crimson Text", serif;
@@ -1957,10 +2165,12 @@
   color: rgb(201, 147, 9);
   margin-top: 20px;
   margin-bottom: 0px;
+  z-index: 100;
 }
 .modelo3 .caja .itinerario .swiper {
-  width: 340px;
-  height: 50vh;
+  width: 100%;
+  height: 60vh;
+  z-index: 100;
 }
 .modelo3 .caja .itinerario .swiper .contenedor {
   display: flex;
@@ -1969,10 +2179,16 @@
   align-items: center;
   align-content: center;
   font-family: "Abel", sans-serif;
+  width: 280px;
+  height: 320px;
   margin-top: -40px;
+  background-color: #fff;
+  border: 2px solid rgb(201, 147, 9);
+  border-radius: 10px;
 }
 .modelo3 .caja .itinerario .swiper .contenedor .icono {
-  width: 100px;
+  width: 95px;
+  height: 95px;
 }
 .modelo3 .caja .itinerario .swiper .contenedor .accion {
   font-family: "Tangerine", cursive;
@@ -1991,7 +2207,7 @@
 .modelo3 .caja .itinerario .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background-color: rgba(0, 0, 0, 0);
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -2059,10 +2275,19 @@
   align-content: center;
   text-align: center;
   position: relative;
+  z-index: 100;
   background-color: #191970;
   color: white;
   width: 100%;
   height: 95vh;
+}
+.modelo3 .caja .vestimenta .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
 }
 .modelo3 .caja .vestimenta .titulo {
   color: white;
@@ -2070,11 +2295,13 @@
   font-size: 55px;
   font-weight: 800;
   margin-top: 20px;
+  z-index: 100;
 }
 .modelo3 .caja .vestimenta .iconos {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  z-index: 100;
 }
 .modelo3 .caja .vestimenta .iconos .icono {
   width: 170px;
@@ -2085,6 +2312,7 @@
   flex-direction: row;
   justify-content: space-between;
   position: absolute;
+  z-index: 100;
   bottom: 0;
   width: 100%;
 }
@@ -2097,9 +2325,11 @@
 .modelo3 .caja .vestimenta p {
   font-family: "Abel", sans-serif;
   font-size: 25px;
+  z-index: 100;
 }
 .modelo3 .caja .vestimenta .aviso {
   font-size: 20px;
+  z-index: 100;
 }
 .modelo3 .caja .collage {
   display: flex;
@@ -2154,11 +2384,22 @@
   height: 60vh;
   width: 100%;
   padding: 20px;
+  position: relative;
+  z-index: 100;
+}
+.modelo3 .caja .confirmacion .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
 }
 .modelo3 .caja .confirmacion .titulo {
   font-family: "Tangerine", cursive;
   font-size: 50px;
   font-weight: 800;
+  z-index: 100;
 }
 .modelo3 .caja .confirmacion .confirmar {
   display: flex;
@@ -2171,6 +2412,7 @@
   border-radius: 10px;
   backdrop-filter: blur(5px);
   height: 400px;
+  z-index: 100;
 }
 .modelo3 .caja .confirmacion .confirmar p {
   font-size: 20px;
@@ -2846,7 +3088,7 @@ body .reproductor .puerta .abrir {
   height: 100%;
 }
 body .reproductor .puerta .abrir .icono {
-  width: 80%;
+  width: 25px;
 }
 body .reproductor .cerrado {
   display: none;
@@ -2908,10 +3150,6 @@ body .modeloDos .portada {
 body .modeloDos .imagen {
   background-size: cover;
   background-position: center top;
-}
-body .modelo3 .invitacion {
-  background-image: url(../multimedia/Boda\ -\ Kristopher/fondo.jpg);
-  background-size: cover;
 }
 body .invitados .fondo {
   background-image: url("../multimedia/herramientas/invitados.jpg");

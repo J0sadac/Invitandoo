@@ -138,27 +138,44 @@ $font-second: 'Abel', sans-serif;
         .mensaje{
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
+
+            position: relative;
+            z-index: 100;
     
             height: 50vh;
             width: 100%;
             
-            
+            color: white;
             background-color: white;
     
             text-align: center;
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 50;
+            }
     
             p{
                 margin: 5px 30px;
                 font-family: $font-second;
                 font-size: 25px;
+
+                z-index: 100;
             }
 
             .fecha{
                 font-family: $font-main;
                 font-size: 60px;
                 font-weight: 800;
+
+                z-index: 100;
             }
     
             .florero{
@@ -167,6 +184,9 @@ $font-second: 'Abel', sans-serif;
                 justify-content: space-evenly;
     
                 width: 90%;
+
+                z-index: 100;
+
                 .flor{
                     width: 120px;
                 }
@@ -183,13 +203,42 @@ $font-second: 'Abel', sans-serif;
                 .br{
                     transform: rotateY(180deg);
                 }
-            }  
+            }
+
+            .iconos{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                width: 100%;
+
+                z-index: 100;
+
+                .icono{
+                    width: 100px;
+                    margin-top: -60px;
+                }
+
+                .adorno{
+                    width: 110px;
+                }
+
+                .tr{
+                    transform: rotateY(180deg);
+                }
+            }
+
+            .adorno-bajo{
+                width: 300px;
+
+                z-index: 100;
+            }
         }
     
         .invitacion{
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
     
             width: 100%;
             height: 70vh;
@@ -197,16 +246,106 @@ $font-second: 'Abel', sans-serif;
     
             color: aliceblue;
             text-align: center;
-    
-            p{
-                font-family: $font-second;
-                font-size: 20px;
+
+            position: relative;
+            z-index: 100;
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 20;
+
+                object-fit: cover;
+            }
+
+            .sombra{
+                width: 100%;
+                height: 100%;
+
+                background-color: rgba(0, 0 , 0, .5);
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 100;
             }
     
-            .fecha{
-                font-family: $font-main;
-                font-size: 60px;
-                font-weight: 800;
+            .contenedor{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                z-index: 100;
+
+                height: 100%;
+
+                .fecha{
+                    font-family: $font-main;
+                    font-size: 60px;
+                    font-weight: 800;
+                
+                    transition: .3s linear;
+                    color: transparent;
+                        
+                    background-image: var(--portada-titulo);
+                    background-size: 200%;
+                    background-clip: padding-box;
+                    -webkit-background-clip: text;
+        
+                    animation: move 20s linear infinite;
+        
+                    @keyframes move {
+                        100%{
+                            background-position: 2000px 0;
+                        }
+                    }
+                }
+
+                .direccion{
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+                    p{
+                        font-family: $font-second;
+                        font-size: 22px;
+                    }
+                }
+
+                .contador{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+        
+                    align-items: center;
+                    justify-content: center;
+        
+                    .tiempo{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+        
+                        margin: 8px;
+                        padding: 10px;
+                        width: 60px;
+        
+                        span{
+                            font-family: $font-second;
+                            font-size: 15PX;
+                        }
+        
+                        .segundero{
+                            font-size: 28px;
+                        }
+                    }
+                }
             }
         }
     
@@ -218,6 +357,7 @@ $font-second: 'Abel', sans-serif;
             align-content: center;
     
             position: relative;
+            z-index: 100;
     
             background-color: whitesmoke;
     
@@ -231,7 +371,7 @@ $font-second: 'Abel', sans-serif;
                 font-size: 50px;
                 font-weight: 800;
 
-                
+                z-index: 100;
     
                 background: linear-gradient(
                     to right,
@@ -269,6 +409,8 @@ $font-second: 'Abel', sans-serif;
                 justify-content: space-evenly;
                 font-family: $font-second;
                 font-size: 25px;
+
+                z-index: 100;
     
                 p{
                     font-weight: 800;
@@ -287,6 +429,8 @@ $font-second: 'Abel', sans-serif;
                 left: 0;
     
                 width: 175px;
+
+                z-index: 90;
             }
     
             .pie{
@@ -294,11 +438,33 @@ $font-second: 'Abel', sans-serif;
                 bottom: 0;
                 right: 0;
                 width: 175px;
+
+                z-index: 90;
             }
     
             .transicion{
                 width: 200px;
+
+                z-index: 100;
             }
+
+            .fondo{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 50;
+
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .xv{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            height: 70vh;
         }
     
         .padrinos{
@@ -310,6 +476,9 @@ $font-second: 'Abel', sans-serif;
     
             width: 100%;
             height: 70vh;
+
+            position: relative;
+            z-index: 100;
     
             background-color: #fff; 
             
@@ -322,11 +491,27 @@ $font-second: 'Abel', sans-serif;
     
                 margin-top: 20px;
                 margin-bottom: 0px;
+
+                z-index: 100;
+            }
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 50;
             }
     
             .swiper {
-                width: 340px;
-                height: 50vh;
+                width: 100%;
+                height: 70vh;
+
+                z-index: 100;
+
+                background-color: rgba(0, 0, 0, .0);
     
                 .contenedor{
                     display: flex;
@@ -338,10 +523,20 @@ $font-second: 'Abel', sans-serif;
                     font-family: $font-second;
                     font-size: 22px;
     
-                    margin-top: -70px;
+                    margin-top: -40px;
+
+                    height: 350px;
+                    width: 270px;
+
+                    border: 2px solid rgb(201, 147, 9);
+                    border-radius: 10px;
+                    padding: 15px;
+
+                    background-color: #fff;
     
                     .icono{
-                        width: 100px;
+                        width: 80px;
+                        height: 80px;
                     }
     
                     .accion{
@@ -369,7 +564,7 @@ $font-second: 'Abel', sans-serif;
             .swiper-slide {
                 text-align: center;
                 font-size: 18px;
-                background: #fff;
+                background: rgba(0, 0 , 0, 0);
               
                 /* Center slide text vertically */
                 display: flex;
@@ -397,6 +592,7 @@ $font-second: 'Abel', sans-serif;
             background-color: #191970;
     
             position: relative;
+            z-index: 100;
     
             width: 100%;
             height: 65vh;
@@ -411,12 +607,24 @@ $font-second: 'Abel', sans-serif;
 
                 width: 200px;
             }
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+                
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 40;
+            }
     
             .invitado{
                 display: flex;
                 flex-direction: column;
 
                 width: 70vw;
+
+                z-index: 100;
     
                 .titulo{
                     font-family: $font-main;
@@ -427,6 +635,8 @@ $font-second: 'Abel', sans-serif;
     
             .datos{
                 font-size: 30px;
+
+                z-index: 100;
             }
     
             .cantidad{
@@ -435,6 +645,8 @@ $font-second: 'Abel', sans-serif;
                 justify-content: center;
     
                 margin-bottom: 25px;
+
+                z-index: 100;
     
                 .titulo{
                     font-weight: 800;
@@ -448,6 +660,7 @@ $font-second: 'Abel', sans-serif;
     
                 position: absolute;
                 bottom: 0;
+                z-index: 100;
     
                 width: 100%;
     
@@ -466,8 +679,6 @@ $font-second: 'Abel', sans-serif;
             flex-direction: column;
             justify-content: center;
     
-           
-    
             background-color: #DD969C;
     
             width: 100%;
@@ -475,10 +686,25 @@ $font-second: 'Abel', sans-serif;
     
             color: #fff;
             text-align: center;
+
+            position: relative;
+            z-index: 100;
     
             p{
                 font-family: $font-second;
                 font-size: 28px;
+
+                z-index: 100;
+            }
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 50;
             }
         }
 
@@ -490,40 +716,57 @@ $font-second: 'Abel', sans-serif;
             align-content: center;
 
             width: 100%;
-            height: 65vh;
+            height: 90vh;
 
-            background-color: #FF0090;
+            position: relative;
+            z-index: 100;
+
+            background-color: rgb(0, 0, 0);
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 20;
+            }
 
             .titulo{
-                color: #fff;
+                color: rgb(0, 0, 0);
                 font-family: $font-main;
                 font-size: 55px;
                 font-weight: 800;
+
+                z-index: 100;
             }
 
             .imagen{
-                border: 4px solid #fff;
+                border: 4px solid rgb(0, 0, 0);
                 width: 300px;
-                height: 225px;
-
+            
                 object-fit: cover;
+
+                z-index: 100;
             }
 
             .swiper {
                 width: 100%;
                 padding-top: 10px;
                 padding-bottom: 50px;
+
+                z-index: 100;
               }
 
             .swiper-pagination-bullet-active{
-                background-color: #fff;
+                background-color: rgb(0, 0, 0);
             }
               
               .swiper-slide {
                 background-position: center;
                 background-size: cover;
                 width: 300px;
-                height: 225px;
               }
               
               .swiper-slide img {
@@ -548,19 +791,35 @@ $font-second: 'Abel', sans-serif;
 
             padding: 20px;
 
+            position: relative;
+            z-index: 100;
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 50;
+            }
+
             .caja{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
                 align-items: center;
                 align-content: center;
-                
+               
+                z-index: 100;
             }
 
             .encabezado{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+
+                z-index: 100;
 
                 .titulo{
                     font-family: $font-main;
@@ -588,11 +847,16 @@ $font-second: 'Abel', sans-serif;
 
                 height: 80vh;
 
+                z-index: 100;
+
+                color: rgb(201, 147, 9);
+
                 .establecimiento{
                     font-family: $font-second;
                     font-size: 35px;
                     font-weight: 800;
 
+                    z-index: 100;
                 }
 
                 .foto{
@@ -601,6 +865,8 @@ $font-second: 'Abel', sans-serif;
 
                     border-radius: 50%;
                     border: 4px solid rgb(201, 147, 9);
+
+                    z-index: 100;
                 }
 
                 .direccion{
@@ -611,6 +877,8 @@ $font-second: 'Abel', sans-serif;
 
                     font-family: $font-second;
                     font-size: 25px;
+
+                    z-index: 100;
 
                     .nombre{
                         font-size: 27px;
@@ -631,6 +899,8 @@ $font-second: 'Abel', sans-serif;
                 border: none;
                 border-radius: 10px;
 
+                z-index: 100;
+
                 width: 180px;
                 height: 50px;
                 padding: 5px;
@@ -640,6 +910,8 @@ $font-second: 'Abel', sans-serif;
                 .icono{
                     width: 30px;
                     margin:0 10px;
+
+                    z-index: 100;
                 }
 
                 .link{
@@ -647,6 +919,7 @@ $font-second: 'Abel', sans-serif;
                     text-decoration: none;
                     color: whitesmoke;
 
+                    z-index: 100;
                 }
             }
 
@@ -716,7 +989,6 @@ $font-second: 'Abel', sans-serif;
         }
 
         .itinerario{
-            
             height: 70vh;
 
             display: flex;
@@ -730,6 +1002,19 @@ $font-second: 'Abel', sans-serif;
     
             background-color: #fff; 
             
+            position: relative;
+            z-index: 100;
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 50;
+            }
+            
             .titulo{
                 font-family: $Crimson;
                 font-size: 40px;
@@ -739,11 +1024,15 @@ $font-second: 'Abel', sans-serif;
     
                 margin-top: 20px;
                 margin-bottom: 0px;
+
+                z-index: 100;
             }
     
             .swiper {
-                width: 340px;
-                height: 50vh;
+                width: 100%;
+                height: 60vh;
+
+                z-index: 100;
     
                 .contenedor{
                     display: flex;
@@ -753,11 +1042,19 @@ $font-second: 'Abel', sans-serif;
                     align-content: center;
     
                     font-family: $font-second;
+
+                    width: 280px;
+                    height: 320px;
     
                     margin-top: -40px;
+
+                    background-color: #fff;
+                    border: 2px solid rgb(201, 147, 9);
+                    border-radius: 10px;
     
                     .icono{
-                        width: 100px;
+                        width: 95px;
+                        height: 95px;
                     }
     
                     .accion{
@@ -783,7 +1080,7 @@ $font-second: 'Abel', sans-serif;
             .swiper-slide {
                 text-align: center;
                 font-size: 18px;
-                background: #fff;
+                background-color: rgba(0, 0 , 0, 0);
               
                 /* Center slide text vertically */
                 display: flex;
@@ -796,7 +1093,7 @@ $font-second: 'Abel', sans-serif;
                     height: 100%;
                     object-fit: cover;
                 }
-              }
+            }
               
         }
 
@@ -872,12 +1169,23 @@ $font-second: 'Abel', sans-serif;
             text-align: center;
 
             position: relative;
+            z-index: 100;
 
             background-color: #191970;
             color: white;
 
             width: 100%;
             height: 95vh;
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 50;
+            }
 
             .titulo{
                 color: white;
@@ -886,12 +1194,16 @@ $font-second: 'Abel', sans-serif;
                 font-weight: 800;
 
                 margin-top: 20px;
+
+                z-index: 100;
             }
 
             .iconos{
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
+
+                z-index: 100;
 
                 .icono{
                     width: 170px;
@@ -905,6 +1217,7 @@ $font-second: 'Abel', sans-serif;
                 justify-content: space-between;
     
                 position: absolute;
+                z-index: 100;
                 bottom: 0;
     
                 width: 100%;
@@ -921,10 +1234,13 @@ $font-second: 'Abel', sans-serif;
             p{
                 font-family: $font-second;
                 font-size: 25px;
+
+                z-index: 100;
             }
 
             .aviso{
                 font-size: 20px;
+                z-index: 100;
             }
         }
 
@@ -1001,10 +1317,25 @@ $font-second: 'Abel', sans-serif;
             width: 100%;
             padding: 20px;
 
+            position: relative;
+            z-index: 100;
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 50;
+            }
+
             .titulo{
                 font-family: $font-main;
                 font-size: 50px;
                 font-weight: 800;
+
+                z-index: 100;
             }
 
             .confirmar{
@@ -1021,6 +1352,8 @@ $font-second: 'Abel', sans-serif;
                 backdrop-filter: blur(5px);
                 
                 height: 400px;
+
+                z-index: 100;
 
                 p{
                     font-size: 20px;

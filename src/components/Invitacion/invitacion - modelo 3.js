@@ -7,7 +7,7 @@ import Pase from "./components/modelo 3/pase";
 import Padres from "./components/modelo 3/padres";
 import Padrinos from "./components/modelo 3/padrinos";
 import MensajeDos from "./components/modelo 3/mensaje2";
-// import Galeria from "./components/modelo 3/galeria";
+import Galeria from "./components/modelo 3/galeria";
 import Ubicacion from "./components/modelo 3/ubicacion";
 import Itinerario from "./components/modelo 3/itinerario";
 import Mesa from "./components/modelo 3/mesa";
@@ -47,19 +47,45 @@ function Invitaciones({ evento }) {
             />
             <Desplazar />
             <div className="caja">
-                <Mensaje />
-                <Invitacion />
+                <Mensaje 
+                    evento={evento.evento}
+                />
+                <Invitacion 
+                    fondo={evento.multimedia.galeria[0].url}
+                    dia={evento.datos.dia}
+                    lugar={evento.datos.lugar}
+                    fecha={evento.datos.fecha}
+                    evento={evento.evento}
+                />
                 <Pase 
+                    evento={evento.evento}
                     invitado={evento.invitados}
                 />
-                <Padres />
-                <MensajeDos />
-                <Padrinos />
-                {/* <Galeria /> */}
-                <Vestimenta />
-                <Itinerario />
-                <Mesa />
-                <Ubicacion />
+                <Padres 
+                    evento={evento.evento}
+                    padres={evento.datos.padres[0]}
+                />
+                <MensajeDos 
+                    evento={evento.evento}
+                />
+                <Padrinos 
+                    padrinos={evento.padrinos}
+                />
+                <Galeria 
+                    carousel={evento.multimedia.carousel}
+                />
+                <Vestimenta 
+                    evento={evento.evento}
+                />
+                <Itinerario 
+                    protocolo={evento.itinerario}
+                />
+                {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
+                    <Mesa />   
+                )}
+                <Ubicacion 
+                    evento={evento.evento}
+                />
                 {/* <Collage /> */}
                 <Confirmacion 
                     invitadoId={evento.invitados._id}

@@ -2,19 +2,17 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 
+import fondo from '../../../../multimedia/fondos/fondo blanco.png'
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import arras from '../../../../multimedia/herramientas/arras.gif';
-import velacion from '../../../../multimedia/herramientas/velacion.svg';
-import anillos from '../../../../multimedia/herramientas/anillos.gif';
-import lazo from '../../../../multimedia/herramientas/lazo.svg';
-
-function Padrinos() {
+function Padrinos({padrinos}) {
   return (
     <section className='padrinos'>
+        <img className='fondo' src={fondo} alt='...' />
         <p className='titulo'>Padrinos</p>
       
         <Swiper
@@ -25,50 +23,20 @@ function Padrinos() {
             modules={[Pagination, Navigation]}
             className="mySwiper"
         >
-
-            <SwiperSlide>
-                <div className='contenedor'>
-                    <img className='icono' src={arras} alt='...' />
-                    <p className='accion'>Arras</p>
-                    <div className='padrino'>
-                        <span>Ing. Zafiro Ramírez Fernández</span>
+            {padrinos.map((pad) => (
+                <SwiperSlide key={pad._id}>
+                    <div className='contenedor'>
+                        <img className='icono' src={pad.icono} alt='...' />
+                        <p className='accion'>{pad.de}</p>
+                        <div className='padrino'>
+                            {pad.padrino.map((rino, idx) => (
+                                <span key={idx}>{rino}</span>
+                            ))}
+                        </div>
                     </div>
-                </div>
-            </SwiperSlide>
-            
-            <SwiperSlide>
-                <div className='contenedor'>
-                    <img className='icono' src={velacion} alt='...' />
-                    <p className='accion'>Velacion</p>
-                    <div className='padrino'>
-                        <span>Sr. Luis Rey Salas Barrios</span>
-                        <span>Sra. Dory Luz Escobar Martinez</span>
-                    </div>
-                </div>
-            </SwiperSlide>
+                </SwiperSlide>
 
-            <SwiperSlide>
-                <div className='contenedor'>
-                    <img className='icono' src={anillos} alt='...' />
-                    <p className='accion'>Anillos</p>
-                    <div className='padrino'>
-                        <span>Lic. Juan José Muñoz</span>
-                        <span>Lic. Gabriela Solís Trujillo</span>
-                    </div>
-                </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <div className='contenedor'>
-                    <img className='icono' src={lazo} alt='...' />
-                    <p className='accion'>Lazo</p>
-                    <div className='padrino'>
-                        <span>Sr. Germán Blanco Pérez</span>
-                        <span>Sra. Adriana Escobar Díaz</span>
-                    </div>
-                </div>
-            </SwiperSlide>
-
+            ))}
         </Swiper>
     </section>
   );

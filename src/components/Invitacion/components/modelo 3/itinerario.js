@@ -2,56 +2,39 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 
+import fondo from '../../../../multimedia/fondos/fondo blanco.png';
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import iglesia from '../../../../multimedia/herramientas/iglesia.gif';
-import civil from '../../../../multimedia/herramientas/civil.gif';
-import recepcion from '../../../../multimedia/herramientas/recepcion.gif';
-
-function Itinerario () {
+function Itinerario ({protocolo}) {
 
     return(
         <section className='itinerario'>
-        <p className='titulo'>Itinerario</p>
-      
-        <Swiper
-            pagination={{
-            type: 'fraction',
-            }}
-            navigation={true}
-            modules={[Pagination, Navigation]}
-            className="mySwiper"
-        >
-
-            <SwiperSlide>
-                <div className='contenedor'>
-                    <img className='icono' src={iglesia} alt='...' />
-                    <p className='accion'>Ceremonia religiosa</p>
-                    <p className='hora'>7:00 pm</p>
-                </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <div className='contenedor'>
-                    <img className='icono' src={recepcion} alt='...' />
-                    <p className='accion'>Recepción</p>
-                    <p className='hora'>8:00 pm</p>
-                </div>
-            </SwiperSlide>
-            
-            <SwiperSlide>
-                <div className='contenedor'>
-                    <img className='icono' src={civil} alt='...' />
-                    <p className='accion'>Ceremonia civil</p>
-                    <p className='hora'>9:00 pm</p>
-                </div>
-            </SwiperSlide>
-
-        </Swiper>
-    </section>
+            <img className='fondo' src={fondo} alt='...' />
+            <p className='titulo'>Itinerario</p>
+        
+            <Swiper
+                pagination={{
+                type: 'fraction',
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+            >
+                {protocolo.map((prot) => (
+                    <SwiperSlide key={prot._id}>
+                        <div className='contenedor'>
+                            <img className='icono' src={prot.icono} alt='...' />
+                            <p className='accion'>{prot.accion}</p>
+                            <p className='hora'>{prot.hora}</p>
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </section>
     );
 };
 

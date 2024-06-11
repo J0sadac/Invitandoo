@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+import fondo from '../../../../multimedia/fondos/fondo rojo.png';
+
 function Confirmacion({ invitadoId, eventoId }) {
     const [modalVisible, setModalVisible] = useState(false);
     const [modalMessage, setModalMessage] = useState('');
@@ -33,6 +35,7 @@ function Confirmacion({ invitadoId, eventoId }) {
 
     return (
         <section className="confirmacion">
+            <img className='fondo' src={fondo} alt='...' />
             <span className="titulo">Por favor, confirma tu asistencia</span>
             <div className="confirmar">
                 <p>¡Para nosotros es de vital importancia que confirmes tu asistencia!</p>

@@ -57,9 +57,19 @@ function Cancion({ url }) {
     setCurrentTime(time);
   };
 
+  const handleClickContainer = (event) => {
+    if (
+      event.target.closest(".cerrar") ||
+      event.target.closest(".contenido")
+    ) {
+      return;
+    }
+    setVentana(false);
+  };
+
   return (
     <div className="reproductor">
-      <div className={`${ventana ? "cancion" : "cerrado"}`} onClick={() => puerta(false)}>
+      <div className={`${ventana ? "cancion" : "cerrado"}`} onClick={handleClickContainer}>
         <div className="contenedor">
           <button className="cerrar" onClick={() => puerta(false)}>
             <img src={close} alt="..." className="icono" />
@@ -83,9 +93,9 @@ function Cancion({ url }) {
                 
                 <button onClick={togglePlay} className="play-pause">
                   {isPlaying ? (
-                    <img className="icono" src={pause} alt="..." />
+                    <img className="icono" src={pause} alt="..." onClick={() => puerta(false)} />
                   ):(
-                    <img className="icono" src={play} alt="..." />
+                    <img className="icono" src={play} alt="..." onClick={() => puerta(false)}/>
                   )}
                 </button>
 
