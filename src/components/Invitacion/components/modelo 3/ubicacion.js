@@ -113,7 +113,7 @@ function Ubicacion({evento}) {
 
                     <section>
                         <div className="lugar">
-                            <p className="establecimiento">salon de fiestas "El Diamante"</p>
+                            <p className="establecimiento">Salon de fiestas "El Diamante"</p>
                             <img className="foto" src={salonDos} alt="..." />
                             <div className='direccion'>
                                 <span className='nombre'>2 poniente entre 5a y 6a sur.</span>

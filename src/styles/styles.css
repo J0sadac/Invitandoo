@@ -1429,6 +1429,8 @@
       rgb(211, 178, 95),
       rgb(180, 159, 105)
   );
+  --alineamiento-mensaje: center;
+  --letras-mensaje: black;
 }
 
 .modelo3 {
@@ -1513,13 +1515,13 @@
 .modelo3 .caja .mensaje {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: var(--alineamiento-mensaje);
   align-items: center;
   position: relative;
   z-index: 100;
-  height: 50vh;
+  height: 55vh;
   width: 100%;
-  color: white;
+  color: var(--letras-mensaje);
   background-color: white;
   text-align: center;
 }
@@ -1561,6 +1563,7 @@
 }
 .modelo3 .caja .mensaje .florero .br {
   transform: rotateY(180deg);
+  z-index: 100;
 }
 .modelo3 .caja .mensaje .iconos {
   display: flex;
@@ -1593,7 +1596,7 @@
   color: aliceblue;
   text-align: center;
   position: relative;
-  z-index: 100;
+  z-index: 90;
 }
 .modelo3 .caja .invitacion .fondo {
   width: 100%;
@@ -2095,6 +2098,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
+  z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100vh;
@@ -2111,9 +2115,8 @@
   border-radius: 10px;
 }
 .modelo3 .caja .ubicacion .modal .mapa .titulo {
-  font-family: "Tangerine", cursive;
-  font-size: 55px;
-  font-weight: 800;
+  font-family: "Abel", sans-serif;
+  font-size: 38px;
 }
 .modelo3 .caja .ubicacion .modal .mapa .maps {
   width: 280px;
@@ -2385,7 +2388,7 @@
   width: 100%;
   padding: 20px;
   position: relative;
-  z-index: 100;
+  z-index: 80;
 }
 .modelo3 .caja .confirmacion .fondo {
   width: 100%;

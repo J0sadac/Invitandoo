@@ -28,6 +28,9 @@ $font-second: 'Abel', sans-serif;
         rgb(211, 178, 95),
         rgb(180, 159, 105)
     );
+
+    --alineamiento-mensaje: center;
+    --letras-mensaje: black;
 }
 
 .modelo3{
@@ -138,16 +141,16 @@ $font-second: 'Abel', sans-serif;
         .mensaje{
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: var(--alineamiento-mensaje);
             align-items: center;
 
             position: relative;
             z-index: 100;
     
-            height: 50vh;
+            height: 55vh;
             width: 100%;
             
-            color: white;
+            color: var(--letras-mensaje);
             background-color: white;
     
             text-align: center;
@@ -202,6 +205,7 @@ $font-second: 'Abel', sans-serif;
         
                 .br{
                     transform: rotateY(180deg);
+                    z-index: 100;
                 }
             }
 
@@ -248,7 +252,7 @@ $font-second: 'Abel', sans-serif;
             text-align: center;
 
             position: relative;
-            z-index: 100;
+            z-index: 90;
 
             .fondo{
                 width: 100%;
@@ -930,7 +934,7 @@ $font-second: 'Abel', sans-serif;
                 align-items: center;
                 align-content: center;
 
-                
+                z-index: 100;
 
                 background-color: rgba(0, 0 , 0, .5);
 
@@ -952,9 +956,8 @@ $font-second: 'Abel', sans-serif;
                     border-radius: 10px;
 
                     .titulo{
-                        font-family: $font-main;
-                        font-size: 55px;
-                        font-weight: 800;
+                        font-family: $font-second;
+                        font-size: 38px;
                     }
 
                     .maps{
@@ -1318,7 +1321,7 @@ $font-second: 'Abel', sans-serif;
             padding: 20px;
 
             position: relative;
-            z-index: 100;
+            z-index: 80;
 
             .fondo{
                 width: 100%;

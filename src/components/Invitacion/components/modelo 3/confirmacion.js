@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-import fondo from '../../../../multimedia/fondos/fondo rojo.png';
+//import fondo from '../../../../multimedia/fondos/fondo rojo.png';
 
-function Confirmacion({ invitadoId, eventoId }) {
+function Confirmacion({ invitadoId, eventoId, fondo }) {
     const [modalVisible, setModalVisible] = useState(false);
     const [modalMessage, setModalMessage] = useState('');
 
@@ -25,7 +25,7 @@ function Confirmacion({ invitadoId, eventoId }) {
             await axios.put(`https://nueva-invitandodb.onrender.com/evento/${eventoId}/invitado/${invitadoId}/editar`, {
                 asistir: 'rechazado'
             });
-            setModalMessage('Lamentamos que no puedas estar en nuestro dia especial ¡esperamos verte en el siguiente!');
+            setModalMessage('Lamentamos que no puedas asistir a este evento ¡esperamos verte en el siguiente!');
             setModalVisible(true);
         } catch (error) {
             setModalMessage('Error rechazando la asistencia.');
@@ -35,7 +35,9 @@ function Confirmacion({ invitadoId, eventoId }) {
 
     return (
         <section className="confirmacion">
-            <img className='fondo' src={fondo} alt='...' />
+            {fondo?.url && (
+                <img className='fondo' src={fondo.url} alt='...' />
+            )}
             <span className="titulo">Por favor, confirma tu asistencia</span>
             <div className="confirmar">
                 <p>¡Para nosotros es de vital importancia que confirmes tu asistencia!</p>
