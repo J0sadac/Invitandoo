@@ -29,6 +29,10 @@ function Invitaciones({ evento }) {
                     --portada-contenido: ${styles.contenidoPortada || 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));'};
                     --alineamiento-mensaje: ${styles.alineamientoMensaje || 'center'};
                     --letras-mensaje: ${styles.letraMensaje || 'black'};
+                    --letras-pase: ${styles.letraPase || 'white'};
+                    --color-padit: ${styles.colorPadit || 'rgb(201, 147, 9)'};
+                    --color-padres: ${styles.colorPadres || 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));'};
+                    --color-confirmar: ${styles.colorConfirmacion || 'white'}
                 }
             `;
             document.head.appendChild(styleSheet);
@@ -53,6 +57,8 @@ function Invitaciones({ evento }) {
             <div className="caja">
                 <Mensaje 
                     evento={evento.evento}
+                    fondo={evento.multimedia.fondos.primero}
+                    festejado={evento.datos.festejado}
                 />
                 <Invitacion 
                     fondo={evento.multimedia.galeria[0].url}
@@ -64,33 +70,41 @@ function Invitaciones({ evento }) {
                 <Pase 
                     evento={evento.evento}
                     invitado={evento.invitados}
+                    fondo={evento.multimedia.fondos.tercero}
                 />
                 <Padres 
                     evento={evento.evento}
                     padres={evento.datos.padres[0]}
+                    fondo={evento.multimedia.fondos.segundo}
                 />
                 <MensajeDos 
                     evento={evento.evento}
+                    fondo={evento.multimedia.fondos.primero}
                 />
                 <Padrinos 
                     padrinos={evento.padrinos}
+                    fondo={evento.multimedia.fondos.segundo}
                 />
                 {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 0 && (
                     <Galeria 
                         carousel={evento.multimedia.carousel}
+                        fondo={evento.multimedia.fondos.tercero}
                     />
                 )} 
                 <Vestimenta 
                     evento={evento.evento}
+                    fondo={evento.multimedia.fondos.primero}
                 />
                 <Itinerario 
                     protocolo={evento.itinerario}
+                    fondo={evento.multimedia.fondos.segundo}
                 />
                 {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
                     <Mesa />   
                 )}
                 <Ubicacion 
                     evento={evento.evento}
+                    fondo={evento.multimedia.fondos.primero}
                 />
                 {/* <Collage /> */}
                 <Confirmacion 

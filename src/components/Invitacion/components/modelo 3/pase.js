@@ -1,7 +1,8 @@
 import petalos from '../../../../multimedia/herramientas/adorno petalos.gif';
-import fondo from '../../../../multimedia/fondos/fondo rojo.png'
+import amarillas from '../../../../multimedia/herramientas/flor amarilla.gif';
 
-function Pase ({evento, invitado}){
+
+function Pase ({evento, invitado, fondo}){
 
     return(
         <>
@@ -29,7 +30,9 @@ function Pase ({evento, invitado}){
                 </section>
             ): evento === 'XV Años' ? (
                 <section className="pase">
-                    <img className='fondo' src={fondo} alt='...' />
+                    {fondo?.url && (
+                        <img className='fondo' src={fondo.url} alt='...' />
+                    )}
                     <div className="invitado">
                         <span className="titulo">Invitado:</span>
                         <span>{invitado.invitado}</span>
@@ -41,6 +44,11 @@ function Pase ({evento, invitado}){
 
                     <div className="cantidad">
                         <span className="titulo">Pase para: {invitado.pase}</span>
+                    </div> 
+
+                    <div className="flores">
+                        <img className='petalo left' src={amarillas} alt='...' />
+                        <img className='petalo rigth' src={amarillas} alt='...' />
                     </div>  
                 </section>
             ):(

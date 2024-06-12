@@ -4,12 +4,12 @@ import salonDos from '../../../../multimedia/XV años - Yazit/salon.jpg';
 import salon from '../../../../multimedia/Boda - Kristopher/salon.jpg';
 import adorno from '../../../../multimedia/herramientas/adorno dorado.svg';
 import mapa from '../../../../multimedia/herramientas/mapa.svg';
-import fondo from '../../../../multimedia/fondos/Fondo-negro.png';
+
 //import close from '../../../../multimedia/herramientas/x-lg.svg';
 import { useState } from 'react';
 import Iframe from "react-iframe";
 
-function Ubicacion({evento}) {
+function Ubicacion({evento, fondo}) {
     const [ventanaIglesia, setVentanaIglesia] = useState(false);
     const [ventanaSalon, setVentanaSalon] = useState(false);
 
@@ -106,7 +106,9 @@ function Ubicacion({evento}) {
                 </section>
             ) : evento === 'XV Años' ? (
                 <section className="ubicacion">
-                    <img className='fondo' src={fondo} alt='...' />
+                    {fondo?.url && (
+                        <img className='fondo' src={fondo.url} alt='...' />
+                    )}
                     <div className='encabezado'>
                         <p className="titulo">Ubicacion GPS</p> 
                     </div>

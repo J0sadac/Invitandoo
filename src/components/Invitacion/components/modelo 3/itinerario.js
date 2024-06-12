@@ -2,18 +2,18 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 
-import fondo from '../../../../multimedia/fondos/fondo blanco.png';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-function Itinerario ({protocolo}) {
+function Itinerario ({protocolo, fondo}) {
 
     return(
         <section className='itinerario'>
-            <img className='fondo' src={fondo} alt='...' />
+            {fondo?.url && (
+                <img className='fondo' src={fondo.url} alt='...' />
+            )}
             <p className='titulo'>Itinerario</p>
         
             <Swiper

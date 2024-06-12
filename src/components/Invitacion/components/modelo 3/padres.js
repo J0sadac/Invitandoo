@@ -1,9 +1,10 @@
 import colgante from '../../../../multimedia/herramientas/flor colgante.gif';
+import negro from '../../../../multimedia/herramientas/flor adorno negra.gif';
+import invertido from '../../../../multimedia/herramientas/negro invertido.gif';
 import pie from '../../../../multimedia/herramientas/flor de pie.gif';
 import rip from '../../../../multimedia/herramientas/rip.svg';
-import fondo from '../../../../multimedia/fondos/fondo blanco.png';
 
-function Padres ({evento, padres}){
+function Padres ({evento, padres, fondo}){
 
     return(
         <>
@@ -25,15 +26,17 @@ function Padres ({evento, padres}){
                 </section>
             ) : evento === 'XV Años' ? (
                 <section className="padres xv">
-                    <img className='fondo' src={fondo} alt='...' />
-                    <img className='colgante' src={colgante} alt='...' />
+                    {fondo?.url && (
+                        <img className='fondo' src={fondo.url} alt='...' />
+                    )}
+                    <img className='colgante' src={invertido} alt='...' />
                     <p className='titulo'>Mis amados padres</p>
                     <div className='contenedor'>
                         <span>{padres.papa}</span>
                         <span>&</span>
                         <span>{padres.mama}</span>
                     </div>
-                    <img className='pie' src={pie} alt='...' />
+                    <img className='pie' src={negro} alt='...' />
                 </section>
             ) : (
                 <div>holi</div>

@@ -2,17 +2,17 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
-import fondo from '../../../../multimedia/fondos/fondo rojo.png';
-
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-function Galeria({carousel}) {
+function Galeria({carousel, fondo}) {
 
   return (
     <section className='galeria'>
-        <img className='fondo' src={fondo} alt='...' />
+        {fondo?.url && (
+            <img className='fondo' src={fondo.url} alt='...' />
+        )}
         <p className='titulo'>Galeria de fotos</p>
         <Swiper
             effect={'coverflow'}

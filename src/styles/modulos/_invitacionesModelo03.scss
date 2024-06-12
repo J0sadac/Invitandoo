@@ -31,6 +31,18 @@ $font-second: 'Abel', sans-serif;
 
     --alineamiento-mensaje: center;
     --letras-mensaje: black;
+    --letras-pase: white;
+    --color-padit: rgb(201, 147, 9);
+    --color-padres: linear-gradient(
+        to left, 
+        rgb(180, 159, 105),
+        rgb(211, 178, 95), 
+        rgb(185, 155, 80), 
+        rgb(137, 103, 16), 
+        rgb(150, 127, 70), 
+        rgb(211, 178, 95), 
+        rgb(180, 159, 105));
+    --color-confirmacion: white;
 }
 
 .modelo3{
@@ -377,16 +389,7 @@ $font-second: 'Abel', sans-serif;
 
                 z-index: 100;
     
-                background: linear-gradient(
-                    to right,
-                    rgb(180, 159, 105),
-                    rgb(211, 178, 95),
-                    rgb(185, 155, 80),
-                    rgb(137, 103, 16),
-                    rgb(150, 127, 70),
-                    rgb(211, 178, 95),
-                    rgb(180, 159, 105)
-                );
+                background: var(--color-padres);
                 background-clip: padding-box;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -491,7 +494,7 @@ $font-second: 'Abel', sans-serif;
                 font-size: 40px;
                 font-weight: 800;
     
-                color: rgb(201, 147, 9);
+                color: var(--color-padit);
     
                 margin-top: 20px;
                 margin-bottom: 0px;
@@ -532,7 +535,7 @@ $font-second: 'Abel', sans-serif;
                     height: 350px;
                     width: 270px;
 
-                    border: 2px solid rgb(201, 147, 9);
+                    border: 2px solid var(--color-padit);
                     border-radius: 10px;
                     padding: 15px;
 
@@ -558,11 +561,11 @@ $font-second: 'Abel', sans-serif;
             }
     
             .swiper-button-next{
-                color: rgb(201, 147, 9);
+                color: var(--color-padit);
             }
     
             .swiper-button-prev{
-                color: rgb(201, 147, 9);
+                color: var(--color-padit);
             }
               
             .swiper-slide {
@@ -604,7 +607,7 @@ $font-second: 'Abel', sans-serif;
             font-family: $font-second;
             font-size: 28px;
             text-align: center;
-            color: aliceblue;
+            color: var(--letras-pase);
 
             .nin{
                 font-size: 20px;
@@ -709,6 +712,8 @@ $font-second: 'Abel', sans-serif;
                 top: 0;
                 left: 0;
                 z-index: 50;
+                
+                object-fit: cover;
             }
         }
 
@@ -1023,7 +1028,7 @@ $font-second: 'Abel', sans-serif;
                 font-size: 40px;
                 font-weight: 800;
     
-                color: rgb(201, 147, 9);
+                color: var(--color-padit);
     
                 margin-top: 20px;
                 margin-bottom: 0px;
@@ -1052,7 +1057,7 @@ $font-second: 'Abel', sans-serif;
                     margin-top: -40px;
 
                     background-color: #fff;
-                    border: 2px solid rgb(201, 147, 9);
+                    border: 2px solid var(--color-padit);
                     border-radius: 10px;
     
                     .icono{
@@ -1073,11 +1078,11 @@ $font-second: 'Abel', sans-serif;
             }
     
             .swiper-button-next{
-                color: rgb(201, 147, 9);
+                color: var(--color-padit);
             }
     
             .swiper-button-prev{
-                color: rgb(201, 147, 9);
+                color: var(--color-padit);
             }
               
             .swiper-slide {
@@ -1314,7 +1319,7 @@ $font-second: 'Abel', sans-serif;
             text-align: center;
 
             background-color: #DD969C;
-            color: white;
+            color: var(--color-confirmar);
 
             height: 60vh;
             width: 100%;

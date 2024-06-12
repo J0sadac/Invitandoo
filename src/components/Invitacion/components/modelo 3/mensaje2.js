@@ -1,6 +1,5 @@
-import fondo from '../../../../multimedia/fondos/Fondo-negro.png';
 
-function MensajeDos ({evento}){
+function MensajeDos ({evento, fondo}){
 
     return(
         <>
@@ -12,7 +11,9 @@ function MensajeDos ({evento}){
                 </section>
             ) : evento === 'XV Años' ? (
                 <section className="mensajedos">
-                    <img className="fondo" src={fondo} alt="..." />
+                    {fondo?.url && (
+                        <img className='fondo' src={fondo.url} alt='...' />
+                    )}
                     <p>
                         Estos momentos se vuelven eternos al compartirlos con ustedes.
                     </p>

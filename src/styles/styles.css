@@ -1431,6 +1431,18 @@
   );
   --alineamiento-mensaje: center;
   --letras-mensaje: black;
+  --letras-pase: white;
+  --color-padit: rgb(201, 147, 9);
+  --color-padres: linear-gradient(
+      to left,
+      rgb(180, 159, 105),
+      rgb(211, 178, 95),
+      rgb(185, 155, 80),
+      rgb(137, 103, 16),
+      rgb(150, 127, 70),
+      rgb(211, 178, 95),
+      rgb(180, 159, 105));
+  --color-confirmacion: white;
 }
 
 .modelo3 {
@@ -1691,7 +1703,7 @@
   font-size: 50px;
   font-weight: 800;
   z-index: 100;
-  background: linear-gradient(to right, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));
+  background: var(--color-padres);
   background-clip: padding-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1770,7 +1782,7 @@
   font-family: "Crimson Text", serif;
   font-size: 40px;
   font-weight: 800;
-  color: rgb(201, 147, 9);
+  color: var(--color-padit);
   margin-top: 20px;
   margin-bottom: 0px;
   z-index: 100;
@@ -1800,7 +1812,7 @@
   margin-top: -40px;
   height: 350px;
   width: 270px;
-  border: 2px solid rgb(201, 147, 9);
+  border: 2px solid var(--color-padit);
   border-radius: 10px;
   padding: 15px;
   background-color: #fff;
@@ -1820,10 +1832,10 @@
   justify-content: center;
 }
 .modelo3 .caja .padrinos .swiper-button-next {
-  color: rgb(201, 147, 9);
+  color: var(--color-padit);
 }
 .modelo3 .caja .padrinos .swiper-button-prev {
-  color: rgb(201, 147, 9);
+  color: var(--color-padit);
 }
 .modelo3 .caja .padrinos .swiper-slide {
   text-align: center;
@@ -1854,7 +1866,7 @@
   font-family: "Abel", sans-serif;
   font-size: 28px;
   text-align: center;
-  color: aliceblue;
+  color: var(--letras-pase);
 }
 .modelo3 .caja .pase .nin {
   font-size: 20px;
@@ -1932,6 +1944,7 @@
   top: 0;
   left: 0;
   z-index: 50;
+  object-fit: cover;
 }
 .modelo3 .caja .galeria {
   display: flex;
@@ -2165,7 +2178,7 @@
   font-family: "Crimson Text", serif;
   font-size: 40px;
   font-weight: 800;
-  color: rgb(201, 147, 9);
+  color: var(--color-padit);
   margin-top: 20px;
   margin-bottom: 0px;
   z-index: 100;
@@ -2186,7 +2199,7 @@
   height: 320px;
   margin-top: -40px;
   background-color: #fff;
-  border: 2px solid rgb(201, 147, 9);
+  border: 2px solid var(--color-padit);
   border-radius: 10px;
 }
 .modelo3 .caja .itinerario .swiper .contenedor .icono {
@@ -2202,10 +2215,10 @@
   font-size: 28px;
 }
 .modelo3 .caja .itinerario .swiper-button-next {
-  color: rgb(201, 147, 9);
+  color: var(--color-padit);
 }
 .modelo3 .caja .itinerario .swiper-button-prev {
-  color: rgb(201, 147, 9);
+  color: var(--color-padit);
 }
 .modelo3 .caja .itinerario .swiper-slide {
   text-align: center;
@@ -2383,7 +2396,7 @@
   align-content: center;
   text-align: center;
   background-color: #DD969C;
-  color: white;
+  color: var(--color-confirmar);
   height: 60vh;
   width: 100%;
   padding: 20px;

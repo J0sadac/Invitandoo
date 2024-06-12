@@ -1,9 +1,9 @@
 import vestido from '../../../../multimedia/herramientas/vestido.svg';
 import traje from '../../../../multimedia/herramientas/traje.svg';
 import petalos from '../../../../multimedia/herramientas/adorno petalos.gif';
-import fondo from '../../../../multimedia/fondos/Fondo-negro.png';
 
-function Vestimenta ({evento}){
+
+function Vestimenta ({evento, fondo}){
 
     return(
         <>
@@ -24,7 +24,9 @@ function Vestimenta ({evento}){
                 </section>
             ) : evento === 'XV Años' ? (
                 <section className="vestimenta">
-                    <img className='fondo' src={fondo} alt='...' />
+                    {fondo?.url && (
+                        <img className='fondo' src={fondo.url} alt='...' />
+                    )}
                     <p className="titulo">Código de vestimenta</p>
                     <div className='iconos'>
                         <img className="icono" src={traje} alt="..." />
