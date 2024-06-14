@@ -1,9 +1,11 @@
 import vestido from '../../../../multimedia/herramientas/vestido.svg';
 import traje from '../../../../multimedia/herramientas/traje.svg';
 import petalos from '../../../../multimedia/herramientas/adorno petalos.gif';
+import vestidoNegro from '../../../../multimedia/herramientas/vestido negro.svg';
+import trajeNegro from '../../../../multimedia/herramientas/traje negro.svg'
 
 
-function Vestimenta ({evento, fondo}){
+function Vestimenta ({evento, fondo, modo}){
 
     return(
         <>
@@ -28,10 +30,19 @@ function Vestimenta ({evento, fondo}){
                         <img className='fondo' src={fondo.url} alt='...' />
                     )}
                     <p className="titulo">Código de vestimenta</p>
-                    <div className='iconos'>
-                        <img className="icono" src={traje} alt="..." />
-                        <img className="icono" src={vestido} alt="..." />
-                    </div>
+                    <>
+                        {modo === 'claro' ? (
+                            <div className='iconos'>
+                                <img className="icono" src={trajeNegro} alt="..." />
+                                <img className="icono" src={vestidoNegro} alt="..." />
+                            </div>
+                        ):(
+                            <div className='iconos'>
+                                <img className="icono" src={traje} alt="..." />
+                                <img className="icono" src={vestido} alt="..." />
+                            </div>
+                        )}
+                    </>
                     <p>Formal - Noche</p>
                 </section>
             ):(

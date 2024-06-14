@@ -30,6 +30,7 @@ function Invitaciones({ evento }) {
                     --alineamiento-mensaje: ${styles.alineamientoMensaje || 'center'};
                     --letras-mensaje: ${styles.letraMensaje || 'black'};
                     --letras-pase: ${styles.letraPase || 'white'};
+                    --letras-ubicacion: ${styles.letraUbicacion || 'rgb(201, 147, 9)'};
                     --color-padit: ${styles.colorPadit || 'rgb(201, 147, 9)'};
                     --color-padres: ${styles.colorPadres || 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));'};
                     --color-confirmar: ${styles.colorConfirmacion || 'white'}
@@ -67,11 +68,6 @@ function Invitaciones({ evento }) {
                     fecha={evento.datos.fecha}
                     evento={evento.evento}
                 />
-                <Pase 
-                    evento={evento.evento}
-                    invitado={evento.invitados}
-                    fondo={evento.multimedia.fondos.tercero}
-                />
                 <Padres 
                     evento={evento.evento}
                     padres={evento.datos.padres[0]}
@@ -88,16 +84,22 @@ function Invitaciones({ evento }) {
                 {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 0 && (
                     <Galeria 
                         carousel={evento.multimedia.carousel}
-                        fondo={evento.multimedia.fondos.tercero}
+                        fondo={evento.multimedia.fondos.segundo}
                     />
-                )} 
-                <Vestimenta 
+                )}
+                <Pase 
                     evento={evento.evento}
-                    fondo={evento.multimedia.fondos.primero}
+                    invitado={evento.invitados}
+                    fondo={evento.multimedia.fondos.tercero}
                 />
                 <Itinerario 
                     protocolo={evento.itinerario}
                     fondo={evento.multimedia.fondos.segundo}
+                />
+                <Vestimenta 
+                    evento={evento.evento}
+                    fondo={evento.multimedia.fondos.primero}
+                    modo={evento.estilos.modo}
                 />
                 {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
                     <Mesa />   
