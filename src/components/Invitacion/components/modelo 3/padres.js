@@ -1,6 +1,5 @@
 import colgante from '../../../../multimedia/herramientas/flor colgante.gif';
 import negro from '../../../../multimedia/herramientas/flor adorno negra.gif';
-import invertido from '../../../../multimedia/herramientas/negro invertido.gif';
 import pie from '../../../../multimedia/herramientas/flor de pie.gif';
 import rip from '../../../../multimedia/herramientas/rip.svg';
 
@@ -29,12 +28,18 @@ function Padres ({evento, padres, fondo}){
                     {fondo?.url && (
                         <img className='fondo' src={fondo.url} alt='...' />
                     )}
-                    <img className='colgante' src={invertido} alt='...' />
+
+                    <div className='contenedor'>
+                        <span>
+                            Es un honor para mí invitarte a celebrar la dicha de mis XV años, 
+                            en compañía de
+                        </span>
+                    </div>
                     <p className='titulo'>Mis amados padres</p>
                     <div className='contenedor'>
-                        <span>{padres.papa}</span>
-                        <span>&</span>
-                        <span>{padres.mama}</span>
+                        <span className='padre'>{padres.papa}</span>
+                        <span className='padre'>&</span>
+                        <span className='padre'>{padres.mama}</span>
                     </div>
                     <img className='pie' src={negro} alt='...' />
                 </section>

@@ -3,7 +3,6 @@ import animacion from '../../../../multimedia/herramientas/adorno dorado.gif'
 import corona from '../../../../multimedia/herramientas/corona.png';
 import tiara from '../../../../multimedia/herramientas/tiara.png';
 
-
 //import bajo from '../../../../multimedia/herramientas/adorno-bajo.png';
 
 function Mensaje ({evento, fondo, festejado}) {

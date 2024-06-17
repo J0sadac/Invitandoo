@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Invitacion ({evento, fondo, dia, lugar, fecha}){
+function Invitacion ({evento, fondo, dia, lugar, fecha, festejado}){
     const [timer, setTimer] = useState({
         days: '00',
         hours: '00',
@@ -65,13 +65,34 @@ function Invitacion ({evento, fondo, dia, lugar, fecha}){
                     <div className="sombra"></div>
 
                     <div className="contenedor">
+                        <div className="direccion">
+                            <p>
+                                Hay momentos en la vida
+                                que imaginamos, soñamos
+                                y esperamos, uno de esos momentos
+                                ha llegado y lo quiero
+                                compartir contigo.
+                            </p>
+                        </div>
+
                         <p className="fecha">{dia}</p>
 
-                        <div className="direccion">
-                            <p>{lugar.salon}</p>
-                            <p>{lugar.direccion}</p>
-                            <p>{lugar.ciudad}</p>
-                        </div>
+                        {festejado !== 'Andrea Faybelin Citalan Arriaga' ?(
+
+                            <div className="direccion">
+                                <p>{lugar.salon}</p>
+                                <p>{lugar.direccion}</p>
+                                <p>{lugar.ciudad}</p>
+                            </div>
+                        ):(
+                            <div className="direccion">
+                                <p>
+                                    ¡No puedes faltar!
+                                    ¡Me hará muy feliz
+                                    verte ese día!
+                                </p>
+                            </div>
+                        )}
 
                         <div className="contador">
                             <div className="tiempo shadow-lg">

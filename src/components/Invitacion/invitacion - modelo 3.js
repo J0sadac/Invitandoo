@@ -15,6 +15,7 @@ import Vestimenta from "./components/modelo 3/vestimenta";
 import Cancion from './components/modelo 2/cancion';
 import Confirmacion from "./components/modelo 3/confirmacion";
 import Desplazar from "../tools/desplazar";
+import Frases from './components/modelo 3/frase';
 // import Collage from "./components/modelo 3/collage";
 
 function Invitaciones({ evento }) {
@@ -56,10 +57,17 @@ function Invitaciones({ evento }) {
             />
             <Desplazar />
             <div className="caja">
-                <Mensaje 
+                {evento.confirmaciones.mensajeUno === true &&(
+                    <Mensaje 
+                        evento={evento.evento}
+                        fondo={evento.multimedia.fondos.primero}
+                        festejado={evento.datos.festejado}
+                    />
+                )}
+                <Padres 
                     evento={evento.evento}
-                    fondo={evento.multimedia.fondos.primero}
-                    festejado={evento.datos.festejado}
+                    padres={evento.datos.padres[0]}
+                    fondo={evento.multimedia.fondos.segundo}
                 />
                 <Invitacion 
                     fondo={evento.multimedia.galeria[0].url}
@@ -67,19 +75,19 @@ function Invitaciones({ evento }) {
                     lugar={evento.datos.lugar}
                     fecha={evento.datos.fecha}
                     evento={evento.evento}
+                    festejado={evento.datos.festejado}
                 />
-                <Padres 
-                    evento={evento.evento}
-                    padres={evento.datos.padres[0]}
-                    fondo={evento.multimedia.fondos.segundo}
-                />
-                <MensajeDos 
+                <Frases
                     evento={evento.evento}
                     fondo={evento.multimedia.fondos.primero}
                 />
                 <Padrinos 
                     padrinos={evento.padrinos}
                     fondo={evento.multimedia.fondos.segundo}
+                />
+                <MensajeDos 
+                    evento={evento.evento}
+                    fondo={evento.multimedia.fondos.primero}
                 />
                 {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 0 && (
                     <Galeria 

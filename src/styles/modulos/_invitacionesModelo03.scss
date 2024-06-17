@@ -258,7 +258,7 @@ $font-second: 'Abel', sans-serif;
             justify-content: center;
     
             width: 100%;
-            height: 70vh;
+            height: 80vh;
             padding: 20px;
     
             color: aliceblue;
@@ -365,6 +365,63 @@ $font-second: 'Abel', sans-serif;
                 }
             }
         }
+
+        .frases{
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           align-items: center;
+
+
+           position: relative;
+           z-index: 100;
+
+           height: 120vh;
+
+           .fondo{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 50;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            }
+
+            .adorno{
+                width: 80%;
+                z-index: 100;
+            }
+
+            .frase{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                text-align: center;
+
+                padding: 15px;
+
+                z-index: 100;
+
+                .titulo{
+                    font-family: $font-main;
+                    font-size: 45px;
+                    font-weight: 800;
+                    color: #900020;
+
+                    z-index: 100;
+                }
+
+                .contenido{
+                    font-family: $font-second;
+                    font-size: 20px;
+                }
+            }
+        }
     
         .padres{
             display: flex;
@@ -377,6 +434,7 @@ $font-second: 'Abel', sans-serif;
             z-index: 100;
     
             background-color: whitesmoke;
+            color: white;
     
             height: 80vh;
             width: 100%;
@@ -387,6 +445,8 @@ $font-second: 'Abel', sans-serif;
                 font-family: $font-main;
                 font-size: 50px;
                 font-weight: 800;
+
+                margin-top: -15px;
 
                 z-index: 100;
     
@@ -418,6 +478,8 @@ $font-second: 'Abel', sans-serif;
                 font-family: $font-second;
                 font-size: 25px;
 
+                width: 90%;
+
                 z-index: 100;
     
                 p{
@@ -428,6 +490,10 @@ $font-second: 'Abel', sans-serif;
                     img{
                         width: 25px;
                     }
+                }
+
+                .padre{
+                    font-weight: 800;
                 }
             }
     
@@ -468,9 +534,6 @@ $font-second: 'Abel', sans-serif;
         }
 
         .xv{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
 
             height: 70vh;
         }
@@ -928,7 +991,7 @@ $font-second: 'Abel', sans-serif;
                 .link{
                     margin: auto 0;
                     text-decoration: none;
-                    color: whitesmoke;
+                    color: black;
 
                     z-index: 100;
                 }
