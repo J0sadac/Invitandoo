@@ -16,7 +16,7 @@ import Cancion from './components/modelo 2/cancion';
 import Confirmacion from "./components/modelo 3/confirmacion";
 import Desplazar from "../tools/desplazar";
 import Frases from './components/modelo 3/frase';
-// import Collage from "./components/modelo 3/collage";
+import Collage from "./components/modelo 3/collage";
 
 function Invitaciones({ evento }) {
     useEffect(() => {
@@ -109,14 +109,20 @@ function Invitaciones({ evento }) {
                     fondo={evento.multimedia.fondos.primero}
                     modo={evento.estilos.modo}
                 />
-                {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
-                    <Mesa />   
-                )}
+                <Collage 
+                    fondo={evento.multimedia.fondos.segundo}
+                />
                 <Ubicacion 
                     evento={evento.evento}
                     fondo={evento.multimedia.fondos.primero}
+                    ubicacion={evento.ubicacion[0]}
                 />
-                {/* <Collage /> */}
+                {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
+                    <Mesa 
+                        fondo={evento.multimedia.fondos.segundo}
+                        mesa={evento.mesaDeRegalos[0]}
+                    />   
+                )}
                 <Confirmacion 
                     invitadoId={evento.invitados._id}
                     eventoId={evento._id}

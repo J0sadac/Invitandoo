@@ -1774,9 +1774,6 @@
   width: 90%;
   z-index: 100;
 }
-.modelo3 .caja .padres .contenedor p {
-  font-weight: 800;
-}
 .modelo3 .caja .padres .contenedor span img {
   width: 25px;
 }
@@ -2013,14 +2010,14 @@
   z-index: 20;
 }
 .modelo3 .caja .galeria .titulo {
-  color: rgb(0, 0, 0);
+  color: var(--color-padit);
   font-family: "Tangerine", cursive;
   font-size: 55px;
   font-weight: 800;
   z-index: 100;
 }
 .modelo3 .caja .galeria .imagen {
-  border: 4px solid rgb(0, 0, 0);
+  border: 4px solid var(--color-padit);
   width: 300px;
   object-fit: cover;
   z-index: 100;
@@ -2032,7 +2029,7 @@
   z-index: 100;
 }
 .modelo3 .caja .galeria .swiper-pagination-bullet-active {
-  background-color: rgb(0, 0, 0);
+  background-color: var(--color-padit);
 }
 .modelo3 .caja .galeria .swiper-slide {
   background-position: center;
@@ -2289,8 +2286,9 @@
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  height: 100vh;
   width: 100%;
+  position: relative;
+  z-index: 100;
   text-align: center;
   background-color: #DD969C;
 }
@@ -2300,6 +2298,22 @@
   font-weight: 800;
   font-family: "Tangerine", cursive;
   margin-top: 30px;
+  z-index: 100;
+}
+.modelo3 .caja .mesa .gracias {
+  color: white;
+  padding: 15px;
+  font-family: "Abel", sans-serif;
+  font-size: 21px;
+  z-index: 100;
+}
+.modelo3 .caja .mesa .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
 }
 .modelo3 .caja .mesa .regalo {
   display: flex;
@@ -2308,7 +2322,9 @@
   align-items: center;
   align-content: center;
   width: 90%;
-  height: 510px;
+  z-index: 100;
+  padding: 15px;
+  margin: 20px 5px;
   text-decoration: none;
   text-align: center;
   color: white;
@@ -2318,13 +2334,12 @@
   backdrop-filter: blur(5px);
 }
 .modelo3 .caja .mesa .regalo .icono {
-  width: 250px;
+  width: 300px;
   margin-bottom: 30px;
 }
 .modelo3 .caja .mesa .regalo .codigo {
   font-family: "Abel", sans-serif;
   font-size: 28px;
-  font-weight: 800;
 }
 .modelo3 .caja .mesa .regalo .anuncio {
   font-family: "Abel", sans-serif;
@@ -2343,7 +2358,7 @@
   background-color: #191970;
   color: var(--letras-mensaje);
   width: 100%;
-  height: 95vh;
+  height: 75vh;
 }
 .modelo3 .caja .vestimenta .fondo {
   width: 100%;

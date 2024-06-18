@@ -1,8 +1,8 @@
 import vestido from '../../../../multimedia/herramientas/vestido.svg';
 import traje from '../../../../multimedia/herramientas/traje.svg';
 import petalos from '../../../../multimedia/herramientas/adorno petalos.gif';
-import vestidoNegro from '../../../../multimedia/herramientas/vestido negro.svg';
-import trajeNegro from '../../../../multimedia/herramientas/traje negro.svg'
+import vestidoNegro from '../../../../multimedia/herramientas/vestido semi-formal.png';
+import trajeNegro from '../../../../multimedia/herramientas/traje semi-formal.png';
 
 
 function Vestimenta ({evento, fondo, modo}){
@@ -43,7 +43,7 @@ function Vestimenta ({evento, fondo, modo}){
                             </div>
                         )}
                     </>
-                    <p>Formal - Noche</p>
+                    <p>Semi formal</p>
                 </section>
             ):(
                 <div>

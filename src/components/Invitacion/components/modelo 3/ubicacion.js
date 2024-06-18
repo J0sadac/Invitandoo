@@ -1,6 +1,5 @@
 
 import iglesia from '../../../../multimedia/Boda - Kristopher/iglesia.jpg';
-import salonDos from '../../../../multimedia/XV años - Yazit/salon.jpg';
 import salon from '../../../../multimedia/Boda - Kristopher/salon.jpg';
 import adorno from '../../../../multimedia/herramientas/adorno dorado.svg';
 import mapa from '../../../../multimedia/herramientas/mapa.svg';
@@ -9,7 +8,7 @@ import mapa from '../../../../multimedia/herramientas/mapa.svg';
 import { useState } from 'react';
 import Iframe from "react-iframe";
 
-function Ubicacion({evento, fondo}) {
+function Ubicacion({evento, fondo, ubicacion}) {
     const [ventanaIglesia, setVentanaIglesia] = useState(false);
     const [ventanaSalon, setVentanaSalon] = useState(false);
 
@@ -27,6 +26,8 @@ function Ubicacion({evento, fondo}) {
         setVentanaIglesia(false);
         setVentanaSalon(false);
     };
+
+    console.log(ubicacion)
 
     return (
         <>
@@ -115,11 +116,11 @@ function Ubicacion({evento, fondo}) {
 
                     <section>
                         <div className="lugar">
-                            <p className="establecimiento">Salon de fiestas "El Diamante"</p>
-                            <img className="foto" src={salonDos} alt="..." />
+                            <p className="establecimiento">{ubicacion.salon}</p>
+                            <img className="foto" src={ubicacion.foto} alt="..." />
                             <div className='direccion'>
-                                <span className='nombre'>2 poniente entre 5a y 6a sur.</span>
-                                <span>Berriozábal, Chiapas, México.</span>
+                                <span className='nombre'>{ubicacion.direccion}</span>
+                                <span>{ubicacion.ciudad}</span>
                             </div>
                         </div>
 
@@ -134,7 +135,7 @@ function Ubicacion({evento, fondo}) {
                             <div className='mapa'>
                                 <p className='titulo'>Ubicación GPS</p>
                                 <Iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.6331553303535!2d-93.2793954759836!3d16.79491720692395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecc35edf8fa329%3A0xadc81439f42ebd59!2sSal%C3%B3n%20para%20eventos%20%22Diamante%22!5e0!3m2!1ses-419!2smx!4v1718074578924!5m2!1ses-419!2smx"
+                                    src={ubicacion.link}
                                     width="600" height="450" 
                                     className='maps'
                                     allowFullScreen="" loading="lazy" 
