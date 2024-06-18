@@ -37,9 +37,9 @@ function Padres ({evento, padres, fondo}){
                     </div>
                     <p className='titulo'>Mis amados padres</p>
                     <div className='contenedor'>
-                        <span className='padre'>{padres.papa}</span>
-                        <span className='padre'>&</span>
                         <span className='padre'>{padres.mama}</span>
+                        <span className='padre'>&</span>
+                        <span className='padre'>{padres.papa}</span>
                     </div>
                     <img className='pie' src={negro} alt='...' />
                 </section>

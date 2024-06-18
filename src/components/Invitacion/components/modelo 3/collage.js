@@ -1,20 +1,33 @@
+import React from 'react';
 
+// Función para dividir el array en sub-arrays de tamaño `size`
+const chunkArray = (array, size) => {
+    const chunkedArray = [];
+    for (let i = 0; i < array.length; i += size) {
+        chunkedArray.push(array.slice(i, i + size));
+    }
+    return chunkedArray;
+};
 
-function Collage ({img}) {
+function Collage({ galeria, fondo }) {
+    const chunkedGaleria = chunkArray(galeria, 5);
 
-    return(
+    return (
         <section className="collage">
             <p className="titulo">Collage</p>
+            <img className="fondo" src={fondo.url} alt="..." />
+
             <div className='contenedor'>
-                <img className="img uno" src={img} alt="..." />
-                <img className="img dos" src={img} alt="..." />
-                <img className="img tres" src={img} alt="..." />
-                <img className="img cuatro" src={img} alt="..." />
-                <img className="img cinco" src={img} alt="..." />
-                <img className="img seis" src={img} alt="..." />
+                {chunkedGaleria.map((chunk, index) => (
+                    <div className="column" key={index}>
+                        {chunk.map((img, idx) => (
+                            <img className="img" src={img.url} alt="..." key={idx} />
+                        ))}
+                    </div>
+                ))}
             </div>
         </section>
     );
-};
+}
 
 export default Collage;

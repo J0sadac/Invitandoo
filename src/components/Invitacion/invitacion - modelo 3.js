@@ -70,7 +70,7 @@ function Invitaciones({ evento }) {
                     fondo={evento.multimedia.fondos.segundo}
                 />
                 <Invitacion 
-                    fondo={evento.multimedia.galeria[0].url}
+                    fondo={evento.multimedia.carousel[0].url}
                     dia={evento.datos.dia}
                     lugar={evento.datos.lugar}
                     fecha={evento.datos.fecha}
@@ -111,6 +111,7 @@ function Invitaciones({ evento }) {
                 />
                 <Collage 
                     fondo={evento.multimedia.fondos.segundo}
+                    galeria={evento.multimedia.galeria}
                 />
                 <Ubicacion 
                     evento={evento.evento}
