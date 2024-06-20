@@ -15,7 +15,9 @@ function Collage({ galeria, fondo }) {
     return (
         <section className="collage">
             <p className="titulo">Collage</p>
-            <img className="fondo" src={fondo.url} alt="..." />
+            {fondo?.url && (
+                <img className="fondo" src={fondo.url} alt="..." />
+            )}
 
             <div className='contenedor'>
                 {chunkedGaleria.map((chunk, index) => (

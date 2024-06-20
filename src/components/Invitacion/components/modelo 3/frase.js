@@ -6,6 +6,7 @@ function Frases ({evento, fondo}){
         <>
         {evento === 'XV Años' ? (
             <section className="frases">
+                {/* colocar fondo predeterminado */}
                 <img className="fondo" src={fondo.url} alt="..." />
                 <div className="frase">
                     <p className="titulo">

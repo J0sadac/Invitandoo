@@ -54,14 +54,14 @@ function Invitacion ({evento, fondo, dia, lugar, fecha, festejado}){
             {evento === 'Boda' ? (
                 <section className="invitacion">
 
-                    <img className="fondo" src={fondo} alt="..." />
+                    <img className="fondo" src={fondo.url} alt="..." />
                     <div className="sombra"></div>
                     
                 </section>
             ) : evento === 'XV Años' ? (
                 <section className="invitacion">
 
-                    <img className="fondo" src={fondo} alt="..." />
+                    <img className="fondo" src={fondo.url} alt="..." />
                     <div className="sombra"></div>
 
                     <div className="contenedor">

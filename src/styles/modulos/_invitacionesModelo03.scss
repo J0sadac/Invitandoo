@@ -32,6 +32,7 @@ $font-second: 'Abel', sans-serif;
     --alineamiento-mensaje: center;
     --letras-mensaje: black;
     --letras-pase: white;
+    --contenido-padres: white;
     --letras-ubicacion: rgb(201, 147, 9);
     --color-padit: rgb(201, 147, 9);
     --color-padres: linear-gradient(
@@ -434,7 +435,7 @@ $font-second: 'Abel', sans-serif;
             z-index: 100;
     
             background-color: whitesmoke;
-            color: white;
+            color: var(--contenido-padres);
     
             height: 80vh;
             width: 100%;
@@ -1269,7 +1270,7 @@ $font-second: 'Abel', sans-serif;
             z-index: 100;
 
             background-color: #191970;
-            color: var(--letras-mensaje);
+            color: var(--letras-vestimenta);
 
             width: 100%;
             height: 75vh;

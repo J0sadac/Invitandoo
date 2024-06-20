@@ -34,7 +34,9 @@ function Invitaciones({ evento }) {
                     --letras-ubicacion: ${styles.letraUbicacion || 'rgb(201, 147, 9)'};
                     --color-padit: ${styles.colorPadit || 'rgb(201, 147, 9)'};
                     --color-padres: ${styles.colorPadres || 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));'};
-                    --color-confirmar: ${styles.colorConfirmacion || 'white'}
+                    --color-confirmar: ${styles.colorConfirmacion || 'white'};
+                    --contenido-padres: ${styles.contenidoPadres || 'white'};
+                    --letras-vestimenta: ${styles.letrasVestimenta || 'black'}
                 }
             `;
             document.head.appendChild(styleSheet);
@@ -50,7 +52,7 @@ function Invitaciones({ evento }) {
             <Portada 
                 evento={evento.evento}
                 festejado={evento.datos.festejado}
-                foto={evento.multimedia.portada[0].url}
+                foto={evento.multimedia.portada[0]}
             />
             <Cancion 
                 url={evento.multimedia.cancion.url}
@@ -70,17 +72,19 @@ function Invitaciones({ evento }) {
                     fondo={evento.multimedia.fondos.segundo}
                 />
                 <Invitacion 
-                    fondo={evento.multimedia.carousel[0].url}
+                    fondo={evento.multimedia.carousel[0]}
                     dia={evento.datos.dia}
                     lugar={evento.datos.lugar}
                     fecha={evento.datos.fecha}
                     evento={evento.evento}
                     festejado={evento.datos.festejado}
                 />
-                <Frases
-                    evento={evento.evento}
-                    fondo={evento.multimedia.fondos.primero}
-                />
+                {evento.confirmaciones.frases === true &&(
+                    <Frases
+                        evento={evento.evento}
+                        fondo={evento.multimedia.fondos.primero}
+                    />
+                )}
                 <Padrinos 
                     padrinos={evento.padrinos}
                     fondo={evento.multimedia.fondos.segundo}
@@ -89,7 +93,7 @@ function Invitaciones({ evento }) {
                     evento={evento.evento}
                     fondo={evento.multimedia.fondos.primero}
                 />
-                {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 0 && (
+                {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (
                     <Galeria 
                         carousel={evento.multimedia.carousel}
                         fondo={evento.multimedia.fondos.segundo}
@@ -109,10 +113,12 @@ function Invitaciones({ evento }) {
                     fondo={evento.multimedia.fondos.primero}
                     modo={evento.estilos.modo}
                 />
-                <Collage 
-                    fondo={evento.multimedia.fondos.segundo}
-                    galeria={evento.multimedia.galeria}
-                />
+                {evento?.multimedia?.galeria && evento?.multimedia?.galeria.length > 1 && (
+                    <Collage 
+                        fondo={evento.multimedia.fondos.segundo}
+                        galeria={evento.multimedia.galeria}
+                    />
+                )}
                 <Ubicacion 
                     evento={evento.evento}
                     fondo={evento.multimedia.fondos.primero}

@@ -8,7 +8,9 @@ function Mesa ({fondo, mesa}) {
     return(
         <section className="mesa">
             <h3 className='titulo'>Mesa de regalos</h3>
-            <img className="fondo" src={fondo.url} alt="..." />
+            {fondo?.url && (
+                <img className="fondo" src={fondo.url} alt="..." />
+            )}
 
             <p className="gracias">
                 {mesa.explicacion}
