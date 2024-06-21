@@ -1429,12 +1429,6 @@
       rgb(211, 178, 95),
       rgb(180, 159, 105)
   );
-  --alineamiento-mensaje: center;
-  --letras-mensaje: black;
-  --letras-pase: white;
-  --contenido-padres: white;
-  --letras-ubicacion: rgb(201, 147, 9);
-  --color-padit: rgb(201, 147, 9);
   --color-padres: linear-gradient(
       to left,
       rgb(180, 159, 105),
@@ -1444,6 +1438,15 @@
       rgb(150, 127, 70),
       rgb(211, 178, 95),
       rgb(180, 159, 105));
+  --alineamiento-mensaje: center;
+  --letras-mensaje: black;
+  --letras-pase: white;
+  --contenido-padres: white;
+  --letras-vestimenta: black;
+  --letras-ubicacion: rgb(201, 147, 9);
+  --color-padit: rgb(201, 147, 9);
+  --color-galeria: rgb(201, 147, 9);
+  --color-invitacion: white;
   --color-confirmacion: white;
 }
 
@@ -1478,7 +1481,7 @@
   top: 50px;
   text-align: center;
   font-family: "Crimson Text", serif;
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 800;
   color: rgb(20, 18, 6);
 }
@@ -1605,9 +1608,9 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   padding: 20px;
-  color: aliceblue;
+  color: var(--color-invitacion);
   text-align: center;
   position: relative;
   z-index: 90;
@@ -1663,7 +1666,7 @@
 }
 .modelo3 .caja .invitacion .contenedor .direccion p {
   font-family: "Abel", sans-serif;
-  font-size: 22px;
+  font-size: 23px;
 }
 .modelo3 .caja .invitacion .contenedor .contador {
   display: flex;
@@ -1852,7 +1855,7 @@
   align-items: center;
   align-content: center;
   font-family: "Abel", sans-serif;
-  font-size: 22px;
+  font-size: 23px;
   margin-top: -40px;
   height: 350px;
   width: 270px;
@@ -2011,14 +2014,14 @@
   z-index: 20;
 }
 .modelo3 .caja .galeria .titulo {
-  color: var(--color-padit);
+  color: var(--color-galeria);
   font-family: "Tangerine", cursive;
   font-size: 55px;
   font-weight: 800;
   z-index: 100;
 }
 .modelo3 .caja .galeria .imagen {
-  border: 4px solid var(--color-padit);
+  border: 4px solid var(--color-galeria);
   width: 300px;
   object-fit: cover;
   z-index: 100;
@@ -2030,7 +2033,7 @@
   z-index: 100;
 }
 .modelo3 .caja .galeria .swiper-pagination-bullet-active {
-  background-color: var(--color-padit);
+  background-color: var(--color-galeria);
 }
 .modelo3 .caja .galeria .swiper-slide {
   background-position: center;
@@ -2450,6 +2453,54 @@
   margin: 3px 0;
   border: 2px solid whitesmoke;
 }
+.modelo3 .caja .condiciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  padding: 15px;
+  color: black;
+  text-align: center;
+}
+.modelo3 .caja .condiciones .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.modelo3 .caja .condiciones .titulo {
+  font-family: "Tangerine", cursive;
+  font-weight: 800;
+  font-size: 45px;
+  z-index: 100;
+}
+.modelo3 .caja .condiciones .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin: 10px 0;
+  z-index: 100;
+  border-radius: 10px;
+}
+.modelo3 .caja .condiciones .contenedor .condicion {
+  font-family: "Abel", sans-serif;
+  font-size: 24px;
+}
+.modelo3 .caja .condiciones .contenedor .icono {
+  width: 200px;
+}
+.modelo3 .caja .condiciones p {
+  font-family: "Abel", sans-serif;
+  font-size: 24px;
+  margin: 15px;
+  z-index: 100;
+}
 .modelo3 .caja .confirmacion {
   display: flex;
   flex-direction: column;
@@ -2459,7 +2510,6 @@
   text-align: center;
   background-color: #DD969C;
   color: var(--color-confirmar);
-  height: 60vh;
   width: 100%;
   padding: 20px;
   position: relative;
@@ -2489,11 +2539,11 @@
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   backdrop-filter: blur(5px);
-  height: 400px;
+  height: 250px;
   z-index: 100;
 }
 .modelo3 .caja .confirmacion .confirmar p {
-  font-size: 20px;
+  font-size: 23px;
 }
 .modelo3 .caja .confirmacion .confirmar .botones {
   display: flex;
@@ -2511,6 +2561,24 @@
 }
 .modelo3 .caja .confirmacion .confirmar .botones .no {
   background-color: lightcoral;
+}
+.modelo3 .caja .confirmacion .whatsapp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  z-index: 100;
+  margin: 25px 0;
+  padding: 15px;
+  border-radius: 10px;
+}
+.modelo3 .caja .confirmacion .whatsapp p {
+  font-family: "Abel", sans-serif;
+  font-size: 23px;
+}
+.modelo3 .caja .confirmacion .whatsapp a .icono {
+  width: 65px;
 }
 .modelo3 .caja .confirmacion .alerta {
   display: flex;

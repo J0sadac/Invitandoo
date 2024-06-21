@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 //import fondo from '../../../../multimedia/fondos/fondo rojo.png';
+import Whatsapp from '../../../../multimedia/herramientas/whatsapp.png';
 
-function Confirmacion({ invitadoId, eventoId, fondo }) {
+function Confirmacion({ invitadoId, eventoId, fondo, contacto}) {
     const [modalVisible, setModalVisible] = useState(false);
     const [modalMessage, setModalMessage] = useState('');
 
@@ -53,6 +54,12 @@ function Confirmacion({ invitadoId, eventoId, fondo }) {
                     </div>
                 </div>
             )}
+
+            <div className="whatsapp shadow">
+                <p>Tambien puedes confirmar por Whatsapp con nuestro event planner</p>
+                <p>{contacto.nombre}</p>
+                <a href={`https://wa.me/${contacto.telefono}`}><img src={Whatsapp} className='icono' alt="..." /></a>
+            </div>
         </section>
     );
 }

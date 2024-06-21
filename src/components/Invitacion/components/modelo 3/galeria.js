@@ -10,8 +10,8 @@ function Galeria({carousel, fondo}) {
 
   return (
     <section className='galeria'>
-        {fondo?.url && (
-            <img className='fondo' src={fondo.url} alt='...' />
+        {fondo && (
+            <img className='fondo' src={fondo} alt='...' />
         )}
         <p className='titulo'>Galeria de fotos</p>
         <Swiper

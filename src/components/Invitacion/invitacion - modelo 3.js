@@ -17,6 +17,7 @@ import Confirmacion from "./components/modelo 3/confirmacion";
 import Desplazar from "../tools/desplazar";
 import Frases from './components/modelo 3/frase';
 import Collage from "./components/modelo 3/collage";
+import Condiciones from './components/modelo 3/condiciones';
 
 function Invitaciones({ evento }) {
     useEffect(() => {
@@ -35,6 +36,8 @@ function Invitaciones({ evento }) {
                     --color-padit: ${styles.colorPadit || 'rgb(201, 147, 9)'};
                     --color-padres: ${styles.colorPadres || 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));'};
                     --color-confirmar: ${styles.colorConfirmacion || 'white'};
+                    --color-galeria: ${styles.estilosGaleria.color || 'rgb(201, 147, 9)'};
+                    --color-invitacion: ${styles.estilosInvitacion.color || 'white'};
                     --contenido-padres: ${styles.contenidoPadres || 'white'};
                     --letras-vestimenta: ${styles.letrasVestimenta || 'black'}
                 }
@@ -59,20 +62,13 @@ function Invitaciones({ evento }) {
             />
             <Desplazar />
             <div className="caja">
-                {evento.confirmaciones.mensajeUno === true &&(
-                    <Mensaje 
-                        evento={evento.evento}
-                        fondo={evento.multimedia.fondos.primero}
-                        festejado={evento.datos.festejado}
-                    />
-                )}
                 <Padres 
                     evento={evento.evento}
                     padres={evento.datos.padres[0]}
                     fondo={evento.multimedia.fondos.segundo}
                 />
                 <Invitacion 
-                    fondo={evento.multimedia.carousel[0]}
+                    fondo={evento.estilos.estilosInvitacion.fondo}
                     dia={evento.datos.dia}
                     lugar={evento.datos.lugar}
                     fecha={evento.datos.fecha}
@@ -96,7 +92,14 @@ function Invitaciones({ evento }) {
                 {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (
                     <Galeria 
                         carousel={evento.multimedia.carousel}
-                        fondo={evento.multimedia.fondos.segundo}
+                        fondo={evento.estilos.estilosGaleria.fondo}
+                    />
+                )}
+                {evento.confirmaciones.mensajeUno === true &&(
+                    <Mensaje 
+                        evento={evento.evento}
+                        fondo={evento.multimedia.fondos.primero}
+                        festejado={evento.datos.festejado}
                     />
                 )}
                 <Pase 
@@ -113,6 +116,11 @@ function Invitaciones({ evento }) {
                     fondo={evento.multimedia.fondos.primero}
                     modo={evento.estilos.modo}
                 />
+                {evento.confirmaciones.condiciones === true && (
+                    <Condiciones 
+                        fondo={evento.multimedia.fondos.segundo}
+                    />
+                )}
                 {evento?.multimedia?.galeria && evento?.multimedia?.galeria.length > 1 && (
                     <Collage 
                         fondo={evento.multimedia.fondos.segundo}
@@ -134,6 +142,7 @@ function Invitaciones({ evento }) {
                     invitadoId={evento.invitados._id}
                     eventoId={evento._id}
                     fondo={evento.multimedia.fondos.tercero}
+                    contacto={evento.datos.contacto}
                 />
             </div>
         </div>
