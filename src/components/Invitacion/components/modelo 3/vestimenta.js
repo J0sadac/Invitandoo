@@ -5,7 +5,7 @@ import vestidoNegro from '../../../../multimedia/herramientas/vestido semi-forma
 import trajeNegro from '../../../../multimedia/herramientas/traje semi-formal.png';
 
 
-function Vestimenta ({evento, fondo, modo}){
+function Vestimenta ({evento, fondo, modo, festejado}){
 
     return(
         <>
@@ -44,6 +44,9 @@ function Vestimenta ({evento, fondo, modo}){
                         )}
                     </>
                     <p>Semi formal</p>
+                    {festejado === 'Danna Paola Huerta Pantoja.' && (
+                        <p>Por favor, no usar azul marino</p>
+                    )}
                 </section>
             ):(
                 <div>

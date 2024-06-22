@@ -115,6 +115,7 @@ function Invitaciones({ evento }) {
                     evento={evento.evento}
                     fondo={evento.multimedia.fondos.primero}
                     modo={evento.estilos.modo}
+                    festejado={evento.datos.festejado}
                 />
                 {evento.confirmaciones.condiciones === true && (
                     <Condiciones 
@@ -136,6 +137,7 @@ function Invitaciones({ evento }) {
                     <Mesa 
                         fondo={evento.multimedia.fondos.segundo}
                         mesa={evento.mesaDeRegalos[0]}
+                        confirmacion={evento.confirmaciones.condiciones}
                     />   
                 )}
                 <Confirmacion 

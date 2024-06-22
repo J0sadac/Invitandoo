@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import liverpool from '../../../../multimedia/herramientas/liverpool.png';
 import lluvia from '../../../../multimedia/herramientas/Lluvia de sobres.svg';
 
-function Mesa ({fondo, mesa}) {
+function Mesa ({fondo, mesa, confirmacion}) {
 
     return(
         <section className="mesa">
@@ -25,15 +25,17 @@ function Mesa ({fondo, mesa}) {
                 <p className="anuncio">¡Haz click aqui!</p>
             </Link>
 
-            <div className='regalo' to={`https://mesaderegalos.liverpool.com.mx/milistaderegalos/51436895`}>
-                <div className="contenido">
-                    <img className='icono' src={lluvia} alt='...' />
-                    <p className='codigo'>Lluvia de sobres</p>
+            {confirmacion?.lluvia === true && (
+                <div className='regalo' to={`https://mesaderegalos.liverpool.com.mx/milistaderegalos/51436895`}>
+                    <div className="contenido">
+                        <img className='icono' src={lluvia} alt='...' />
+                        <p className='codigo'>Lluvia de sobres</p>
+                    </div>
                 </div>
-            </div>
+            )}
 
             <p className="gracias">
-                ¡Con cariño, muchas gracias!
+                Por supuesto, cualquier detalle será bienvenido y apreciado ¡Con cariño, muchas gracias!
             </p>
         </section>
     );
