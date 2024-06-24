@@ -18,42 +18,51 @@ function Mesa ({fondo, mesa, confirmacion}) {
             </p>
 
             {confirmacion.lluvia === true && (
-                <div className='regalo' to={`https://mesaderegalos.liverpool.com.mx/milistaderegalos/51436895`}>
-                    <div className="contenido">
-                        <img className='icono' src={lluvia} alt='...' />
-                        <p className='codigo'>Lluvia de sobres</p>
+                <>
+                    <p className="gracias">
+                        Quiero ahorrarte tiempo y esfuerzo al elegir el regalo
+                        perfecto, si es tu elección obsequiarme algo, puedes depositarlo
+                        en el sobre que se te entregará en recepción el dia del evento.
+                    </p>
+                    <div className='regalo'>
+                        <div className="contenido">
+                            <img className='icono' src={lluvia} alt='...' />
+                            <p className='codigo'>Lluvia de sobres</p>
+                        </div>
                     </div>
-                </div>
+                </>
             )}
 
             {mesa?.tarjeta && (
                 <>
-                <p className="gracias">
-                    Quiero ahorrarte tiempo y esfuerzo al elegir el regalo
-                    perfecto, si es tu elección obsequiarme algo, puedes hacerlo
-                    a travez de una transferencia bancaria
-                </p>
-                <div className='regalo' to={`https://mesaderegalos.liverpool.com.mx/milistaderegalos/51436895`}>
-                    <div className="contenido">
-                        <img className='icono' src={bbva} alt='...' />
-                        <p className='codigo'>Numero de cuenta: {mesa.tarjeta}</p>
+                    <p className="gracias">
+                        O hacer una transferencia bancaria.
+                    </p>
+                    <div className='regalo'>
+                        <div className="contenido">
+                            <img className='icono' src={bbva} alt='...' />
+                            <p className='codigo'>Numero de cuenta: {mesa.tarjeta}</p>
+                        </div>
                     </div>
-                </div>
-                <p className="gracias">
-                    Nos encantaría recibir el comprobante
-                    por whatsapp para agradecerte personalmente.
-                </p>
+                    <p className="gracias">
+                        Nos encantaría recibir el comprobante
+                        por whatsapp para agradecerte personalmente.
+                    </p>
                 </>
             )}
 
-            <Link className='regalo' to={`https://mesaderegalos.liverpool.com.mx/milistaderegalos/${mesa.codigo}`}>
-                <div className="contenido">
-                    <img className='icono' src={liverpool} alt='...' />
-                    <p className='codigo'>{mesa.modalidad}: {mesa.codigo}</p>
-                </div>
+            {mesa?.codigo && (
 
-                <p className="anuncio">¡Haz click aqui!</p>
-            </Link>
+                <Link className='regalo' to={`https://mesaderegalos.liverpool.com.mx/milistaderegalos/${mesa.codigo}`}>
+                    <div className="contenido">
+                        <img className='icono' src={liverpool} alt='...' />
+                        <p className='codigo'>{mesa.modalidad}: {mesa.codigo}</p>
+                    </div>
+
+                    <p className="anuncio">¡Haz click aqui!</p>
+                </Link>
+            )}
+
 
             <p className="gracias">
                 Por supuesto, cualquier detalle será bienvenido y apreciado ¡Con cariño, muchas gracias!
