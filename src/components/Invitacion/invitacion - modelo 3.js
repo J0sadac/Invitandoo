@@ -137,7 +137,7 @@ function Invitaciones({ evento }) {
                     <Mesa 
                         fondo={evento.multimedia.fondos.segundo}
                         mesa={evento.mesaDeRegalos[0]}
-                        confirmacion={evento.confirmaciones.condiciones}
+                        confirmacion={evento.confirmaciones}
                     />   
                 )}
                 <Confirmacion 
