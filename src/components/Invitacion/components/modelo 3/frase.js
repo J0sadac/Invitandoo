@@ -27,7 +27,7 @@ function Frases ({evento, fondo}){
                     </p>
                     <p className="contenido">
                         La vida esta llena de ciclos y uno de ellos acaba de terminar.
-                        Ahora debo recordar con alegria lo que deje y empezar 
+                        Ahora debo recordar con alegria lo que dejé y empezar 
                         a planear lo que voy a ser en el futuro.  
                     </p>
                     <p className="contenido">
