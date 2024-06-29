@@ -64,7 +64,8 @@ function Invitaciones({ evento }) {
             <div className="caja">
                 <Padres 
                     evento={evento.evento}
-                    padres={evento.datos.padres[0]}
+                    datos={evento.datos}
+                    festejado={evento.datos.festejado}
                     fondo={evento.multimedia.fondos.segundo}
                 />
                 <Invitacion 
@@ -88,6 +89,7 @@ function Invitaciones({ evento }) {
                 <MensajeDos 
                     evento={evento.evento}
                     fondo={evento.multimedia.fondos.primero}
+                    festejado={evento.datos.festejado}
                 />
                 {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (
                     <Galeria 
@@ -106,15 +108,16 @@ function Invitaciones({ evento }) {
                     evento={evento.evento}
                     invitado={evento.invitados}
                     fondo={evento.multimedia.fondos.tercero}
+                    festejado={evento.datos.festejado}
                 />
                 <Itinerario 
                     protocolo={evento.itinerario}
                     fondo={evento.multimedia.fondos.segundo}
                 />
                 <Vestimenta 
-                    evento={evento.evento}
                     fondo={evento.multimedia.fondos.primero}
-                    modo={evento.estilos.modo}
+                    datos={evento.vestimenta}
+                    modo={evento.estilos.estilosVestimenta.modo}
                     festejado={evento.datos.festejado}
                 />
                 {evento.confirmaciones.condiciones === true && (

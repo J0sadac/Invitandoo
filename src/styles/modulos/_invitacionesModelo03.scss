@@ -539,6 +539,39 @@ $font-second: 'Abel', sans-serif;
                 width: 100%;
                 height: 100%;
             }
+
+            .iconos{
+
+                .icono{
+                    width: 110px;
+
+                    animation: rotar 8s linear infinite;
+                }
+
+                .top{
+                    position: absolute;
+                    z-index: 80;
+                    top: 10px;
+                    left: 10px;
+                }
+
+                .bttm{
+                    position: absolute;
+                    z-index: 80;
+                    bottom: 10px;
+                    right: 10px;
+                }
+            }
+
+            @keyframes rotar {
+                0% {
+                    transform: rotateY(0deg);
+                }
+                100% {
+                    transform: rotateY(360deg);
+                }
+            }
+            
         }
 
         .xv{
@@ -750,6 +783,27 @@ $font-second: 'Abel', sans-serif;
                 .rigth{
                     transform: rotatey(180deg);
                 }
+
+                .ant{
+                    margin: 0px;
+
+                    animation: aparecerYRotar 10s linear infinite;
+                }
+
+                @keyframes aparecerYRotar {
+                    0% {
+                        transform: translateY(100%) scale(0.1) rotateY(0deg);
+                        opacity: 1;
+                    }
+                    50% {
+                        transform: translateY(0) scale(0.8) rotateY(180deg);
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: translateY(50%) scale(0.1) rotateY(0deg);
+                        opacity: 1;
+                    }
+                }
             }
         }
     
@@ -757,11 +811,12 @@ $font-second: 'Abel', sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
     
             background-color: #DD969C;
     
             width: 100%;
-            height: 30vh;
+            padding: 16px;
     
             color: var(--letras-mensaje);
             text-align: center;
@@ -772,6 +827,8 @@ $font-second: 'Abel', sans-serif;
             p{
                 font-family: $font-second;
                 font-size: 28px;
+
+                margin: 0;
 
                 z-index: 100;
             }
@@ -1014,7 +1071,7 @@ $font-second: 'Abel', sans-serif;
                 align-items: center;
                 align-content: center;
 
-                z-index: 100;
+                z-index: 110;
 
                 background-color: rgba(0, 0 , 0, .5);
 
@@ -1030,6 +1087,8 @@ $font-second: 'Abel', sans-serif;
 
                     width: 320px;
                     height: 60vh;
+
+                    z-index: 100;
 
                     background-color: #fff;
 
@@ -1190,7 +1249,7 @@ $font-second: 'Abel', sans-serif;
             width: 100%;
 
             position: relative;
-            z-index: 100;
+            z-index: 90;
 
             text-align: center;
 
@@ -1393,6 +1452,7 @@ $font-second: 'Abel', sans-serif;
                 display: flex;
 
                 width: 100%;
+                height: 100%;
 
                 padding: 5px;
 
@@ -1500,7 +1560,7 @@ $font-second: 'Abel', sans-serif;
             padding: 20px;
 
             position: relative;
-            z-index: 80;
+            z-index: 90;
 
             .fondo{
                 width: 100%;

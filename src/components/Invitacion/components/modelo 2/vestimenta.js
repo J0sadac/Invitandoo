@@ -1,5 +1,5 @@
-import hombre from '../../../../multimedia/herramientas/dresscode - hombre.webp';
-import mujer from '../../../../multimedia/herramientas/dresscode - mujer.webp'
+import hombre from '../../../../multimedia/herramientas/traje etiqueta oscuro.png';
+import mujer from '../../../../multimedia/herramientas/vestido etiqueta oscuro.png';
 
 function Vestimenta (){
 

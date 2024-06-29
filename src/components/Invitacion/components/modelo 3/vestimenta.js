@@ -1,59 +1,124 @@
-import vestido from '../../../../multimedia/herramientas/vestido.svg';
-import traje from '../../../../multimedia/herramientas/traje.svg';
-import petalos from '../../../../multimedia/herramientas/adorno petalos.gif';
-import vestidoNegro from '../../../../multimedia/herramientas/vestido semi-formal.png';
-import trajeNegro from '../../../../multimedia/herramientas/traje semi-formal.png';
+//trajes oscuros
+import trajeEtiquetaOscuro from '../../../../multimedia/herramientas/traje etiqueta oscuro.png';
+import trajeFormalOscuro from '../../../../multimedia/herramientas/traje formal oscuro.png';
+import trajeSemifromalOscuro from '../../../../multimedia/herramientas/traje semi formal oscuro.png';
+import trajeInformalOscuro from '../../../../multimedia/herramientas/traje informal oscuro.png';
 
+//vestidos oscuros
+import vestidoEtiquetaOscuro from '../../../../multimedia/herramientas/vestido etiqueta oscuro.png';
+import vestidoFormalOscuro from '../../../../multimedia/herramientas/vestido formal oscuro.png';
+import vestidoSemifromalOscuro from '../../../../multimedia/herramientas/vestido semi formal oscuro.png';
+import vestidoInformalOscuro from '../../../../multimedia/herramientas/vestido informal oscuro.png';
 
-function Vestimenta ({evento, fondo, modo, festejado}){
+//trajes claros
+import trajeEtiquetaClaro from '../../../../multimedia/herramientas/traje etiqueta claro.png';
+import trajeFormalClaro from '../../../../multimedia/herramientas/traje formal claro.png';
+import trajeSemifromalClaro from '../../../../multimedia/herramientas/traje semi formal claro.png';
+import trajeInformalClaro from '../../../../multimedia/herramientas/traje informal claro.png';
+
+//vestidos claros
+import vestidoEtiquetaClaro from '../../../../multimedia/herramientas/vestido etiqueta claro.png';
+import vestidoFormalClaro from '../../../../multimedia/herramientas/vestido formal claro.png';
+import vestidoSemifromalClaro from '../../../../multimedia/herramientas/vestido semi formal claro.png';
+import vestidoInformalClaro from '../../../../multimedia/herramientas/vestido informal claro.png';
+
+function Vestimenta ({fondo, datos, modo}){
 
     return(
-        <>
-            {evento === 'Boda' ? (
-                <section className="vestimenta">
-                    <p className="titulo">Código de vestimenta</p>
-                    <div className='iconos'>
-                        <img className="icono" src={traje} alt="..." />
-                        <img className="icono" src={vestido} alt="..." />
-                    </div>
-                    <p>Formal - Noche</p>
-                    <p className='aviso'>Evitar color blanco</p>
-        
-                    <div className="flores">
-                        <img className='petalo left' src={petalos} alt='...' />
-                        <img className='petalo rigth' src={petalos} alt='...' />
-                    </div>
-                </section>
-            ) : evento === 'XV Años' ? (
-                <section className="vestimenta">
-                    {fondo?.url && (
-                        <img className='fondo' src={fondo.url} alt='...' />
-                    )}
-                    <p className="titulo">Código de vestimenta</p>
+        <section className="vestimenta">
+            {fondo?.url && (
+                <img className='fondo' src={fondo.url} alt='...' />
+            )}
+            <p className="titulo">Código de vestimenta</p>
+            <>
+                {modo === 'oscuro' && (
                     <>
-                        {modo === 'claro' ? (
-                            <div className='iconos'>
-                                <img className="icono" src={trajeNegro} alt="..." />
-                                <img className="icono" src={vestidoNegro} alt="..." />
-                            </div>
+                        {datos.codigo === 'Etiqueta' ? (
+                            <>
+                                <div className='iconos'>
+                                    <img className="icono" src={trajeEtiquetaOscuro} alt="..." />
+                                    <img className="icono" src={vestidoEtiquetaOscuro} alt="..." />
+                                </div>
+
+                                <p>{datos.codigo}</p>
+                            </>
+                        ): datos.codigo === 'Formal' ? (
+                            <>
+                                <div className='iconos'>
+                                    <img className="icono" src={trajeFormalOscuro} alt="..." />
+                                    <img className="icono" src={vestidoFormalOscuro} alt="..." />
+                                </div>
+
+                                <p>{datos.codigo}</p>
+                            </>
+                        ): datos.codigo === 'Semi formal' ? (
+                            <>
+                                <div className='iconos'>
+                                    <img className="icono" src={trajeSemifromalOscuro} alt="..." />
+                                    <img className="icono" src={vestidoSemifromalOscuro} alt="..." />
+                                </div>
+
+                                <p>{datos.codigo}</p>
+                            </>
                         ):(
-                            <div className='iconos'>
-                                <img className="icono" src={traje} alt="..." />
-                                <img className="icono" src={vestido} alt="..." />
-                            </div>
+                            <>
+                                <div className='iconos'>
+                                    <img className="icono" src={trajeInformalOscuro} alt="..." />
+                                    <img className="icono" src={vestidoInformalOscuro} alt="..." />
+                                </div>
+
+                                <p>{datos.codigo}</p>
+                            </>  
                         )}
                     </>
-                    <p>Semi formal</p>
-                    {festejado === 'Danna Paola Huerta Pantoja.' && (
-                        <p>Por favor, no usar azul marino</p>
-                    )}
-                </section>
-            ):(
-                <div>
-                    Holi
-                </div>
+                )}
+
+                {modo === 'claro' && (
+                    <>
+                        {datos.codigo === 'Etiqueta' ? (
+                            <>
+                                <div className='iconos'>
+                                    <img className="icono" src={trajeEtiquetaClaro} alt="..." />
+                                    <img className="icono" src={vestidoEtiquetaClaro} alt="..." />
+                                </div>
+
+                                <p>{datos.codigo}</p>
+                            </>
+                        ): datos.codigo === 'Formal' ? (
+                            <>
+                                <div className='iconos'>
+                                    <img className="icono" src={trajeFormalClaro} alt="..." />
+                                    <img className="icono" src={vestidoFormalClaro} alt="..." />
+                                </div>
+
+                                <p>{datos.codigo}</p>
+                            </>
+                        ): datos.codigo === 'Semi formal' ? (
+                            <>
+                                <div className='iconos'>
+                                    <img className="icono" src={trajeSemifromalClaro} alt="..." />
+                                    <img className="icono" src={vestidoSemifromalClaro} alt="..." />
+                                </div>
+
+                                <p>{datos.codigo}</p>
+                            </>
+                        ):(
+                            <>
+                                <div className='iconos'>
+                                    <img className="icono" src={trajeInformalClaro} alt="..." />
+                                    <img className="icono" src={vestidoInformalClaro} alt="..." />
+                                </div>
+
+                                <p>{datos.codigo}</p>
+                            </>  
+                        )}
+                    </> 
+                )}
+            </>
+            {datos?.mensaje && (
+                <p>{datos.mensaje}</p>
             )}
-        </>
+        </section>
     );
 };
 
