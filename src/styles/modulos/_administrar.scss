@@ -125,7 +125,7 @@ $font-second: 'Abel', sans-serif;
                 align-items: center;
                 align-content: center;
 
-                min-height: 70px;
+                padding: 15px;
 
                 border-bottom: 1px solid #3e4144;
 
@@ -147,6 +147,7 @@ $font-second: 'Abel', sans-serif;
                     width: 35px;
                     height: 35px;
                     padding: 7px;
+                    margin: 0 2px;
 
                     .icono{
                         width: 100%;

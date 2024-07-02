@@ -1,6 +1,6 @@
 import petalos from '../../../../multimedia/herramientas/adorno petalos.gif';
 import amarillas from '../../../../multimedia/herramientas/flor amarilla.gif';
-import antifaz from '../../../../multimedia/herramientas/antifaz veneciaga.png';
+import antifazFondo from '../../../../multimedia/herramientas/Adorno animado.png'
 
 
 function Pase ({evento, invitado, fondo, festejado}){
@@ -50,9 +50,8 @@ function Pase ({evento, invitado, fondo, festejado}){
                     </div> 
 
                     {festejado === 'Danna Paola Huerta Pantoja.' ? (
-                        <div className="flores">
-                            <img className='petalo ant' src={antifaz} alt='...' />
-                            <img className='petalo ant rigth' src={antifaz} alt='...' />
+                        <div className="contenedor-fondo">
+                            <img className='img' src={antifazFondo} alt='...' />
                         </div>  
                     ):(
                         <div className="flores">

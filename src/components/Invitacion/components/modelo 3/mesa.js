@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import liverpool from '../../../../multimedia/herramientas/liverpool.png';
 import lluvia from '../../../../multimedia/herramientas/Lluvia de sobres.svg';
 import bbva from '../../../../multimedia/herramientas/BBVA-logo.png';
+import antifaz from '../../../../multimedia/herramientas/antifaz veneciaga.png';
 
-function Mesa ({fondo, mesa, confirmacion}) {
+function Mesa ({fondo, mesa, confirmacion, festejado}) {
 
     return(
         <section className="mesa">
@@ -67,6 +68,14 @@ function Mesa ({fondo, mesa, confirmacion}) {
             <p className="gracias">
                 Por supuesto, cualquier detalle será bienvenido y apreciado ¡Con cariño, muchas gracias!
             </p>
+
+            {festejado === 'Danna Paola Huerta Pantoja.' && (
+                <div className="flores">
+                    <img className='petalo ant' src={antifaz} alt='...' />
+                    <img className='petalo ant' src={antifaz} alt='...' />
+                </div>  
+            )}
+
         </section>
     );
 };

@@ -67,8 +67,8 @@ function Administrar() {
             {Object.keys(contenido).map(mesa => {
                 const invitados = contenido[mesa];
                 const confirmados = invitados.filter(inv => inv.asistir === 'confirmado');
-                const totalConfirmados = confirmados.reduce((total, inv) => total + inv.pase, 0);
-                const totalPases = invitados.reduce((total, inv) => total + inv.pase, 0);
+                const totalConfirmados = confirmados.reduce((total, inv) => total + inv.pase + inv.infantes, 0);
+                const totalPases = invitados.reduce((total, inv) => total + inv.pase + inv.infantes, 0);
 
                 return (
                     <div key={mesa}>
@@ -82,7 +82,10 @@ function Administrar() {
                                 <div key={inv._id} className='contenido'>
                                     <span className='invitado'>{inv.invitado}</span>
                                     <span className='pase'>
-                                        {inv.pase} {inv.pase > 1 ? 'personas' : 'persona'}
+                                        {inv.pase} {inv.pase === 1 ? 'adulto' : 'adultos'}
+                                    </span>
+                                    <span className='pase'>
+                                        {inv.infantes} {inv.infantes === 1 ? 'niño' : 'niños'}
                                     </span>
                                     {inv.asistir === 'confirmado' ? (
                                         <div className='asistencia'>
@@ -108,4 +111,3 @@ function Administrar() {
 }
 
 export default Administrar;
-
