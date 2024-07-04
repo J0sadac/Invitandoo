@@ -134,7 +134,7 @@ function Invitaciones({ evento }) {
                 <Ubicacion 
                     evento={evento.evento}
                     fondo={evento.multimedia.fondos.primero}
-                    ubicacion={evento.ubicacion[0]}
+                    ubicacion={evento.ubicacion}
                 />
                 {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
                     <Mesa 

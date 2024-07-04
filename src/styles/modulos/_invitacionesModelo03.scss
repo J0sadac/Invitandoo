@@ -1016,6 +1016,8 @@ $font-second: 'Abel', sans-serif;
 
                 z-index: 100;
 
+                margin-bottom: 50px;
+
                 .establecimiento{
                     font-family: $font-second;
                     font-size: 35px;
@@ -1026,6 +1028,7 @@ $font-second: 'Abel', sans-serif;
 
                 .foto{
                     width: 270px;
+                    height: 270px;
                     object-fit: cover;
 
                     border-radius: 50%;
