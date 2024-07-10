@@ -2024,7 +2024,7 @@
 .modelo3 .caja .pase .contenedor-fondo .img {
   width: 100%;
   margin-top: 80px;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 .modelo3 .caja .mensajedos {
   display: flex;
@@ -2462,7 +2462,6 @@
   background-color: #191970;
   color: var(--letras-vestimenta);
   width: 100%;
-  height: 75vh;
 }
 .modelo3 .caja .vestimenta .fondo {
   width: 100%;
@@ -2484,6 +2483,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   z-index: 100;
+  margin: 30px 10px;
 }
 .modelo3 .caja .vestimenta .iconos .icono {
   width: 170px;
@@ -2505,9 +2505,16 @@
   transform: rotatey(180deg);
 }
 .modelo3 .caja .vestimenta p {
+  padding: 10px;
   font-family: "Abel", sans-serif;
   font-size: 25px;
   z-index: 100;
+}
+.modelo3 .caja .vestimenta .contenedor {
+  z-index: 100;
+}
+.modelo3 .caja .vestimenta .contenedor .img {
+  width: 200px;
 }
 .modelo3 .caja .vestimenta .aviso {
   font-size: 20px;

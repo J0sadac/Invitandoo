@@ -22,7 +22,9 @@ import vestidoFormalClaro from '../../../../multimedia/herramientas/vestido form
 import vestidoSemifromalClaro from '../../../../multimedia/herramientas/vestido semi formal claro.png';
 import vestidoInformalClaro from '../../../../multimedia/herramientas/vestido informal claro.png';
 
-function Vestimenta ({fondo, datos, modo}){
+import tonoAzul from '../../../../multimedia/herramientas/tonos azul.png';
+
+function Vestimenta ({fondo, datos, festejado, modo}){
 
     return(
         <section className="vestimenta">
@@ -116,7 +118,15 @@ function Vestimenta ({fondo, datos, modo}){
                 )}
             </>
             {datos?.mensaje && (
-                <p>{datos.mensaje}</p>
+                <>
+                    <p>{datos.mensaje}</p>
+
+                    {festejado === 'Danna Paola Huerta Pantoja.' && (
+                        <div className="contenedor">
+                            <img className='img' src={tonoAzul} alt='...' />
+                        </div>  
+                    )}
+                </>
             )}
         </section>
     );
