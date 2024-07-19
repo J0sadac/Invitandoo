@@ -54,7 +54,15 @@ function Pase ({evento, invitado, fondo, festejado}){
                     ):(
                         
                         <div className="cantidad">
-                            <span className="titulo">Pase para: {invitado.pase}</span>
+                            {invitado.pase >= 99 ? (
+                                <span className='titulo'>
+                                    Pase libre
+                                </span>
+                            ):(
+                                <span className='titulo'>
+                                    Pase para: {invitado.pase}
+                                </span>
+                            )}
                         </div> 
                     )}
 
