@@ -1,31 +1,31 @@
-import { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+//import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import icon from '../../multimedia/herramientas/options-icon.svg';
+//import icon from '../../multimedia/herramientas/options-icon.svg';
 
 function Tarjeta({evento, carousel, festejado, tipoDeEvento, i}) {
 
   const navigate = useNavigate();
 
-  const[opciones, setOpciones] = useState(false);
-  const optionRef = useRef(null);
+  //const[opciones, setOpciones] = useState(false);
+  //const optionRef = useRef(null);
 
-  const puerta = (estado) => {
-    setOpciones(estado);
-  };
+  // const puerta = (estado) => {
+  //   setOpciones(estado);
+  // };
 
-  useEffect(() => {
-      function cerrar(event) {
-          if (optionRef.current && !optionRef.current.contains(event.target)) {
-              setOpciones(false);
-          }
-      };
+  // useEffect(() => {
+  //     function cerrar(event) {
+  //         if (optionRef.current && !optionRef.current.contains(event.target)) {
+  //             setOpciones(false);
+  //         }
+  //     };
 
-      document.addEventListener('mousedown', cerrar);
-      return () => {
-          document.removeEventListener('mousedown', cerrar);
-      };
-  }, []);
+  //     document.addEventListener('mousedown', cerrar);
+  //     return () => {
+  //         document.removeEventListener('mousedown', cerrar);
+  //     };
+  // }, []);
 
   return (
           <div className='tarjeta-link'>
@@ -36,14 +36,14 @@ function Tarjeta({evento, carousel, festejado, tipoDeEvento, i}) {
                 <div className="contenedor">
                   <p className="texto">{tipoDeEvento}</p>
 
-                  <div ref={optionRef} className={`${opciones ? 'opciones' : 'cerrado'}`}>
+                  {/* <div ref={optionRef} className={`${opciones ? 'opciones' : 'cerrado'}`}>
                     <Link to={`/invitados/${evento._id}`}>Invitados</Link>
                     <Link to={`/Administrar/${evento._id}`}>Administrar</Link>
                   </div>
 
                   <button className="opcion" onClick={() => puerta(true)}> 
                     <img src={icon} alt="..." />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
