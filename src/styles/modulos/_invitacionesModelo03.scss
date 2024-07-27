@@ -850,11 +850,55 @@ $font-second: 'Abel', sans-serif;
     
             p{
                 font-family: $font-second;
-                font-size: 28px;
+                font-size: 25px;
 
                 margin: 0;
 
                 z-index: 100;
+            }
+
+            .parrafo{
+                margin: 100px 0 70px;
+            }
+
+            .florero{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                align-content: center;
+
+                width: 100%;
+                
+                position: absolute;
+                top: 15px;
+                left: 0;
+                z-index: 100;
+
+                .flor{
+                    width: 260px;
+                    z-index: 100;
+                }
+            }
+
+            .adornos{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                align-content: center;
+
+                width: 100%;
+                
+                position: absolute;
+                bottom: 15px;
+                left: 0;
+                z-index: 100;
+
+                .icono{
+                    width: 150px;
+                    z-index: 100;
+                }
             }
 
             .fondo{

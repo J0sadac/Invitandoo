@@ -4,10 +4,11 @@ function Frases ({evento, fondo}){
 
     return(
         <>
-        {evento === 'XV Años' ? (
+        {evento === 'XV Años' && (
             <section className="frases">
                 {/* colocar fondo predeterminado */}
                 <img className="fondo" src={fondo.url} alt="..." />
+
                 <div className="frase">
                     <p className="titulo">
                         Andrea:
@@ -43,12 +44,6 @@ function Frases ({evento, fondo}){
                 </div>
                 <img className="adorno" src={adorno} alt='...' />
             </section>
-        ): evento === 'Boda' ? (
-            <div>
-                
-            </div>
-        ): (
-            <div></div>
         )}
         </>
     )

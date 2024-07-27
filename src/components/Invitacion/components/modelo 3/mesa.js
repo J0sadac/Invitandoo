@@ -10,6 +10,7 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
     return(
         <section className="mesa">
             <h3 className='titulo'>Mesa de regalos</h3>
+            
             {fondo?.url && (
                 <img className="fondo" src={fondo.url} alt="..." />
             )}
@@ -69,7 +70,7 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                 Por supuesto, cualquier detalle será bienvenido y apreciado ¡Con cariño, muchas gracias!
             </p>
 
-            {festejado === 'Danna Paola Huerta Pantoja.' && (
+            {festejado === 'Danna Paola Huerta' && (
                 <div className="flores">
                     <img className='petalo ant' src={antifaz} alt='...' />
                     <img className='petalo ant' src={antifaz} alt='...' />

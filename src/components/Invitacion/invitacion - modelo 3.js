@@ -82,14 +82,17 @@ function Invitaciones({ evento }) {
                         fondo={evento.multimedia.fondos.primero}
                     />
                 )}
-                <Padrinos 
-                    padrinos={evento.padrinos}
-                    fondo={evento.multimedia.fondos.segundo}
-                />
+                {evento.padrinos.length > 0 && (
+                    <Padrinos 
+                        padrinos={evento.padrinos}
+                        fondo={evento.multimedia.fondos.segundo}
+                    />
+                )}
                 <MensajeDos 
                     evento={evento.evento}
                     fondo={evento.multimedia.fondos.primero}
                     festejado={evento.datos.festejado}
+                    frases={evento.frases}
                 />
                 {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (
                     <Galeria 

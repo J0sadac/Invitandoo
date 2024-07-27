@@ -11,17 +11,21 @@ function Padres ({evento, datos, fondo, festejado}){
         <>
             {evento === 'Boda' && (
                 <section className="padres">
+                    {fondo?.url && (
+                        <img className='fondo' src={fondo.url} alt='...' />
+                    )}
+
                     <img className='colgante' src={colgante} alt='...' />
                     <p className='titulo'>Nuestros padres</p>
                     <div className='contenedor'>
                         <p>Padres del Novio</p>
-                        <span>Waldemar Flores Hintz</span>
-                        <span>Ana Cristina Fernández Favila</span>
+                        <span>{datos.padres[0].papa}</span>
+                        <span>{datos.padres[0].mama}</span>
                     </div>
                     <div className='contenedor'>
                         <p>Padres de la Novia</p>
-                        <span>Reyna Isabel Díaz Saldaña</span>
-                        <span>Medardo Escobar Armenta <img src={rip} alt='...' /></span>                
+                        <span>{datos.padres[1].papa}</span>
+                        <span>{datos.padres[1].mama} {datos.festejado === 'Kristopher & Cristina' && (<img src={rip} alt='...' />)}</span>                
                     </div>
                     <img className='pie' src={pie} alt='...' />
                 </section>
@@ -45,7 +49,7 @@ function Padres ({evento, datos, fondo, festejado}){
                         <span className='padre'>&</span>
                         <span className='padre'>{datos.padres[0].papa}</span>
                     </div>
-                    {festejado === 'Danna Paola Huerta Pantoja.' ? (
+                    {festejado === 'Danna Paola Huerta' ? (
                         <div className='iconos'>
                             <img className='icono top' src={mascaraTop} alt='...' />
                             <img className='icono bttm' src={mascaraBttm} alt='...' />      
