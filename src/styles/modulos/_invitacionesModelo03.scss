@@ -1324,10 +1324,10 @@ $font-second: 'Abel', sans-serif;
 
             text-align: center;
 
+            color: black;
             background-color: #DD969C;
 
             .titulo{
-                color: white;
                 font-size: 50px;
                 font-weight: 800;
                 font-family: $font-main;
@@ -1338,7 +1338,6 @@ $font-second: 'Abel', sans-serif;
             }
 
             .gracias{
-                color: white;
 
                 padding: 15px;
 
@@ -1374,7 +1373,6 @@ $font-second: 'Abel', sans-serif;
 
                 text-decoration: none;
                 text-align: center;
-                color: white;
 
                 background-color: rgba(255, 255, 255, .1);
                 box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
@@ -1387,11 +1385,13 @@ $font-second: 'Abel', sans-serif;
                 }
 
                 .codigo{
+                    color: black;
                     font-family: $font-second;
                     font-size: 28px;
                 }
 
                 .anuncio{
+                    color: black;
                     font-family: $font-second;
                     font-size: 20px;
 

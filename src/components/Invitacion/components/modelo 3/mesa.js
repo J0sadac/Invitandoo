@@ -15,15 +15,17 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                 <img className="fondo" src={fondo.url} alt="..." />
             )}
 
-            <p className="gracias">
-                {mesa.explicacion}
-            </p>
+            {mesa.explicacion && (
+                <p className="gracias">
+                    {mesa.explicacion}
+                </p>
+            )}
 
             {confirmacion.lluvia === true && (
                 <>
                     <p className="gracias">
-                        Quiero ahorrarte tiempo y esfuerzo al elegir el regalo
-                        perfecto, si es tu elección obsequiarme algo, puedes depositarlo
+                        Queremos ahorrarte el tiempo y esfuerzo de elegir el regalo
+                        perfecto, si es tu elección obsequiarnos algo, puedes depositarlo
                         en el sobre que se te entregará en recepción el dia del evento.
                     </p>
                     <div className='regalo'>

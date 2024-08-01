@@ -2395,10 +2395,10 @@
   position: relative;
   z-index: 90;
   text-align: center;
+  color: black;
   background-color: #DD969C;
 }
 .modelo3 .caja .mesa .titulo {
-  color: white;
   font-size: 50px;
   font-weight: 800;
   font-family: "Tangerine", cursive;
@@ -2406,7 +2406,6 @@
   z-index: 100;
 }
 .modelo3 .caja .mesa .gracias {
-  color: white;
   padding: 15px;
   font-family: "Abel", sans-serif;
   font-size: 21px;
@@ -2432,7 +2431,6 @@
   margin: 20px 5px;
   text-decoration: none;
   text-align: center;
-  color: white;
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -2443,10 +2441,12 @@
   margin-bottom: 30px;
 }
 .modelo3 .caja .mesa .regalo .codigo {
+  color: black;
   font-family: "Abel", sans-serif;
   font-size: 28px;
 }
 .modelo3 .caja .mesa .regalo .anuncio {
+  color: black;
   font-family: "Abel", sans-serif;
   font-size: 20px;
   width: 280px;

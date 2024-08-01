@@ -25,7 +25,11 @@ function Padres ({evento, datos, fondo, festejado}){
                     <div className='contenedor'>
                         <p>Padres de la Novia</p>
                         <span>{datos.padres[1].papa}</span>
-                        <span>{datos.padres[1].mama} {datos.festejado === 'Kristopher & Cristina' && (<img src={rip} alt='...' />)}</span>                
+                        <span>
+                            {datos.padres[1].mama} 
+                            {datos.festejado === 'Kristopher & Cristina' && (<img src={rip} alt='...' />)}
+                            {datos.festejado === 'Esteban y Adriana' && (<img src={rip} alt='...' />)}
+                        </span>                
                     </div>
                     <img className='pie' src={pie} alt='...' />
                 </section>
