@@ -38,6 +38,7 @@ function Invitaciones({ evento }) {
                     --color-confirmar: ${styles.colorConfirmacion || 'white'};
                     --color-galeria: ${styles.estilosGaleria.color || 'rgb(201, 147, 9)'};
                     --color-invitacion: ${styles.estilosInvitacion.color || 'white'};
+                    --color-mesa: ${styles.colorMesa || 'white'};
                     --contenido-padres: ${styles.contenidoPadres || 'white'};
                     --letras-vestimenta: ${styles.letrasVestimenta || 'black'}
                 }

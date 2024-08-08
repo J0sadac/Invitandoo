@@ -121,7 +121,7 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                 <>
                     <p>{datos.mensaje}</p>
 
-                    {festejado === 'Danna Paola Huerta Pantoja.' && (
+                    {festejado === 'Danna Paola Huerta' && (
                         <div className="contenedor">
                             <img className='img' src={tonoAzul} alt='...' />
                         </div>  

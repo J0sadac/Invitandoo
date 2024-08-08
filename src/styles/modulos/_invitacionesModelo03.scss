@@ -47,6 +47,7 @@ $font-second: 'Abel', sans-serif;
     --color-galeria: rgb(201, 147, 9);
     --color-invitacion: white;
     --color-confirmacion: white;
+    --color-mesa: white;
 }
 
 .modelo3{
@@ -1324,7 +1325,7 @@ $font-second: 'Abel', sans-serif;
 
             text-align: center;
 
-            color: black;
+            color: var(--color-mesa);
             background-color: #DD969C;
 
             .titulo{
@@ -1385,7 +1386,7 @@ $font-second: 'Abel', sans-serif;
                 }
 
                 .codigo{
-                    color: black;
+                    color: var(--color-mesa);
                     font-family: $font-second;
                     font-size: 28px;
                 }
