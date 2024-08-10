@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import liverpool from '../../../../multimedia/herramientas/liverpool.png';
 import lluvia from '../../../../multimedia/herramientas/Lluvia de sobres.svg';
 import bbva from '../../../../multimedia/herramientas/BBVA-logo.png';
+import sears from '../../../../multimedia/herramientas/sears.png'
 import antifaz from '../../../../multimedia/herramientas/antifaz veneciaga.png';
 
 function Mesa ({fondo, mesa, confirmacion, festejado}) {
@@ -61,6 +62,17 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                     <div className="contenido">
                         <img className='icono' src={liverpool} alt='...' />
                         <p className='codigo'>{mesa.modalidad}: {mesa.codigo}</p>
+                    </div>
+
+                    <p className="anuncio">¡Haz click aqui!</p>
+                </Link>
+            )}
+
+            {mesa?.sears && (
+                <Link className='regalo' to={`https://www.sears.com.mx/Mesa-de-Regalos/156087/te-invito-a-mi-boda-esteban-adriana`}>
+                    <div className="contenido">
+                        <img className='icono' src={sears} alt='...' />
+                        <p className='codigo'>Codigo sears: 156087</p>
                     </div>
 
                     <p className="anuncio">¡Haz click aqui!</p>
