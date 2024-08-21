@@ -26,7 +26,7 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                 <>
                     <p className="gracias">
                         Queremos ahorrarte el tiempo y esfuerzo de elegir el regalo
-                        perfecto, si es tu elección obsequiarnos algo, puedes depositarlo
+                        perfecto, si es tu elección obsequiarme algo, puedes depositarlo
                         en el sobre que se te entregará en recepción el dia del evento.
                     </p>
                     <div className='regalo'>

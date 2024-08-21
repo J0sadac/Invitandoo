@@ -23,6 +23,7 @@ import vestidoSemifromalClaro from '../../../../multimedia/herramientas/vestido 
 import vestidoInformalClaro from '../../../../multimedia/herramientas/vestido informal claro.png';
 
 import tonoAzul from '../../../../multimedia/herramientas/tonos azul.png';
+import tonoRojo from '../../../../multimedia/herramientas/tonos rojo.png';
 
 function Vestimenta ({fondo, datos, festejado, modo}){
 
@@ -124,6 +125,12 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                     {festejado === 'Danna Paola Huerta' && (
                         <div className="contenedor">
                             <img className='img' src={tonoAzul} alt='...' />
+                        </div>  
+                    )}
+
+                    {festejado === 'Ariana Barroso Roldan' && (
+                        <div className="contenedor">
+                            <img className='img' src={tonoRojo} alt='...' />
                         </div>  
                     )}
                 </>

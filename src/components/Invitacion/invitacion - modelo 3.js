@@ -91,7 +91,7 @@ function Invitaciones({ evento }) {
                 )}
                 <MensajeDos 
                     evento={evento.evento}
-                    fondo={evento.multimedia.fondos.primero}
+                    fondo={evento.multimedia.fondos.tercero}
                     festejado={evento.datos.festejado}
                     frases={evento.frases}
                 />
@@ -99,13 +99,6 @@ function Invitaciones({ evento }) {
                     <Galeria 
                         carousel={evento.multimedia.carousel}
                         fondo={evento.estilos.estilosGaleria.fondo}
-                    />
-                )}
-                {evento.confirmaciones.mensajeUno === true &&(
-                    <Mensaje 
-                        evento={evento.evento}
-                        fondo={evento.multimedia.fondos.primero}
-                        festejado={evento.datos.festejado}
                     />
                 )}
                 <Pase 
@@ -124,9 +117,16 @@ function Invitaciones({ evento }) {
                     modo={evento.estilos.estilosVestimenta.modo}
                     festejado={evento.datos.festejado}
                 />
+                {evento.confirmaciones.mensajeUno === true &&(
+                    <Mensaje 
+                        evento={evento.evento}
+                        fondo={evento.multimedia.fondos.tercero}
+                        festejado={evento.datos.festejado}
+                    />
+                )}
                 {evento.confirmaciones.condiciones === true && (
                     <Condiciones 
-                        fondo={evento.multimedia.fondos.segundo}
+                        fondo={evento.multimedia.fondos.primero}
                     />
                 )}
                 {evento?.multimedia?.galeria && evento?.multimedia?.galeria.length > 1 && (

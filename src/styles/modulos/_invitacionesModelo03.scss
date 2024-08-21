@@ -469,6 +469,22 @@ $font-second: 'Abel', sans-serif;
                 -webkit-text-fill-color: transparent;
                 animation: anim 4s linear alternate infinite;
             }
+
+            .titulo-mama{
+                font-family: $font-main;
+                font-size: 55px;
+                font-weight: 800;
+
+                margin-top: -15px;
+
+                z-index: 100;
+    
+                background: var(--color-padres);
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: anim 4s linear alternate infinite;
+            }
     
             @keyframes anim {
                 0%{
@@ -503,6 +519,13 @@ $font-second: 'Abel', sans-serif;
 
                 .padre{
                     font-weight: 800;
+                }
+
+                .mama{
+                    margin-top: -35px;
+
+                    font-family: $font-main;
+                    font-size: 50px;
                 }
             }
     
@@ -1615,7 +1638,7 @@ $font-second: 'Abel', sans-serif;
 
             padding: 15px;
 
-            color: black;
+            color: white;
             text-align: center;
 
             .fondo{

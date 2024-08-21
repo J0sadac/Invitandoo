@@ -47,12 +47,25 @@ function Padres ({evento, datos, fondo, festejado}){
                             en compañía de
                         </span>
                     </div>
-                    <p className='titulo'>Mis amados padres</p>
-                    <div className='contenedor'>
-                        <span className='padre'>{datos.padres[0].mama}</span>
-                        <span className='padre'>&</span>
-                        <span className='padre'>{datos.padres[0].papa}</span>
-                    </div>
+
+                    {datos.padres[0]?.papa? (
+                        <>
+                            <p className='titulo'>Mis amados padres</p>
+                            <div className='contenedor'>
+                                <span className='padre'>{datos.padres[0].mama}</span>
+                                <span className='padre'>&</span>
+                                <span className='padre'>{datos.padres[0].papa}</span>
+                            </div>
+                        </>
+                    ):(
+                        <>
+                            <p className='titulo-mama'>Mi amada madre</p>
+                            <div className='contenedor'>
+                                <span className='mama'>{datos.padres[0].mama}</span>
+                            </div>
+                        </>
+                    )}
+
                     {festejado === 'Danna Paola Huerta' ? (
                         <div className='iconos'>
                             <img className='icono top' src={mascaraTop} alt='...' />

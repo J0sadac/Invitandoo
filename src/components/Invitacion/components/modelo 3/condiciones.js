@@ -25,13 +25,13 @@ function Condiciones ({fondo}) {
             </div>
             <div className="contenedor shadow-lg">
                 <p className="condicion">
-                    ¡Bailar TODA la velada junto al cunpleañero!
+                    ¡Bailar TODA la velada junto a la quinceañera!
                 </p>
                 <img className="icono" src={bailar} alt='...' />
             </div>
             <div className="contenedor shadow-lg">
                 <p className="condicion">
-                    Brindar por la felicidad de Yazit.
+                    Brindar por la felicidad de Ariana.
                 </p>
                 <img className="icono" src={brindar} alt='...' />
             </div>
