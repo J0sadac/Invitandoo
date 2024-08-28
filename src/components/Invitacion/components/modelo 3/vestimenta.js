@@ -128,7 +128,7 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                         </div>  
                     )}
 
-                    {festejado === 'Ariana Barroso Roldan' && (
+                    {festejado === 'Ariana Barroso Roldán' && (
                         <div className="contenedor">
                             <img className='img' src={tonoRojo} alt='...' />
                         </div>  

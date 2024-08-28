@@ -38,7 +38,12 @@ function Mensaje ({evento, fondo, festejado}) {
                     ):(
                         <div className='iconos'>
                             <img src={animacion} className='adorno' alt='...' />
-                            <img src={corona} className='icono crn' alt='...' />
+                            {festejado === 'Ariana Barroso Roldán' ? (
+                                <img src={tiara} className='icono crn' alt='...' />
+                            ):(
+                                <img src={corona} className='icono crn' alt='...' />
+                            )}
+                            
                             <img src={animacion} className='adorno tr' alt='...' />
                         </div>
                     )}
