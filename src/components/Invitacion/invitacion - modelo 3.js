@@ -1,23 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 
-import Portada from "./components/modelo 3/portada";
-import Mensaje from "./components/modelo 3/mensaje";
-import Invitacion from "./components/modelo 3/invitacion";
-import Pase from "./components/modelo 3/pase";
-import Padres from "./components/modelo 3/padres";
-import Padrinos from "./components/modelo 3/padrinos";
-import MensajeDos from "./components/modelo 3/mensaje2";
-import Galeria from "./components/modelo 3/galeria";
-import Ubicacion from "./components/modelo 3/ubicacion";
-import Itinerario from "./components/modelo 3/itinerario";
-import Mesa from "./components/modelo 3/mesa";
-import Vestimenta from "./components/modelo 3/vestimenta";
-import Cancion from './components/modelo 2/cancion';
-import Confirmacion from "./components/modelo 3/confirmacion";
-import Desplazar from "../tools/desplazar";
-import Frases from './components/modelo 3/frase';
-import Collage from "./components/modelo 3/collage";
-import Condiciones from './components/modelo 3/condiciones';
+const Portada = lazy(() => import("./components/modelo 3/portada"));
+const Mensaje = lazy(() => import("./components/modelo 3/mensaje"));
+const Invitacion = lazy(() => import("./components/modelo 3/invitacion"));
+const Pase = lazy(() => import("./components/modelo 3/pase"));
+const Padres = lazy(() => import("./components/modelo 3/padres"));
+const Padrinos = lazy(() => import("./components/modelo 3/padrinos"));
+const MensajeDos = lazy(() => import("./components/modelo 3/mensaje2"));
+const Galeria = lazy(() => import("./components/modelo 3/galeria"));
+const Ubicacion = lazy(() => import("./components/modelo 3/ubicacion"));
+const Itinerario = lazy(() => import("./components/modelo 3/itinerario"));
+const Mesa = lazy(() => import("./components/modelo 3/mesa"));
+const Vestimenta = lazy(() => import("./components/modelo 3/vestimenta"));
+const Cancion = lazy(() => import('./components/modelo 2/cancion'));
+const Confirmacion = lazy(() => import("./components/modelo 3/confirmacion"));
+const Desplazar = lazy(() => import("../tools/desplazar"));
+const Frases = lazy(() => import('./components/modelo 3/frase'));
+const Collage = lazy(() => import("./components/modelo 3/collage"));
+const Condiciones = lazy(() => import('./components/modelo 3/condiciones'));
 
 function Invitaciones({ evento }) {
     useEffect(() => {
@@ -52,110 +52,112 @@ function Invitaciones({ evento }) {
     }, [evento.estilos]);
 
     return (
-        <div className="modelo3">
-            <Portada 
-                evento={evento.evento}
-                festejado={evento.datos.festejado}
-                foto={evento.multimedia.portada[0]}
-            />
-            <Cancion 
-                url={evento.multimedia.cancion.url}
-            />
-            <Desplazar />
-            <div className="caja">
-                <Padres 
-                    evento={evento.evento}
-                    datos={evento.datos}
-                    festejado={evento.datos.festejado}
-                    fondo={evento.multimedia.fondos.segundo}
-                />
-                <Invitacion 
-                    fondo={evento.estilos.estilosInvitacion.fondo}
-                    dia={evento.datos.dia}
-                    lugar={evento.datos.lugar}
-                    fecha={evento.datos.fecha}
+        <Suspense fallback={<div>Loading...</div>}>
+            <div className="modelo3">
+                <Portada 
                     evento={evento.evento}
                     festejado={evento.datos.festejado}
+                    foto={evento.multimedia.portada[0]}
                 />
-                {evento.confirmaciones.frases === true &&(
-                    <Frases
+                <Cancion 
+                    url={evento.multimedia.cancion.url}
+                />
+                <Desplazar />
+                <div className="caja">
+                    <Padres 
                         evento={evento.evento}
-                        fondo={evento.multimedia.fondos.primero}
-                    />
-                )}
-                {evento.padrinos.length > 0 && (
-                    <Padrinos 
-                        padrinos={evento.padrinos}
+                        datos={evento.datos}
+                        festejado={evento.datos.festejado}
                         fondo={evento.multimedia.fondos.segundo}
                     />
-                )}
-                <MensajeDos 
-                    evento={evento.evento}
-                    fondo={evento.multimedia.fondos.tercero}
-                    festejado={evento.datos.festejado}
-                    frases={evento.frases}
-                />
-                {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (
-                    <Galeria 
-                        carousel={evento.multimedia.carousel}
-                        fondo={evento.estilos.estilosGaleria.fondo}
+                    <Invitacion 
+                        fondo={evento.estilos.estilosInvitacion.fondo}
+                        dia={evento.datos.dia}
+                        lugar={evento.datos.lugar}
+                        fecha={evento.datos.fecha}
+                        evento={evento.evento}
+                        festejado={evento.datos.festejado}
                     />
-                )}
-                <Pase 
-                    evento={evento.evento}
-                    invitado={evento.invitados}
-                    fondo={evento.multimedia.fondos.tercero}
-                    festejado={evento.datos.festejado}
-                />
-                <Itinerario 
-                    protocolo={evento.itinerario}
-                    fondo={evento.multimedia.fondos.segundo}
-                />
-                <Vestimenta 
-                    fondo={evento.multimedia.fondos.primero}
-                    datos={evento.vestimenta}
-                    modo={evento.estilos.estilosVestimenta.modo}
-                    festejado={evento.datos.festejado}
-                />
-                {evento.confirmaciones.mensajeUno === true &&(
-                    <Mensaje 
+                    {evento.confirmaciones.frases === true && (
+                        <Frases
+                            evento={evento.evento}
+                            fondo={evento.multimedia.fondos.primero}
+                        />
+                    )}
+                    {evento.padrinos.length > 0 && (
+                        <Padrinos 
+                            padrinos={evento.padrinos}
+                            fondo={evento.multimedia.fondos.segundo}
+                        />
+                    )}
+                    <MensajeDos 
                         evento={evento.evento}
                         fondo={evento.multimedia.fondos.tercero}
                         festejado={evento.datos.festejado}
+                        frases={evento.frases}
                     />
-                )}
-                {evento.confirmaciones.condiciones === true && (
-                    <Condiciones 
-                        fondo={evento.multimedia.fondos.primero}
-                    />
-                )}
-                {evento?.multimedia?.galeria && evento?.multimedia?.galeria.length > 1 && (
-                    <Collage 
-                        fondo={evento.multimedia.fondos.segundo}
-                        galeria={evento.multimedia.galeria}
-                    />
-                )}
-                <Ubicacion 
-                    evento={evento.evento}
-                    fondo={evento.multimedia.fondos.primero}
-                    ubicacion={evento.ubicacion}
-                />
-                {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
-                    <Mesa 
-                        fondo={evento.multimedia.fondos.segundo}
-                        mesa={evento.mesaDeRegalos[0]}
-                        confirmacion={evento.confirmaciones}
+                    {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (
+                        <Galeria 
+                            carousel={evento.multimedia.carousel}
+                            fondo={evento.estilos.estilosGaleria.fondo}
+                        />
+                    )}
+                    <Pase 
+                        evento={evento.evento}
+                        invitado={evento.invitados}
+                        fondo={evento.multimedia.fondos.tercero}
                         festejado={evento.datos.festejado}
-                    />   
-                )}
-                <Confirmacion 
-                    invitadoId={evento.invitados._id}
-                    eventoId={evento._id}
-                    fondo={evento.multimedia.fondos.tercero}
-                    contacto={evento.datos.contacto}
-                />
+                    />
+                    <Itinerario 
+                        protocolo={evento.itinerario}
+                        fondo={evento.multimedia.fondos.segundo}
+                    />
+                    <Vestimenta 
+                        fondo={evento.multimedia.fondos.primero}
+                        datos={evento.vestimenta}
+                        modo={evento.estilos.estilosVestimenta.modo}
+                        festejado={evento.datos.festejado}
+                    />
+                    {evento.confirmaciones.mensajeUno === true && (
+                        <Mensaje 
+                            evento={evento.evento}
+                            fondo={evento.multimedia.fondos.tercero}
+                            festejado={evento.datos.festejado}
+                        />
+                    )}
+                    {evento.confirmaciones.condiciones === true && (
+                        <Condiciones 
+                            fondo={evento.multimedia.fondos.primero}
+                        />
+                    )}
+                    {evento?.multimedia?.galeria && evento?.multimedia?.galeria.length > 1 && (
+                        <Collage 
+                            fondo={evento.multimedia.fondos.segundo}
+                            galeria={evento.multimedia.galeria}
+                        />
+                    )}
+                    <Ubicacion 
+                        evento={evento.evento}
+                        fondo={evento.multimedia.fondos.primero}
+                        ubicacion={evento.ubicacion}
+                    />
+                    {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
+                        <Mesa 
+                            fondo={evento.multimedia.fondos.segundo}
+                            mesa={evento.mesaDeRegalos[0]}
+                            confirmacion={evento.confirmaciones}
+                            festejado={evento.datos.festejado}
+                        />   
+                    )}
+                    <Confirmacion 
+                        invitadoId={evento.invitados._id}
+                        eventoId={evento._id}
+                        fondo={evento.multimedia.fondos.tercero}
+                        contacto={evento.datos.contacto}
+                    />
+                </div>
             </div>
-        </div>
+        </Suspense>
     );
 }
 
