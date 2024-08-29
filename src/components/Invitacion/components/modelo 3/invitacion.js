@@ -77,45 +77,47 @@ function Invitacion({ evento, fondo, dia, lugar, fecha, festejado }) {
           </div>
         )}
 
-        {dia && (
-            <p className="fecha">{dia}</p>
-        )}
+        <div className="contenido">
+          {dia && (
+              <p className="fecha">{dia}</p>
+          )}
 
-        {lugar && lugar.salon && (
-            <div className="direccion">
-                <p>{lugar.salon}</p>
-                <p>{lugar.direccion}</p>
-                <p>{lugar.ciudad}</p>
-            </div>
-        )}
+          {/* {lugar && lugar.salon && (
+              <div className="direccion">
+                  <p>{lugar.salon}</p>
+                  <p>{lugar.direccion}</p>
+                  <p>{lugar.ciudad}</p>
+              </div>
+          )} */}
 
-        {festejado === "Andrea Faybelin Citalan Arriaga" && (
-            <div className="direccion">
-                <p>¡No puedes faltar! ¡Me hará muy feliz verte ese día!</p>
-            </div>
-        )}
+          {festejado === "Andrea Faybelin Citalan Arriaga" && (
+              <div className="direccion">
+                  <p>¡No puedes faltar! ¡Me hará muy feliz verte ese día!</p>
+              </div>
+          )}
 
-        {fecha && (
-            <div className="contador">
-                <div className="tiempo shadow-lg">
-                    <span className="segundero">{timer.days}</span>
-                    <span>DIAS</span>
-                </div>
-                <div className="tiempo shadow">
-                    <span className="segundero">{timer.hours}</span>
-                    <span>HRS</span>
-                </div>
-                <div className="tiempo shadow">
-                    <span className="segundero">{timer.minutes}</span>
-                    <span>MNTS</span>
-                </div>
-                <div className="tiempo shadow">
-                    <span className="segundero">{timer.seconds}</span>
-                    <span>SEG</span>
-                </div>
-            </div>
-        )}
-        
+          {fecha && (
+              <div className="contador">
+                  <div className="tiempo shadow-lg">
+                      <span className="segundero">{timer.days}</span>
+                      <span>DIAS</span>
+                  </div>
+                  <div className="tiempo shadow">
+                      <span className="segundero">{timer.hours}</span>
+                      <span>HRS</span>
+                  </div>
+                  <div className="tiempo shadow">
+                      <span className="segundero">{timer.minutes}</span>
+                      <span>MNTS</span>
+                  </div>
+                  <div className="tiempo shadow">
+                      <span className="segundero">{timer.seconds}</span>
+                      <span>SEG</span>
+                  </div>
+              </div>
+          )}
+        </div>
+
       </div>
     </section>
   );
