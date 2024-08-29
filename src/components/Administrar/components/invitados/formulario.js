@@ -88,6 +88,7 @@ function Formulario ({agregar, captura, nuevo}) {
                                 <option value='Novia'>Novia</option>
                                 <option value='Mama'>Mamá</option>
                                 <option value='Papa'>Papá</option>
+                                <option value='Quinceañera'>Quinceañera</option>
                             </select>
                         </div>
 

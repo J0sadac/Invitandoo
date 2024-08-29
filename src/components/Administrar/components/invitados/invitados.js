@@ -6,6 +6,7 @@ import Novio from "./novio";
 import Novia from "./novia";
 import Papa from './papa';
 import Mama from './mama';
+import Quinceañera from './quinceañera';
 import General from './general';
 
 function Invitados () {
@@ -99,6 +100,11 @@ function Invitados () {
                         eliminar={eliminarInvitado}                    
                     />
                     <Mama
+                        invitados={evento.invitados}
+                        id={evento._id}
+                        eliminar={eliminarInvitado}
+                    />
+                    <Quinceañera
                         invitados={evento.invitados}
                         id={evento._id}
                         eliminar={eliminarInvitado}
