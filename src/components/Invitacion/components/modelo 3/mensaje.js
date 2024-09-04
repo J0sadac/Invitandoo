@@ -12,45 +12,45 @@ function Mensaje ({evento, fondo, festejado}) {
             {evento === 'Boda' ? (
                 <section className="mensaje">
                     <div className='florero'>
-                        <img className='flor tl' src={flor} alt='...' />
-                        <img className='flor tr' src={flor} alt='...' />
+                        <img loading='lazy' className='flor tl' src={flor} alt='...' />
+                        <img loading='lazy' className='flor tr' src={flor} alt='...' />
                     </div>
                     <p className='fecha'>03 de agosto de 2024</p>
                     <p>
                         ¡Uno de los dias más importantes de nuestra vida ha llegado!
                     </p>
                     <div className='florero'>
-                        <img className='flor bl' src={flor} alt='...' />
-                        <img className='flor br' src={flor} alt='...' />
+                        <img loading='lazy' className='flor bl' src={flor} alt='...' />
+                        <img loading='lazy' className='flor br' src={flor} alt='...' />
                     </div>
                 </section>
             ): evento === 'XV Años' ? (
                 <section className='mensaje'>
                     {fondo?.url && (
-                        <img className='fondo' src={fondo.url} alt='...' />
+                        <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
                     )}
                     {festejado === 'Bella' ? (
                         <div className='iconos'>
-                            <img src={animacion} className='adorno' alt='...' />
-                            <img src={tiara} className='icono crn' alt='...' />
-                            <img src={animacion} className='adorno tr' alt='...' />
+                            <img loading='lazy' src={animacion} className='adorno' alt='...' />
+                            <img loading='lazy' src={tiara} className='icono crn' alt='...' />
+                            <img loading='lazy' src={animacion} className='adorno tr' alt='...' />
                         </div>
                     ):(
                         <div className='iconos'>
-                            <img src={animacion} className='adorno' alt='...' />
+                            <img loading='lazy' src={animacion} className='adorno' alt='...' />
                             {festejado === 'Ariana Barroso Roldán' ? (
-                                <img src={tiara} className='icono crn' alt='...' />
+                                <img loading='lazy' src={tiara} className='icono crn' alt='...' />
                             ):(
-                                <img src={corona} className='icono crn' alt='...' />
+                                <img loading='lazy' src={corona} className='icono crn' alt='...' />
                             )}
                             
-                            <img src={animacion} className='adorno tr' alt='...' />
+                            <img loading='lazy' src={animacion} className='adorno tr' alt='...' />
                         </div>
                     )}
                     <p>Hoy cierro un capítulo lleno de recuerdos y abro otro con nuevas aventuras.</p>
                     <div  className='iconos'>
-                        <img src={animacion} className='adorno' alt='...' />
-                        <img src={animacion} className='adorno tr' alt='...' />
+                        <img loading='lazy' src={animacion} className='adorno' alt='...' />
+                        <img loading='lazy' src={animacion} className='adorno tr' alt='...' />
                     </div>
                 </section>
             ): (

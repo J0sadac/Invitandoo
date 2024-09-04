@@ -7,14 +7,14 @@ function MensajeDos ({evento, fondo, festejado, frases}){
     return(
         <section className="mensajedos">
             {fondo?.url && (
-                <img className='fondo' src={fondo.url} alt='...' />
+                <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}
 
             {frases.length > 0 ? (
                 <>
                     {evento === 'Boda' && (
                         <div className="florero">
-                            <img className='flor' src={flor} alt='...' />
+                            <img loading='lazy' className='flor' src={flor} alt='...' />
                         </div>
                     )}
 
@@ -24,8 +24,8 @@ function MensajeDos ({evento, fondo, festejado, frases}){
 
                     {evento === 'Boda' && (
                         <div className="adornos">
-                            <img className='icono' src={izquierda} alt='...' />
-                            <img className='icono' src={derecha} alt='...' />
+                            <img loading='lazy' className='icono' src={izquierda} alt='...' />
+                            <img loading='lazy' className='icono' src={derecha} alt='...' />
                         </div>
                     )}
                 </>

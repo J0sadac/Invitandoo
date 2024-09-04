@@ -63,7 +63,7 @@ function Invitacion({ evento, fondo, dia, lugar, fecha, festejado }) {
 
   return (
     <section className="invitacion">
-      <img className="fondo" src={fondo} alt="..." />
+      <img loading="lazy" className="fondo" src={fondo} alt="..." />
       <div className="sombra"></div>
 
       <div className="contenedor">

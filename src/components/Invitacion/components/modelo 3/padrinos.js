@@ -13,7 +13,7 @@ function Padrinos({padrinos, fondo}) {
   return (
     <section className='padrinos'>
         {fondo?.url && (
-            <img className='fondo' src={fondo.url} alt='...' />
+            <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
         )}
         <p className='titulo'>Padrinos</p>
       
@@ -28,7 +28,7 @@ function Padrinos({padrinos, fondo}) {
             {padrinos.map((pad) => (
                 <SwiperSlide key={pad._id}>
                     <div className='contenedor'>
-                        <img className='icono' src={pad.icono} alt='...' />
+                        <img loading='lazy' className='icono' src={pad.icono} alt='...' />
                         <p className='accion'>{pad.de}</p>
                         <div className='padrino'>
                             {pad.padrino.map((rino, idx) => (

@@ -17,7 +17,7 @@ const Ubicacion = ({ fondo, ubicacion, mapa }) => {
     return (
         <section className="ubicacion">
             {fondo?.url && (
-                <img className='fondo' src={fondo.url} alt='...' />
+                <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}
             <div className='encabezado'>
                 <p className="titulo">Ubicacion GPS</p>
@@ -27,13 +27,13 @@ const Ubicacion = ({ fondo, ubicacion, mapa }) => {
                 {ubicacion.map((lugar, index) => (
                     <div key={index} className="lugar">
                         <p className="establecimiento">{lugar.salon}</p>
-                        <img className="foto" src={lugar.foto} alt="..." />
+                        <img loading='lazy' className="foto" src={lugar.foto} alt="..." />
                         <div className='direccion'>
                             <span className='nombre'>{lugar.direccion}</span>
                             <span>{lugar.ciudad}</span>
                         </div>
                         <button onClick={() => abrirVentanaIglesia(index)}>
-                            <img className='icono' src={mapaIcon} alt='...' />
+                            <img loading='lazy' className='icono' src={mapaIcon} alt='...' />
                             <p className='link'>Ubicación GPS</p>
                         </button>
 

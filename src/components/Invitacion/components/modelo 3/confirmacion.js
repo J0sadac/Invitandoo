@@ -37,7 +37,7 @@ function Confirmacion({ invitadoId, eventoId, fondo, contacto}) {
     return (
         <section className="confirmacion">
             {fondo?.url && (
-                <img className='fondo' src={fondo.url} alt='...' />
+                <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}
             <span className="titulo">Por favor, confirma tu asistencia</span>
             <div className="confirmar">

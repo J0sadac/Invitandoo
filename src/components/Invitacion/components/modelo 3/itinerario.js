@@ -12,7 +12,7 @@ function Itinerario ({protocolo, fondo}) {
     return(
         <section className='itinerario'>
             {fondo?.url && (
-                <img className='fondo' src={fondo.url} alt='...' />
+                <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}
             <p className='titulo'>Itinerario</p>
         
@@ -27,7 +27,7 @@ function Itinerario ({protocolo, fondo}) {
                 {protocolo.map((prot) => (
                     <SwiperSlide key={prot._id}>
                         <div className='contenedor'>
-                            <img className='icono' src={prot.icono} alt='...' />
+                            <img loading='lazy' className='icono' src={prot.icono} alt='...' />
                             <p className='accion'>{prot.accion}</p>
                             <p className='hora'>{prot.hora}</p>
                         </div>

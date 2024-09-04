@@ -16,14 +16,14 @@ function Collage({ galeria, fondo }) {
         <section className="collage">
             <p className="titulo">Collage</p>
             {fondo?.url && (
-                <img className="fondo" src={fondo.url} alt="..." />
+                <img loading='lazy' className="fondo" src={fondo.url} alt="..." />
             )}
 
             <div className='contenedor'>
                 {chunkedGaleria.map((chunk, index) => (
                     <div className="column" key={index}>
                         {chunk.map((img, idx) => (
-                            <img className="img" src={img.url} alt="..." key={idx} />
+                            <img loading='lazy' className="img" src={img.url} alt="..." key={idx} />
                         ))}
                     </div>
                 ))}

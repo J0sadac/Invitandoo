@@ -11,7 +11,7 @@ function Portada({ evento, festejado, foto}) {
                             <span>{festejado}</span>
                         </div>
                     </div>
-                    <img className='img' src={foto.url} alt='...' />
+                    <img loading="lazy" className='img' src={foto.url} alt='...' />
                 </section>
             ) : evento === 'XV Años' ? (
                 <section className='portada'>
@@ -21,7 +21,7 @@ function Portada({ evento, festejado, foto}) {
                             <span>{festejado}</span>
                         </div>
                     </div>
-                    <img className='img' src={foto.url} alt='...' />
+                    <img loading="lazy" className='img' src={foto.url} alt='...' />
                 </section>
             ) : (
                 <div>holi</div>

@@ -13,7 +13,7 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
             <h3 className='titulo'>Mesa de regalos</h3>
             
             {fondo?.url && (
-                <img className="fondo" src={fondo.url} alt="..." />
+                <img loading="lazy" className="fondo" src={fondo.url} alt="..." />
             )}
 
             {mesa.explicacion && (
@@ -31,7 +31,7 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                     </p>
                     <div className='regalo'>
                         <div className="contenido">
-                            <img className='icono' src={lluvia} alt='...' />
+                            <img loading="lazy" className='icono' src={lluvia} alt='...' />
                             <p className='codigo'>Lluvia de sobres</p>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                     </p>
                     <div className='regalo'>
                         <div className="contenido">
-                            <img className='icono' src={bbva} alt='...' />
+                            <img loading="lazy" className='icono' src={bbva} alt='...' />
                             <p className='codigo'>Numero de cuenta: {mesa.tarjeta}</p>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
 
                 <Link className='regalo' to={`https://mesaderegalos.liverpool.com.mx/milistaderegalos/${mesa.codigo}`}>
                     <div className="contenido">
-                        <img className='icono' src={liverpool} alt='...' />
+                        <img loading="lazy" className='icono' src={liverpool} alt='...' />
                         <p className='codigo'>{mesa.modalidad}: {mesa.codigo}</p>
                     </div>
 
@@ -71,7 +71,7 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
             {mesa?.sears && (
                 <Link className='regalo' to={`https://www.sears.com.mx/Mesa-de-Regalos/156087/te-invito-a-mi-boda-esteban-adriana`}>
                     <div className="contenido">
-                        <img className='icono' src={sears} alt='...' />
+                        <img loading="lazy" className='icono' src={sears} alt='...' />
                         <p className='codigo'>Codigo sears: 156087</p>
                     </div>
 
@@ -86,8 +86,8 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
 
             {festejado === 'Danna Paola Huerta' && (
                 <div className="flores">
-                    <img className='petalo ant' src={antifaz} alt='...' />
-                    <img className='petalo ant' src={antifaz} alt='...' />
+                    <img loading="lazy" className='petalo ant' src={antifaz} alt='...' />
+                    <img loading="lazy" className='petalo ant' src={antifaz} alt='...' />
                 </div>  
             )}
 

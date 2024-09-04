@@ -7,7 +7,7 @@ function Condiciones ({fondo}) {
 
     return(
         <section className="condiciones">
-            <img className="fondo" src={fondo.url} alt="..." />
+            <img loading='lazy' className="fondo" src={fondo.url} alt="..." />
 
             <p className="titulo">Requisitos para divertirse!!</p>
 
@@ -15,7 +15,7 @@ function Condiciones ({fondo}) {
                 <p className="condicion">
                     Si decides acompañarme en mi gran día, que sea solo con un motivo ¡DIVERTIRSE!
                 </p>
-                <img className="icono" src={fiesta} alt='...' />
+                <img loading='lazy' className="icono" src={fiesta} alt='...' />
             </div>
             {/* <div className="contenedor shadow-lg">
                 <p className="condicion">
@@ -27,13 +27,13 @@ function Condiciones ({fondo}) {
                 <p className="condicion">
                     ¡Bailar TODA la velada junto a la quinceañera!
                 </p>
-                <img className="icono" src={bailar} alt='...' />
+                <img loading='lazy' className="icono" src={bailar} alt='...' />
             </div>
             <div className="contenedor shadow-lg">
                 <p className="condicion">
                     Brindar por la felicidad de Ariana.
                 </p>
-                <img className="icono" src={brindar} alt='...' />
+                <img loading='lazy' className="icono" src={brindar} alt='...' />
             </div>
 
             <p>¡Nos encantaría verte ahí!</p>

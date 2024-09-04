@@ -8,7 +8,7 @@ function Pase ({evento, invitado, fondo, festejado}){
     return(
         <section className="pase">
             {fondo?.url && (
-                <img className='fondo' src={fondo.url} alt='...' />
+                <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}
 
             <div className="invitado">
@@ -44,7 +44,7 @@ function Pase ({evento, invitado, fondo, festejado}){
 
             {festejado === 'Danna Paola Huerta' && (
                 <div className="contenedor-fondo">
-                    <img className='img' src={antifazFondo} alt='...' />
+                    <img loading='lazy' className='img' src={antifazFondo} alt='...' />
                 </div>    
             )}
 
@@ -56,15 +56,15 @@ function Pase ({evento, invitado, fondo, festejado}){
 
             {evento === 'Boda' && (
                 <div className="flores">
-                    <img className='petalo left' src={petalos} alt='...' />
-                    <img className='petalo rigth' src={petalos} alt='...' />
+                    <img loading='lazy' className='petalo left' src={petalos} alt='...' />
+                    <img loading='lazy' className='petalo rigth' src={petalos} alt='...' />
                 </div>
             )}
 
             {evento === 'XV Años' && (
                 <div className="flores">
-                    <img className='petalo left' src={amarillas} alt='...' />
-                    <img className='petalo rigth' src={amarillas} alt='...' />
+                    <img loading='lazy' className='petalo left' src={amarillas} alt='...' />
+                    <img loading='lazy' className='petalo rigth' src={amarillas} alt='...' />
                 </div>
             )}
         </section>

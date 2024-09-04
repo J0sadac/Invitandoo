@@ -12,10 +12,10 @@ function Padres ({evento, datos, fondo, festejado}){
             {evento === 'Boda' && (
                 <section className="padres">
                     {fondo?.url && (
-                        <img className='fondo' src={fondo.url} alt='...' />
+                        <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
                     )}
 
-                    <img className='colgante' src={colgante} alt='...' />
+                    <img loading='lazy' className='colgante' src={colgante} alt='...' />
                     <p className='titulo'>Nuestros padres</p>
                     <div className='contenedor'>
                         <p>Padres del Novio</p>
@@ -27,18 +27,18 @@ function Padres ({evento, datos, fondo, festejado}){
                         <span>{datos.padres[1].papa}</span>
                         <span>
                             {datos.padres[1].mama} 
-                            {datos.festejado === 'Kristopher & Cristina' && (<img src={rip} alt='...' />)}
-                            {datos.festejado === 'Esteban y Adriana' && (<img src={rip} alt='...' />)}
+                            {datos.festejado === 'Kristopher & Cristina' && (<img loading='lazy' src={rip} alt='...' />)}
+                            {datos.festejado === 'Esteban y Adriana' && (<img loading='lazy' src={rip} alt='...' />)}
                         </span>                
                     </div>
-                    <img className='pie' src={pie} alt='...' />
+                    <img loading='lazy' className='pie' src={pie} alt='...' />
                 </section>
             )}
 
             {evento === 'XV Años' && (
                 <section className="padres xv">
                     {fondo?.url && (
-                        <img className='fondo' src={fondo.url} alt='...' />
+                        <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
                     )}
 
                     <div className='contenedor'>
@@ -68,11 +68,11 @@ function Padres ({evento, datos, fondo, festejado}){
 
                     {festejado === 'Danna Paola Huerta' ? (
                         <div className='iconos'>
-                            <img className='icono top' src={mascaraTop} alt='...' />
-                            <img className='icono bttm' src={mascaraBttm} alt='...' />      
+                            <img loading='lazy' className='icono top' src={mascaraTop} alt='...' />
+                            <img loading='lazy' className='icono bttm' src={mascaraBttm} alt='...' />      
                         </div>
                     ):(
-                        <img className='pie' src={negro} alt='...' />
+                        <img loading='lazy' className='pie' src={negro} alt='...' />
                     )}
                 </section>
             )}

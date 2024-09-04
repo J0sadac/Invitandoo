@@ -11,7 +11,7 @@ function Galeria({carousel, fondo}) {
   return (
     <section className='galeria'>
         {fondo && (
-            <img className='fondo' src={fondo} alt='...' />
+            <img loading='lazy' className='fondo' src={fondo} alt='...' />
         )}
         <p className='titulo'>Galeria de fotos</p>
         <Swiper
@@ -32,7 +32,7 @@ function Galeria({carousel, fondo}) {
         >
             {carousel.map((foto) => (
                 <SwiperSlide key={foto._id}>
-                    <img className='imagen' src={foto.url} alt='...' />
+                    <img loading='lazy' className='imagen' src={foto.url} alt='...' />
                 </SwiperSlide>
             ))}
             
