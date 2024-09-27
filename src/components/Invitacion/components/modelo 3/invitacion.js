@@ -82,13 +82,17 @@ function Invitacion({ evento, fondo, dia, lugar, fecha, festejado }) {
               <p className="fecha">{dia}</p>
           )}
 
-          {/* {lugar && lugar.salon && (
-              <div className="direccion">
-                  <p>{lugar.salon}</p>
-                  <p>{lugar.direccion}</p>
-                  <p>{lugar.ciudad}</p>
-              </div>
-          )} */}
+          {festejado !== 'Ariana Barroso Roldán' && (
+            <>
+              {lugar && lugar.salon && (
+                  <div className="direccion">
+                      <p>{lugar.salon}</p>
+                      <p>{lugar.direccion}</p>
+                      <p>{lugar.ciudad}</p>
+                  </div>
+              )}
+            </>
+          )}
 
           {festejado === "Andrea Faybelin Citalan Arriaga" && (
               <div className="direccion">

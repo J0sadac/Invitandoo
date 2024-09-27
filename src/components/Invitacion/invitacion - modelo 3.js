@@ -64,6 +64,12 @@ function Invitaciones({ evento }) {
                 />
                 <Desplazar />
                 <div className="caja">
+                    <MensajeDos 
+                        evento={evento.evento}
+                        fondo={evento.multimedia.fondos.tercero}
+                        festejado={evento.datos.festejado}
+                        frases={evento.frases}
+                    />
                     <Padres 
                         evento={evento.evento}
                         datos={evento.datos}
@@ -90,12 +96,14 @@ function Invitaciones({ evento }) {
                             fondo={evento.multimedia.fondos.segundo}
                         />
                     )}
-                    <MensajeDos 
+
+                    <Pase 
                         evento={evento.evento}
+                        invitado={evento.invitados}
                         fondo={evento.multimedia.fondos.tercero}
                         festejado={evento.datos.festejado}
-                        frases={evento.frases}
                     />
+                    
                     {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (
                         <Galeria 
                             carousel={evento.multimedia.carousel}
@@ -103,21 +111,17 @@ function Invitaciones({ evento }) {
                             festejado={evento.datos.festejado}
                         />
                     )}
-                    <Pase 
-                        evento={evento.evento}
-                        invitado={evento.invitados}
-                        fondo={evento.multimedia.fondos.tercero}
-                        festejado={evento.datos.festejado}
-                    />
-                    <Itinerario 
-                        protocolo={evento.itinerario}
-                        fondo={evento.multimedia.fondos.segundo}
-                        festejado={evento.datos.festejado}
-                    />
+                    
                     <Vestimenta 
                         fondo={evento.multimedia.fondos.primero}
                         datos={evento.vestimenta}
                         modo={evento.estilos.estilosVestimenta.modo}
+                        festejado={evento.datos.festejado}
+                    />
+
+                    <Itinerario 
+                        protocolo={evento.itinerario}
+                        fondo={evento.multimedia.fondos.segundo}
                         festejado={evento.datos.festejado}
                     />
                     {evento.confirmaciones.mensajeUno === true && (
@@ -132,17 +136,19 @@ function Invitaciones({ evento }) {
                             fondo={evento.multimedia.fondos.primero}
                         />
                     )}
+                    <Ubicacion 
+                        evento={evento.evento}
+                        fondo={evento.multimedia.fondos.primero}
+                        ubicacion={evento.ubicacion}
+                    />
+
                     {evento?.multimedia?.galeria && evento?.multimedia?.galeria.length > 1 && (
                         <Collage 
                             fondo={evento.multimedia.fondos.segundo}
                             galeria={evento.multimedia.galeria}
                         />
                     )}
-                    <Ubicacion 
-                        evento={evento.evento}
-                        fondo={evento.multimedia.fondos.primero}
-                        ubicacion={evento.ubicacion}
-                    />
+                    
                     {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
                         <Mesa 
                             fondo={evento.multimedia.fondos.segundo}

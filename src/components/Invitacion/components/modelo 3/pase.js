@@ -6,7 +6,7 @@ import antifazFondo from '../../../../multimedia/herramientas/Adorno animado.png
 function Pase ({evento, invitado, fondo, festejado}){
 
     return(
-        <section className="pase">
+        <section className={festejado === 'Leonel y Denisse' ? 'pase leo' : 'pase'}>
             {fondo?.url && (
                 <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}
