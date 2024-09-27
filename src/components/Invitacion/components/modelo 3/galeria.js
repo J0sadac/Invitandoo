@@ -6,10 +6,10 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-function Galeria({carousel, fondo}) {
+function Galeria({carousel, fondo, festejado}) {
 
   return (
-    <section className='galeria'>
+    <section className={festejado === 'Leonel y Denisse' ? 'galeria leo' : 'galeria'}>
         {fondo && (
             <img loading='lazy' className='fondo' src={fondo} alt='...' />
         )}

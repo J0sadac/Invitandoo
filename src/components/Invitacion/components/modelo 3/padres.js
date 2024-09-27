@@ -10,7 +10,7 @@ function Padres ({evento, datos, fondo, festejado}){
     return(
         <>
             {evento === 'Boda' && (
-                <section className="padres">
+                <section className={festejado === 'Leonel y Denisse' ? 'padres leo' : 'padres'}>
                     {fondo?.url && (
                         <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
                     )}
@@ -19,7 +19,10 @@ function Padres ({evento, datos, fondo, festejado}){
                     <p className='titulo'>Nuestros padres</p>
                     <div className='contenedor'>
                         <p>Padres del Novio</p>
-                        <span>{datos.padres[0].papa}</span>
+                        <span>
+                            {datos.padres[0].papa}
+                            {datos.festejado === 'Leonel y Denisse' && (<img loading='lazy' src={rip} alt='...' />)}
+                        </span>
                         <span>{datos.padres[0].mama}</span>
                     </div>
                     <div className='contenedor'>

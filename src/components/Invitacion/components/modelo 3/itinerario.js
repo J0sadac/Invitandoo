@@ -7,10 +7,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-function Itinerario ({protocolo, fondo}) {
+function Itinerario ({protocolo, fondo, festejado}) {
 
     return(
-        <section className='itinerario'>
+        <section className={festejado === 'Leonel y Denisse' ? 'itinerario leo' : 'itinerario'}>
             {fondo?.url && (
                 <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}

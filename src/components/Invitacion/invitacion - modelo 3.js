@@ -100,6 +100,7 @@ function Invitaciones({ evento }) {
                         <Galeria 
                             carousel={evento.multimedia.carousel}
                             fondo={evento.estilos.estilosGaleria.fondo}
+                            festejado={evento.datos.festejado}
                         />
                     )}
                     <Pase 
@@ -111,6 +112,7 @@ function Invitaciones({ evento }) {
                     <Itinerario 
                         protocolo={evento.itinerario}
                         fondo={evento.multimedia.fondos.segundo}
+                        festejado={evento.datos.festejado}
                     />
                     <Vestimenta 
                         fondo={evento.multimedia.fondos.primero}

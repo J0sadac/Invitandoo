@@ -1524,6 +1524,45 @@
     background-position: 440px;
   }
 }
+.modelo3 .alternativa-portada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+}
+.modelo3 .alternativa-portada .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 20;
+}
+.modelo3 .alternativa-portada .titulo {
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+  font-weight: 800;
+  z-index: 100;
+  margin-top: 15px;
+  transition: 0.3s linear;
+  color: transparent;
+  background-image: var(--portada-titulo);
+  background-size: 200%;
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  animation: move 30s linear infinite;
+}
+.modelo3 .alternativa-portada .img {
+  margin-top: 10px;
+  width: 95vw;
+  z-index: 100;
+}
+@keyframes move {
+  100% {
+    background-position: 2000px 0;
+  }
+}
 .modelo3 .caja {
   position: absolute;
   z-index: 20;
@@ -1637,7 +1676,7 @@
 .modelo3 .caja .invitacion .contenedor {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 100;
   height: 100%;
@@ -2328,7 +2367,7 @@
   height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
   width: 100%;
@@ -2586,7 +2625,7 @@
   background-color: #FF0090;
 }
 .modelo3 .caja .collage .titulo {
-  color: white;
+  color: black;
   font-family: "Tangerine", cursive;
   font-size: 55px;
   font-weight: 800;
@@ -2773,6 +2812,11 @@
 .modelo3 .caja .confirmacion .alerta .contenido p {
   font-family: "Abel", sans-serif;
   font-size: 23px;
+}
+.modelo3 .caja .leo {
+  height: 100vh;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 .container-confirmaciones {

@@ -28,7 +28,7 @@ import tonoRojo from '../../../../multimedia/herramientas/tonos rojo.png';
 function Vestimenta ({fondo, datos, festejado, modo}){
 
     return(
-        <section className="vestimenta">
+        <section className={festejado === 'Leonel y Denisse' ? 'vestimenta leo' : 'vestimenta'}>
             {fondo?.url && (
                 <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}
