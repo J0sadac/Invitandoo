@@ -1,4 +1,3 @@
-import imgFondo from '../../../../multimedia/fondos/3.jpg';
 
 function Portada({ evento, festejado, foto}) {
 
@@ -8,8 +7,6 @@ function Portada({ evento, festejado, foto}) {
                 <>
                     {festejado === 'Leonel y Denisse' ? (
                         <section className="alternativa-portada">
-                            <img className="fondo" src={imgFondo} alt="fondo" />
-                            <span className='titulo'>NUESTRA BODA</span>
                             <img loading="lazy" className='img' src={foto.url} alt='...' />
                         </section>
                     ):(

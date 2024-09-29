@@ -11,10 +11,18 @@ function Pase ({evento, invitado, fondo, festejado}){
                 <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}
 
-            <div className="invitado">
-                <span className="titulo">Invitado:</span>
-                <span>{invitado.invitado}</span>
-            </div>
+            {festejado === 'Leonel y Denisse' ? (
+                <div className="invitado">
+                    <span className="titulo">Nos complace invitarte a ti:</span>
+                    <span>{invitado.invitado}</span>
+                </div>
+            ):(
+                <div className="invitado">
+                    <span className="titulo">Invitado:</span>
+                    <span>{invitado.invitado}</span>
+                </div>
+            )}
+            
 
             {invitado.mesa > 0 &&(
                 <div className="datos">
@@ -49,6 +57,12 @@ function Pase ({evento, invitado, fondo, festejado}){
             )}
 
             {festejado === 'Kristopher & Cristina' && (
+                <p className='nin'>
+                    Ceremonia y Recepción: Solo adultos. Gracias por su comprensión.
+                </p>
+            )}
+
+            {festejado === 'Leonel y Denisse' && (
                 <p className='nin'>
                     Ceremonia y Recepción: Solo adultos. Gracias por su comprensión.
                 </p>

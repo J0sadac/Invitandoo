@@ -151,7 +151,8 @@ function Invitaciones({ evento }) {
                     
                     {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
                         <Mesa 
-                            fondo={evento.multimedia.fondos.segundo}
+                            fondo={evento.multimedia.fondos.primero} 
+                            //regresar a segundo
                             mesa={evento.mesaDeRegalos[0]}
                             confirmacion={evento.confirmaciones}
                             festejado={evento.datos.festejado}

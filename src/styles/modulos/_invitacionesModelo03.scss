@@ -188,8 +188,7 @@ $font-second: 'Abel', sans-serif;
         }
 
         .img{
-            margin-top: 10px;
-            width: 95vw;
+            width: 100%;
 
             z-index: 100;
         }
@@ -797,8 +796,9 @@ $font-second: 'Abel', sans-serif;
 
             .nin{
                 font-size: 20px;
-
                 width: 200px;
+
+                z-index: 100;
             }
 
             .fondo{
@@ -821,7 +821,7 @@ $font-second: 'Abel', sans-serif;
     
                 .titulo{
                     font-family: $font-main;
-                    font-size: 52px;
+                    font-size: 45px;
                     font-weight: 800;
                 }
             }
@@ -930,8 +930,9 @@ $font-second: 'Abel', sans-serif;
             z-index: 100;
     
             p{
-                font-family: $font-second;
-                font-size: 25px;
+                font-family: $font-main;
+                font-size: 36px;
+                font-weight: 800;
 
                 margin: 0;
 
