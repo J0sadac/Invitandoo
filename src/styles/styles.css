@@ -1555,6 +1555,7 @@
 }
 .modelo3 .alternativa-portada .img {
   width: 100%;
+  margin-top: -10px;
   z-index: 100;
 }
 @keyframes move {
@@ -2102,7 +2103,7 @@
 .modelo3 .caja .mensajedos p {
   font-family: "Tangerine", cursive;
   font-size: 36px;
-  font-weight: 800;
+  font-weight: 400;
   margin: 0;
   z-index: 100;
 }
@@ -2558,6 +2559,7 @@
   background-color: #191970;
   color: var(--letras-vestimenta);
   width: 100%;
+  padding-bottom: 15px;
 }
 .modelo3 .caja .vestimenta .fondo {
   width: 100%;

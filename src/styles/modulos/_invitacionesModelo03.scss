@@ -190,6 +190,8 @@ $font-second: 'Abel', sans-serif;
         .img{
             width: 100%;
 
+            margin-top: -10px;
+
             z-index: 100;
         }
 
@@ -932,7 +934,7 @@ $font-second: 'Abel', sans-serif;
             p{
                 font-family: $font-main;
                 font-size: 36px;
-                font-weight: 800;
+                font-weight: 400;
 
                 margin: 0;
 
@@ -1541,6 +1543,7 @@ $font-second: 'Abel', sans-serif;
             color: var(--letras-vestimenta);
 
             width: 100%;
+            padding-bottom: 15px;
             
 
             .fondo{

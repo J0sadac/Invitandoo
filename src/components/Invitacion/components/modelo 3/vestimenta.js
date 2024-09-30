@@ -24,11 +24,12 @@ import vestidoInformalClaro from '../../../../multimedia/herramientas/vestido in
 
 import tonoAzul from '../../../../multimedia/herramientas/tonos azul.png';
 import tonoRojo from '../../../../multimedia/herramientas/tonos rojo.png';
+import tonosHM from '../../../../multimedia/herramientas/tonos hombre y mujer.png';
 
 function Vestimenta ({fondo, datos, festejado, modo}){
 
     return(
-        <section className={festejado === 'Leonel y Denisse' ? 'vestimenta leo' : 'vestimenta'}>
+        <section className='vestimenta'>
             {fondo?.url && (
                 <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}
@@ -131,6 +132,12 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                     {festejado === 'Ariana Barroso Roldán' && (
                         <div className="contenedor">
                             <img loading='lazy' className='img' src={tonoRojo} alt='...' />
+                        </div>  
+                    )}
+
+                    {festejado === 'Leonel y Denisse' && (
+                        <div className="contenedor">
+                            <img loading='lazy' className='img' src={tonosHM} alt='...' />
                         </div>  
                     )}
                 </>
