@@ -1,6 +1,7 @@
 import petalos from '../../../../multimedia/herramientas/adorno petalos.gif';
 import amarillas from '../../../../multimedia/herramientas/flor amarilla.gif';
-import antifazFondo from '../../../../multimedia/herramientas/Adorno animado.png'
+import antifazFondo from '../../../../multimedia/herramientas/Adorno animado.png';
+import rosas from '../../../../multimedia/herramientas/Flores rosas.gif';
 
 
 function Pase ({evento, invitado, fondo, festejado}){
@@ -69,10 +70,19 @@ function Pase ({evento, invitado, fondo, festejado}){
             )}
 
             {evento === 'Boda' && (
-                <div className="flores">
-                    <img loading='lazy' className='petalo left' src={petalos} alt='...' />
-                    <img loading='lazy' className='petalo rigth' src={petalos} alt='...' />
-                </div>
+                <>
+                    {festejado === 'Belén & Osmar' ? (
+                        <div className="flores">
+                            <img loading='lazy' className='petalo left' src={rosas} alt='...' />
+                            <img loading='lazy' className='petalo rigth' src={rosas} alt='...' />
+                        </div>
+                    ):(
+                        <div className="flores">
+                            <img loading='lazy' className='petalo left' src={petalos} alt='...' />
+                            <img loading='lazy' className='petalo rigth' src={petalos} alt='...' />
+                        </div>
+                    )}
+                </>
             )}
 
             {evento === 'XV Años' && (

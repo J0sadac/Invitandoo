@@ -25,6 +25,7 @@ import vestidoInformalClaro from '../../../../multimedia/herramientas/vestido in
 import tonoAzul from '../../../../multimedia/herramientas/tonos azul.png';
 import tonoRojo from '../../../../multimedia/herramientas/tonos rojo.png';
 import tonosHM from '../../../../multimedia/herramientas/tonos hombre y mujer.png';
+import colores from '../../../../multimedia/herramientas/Azul.png';
 
 function Vestimenta ({fondo, datos, festejado, modo}){
 
@@ -132,6 +133,12 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                     {festejado === 'Ariana Barroso Roldán' && (
                         <div className="contenedor">
                             <img loading='lazy' className='img' src={tonoRojo} alt='...' />
+                        </div>  
+                    )}
+
+                    {festejado === 'Belén & Osmar' && (
+                        <div className="contenedor">
+                            <img loading='lazy' className='img' src={colores} alt='...' />
                         </div>  
                     )}
 
