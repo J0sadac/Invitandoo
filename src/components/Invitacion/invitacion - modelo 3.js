@@ -1,4 +1,5 @@
 import React, { useEffect, lazy, Suspense } from 'react';
+import Mensaje3 from './components/modelo 3/mensaje3';
 
 const Portada = lazy(() => import("./components/modelo 3/portada"));
 const Mensaje = lazy(() => import("./components/modelo 3/mensaje"));
@@ -141,6 +142,13 @@ function Invitaciones({ evento }) {
                         fondo={evento.multimedia.fondos.primero}
                         ubicacion={evento.ubicacion}
                     />
+
+                    {evento?.frase3 && (
+                        <Mensaje3
+                            img={evento.frase3.img}
+                            frase={evento.frase3.frase}
+                        />
+                    )}
 
                     {evento?.multimedia?.galeria && evento?.multimedia?.galeria.length > 1 && (
                         <Collage 

@@ -2447,6 +2447,42 @@
   height: 100%;
   object-fit: cover;
 }
+.modelo3 .caja .frase3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  z-index: 100;
+  color: white;
+}
+.modelo3 .caja .frase3 .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  object-fit: cover;
+}
+.modelo3 .caja .frase3 .sombra {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+}
+.modelo3 .caja .frase3 .frase {
+  font-family: "Great Vibes", cursive;
+  font-size: 36px;
+  padding: 15px;
+  padding-left: 20px;
+  z-index: 100;
+}
 .modelo3 .caja .mesa {
   display: flex;
   flex-direction: column;
