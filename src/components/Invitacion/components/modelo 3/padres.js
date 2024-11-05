@@ -22,6 +22,7 @@ function Padres ({evento, datos, fondo, festejado}){
                         <span>
                             {datos.padres[0].papa}
                             {datos.festejado === 'Leonel y Denisse' && (<img loading='lazy' src={rip} alt='...' />)}
+                            {datos.festejado === 'Osmar & Belen' && (<img loading='lazy' src={rip} alt='...' />)}
                         </span>
                         <span>{datos.padres[0].mama}</span>
                     </div>
