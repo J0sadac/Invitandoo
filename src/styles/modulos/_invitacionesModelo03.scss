@@ -1394,6 +1394,84 @@ $font-second: 'Abel', sans-serif;
               
         }
 
+        .itLineal{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 70vh;
+
+            position: relative;
+            z-index: 100;
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 50;
+            }
+            
+
+            .titulo{
+                font-family: $Crimson;
+                font-size: 40px;
+                font-weight: 800;
+    
+                color: var(--color-padit);
+    
+                margin-top: 20px;
+                margin-bottom: 0px;
+
+                z-index: 100;
+            }
+
+            .contenido{
+                background-color: white;
+                border: solid 3px #c99309;
+                border-radius: 10px;
+
+                padding: 15px;
+
+                width: 300px;
+
+                z-index: 100;
+
+                .contenedor{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    margin: 15px 0px;
+
+                    .icono{
+                        width: 80px;
+                    }
+
+                    .datos{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        width: 155px;
+
+                        margin-left: 10px;
+
+                        span{
+                            font-family: $font-second;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
         .frase3{
             display: flex;
             flex-direction: column;
@@ -1526,7 +1604,7 @@ $font-second: 'Abel', sans-serif;
                 }
 
                 .anuncio{
-                    color: black;
+                    color: var(--color-mesa);
                     font-family: $font-second;
                     font-size: 20px;
 
@@ -1690,7 +1768,7 @@ $font-second: 'Abel', sans-serif;
             background-color: #FF0090;
 
             .titulo{
-                color: black;
+                color: white;
                 font-family: $font-main;
                 font-size: 55px;
                 font-weight: 800;

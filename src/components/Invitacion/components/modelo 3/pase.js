@@ -76,11 +76,16 @@ function Pase ({evento, invitado, fondo, festejado}){
                             <img loading='lazy' className='petalo left' src={rosas} alt='...' />
                             <img loading='lazy' className='petalo rigth' src={rosas} alt='...' />
                         </div>
+                    ): festejado === 'Alejandra & Alexander' ?(
+                        <div className="flores">
+                            <img loading='lazy' className='petalo left' src={amarillas} alt='...' />
+                            <img loading='lazy' className='petalo rigth' src={amarillas} alt='...' />
+                        </div>
                     ):(
                         <div className="flores">
                             <img loading='lazy' className='petalo left' src={petalos} alt='...' />
                             <img loading='lazy' className='petalo rigth' src={petalos} alt='...' />
-                        </div>
+                        </div> 
                     )}
                 </>
             )}

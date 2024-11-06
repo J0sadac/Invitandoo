@@ -2447,6 +2447,63 @@
   height: 100%;
   object-fit: cover;
 }
+.modelo3 .caja .itLineal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  z-index: 100;
+}
+.modelo3 .caja .itLineal .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.modelo3 .caja .itLineal .titulo {
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--color-padit);
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 100;
+}
+.modelo3 .caja .itLineal .contenido {
+  background-color: white;
+  border: solid 3px #c99309;
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  z-index: 100;
+}
+.modelo3 .caja .itLineal .contenido .contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0px;
+}
+.modelo3 .caja .itLineal .contenido .contenedor .icono {
+  width: 80px;
+}
+.modelo3 .caja .itLineal .contenido .contenedor .datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 155px;
+  margin-left: 10px;
+}
+.modelo3 .caja .itLineal .contenido .contenedor .datos span {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
 .modelo3 .caja .frase3 {
   display: flex;
   flex-direction: column;
@@ -2544,7 +2601,7 @@
   font-size: 28px;
 }
 .modelo3 .caja .mesa .regalo .anuncio {
-  color: black;
+  color: var(--color-mesa);
   font-family: "Abel", sans-serif;
   font-size: 20px;
   width: 280px;
@@ -2664,7 +2721,7 @@
   background-color: #FF0090;
 }
 .modelo3 .caja .collage .titulo {
-  color: black;
+  color: white;
   font-family: "Tangerine", cursive;
   font-size: 55px;
   font-weight: 800;
