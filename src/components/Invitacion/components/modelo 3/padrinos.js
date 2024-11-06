@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-function Padrinos({padrinos, fondo}) {
+function Padrinos({padrinos, fondo, festejado}) {
   return (
     <section className='padrinos'>
         {fondo?.url && (
@@ -27,7 +27,7 @@ function Padrinos({padrinos, fondo}) {
         >
             {padrinos.map((pad) => (
                 <SwiperSlide key={pad._id}>
-                    <div className='contenedor'>
+                    <div className={festejado === 'Alejandra & Alexander' ? 'contenedor aleContenedor' : 'contenedor'}>
                         <img loading='lazy' className='icono' src={pad.icono} alt='...' />
                         <p className='accion'>{pad.de}</p>
                         <div className='padrino'>

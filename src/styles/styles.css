@@ -1946,9 +1946,8 @@
   border: 2px solid var(--color-padit);
   border-radius: 10px;
   padding: 15px;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  color: white;
+  background-color: white;
+  color: black;
 }
 .modelo3 .caja .padrinos .swiper .contenedor .icono {
   width: 80px;
@@ -1963,6 +1962,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.modelo3 .caja .padrinos .swiper .aleContenedor {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  color: white;
 }
 .modelo3 .caja .padrinos .swiper-button-next {
   color: var(--color-padit);

@@ -95,6 +95,7 @@ function Invitaciones({ evento }) {
                         <Padrinos 
                             padrinos={evento.padrinos}
                             fondo={evento.multimedia.fondos.segundo}
+                            festejado={evento.datos.festejado}
                         />
                     )}
 
