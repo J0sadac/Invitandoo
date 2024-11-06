@@ -726,7 +726,10 @@ $font-second: 'Abel', sans-serif;
                     border-radius: 10px;
                     padding: 15px;
 
-                    background-color: #fff;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(5px);
+
+                    color: white;
     
                     .icono{
                         width: 80px;
@@ -932,8 +935,8 @@ $font-second: 'Abel', sans-serif;
             z-index: 100;
     
             p{
-                font-family: "Great Vibes", cursive;
-                font-size: 36px;
+                font-family: "Lora", serif;
+                font-size: 28px;
                 font-weight: 400;
 
                 margin: 0;
@@ -1119,8 +1122,8 @@ $font-second: 'Abel', sans-serif;
                 z-index: 100;
 
                 .titulo{
-                    font-family: $font-main;
-                    font-size: 55px;
+                    font-family: "Lora", serif;
+                    font-size: 38px;
                     font-weight: 800;
     
                     margin-top: 35px;
@@ -1431,15 +1434,16 @@ $font-second: 'Abel', sans-serif;
             }
 
             .contenido{
-                background-color: white;
-                border: solid 3px #c99309;
+                background-color: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(5px);
+                
                 border-radius: 10px;
 
                 padding: 15px;
 
                 width: 300px;
 
-                z-index: 100;
+                z-index: 80;
 
                 .contenedor{
                     display: flex;
@@ -1450,7 +1454,8 @@ $font-second: 'Abel', sans-serif;
                     margin: 15px 0px;
 
                     .icono{
-                        width: 80px;
+                        width: 70px;
+                        border-radius: 50%;
                     }
 
                     .datos{
@@ -1458,6 +1463,8 @@ $font-second: 'Abel', sans-serif;
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+
+                        color: white;
 
                         width: 155px;
 
@@ -1512,8 +1519,8 @@ $font-second: 'Abel', sans-serif;
             }
 
             .frase{
-                font-family: "Great Vibes", cursive;
-                font-size: 36px;
+                font-family: "Lora", serif;
+                font-size: 28px;
 
                 padding: 15px;
                 padding-left: 20px;               

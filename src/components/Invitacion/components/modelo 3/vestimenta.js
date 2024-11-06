@@ -87,7 +87,7 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                                     <img loading='lazy' className="icono" src={vestidoEtiquetaClaro} alt="..." />
                                 </div>
 
-                                <p>{datos.codigo}</p>
+                                <p>{datos.codigo}{festejado === 'Alejandra & Alexander' &&(<> rigurosa</>)}</p>
                             </>
                         ): datos.codigo === 'Formal' ? (
                             <>

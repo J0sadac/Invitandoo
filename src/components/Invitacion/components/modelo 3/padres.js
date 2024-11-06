@@ -15,7 +15,10 @@ function Padres ({evento, datos, fondo, festejado}){
                         <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
                     )}
 
-                    <img loading='lazy' className='colgante' src={colgante} alt='...' />
+                    {festejado !== 'Alejandra & Alexander' ? (
+                        <img loading='lazy' className='colgante' src={colgante} alt='...' />
+                    ):(<></>)}
+                    
                     <p className='titulo'>Nuestros padres</p>
                     <div className='contenedor'>
                         <p>Padres del Novio</p>
@@ -35,7 +38,12 @@ function Padres ({evento, datos, fondo, festejado}){
                             {datos.festejado === 'Esteban y Adriana' && (<img loading='lazy' src={rip} alt='...' />)}
                         </span>                
                     </div>
-                    <img loading='lazy' className='pie' src={pie} alt='...' />
+
+                    {festejado !== 'Alejandra & Alexander' ? (
+                        <img loading='lazy' className='pie' src={pie} alt='...' />
+                    ):(
+                        <></>
+                    )}
                 </section>
             )}
 
