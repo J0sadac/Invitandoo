@@ -942,7 +942,7 @@ $font-second: 'Courier New', Courier, monospace;
             z-index: 100;
     
             p{
-                font-family: $font-main;
+                font-family: 'dabbington-bold-italic-2', sans-serif;
                 font-size: 28px;
                 font-weight: 400;
 
@@ -1536,7 +1536,7 @@ $font-second: 'Courier New', Courier, monospace;
             }
 
             .frase{
-                font-family: $font-main;
+                font-family: 'dabbington-bold-italic-2', sans-serif;
                 font-size: 28px;
 
                 padding: 15px;
@@ -1963,6 +1963,7 @@ $font-second: 'Courier New', Courier, monospace;
 
                 p{
                     font-size: 23px;
+                    
                 }
 
                 .botones{
