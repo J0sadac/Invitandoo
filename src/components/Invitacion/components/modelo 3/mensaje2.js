@@ -1,6 +1,7 @@
 import izquierda from '../../../../multimedia/herramientas/petalo izquierda.png';
 import derecha from '../../../../multimedia/herramientas/petalo derecha.png';
 import flor from '../../../../multimedia/herramientas/rosa central.png';
+import logo from '../../../../multimedia/herramientas/logo AA.png';
 
 function MensajeDos ({evento, fondo, festejado, frases}){
 
@@ -33,7 +34,9 @@ function MensajeDos ({evento, fondo, festejado, frases}){
                                     <img loading='lazy' className='icono' src={izquierda} alt='...' />
                                     <img loading='lazy' className='icono' src={derecha} alt='...' />
                                 </div>
-                            ):(<></>)}
+                            ):(<div className='logo'>
+                                <img src={logo} alt='...' />
+                            </div>)}
                         </>
                     )}
                 </>

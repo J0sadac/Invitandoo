@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import liverpool from '../../../../multimedia/herramientas/liverpool.png';
 import lluvia from '../../../../multimedia/herramientas/Lluvia de sobres.svg';
+import negros from '../../../../multimedia/herramientas/Lluvia de sobres negros.png';
 import bbva from '../../../../multimedia/herramientas/BBVA-logo.png';
 import sears from '../../../../multimedia/herramientas/sears.png'
 import antifaz from '../../../../multimedia/herramientas/antifaz veneciaga.png';
@@ -31,7 +32,12 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                     </p>
                     <div className='regalo'>
                         <div className="contenido">
-                            <img loading="lazy" className='icono' src={lluvia} alt='...' />
+                            {festejado === 'Alejandra & Alexander' ? (
+                                <img loading="lazy" className='icono' src={negros} alt='...' />
+                            ):(
+                                <img loading="lazy" className='icono' src={lluvia} alt='...' />
+                            )}
+                            
                             <p className='codigo'>Lluvia de sobres</p>
                         </div>
                     </div>

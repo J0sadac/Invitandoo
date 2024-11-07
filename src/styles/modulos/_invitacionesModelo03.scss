@@ -3,9 +3,9 @@ $color-main: #212529;
 $color-second: #3e4144;
 $color-font: #3e4144;
 $color-carousel: #ffff;
-$font-main: 'Tangerine', cursive;
+$font-main: 'Times New Roman', Times, serif;
 $Crimson: 'Crimson Text', serif;
-$font-second: 'Abel', sans-serif;
+$font-second: 'Courier New', Courier, monospace;
 
 :root {
     --portada-titulo: linear-gradient(
@@ -53,6 +53,8 @@ $font-second: 'Abel', sans-serif;
 .modelo3{
     position: relative;
     z-index: 100;
+
+    font-family:'Courier New', Courier, monospace;
     
     margin-top: 70px;
 
@@ -121,7 +123,7 @@ $font-second: 'Abel', sans-serif;
                 justify-content: space-evenly;
 
                 font-family: $font-main;
-                font-size: 55px;
+                font-size: 40px;
 
                 width: 100%;
 
@@ -365,7 +367,7 @@ $font-second: 'Abel', sans-serif;
 
                 .fecha{
                     font-family: $font-main;
-                    font-size: 60px;
+                    font-size: 45px;
                     font-weight: 800;
                 
                     transition: .3s linear;
@@ -514,7 +516,7 @@ $font-second: 'Abel', sans-serif;
     
             .titulo{
                 font-family: $font-main;
-                font-size: 50px;
+                font-size: 45px;
                 font-weight: 800;
 
                 margin-top: -15px;
@@ -737,7 +739,7 @@ $font-second: 'Abel', sans-serif;
                     .accion{
                         font-family: $font-main;
                         font-weight: 800;
-                        font-size: 45px;
+                        font-size: 40px;
                     }
     
                     .padrino{
@@ -940,7 +942,7 @@ $font-second: 'Abel', sans-serif;
             z-index: 100;
     
             p{
-                font-family: "Lora", serif;
+                font-family: $font-main;
                 font-size: 28px;
                 font-weight: 400;
 
@@ -990,6 +992,16 @@ $font-second: 'Abel', sans-serif;
                 .icono{
                     width: 150px;
                     z-index: 100;
+                }
+            }
+
+            .logo{
+                z-index: 100;
+
+                margin-top: -40px;
+
+                img{
+                    width: 160px;
                 }
             }
 
@@ -1148,7 +1160,7 @@ $font-second: 'Abel', sans-serif;
                 align-items: center;
                 align-content: center;
 
-                height: 80vh;
+                
 
                 z-index: 100;
 
@@ -1471,13 +1483,13 @@ $font-second: 'Abel', sans-serif;
 
                         color: white;
 
-                        width: 155px;
+                        width: 175px;
 
                         margin-left: 10px;
 
                         span{
                             font-family: $font-second;
-                            font-size: 20px;
+                            font-size: 15px;
                         }
                     }
                 }
@@ -1524,7 +1536,7 @@ $font-second: 'Abel', sans-serif;
             }
 
             .frase{
-                font-family: "Lora", serif;
+                font-family: $font-main;
                 font-size: 28px;
 
                 padding: 15px;
@@ -1926,7 +1938,7 @@ $font-second: 'Abel', sans-serif;
 
             .titulo{
                 font-family: $font-main;
-                font-size: 50px;
+                font-size: 40px;
                 font-weight: 800;
 
                 z-index: 100;
@@ -1963,7 +1975,7 @@ $font-second: 'Abel', sans-serif;
                         border-radius: 10px;
 
                         width: 110px;
-                        height: 40px;
+                        height: 47px;
                     }
 
                     .si{
