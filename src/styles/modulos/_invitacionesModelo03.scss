@@ -3,9 +3,17 @@ $color-main: #212529;
 $color-second: #3e4144;
 $color-font: #3e4144;
 $color-carousel: #ffff;
-$font-main: 'Times New Roman', Times, serif;
+
 $Crimson: 'Crimson Text', serif;
+
+$font-main: 'Times New Roman', Times, serif;
 $font-second: 'Courier New', Courier, monospace;
+$font-message: 'dabbington-bold-italic-2', sans-serif;
+
+
+$font-main-size: 40px;
+$font-second-size: 23px;
+$font-message-size: 28px;
 
 :root {
     --portada-titulo: linear-gradient(
@@ -53,8 +61,6 @@ $font-second: 'Courier New', Courier, monospace;
 .modelo3{
     position: relative;
     z-index: 100;
-
-    font-family:'Courier New', Courier, monospace;
     
     margin-top: 70px;
 
@@ -123,7 +129,7 @@ $font-second: 'Courier New', Courier, monospace;
                 justify-content: space-evenly;
 
                 font-family: $font-main;
-                font-size: 40px;
+                font-size: $font-main-size;
 
                 width: 100%;
 
@@ -241,14 +247,14 @@ $font-second: 'Courier New', Courier, monospace;
             p{
                 margin: 5px 30px;
                 font-family: $font-second;
-                font-size: 25px;
+                font-size: $font-second-size;
 
                 z-index: 100;
             }
 
             .fecha{
                 font-family: $font-main;
-                font-size: 60px;
+                font-size: $font-main-size;
                 font-weight: 800;
 
                 z-index: 100;
@@ -367,7 +373,7 @@ $font-second: 'Courier New', Courier, monospace;
 
                 .fecha{
                     font-family: $font-main;
-                    font-size: 45px;
+                    font-size: $font-main-size;
                     font-weight: 800;
                 
                     transition: .3s linear;
@@ -405,7 +411,7 @@ $font-second: 'Courier New', Courier, monospace;
 
                     p{
                         font-family: $font-second;
-                        font-size: 23px;
+                        font-size: $font-second-size;
                     }
                 }
 
@@ -432,7 +438,7 @@ $font-second: 'Courier New', Courier, monospace;
                         }
         
                         .segundero{
-                            font-size: 28px;
+                            font-size: $font-second-size;
                         }
                     }
                 }
@@ -482,7 +488,7 @@ $font-second: 'Courier New', Courier, monospace;
 
                 .titulo{
                     font-family: $font-main;
-                    font-size: 45px;
+                    font-size: $font-main-size;
                     font-weight: 800;
                     color: #900020;
 
@@ -491,7 +497,7 @@ $font-second: 'Courier New', Courier, monospace;
 
                 .contenido{
                     font-family: $font-second;
-                    font-size: 20px;
+                    font-size: $font-second-size;
                 }
             }
         }
@@ -516,7 +522,7 @@ $font-second: 'Courier New', Courier, monospace;
     
             .titulo{
                 font-family: $font-main;
-                font-size: 45px;
+                font-size: $font-main-size;
                 font-weight: 800;
 
                 margin-top: -15px;
@@ -532,7 +538,7 @@ $font-second: 'Courier New', Courier, monospace;
 
             .titulo-mama{
                 font-family: $font-main;
-                font-size: 55px;
+                font-size: $font-main-size;
                 font-weight: 800;
 
                 margin-top: -15px;
@@ -565,7 +571,7 @@ $font-second: 'Courier New', Courier, monospace;
                 flex-direction: column;
                 justify-content: space-evenly;
                 font-family: $font-second;
-                font-size: 25px;
+                font-size: $font-second-size;
 
                 width: 90%;
 
@@ -585,7 +591,7 @@ $font-second: 'Courier New', Courier, monospace;
                     margin-top: -35px;
 
                     font-family: $font-main;
-                    font-size: 50px;
+                    font-size: $font-main-size;
                 }
             }
     
@@ -717,7 +723,7 @@ $font-second: 'Courier New', Courier, monospace;
                     align-content: center;
     
                     font-family: $font-second;
-                    font-size: 23px;
+                    font-size: $font-second-size;
     
                     margin-top: -40px;
 
@@ -739,7 +745,7 @@ $font-second: 'Courier New', Courier, monospace;
                     .accion{
                         font-family: $font-main;
                         font-weight: 800;
-                        font-size: 40px;
+                        font-size: $font-main-size;
                     }
     
                     .padrino{
@@ -802,12 +808,12 @@ $font-second: 'Courier New', Courier, monospace;
             height: 65vh;
     
             font-family: $font-second;
-            font-size: 28px;
+            font-size: $font-second-size;
             text-align: center;
             color: var(--letras-pase);
 
             .nin{
-                font-size: 20px;
+                font-size: $font-second-size;
                 width: 200px;
 
                 z-index: 100;
@@ -833,7 +839,7 @@ $font-second: 'Courier New', Courier, monospace;
     
                 .titulo{
                     font-family: $font-main;
-                    font-size: 45px;
+                    font-size: $font-main-size;
                     font-weight: 800;
                 }
             }
@@ -942,8 +948,8 @@ $font-second: 'Courier New', Courier, monospace;
             z-index: 100;
     
             p{
-                font-family: 'dabbington-bold-italic-2', sans-serif;
-                font-size: 28px;
+                font-family: $font-message;
+                font-size: $font-message-size;
                 font-weight: 400;
 
                 margin: 0;
@@ -1047,7 +1053,7 @@ $font-second: 'Courier New', Courier, monospace;
             .titulo{
                 color: var(--color-galeria);
                 font-family: $font-main;
-                font-size: 55px;
+                font-size: $font-main-size;
                 font-weight: 800;
 
                 z-index: 100;
@@ -1139,8 +1145,8 @@ $font-second: 'Courier New', Courier, monospace;
                 z-index: 100;
 
                 .titulo{
-                    font-family: "Lora", serif;
-                    font-size: 38px;
+                    font-family: $font-main;
+                    font-size: $font-main-size;
                     font-weight: 800;
     
                     margin-top: 35px;
@@ -1168,7 +1174,7 @@ $font-second: 'Courier New', Courier, monospace;
 
                 .establecimiento{
                     font-family: $font-second;
-                    font-size: 35px;
+                    font-size: $font-second-size;
                     font-weight: 800;
 
                     z-index: 100;
@@ -1192,12 +1198,12 @@ $font-second: 'Courier New', Courier, monospace;
                     align-items: center;
 
                     font-family: $font-second;
-                    font-size: 25px;
+                    font-size: $font-second-size;
 
                     z-index: 100;
 
                     .nombre{
-                        font-size: 27px;
+                        font-size: $font-second-size;
                         font-weight: 800;
                     }
                 }               
@@ -1271,7 +1277,7 @@ $font-second: 'Courier New', Courier, monospace;
 
                     .titulo{
                         font-family: $font-second;
-                        font-size: 38px;
+                        font-size: $font-second-size;
                     }
 
                     .maps{
@@ -1377,11 +1383,11 @@ $font-second: 'Courier New', Courier, monospace;
                     .accion{
                         font-family: $font-main;
                         font-weight: 800;
-                        font-size: 45px;
+                        font-size: $font-main-size;
                     }
     
                     .hora{
-                        font-size: 28px;
+                        font-size: $font-second-size;
                     }
                 }
             }
@@ -1536,8 +1542,8 @@ $font-second: 'Courier New', Courier, monospace;
             }
 
             .frase{
-                font-family: 'dabbington-bold-italic-2', sans-serif;
-                font-size: 28px;
+                font-family: $font-message;
+                font-size: $font-message-size;
 
                 padding: 15px;
                 padding-left: 20px;               
@@ -1565,7 +1571,7 @@ $font-second: 'Courier New', Courier, monospace;
             background-color: #DD969C;
 
             .titulo{
-                font-size: 50px;
+                font-size: $font-main-size;
                 font-weight: 800;
                 font-family: $font-main;
 
@@ -1579,7 +1585,7 @@ $font-second: 'Courier New', Courier, monospace;
                 padding: 15px;
 
                 font-family: $font-second;
-                font-size: 21px;
+                font-size: $font-second-size;
 
                 z-index: 100;
             }
@@ -1624,13 +1630,13 @@ $font-second: 'Courier New', Courier, monospace;
                 .codigo{
                     color: var(--color-mesa);
                     font-family: $font-second;
-                    font-size: 28px;
+                    font-size: $font-second-size;
                 }
 
                 .anuncio{
                     color: var(--color-mesa);
                     font-family: $font-second;
-                    font-size: 20px;
+                    font-size: $font-second-size;
 
                     width: 280px;
                 }
@@ -1711,7 +1717,7 @@ $font-second: 'Courier New', Courier, monospace;
 
             .titulo{
                 font-family: $font-main;
-                font-size: 55px;
+                font-size: $font-main-size;
                 font-weight: 800;
 
                 margin-top: 20px;
@@ -1758,7 +1764,7 @@ $font-second: 'Courier New', Courier, monospace;
                 padding: 10px;
 
                 font-family: $font-second;
-                font-size: 25px;
+                font-size: $font-second-size;
 
                 z-index: 100;
             }
@@ -1794,7 +1800,7 @@ $font-second: 'Courier New', Courier, monospace;
             .titulo{
                 color: white;
                 font-family: $font-main;
-                font-size: 55px;
+                font-size: $font-main-size;
                 font-weight: 800;
 
                 margin-top: 20px;
@@ -1868,7 +1874,7 @@ $font-second: 'Courier New', Courier, monospace;
             .titulo{
                 font-family: $font-main;
                 font-weight: 800;
-                font-size: 45px;
+                font-size: $font-main-size;
 
                 z-index: 100;
             }
@@ -1888,7 +1894,7 @@ $font-second: 'Courier New', Courier, monospace;
 
                 .condicion{
                     font-family: $font-second;
-                    font-size: 24px;
+                    font-size: $font-second-size;
 
                 }
 
@@ -1899,7 +1905,7 @@ $font-second: 'Courier New', Courier, monospace;
 
             p{
                 font-family: $font-second;
-                font-size: 24px;
+                font-size: $font-second-size;
 
                 margin: 15px;
 
@@ -1938,7 +1944,7 @@ $font-second: 'Courier New', Courier, monospace;
 
             .titulo{
                 font-family: $font-main;
-                font-size: 40px;
+                font-size: $font-main-size;
                 font-weight: 800;
 
                 z-index: 100;
@@ -1962,7 +1968,7 @@ $font-second: 'Courier New', Courier, monospace;
                 z-index: 100;
 
                 p{
-                    font-size: 23px;
+                    font-size: $font-second-size;
                     
                 }
 
@@ -2008,7 +2014,7 @@ $font-second: 'Courier New', Courier, monospace;
 
                 p{
                     font-family: $font-second;
-                    font-size: 23px;
+                    font-size: $font-second-size;
                 }
 
                 a{
@@ -2054,7 +2060,7 @@ $font-second: 'Courier New', Courier, monospace;
 
                     p{
                         font-family: $font-second;
-                        font-size: 23px;
+                        font-size: $font-second-size;
                     }
                 }
             }

@@ -1454,7 +1454,6 @@
 .modelo3 {
   position: relative;
   z-index: 100;
-  font-family: "Courier New", Courier, monospace;
   margin-top: 70px;
 }
 .modelo3 .portada {
@@ -1594,12 +1593,12 @@
 .modelo3 .caja .mensaje p {
   margin: 5px 30px;
   font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
+  font-size: 23px;
   z-index: 100;
 }
 .modelo3 .caja .mensaje .fecha {
   font-family: "Times New Roman", Times, serif;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 800;
   z-index: 100;
 }
@@ -1687,7 +1686,7 @@
 }
 .modelo3 .caja .invitacion .contenedor .fecha {
   font-family: "Times New Roman", Times, serif;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 800;
   transition: 0.3s linear;
   color: transparent;
@@ -1732,7 +1731,7 @@
   font-size: 15PX;
 }
 .modelo3 .caja .invitacion .contenedor .contador .tiempo .segundero {
-  font-size: 28px;
+  font-size: 23px;
 }
 .modelo3 .caja .frases {
   display: flex;
@@ -1767,14 +1766,14 @@
 }
 .modelo3 .caja .frases .frase .titulo {
   font-family: "Times New Roman", Times, serif;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 800;
   color: #900020;
   z-index: 100;
 }
 .modelo3 .caja .frases .frase .contenido {
   font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
+  font-size: 23px;
 }
 .modelo3 .caja .padres {
   display: flex;
@@ -1792,7 +1791,7 @@
 }
 .modelo3 .caja .padres .titulo {
   font-family: "Times New Roman", Times, serif;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 800;
   margin-top: -15px;
   z-index: 100;
@@ -1804,7 +1803,7 @@
 }
 .modelo3 .caja .padres .titulo-mama {
   font-family: "Times New Roman", Times, serif;
-  font-size: 55px;
+  font-size: 40px;
   font-weight: 800;
   margin-top: -15px;
   z-index: 100;
@@ -1830,7 +1829,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
+  font-size: 23px;
   width: 90%;
   z-index: 100;
 }
@@ -1843,7 +1842,7 @@
 .modelo3 .caja .padres .contenedor .mama {
   margin-top: -35px;
   font-family: "Times New Roman", Times, serif;
-  font-size: 50px;
+  font-size: 40px;
 }
 .modelo3 .caja .padres .colgante {
   position: absolute;
@@ -2002,12 +2001,12 @@
   width: 100%;
   height: 65vh;
   font-family: "Courier New", Courier, monospace;
-  font-size: 28px;
+  font-size: 23px;
   text-align: center;
   color: var(--letras-pase);
 }
 .modelo3 .caja .pase .nin {
-  font-size: 20px;
+  font-size: 23px;
   width: 200px;
   z-index: 100;
 }
@@ -2027,7 +2026,7 @@
 }
 .modelo3 .caja .pase .invitado .titulo {
   font-family: "Times New Roman", Times, serif;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 800;
 }
 .modelo3 .caja .pase .datos {
@@ -2189,7 +2188,7 @@
 .modelo3 .caja .galeria .titulo {
   color: var(--color-galeria);
   font-family: "Times New Roman", Times, serif;
-  font-size: 55px;
+  font-size: 40px;
   font-weight: 800;
   z-index: 100;
 }
@@ -2258,8 +2257,8 @@
   z-index: 100;
 }
 .modelo3 .caja .ubicacion .encabezado .titulo {
-  font-family: "Lora", serif;
-  font-size: 38px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
   font-weight: 800;
   margin-top: 35px;
 }
@@ -2278,7 +2277,7 @@
 }
 .modelo3 .caja .ubicacion .lugar .establecimiento {
   font-family: "Courier New", Courier, monospace;
-  font-size: 35px;
+  font-size: 23px;
   font-weight: 800;
   z-index: 100;
 }
@@ -2296,11 +2295,11 @@
   justify-content: center;
   align-items: center;
   font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
+  font-size: 23px;
   z-index: 100;
 }
 .modelo3 .caja .ubicacion .lugar .direccion .nombre {
-  font-size: 27px;
+  font-size: 23px;
   font-weight: 800;
 }
 .modelo3 .caja .ubicacion button {
@@ -2354,7 +2353,7 @@
 }
 .modelo3 .caja .ubicacion .modal .mapa .titulo {
   font-family: "Courier New", Courier, monospace;
-  font-size: 38px;
+  font-size: 23px;
 }
 .modelo3 .caja .ubicacion .modal .mapa .maps {
   width: 280px;
@@ -2434,10 +2433,10 @@
 .modelo3 .caja .itinerario .swiper .contenedor .accion {
   font-family: "Times New Roman", Times, serif;
   font-weight: 800;
-  font-size: 45px;
+  font-size: 40px;
 }
 .modelo3 .caja .itinerario .swiper .contenedor .hora {
-  font-size: 28px;
+  font-size: 23px;
 }
 .modelo3 .caja .itinerario .swiper-button-next {
   color: var(--color-padit);
@@ -2569,7 +2568,7 @@
   background-color: #DD969C;
 }
 .modelo3 .caja .mesa .titulo {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 800;
   font-family: "Times New Roman", Times, serif;
   margin-top: 30px;
@@ -2578,7 +2577,7 @@
 .modelo3 .caja .mesa .gracias {
   padding: 15px;
   font-family: "Courier New", Courier, monospace;
-  font-size: 21px;
+  font-size: 23px;
   z-index: 100;
 }
 .modelo3 .caja .mesa .fondo {
@@ -2613,12 +2612,12 @@
 .modelo3 .caja .mesa .regalo .codigo {
   color: var(--color-mesa);
   font-family: "Courier New", Courier, monospace;
-  font-size: 28px;
+  font-size: 23px;
 }
 .modelo3 .caja .mesa .regalo .anuncio {
   color: var(--color-mesa);
   font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
+  font-size: 23px;
   width: 280px;
 }
 .modelo3 .caja .mesa .flores {
@@ -2679,7 +2678,7 @@
 }
 .modelo3 .caja .vestimenta .titulo {
   font-family: "Times New Roman", Times, serif;
-  font-size: 55px;
+  font-size: 40px;
   font-weight: 800;
   margin-top: 20px;
   z-index: 100;
@@ -2713,7 +2712,7 @@
 .modelo3 .caja .vestimenta p {
   padding: 10px;
   font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
+  font-size: 23px;
   z-index: 100;
 }
 .modelo3 .caja .vestimenta .contenedor {
@@ -2738,7 +2737,7 @@
 .modelo3 .caja .collage .titulo {
   color: white;
   font-family: "Times New Roman", Times, serif;
-  font-size: 55px;
+  font-size: 40px;
   font-weight: 800;
   margin-top: 20px;
   z-index: 100;
@@ -2789,7 +2788,7 @@
 .modelo3 .caja .condiciones .titulo {
   font-family: "Times New Roman", Times, serif;
   font-weight: 800;
-  font-size: 45px;
+  font-size: 40px;
   z-index: 100;
 }
 .modelo3 .caja .condiciones .contenedor {
@@ -2804,14 +2803,14 @@
 }
 .modelo3 .caja .condiciones .contenedor .condicion {
   font-family: "Courier New", Courier, monospace;
-  font-size: 24px;
+  font-size: 23px;
 }
 .modelo3 .caja .condiciones .contenedor .icono {
   width: 200px;
 }
 .modelo3 .caja .condiciones p {
   font-family: "Courier New", Courier, monospace;
-  font-size: 24px;
+  font-size: 23px;
   margin: 15px;
   z-index: 100;
 }

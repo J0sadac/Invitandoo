@@ -41,7 +41,7 @@ function Invitaciones({ evento }) {
                     --color-invitacion: ${styles.estilosInvitacion.color || 'white'};
                     --color-mesa: ${styles.colorMesa || 'white'};
                     --contenido-padres: ${styles.contenidoPadres || 'white'};
-                    --letras-vestimenta: ${styles.letrasVestimenta || 'black'}
+                    --letras-vestimenta: ${styles.letrasVestimenta || 'black'};
                 }
             `;
             document.head.appendChild(styleSheet);

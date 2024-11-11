@@ -4,6 +4,7 @@ import pie from '../../../../multimedia/herramientas/flor de pie.gif';
 import rip from '../../../../multimedia/herramientas/rip.svg';
 import mascaraTop from '../../../../multimedia/herramientas/mascara veneciaga 2.png';
 import mascaraBttm from '../../../../multimedia/herramientas/mascara veneciaga.png';
+import ripWhite from '../../../../multimedia/herramientas/cruzar.png';
 
 function Padres ({evento, datos, fondo, festejado}){
 
@@ -27,7 +28,10 @@ function Padres ({evento, datos, fondo, festejado}){
                             {datos.festejado === 'Leonel y Denisse' && (<img loading='lazy' src={rip} alt='...' />)}
                             {datos.festejado === 'Belén & Osmar' && (<img loading='lazy' src={rip} alt='...' />)}
                         </span>
-                        <span>{datos.padres[0].mama}</span>
+                        <span>
+                            {datos.padres[0].mama}
+                            {datos.festejado === 'Consuelo & Andrés' && (<img loading='lazy' src={ripWhite} alt='...' />)}
+                        </span>
                     </div>
                     <div className='contenedor'>
                         <p>Padres de la Novia</p>
@@ -36,6 +40,7 @@ function Padres ({evento, datos, fondo, festejado}){
                             {datos.padres[1].mama} 
                             {datos.festejado === 'Kristopher & Cristina' && (<img loading='lazy' src={rip} alt='...' />)}
                             {datos.festejado === 'Esteban y Adriana' && (<img loading='lazy' src={rip} alt='...' />)}
+                            {datos.festejado === 'Consuelo & Andrés' && (<img loading='lazy' src={ripWhite} alt='...' />)}
                         </span>                
                     </div>
 
