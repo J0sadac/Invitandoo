@@ -1,18 +1,24 @@
+import React, { useState } from 'react';
 import izquierda from '../../../../multimedia/herramientas/sobre izquierda.png';
 import derecha from '../../../../multimedia/herramientas/sobre derecha.png';
-import sello from '../../../../multimedia/herramientas/sello conand.jpg'
+import sello from '../../../../multimedia/herramientas/sello conand.jpg';
 
-function Sobre(){
+function Sobre() {
+    const [hideImages, setHideImages] = useState(false);
 
-    return(
-        <section className="sobre">
-            <img className='img izquierda' src={izquierda} alt='...'/>
-            <img className='img derecha' src={derecha} alt='...' />
-            <button>
-                <img className='sello' img={sello} alt='...' />
+    const handleClick = () => {
+        setHideImages(true);
+    };
+
+    return (
+        <section className={`sobre ${hideImages ? 'hidden' : ''}`}>
+            <img className="img izquierda" src={izquierda} alt="..." />
+            <img className="img derecha" src={derecha} alt="..." />
+            <button onClick={handleClick}>
+                <img className="sello" src={sello} alt="..." />
             </button>
         </section>
-    )
+    );
 }
 
 export default Sobre;

@@ -4,7 +4,7 @@ import pie from '../../../../multimedia/herramientas/flor de pie.gif';
 import rip from '../../../../multimedia/herramientas/rip.svg';
 import mascaraTop from '../../../../multimedia/herramientas/mascara veneciaga 2.png';
 import mascaraBttm from '../../../../multimedia/herramientas/mascara veneciaga.png';
-import ripWhite from '../../../../multimedia/herramientas/cruzar.png';
+//import ripWhite from '../../../../multimedia/herramientas/cruzar.png';
 
 function Padres ({evento, datos, fondo, festejado}){
 
@@ -21,6 +21,18 @@ function Padres ({evento, datos, fondo, festejado}){
                     ):(<></>)}
                     
                     <p className='titulo'>Nuestros padres</p>
+                    
+                    <div className='contenedor'>
+                        <p>Padres de la Novia</p>
+                        <span>{datos.padres[1].papa}</span>
+                        <span>
+                            {datos.padres[1].mama} 
+                            {datos.festejado === 'Kristopher & Cristina' && (<img loading='lazy' src={rip} alt='...' />)}
+                            {datos.festejado === 'Esteban y Adriana' && (<img loading='lazy' src={rip} alt='...' />)}
+                            {datos.festejado === 'Consuelo & Andrés' && (<img loading='lazy' src={rip} alt='...' />)}
+                        </span>                
+                    </div>
+
                     <div className='contenedor'>
                         <p>Padres del Novio</p>
                         <span>
@@ -30,18 +42,8 @@ function Padres ({evento, datos, fondo, festejado}){
                         </span>
                         <span>
                             {datos.padres[0].mama}
-                            {datos.festejado === 'Consuelo & Andrés' && (<img loading='lazy' src={ripWhite} alt='...' />)}
+                            {datos.festejado === 'Consuelo & Andrés' && (<img loading='lazy' src={rip} alt='...' />)}
                         </span>
-                    </div>
-                    <div className='contenedor'>
-                        <p>Padres de la Novia</p>
-                        <span>{datos.padres[1].papa}</span>
-                        <span>
-                            {datos.padres[1].mama} 
-                            {datos.festejado === 'Kristopher & Cristina' && (<img loading='lazy' src={rip} alt='...' />)}
-                            {datos.festejado === 'Esteban y Adriana' && (<img loading='lazy' src={rip} alt='...' />)}
-                            {datos.festejado === 'Consuelo & Andrés' && (<img loading='lazy' src={ripWhite} alt='...' />)}
-                        </span>                
                     </div>
 
                     {festejado !== 'Alejandra & Alexander' ? (
@@ -72,6 +74,12 @@ function Padres ({evento, datos, fondo, festejado}){
                                 <span className='padre'>{datos.padres[0].mama}</span>
                                 <span className='padre'>&</span>
                                 <span className='padre'>{datos.padres[0].papa}</span>
+                                {festejado === 'Génesis Kamila Toledo Rincón' && (
+                                    <>
+                                        <span className='padre'>&</span>
+                                        <span className='padre'>Raúl Gomez Gomez</span>
+                                    </>
+                                )}
                             </div>
                         </>
                     ):(
