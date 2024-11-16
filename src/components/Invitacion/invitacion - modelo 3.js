@@ -1,5 +1,6 @@
 import React, { useEffect, lazy, Suspense } from 'react';
 import Mensaje3 from './components/modelo 3/mensaje3';
+import Sobre from './components/modelo 3/sobre';
 
 const Portada = lazy(() => import("./components/modelo 3/portada"));
 const Mensaje = lazy(() => import("./components/modelo 3/mensaje"));
@@ -42,6 +43,12 @@ function Invitaciones({ evento }) {
                     --color-mesa: ${styles.colorMesa || 'white'};
                     --contenido-padres: ${styles.contenidoPadres || 'white'};
                     --letras-vestimenta: ${styles.letrasVestimenta || 'black'};
+                    --font-main: ${styles.fontMain || "'Tangerine', cursive"};
+                    --font-main-size: ${styles.fontMainSize || "55px"};
+                    --font-second: ${styles.fontSecond || "'Abel', sans-serif"};
+                    --font-second-size: ${styles.fontSecondSize || "25px"};
+                    --font-message: ${styles.fontMessage || "'Tangerine', cursive"};
+                    --font-message-size: ${styles.fontMessageSize || "37px"};
                 }
             `;
             document.head.appendChild(styleSheet);
@@ -63,6 +70,9 @@ function Invitaciones({ evento }) {
                 <Cancion 
                     url={evento.multimedia.cancion.url}
                 />
+                {evento.datos.festejado === 'Consuelo & Andrés' && (
+                    <Sobre />
+                )}
                 <Desplazar />
                 <div className="caja">
                     <MensajeDos 
