@@ -174,8 +174,10 @@ $font-message-size: var(--font-message-size);
         z-index: 1110;
         top: 0;
         left: 0;
-        width: 400px;
+        width: 100%;
         height: 100vh;
+
+        margin-top: 15px;
     
         .img {
             width: 100%;
@@ -1021,7 +1023,7 @@ $font-message-size: var(--font-message-size);
             p{
                 font-family: $font-message;
                 font-size: $font-message-size;
-                font-weight: 400;
+                font-weight: 800;
 
                 margin: 0;
 
@@ -1615,6 +1617,7 @@ $font-message-size: var(--font-message-size);
             .frase{
                 font-family: $font-message;
                 font-size: $font-message-size;
+                font-weight: 800;
 
                 padding: 15px;
                 padding-left: 20px;               

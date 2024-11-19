@@ -9,6 +9,10 @@ function Portada({ evento, festejado, foto}) {
                         <section className="alternativa-portada">
                             <img loading="lazy" className='img' src={foto.url} alt='...' />
                         </section>
+                    ): festejado === 'Consuelo & Andrés' ? (
+                        <section className="alternativa-portada">
+                            <img loading="lazy" className='img' src={foto.url} alt='...' />
+                        </section>
                     ):(
                         <section className='portada'>
                             <div className='nombres'>

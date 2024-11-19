@@ -93,11 +93,20 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                     <>
                         {datos.codigo === 'Etiqueta' ? (
                             <>
-                                {festejado === 'Consuelo & Andrés' ? (
+                                <div className='iconos'>
+                                    <img loading='lazy' className="icono" src={trajeEtiquetaClaro} alt="..." />
+                                    <img loading='lazy' className="icono" src={vestidoEtiquetaClaro} alt="..." />
+                                </div>
+
+                                <p>{datos.codigo}{festejado === 'Alejandra & Alexander' &&(<> rigurosa</>)}</p>
+                            </>
+                        ): datos.codigo === 'Formal' ? (
+                            <>
+                            {festejado === 'Consuelo & Andrés' ? (
                                     <>
                                         <div className='iconosConand'>
-                                            <img loading='lazy' className="icono" src={trajeEtiquetaClaro} alt="..." />
-                                            <img loading='lazy' className="icono" src={vestidoEtiquetaClaro} alt="..." />
+                                            <img loading='lazy' className="icono" src={trajeFormalClaro} alt="..." />
+                                            <img loading='lazy' className="icono" src={vestidoFormalClaro} alt="..." />
                                         </div>
 
                                         <p>{datos.codigo}</p>
@@ -105,22 +114,13 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                                 ):(
                                     <>
                                         <div className='iconos'>
-                                            <img loading='lazy' className="icono" src={trajeEtiquetaClaro} alt="..." />
-                                            <img loading='lazy' className="icono" src={vestidoEtiquetaClaro} alt="..." />
+                                            <img loading='lazy' className="icono" src={trajeFormalClaro} alt="..." />
+                                            <img loading='lazy' className="icono" src={vestidoFormalClaro} alt="..." />
                                         </div>
 
-                                        <p>{datos.codigo}{festejado === 'Alejandra & Alexander' &&(<> rigurosa</>)}</p>
+                                        <p>{datos.codigo}</p>
                                     </>
                                 )}
-                            </>
-                        ): datos.codigo === 'Formal' ? (
-                            <>
-                                <div className='iconos'>
-                                    <img loading='lazy' className="icono" src={trajeFormalClaro} alt="..." />
-                                    <img loading='lazy' className="icono" src={vestidoFormalClaro} alt="..." />
-                                </div>
-
-                                <p>{datos.codigo}</p>
                             </>
                         ): datos.codigo === 'Semi formal' ? (
                             <>
