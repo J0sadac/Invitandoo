@@ -171,18 +171,20 @@ $font-message-size: var(--font-message-size);
         align-items: center;
     
         position: fixed;
-        z-index: 110;
+        z-index: 1110;
         top: 0;
         left: 0;
         width: 400px;
         height: 100vh;
     
         .img {
-            width: 40%;
-            height: 100vh;
+            width: 100%;
+            height: 105vh;
             object-fit: cover;
             transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
     
+            position: absolute;
+
             &.izquierda {
                 transform: translateX(0);
             }
@@ -192,19 +194,27 @@ $font-message-size: var(--font-message-size);
             }
         }
     
-        button {
+        .boton {
             position: absolute;
+            left: 30px;
             z-index: 20;
             background: none;
             border: none;
             cursor: pointer;
     
             img.sello {
-                width: 100px;
+                width: 170px;
+                object-fit: contain;
             }
         }
     
         &.hidden {
+            
+            .boton {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
             .img.izquierda {
                 transform: translateX(-100%);
                 opacity: 0;
@@ -1786,6 +1796,27 @@ $font-message-size: var(--font-message-size);
                 z-index: 100;
             }
 
+            .efecto{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                z-index: 100;
+
+                width: 95%;
+
+                margin-top: -50px;
+
+                .icono{
+                    width: 120px;
+
+                }
+
+                .flor{
+                    width: 80px;
+                }
+            }
+
             .iconos{
                 display: flex;
                 flex-direction: row;
@@ -1798,6 +1829,26 @@ $font-message-size: var(--font-message-size);
                 .icono{
                     width: 170px;
                     padding: 10px;
+                }
+            }
+
+            .iconosConand{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                z-index: 100;
+
+                height: 400px;
+
+                margin: 15px 10px;
+
+                .icono{
+                    width: 170px;
+                    padding: 10px;
+
+                    border-radius: 50%;
+                    border: 2px solid #C99309;
                 }
             }
 

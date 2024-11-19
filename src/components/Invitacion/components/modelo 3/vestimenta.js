@@ -27,6 +27,10 @@ import tonoRojo from '../../../../multimedia/herramientas/tonos rojo.png';
 import tonosHM from '../../../../multimedia/herramientas/tonos hombre y mujer.png';
 import colores from '../../../../multimedia/herramientas/Azul.png';
 
+import icono from '../../../../multimedia/herramientas/adorno dorado.gif';
+import iconoDerecho from '../../../../multimedia/herramientas/Detalle Horizontal derecho.gif';
+import flor from '../../../../multimedia/herramientas/flor central.png';
+
 function Vestimenta ({fondo, datos, festejado, modo}){
 
     return(
@@ -35,6 +39,13 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                 <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}
             <p className="titulo">Código de vestimenta</p>
+            {festejado === 'Consuelo & Andrés' && (
+                <div className='efecto'>
+                    <img src={icono} className='icono' alt='...' />
+                    <img src={flor} className='flor' alt='...' />
+                    <img src={iconoDerecho} className='icono' alt='...' />
+                </div>
+            )}
             <>
                 {modo === 'oscuro' && (
                     <>
@@ -82,12 +93,25 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                     <>
                         {datos.codigo === 'Etiqueta' ? (
                             <>
-                                <div className='iconos'>
-                                    <img loading='lazy' className="icono" src={trajeEtiquetaClaro} alt="..." />
-                                    <img loading='lazy' className="icono" src={vestidoEtiquetaClaro} alt="..." />
-                                </div>
+                                {festejado === 'Consuelo & Andrés' ? (
+                                    <>
+                                        <div className='iconosConand'>
+                                            <img loading='lazy' className="icono" src={trajeEtiquetaClaro} alt="..." />
+                                            <img loading='lazy' className="icono" src={vestidoEtiquetaClaro} alt="..." />
+                                        </div>
 
-                                <p>{datos.codigo}{festejado === 'Alejandra & Alexander' &&(<> rigurosa</>)}</p>
+                                        <p>{datos.codigo}</p>
+                                    </>
+                                ):(
+                                    <>
+                                        <div className='iconos'>
+                                            <img loading='lazy' className="icono" src={trajeEtiquetaClaro} alt="..." />
+                                            <img loading='lazy' className="icono" src={vestidoEtiquetaClaro} alt="..." />
+                                        </div>
+
+                                        <p>{datos.codigo}{festejado === 'Alejandra & Alexander' &&(<> rigurosa</>)}</p>
+                                    </>
+                                )}
                             </>
                         ): datos.codigo === 'Formal' ? (
                             <>
