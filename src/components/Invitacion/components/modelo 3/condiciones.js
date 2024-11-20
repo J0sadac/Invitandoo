@@ -31,7 +31,7 @@ function Condiciones ({fondo}) {
             </div>
             <div className="contenedor shadow-lg">
                 <p className="condicion">
-                    Brindar por la felicidad de Ariana.
+                    Brindar por la felicidad de Ivanna.
                 </p>
                 <img loading='lazy' className="icono" src={brindar} alt='...' />
             </div>
