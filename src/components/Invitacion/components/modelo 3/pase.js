@@ -25,10 +25,17 @@ function Pase ({evento, invitado, fondo, festejado}){
             )}
             
 
-            {invitado.mesa > 0 &&(
-                <div className="datos">
-                    <span>Mesa: {invitado.mesa}</span>
-                </div>
+            {festejado === 'Ivanna Zoé' ? (
+                <>
+                </>
+            ):(
+                <>
+                    {invitado.mesa > 0 &&(
+                        <div className="datos">
+                            <span>Mesa: {invitado.mesa}</span>
+                        </div>
+                    )}
+                </>
             )}
 
             {invitado.infantes > 0 ? (

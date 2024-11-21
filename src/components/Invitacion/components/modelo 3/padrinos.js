@@ -27,9 +27,23 @@ function Padrinos({padrinos, fondo, festejado}) {
         >
             {padrinos.map((pad) => (
                 <SwiperSlide key={pad._id}>
-                    <div className={festejado === 'Alejandra & Alexander' ? 'contenedor aleContenedor' : 'contenedor'}>
-                        <img loading='lazy' className='icono' src={pad.icono} alt='...' />
-                        <p className='accion'>{pad.de}</p>
+                    <div className={festejado === 'Alejandra & Alexander' || festejado === 'Ivanna Zoé' ? 'contenedor aleContenedor' : 'contenedor'}>
+                        {festejado === 'Ivanna Zoé' ? (
+                            <>
+                                
+                            </>
+                        ):(
+                            <img loading='lazy' className='icono' src={pad.icono} alt='...' />
+                        )}
+                        
+                        {festejado === 'Ivanna Zoé' ? (
+                            <>
+                                
+                            </>
+                        ):(
+                            <p className='accion'>{pad.de}</p>  
+                        )}
+                        
                         <div className='padrino'>
                             {pad.padrino.map((rino, idx) => (
                                 <span key={idx}>{rino}</span>
