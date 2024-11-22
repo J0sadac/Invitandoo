@@ -28,7 +28,7 @@ function Padrinos({padrinos, fondo, festejado}) {
             {padrinos.map((pad) => (
                 <SwiperSlide key={pad._id}>
                     <div className={festejado === 'Alejandra & Alexander' || festejado === 'Ivanna Zoé' ? 'contenedor aleContenedor' : 'contenedor'}>
-                        {festejado === 'Ivanna Zoé' ? (
+                        {festejado === 'Ivanna Zoé Montejo Carballo' ? (
                             <>
                                 
                             </>
