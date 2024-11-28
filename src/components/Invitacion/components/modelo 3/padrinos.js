@@ -27,28 +27,31 @@ function Padrinos({padrinos, fondo, festejado}) {
         >
             {padrinos.map((pad) => (
                 <SwiperSlide key={pad._id}>
-                    <div className={festejado === 'Alejandra & Alexander' || festejado === 'Ivanna Zoé Montejo Carballo' ? 'contenedor aleContenedor' : 'contenedor'}>
-                        {festejado === 'Ivanna Zoé Montejo Carballo' ? (
-                            <>
-                                
-                            </>
-                        ):(
-                            <img loading='lazy' className='icono' src={pad.icono} alt='...' />
-                        )}
-                        
-                        {festejado === 'Ivanna Zoé Montejo Carballo' ? (
-                            <>
-                                
-                            </>
-                        ):(
-                            <p className='accion'>{pad.de}</p>  
-                        )}
-                        
-                        <div className='padrino'>
-                            {pad.padrino.map((rino, idx) => (
-                                <span key={idx}>{rino}</span>
-                            ))}
-                        </div>
+                    <div className={festejado === 'Alejandra & Alexander' || 
+                        festejado === 'Ivanna Zoé Montejo Carballo' 
+                        ? 'contenedor aleContenedor' : 'contenedor'}>
+
+                            {festejado === 'Ivanna Zoé Montejo Carballo' ? (
+                                <>
+                                    
+                                </>
+                            ):(
+                                <img loading='lazy' className='icono' src={pad.icono} alt='...' />
+                            )}
+                            
+                            {festejado === 'Ivanna Zoé Montejo Carballo' ? (
+                                <>
+                                    
+                                </>
+                            ):(
+                                <p className='accion'>{pad.de}</p>  
+                            )}
+                            
+                            <div className='padrino'>
+                                {pad.padrino.map((rino, idx) => (
+                                    <span key={idx}>{rino}</span>
+                                ))}
+                            </div>
                     </div>
                 </SwiperSlide>
 
