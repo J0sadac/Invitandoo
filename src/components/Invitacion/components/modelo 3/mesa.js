@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import liverpool from '../../../../multimedia/herramientas/liverpool.png';
 import lluvia from '../../../../multimedia/herramientas/Lluvia de sobres.svg';
 import negros from '../../../../multimedia/herramientas/Lluvia de sobres negros.png';
+import violeta from '../../../../multimedia/herramientas/violeta.png';
 import bbva from '../../../../multimedia/herramientas/BBVA-logo.png';
 import sears from '../../../../multimedia/herramientas/sears.png'
 import antifaz from '../../../../multimedia/herramientas/antifaz veneciaga.png';
@@ -34,6 +35,8 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                         <div className="contenido">
                             {festejado === 'Alejandra & Alexander' ? (
                                 <img loading="lazy" className='icono' src={negros} alt='...' />
+                            ) : festejado === 'Keila Jozabed' ? (
+                                <img loading="lazy" className='icono' src={violeta} alt='...' />
                             ):(
                                 <img loading="lazy" className='icono' src={lluvia} alt='...' />
                             )}
