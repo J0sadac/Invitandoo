@@ -46,7 +46,7 @@ function Portada({ evento, festejado, foto}) {
                 </>
                 
             ) : (
-                <div>holi</div>
+                <div>holi intento de cambio</div>
             )}
         </div>
     );
