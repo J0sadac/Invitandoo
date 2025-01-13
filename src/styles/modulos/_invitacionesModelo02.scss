@@ -1,0 +1,562 @@
+$color-main: #212529;
+$color-second: #3e4144;
+$color-font: #3e4144;
+$color-carousel: #ffff;
+$font-main: 'Tangerine', cursive;
+$font-second: 'Abel', sans-serif;
+
+
+.modeloDos{
+    margin-top: 70px;
+
+    .portada{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        text-align: center;
+
+        padding: 35px;
+        margin-bottom: 20px;
+
+        width: 100%;
+        height: 85vh;
+
+        .encabezado{
+            margin-bottom: 30px;
+            padding: 10px;
+
+            font-family: $font-main;
+            color: #ffff;
+
+            h3{
+                font-size: 50px;
+                font-weight: 600;
+
+                width: 100%;
+
+                background: linear-gradient(
+                    to right,
+                    rgb(180, 159, 105),
+                    rgb(211, 178, 95),
+                    rgb(185, 155, 80),
+                    rgb(137, 103, 16),
+                    rgb(150, 127, 70),
+                    rgb(211, 178, 95),
+                    rgb(180, 159, 105)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: efecto 6s linear alternate infinite;
+            }
+
+        }
+
+        .contenido{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            width: 100%;
+
+            text-align: center;
+            font-family: $font-main;
+            font-weight: 600;
+            font-size: 50px;
+
+            color: #ffff;
+            
+
+            span{
+                margin-top: -25px;
+                width: 100%;
+
+                background: linear-gradient(
+                    to right,
+                    rgb(180, 159, 105),
+                    rgb(211, 178, 95),
+                    rgb(185, 155, 80),
+                    rgb(137, 103, 16),
+                    rgb(150, 127, 70),
+                    rgb(211, 178, 95),
+                    rgb(180, 159, 105)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: efecto 8s linear alternate infinite;
+            }
+
+            @keyframes efecto {
+                0%{
+                    background-position: 0;
+                }
+        
+                60%{
+                    background-position: 180px;
+                }
+        
+                100%{
+                    background-position: 440px;
+                }
+            }
+        }
+    }
+
+    .invitacion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        text-align: center;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+
+        .fecha{
+            font-size: 55px;
+            font-family: $font-main;
+            font-weight: 600;
+
+            background: linear-gradient(
+                    to right,
+                    rgb(119, 96, 37),
+                    rgb(107, 86, 33),
+                    rgb(150, 118, 36),
+                    rgb(95, 71, 10),
+                    rgb(110, 86, 26),
+                    rgb(107, 84, 26),
+                    rgb(106, 83, 25)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: efecto 8s linear alternate infinite;
+        }
+
+        .direccion{
+            font-family: $font-second;
+            font-size: 22px;
+
+            width: 80%;
+        }
+
+        .contador{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            align-items: center;
+            justify-content: center;
+
+            .tiempo{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                margin: 8px;
+                padding: 10px;
+                width: 60px;
+
+                span{
+                    font-family: $font-second;
+                    font-size: 15PX;
+                }
+
+                .segundero{
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+
+    .padres{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        text-align: center;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+
+        h3{
+            font-family: $font-main;
+            font-size: 48px;
+            font-weight: 600;
+
+            margin-bottom: 20px;
+
+            background: linear-gradient(
+                    to right,
+                    rgb(119, 96, 37),
+                    rgb(107, 86, 33),
+                    rgb(150, 118, 36),
+                    rgb(95, 71, 10),
+                    rgb(110, 86, 26),
+                    rgb(107, 84, 26),
+                    rgb(106, 83, 25)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: efecto 8s linear alternate infinite;
+        }
+
+        .contenedor{
+            padding: 10px;
+            margin-bottom: 25px;
+
+            .titulo{
+                font-family: $font-main;
+                font-size: 42px;
+                font-weight: 600;
+            }
+            
+            .papas{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                padding: 20px;
+                margin-top: -20px;
+
+                font-family: $font-second;
+                font-size: 24px;
+            }
+        }
+    }
+
+    .pase{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-family: $font-second;
+        font-size: 27px;
+        text-align: center;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+        max-height: 550px;
+
+        .invitado{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 10px;
+
+            .titulo{
+                font-family: $font-main;
+                font-size: 48px;
+                font-weight: 600;
+
+                background: linear-gradient(
+                    to right,
+                    rgb(119, 96, 37),
+                    rgb(107, 86, 33),
+                    rgb(150, 118, 36),
+                    rgb(95, 71, 10),
+                    rgb(110, 86, 26),
+                    rgb(107, 84, 26),
+                    rgb(106, 83, 25)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: efecto 8s linear alternate infinite;
+            }
+    
+            .nombre{
+                font-family: $font-main;
+                font-size: 40px;
+                font-weight: 600;
+            }
+
+        }
+
+        .mesa{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 30vw;
+            margin-top: 40px;
+
+            .titulo{
+                font-weight: 600;
+            }
+        }
+
+        .pase{
+
+            .titulo{
+                font-weight: 600;
+            }
+        }
+
+    }
+
+    .mySwiper{
+        height: 87vh;
+        width: 99vw;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .itinerario{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+
+        .titulo{
+            font-family: $font-main;
+            
+            h3{
+                font-size: 45px;
+                font-weight: 600;
+            }
+        }
+
+        .contenido{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 100%;
+            margin-top: 20px;
+
+            .icono{
+                width: 60px;
+                margin-top: -20px;
+            }
+
+            .accion{
+                width: 50%;
+                p{
+                    font-family: $font-second;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+    }
+
+    .codigo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+
+        .titulo{
+            font-family: $font-main;
+            font-size: 45px;
+            font-weight: 600;
+
+            background: linear-gradient(
+                    to right,
+                    rgb(119, 96, 37),
+                    rgb(107, 86, 33),
+                    rgb(150, 118, 36),
+                    rgb(95, 71, 10),
+                    rgb(110, 86, 26),
+                    rgb(107, 84, 26),
+                    rgb(106, 83, 25)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: efecto 8s linear alternate infinite;
+        }
+
+        .contenido{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .imagenes{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                width: 90%;
+                img{
+                    width: 40%;
+                }
+            }
+
+            .vestimenta{
+                font-family: $font-second;
+                font-size: 24px;
+                font-weight: 600;
+
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .regalo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        text-decoration: none;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+
+        .titulo{
+            font-family: $font-main;
+            font-size: 45px;
+            font-weight: 600;
+
+            background: linear-gradient(
+                    to right,
+                    rgb(119, 96, 37),
+                    rgb(107, 86, 33),
+                    rgb(150, 118, 36),
+                    rgb(95, 71, 10),
+                    rgb(110, 86, 26),
+                    rgb(107, 84, 26),
+                    rgb(106, 83, 25)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: efecto 8s linear alternate infinite;
+        }
+
+        .contenido{
+            text-decoration: none;
+            color: #3e4144;
+
+            .codigo{
+                font-family: $font-second;
+                font-size: 22px;
+                
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .anuncio{
+            margin-top: 15px;
+
+            color: #3e4144;
+            font-family: $font-second;
+            font-size: 17px;
+        }
+    }
+
+    .imagen{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        height: 91vh;
+        
+        .frase{
+            background-color: #4e4a4344;
+            backdrop-filter: blur(3px);
+            border-radius: 10px;
+        
+            color: #ffff;
+    
+            padding: 10px;
+            margin: 100px 15px 0px;
+    
+            font-family: $font-main;
+            font-size: 35px;
+            text-align: center;
+        }
+    }
+
+    .confirmacion{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+        
+        .titulo{
+            font-family: $font-main;
+            font-size: 45px;
+            font-weight: 600;
+        }
+
+        p{
+            font-family: $font-second;
+            font-size: 22px;
+        }
+
+        a{
+            .icono{
+                width: 60px;
+            }
+        }
+    }
+
+    .ubicacion{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        text-align: center;
+
+        margin: 40px 15px 20px;
+        padding: 20px;
+
+        .titulo{
+            font-size: 45px;
+            font-family: $font-main;
+            font-weight: 600;
+
+            background: linear-gradient(
+                    to right,
+                    rgb(119, 96, 37),
+                    rgb(107, 86, 33),
+                    rgb(150, 118, 36),
+                    rgb(95, 71, 10),
+                    rgb(110, 86, 26),
+                    rgb(107, 84, 26),
+                    rgb(106, 83, 25)
+                );
+                background-clip: padding-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: efecto 8s linear alternate infinite;
+        }
+
+        .direccion{
+            width: 310px;
+            height: 300px;
+        }
+    }
+}

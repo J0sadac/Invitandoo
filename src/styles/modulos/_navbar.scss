@@ -1,0 +1,29 @@
+//Variables
+$color-main: #170000;
+$color-second: #3e4144;
+$color-font: #3e4144;
+$color-carousel: #ffff;
+$font-main: 'Tangerine', cursive;
+$font-second: 'Abel', sans-serif;
+
+.contenedor-navbar{
+    background-color: $color-main !important;
+
+    .titulo-link{
+        text-decoration: none;
+        color: $color-carousel;
+
+        margin-top: 7px;
+
+        .titulo{
+            font-family: $font-main;
+            font-size: 35px;
+        }
+
+    }
+
+    .links{
+        font-family: $font-second;
+        color: $color-carousel;
+    }
+}

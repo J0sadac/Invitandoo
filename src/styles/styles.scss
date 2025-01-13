@@ -1,0 +1,398 @@
+//Modulos
+@use './modulos/navbar';
+@use './modulos/main';
+@use './modulos/invitacionesModelo01';
+@use './modulos/invitacionesModelo02';
+@use './modulos/invitacionesModelo03';
+@use './modulos/confirmaciones';
+@use './modulos/administrar';
+
+
+//Variables
+$color-main: #212529;
+$color-second: #3e4144;
+$color-font: #3e4144;
+$color-carousel: #ffff;
+$font-main: 'Tangerine', cursive;
+$font-second: 'Abel', sans-serif;
+
+body{
+    background: url('../multimedia/fondos/Invitandoo.svg');
+    background-size: cover;
+
+    scroll-behavior: smooth;
+
+    .loading{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+
+        text-align: center;
+
+        margin: 40px 5px;
+        //padding: 150px 20px 290px;
+
+        background: url('../multimedia/fondos/background.jpg');
+        background-size: cover;
+
+        color: #3e4144;
+
+        p{
+            font-family: $font-second;
+            font-size: 28px;
+
+            margin: 20px;
+        }
+
+        .spin{
+            width: 120px;
+            height: 120px;
+            border-width: 6px;
+        }
+    }
+
+    .reproductor{
+        .cancion{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            width: 100vw;
+            height: 100vh;
+    
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+    
+            background: rgba(0, 0, 0, .5);
+    
+            .contenedor{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+                background-color: aliceblue;
+    
+                max-width: 400px;
+                min-width: 300px;
+                height: 220px;
+                margin: 25px;
+                padding: 20px;
+    
+                border-radius: 12px;
+    
+                position: relative;
+    
+                .cerrar{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+    
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    z-index: 90;
+    
+                    width: 30px;
+                    height: 30px;
+    
+                    border: none;
+                    border-radius: 5px;
+    
+                    background: none;
+    
+                    cursor: pointer;
+                    transition: .3 ease all;
+    
+                    .icono{
+                        width: 100%;
+                    }
+                }
+    
+                .cerrar:hover{
+                    background: rgba(0, 0, 0, .1);
+                }
+    
+                .contenido{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+    
+                    font-family: $font-second;
+
+                    width: 100%;
+    
+                    p{
+                        font-size: 25px;
+                    }
+
+                    .controles{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        flex-wrap: wrap;
+                        align-items: center;
+
+                        width: 100%;
+
+                        .progreso {
+                            width: 70%;
+                          
+                            input[type="range"] {
+                              width: 100%;
+                              -webkit-appearance: none;
+                              appearance: none;
+                              background: #aaaaaa;
+                              border-radius: 5px;
+                              height: 3px; /* Añadir altura a la barra */
+                          
+                              &::-webkit-slider-runnable-track {
+                                width: 100%;
+                                height: 3px;
+                                background: #aaaaaa;
+                                border-radius: 5px;
+                              }
+                          
+                              &::-moz-range-track {
+                                width: 100%;
+                                height: 3px;
+                                background: #000000;
+                                border-radius: 5px;
+                              }
+                          
+                              &::-ms-track {
+                                width: 100%;
+                                height: 3px;
+                                background: #000000;
+                                border-radius: 5px;
+                                border: none; /* Ocultar bordes */
+                                color: transparent; /* Ocultar thumb en IE */
+                              }
+                          
+                              &::-ms-fill-lower {
+                                background: #000000;
+                                border-radius: 5px;
+                              }
+                          
+                              &::-ms-fill-upper {
+                                background: #000000;
+                                border-radius: 5px;
+                              }
+                          
+                              &::-webkit-slider-thumb {
+                                -webkit-appearance: none;
+                                appearance: none;
+                                text-align: center;
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 50%;
+                                background: #000000;
+                                cursor: pointer;
+                                margin-top: -6px; /* Alinear el thumb verticalmente */
+                              }
+                          
+                              &::-moz-range-thumb {
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 50%;
+                                background: #aeaeae;
+                                cursor: pointer;
+                              }
+                          
+                              &::-ms-thumb {
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 50%;
+                                background: #ffffff;
+                                cursor: pointer;
+                              }
+                            }
+                          }
+                          
+
+                        .tiempo-control{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-evenly;
+                            align-items: center;
+
+                            width: 100%;
+
+                            .play-pause{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+    
+                                border-style: none;
+    
+                                background-color: transparent;
+    
+                                width: 35px;
+                                height: 35px;
+                                padding: 5px;
+                                .icono{
+                                    width: 20px;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    
+        .puerta{
+            position: fixed;
+            bottom: 20px;
+            left: 10px;
+            z-index: 90;
+        
+            width: 50px;
+            height: 50px;
+        
+            .abrir{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+        
+                border: none;
+                background-color: aliceblue;
+                border-radius: 10px;
+        
+                width: 100%;
+                height: 100%;
+        
+                .icono{
+                    width: 25px;
+                }
+            }
+        }
+    
+        .cerrado{
+            display: none;
+        }
+    }
+
+    .desplazar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: fixed;
+        z-index: 90;
+        bottom: 10vh;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: 200px;
+        height: 75px;
+
+        background-color: rgba(0, 0, 0, .3);
+        backdrop-filter: blur(5px);
+
+        border-radius: 10px;
+
+        color: white;
+
+        p{
+            font-family: $font-second;
+            font-size: 20px;
+
+            margin-bottom: 5PX;
+        }
+
+
+        .icono{
+            width: 18px;
+            animation: bounce 2s infinite;
+        }
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-10px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+
+    .modeloDos {
+        background-size: contain;
+    
+        .fondo{
+            background-size: cover;
+            background-position: center top;
+
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100vh;
+        }
+         
+        .portada {
+                background-size: cover;
+                background-position: center top;    
+        }
+            
+        .imagen {
+            background-size: cover;
+            background-position: center top; 
+        }
+    }
+
+    .invitados{
+
+        .fondo{
+            background-image: url('../multimedia/herramientas/invitados.jpg');
+
+            background-size: cover;
+            background-position: center top;
+
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+
+    .gestion{
+
+        .fondo{
+            background-image: url('../multimedia/herramientas/editar.jpg');
+
+            background-size: cover;
+            background-position: center top;
+
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+
+            width: 100vw;
+            height: 100vh;
+        }
+    }    
+ }
+    

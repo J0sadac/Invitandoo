@@ -1,0 +1,1319 @@
+//Variables
+$color-main: #212529;
+$color-second: #3e4144;
+$color-font: #3e4144;
+$color-carousel: #ffff;
+$font-main: 'Tangerine', cursive;
+$font-second: 'Abel', sans-serif;
+
+.container-invitaciones{
+    background-size: contain;
+
+    .carousel-container{
+        margin-top: 30px;
+    
+        .inv-img{
+            height: 710px;
+            object-fit: cover;
+        }
+    
+        .inv-frase{
+            color: $color-carousel;
+            font-family: $font-main;
+            font-size: 38px;
+            font-weight: 600;
+        }
+    
+        .frase3{
+            color: #fff;
+        }
+    }
+    
+    .container-portada{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        
+        margin: 50px 20px;
+        padding: 20px;
+
+        text-align: center;
+
+        color: rgb(160, 124, 31);
+    
+        .portada-xv{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            height: 430px;
+            width: 80%;
+    
+            .evento{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+        
+                text-align: center;
+        
+                .te-invito{
+                    font-family: $font-main;
+                    font-weight: 600;
+                    font-size: 45px;
+                }
+        
+                .mis{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+        
+                    h4{
+                        margin: -10px 0px;
+        
+                        font-family: $font-main;
+                        font-weight: 600;
+                        font-size: 40px;
+                    }
+        
+                    h3{
+                        font-family: $font-main;
+                        font-size: 45px;
+                        font-weight: 600;
+                        padding: 0px;
+                        margin: 0px;
+                    }
+        
+                    .anios{
+                        margin-top: -20px;
+                    }
+                }
+            }
+        
+            .festejada{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+        
+                .img-portada{
+                    border-radius: 50%;
+                    
+                    width: 272px;
+                    height: 272px;
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+        
+                    position: relative;
+                    
+                    img{
+                        width: 265px;
+                        border-radius: 50%;
+                    }
+        
+                    .img-superpuesta {
+                        position: absolute;
+                        width: 330px; /* Ajusta el ancho según sea necesario */
+                        height: 330px; /* Ajusta la altura según sea necesario */
+                      }
+                }
+                
+                .nombre-portada{
+                    text-align: center;
+            
+                    p{
+                        font-size: 45px;
+                        font-family: $font-main;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    
+        .portada-boda{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+    
+            width: 100%;
+            height: 100%;
+    
+            .head{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                .titulo{
+                    font-family: $font-main;
+                    font-size: 40px;
+                }
+    
+                .subtitulo{
+                    font-family: $font-main;
+                    font-size: 45px;
+                    font-weight: 600;
+                }
+            }
+    
+            .body{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+    
+                width: 90%;
+                height: 90%;
+    
+                .img{
+                    position: relative;
+    
+                    img{
+                        width: 250px;
+                        border-radius: 50%;
+                    }
+    
+                    .marco{
+                        position: absolute;
+                        right: -35px;
+                        top: -35px;
+                        width: 330px;
+                    }
+                }
+    
+                .nombres{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+    
+                    width: 40%;
+    
+                    p{
+                        font-family: $font-main;
+                        font-size: 45px;
+                        font-weight: 600;
+                    }
+                }
+            }
+    
+        }
+        
+    }
+    
+    .container-invitacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    
+        margin: 50px 20px;
+        color: $color-font;
+    
+        .date-container{
+            margin: 50px 0px;
+            padding: 50px 20px;
+            width: 65%;
+            height: 550px;
+        
+            font-family: $font-second;
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        
+            position: relative;
+        
+            .inv-date-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-wrap: wrap;
+        
+        
+                .inv-date{
+                    font-family: $font-main;
+                    font-size: 70px;
+                    font-weight: 600;
+                }
+            }
+    
+            .place-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                p{
+                    font-family: $font-second;
+                    font-size: 20px;
+                }
+            }
+        
+            .time-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                margin-top: 20px;
+                width: 75%;
+        
+                .time{
+                    width: 100px;
+                    height: 100px;
+        
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+    
+                    .regresivo{
+                        font-family: $font-second;
+                        text-align: center;
+                        font-size: 40px;
+    
+                        width: 100%;
+                    }
+        
+                    .times{
+                        font-size: 15px;
+                    }
+                }
+            }
+        
+            .img-flor-tr{
+                width: 190px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: scaleX(-1);
+                transform: rotate(180deg);
+            }
+        
+            .img-flor-tl{
+                width: 190px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: scaleY(-1);
+            }
+        
+            .img-flor-br{
+                width: 190px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                transform: scaleX(-1);
+            }
+        
+            .img-flor-bl{
+                width: 190px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                
+            }
+        }
+    
+        .qr-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+    
+            width: 25%;
+            height: 540px;
+            padding: 40px 20px;
+            margin-bottom: 20px;
+    
+            color: $color-font;
+    
+            .img-qr{
+                width: 180px;
+                height: 180px;
+    
+                background-color: white;
+                padding: 25px 15px 15px;
+    
+                border-radius: 10px;
+            }
+    
+            .nombre-inv{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                font-family: $font-main;
+                
+                h3{
+                    font-size: 35px;
+                    font-weight: 600;
+                }
+            }
+    
+            .num-mesa{
+                font-family: $font-second;
+                font-size: 20px;
+    
+                p{
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+            }
+    
+            .anuncio{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                font-family: $font-second;
+            }
+        }
+    }
+    
+    .container-reproductor{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    
+        margin: 50px 20px;
+        padding: 30px;
+    
+        height: 220px;
+    
+        .reproductor{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            .title{
+                font-size: 30px;
+                font-family: $font-second;
+                text-align: center;
+        
+                color: $color-font;
+            }
+    
+            audio{
+                width: 280px;
+            }
+    
+    
+        }
+    
+    }
+    
+    .alerta-reproductor{
+        flex-direction: row;
+    
+        padding: 30px;
+    
+        height: 220px;
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+          
+        .alert-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    
+        .reproductor{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+    
+            height: 250px;
+    
+            .title{
+                font-size: 30px;
+                font-family: $font-second;
+                text-align: center;
+        
+                color: $color-font;
+            }
+    
+            audio{
+                width: 280px;
+            }
+    
+            .boton-cerrar{
+                margin-top: 10px;
+                padding: 5px;
+    
+                color: #fff;
+                background-color: #3e4144;
+                border-color: #3e4144;
+                border-radius: 10px;
+                border-style: solid;
+            }
+        }
+    
+    }
+    
+    .minimized{
+        width: 50px; 
+        height: 50px; 
+        box-shadow: none;
+    }
+    
+    .minimize-button {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+    
+        background-color: #fff;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding: 8px;
+    
+        font-family: $font-second;
+      }
+      
+    .container-itinerario{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    
+        margin: 50px 20px;
+    
+        padding: 30px;
+    
+        color: $color-font;
+    
+        h3{
+            font-family: $font-main;
+            font-size: 35px;
+            font-weight: 600;
+        }
+    
+        .cont{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+    
+            width: 100%;
+    
+            font-family: $font-second;
+    
+            transition: transform 0.5s, visibility 0s 0.5s;
+        
+            .itinerario{
+                width: 90%;
+                height: 350px;
+    
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                align-items: center;
+    
+                text-align: center;
+
+                margin-bottom: 20px;
+    
+                img{
+                    width: 50px;
+                }
+    
+                p{
+                    font-size: 22px;
+                }
+    
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    p{
+                        font-size: 23px;
+                        font-weight: 600;
+                    }
+        
+                }
+    
+    
+            }
+    
+            .direccion{
+                display: none; 
+                transform: rotateY(-180deg);
+
+                width: 90%;
+                height: 350px;
+                margin-bottom: 20px;
+                padding: 40px 20px 20px;
+    
+                text-align: center;
+    
+                h3{
+                    font-family: $font-main;
+                    font-size: 35px;
+                    font-weight: 600;
+                }
+    
+                p{
+                    font-family: $font-second;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+              }
+    
+              .hidden {
+                display: none; 
+              }
+              
+              .visible {
+                display: block; 
+              }
+    
+              .explicacion-button {
+                border-radius: 10px;
+                border: 1px solid #fff;
+    
+                padding: 8px;
+    
+                font-family: $font-second;
+                font-size: 16px;
+                
+                background-color: #fff;
+                color: #333;
+
+                margin-bottom: 20px;
+    
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+              }
+              
+              .explicacion-button:hover {
+                background-color: #333;
+                color: #fff;
+                border-color: #333;
+              }
+        }
+    
+        .flip {
+            transform: rotateY(180deg);
+        }
+    
+        .cont.flip{
+            .direccion {
+                display: block; 
+              }
+        }
+    }
+    
+    .container-padres{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    
+        padding: 30px;
+        margin: 50px 20px;
+    
+        text-align: center;
+    
+        .contenido{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+    
+            .novios{
+                margin-bottom: 35px;
+
+                //color: rgb(139, 138, 138);
+
+                .title{
+                    font-family: $font-main;
+                    font-size: 45px;
+                    font-weight: 700;
+
+                    margin: 0;
+                }
+
+                .padres{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+        
+                    padding: 15px;
+        
+                    text-align: center;
+                    font-family: $font-second;
+                    font-size: 25px;
+                }
+            }
+
+            .xv{
+
+                .title{
+                    font-family: $font-main;
+                    font-size: 45px;
+                    font-weight: 700;
+
+                    margin: 0;
+                }
+
+                .padres{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+        
+                    padding: 15px;
+                    margin-top: 20px;
+        
+                    text-align: center;
+                    font-family: $font-second;
+                    font-size: 25px;
+                }
+
+                .mensaje{
+                    margin-top: 20px;
+
+                    p{
+                        font-family: $font-second;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .mensaje{
+                p{
+                    font-family: $font-second;
+                }
+            }
+        }
+    
+    }
+    
+    .container-padrinos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    
+        margin: 50px 20px;
+    
+        padding: 30px;
+    
+    
+        .contenido{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+    
+            width: 100%;
+    
+            .title{
+                font-family: $font-main;
+                font-size: 40px;
+                font-weight: 600;
+            }
+    
+            div{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+    
+                .padrinoDe{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+    
+                    padding: 10px;
+                    margin: 15px;
+    
+                    height: 30%;
+                    width: 90%;
+    
+                    .de{
+                        font-family: $font-main;
+                        font-size: 35px;
+                        font-weight: 600;
+                    }
+    
+                    .padrino{
+                        font-family: $font-second;
+                        font-size: 25px;
+                    }
+    
+                }
+            }
+        }
+    }
+    
+    .container-dresscode_mesa{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    
+        text-align: center;
+    
+        padding: 30px;
+        margin: 20px;
+    
+        .dresscode{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            
+            padding: 20px;
+            width: 90%;
+            margin-bottom: 30px;
+        
+            color: $color-font;
+            text-align: center;
+        
+            h3{
+                font-family: $font-main;
+                font-size: 35px;
+                font-weight: 600;
+            }
+            
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+    
+                width: 100%;
+    
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+    
+                    .titulo{
+                        font-family: $font-main;
+                        font-size: 40px;
+                        font-weight: 600;
+                    }
+    
+                    p{
+                        font-family: $font-second;
+                        font-size: 30px; 
+                        font-weight: 600;   
+                    }
+                
+                }
+            }
+           
+            .img-dresscode{
+        
+                img{
+                    width: 300px;
+                    margin: 10px;
+                }
+            }
+        }
+    
+        .mesa{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+    
+            padding: 20px;
+            width: 90%;
+        
+            color: $color-font;
+    
+            transition: transform 0.5s, visibility 0s 0.5s;
+    
+            .mesaDeRegalos{
+                h3{
+                    font-family: $font-main;
+                    font-size: 35px;
+                    font-weight: 600;
+                }
+        
+                .codigoRegalo{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+        
+                    .imgLogo{
+                        width: 450px;
+                    }
+        
+                    p{
+                        font-family: $font-second;
+                        font-size: 24px;
+                    }
+                }
+            }
+    
+    
+            .explicacion {
+                display: none; 
+                transform: rotateY(-180deg);
+    
+                text-align: center;
+    
+                h3{
+                    font-family: $font-main;
+                    font-size: 35px;
+                    font-weight: 600;
+                }
+    
+                p{
+                    font-family: $font-second;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+              }
+    
+              .hidden {
+                display: none; 
+              }
+              
+              .visible {
+                display: block; 
+              }
+    
+              .explicacion-button {
+                border-radius: 10px;
+                border: 1px solid #fff;
+    
+                padding: 8px;
+    
+                font-family: $font-second;
+                font-size: 16px;
+                
+                background-color: #fff;
+                color: #333;
+    
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+              }
+              
+              .explicacion-button:hover {
+                background-color: #333;
+                color: #fff;
+                border-color: #333;
+              }
+        }
+    
+        .flip {
+            transform: rotateY(180deg);
+        }
+    
+        .mesa.flip{
+            .explicacion {
+                display: block; 
+              }
+        }
+    }
+    
+    .container-maps_conf{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    
+        color: $color-font;
+    
+        margin: 50px 20px;
+        padding: 40px;
+    
+    
+        .confirmacion{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+    
+            width: 30%;
+            height: 300px;
+    
+            .title{
+                font-family: $font-main;
+                font-size: 40px;
+                font-weight: 600;
+            }
+    
+            .botones{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+    
+                width: 70%;
+    
+                font-family: $font-second;
+    
+                .si{
+                    background-color: lightgreen;
+                    border: 1px solid lightgreen;
+                    border-radius: 5px;
+    
+                    width: 75px;
+                    height: 40px;
+    
+                    color: black;
+                }
+    
+                .no{
+                    background-color: lightcoral;
+                    border: 1px solid lightcoral;
+                    border-radius: 5px;
+    
+                    width: 75px;
+                    height: 40px;
+    
+                    color: black;
+                }
+            }
+        }
+    
+        .maps{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+    
+            padding: 15px;
+            width: 30%;
+            height: 350px;
+    
+            p{
+                font-family: $font-main;
+                font-size: 40px;
+                font-weight: 600;
+            }
+    
+            
+    
+            .caja-maps{
+                width: 350px;
+                height: 250px;
+    
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+        
+                
+                .img-googlemaps{
+                        width: 300px;    
+                }
+            }
+        }
+    }
+}
+
+
+//Adaptacion responsiva en diferentes telefonos
+@media screen and (max-width:769px){
+    .container-invitaciones{
+
+        .container-portada{
+            .portada-boda{
+                .body{
+                    flex-direction: column;
+                    flex-wrap: wrap;
+
+                    margin-top: 20px;
+
+                    .nombres{
+                        width: 100%;
+                        margin-top: 20px;
+
+                        justify-content: center;
+
+                        p{
+                            margin-right: 18px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .container-invitacion{
+            flex-direction: column;
+
+            .date-container{
+                width: 100%;
+            }
+
+            .qr-container{
+                width: 90%;
+
+                .nombre-inv{
+                    flex-direction: row;
+                    justify-content: space-evenly;
+
+                    width: 80%;
+
+                    h3{
+                        font-size: 48px;
+                        font-weight: 600;
+                    }
+                }
+
+                .num-mesa{
+                    p{
+                        font-size: 28px;
+                    }
+                }
+
+                .anuncio{
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .container-itinerario{
+            .cont{
+                .itinerario{
+                    width: 70%;
+                }
+
+                .direccion{
+                    width: 70%;
+                }
+
+        
+            }
+        }
+
+        .container-dresscode_mesa{
+             .mesa{
+                .mesaDeRegalos{
+                    .codigoRegalo{
+                        .imgLogo{
+                            width: 240px;
+                        }
+                    }
+                }
+             }
+        }
+    }   
+}
+
+@media (max-width:721px){
+    .container-invitaciones{
+
+        .container-invitacion{
+
+            .qr-container{
+
+                .nombre-inv{
+                    flex-direction: column;
+                }
+            }
+        }
+
+        .container-portada{
+            .portada-xv{
+                width: 90%;
+            }
+        } 
+    } 
+}
+
+@media (max-width:661px){
+    .container-invitaciones{
+
+        .container-portada{
+            .portada-xv{
+                height: 560px;
+
+                .festejada{
+                    flex-wrap: wrap;
+                }
+            }
+        }
+
+        .container-itinerario{
+            .cont{
+                .itinerario{
+                    width: 90%;
+                }
+
+                .direccion{
+                    width: 90%;
+                }
+
+        
+            }
+        }
+
+        .container-dresscode_mesa{
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .dresscode{
+                width: 90%;
+
+                margin-bottom: 30px;
+            }
+
+            .mesa{
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media (max-width:561px){
+    .container-invitaciones{
+
+        .container-invitacion{
+            .date-container{
+                justify-content: space-evenly;
+            }
+
+            .qr-container{
+                .nombre-inv{
+                    h3{
+                        font-size: 42px;
+                    }
+                }
+
+                .num-mesa{
+                    p{
+                        font-size: 24px;
+                    }
+                }
+
+                .anuncio{
+                    p{
+                        font-size: 18px;
+
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+
+        .container-portada{
+            .portada-boda{
+                .body{
+                    margin: 25px 10px;
+                    .nombres{
+                        flex-direction: column;
+                        align-items: center;
+
+                        margin: 25px 5px;
+
+                        p{
+                            margin-bottom: -15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .container-maps_conf{
+            flex-direction: column;
+
+            .maps{
+                width: 100%;
+
+                .caja-maps{
+                    .img-googlemaps{
+                        width: 270px;
+                    }
+                }
+            }
+
+            .confirmacion{
+                width: 100%;
+            }
+        }
+    } 
+}
+
+@media (max-width:472px){
+    .container-invitaciones{
+
+        .container-invitacion{
+            .date-container{
+                height: 700px;
+                .inv-date-container{
+                    margin-top: 25px;
+                    .inv-date{
+                        font-size: 50px;
+                    }
+                }
+
+                .time-container{
+                    flex-wrap: wrap;
+
+                    .time{
+                        
+                        .regresivo{
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+
+            .qr-container{
+                height: 560px;
+            }
+        }
+
+        .container-portada{
+            .portada-xv{
+                height: 630px;
+            }
+        }
+
+        .container-dresscode_mesa{
+            padding: 10px;
+
+            .dresscode{
+                padding: 10px;
+            }
+
+            .mesa{
+                padding: 10px;
+            }
+        }
+    }    
+}
+
+@media (max-width:426px){
+    
+}
+
+@media (max-width:376px){
+
+}
+
+@media (max-width:321px){ 
+
+    
+}

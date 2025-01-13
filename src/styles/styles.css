@@ -1,0 +1,3727 @@
+@charset "UTF-8";
+.contenedor-navbar {
+  background-color: #170000 !important;
+}
+.contenedor-navbar .titulo-link {
+  text-decoration: none;
+  color: white;
+  margin-top: 7px;
+}
+.contenedor-navbar .titulo-link .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+}
+.contenedor-navbar .links {
+  font-family: "Abel", sans-serif;
+  color: white;
+}
+
+.contenedor-main .contenedor-tarjeta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link {
+  text-decoration: none;
+  margin-right: 40px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .portada {
+  height: 200px;
+  object-fit: cover;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta {
+  width: 250px;
+  margin-top: 40px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .titulo {
+  text-align: center;
+  font-family: "Tangerine", cursive;
+  font-size: 30px;
+  font-weight: 600;
+  color: #3e4144;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .texto {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .opcion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  background-color: white;
+  width: 25px;
+  height: 30px;
+  padding: 0;
+  margin-right: -5px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .opcion img {
+  width: 70%;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .opciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  position: absolute;
+  right: 35px;
+  bottom: -15px;
+  border: 1px solid #3e4144;
+  border-radius: 5px;
+  background-color: #3e4144;
+  padding: 5px;
+  padding-left: 15px;
+  width: 130px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .opciones a {
+  margin: 4px;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+}
+.contenedor-main .contenedor-tarjeta .tarjeta-link .tarjeta .descripcion .contenedor .cerrado {
+  display: none;
+}
+
+@media (max-width: 551px) {
+  .contenedor-main .contenedor-tarjeta .tarjeta-link {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 321px) {
+  .menu-eventos {
+    width: 100%;
+  }
+  .menu-eventos h3 {
+    font-size: 30px;
+  }
+}
+.container-invitaciones {
+  background-size: contain;
+}
+.container-invitaciones .carousel-container {
+  margin-top: 30px;
+}
+.container-invitaciones .carousel-container .inv-img {
+  height: 710px;
+  object-fit: cover;
+}
+.container-invitaciones .carousel-container .inv-frase {
+  color: white;
+  font-family: "Tangerine", cursive;
+  font-size: 38px;
+  font-weight: 600;
+}
+.container-invitaciones .carousel-container .frase3 {
+  color: #fff;
+}
+.container-invitaciones .container-portada {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px 20px;
+  padding: 20px;
+  text-align: center;
+  color: rgb(160, 124, 31);
+}
+.container-invitaciones .container-portada .portada-xv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 430px;
+  width: 80%;
+}
+.container-invitaciones .container-portada .portada-xv .evento {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.container-invitaciones .container-portada .portada-xv .evento .te-invito {
+  font-family: "Tangerine", cursive;
+  font-weight: 600;
+  font-size: 45px;
+}
+.container-invitaciones .container-portada .portada-xv .evento .mis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-invitaciones .container-portada .portada-xv .evento .mis h4 {
+  margin: -10px 0px;
+  font-family: "Tangerine", cursive;
+  font-weight: 600;
+  font-size: 40px;
+}
+.container-invitaciones .container-portada .portada-xv .evento .mis h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 600;
+  padding: 0px;
+  margin: 0px;
+}
+.container-invitaciones .container-portada .portada-xv .evento .mis .anios {
+  margin-top: -20px;
+}
+.container-invitaciones .container-portada .portada-xv .festejada {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container-invitaciones .container-portada .portada-xv .festejada .img-portada {
+  border-radius: 50%;
+  width: 272px;
+  height: 272px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container-invitaciones .container-portada .portada-xv .festejada .img-portada img {
+  width: 265px;
+  border-radius: 50%;
+}
+.container-invitaciones .container-portada .portada-xv .festejada .img-portada .img-superpuesta {
+  position: absolute;
+  width: 330px; /* Ajusta el ancho según sea necesario */
+  height: 330px; /* Ajusta la altura según sea necesario */
+}
+.container-invitaciones .container-portada .portada-xv .festejada .nombre-portada {
+  text-align: center;
+}
+.container-invitaciones .container-portada .portada-xv .festejada .nombre-portada p {
+  font-size: 45px;
+  font-family: "Tangerine", cursive;
+  font-weight: 600;
+}
+.container-invitaciones .container-portada .portada-boda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+.container-invitaciones .container-portada .portada-boda .head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-invitaciones .container-portada .portada-boda .head .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+}
+.container-invitaciones .container-portada .portada-boda .head .subtitulo {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 600;
+}
+.container-invitaciones .container-portada .portada-boda .body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+}
+.container-invitaciones .container-portada .portada-boda .body .img {
+  position: relative;
+}
+.container-invitaciones .container-portada .portada-boda .body .img img {
+  width: 250px;
+  border-radius: 50%;
+}
+.container-invitaciones .container-portada .portada-boda .body .img .marco {
+  position: absolute;
+  right: -35px;
+  top: -35px;
+  width: 330px;
+}
+.container-invitaciones .container-portada .portada-boda .body .nombres {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 40%;
+}
+.container-invitaciones .container-portada .portada-boda .body .nombres p {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 600;
+}
+.container-invitaciones .container-invitacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px 20px;
+  color: #3e4144;
+}
+.container-invitaciones .container-invitacion .date-container {
+  margin: 50px 0px;
+  padding: 50px 20px;
+  width: 65%;
+  height: 550px;
+  font-family: "Abel", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.container-invitaciones .container-invitacion .date-container .inv-date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container-invitaciones .container-invitacion .date-container .inv-date-container .inv-date {
+  font-family: "Tangerine", cursive;
+  font-size: 70px;
+  font-weight: 600;
+}
+.container-invitaciones .container-invitacion .date-container .place-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-invitaciones .container-invitacion .date-container .place-container p {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+.container-invitaciones .container-invitacion .date-container .time-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  width: 75%;
+}
+.container-invitaciones .container-invitacion .date-container .time-container .time {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container-invitaciones .container-invitacion .date-container .time-container .time .regresivo {
+  font-family: "Abel", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  width: 100%;
+}
+.container-invitaciones .container-invitacion .date-container .time-container .time .times {
+  font-size: 15px;
+}
+.container-invitaciones .container-invitacion .date-container .img-flor-tr {
+  width: 190px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+  transform: rotate(180deg);
+}
+.container-invitaciones .container-invitacion .date-container .img-flor-tl {
+  width: 190px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleY(-1);
+}
+.container-invitaciones .container-invitacion .date-container .img-flor-br {
+  width: 190px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: scaleX(-1);
+}
+.container-invitaciones .container-invitacion .date-container .img-flor-bl {
+  width: 190px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.container-invitaciones .container-invitacion .qr-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 25%;
+  height: 540px;
+  padding: 40px 20px;
+  margin-bottom: 20px;
+  color: #3e4144;
+}
+.container-invitaciones .container-invitacion .qr-container .img-qr {
+  width: 180px;
+  height: 180px;
+  background-color: white;
+  padding: 25px 15px 15px;
+  border-radius: 10px;
+}
+.container-invitaciones .container-invitacion .qr-container .nombre-inv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Tangerine", cursive;
+}
+.container-invitaciones .container-invitacion .qr-container .nombre-inv h3 {
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-invitacion .qr-container .num-mesa {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+.container-invitaciones .container-invitacion .qr-container .num-mesa p {
+  font-size: 25px;
+  font-weight: 600;
+}
+.container-invitaciones .container-invitacion .qr-container .anuncio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+}
+.container-invitaciones .container-reproductor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 20px;
+  padding: 30px;
+  height: 220px;
+}
+.container-invitaciones .container-reproductor .reproductor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-invitaciones .container-reproductor .reproductor .title {
+  font-size: 30px;
+  font-family: "Abel", sans-serif;
+  text-align: center;
+  color: #3e4144;
+}
+.container-invitaciones .container-reproductor .reproductor audio {
+  width: 280px;
+}
+.container-invitaciones .alerta-reproductor {
+  flex-direction: row;
+  padding: 30px;
+  height: 220px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-invitaciones .alerta-reproductor .alert-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container-invitaciones .alerta-reproductor .reproductor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 250px;
+}
+.container-invitaciones .alerta-reproductor .reproductor .title {
+  font-size: 30px;
+  font-family: "Abel", sans-serif;
+  text-align: center;
+  color: #3e4144;
+}
+.container-invitaciones .alerta-reproductor .reproductor audio {
+  width: 280px;
+}
+.container-invitaciones .alerta-reproductor .reproductor .boton-cerrar {
+  margin-top: 10px;
+  padding: 5px;
+  color: #fff;
+  background-color: #3e4144;
+  border-color: #3e4144;
+  border-radius: 10px;
+  border-style: solid;
+}
+.container-invitaciones .minimized {
+  width: 50px;
+  height: 50px;
+  box-shadow: none;
+}
+.container-invitaciones .minimize-button {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 8px;
+  font-family: "Abel", sans-serif;
+}
+.container-invitaciones .container-itinerario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px 20px;
+  padding: 30px;
+  color: #3e4144;
+}
+.container-invitaciones .container-itinerario h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-itinerario .cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  font-family: "Abel", sans-serif;
+  transition: transform 0.5s, visibility 0s 0.5s;
+}
+.container-invitaciones .container-itinerario .cont .itinerario {
+  width: 90%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container-invitaciones .container-itinerario .cont .itinerario img {
+  width: 50px;
+}
+.container-invitaciones .container-itinerario .cont .itinerario p {
+  font-size: 22px;
+}
+.container-invitaciones .container-itinerario .cont .itinerario div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-invitaciones .container-itinerario .cont .itinerario div p {
+  font-size: 23px;
+  font-weight: 600;
+}
+.container-invitaciones .container-itinerario .cont .direccion {
+  display: none;
+  transform: rotateY(-180deg);
+  width: 90%;
+  height: 350px;
+  margin-bottom: 20px;
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+.container-invitaciones .container-itinerario .cont .direccion h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-itinerario .cont .direccion p {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+.container-invitaciones .container-itinerario .cont .hidden {
+  display: none;
+}
+.container-invitaciones .container-itinerario .cont .visible {
+  display: block;
+}
+.container-invitaciones .container-itinerario .cont .explicacion-button {
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 8px;
+  font-family: "Abel", sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.container-invitaciones .container-itinerario .cont .explicacion-button:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+.container-invitaciones .container-itinerario .flip {
+  transform: rotateY(180deg);
+}
+.container-invitaciones .container-itinerario .cont.flip .direccion {
+  display: block;
+}
+.container-invitaciones .container-padres {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 30px;
+  margin: 50px 20px;
+  text-align: center;
+}
+.container-invitaciones .container-padres .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.container-invitaciones .container-padres .contenido .novios {
+  margin-bottom: 35px;
+}
+.container-invitaciones .container-padres .contenido .novios .title {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0;
+}
+.container-invitaciones .container-padres .contenido .novios .padres {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 15px;
+  text-align: center;
+  font-family: "Abel", sans-serif;
+  font-size: 25px;
+}
+.container-invitaciones .container-padres .contenido .xv .title {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0;
+}
+.container-invitaciones .container-padres .contenido .xv .padres {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 15px;
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Abel", sans-serif;
+  font-size: 25px;
+}
+.container-invitaciones .container-padres .contenido .xv .mensaje {
+  margin-top: 20px;
+}
+.container-invitaciones .container-padres .contenido .xv .mensaje p {
+  font-family: "Abel", sans-serif;
+  font-size: 18px;
+}
+.container-invitaciones .container-padres .contenido .mensaje p {
+  font-family: "Abel", sans-serif;
+}
+.container-invitaciones .container-padrinos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px 20px;
+  padding: 30px;
+}
+.container-invitaciones .container-padrinos .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.container-invitaciones .container-padrinos .contenido .title {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 600;
+}
+.container-invitaciones .container-padrinos .contenido div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container-invitaciones .container-padrinos .contenido div .padrinoDe {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin: 15px;
+  height: 30%;
+  width: 90%;
+}
+.container-invitaciones .container-padrinos .contenido div .padrinoDe .de {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-padrinos .contenido div .padrinoDe .padrino {
+  font-family: "Abel", sans-serif;
+  font-size: 25px;
+}
+.container-invitaciones .container-dresscode_mesa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  margin: 20px;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 90%;
+  margin-bottom: 30px;
+  color: #3e4144;
+  text-align: center;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode div div .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 600;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode div div p {
+  font-family: "Abel", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+.container-invitaciones .container-dresscode_mesa .dresscode .img-dresscode img {
+  width: 300px;
+  margin: 10px;
+}
+.container-invitaciones .container-dresscode_mesa .mesa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 90%;
+  color: #3e4144;
+  transition: transform 0.5s, visibility 0s 0.5s;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .mesaDeRegalos h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo .imgLogo {
+  width: 450px;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo p {
+  font-family: "Abel", sans-serif;
+  font-size: 24px;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .explicacion {
+  display: none;
+  transform: rotateY(-180deg);
+  text-align: center;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .explicacion h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .explicacion p {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .hidden {
+  display: none;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .visible {
+  display: block;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .explicacion-button {
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 8px;
+  font-family: "Abel", sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.container-invitaciones .container-dresscode_mesa .mesa .explicacion-button:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+.container-invitaciones .container-dresscode_mesa .flip {
+  transform: rotateY(180deg);
+}
+.container-invitaciones .container-dresscode_mesa .mesa.flip .explicacion {
+  display: block;
+}
+.container-invitaciones .container-maps_conf {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #3e4144;
+  margin: 50px 20px;
+  padding: 40px;
+}
+.container-invitaciones .container-maps_conf .confirmacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30%;
+  height: 300px;
+}
+.container-invitaciones .container-maps_conf .confirmacion .title {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 600;
+}
+.container-invitaciones .container-maps_conf .confirmacion .botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 70%;
+  font-family: "Abel", sans-serif;
+}
+.container-invitaciones .container-maps_conf .confirmacion .botones .si {
+  background-color: lightgreen;
+  border: 1px solid lightgreen;
+  border-radius: 5px;
+  width: 75px;
+  height: 40px;
+  color: black;
+}
+.container-invitaciones .container-maps_conf .confirmacion .botones .no {
+  background-color: lightcoral;
+  border: 1px solid lightcoral;
+  border-radius: 5px;
+  width: 75px;
+  height: 40px;
+  color: black;
+}
+.container-invitaciones .container-maps_conf .maps {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px;
+  width: 30%;
+  height: 350px;
+}
+.container-invitaciones .container-maps_conf .maps p {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 600;
+}
+.container-invitaciones .container-maps_conf .maps .caja-maps {
+  width: 350px;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container-invitaciones .container-maps_conf .maps .caja-maps .img-googlemaps {
+  width: 300px;
+}
+
+@media screen and (max-width: 769px) {
+  .container-invitaciones .container-portada .portada-boda .body {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .container-invitaciones .container-portada .portada-boda .body .nombres {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .container-invitaciones .container-portada .portada-boda .body .nombres p {
+    margin-right: 18px;
+  }
+  .container-invitaciones .container-invitacion {
+    flex-direction: column;
+  }
+  .container-invitaciones .container-invitacion .date-container {
+    width: 100%;
+  }
+  .container-invitaciones .container-invitacion .qr-container {
+    width: 90%;
+  }
+  .container-invitaciones .container-invitacion .qr-container .nombre-inv {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
+  }
+  .container-invitaciones .container-invitacion .qr-container .nombre-inv h3 {
+    font-size: 48px;
+    font-weight: 600;
+  }
+  .container-invitaciones .container-invitacion .qr-container .num-mesa p {
+    font-size: 28px;
+  }
+  .container-invitaciones .container-invitacion .qr-container .anuncio p {
+    font-size: 20px;
+  }
+  .container-invitaciones .container-itinerario .cont .itinerario {
+    width: 70%;
+  }
+  .container-invitaciones .container-itinerario .cont .direccion {
+    width: 70%;
+  }
+  .container-invitaciones .container-dresscode_mesa .mesa .mesaDeRegalos .codigoRegalo .imgLogo {
+    width: 240px;
+  }
+}
+@media (max-width: 721px) {
+  .container-invitaciones .container-invitacion .qr-container .nombre-inv {
+    flex-direction: column;
+  }
+  .container-invitaciones .container-portada .portada-xv {
+    width: 90%;
+  }
+}
+@media (max-width: 661px) {
+  .container-invitaciones .container-portada .portada-xv {
+    height: 560px;
+  }
+  .container-invitaciones .container-portada .portada-xv .festejada {
+    flex-wrap: wrap;
+  }
+  .container-invitaciones .container-itinerario .cont .itinerario {
+    width: 90%;
+  }
+  .container-invitaciones .container-itinerario .cont .direccion {
+    width: 90%;
+  }
+  .container-invitaciones .container-dresscode_mesa {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .container-invitaciones .container-dresscode_mesa .dresscode {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .container-invitaciones .container-dresscode_mesa .mesa {
+    width: 90%;
+  }
+}
+@media (max-width: 561px) {
+  .container-invitaciones .container-invitacion .date-container {
+    justify-content: space-evenly;
+  }
+  .container-invitaciones .container-invitacion .qr-container .nombre-inv h3 {
+    font-size: 42px;
+  }
+  .container-invitaciones .container-invitacion .qr-container .num-mesa p {
+    font-size: 24px;
+  }
+  .container-invitaciones .container-invitacion .qr-container .anuncio p {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  .container-invitaciones .container-portada .portada-boda .body {
+    margin: 25px 10px;
+  }
+  .container-invitaciones .container-portada .portada-boda .body .nombres {
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 5px;
+  }
+  .container-invitaciones .container-portada .portada-boda .body .nombres p {
+    margin-bottom: -15px;
+  }
+  .container-invitaciones .container-maps_conf {
+    flex-direction: column;
+  }
+  .container-invitaciones .container-maps_conf .maps {
+    width: 100%;
+  }
+  .container-invitaciones .container-maps_conf .maps .caja-maps .img-googlemaps {
+    width: 270px;
+  }
+  .container-invitaciones .container-maps_conf .confirmacion {
+    width: 100%;
+  }
+}
+@media (max-width: 472px) {
+  .container-invitaciones .container-invitacion .date-container {
+    height: 700px;
+  }
+  .container-invitaciones .container-invitacion .date-container .inv-date-container {
+    margin-top: 25px;
+  }
+  .container-invitaciones .container-invitacion .date-container .inv-date-container .inv-date {
+    font-size: 50px;
+  }
+  .container-invitaciones .container-invitacion .date-container .time-container {
+    flex-wrap: wrap;
+  }
+  .container-invitaciones .container-invitacion .date-container .time-container .time .regresivo {
+    font-size: 30px;
+  }
+  .container-invitaciones .container-invitacion .qr-container {
+    height: 560px;
+  }
+  .container-invitaciones .container-portada .portada-xv {
+    height: 630px;
+  }
+  .container-invitaciones .container-dresscode_mesa {
+    padding: 10px;
+  }
+  .container-invitaciones .container-dresscode_mesa .dresscode {
+    padding: 10px;
+  }
+  .container-invitaciones .container-dresscode_mesa .mesa {
+    padding: 10px;
+  }
+}
+.modeloDos {
+  margin-top: 70px;
+}
+.modeloDos .portada {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding: 35px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 85vh;
+}
+.modeloDos .portada .encabezado {
+  margin-bottom: 30px;
+  padding: 10px;
+  font-family: "Tangerine", cursive;
+  color: white;
+}
+.modeloDos .portada .encabezado h3 {
+  font-size: 50px;
+  font-weight: 600;
+  width: 100%;
+  background: linear-gradient(to right, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: efecto 6s linear alternate infinite;
+}
+.modeloDos .portada .contenido {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  text-align: center;
+  font-family: "Tangerine", cursive;
+  font-weight: 600;
+  font-size: 50px;
+  color: white;
+}
+.modeloDos .portada .contenido span {
+  margin-top: -25px;
+  width: 100%;
+  background: linear-gradient(to right, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: efecto 8s linear alternate infinite;
+}
+@keyframes efecto {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 440px;
+  }
+}
+.modeloDos .invitacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 40px 15px 20px;
+  padding: 20px;
+}
+.modeloDos .invitacion .fecha {
+  font-size: 55px;
+  font-family: "Tangerine", cursive;
+  font-weight: 600;
+  background: linear-gradient(to right, rgb(119, 96, 37), rgb(107, 86, 33), rgb(150, 118, 36), rgb(95, 71, 10), rgb(110, 86, 26), rgb(107, 84, 26), rgb(106, 83, 25));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: efecto 8s linear alternate infinite;
+}
+.modeloDos .invitacion .direccion {
+  font-family: "Abel", sans-serif;
+  font-size: 22px;
+  width: 80%;
+}
+.modeloDos .invitacion .contador {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.modeloDos .invitacion .contador .tiempo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 8px;
+  padding: 10px;
+  width: 60px;
+}
+.modeloDos .invitacion .contador .tiempo span {
+  font-family: "Abel", sans-serif;
+  font-size: 15PX;
+}
+.modeloDos .invitacion .contador .tiempo .segundero {
+  font-size: 28px;
+}
+.modeloDos .padres {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin: 40px 15px 20px;
+  padding: 20px;
+}
+.modeloDos .padres h3 {
+  font-family: "Tangerine", cursive;
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, rgb(119, 96, 37), rgb(107, 86, 33), rgb(150, 118, 36), rgb(95, 71, 10), rgb(110, 86, 26), rgb(107, 84, 26), rgb(106, 83, 25));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: efecto 8s linear alternate infinite;
+}
+.modeloDos .padres .contenedor {
+  padding: 10px;
+  margin-bottom: 25px;
+}
+.modeloDos .padres .contenedor .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 42px;
+  font-weight: 600;
+}
+.modeloDos .padres .contenedor .papas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  margin-top: -20px;
+  font-family: "Abel", sans-serif;
+  font-size: 24px;
+}
+.modeloDos .pase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  font-size: 27px;
+  text-align: center;
+  margin: 40px 15px 20px;
+  padding: 20px;
+  max-height: 550px;
+}
+.modeloDos .pase .invitado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.modeloDos .pase .invitado .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 48px;
+  font-weight: 600;
+  background: linear-gradient(to right, rgb(119, 96, 37), rgb(107, 86, 33), rgb(150, 118, 36), rgb(95, 71, 10), rgb(110, 86, 26), rgb(107, 84, 26), rgb(106, 83, 25));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: efecto 8s linear alternate infinite;
+}
+.modeloDos .pase .invitado .nombre {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 600;
+}
+.modeloDos .pase .mesa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30vw;
+  margin-top: 40px;
+}
+.modeloDos .pase .mesa .titulo {
+  font-weight: 600;
+}
+.modeloDos .pase .pase .titulo {
+  font-weight: 600;
+}
+.modeloDos .mySwiper {
+  height: 87vh;
+  width: 99vw;
+}
+.modeloDos .mySwiper img {
+  object-fit: cover;
+}
+.modeloDos .itinerario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 40px 15px 20px;
+  padding: 20px;
+}
+.modeloDos .itinerario .titulo {
+  font-family: "Tangerine", cursive;
+}
+.modeloDos .itinerario .titulo h3 {
+  font-size: 45px;
+  font-weight: 600;
+}
+.modeloDos .itinerario .contenido {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.modeloDos .itinerario .contenido .icono {
+  width: 60px;
+  margin-top: -20px;
+}
+.modeloDos .itinerario .contenido .accion {
+  width: 50%;
+}
+.modeloDos .itinerario .contenido .accion p {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.modeloDos .codigo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 40px 15px 20px;
+  padding: 20px;
+}
+.modeloDos .codigo .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 600;
+  background: linear-gradient(to right, rgb(119, 96, 37), rgb(107, 86, 33), rgb(150, 118, 36), rgb(95, 71, 10), rgb(110, 86, 26), rgb(107, 84, 26), rgb(106, 83, 25));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: efecto 8s linear alternate infinite;
+}
+.modeloDos .codigo .contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.modeloDos .codigo .contenido .imagenes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.modeloDos .codigo .contenido .imagenes img {
+  width: 40%;
+}
+.modeloDos .codigo .contenido .vestimenta {
+  font-family: "Abel", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.modeloDos .regalo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-decoration: none;
+  margin: 40px 15px 20px;
+  padding: 20px;
+}
+.modeloDos .regalo .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 600;
+  background: linear-gradient(to right, rgb(119, 96, 37), rgb(107, 86, 33), rgb(150, 118, 36), rgb(95, 71, 10), rgb(110, 86, 26), rgb(107, 84, 26), rgb(106, 83, 25));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: efecto 8s linear alternate infinite;
+}
+.modeloDos .regalo .contenido {
+  text-decoration: none;
+  color: #3e4144;
+}
+.modeloDos .regalo .contenido .codigo {
+  font-family: "Abel", sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+.modeloDos .regalo .anuncio {
+  margin-top: 15px;
+  color: #3e4144;
+  font-family: "Abel", sans-serif;
+  font-size: 17px;
+}
+.modeloDos .imagen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 91vh;
+}
+.modeloDos .imagen .frase {
+  background-color: rgba(78, 74, 67, 0.2666666667);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  margin: 100px 15px 0px;
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  text-align: center;
+}
+.modeloDos .confirmacion {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 40px 15px 20px;
+  padding: 20px;
+}
+.modeloDos .confirmacion .titulo {
+  font-family: "Tangerine", cursive;
+  font-size: 45px;
+  font-weight: 600;
+}
+.modeloDos .confirmacion p {
+  font-family: "Abel", sans-serif;
+  font-size: 22px;
+}
+.modeloDos .confirmacion a .icono {
+  width: 60px;
+}
+.modeloDos .ubicacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin: 40px 15px 20px;
+  padding: 20px;
+}
+.modeloDos .ubicacion .titulo {
+  font-size: 45px;
+  font-family: "Tangerine", cursive;
+  font-weight: 600;
+  background: linear-gradient(to right, rgb(119, 96, 37), rgb(107, 86, 33), rgb(150, 118, 36), rgb(95, 71, 10), rgb(110, 86, 26), rgb(107, 84, 26), rgb(106, 83, 25));
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: efecto 8s linear alternate infinite;
+}
+.modeloDos .ubicacion .direccion {
+  width: 310px;
+  height: 300px;
+}
+
+:root {
+  --portada-titulo: linear-gradient(
+      to right,
+      rgb(180, 159, 105),
+      rgb(211, 178, 95),
+      rgb(185, 155, 80),
+      rgb(180, 159, 105),
+      rgb(150, 127, 70),
+      rgb(211, 178, 95),
+      rgb(180, 159, 105)
+  );
+  --portada-contenido: linear-gradient(
+      to left,
+      rgb(180, 159, 105),
+      rgb(211, 178, 95),
+      rgb(185, 155, 80),
+      rgb(180, 159, 105),
+      rgb(150, 127, 70),
+      rgb(211, 178, 95),
+      rgb(180, 159, 105)
+  );
+  --color-padres: linear-gradient(
+      to left,
+      rgb(180, 159, 105),
+      rgb(211, 178, 95),
+      rgb(185, 155, 80),
+      rgb(137, 103, 16),
+      rgb(150, 127, 70),
+      rgb(211, 178, 95),
+      rgb(180, 159, 105));
+  --alineamiento-mensaje: center;
+  --letras-mensaje: black;
+  --letras-pase: white;
+  --contenido-padres: white;
+  --letras-vestimenta: black;
+  --letras-ubicacion: rgb(201, 147, 9);
+  --color-padit: rgb(201, 147, 9);
+  --color-galeria: rgb(201, 147, 9);
+  --color-invitacion: white;
+  --color-confirmacion: white;
+  --color-mesa: white;
+  --font-main: "Tangerine", cursive;
+  --font-second: "Abel", sans-serif;
+  --font-message: "Tangerine", cursive;
+  --font-main-size: 55px;
+  --font-second-size: 25px;
+  --font-message-size: 37px;
+}
+
+.modelo3 {
+  position: relative;
+  z-index: 150;
+  margin-top: 70px;
+}
+.modelo3 .portada {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+}
+.modelo3 .portada .img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.modelo3 .portada .nombres {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 450px;
+  min-width: 400px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: 20;
+  top: 20px;
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: rgb(20, 18, 6);
+}
+.modelo3 .portada .nombres .titulo {
+  transition: 0.3s linear;
+  color: transparent;
+  background-image: var(--portada-titulo);
+  background-size: 200%;
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  animation: move 30s linear infinite;
+}
+@keyframes move {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+.modelo3 .portada .nombres .contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  width: 100%;
+  background-image: var(--portada-contenido);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: anim 4s linear alternate infinite;
+}
+@keyframes anim {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 440px;
+  }
+}
+.modelo3 .sobre {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1110;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin-top: 15px;
+}
+.modelo3 .sobre .img {
+  width: 100%;
+  height: 105vh;
+  object-fit: cover;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  position: absolute;
+}
+.modelo3 .sobre .img.izquierda {
+  transform: translateX(0);
+}
+.modelo3 .sobre .img.derecha {
+  transform: translateX(0);
+}
+.modelo3 .sobre .boton {
+  position: absolute;
+  left: 30px;
+  z-index: 20;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.modelo3 .sobre .boton img.sello {
+  width: 170px;
+  object-fit: contain;
+}
+.modelo3 .sobre.hidden .boton {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.modelo3 .sobre.hidden .img.izquierda {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.modelo3 .sobre.hidden .img.derecha {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.modelo3 .alternativa-portada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+}
+.modelo3 .alternativa-portada .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 20;
+}
+.modelo3 .alternativa-portada .titulo {
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+  font-weight: 800;
+  z-index: 100;
+  margin-top: 15px;
+  transition: 0.3s linear;
+  color: transparent;
+  background-image: var(--portada-titulo);
+  background-size: 200%;
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  animation: move 30s linear infinite;
+}
+.modelo3 .alternativa-portada .img {
+  width: 100%;
+  margin-top: -10px;
+  z-index: 100;
+}
+@keyframes move {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+.modelo3 .caja {
+  position: absolute;
+  z-index: 20;
+  margin-top: 700px;
+  width: 100%;
+}
+.modelo3 .caja .mensaje {
+  display: flex;
+  flex-direction: column;
+  justify-content: var(--alineamiento-mensaje);
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  height: 55vh;
+  width: 100%;
+  color: var(--letras-mensaje);
+  background-color: white;
+  text-align: center;
+}
+.modelo3 .caja .mensaje .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.modelo3 .caja .mensaje p {
+  margin: 5px 30px;
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+  z-index: 100;
+}
+.modelo3 .caja .mensaje .fecha {
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  font-weight: 800;
+  z-index: 100;
+}
+.modelo3 .caja .mensaje .florero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 90%;
+  z-index: 100;
+}
+.modelo3 .caja .mensaje .florero .flor {
+  width: 120px;
+}
+.modelo3 .caja .mensaje .florero .tl {
+  transform: rotateX(180deg);
+}
+.modelo3 .caja .mensaje .florero .tr {
+  transform: rotateY(180deg) rotateX(180deg);
+}
+.modelo3 .caja .mensaje .florero .br {
+  transform: rotateY(180deg);
+  z-index: 100;
+}
+.modelo3 .caja .mensaje .iconos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 100;
+}
+.modelo3 .caja .mensaje .iconos .icono {
+  width: 100px;
+  margin-top: -45px;
+}
+.modelo3 .caja .mensaje .iconos .adorno {
+  width: 110px;
+}
+.modelo3 .caja .mensaje .iconos .tr {
+  transform: rotateY(180deg);
+}
+.modelo3 .caja .mensaje .adorno-bajo {
+  width: 300px;
+  z-index: 100;
+}
+.modelo3 .caja .invitacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+  padding: 20px;
+  color: var(--color-invitacion);
+  text-align: center;
+  position: relative;
+  z-index: 90;
+}
+.modelo3 .caja .invitacion .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  object-fit: cover;
+}
+.modelo3 .caja .invitacion .sombra {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.modelo3 .caja .invitacion .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  height: 100%;
+}
+.modelo3 .caja .invitacion .contenedor .contenido {
+  margin-top: -20px;
+}
+.modelo3 .caja .invitacion .contenedor .fecha {
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  font-weight: 800;
+  transition: 0.3s linear;
+  color: transparent;
+  background-image: linear-gradient(to right, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(180, 159, 105), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));
+  background-size: 200%;
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  animation: move 20s linear infinite;
+}
+@keyframes move {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+.modelo3 .caja .invitacion .contenedor .direccion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.modelo3 .caja .invitacion .contenedor .direccion p {
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+}
+.modelo3 .caja .invitacion .contenedor .contador {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.modelo3 .caja .invitacion .contenedor .contador .tiempo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 8px;
+  padding: 10px;
+  width: 60px;
+}
+.modelo3 .caja .invitacion .contenedor .contador .tiempo span {
+  font-family: var(--font-second);
+  font-size: 15PX;
+}
+.modelo3 .caja .invitacion .contenedor .contador .tiempo .segundero {
+  font-size: var(--font-second-size);
+}
+.modelo3 .caja .frases {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  height: 110vh;
+}
+.modelo3 .caja .frases .fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modelo3 .caja .frases .adorno {
+  width: 300px;
+  z-index: 100;
+}
+.modelo3 .caja .frases .frase {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  z-index: 100;
+}
+.modelo3 .caja .frases .frase .titulo {
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  font-weight: 800;
+  color: #900020;
+  z-index: 100;
+}
+.modelo3 .caja .frases .frase .contenido {
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+}
+.modelo3 .caja .padres {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  z-index: 100;
+  background-color: whitesmoke;
+  color: var(--contenido-padres);
+  height: 80vh;
+  width: 100%;
+  text-align: center;
+}
+.modelo3 .caja .padres .titulo {
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  font-weight: 800;
+  margin-top: -15px;
+  z-index: 100;
+  background: var(--color-padres);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: anim 4s linear alternate infinite;
+}
+.modelo3 .caja .padres .titulo-mama {
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  font-weight: 800;
+  margin-top: -15px;
+  z-index: 100;
+  background: var(--color-padres);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: anim 4s linear alternate infinite;
+}
+@keyframes anim {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 440px;
+  }
+}
+.modelo3 .caja .padres .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+  width: 90%;
+  z-index: 100;
+}
+.modelo3 .caja .padres .contenedor span img {
+  width: 25px;
+}
+.modelo3 .caja .padres .contenedor .padre {
+  font-weight: 800;
+}
+.modelo3 .caja .padres .contenedor .mama {
+  margin-top: -35px;
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+}
+.modelo3 .caja .padres .colgante {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 175px;
+  z-index: 90;
+}
+.modelo3 .caja .padres .pie {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 175px;
+  z-index: 90;
+}
+.modelo3 .caja .padres .transicion {
+  width: 200px;
+  z-index: 100;
+}
+.modelo3 .caja .padres .fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+}
+.modelo3 .caja .padres .iconos .icono {
+  width: 110px;
+  animation: rotar 8s linear infinite;
+}
+.modelo3 .caja .padres .iconos .top {
+  position: absolute;
+  z-index: 80;
+  top: 10px;
+  left: 10px;
+}
+.modelo3 .caja .padres .iconos .bttm {
+  position: absolute;
+  z-index: 80;
+  bottom: 10px;
+  right: 10px;
+}
+@keyframes rotar {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.modelo3 .caja .xv {
+  height: 70vh;
+}
+.modelo3 .caja .padrinos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  z-index: 100;
+  background-color: #fff;
+}
+.modelo3 .caja .padrinos .titulo {
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--color-padit);
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 100;
+}
+.modelo3 .caja .padrinos .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.modelo3 .caja .padrinos .swiper {
+  width: 100%;
+  height: 70vh;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0);
+}
+.modelo3 .caja .padrinos .swiper .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+  margin-top: -40px;
+  height: 350px;
+  width: 270px;
+  border: 2px solid var(--color-padit);
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  color: black;
+}
+.modelo3 .caja .padrinos .swiper .contenedor .icono {
+  width: 80px;
+  height: 80px;
+}
+.modelo3 .caja .padrinos .swiper .contenedor .accion {
+  font-family: var(--font-main);
+  font-weight: 800;
+  font-size: var(--font-main-size);
+}
+.modelo3 .caja .padrinos .swiper .contenedor .padrino {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modelo3 .caja .padrinos .swiper .aleContenedor {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  color: white;
+}
+.modelo3 .caja .padrinos .swiper-button-next {
+  color: var(--color-padit);
+}
+.modelo3 .caja .padrinos .swiper-button-prev {
+  color: var(--color-padit);
+}
+.modelo3 .caja .padrinos .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0);
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modelo3 .caja .padrinos .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modelo3 .caja .pase {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  background-color: #191970;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 65vh;
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+  text-align: center;
+  color: var(--letras-pase);
+}
+.modelo3 .caja .pase .nin {
+  font-size: var(--font-second-size);
+  width: 200px;
+  z-index: 100;
+}
+.modelo3 .caja .pase .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 40;
+}
+.modelo3 .caja .pase .invitado {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  z-index: 100;
+}
+.modelo3 .caja .pase .invitado .titulo {
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  font-weight: 800;
+}
+.modelo3 .caja .pase .datos {
+  font-size: 30px;
+  z-index: 100;
+}
+.modelo3 .caja .pase .cantidad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 25px;
+  z-index: 100;
+}
+.modelo3 .caja .pase .cantidad .titulo {
+  font-weight: 800;
+}
+.modelo3 .caja .pase .flores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+}
+.modelo3 .caja .pase .flores .petalo {
+  width: 130px;
+}
+.modelo3 .caja .pase .flores .rigth {
+  transform: rotatey(180deg);
+}
+.modelo3 .caja .pase .flores .ant {
+  margin: 0px;
+  animation: aparecerYRotar 10s linear infinite;
+}
+@keyframes aparecerYRotar {
+  0% {
+    transform: translateY(100%) scale(0.1) rotateY(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0) scale(0.8) rotateY(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50%) scale(0.1) rotateY(0deg);
+    opacity: 1;
+  }
+}
+.modelo3 .caja .pase .contenedor-fondo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 90;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+.modelo3 .caja .pase .contenedor-fondo .img {
+  width: 100%;
+  margin-top: 80px;
+  opacity: 0.3;
+}
+.modelo3 .caja .mensajedos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #DD969C;
+  width: 100%;
+  padding: 16px;
+  color: var(--letras-mensaje);
+  text-align: center;
+  position: relative;
+  z-index: 100;
+}
+.modelo3 .caja .mensajedos p {
+  font-family: var(--font-message);
+  font-size: var(--font-message-size);
+  font-weight: 800;
+  margin: 0;
+  z-index: 100;
+}
+.modelo3 .caja .mensajedos .parrafo {
+  margin: 100px 0 70px;
+}
+.modelo3 .caja .mensajedos .florero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  z-index: 100;
+}
+.modelo3 .caja .mensajedos .florero .flor {
+  width: 260px;
+  z-index: 100;
+}
+.modelo3 .caja .mensajedos .adornos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  z-index: 100;
+}
+.modelo3 .caja .mensajedos .adornos .icono {
+  width: 150px;
+  z-index: 100;
+}
+.modelo3 .caja .mensajedos .logo {
+  z-index: 100;
+  margin-top: -40px;
+}
+.modelo3 .caja .mensajedos .logo img {
+  width: 160px;
+}
+.modelo3 .caja .mensajedos .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  object-fit: cover;
+}
+.modelo3 .caja .galeria {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 90vh;
+  padding: 20px 0;
+  position: relative;
+  z-index: 100;
+  background-color: rgb(0, 0, 0);
+}
+.modelo3 .caja .galeria .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+.modelo3 .caja .galeria .titulo {
+  color: var(--color-galeria);
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  font-weight: 800;
+  z-index: 100;
+}
+.modelo3 .caja .galeria .imagen {
+  border: 4px solid var(--color-galeria);
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  z-index: 100;
+}
+.modelo3 .caja .galeria .swiper {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  z-index: 100;
+}
+.modelo3 .caja .galeria .swiper-pagination-bullet-active {
+  background-color: var(--color-galeria);
+}
+.modelo3 .caja .galeria .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modelo3 .caja .galeria .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.modelo3 .caja .ubicacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  background-color: whitesmoke;
+  color: var(--letras-ubicacion);
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 100;
+}
+.modelo3 .caja .ubicacion .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.modelo3 .caja .ubicacion .caja {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  z-index: 100;
+}
+.modelo3 .caja .ubicacion .encabezado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 100;
+}
+.modelo3 .caja .ubicacion .encabezado .titulo {
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  font-weight: 800;
+  margin-top: 35px;
+}
+.modelo3 .caja .ubicacion .encabezado .adorno {
+  width: 250px;
+  margin-top: -45px;
+}
+.modelo3 .caja .ubicacion .lugar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  z-index: 100;
+  margin-bottom: 50px;
+}
+.modelo3 .caja .ubicacion .lugar .establecimiento {
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+  font-weight: 800;
+  z-index: 100;
+}
+.modelo3 .caja .ubicacion .lugar .foto {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid;
+  z-index: 100;
+}
+.modelo3 .caja .ubicacion .lugar .direccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+  z-index: 100;
+}
+.modelo3 .caja .ubicacion .lugar .direccion .nombre {
+  font-size: var(--font-second-size);
+  font-weight: 800;
+}
+.modelo3 .caja .ubicacion button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  background-color: rgb(201, 147, 9);
+  border: none;
+  border-radius: 10px;
+  z-index: 100;
+  width: 180px;
+  height: 50px;
+  padding: 5px;
+  margin: 0 auto;
+}
+.modelo3 .caja .ubicacion button .icono {
+  width: 30px;
+  margin: 0 10px;
+  z-index: 100;
+}
+.modelo3 .caja .ubicacion button .link {
+  margin: auto 0;
+  text-decoration: none;
+  color: black;
+  z-index: 100;
+}
+.modelo3 .caja .ubicacion .modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  z-index: 110;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+}
+.modelo3 .caja .ubicacion .modal .mapa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  width: 320px;
+  height: 60vh;
+  z-index: 100;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.modelo3 .caja .ubicacion .modal .mapa .titulo {
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+}
+.modelo3 .caja .ubicacion .modal .mapa .maps {
+  width: 280px;
+  height: 280px;
+}
+.modelo3 .caja .ubicacion .modal .cerrar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+.modelo3 .caja .ubicacion .modal .cerrar .icono {
+  margin: 0;
+  width: 100%;
+}
+.modelo3 .caja .ubicacion .cerrado {
+  display: none;
+}
+.modelo3 .caja .itinerario {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 70vh;
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
+}
+.modelo3 .caja .itinerario .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.modelo3 .caja .itinerario .titulo {
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--color-padit);
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 100;
+}
+.modelo3 .caja .itinerario .swiper {
+  width: 100%;
+  height: 60vh;
+  z-index: 100;
+}
+.modelo3 .caja .itinerario .swiper .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  font-family: var(--font-second);
+  width: 280px;
+  height: 320px;
+  margin-top: -40px;
+  background-color: #fff;
+  border: 2px solid var(--color-padit);
+  border-radius: 10px;
+}
+.modelo3 .caja .itinerario .swiper .contenedor .icono {
+  width: 95px;
+  height: 95px;
+}
+.modelo3 .caja .itinerario .swiper .contenedor .accion {
+  font-family: var(--font-main);
+  font-weight: 800;
+  font-size: var(--font-main-size);
+}
+.modelo3 .caja .itinerario .swiper .contenedor .hora {
+  font-size: var(--font-second-size);
+}
+.modelo3 .caja .itinerario .swiper-button-next {
+  color: var(--color-padit);
+}
+.modelo3 .caja .itinerario .swiper-button-prev {
+  color: var(--color-padit);
+}
+.modelo3 .caja .itinerario .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0);
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modelo3 .caja .itinerario .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modelo3 .caja .itLineal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  z-index: 100;
+}
+.modelo3 .caja .itLineal .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.modelo3 .caja .itLineal .titulo {
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--color-padit);
+  margin-top: 20px;
+  margin-bottom: 0px;
+  z-index: 100;
+}
+.modelo3 .caja .itLineal .contenido {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  z-index: 80;
+}
+.modelo3 .caja .itLineal .contenido .contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0px;
+}
+.modelo3 .caja .itLineal .contenido .contenedor .icono {
+  width: 70px;
+  border-radius: 50%;
+}
+.modelo3 .caja .itLineal .contenido .contenedor .datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 175px;
+  margin-left: 10px;
+}
+.modelo3 .caja .itLineal .contenido .contenedor .datos span {
+  font-family: var(--font-second);
+  font-size: 15px;
+}
+.modelo3 .caja .frase3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  z-index: 100;
+  color: white;
+}
+.modelo3 .caja .frase3 .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  object-fit: cover;
+}
+.modelo3 .caja .frase3 .sombra {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+}
+.modelo3 .caja .frase3 .frase {
+  font-family: var(--font-message);
+  font-size: var(--font-message-size);
+  font-weight: 800;
+  padding: 15px;
+  padding-left: 20px;
+  z-index: 100;
+}
+.modelo3 .caja .mesa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 90;
+  text-align: center;
+  color: var(--color-mesa);
+  background-color: #DD969C;
+}
+.modelo3 .caja .mesa .titulo {
+  font-size: var(--font-main-size);
+  font-weight: 800;
+  font-family: var(--font-main);
+  margin-top: 30px;
+  z-index: 100;
+}
+.modelo3 .caja .mesa .gracias {
+  padding: 15px;
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+  z-index: 100;
+}
+.modelo3 .caja .mesa .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+.modelo3 .caja .mesa .regalo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  width: 90%;
+  z-index: 100;
+  padding: 15px;
+  margin: 20px 5px;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+.modelo3 .caja .mesa .regalo .icono {
+  width: 300px;
+  margin-bottom: 30px;
+}
+.modelo3 .caja .mesa .regalo .codigo {
+  color: var(--color-mesa);
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+}
+.modelo3 .caja .mesa .regalo .anuncio {
+  color: var(--color-mesa);
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+  width: 280px;
+}
+.modelo3 .caja .mesa .flores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  z-index: 50;
+  width: 100%;
+}
+.modelo3 .caja .mesa .flores .petalo {
+  width: 130px;
+  opacity: 0.7;
+}
+.modelo3 .caja .mesa .flores .rigth {
+  transform: rotatey(180deg);
+}
+.modelo3 .caja .mesa .flores .ant {
+  margin: 0px;
+  animation: aparecerYRotar 10s linear infinite;
+}
+@keyframes aparecerYRotar {
+  0% {
+    transform: translateY(100%) scale(0.1) rotateY(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0) scale(0.8) rotateY(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50%) scale(0.1) rotateY(0deg);
+    opacity: 1;
+  }
+}
+.modelo3 .caja .vestimenta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+  background-color: #191970;
+  color: var(--letras-vestimenta);
+  width: 100%;
+  padding-bottom: 15px;
+}
+.modelo3 .caja .vestimenta .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.modelo3 .caja .vestimenta .titulo {
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  font-weight: 800;
+  margin-top: 20px;
+  z-index: 100;
+}
+.modelo3 .caja .vestimenta .efecto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  z-index: 100;
+  width: 95%;
+  margin-top: -50px;
+}
+.modelo3 .caja .vestimenta .efecto .icono {
+  width: 120px;
+}
+.modelo3 .caja .vestimenta .efecto .flor {
+  width: 80px;
+}
+.modelo3 .caja .vestimenta .iconos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  z-index: 100;
+  margin: 30px 10px;
+}
+.modelo3 .caja .vestimenta .iconos .icono {
+  width: 170px;
+  padding: 10px;
+}
+.modelo3 .caja .vestimenta .iconosConand {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 100;
+  height: 400px;
+  margin: 15px 10px;
+}
+.modelo3 .caja .vestimenta .iconosConand .icono {
+  width: 170px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid #C99309;
+}
+.modelo3 .caja .vestimenta .flores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  width: 100%;
+}
+.modelo3 .caja .vestimenta .flores .petalo {
+  width: 120px;
+}
+.modelo3 .caja .vestimenta .flores .rigth {
+  transform: rotatey(180deg);
+}
+.modelo3 .caja .vestimenta p {
+  padding: 10px;
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+  z-index: 100;
+}
+.modelo3 .caja .vestimenta .contenedor {
+  z-index: 100;
+}
+.modelo3 .caja .vestimenta .contenedor .img {
+  width: 200px;
+}
+.modelo3 .caja .vestimenta .aviso {
+  font-size: 20px;
+  z-index: 100;
+}
+.modelo3 .caja .collage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  background-color: #FF0090;
+}
+.modelo3 .caja .collage .titulo {
+  color: white;
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  font-weight: 800;
+  margin-top: 20px;
+  z-index: 100;
+}
+.modelo3 .caja .collage .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+.modelo3 .caja .collage .contenedor {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  z-index: 100;
+}
+.modelo3 .caja .collage .contenedor .column {
+  flex: 25%;
+  padding: 3px;
+}
+.modelo3 .caja .collage .contenedor .column .img {
+  width: 100%;
+  margin: 3px 0;
+  border: 2px solid whitesmoke;
+}
+.modelo3 .caja .condiciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  text-align: center;
+}
+.modelo3 .caja .condiciones .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.modelo3 .caja .condiciones .titulo {
+  font-family: var(--font-main);
+  font-weight: 800;
+  font-size: var(--font-main-size);
+  z-index: 100;
+}
+.modelo3 .caja .condiciones .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin: 10px 0;
+  z-index: 100;
+  border-radius: 10px;
+}
+.modelo3 .caja .condiciones .contenedor .condicion {
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+}
+.modelo3 .caja .condiciones .contenedor .icono {
+  width: 200px;
+}
+.modelo3 .caja .condiciones p {
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+  margin: 15px;
+  z-index: 100;
+}
+.modelo3 .caja .confirmacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  background-color: #DD969C;
+  color: var(--color-confirmar);
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  z-index: 90;
+}
+.modelo3 .caja .confirmacion .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.modelo3 .caja .confirmacion .titulo {
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  font-weight: 800;
+  z-index: 100;
+}
+.modelo3 .caja .confirmacion .confirmar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 15px;
+  font-family: var(--font-second);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  height: 250px;
+  z-index: 100;
+}
+.modelo3 .caja .confirmacion .confirmar p {
+  font-size: var(--font-second-size);
+}
+.modelo3 .caja .confirmacion .confirmar .botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.modelo3 .caja .confirmacion .confirmar .botones button {
+  border: none;
+  border-radius: 10px;
+  width: 110px;
+  height: 47px;
+}
+.modelo3 .caja .confirmacion .confirmar .botones .si {
+  background-color: lightgreen;
+}
+.modelo3 .caja .confirmacion .confirmar .botones .no {
+  background-color: lightcoral;
+}
+.modelo3 .caja .confirmacion .whatsapp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  z-index: 100;
+  margin: 25px 0;
+  padding: 15px;
+  border-radius: 10px;
+}
+.modelo3 .caja .confirmacion .whatsapp p {
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+}
+.modelo3 .caja .confirmacion .whatsapp a .icono {
+  width: 65px;
+}
+.modelo3 .caja .confirmacion .alerta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modelo3 .caja .confirmacion .alerta .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 80%;
+  height: 230px;
+  color: black;
+  padding: 15px;
+}
+.modelo3 .caja .confirmacion .alerta .contenido p {
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+}
+.modelo3 .caja .leo {
+  height: 100vh;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.container-confirmaciones {
+  height: 100%;
+  margin: 25px 10px;
+}
+.container-confirmaciones .mesa {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  margin-top: 70px;
+  padding: 15px;
+  color: #fafbfd;
+}
+.container-confirmaciones .mesa .title-mesa {
+  font-family: "Abel", sans-serif;
+  margin: 5px;
+}
+.container-confirmaciones .mesa .invitado {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Abel", sans-serif;
+  height: 100%;
+  width: 30%;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.container-confirmaciones .mesa .invitado .nombre-inv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container-confirmaciones .mesa .invitado .nombre-inv p {
+  margin: 0px 4px;
+}
+
+@media (max-width: 551px) {
+  .container-confirmaciones {
+    height: 100%;
+    margin: 25px 10px;
+  }
+  .container-confirmaciones .mesa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    margin-top: 70px;
+    color: #fafbfd;
+  }
+  .container-confirmaciones .mesa .title-mesa {
+    margin: 15px 0px;
+  }
+  .container-confirmaciones .mesa .invitado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-confirmaciones .mesa .invitado .nombre-inv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 426px) {
+  .container-confirmaciones {
+    height: 100%;
+    margin: 25px 10px;
+  }
+  .container-confirmaciones .mesa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    margin-top: 70px;
+    color: #fafbfd;
+  }
+  .container-confirmaciones .mesa .title-mesa {
+    margin: 15px 0px;
+  }
+  .container-confirmaciones .mesa .invitado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-confirmaciones .mesa .invitado .nombre-inv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 376px) {
+  .container-confirmaciones {
+    height: 100%;
+    margin: 25px 10px;
+  }
+  .container-confirmaciones .mesa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    margin-top: 70px;
+    color: #fafbfd;
+  }
+  .container-confirmaciones .mesa .title-mesa {
+    margin: 15px 0px;
+  }
+  .container-confirmaciones .mesa .invitado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-confirmaciones .mesa .invitado .nombre-inv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 321px) {
+  .container-confirmaciones {
+    height: 100%;
+    margin: 25px 10px;
+  }
+  .container-confirmaciones .mesa {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    margin-top: 70px;
+    color: #fafbfd;
+  }
+  .container-confirmaciones .mesa .title-mesa {
+    margin: 15px 0px;
+  }
+  .container-confirmaciones .mesa .invitado {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .container-confirmaciones .mesa .invitado .nombre-inv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+.invitados {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 70px;
+}
+.invitados .formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 400px;
+  padding: 12px 10px;
+  margin: 10px 15px;
+  border-radius: 10px;
+  background-color: white;
+  font-family: "Abel", sans-serif;
+}
+.invitados .formulario .titulo {
+  font-size: 26px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.invitados .formulario .abierto {
+  display: block;
+  width: 100%;
+}
+.invitados .formulario .abierto .captura {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  margin-top: 5px;
+}
+.invitados .formulario .abierto .captura .dato {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.invitados .formulario .abierto .captura .dato label {
+  font-size: 17px;
+}
+.invitados .formulario .abierto .captura .enviar {
+  margin-top: 10px;
+  width: 100%;
+  height: 38px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #212529;
+  font-size: 17px;
+}
+.invitados .formulario .cerrado {
+  display: none;
+}
+.invitados .lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 20px 15px;
+  width: 400px;
+  font-family: "Abel", sans-serif;
+  text-align: center;
+}
+.invitados .lista .titulo {
+  font-size: 26px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.invitados .lista .contenido {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 72vh;
+  overflow-y: scroll;
+  margin-top: 15px;
+}
+.invitados .lista .contenido .seccion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  padding: 15px;
+  border-bottom: 1px solid #3e4144;
+}
+.invitados .lista .contenido .seccion .invitado {
+  width: 140px;
+  font-size: 17px;
+}
+.invitados .lista .contenido .seccion .boton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  border-radius: 5px;
+  background-color: lightblue;
+  width: 35px;
+  height: 35px;
+  padding: 7px;
+  margin: 0 2px;
+}
+.invitados .lista .contenido .seccion .boton .icono {
+  width: 100%;
+}
+.invitados .lista .contenido .seccion .copiado {
+  background-color: lightgreen;
+}
+.invitados .lista .contenido .seccion .eliminar {
+  background-color: lightcoral;
+}
+.invitados .lista .contenido .seccion .alerta {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.invitados .lista .contenido .seccion .alerta .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 300px;
+  max-width: 400px;
+  height: 250px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: white;
+}
+.invitados .lista .contenido .seccion .alerta .contenedor .mensaje {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.invitados .lista .contenido .seccion .alerta .contenedor .mensaje span {
+  font-size: 20px;
+}
+.invitados .lista .contenido .seccion .alerta .contenedor .botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.invitados .lista .contenido .seccion .alerta .contenedor .botones .eliminar {
+  background-color: lightcoral;
+  border-style: none;
+  border-radius: 5px;
+  width: 65px;
+  height: 35px;
+  padding: 5px;
+}
+.invitados .lista .contenido .seccion .alerta .contenedor .botones .cancelar {
+  background-color: lightblue;
+  border-style: none;
+  border-radius: 5px;
+  width: 65px;
+  height: 35px;
+  padding: 5px;
+}
+.invitados .lista .cerrado {
+  display: none;
+}
+
+.gestion {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 10px 10px;
+}
+.gestion .mesa {
+  max-width: 350px;
+  min-width: 300px;
+  height: 100%;
+  margin: 25px 15px 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+.gestion .mesa .encabezado {
+  border-bottom: 2px solid lightgrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  font-family: "Abel", sans-serif;
+  font-size: 23px;
+  padding: 15px;
+}
+.gestion .mesa .encabezado .icono {
+  width: 20px;
+  transform: rotate(180deg);
+}
+.gestion .mesa .contenido {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 2px solid lightgray;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+}
+.gestion .mesa .contenido .invitado {
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+.gestion .mesa .contenido .asistencia {
+  margin-bottom: 5px;
+}
+.gestion .mesa .contenido .asistencia .icono {
+  width: 20px;
+}
+.gestion .completa {
+  border: 4px solid lightgreen;
+}
+.gestion .pendiente {
+  border: 4px solid lightblue;
+}
+
+body {
+  background: url("../multimedia/fondos/Invitandoo.svg");
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+body .loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  margin: 40px 5px;
+  background: url("../multimedia/fondos/background.jpg");
+  background-size: cover;
+  color: #3e4144;
+}
+body .loading p {
+  font-family: "Abel", sans-serif;
+  font-size: 28px;
+  margin: 20px;
+}
+body .loading .spin {
+  width: 120px;
+  height: 120px;
+  border-width: 6px;
+}
+body .reproductor .cancion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+}
+body .reproductor .cancion .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  max-width: 400px;
+  min-width: 300px;
+  height: 220px;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+}
+body .reproductor .cancion .contenedor .cerrar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 90;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  transition: 0.3 ease all;
+}
+body .reproductor .cancion .contenedor .cerrar .icono {
+  width: 100%;
+}
+body .reproductor .cancion .contenedor .cerrar:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+body .reproductor .cancion .contenedor .contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  width: 100%;
+}
+body .reproductor .cancion .contenedor .contenido p {
+  font-size: 25px;
+}
+body .reproductor .cancion .contenedor .contenido .controles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+body .reproductor .cancion .contenedor .contenido .controles .progreso {
+  width: 70%;
+}
+body .reproductor .cancion .contenedor .contenido .controles .progreso input[type=range] {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #aaaaaa;
+  border-radius: 5px;
+  height: 3px; /* Añadir altura a la barra */
+}
+body .reproductor .cancion .contenedor .contenido .controles .progreso input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  background: #aaaaaa;
+  border-radius: 5px;
+}
+body .reproductor .cancion .contenedor .contenido .controles .progreso input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  background: #000000;
+  border-radius: 5px;
+}
+body .reproductor .cancion .contenedor .contenido .controles .progreso input[type=range]::-ms-track {
+  width: 100%;
+  height: 3px;
+  background: #000000;
+  border-radius: 5px;
+  border: none; /* Ocultar bordes */
+  color: transparent; /* Ocultar thumb en IE */
+}
+body .reproductor .cancion .contenedor .contenido .controles .progreso input[type=range]::-ms-fill-lower {
+  background: #000000;
+  border-radius: 5px;
+}
+body .reproductor .cancion .contenedor .contenido .controles .progreso input[type=range]::-ms-fill-upper {
+  background: #000000;
+  border-radius: 5px;
+}
+body .reproductor .cancion .contenedor .contenido .controles .progreso input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #000000;
+  cursor: pointer;
+  margin-top: -6px; /* Alinear el thumb verticalmente */
+}
+body .reproductor .cancion .contenedor .contenido .controles .progreso input[type=range]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #aeaeae;
+  cursor: pointer;
+}
+body .reproductor .cancion .contenedor .contenido .controles .progreso input[type=range]::-ms-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+body .reproductor .cancion .contenedor .contenido .controles .tiempo-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+body .reproductor .cancion .contenedor .contenido .controles .tiempo-control .play-pause {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  background-color: transparent;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+}
+body .reproductor .cancion .contenedor .contenido .controles .tiempo-control .play-pause .icono {
+  width: 20px;
+}
+body .reproductor .puerta {
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  z-index: 90;
+  width: 50px;
+  height: 50px;
+}
+body .reproductor .puerta .abrir {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: aliceblue;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+body .reproductor .puerta .abrir .icono {
+  width: 25px;
+}
+body .reproductor .cerrado {
+  display: none;
+}
+body .desplazar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 90;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 75px;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  color: white;
+}
+body .desplazar p {
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  margin-bottom: 5PX;
+}
+body .desplazar .icono {
+  width: 18px;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+body .modeloDos {
+  background-size: contain;
+}
+body .modeloDos .fondo {
+  background-size: cover;
+  background-position: center top;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+body .modeloDos .portada {
+  background-size: cover;
+  background-position: center top;
+}
+body .modeloDos .imagen {
+  background-size: cover;
+  background-position: center top;
+}
+body .invitados .fondo {
+  background-image: url("../multimedia/herramientas/invitados.jpg");
+  background-size: cover;
+  background-position: center top;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+body .gestion .fondo {
+  background-image: url("../multimedia/herramientas/editar.jpg");
+  background-size: cover;
+  background-position: center top;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=styles.css.map */
