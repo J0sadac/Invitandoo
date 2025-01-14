@@ -1,4 +1,3 @@
-
 function Portada({ evento, festejado, foto}) {
 
     return (
