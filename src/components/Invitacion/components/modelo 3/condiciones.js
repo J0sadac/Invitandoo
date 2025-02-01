@@ -1,5 +1,5 @@
 import fiesta from '../../../../multimedia/herramientas/fiesta.png';
-// import prohibido from '../../../../multimedia/herramientas/celular prohibido.png';
+import prohibido from '../../../../multimedia/herramientas/celular prohibido.png';
 import bailar from '../../../../multimedia/herramientas/bailar.png';
 import brindar from '../../../../multimedia/herramientas/brindar.png';
 
@@ -17,12 +17,12 @@ function Condiciones ({fondo}) {
                 </p>
                 <img loading='lazy' className="icono" src={fiesta} alt='...' />
             </div>
-            {/* <div className="contenedor shadow-lg">
+            <div className="contenedor shadow-lg">
                 <p className="condicion">
                     Evitar el uso constante del celular.
                 </p>
                 <img className="icono" src={prohibido} alt='...' />
-            </div> */}
+            </div>
             <div className="contenedor shadow-lg">
                 <p className="condicion">
                     ¡Bailar TODA la velada junto a la quinceañera!

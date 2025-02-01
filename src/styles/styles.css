@@ -3013,6 +3013,79 @@
   padding-top: 45px;
   padding-bottom: 45px;
 }
+.modelo3 .caja .timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  z-index: 90;
+  width: 100%;
+}
+.modelo3 .caja .timeline .fondo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+.modelo3 .caja .timeline .titulo {
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  font-weight: 800;
+  margin-top: -5px;
+  margin-bottom: 30px;
+  z-index: 100;
+  color: black;
+}
+.modelo3 .caja .timeline .contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  z-index: 90;
+  margin: 25px 0px;
+  position: relative;
+  view-timeline-name: --reveal;
+  animation-name: show;
+  animation-fill-mode: both;
+  animation-timeline: --reveal;
+  animation-range: entry 5% cover 40%;
+}
+.modelo3 .caja .timeline .contenedor .imagen {
+  width: 130px;
+  border-radius: 10px;
+}
+.modelo3 .caja .timeline .contenedor .icono {
+  width: 120px;
+  margin: 10px 0;
+  position: sticky;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.modelo3 .caja .timeline .contenedor .mensaje {
+  font-family: var(--font-second);
+  font-size: 20px;
+  font-weight: 800;
+  width: 60%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0);
+}
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 10%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
 
 .container-confirmaciones {
   height: 100%;

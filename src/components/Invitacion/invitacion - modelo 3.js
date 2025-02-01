@@ -1,6 +1,7 @@
 import React, { useEffect, lazy, Suspense } from 'react';
 import Mensaje3 from './components/modelo 3/mensaje3';
 import Sobre from './components/modelo 3/sobre';
+import Timeline from './components/modelo 3/timeline';
 
 const Portada = lazy(() => import("./components/modelo 3/portada"));
 const Mensaje = lazy(() => import("./components/modelo 3/mensaje"));
@@ -148,6 +149,12 @@ function Invitaciones({ evento }) {
                             fondo={evento.multimedia.fondos.primero}
                         />
                     )}
+
+                    <Timeline 
+                        fondo={evento.multimedia.fondos.tercero}
+                        timeLine={evento.multimedia.timeLine}
+                    />
+
                     <Ubicacion 
                         evento={evento.evento}
                         fondo={evento.multimedia.fondos.segundo}
