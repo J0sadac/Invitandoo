@@ -20,7 +20,9 @@ function Padres ({evento, datos, fondo, festejado}){
                         <img loading='lazy' className='colgante' src={colgante} alt='...' />
                     ):(<></>)}
                     
-                    <p className='titulo'>Nuestros padres</p>
+                    {festejado !== 'Miguel Ángel & Montserrat' && (
+                        <p className='titulo'>Nuestros padres</p>
+                    )}
                     
                     <div className='contenedor'>
                         <p>Padres de la Novia</p>

@@ -150,10 +150,12 @@ function Invitaciones({ evento }) {
                         />
                     )}
 
-                    <Timeline 
-                        fondo={evento.multimedia.fondos.tercero}
-                        timeLine={evento.multimedia.timeLine}
-                    />
+                    {evento.multimedia.timeline === true && (    
+                        <Timeline 
+                            fondo={evento.multimedia.fondos.tercero}
+                            timeLine={evento.multimedia.timeLine}
+                        />
+                    )}
 
                     <Ubicacion 
                         evento={evento.evento}
@@ -178,8 +180,8 @@ function Invitaciones({ evento }) {
                     {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
                         <Mesa 
                             fondo={evento.multimedia.fondos.primero} 
-                            //regresar a segundo
-                            mesa={evento.mesaDeRegalos[0]}
+                    
+                            mesa={evento.mesaDeRegalos}
                             confirmacion={evento.confirmaciones}
                             festejado={evento.datos.festejado}
                         />   

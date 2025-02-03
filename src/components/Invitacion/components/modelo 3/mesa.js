@@ -18,9 +18,9 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                 <img loading="lazy" className="fondo" src={fondo.url} alt="..." />
             )}
 
-            {mesa.explicacion && (
+            {mesa[0].explicacion && (
                 <p className="gracias">
-                    {mesa.explicacion}
+                    {mesa[0].explicacion}
                 </p>
             )}
 
@@ -47,7 +47,19 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                 </>
             )}
 
-            {mesa?.tarjeta && (
+            {mesa[0]?.codigo && (
+
+                <Link className='regalo' to={`https://mesaderegalos.liverpool.com.mx/milistaderegalos/${mesa[0].codigo}`}>
+                    <div className="contenido">
+                        <img loading="lazy" className='icono' src={liverpool} alt='...' />
+                        <p className='codigo'>{mesa[0].modalidad}: {mesa[0].codigo}</p>
+                    </div>
+
+                    <p className="anuncio">¡Haz click aqui!</p>
+                </Link>
+            )}
+
+            {mesa[1]?.tarjeta && (
                 <>
                     <p className="gracias">
                         O hacer una transferencia bancaria.
@@ -55,7 +67,8 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                     <div className='regalo'>
                         <div className="contenido">
                             <img loading="lazy" className='icono' src={bbva} alt='...' />
-                            <p className='codigo'>Numero de cuenta: {mesa.tarjeta}</p>
+                            <p className='codigo'>Numero de cuenta: {mesa[1].tarjeta}</p>
+                            <p className='codigo'>Nombre del destinatario: {mesa[1].destinatario}</p>
                         </div>
                     </div>
                     <p className="gracias">
@@ -63,18 +76,6 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                         por whatsapp para agradecerte personalmente.
                     </p>
                 </>
-            )}
-
-            {mesa?.codigo && (
-
-                <Link className='regalo' to={`https://mesaderegalos.liverpool.com.mx/milistaderegalos/${mesa.codigo}`}>
-                    <div className="contenido">
-                        <img loading="lazy" className='icono' src={liverpool} alt='...' />
-                        <p className='codigo'>{mesa.modalidad}: {mesa.codigo}</p>
-                    </div>
-
-                    <p className="anuncio">¡Haz click aqui!</p>
-                </Link>
             )}
 
             {mesa?.sears && (

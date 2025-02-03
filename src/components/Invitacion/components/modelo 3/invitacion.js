@@ -71,8 +71,8 @@ function Invitacion({ evento, fondo, dia, lugar, fecha, festejado }) {
         {evento === "XV Años" && (
           <div className="direccion">
             <p>
-              Hay momentos en la vida que imaginamos, soñamos y esperamos, uno
-              de esos momentos ha llegado y lo quiero compartir contigo.
+              Hay momentos en la vida que imaginamos, soñamos y esperamos. ¡Uno
+              de esos momentos ha llegado y lo quiero compartir contigo!
             </p>
           </div>
         )}
