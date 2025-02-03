@@ -150,7 +150,7 @@ function Invitaciones({ evento }) {
                         />
                     )}
 
-                    {evento.multimedia.timeline === true && (    
+                    {evento?.multimedia?.timeline && evento.multimedia.timeline.length > 1 && (
                         <Timeline 
                             fondo={evento.multimedia.fondos.tercero}
                             timeLine={evento.multimedia.timeLine}
