@@ -2190,7 +2190,7 @@
   position: absolute;
   bottom: 15px;
   left: 0;
-  z-index: 100;
+  z-index: 60;
 }
 .modelo3 .caja .mensajedos .adornos .icono {
   width: 150px;
