@@ -7,7 +7,7 @@ import rosas from '../../../../multimedia/herramientas/Flores rosas.gif';
 function Pase ({evento, invitado, fondo, festejado}){
 
     return(
-        <section className={festejado === 'Leonel y Denisse' ? 'pase leo' : 'pase'}>
+        <section className={festejado === 'Leonel y Denisse' ? 'pase leo' : 'pase imprimir'}>
             {fondo?.url && (
                 <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}

@@ -118,7 +118,7 @@ function Invitaciones({ evento }) {
                     />
                     
                     {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (
-                        <Galeria 
+                        <Galeria
                             carousel={evento.multimedia.carousel}
                             fondo={evento.estilos.estilosGaleria.fondo}
                             festejado={evento.datos.festejado}

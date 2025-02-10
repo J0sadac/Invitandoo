@@ -410,6 +410,8 @@ $font-message-size: var(--font-message-size);
                 width: 100%;
                 height: 100%;
 
+                filter: brightness(50%);
+
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -418,17 +420,7 @@ $font-message-size: var(--font-message-size);
                 object-fit: cover;
             }
 
-            .sombra{
-                width: 100%;
-                height: 100%;
-
-                background-color: rgba(0, 0 , 0, .5);
-
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 100;
-            }
+            
 
             .contenedor{
                 display: flex;
@@ -1654,110 +1646,130 @@ $font-message-size: var(--font-message-size);
                 z-index: 100;
             }
 
-            .gracias{
-
-                padding: 15px;
-
-                font-family: $font-second;
-                font-size: $font-second-size;
-
-                z-index: 100;
-            }
-
-            .fondo{
-                width: 100%;
-                height: 100%;
-
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 20;
-            }
-
-            .regalo{
+            .contenido{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
+                justify-content: center;
                 align-items: center;
                 align-content: center;
 
-                width: 90%;
-
-                z-index: 100;
-
-                padding: 15px;
-                margin: 20px 5px;
-
-                text-decoration: none;
-                text-align: center;
-
-                background-color: rgba(255, 255, 255, .1);
-                box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
-                border-radius: 10px;
-                backdrop-filter: blur(5px);
-
-                .icono{
-                    width: 300px;
-                    margin-bottom: 30px;
+                .fondo{
+                    width: 100%;
+                    height: 100%;
+    
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 20;
                 }
 
-                .codigo{
-                    color: var(--color-mesa);
-                    font-family: $font-second;
-                    font-size: $font-second-size;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    align-content: center;
+
+                    z-index: 30;
+
+                    .gracias{
+        
+                        padding: 15px;
+        
+                        font-family: $font-second;
+                        font-size: $font-second-size;
+        
+                        z-index: 100;
+                    }
+                
+        
+                    .regalo{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        align-content: center;
+        
+                        width: 90%;
+        
+                        z-index: 100;
+        
+                        padding: 15px;
+                        margin: 20px 5px;
+        
+                        text-decoration: none;
+                        text-align: center;
+        
+                        background-color: rgba(255, 255, 255, .1);
+                        box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
+                        border-radius: 10px;
+                        backdrop-filter: blur(5px);
+        
+                        .icono{
+                            width: 300px;
+                            margin-bottom: 30px;
+                        }
+        
+                        .codigo{
+                            color: var(--color-mesa);
+                            font-family: $font-second;
+                            font-size: $font-second-size;
+                        }
+        
+                        .anuncio{
+                            color: var(--color-mesa);
+                            font-family: $font-second;
+                            font-size: $font-second-size;
+        
+                            width: 280px;
+                        }
+                    }
+        
+                    .flores{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+        
+                        position: absolute;
+                        bottom: 0;
+                        z-index: 50;
+        
+                        width: 100%;
+        
+                        .petalo{
+                            width: 130px;
+        
+                            opacity: 0.7;
+                        }
+        
+                        .rigth{
+                            transform: rotatey(180deg);
+                        }
+        
+                        .ant{
+                            margin: 0px;
+        
+                            animation: aparecerYRotar 10s linear infinite;
+                        }
+        
+                        @keyframes aparecerYRotar {
+                            0% {
+                                transform: translateY(100%) scale(0.1) rotateY(0deg);
+                                opacity: 1;
+                            }
+                            50% {
+                                transform: translateY(0) scale(0.8) rotateY(180deg);
+                                opacity: 1;
+                            }
+                            100% {
+                                transform: translateY(50%) scale(0.1) rotateY(0deg);
+                                opacity: 1;
+                            }
+                        }
+                    }
                 }
 
-                .anuncio{
-                    color: var(--color-mesa);
-                    font-family: $font-second;
-                    font-size: $font-second-size;
-
-                    width: 280px;
-                }
             }
 
-            .flores{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                position: absolute;
-                bottom: 0;
-                z-index: 50;
-
-                width: 100%;
-
-                .petalo{
-                    width: 130px;
-
-                    opacity: 0.7;
-                }
-
-                .rigth{
-                    transform: rotatey(180deg);
-                }
-
-                .ant{
-                    margin: 0px;
-
-                    animation: aparecerYRotar 10s linear infinite;
-                }
-
-                @keyframes aparecerYRotar {
-                    0% {
-                        transform: translateY(100%) scale(0.1) rotateY(0deg);
-                        opacity: 1;
-                    }
-                    50% {
-                        transform: translateY(0) scale(0.8) rotateY(180deg);
-                        opacity: 1;
-                    }
-                    100% {
-                        transform: translateY(50%) scale(0.1) rotateY(0deg);
-                        opacity: 1;
-                    }
-                }
-            }
         }
 
         .vestimenta{
@@ -2287,4 +2299,82 @@ $font-message-size: var(--font-message-size);
             }
         }
     }
+
 }
+
+@media print {
+    .navbar {
+      display: none !important;
+    }
+
+    .modelo3{
+        margin-top: 0;
+
+        .portada{
+            display: none;
+        }
+
+        .caja{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            margin-top: 0;
+
+            .no-imprimir{
+                display: none;
+            }
+
+            .imprimir{
+                width: 50%;
+                height: 70vh;
+            }
+
+            .mensajedos{
+                height: 30vh;
+            }
+
+            .vestimenta{
+                height: 50vh;
+            }
+
+            .pase{
+                height: 50vh;
+            }
+
+            .itinerario{
+                width: 100%;
+                height: 50vh;
+
+                .swiper{
+                    
+                    .swiper-slide{
+                        flex-shrink: 1;
+                    }
+                }
+            }
+
+            .mesa{
+                width: 100%;
+                height: 100vh;
+
+                .contenido{
+                    flex-direction: row;
+
+                    div{
+                        width: 50%;
+
+                        .regalo{
+
+                            .contenido{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+
+

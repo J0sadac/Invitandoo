@@ -35,7 +35,7 @@ function Confirmacion({ invitadoId, eventoId, fondo, contacto}) {
     };
 
     return (
-        <section className="confirmacion">
+        <section className="confirmacion no-imprimir">
             {fondo?.url && (
                 <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}

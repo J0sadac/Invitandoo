@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 function Galeria({carousel, fondo, festejado}) {
 
   return (
-    <section className={festejado === 'Leonel y Denisse' ? 'galeria leo' : 'galeria'}>
+    <section className={festejado === 'Leonel y Denisse' ? 'galeria leo' : 'galeria no-imprimir'}>
         {fondo && (
             <img loading='lazy' className='fondo' src={fondo} alt='...' />
         )}

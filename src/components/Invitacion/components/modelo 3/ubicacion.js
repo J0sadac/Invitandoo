@@ -15,7 +15,7 @@ const Ubicacion = ({ fondo, ubicacion, mapa }) => {
     };
 
     return (
-        <section className="ubicacion">
+        <section className="ubicacion no-imprimir">
             {fondo?.url && (
                 <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}

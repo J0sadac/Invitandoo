@@ -11,7 +11,7 @@ function Padres ({evento, datos, fondo, festejado}){
     return(
         <>
             {evento === 'Boda' && (
-                <section className={festejado === 'Leonel y Denisse' ? 'padres leo' : 'padres'}>
+                <section className={festejado === 'Leonel y Denisse' ? 'padres leo' : 'padres imprimir'}>
                     {fondo?.url && (
                         <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
                     )}

@@ -34,7 +34,7 @@ function Itinerario ({protocolo, fondo, festejado}) {
                     </div>
                 </section>
             ):(
-                <section className={festejado === 'Leonel y Denisse' ? 'itinerario leo' : 'itinerario'}>
+                <section className={festejado === 'Leonel y Denisse' ? 'itinerario leo' : 'itinerario imprimir'}>
                     {fondo?.url && (
                         <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
                     )}

@@ -34,7 +34,7 @@ import flor from '../../../../multimedia/herramientas/flor central.png';
 function Vestimenta ({fondo, datos, festejado, modo}){
 
     return(
-        <section className='vestimenta'>
+        <section className='vestimenta imprimir'>
             {fondo?.url && (
                 <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}

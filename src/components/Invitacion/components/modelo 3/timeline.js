@@ -3,7 +3,7 @@ import izquierda from '../../../../multimedia/herramientas/flecha izquierda.png'
 
 function Timeline({ fondo, timeLine }) {
     return (
-        <section className="timeline">
+        <section className="timeline no-imprimir">
             <img loading="lazy" className="fondo" src={fondo.url} alt="..." />
 
             <p className="titulo">Nuestra historia</p>
