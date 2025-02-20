@@ -82,6 +82,12 @@ function Pase ({evento, invitado, fondo, festejado}){
                 </p>
             )}
 
+            {festejado === 'Lenny Nadxieli' && (
+                <p className='nin'>
+                    Por favor, es de vital importancia ser puntuales.
+                </p>
+            )}
+
 
             {evento === 'Boda' && (
                 <>
