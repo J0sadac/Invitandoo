@@ -25,7 +25,7 @@ function Pase ({evento, invitado, fondo, festejado}){
             )}
             
 
-            {festejado === 'Ivanna Zoé' ? (
+            {festejado === 'Ivanna Zoé' || festejado === 'Lenny Nadxieli' ? (
                 <>
                 </>
             ):(
