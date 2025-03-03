@@ -6,7 +6,7 @@ function Timeline({ fondo, timeLine }) {
         <section className="timeline no-imprimir">
             <img loading="lazy" className="fondo" src={fondo} alt="..." />
 
-            <p className="titulo">Nuestra historia</p>
+            <p className="titulo">Su historia</p>
 
             {timeLine.map((time, index) => (
                 <div className="contenedor" key={time._id}>
