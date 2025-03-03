@@ -147,6 +147,7 @@ function Invitaciones({ evento }) {
                     {evento.confirmaciones.condiciones === true && (
                         <Condiciones 
                             fondo={evento.multimedia.fondos.primero}
+                            festejado={evento.datos.festejado}
                         />
                     )}
 

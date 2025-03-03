@@ -3,7 +3,9 @@ import prohibido from '../../../../multimedia/herramientas/celular prohibido.png
 import bailar from '../../../../multimedia/herramientas/bailar.png';
 import brindar from '../../../../multimedia/herramientas/brindar.png';
 
-function Condiciones ({fondo}) {
+function Condiciones ({fondo, festejado}) {
+
+    const nombre = festejado.split(" ")[0];
 
     return(
         <section className="condiciones">
@@ -31,7 +33,7 @@ function Condiciones ({fondo}) {
             </div>
             <div className="contenedor shadow-lg">
                 <p className="condicion">
-                    Brindar por la felicidad de Lenny.
+                    Brindar por la felicidad de {nombre}.
                 </p>
                 <img loading='lazy' className="icono" src={brindar} alt='...' />
             </div>
