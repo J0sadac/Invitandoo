@@ -152,7 +152,7 @@ function Invitaciones({ evento }) {
 
                     {evento?.multimedia?.timeLine && evento.multimedia.timeLine.length > 1 && (
                         <Timeline 
-                            fondo={evento.multimedia.fondos.tercero}
+                            fondo={evento.estilos.estilosTimeLine.fondo}
                             timeLine={evento.multimedia.timeLine}
                         />
                     )}

@@ -420,8 +420,6 @@ $font-message-size: var(--font-message-size);
                 object-fit: cover;
             }
 
-            
-
             .contenedor{
                 display: flex;
                 flex-direction: column;
@@ -742,7 +740,7 @@ $font-message-size: var(--font-message-size);
             align-content: center;
 
             width: 100%;
-            height: 70vh;
+            height: 90vh;
 
             position: relative;
             z-index: 100;
@@ -792,7 +790,7 @@ $font-message-size: var(--font-message-size);
 
                     margin-top: -40px;
 
-                    height: 350px;
+                    
                     width: 270px;
 
                     border: 2px solid var(--color-padit);
@@ -818,9 +816,13 @@ $font-message-size: var(--font-message-size);
                         flex-direction: column;
                         justify-content: center;
 
-                        font-family: $font-main;
-                        font-weight: 800;
-                        font-size: 30px;
+                        font-family: $font-second;
+                        font-weight: 400;
+                        font-size: $font-second-size;
+
+                        p{
+                            margin: 0;
+                        }
                     }
                 }
 
@@ -874,7 +876,7 @@ $font-message-size: var(--font-message-size);
             z-index: 100;
 
             width: 100%;
-            height: 65vh;
+            height: 75vh;
 
             font-family: $font-second;
             font-size: $font-second-size;

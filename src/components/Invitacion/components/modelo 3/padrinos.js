@@ -47,11 +47,15 @@ function Padrinos({padrinos, fondo, festejado}) {
                                 <p className='accion'>{pad.de}</p>  
                             )}
                             
-                            <div className='padrino'>
+                            <div className='padrino'> 
                                 {pad.padrino.map((rino, idx) => (
-                                    <span key={idx}>{rino}</span>
+                                    <span key={idx}>
+                                        {rino}
+                                        <p>{idx < pad.padrino.length - 1 && " & "}</p>
+                                    </span>
                                 ))}
                             </div>
+
                     </div>
                 </SwiperSlide>
 
