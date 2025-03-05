@@ -4,6 +4,8 @@ import pie from '../../../../multimedia/herramientas/flor de pie.gif';
 import rip from '../../../../multimedia/herramientas/rip.svg';
 import mascaraTop from '../../../../multimedia/herramientas/mascara veneciaga 2.png';
 import mascaraBttm from '../../../../multimedia/herramientas/mascara veneciaga.png';
+import padres1 from '../../../../multimedia/herramientas/Padres - 01.jpg'
+import padres2 from '../../../../multimedia/herramientas/Padres - 02.jpg'
 //import ripWhite from '../../../../multimedia/herramientas/cruzar.png';
 
 function Padres ({evento, datos, fondo, festejado}){
@@ -76,16 +78,24 @@ function Padres ({evento, datos, fondo, festejado}){
                                 <span className='padre'>{datos.padres[0].mama}</span>
                                 <span className='padre'>&</span>
                                 <span className='padre'>{datos.padres[0].papa}</span>
+                                {festejado === 'Vanya Huerta Ortiz' && (
+                                    <>
+                                        <img className='papa' src={padres2} alt='...' />
+                                    </>
+                                )}
+
                                 {festejado === 'Génesis Kamila Toledo Rincón' && (
                                     <>
                                         <span className='padre'>&</span>
                                         <span className='padre'>Raúl Gomez Gomez</span>
+                    
                                     </>
                                 )}
                                 {festejado === 'Vanya Huerta Ortiz' && (
                                     <>
                                         <span className='padre'>&</span>
                                         <span className='padre'>Jhonatan Alejandro Huerta Constantino <img loading='lazy' src={rip} alt='...' /></span>
+                                        <img className='papa' src={padres1} alt='Papi Jhonatan' />
                                     </>
                                 )}
                             </div>
