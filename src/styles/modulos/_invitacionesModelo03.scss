@@ -578,7 +578,7 @@ $font-message-size: var(--font-message-size);
             background-color: whitesmoke;
             color: var(--contenido-padres);
 
-            height: 140vh !important;
+            max-height: 140vh !important;
             width: 100%;
 
             text-align: center;

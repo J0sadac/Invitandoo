@@ -92,11 +92,11 @@ function Padres ({evento, datos, fondo, festejado}){
                                     </>
                                 )}
                                 {festejado === 'Vanya Huerta Ortiz' && (
-                                    <>
+                                    <div>
                                         <span className='padre'>&</span>
                                         <span className='padre'>Jhonatan Alejandro Huerta Constantino <img loading='lazy' src={rip} alt='...' /></span>
                                         <img className='papa' src={padres1} alt='Papi Jhonatan' />
-                                    </>
+                                    </div>
                                 )}
                             </div>
                         </>
