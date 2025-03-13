@@ -4,6 +4,7 @@ import liverpool from '../../../../multimedia/herramientas/liverpool.png';
 import lluvia from '../../../../multimedia/herramientas/Lluvia de sobres.svg';
 import negros from '../../../../multimedia/herramientas/Lluvia de sobres negros.png';
 import violeta from '../../../../multimedia/herramientas/violeta.png';
+import vino from '../../../../multimedia/herramientas/Sobres vino.png';
 import bbva from '../../../../multimedia/herramientas/BBVA-logo.png';
 import sears from '../../../../multimedia/herramientas/sears.png'
 import antifaz from '../../../../multimedia/herramientas/antifaz veneciaga.png';
@@ -39,6 +40,8 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                                         <img loading="lazy" className='icono' src={negros} alt='...' />
                                     ) : festejado === 'Keila Jozabed' ? (
                                         <img loading="lazy" className='icono' src={violeta} alt='...' />
+                                    ) : festejado === 'Andrea Citalan' ? (
+                                        <img loading="lazy" className='icono' src={vino} alt='...' />
                                     ):(
                                         <img loading="lazy" className='icono' src={lluvia} alt='...' />
                                     )}

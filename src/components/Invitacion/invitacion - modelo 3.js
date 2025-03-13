@@ -137,6 +137,7 @@ function Invitaciones({ evento }) {
                         fondo={evento.multimedia.fondos.segundo}
                         festejado={evento.datos.festejado}
                     />
+
                     {evento.confirmaciones.mensajeUno === true && (
                         <Mensaje 
                             evento={evento.evento}
@@ -144,6 +145,7 @@ function Invitaciones({ evento }) {
                             festejado={evento.datos.festejado}
                         />
                     )}
+
                     {evento.confirmaciones.condiciones === true && (
                         <Condiciones 
                             fondo={evento.multimedia.fondos.primero}
@@ -158,26 +160,21 @@ function Invitaciones({ evento }) {
                         />
                     )}
 
-                    <Ubicacion 
-                        evento={evento.evento}
-                        fondo={evento.multimedia.fondos.segundo}
-                        ubicacion={evento.ubicacion}
-                    />
-
                     {evento?.frase3 && (
                         <Mensaje3
                             img={evento.frase3.img}
                             frase={evento.frase3.frase}
                         />
                     )}
-
-                    {evento?.multimedia?.galeria && evento?.multimedia?.galeria.length > 1 && (
-                        <Collage 
-                            fondo={evento.multimedia.fondos.segundo}
-                            galeria={evento.multimedia.galeria}
-                        />
-                    )}
                     
+
+                    <Ubicacion 
+                        evento={evento.evento}
+                        fondo={evento.multimedia.fondos.segundo}
+                        ubicacion={evento.ubicacion}
+                    />
+
+                   
                     {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
                         <Mesa 
                             fondo={evento.multimedia.fondos.primero} 
@@ -187,6 +184,14 @@ function Invitaciones({ evento }) {
                             festejado={evento.datos.festejado}
                         />   
                     )}
+
+                    {evento?.multimedia?.galeria && evento?.multimedia?.galeria.length > 1 && (
+                        <Collage 
+                            fondo={evento.multimedia.fondos.segundo}
+                            galeria={evento.multimedia.galeria}
+                        />
+                    )}
+
                     <Confirmacion 
                         invitadoId={evento.invitados._id}
                         eventoId={evento._id}
