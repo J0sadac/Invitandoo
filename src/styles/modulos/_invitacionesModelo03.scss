@@ -1637,6 +1637,83 @@ $font-message-size: var(--font-message-size);
                 z-index: 100;
             }
 
+            .compromiso{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                flex-wrap: wrap;
+        
+                width: 90%;
+                height: 40%;
+        
+        
+                position: absolute;
+                z-index: 20;
+        
+                top: 20px;
+        
+                text-align: center;
+        
+                font-family: $Crimson;
+                font-size: 40px;
+                font-weight: 800;
+        
+                color: rgb(255, 255, 255);
+
+                z-index: 90;
+
+                .fecha{
+                    transition: .3s linear;
+                    color: transparent;
+    
+                    background-image: var(--portada-titulo);
+                    background-size: 200%;
+                    background-clip: padding-box;
+                    -webkit-background-clip: text;
+    
+                    animation: move 30s linear infinite;    
+        
+        
+                    @keyframes move {
+                        100%{
+                            background-position: 2000px 0;
+                        }
+                    }
+                }
+
+                .titulo{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+    
+                    font-family: $font-main;
+                    font-size: $font-main-size;
+    
+                    width: 100%;
+    
+                    background-image: var(--portada-contenido);
+                    background-clip: padding-box;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: anim 4s linear alternate infinite;
+                }
+    
+                @keyframes anim {
+                    0%{
+                        background-position: 0;
+                    }
+    
+                    60%{
+                        background-position: 180px;
+                    }
+    
+                    100%{
+                        background-position: 440px;
+                    }
+                }
+            }
         }
 
         .mesa{
@@ -1826,7 +1903,7 @@ $font-message-size: var(--font-message-size);
                 font-size: $font-main-size;
                 font-weight: 800;
 
-                margin-top: 20px;
+                margin-top: 25px;
 
                 z-index: 100;
             }
@@ -1920,7 +1997,7 @@ $font-message-size: var(--font-message-size);
                 z-index: 100;
 
                 .img{
-                    width: 200px;
+                    width: 285px;
                 }
             }
 

@@ -164,6 +164,7 @@ function Invitaciones({ evento }) {
                         <Mensaje3
                             img={evento.frase3.img}
                             frase={evento.frase3.frase}
+                            festejado={evento.datos.festejado}
                         />
                     )}
                     

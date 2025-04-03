@@ -26,6 +26,7 @@ import tonoAzul from '../../../../multimedia/herramientas/tonos azul.png';
 import tonoRojo from '../../../../multimedia/herramientas/tonos rojo.png';
 import tonosHM from '../../../../multimedia/herramientas/tonos hombre y mujer.png';
 import colores from '../../../../multimedia/herramientas/Azul.png';
+import fausto from '../../../../multimedia/herramientas/Colores Fausto.png'
 
 import icono from '../../../../multimedia/herramientas/adorno dorado.gif';
 import iconoDerecho from '../../../../multimedia/herramientas/Detalle Horizontal derecho.gif';
@@ -169,6 +170,12 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                     {festejado === 'Leonel y Denisse' && (
                         <div className="contenedor">
                             <img loading='lazy' className='img' src={tonosHM} alt='...' />
+                        </div>  
+                    )}
+
+                    {festejado === 'Fausto & Yulissa' && (
+                        <div className="contenedor">
+                            <img loading='lazy' className='img' src={fausto} alt='...' />
                         </div>  
                     )}
                 </>

@@ -2619,6 +2619,63 @@
   padding-left: 20px;
   z-index: 100;
 }
+.modelo3 .caja .frase3 .compromiso {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 40%;
+  position: absolute;
+  z-index: 20;
+  top: 20px;
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  z-index: 90;
+}
+.modelo3 .caja .frase3 .compromiso .fecha {
+  transition: 0.3s linear;
+  color: transparent;
+  background-image: var(--portada-titulo);
+  background-size: 200%;
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  animation: move 30s linear infinite;
+}
+@keyframes move {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+.modelo3 .caja .frase3 .compromiso .titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  width: 100%;
+  background-image: var(--portada-contenido);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: anim 4s linear alternate infinite;
+}
+@keyframes anim {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 440px;
+  }
+}
 .modelo3 .caja .mesa {
   display: flex;
   flex-direction: column;
@@ -2759,7 +2816,7 @@
   font-family: var(--font-main);
   font-size: var(--font-main-size);
   font-weight: 800;
-  margin-top: 20px;
+  margin-top: 25px;
   z-index: 100;
 }
 .modelo3 .caja .vestimenta .efecto {
@@ -2826,7 +2883,7 @@
   z-index: 100;
 }
 .modelo3 .caja .vestimenta .contenedor .img {
-  width: 200px;
+  width: 285px;
 }
 .modelo3 .caja .vestimenta .aviso {
   font-size: 20px;
