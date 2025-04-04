@@ -21,8 +21,9 @@ const Desplazar = lazy(() => import("../tools/desplazar"));
 const Frases = lazy(() => import('./components/modelo 3/frase'));
 const Collage = lazy(() => import("./components/modelo 3/collage"));
 const Condiciones = lazy(() => import('./components/modelo 3/condiciones'));
+const MensajeCompromiso = lazy(() => import('./components/modelo 3/mensajeCompromiso'));
 
-function Invitaciones({ evento }) {
+function Invitaciones({ evento, festejado }) {
     useEffect(() => {
         if (evento.estilos) {
             const styles = evento.estilos;
@@ -76,6 +77,15 @@ function Invitaciones({ evento }) {
                 )}
                 <Desplazar />
                 <div className="caja">
+                    
+                    {festejado === 'Fausto & Yulissa' && (
+                        <MensajeCompromiso 
+                            img={evento.frase3.img}
+                            frase={evento.frase3.frase}
+                            festejado={evento.datos.festejado}
+                        />
+                    )}
+                    
                     <MensajeDos 
                         evento={evento.evento}
                         fondo={evento.multimedia.fondos.tercero}
@@ -160,7 +170,7 @@ function Invitaciones({ evento }) {
                         />
                     )}
 
-                    {evento?.frase3 && (
+                    {evento?.frase3?.frase && (
                         <Mensaje3
                             img={evento.frase3.img}
                             frase={evento.frase3.frase}

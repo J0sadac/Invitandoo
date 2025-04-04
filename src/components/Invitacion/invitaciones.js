@@ -41,6 +41,7 @@ function Invitaciones (){
             ) : evento?.modelo === 3 ? (
                 <Modelo3 
                     evento = {evento}
+                    festejado={evento.datos.festejado}
                 />
             ) : (
                 <div className='loading'>

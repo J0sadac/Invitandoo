@@ -8,13 +8,6 @@ function Mensaje3 ({img, frase, festejado}) {
 
             <span className="frase">{frase}</span>
 
-            {festejado === 'Fausto & Yulissa' && (
-                <div className="compromiso">
-                    <span className="titulo">Nuestro compromiso empezo un...</span>
-
-                    <span className="fecha">8 de julio de 2024</span>   
-                </div>
-            )}
         </section>
     )
 }
