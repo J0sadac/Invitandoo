@@ -1,5 +1,5 @@
 //Variables
-$color-main: #170000;
+$color-main: #17000000;
 $color-second: #3e4144;
 $color-font: #3e4144;
 $color-carousel: #ffff;
@@ -11,13 +11,16 @@ $font-second: 'Abel', sans-serif;
 
     .titulo-link{
         text-decoration: none;
-        color: $color-carousel;
+        color: #F6F2E9;
 
         margin-top: 7px;
 
         .titulo{
-            font-family: $font-main;
+            font-family: "DM Serif Display", serif;
+            font-weight: 400;
             font-size: 35px;
+
+            margin-left: 36px;
         }
 
     }

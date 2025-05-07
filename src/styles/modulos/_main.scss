@@ -1,158 +1,766 @@
 //Variables
-$color-main: #212529;
-$color-second: #3e4144;
-$color-font: #3e4144;
-$color-carousel: #ffff;
-$font-main: 'Tangerine', cursive;
-$font-second: 'Abel', sans-serif;
+$color-main: #F6F2E9;
+$color-second: #977A48;
+$color-font: #3D3D3D;
 
-.contenedor-main{
+$font-main: "DM Serif Display", serif;
+$font-second: "DM Sans", sans-serif;
 
-    .contenedor-tarjeta{
+
+.home {
+    background-color: $color-main;
+    text-align: center;
+
+    .portada{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
-        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
 
-        margin-top: 100px;
+        position: relative;
+        z-index: 100;
+
+        width: 100%;
+        height: 100vh;
+
+        .fondo{
+            position: absolute;
+            top: 0;
+        
+            width: 100%;
+            height: 100vh;
+        
+            filter: blur(10px) brightness(0.8);
+            
+            z-index: 50;
+        } 
+        
+        .carousel {
+            position: absolute;
+            z-index: 50;
+            top: 0;
+            left: 50%;
+
+            transform: translateX(-50%);
+           
+            height: 100vh;
     
-        .tarjeta-link{
-            text-decoration: none;
+            overflow: hidden;           
     
-            margin-right: 40px;
-    
-            .portada{
-                height: 200px;
+            .carousel-image {
+                width: 100%;
+                height: 100%;
     
                 object-fit: cover;
-    
             }
+        }
+
+        .informacion{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            position: absolute;
+            z-index: 100;
+            bottom: 58px;
+
+            text-align: left;
+
+            .titulo{
     
-            .tarjeta{
-                width: 250px;
-                margin-top: 40px;
+                font-family: $font-main;
+                font-size: 40px;
+                letter-spacing: 0px;
+    
+                color: $color-main;
+
+                margin-bottom: 15px;
+            }
+
+            .subtitulo{
+                font-family: $font-second;
+                font-size: 16px;
+                color: $color-main;
+
+                margin-bottom: 65px;
+            }
+
+            .contacto{
+                border: 1px solid $color-second;
+                border-radius: 25px;
+
+                width: 163px;
+                height: 50px;
+
+                background-color: $color-second;
+                
+                a{
+                    font-family: $font-second;
+                    font-size: 16px;
+                    color: $color-main;
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+
+    .beneficios{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+
+        padding: 10px;
+        margin-top: 80px;
+        margin-bottom: 50px;
+
+        position: relative;
+
+        .adorno{
+            width: 60px;
+        }
+
+        .contenedor{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 350px;
+
+            .icono{
+                width: 120px;
+                margin-bottom: 20px;
+            }
+
+            .contenido{
+                margin: 23.5px;
+                
+                height: 160px;
+    
+                .encabezado{
+                    font-family: $font-main;
+                    font-size: 32px;
+                    color: $color-font;
+    
+                    margin-bottom: 15px;
+                }
         
-                .descripcion{
+                .parrafo{
+                    font-family: $font-second;
+                    font-size: 16px;
+                    color: $color-second;
+                }
+            }
+        }
+
+        .carousel{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+
+            gap: 20px;
+
+            height: 200px;
+
+            .seccion{
+                width: 314px;
+    
+                .titulo{
+                    font-family: $font-main;
+                    font-size: 18px;
+                    color: $color-second;
+                }
+    
+                .subtitulo{
+                    font-family: $font-second;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: $color-font;
+                }
+    
+                .contenido{
+                    font-family: $font-second;
+                    font-size: 16px;
+                    color: $color-font;
+                }
+    
+                p{
+                    margin-bottom: 13px;
+                }
+
+                .dots {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 20px;
+                  
+                    .dot {
+                      width: 8px;
+                      height: 8px;
+                      margin: 0 5px;
+                      border-radius: 50%;
+                      background-color: #ccc;
+                      cursor: pointer;
+                      transition: background-color 0.3s;
+                  
+                      &.activo {
+                        background-color: $color-second;
+                      }
+                    }
+                }                  
+            }
+
+            button{
+                border: none;
+                background-color: $color-main;
+
+                color: $color-second;
+                font-size: 90px;
+                font-weight: 100;
+            }
+        }
+
+    }
+
+    .paquetes{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+
+        background-color: #1D1D1D;
+
+        padding: 35px;
+
+        position: relative;
+
+        .titulo{
+            font-family: $font-main;
+            font-size: 32px;
+            color: $color-main;
+        }
+
+        .subtitulo{
+            font-family: $font-second;
+            font-family: 16px;
+            color: $color-main;
+
+            width: 314px;
+        }
+
+        .icono{
+            width: 16px;
+            margin: 20px 0;
+        }
+
+        .packs{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+
+            width: 100%;
+            margin-bottom: 20px;
+
+            .contenedor{
+                background-color: #F5F2E91A;
+    
+                width: 318px;
+                height: 515px;
+    
+                padding: 37px 22px 10px;
+                margin-bottom: 20px;
+    
+                .encabezado{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+    
+                    margin-bottom: 20px;
+    
+                    border-bottom: 1px solid #F5F2E9;
+    
+                    .paquete{
+                        font-family: $font-main;
+                        font-size: 20px;
+                        color: $color-second;
+                    }
+    
+                    .precio{
+                        font-family: $font-main;
+                        font-style: italic;
+                        font-size: 20px;
+                        color: $color-main;
+                    }
+                }
+    
+                .contenido{
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
-
-                    position: relative;
-        
-                    .titulo{
-                        text-align: center;
-                        font-family: $font-main;
-                        font-size: 30px;
-                        font-weight: 600;
-        
-                        color: $color-font;
+    
+                    margin-top: 15px;
+    
+                    text-align: left;
+    
+                    font-family: $font-second;
+                    font-size: 16px;
+                    color: $color-main;
+    
+                    .caracteristicas{
+                        font-weight: 600;  
+                        
+                        margin: 0;
                     }
-        
-                    .contenedor{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
+    
+                    .descripcion{
+                        font-weight: 100;
+                        line-height: 21px;
+    
+                        width: 231px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
 
-                        .texto{
-                            font-family: $font-second;
-                            font-size: 20px;
-                        }
+    }
 
-                        .opcion{
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
+    .inspiracion{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
 
-                            border-style: none;
-                            background-color: #ffff;
-                            
-                            width: 25px;
-                            height: 30px;
-                            padding: 0;
-                            margin-right: -5px;
+        .fondo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
 
-                            img{
-                                width: 70%;
-                            }
-                        }
+            position: relative;
+            z-index: 100;
 
-                        .opciones{
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-evenly;
-                            align-items: center;
+            width: 50%;
+            height: 555px;
 
-                            font-family: $font-second;
+            .img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 50;
 
-                            position: absolute;
-                            right: 35px;
-                            bottom: -15px;
+                width: 100%;
+            }
+    
+            .titulo{
+                font-family: $font-main;
+                font-size: 48px;
+    
+                color: $color-main;
 
-                            border: 1px solid #3e4144;
-                            border-radius: 5px;
-                            background-color: #3e4144;
+                width: 385px;
 
-                            padding: 5px;
-                            padding-left: 15px;
+                z-index: 100;
+            }
+        }
 
-                            width: 130px;
+        .contenedor{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
 
-                            a{
-                                margin: 4px;
-                                width: 100%;
+            width: 50%;
 
-                                color: #ffff;
-                                text-decoration: none;
+            .parrafo{
+                font-family: $font-second;
+                font-size: 16px;
+                color: $color-second;
 
-                                font-size: 19px;
+                width: 275px;
+            }
 
-                                //border-bottom: 1px solid #bdc4cc;
-                            }
-                        }
+            .icono{
+                width: 60px;
+            }
 
-                        .cerrado{
-                            display: none;
-                        }
+            .secciones{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                align-items: center;
+                align-content: center;
+
+                width: 100%;
+
+                .anuncios{
+                    display: none;
+                }
+
+                .vertical{
+                    display: none;
+                }
+
+                .evento{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    .foto{
+                        width: 250px;
+                    }
+
+                    .boton{
+                        border: 1px solid $color-second;
+                        border-radius: 20px;
+
+                        background-color: $color-second;
+                        color: $color-main;
+
+                        width: 143px;
+                        height: 42px;
                     }
                 }
             }
         }
     }
-}
 
-@media (max-width:769px){
-    
-}
+    .planeacion{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
 
-@media (max-width:551px){
-    .contenedor-main{
+        background-color: #1D1D1D;
+        color: $color-main;
 
-        .contenedor-tarjeta{
+        padding: 25px 10px;
+        gap: 30px;
 
-            .tarjeta-link{
-                margin-right: 0px;
-                margin-bottom: 20px;
+        .titulo{
+            font-family: $font-main;
+            font-size: 32px;
+        }
+
+        .parrafo{
+            font-family: $font-second;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .encabezado{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            width: 314px;
+        }
+
+        .flujo{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: center;
+            justify-content: space-evenly;
+
+            width: 100%;
+            gap: 15px;
+
+            .contenedor{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                align-content: center;
+
+                width: 318px;
+                height: 230px;
+
+                padding: 30px 22px;
+
+                background-color: #F5F2E91A;
             }
+        }
+
+        .contacto{
+            width: 163px;
+            height: 50px;
+
+            border: 1px solid $color-second;
+            border-radius: 35px;
+            background-color: $color-second;
+
+            font-family: $font-second;
+            font-size: 16px;
+            color: $color-main;
+        }
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        background-color: #006061;
+
+        padding: 25px;
+        gap: 30px;
+
+        .contenedor{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+
+            width: 100%;
+
+            .negocio{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                align-content: flex-start;
+    
+                color: $color-main;
+    
+                .logo{
+                    width: 80px;
+                }
+    
+                .logotipo{
+                    font-family: $font-main;
+                    font-size: 42px;
+    
+                    margin: 0;
+                }
+    
+                .eslogan{
+                    font-family: $font-second;
+                    font-size: 20px;
+                }
+            }
+    
+            .indice{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+    
+                .seccion{
+                    font-family: $font-second;
+                    font-size: 18px;
+                    color: $color-main;
+    
+                    margin: 0;
+                }
+            }
+    
+            .contacto{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                .email{
+                    margin-bottom: 15px;
+                    
+                    .texto{
+                        width: 250px;
+                        height: 35px;
+                        padding: 10px;
+
+                        background-color: #F5F2E91A;
+                        border: 1px solid #F5F2E91A;
+                        color: $color-main;
+                        border-radius: 10px;
+
+                        font-family: $font-second;
+                        font-size: 16px;
+                    }
+                }
+    
+                .redes{
+    
+                    .icono{
+                        width: 25px;
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+
+
+        .copi{
+            text-align: left;
+
+            font-family: $font-second;
+            font-size: 10px;
+            font-weight: 300;
+
+            color: $color-main;
         }
     }
 }
 
-@media (max-width:426px){
+@media (max-width: 480px) {
     
-}
+    .home{
 
-@media (max-width:376px){
+        .portada{
+            .carousel{
+                left: 0;
+                transform: none;
+        
+                width: 100%;
+            }
+
+            .informacion{
+                width: 314px;
+            }
+        }
+
+        .beneficios{
+            flex-direction: column;
+
+            margin-top: 50px;
     
-}
+            .icono{
+                width: 80px;
+                margin-bottom: 0;
+            }
 
-@media (max-width:321px){
+            .contenedor{
+                width: 300px;
+            }
 
-    .menu-eventos{
-        width: 100%;
+            .carousel{
+                margin-top: 50px;
+                margin-bottom: 30px;
 
-        h3{
-            font-size: 30px;
+                gap: 8px;
+
+                .seccion{
+                    width: 220px;
+                }
+            }
+    
+        }
+    
+        .inspiracion{
+            flex-direction: column;
+
+            .fondo{
+                width: 100%;
+                height: 320px;
+
+                .titulo{
+                    font-size: 32px;
+                    width: 285px;
+                }
+            }
+
+            .contenedor{
+                width: 100%;
+                padding-top: 15px;
+
+                .secciones{
+                    flex-direction: column;
+                    
+                    margin-bottom: 20px;
+
+                    .evento{
+
+                        .foto{
+                            width: 250px;
+                        }
+                    }
+
+                    .anuncios{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        font-family: $font-second;
+                        font-size: 16px;
+
+                        width: 275px;
+
+                        margin-top: 25px;
+
+                        .encabezado{
+                            font-size: 20px;
+                            font-weight: 600;
+                            
+                            margin: 0;
+                        }
+
+                        .texto{
+                            font-weight: 300;
+                        }
+                    }
+
+                    .vertical{
+                        display: block;
+                        width: 15px;
+
+                        margin: 40px auto 10px;
+                    }
+                }
+            }
+        }
+
+        .footer{
+            padding: 0;
+            gap: 20px;
+
+            .contenedor{
+                flex-direction: column;
+    
+                padding: 33px 36px;
+    
+                gap: 20px;
+    
+                .negocio{
+                    .logo{
+                        width: 50px;
+                    }
+                    .logotipo{
+                        font-size: 24px;
+                    }
+                    .eslogan{
+                        font-size: 12px;
+                    }
+                }
+    
+                .indice{
+                    .seccion{
+                        font-size: 14px;
+                    }
+                }
+    
+                .contacto{
+                    align-items: flex-start;
+                    margin-top: 10px;
+
+                    .icono{
+                        width: 20px;
+                    }
+                }
+            }
         }
     }
 }
