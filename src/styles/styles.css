@@ -1928,7 +1928,6 @@
 .modelo3 {
   position: relative;
   z-index: 150;
-  margin-top: 70px;
 }
 .modelo3 .portada {
   display: flex;
@@ -1953,7 +1952,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   z-index: 20;
-  top: 20px;
+  top: 60px;
   text-align: center;
   font-family: "Crimson Text", serif;
   font-size: 40px;
