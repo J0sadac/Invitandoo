@@ -744,8 +744,6 @@ $font-message-size: var(--font-message-size);
 
         }
 
-        
-
         .padrinos{
             display: flex;
             flex-direction: column;
@@ -890,7 +888,7 @@ $font-message-size: var(--font-message-size);
             z-index: 100;
 
             width: 100%;
-            height: 75vh;
+            height: 85vh;
 
             font-family: $font-second;
             font-size: $font-second-size;
@@ -1397,8 +1395,6 @@ $font-message-size: var(--font-message-size);
         }
 
         .itinerario{
-            height: 70vh;
-
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -1406,7 +1402,7 @@ $font-message-size: var(--font-message-size);
             align-content: center;
 
             width: 100%;
-            height: 70vh;
+            height: 85vh;
 
             background-color: #fff;
 
@@ -1765,6 +1761,7 @@ $font-message-size: var(--font-message-size);
             align-content: center;
 
             width: 100%;
+            height: 90vh;
 
             position: relative;
             z-index: 90;
@@ -1926,6 +1923,7 @@ $font-message-size: var(--font-message-size);
             color: var(--letras-vestimenta);
 
             width: 100%;
+            height: 90vh;
             padding-bottom: 15px;
 
 
@@ -2063,7 +2061,7 @@ $font-message-size: var(--font-message-size);
             background-color: #FF0090;
 
             .titulo{
-                color: white;
+                color: black;
                 font-family: $font-main;
                 font-size: $font-main-size;
                 font-weight: 800;
@@ -2103,7 +2101,7 @@ $font-message-size: var(--font-message-size);
 
                         margin: 3px 0;
 
-                        border: 2px solid whitesmoke;
+                        border: 2px solid rgb(99, 147, 249);
                     }
                 }
 
