@@ -10,7 +10,7 @@ const chunkArray = (array, size) => {
 };
 
 function Collage({ galeria, fondo }) {
-    const chunkedGaleria = chunkArray(galeria, 4);
+    const chunkedGaleria = chunkArray(galeria, 5);
 
     return (
         <section className="collage">
