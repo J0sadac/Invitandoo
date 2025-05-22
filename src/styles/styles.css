@@ -2201,7 +2201,7 @@
 }
 .modelo3 .caja .invitacion .contenedor .fecha {
   font-family: var(--font-main);
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 800;
   transition: 0.3s linear;
   color: transparent;
@@ -3395,7 +3395,7 @@
   background-color: #FF0090;
 }
 .modelo3 .caja .collage .titulo {
-  color: black;
+  color: white;
   font-family: var(--font-main);
   font-size: var(--font-main-size);
   font-weight: 800;
