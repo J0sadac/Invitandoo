@@ -1,4 +1,4 @@
-import React, { useEffect, lazy, Suspense } from 'react';
+import { useEffect, lazy } from 'react';
 import Mensaje3 from './components/modelo 3/mensaje3';
 import Sobre from './components/modelo 3/sobre';
 import Timeline from './components/modelo 3/timeline';
@@ -62,8 +62,7 @@ function Invitaciones({ evento, festejado }) {
     }, [evento.estilos]);
 
     return (
-        <Suspense fallback={<div>Loading...</div>}>
-            <div className="modelo3">
+        <div className="modelo3">
                 <Portada 
                     evento={evento.evento}
                     festejado={evento.datos.festejado}
@@ -211,7 +210,6 @@ function Invitaciones({ evento, festejado }) {
                     />
                 </div>
             </div>
-        </Suspense>
     );
 }
 
