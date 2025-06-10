@@ -50,7 +50,8 @@ function Itinerario ({protocolo, fondo, festejado}) {
                     >
                         {protocolo.map((prot) => (
                             <SwiperSlide key={prot._id}>
-                                <div className='contenedor'>
+                                <div className={festejado === 'Yare Madrid' 
+                                    ? 'contenedor personalizado' : 'contenedor'}>
                                     <img loading='lazy' className='icono' src={prot.icono} alt='...' />
                                     <p className='accion'>{prot.accion}</p>
                                     <p className='hora'>{prot.hora}</p>

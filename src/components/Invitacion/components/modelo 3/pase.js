@@ -113,10 +113,14 @@ function Pase ({evento, invitado, fondo, festejado}){
             )}
 
             {evento === 'XV Años' && (
-                <div className="flores">
-                    <img loading='lazy' className='petalo left' src={amarillas} alt='...' />
-                    <img loading='lazy' className='petalo rigth' src={amarillas} alt='...' />
-                </div>
+                <>
+                    {festejado !== 'Yare Madrid' && (
+                        <div className="flores">
+                            <img loading='lazy' className='petalo left' src={amarillas} alt='...' />
+                            <img loading='lazy' className='petalo rigth' src={amarillas} alt='...' />
+                        </div>
+                    )}
+                </>
             )}
         </section>
     );

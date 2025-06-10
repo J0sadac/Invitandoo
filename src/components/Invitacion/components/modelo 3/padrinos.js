@@ -28,8 +28,9 @@ function Padrinos({padrinos, fondo, festejado}) {
             {padrinos.map((pad) => (
                 <SwiperSlide key={pad._id}>
                     <div className={festejado === 'Alejandra & Alexander' || 
-                        festejado === 'Ivanna Zoé Montejo Carballo' 
-                        ? 'contenedor aleContenedor' : 'contenedor'}>
+                        festejado === 'Ivanna Zoé Montejo Carballo' ||
+                        festejado === 'Yare Madrid' 
+                        ? 'contenedor personalizado' : 'contenedor'}>
 
                             {festejado === 'Ivanna Zoé Montejo Carballo' ? (
                                 <>
