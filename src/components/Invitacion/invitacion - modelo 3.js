@@ -68,13 +68,17 @@ function Invitaciones({ evento, festejado }) {
                     festejado={evento.datos.festejado}
                     foto={evento.multimedia.portada[0]}
                 />
+
                 <Cancion 
                     url={evento.multimedia.cancion.url}
                 />
+
                 {evento.datos.festejado === 'Consuelo & Andrés' && (
                     <Sobre />
                 )}
+
                 <Desplazar />
+
                 <div className="caja">
                     
                     {festejado === 'Fausto & Yulissa' && (
@@ -91,12 +95,14 @@ function Invitaciones({ evento, festejado }) {
                         festejado={evento.datos.festejado}
                         frases={evento.frases}
                     />
+
                     <Padres 
                         evento={evento.evento}
                         datos={evento.datos}
                         festejado={evento.datos.festejado}
                         fondo={evento.multimedia.fondos.segundo}
                     />
+                    
                     <Invitacion 
                         fondo={evento.estilos.estilosInvitacion.fondo}
                         dia={evento.datos.dia}
@@ -209,7 +215,7 @@ function Invitaciones({ evento, festejado }) {
                         contacto={evento.datos.contacto}
                     />
                 </div>
-            </div>
+        </div>
     );
 }
 

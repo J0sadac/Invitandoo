@@ -2369,8 +2369,8 @@
 }
 .modelo3 .caja .padres .contenedor .mama {
   margin-top: -35px;
-  font-family: var(--font-main);
-  font-size: var(--font-main-size);
+  font-family: var(--font-second);
+  font-size: 30px;
 }
 .modelo3 .caja .padres .colgante {
   position: absolute;
