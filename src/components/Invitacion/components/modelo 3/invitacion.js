@@ -103,7 +103,7 @@ function Invitacion({ evento, fondo, dia, lugar, fecha, festejado }) {
                   </div>
                   <div className="tiempo shadow">
                       <span className="segundero">{timer.minutes}</span>
-                      <span>MNTS</span>
+                      <span>MIN</span>
                   </div>
                   <div className="tiempo shadow">
                       <span className="segundero">{timer.seconds}</span>
