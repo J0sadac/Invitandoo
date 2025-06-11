@@ -2362,10 +2362,12 @@
 }
 .modelo3 .caja .padres .contenedor .papa {
   position: relative;
-  margin: 12px 5px;
+  margin: 0px 5px;
   width: 200px;
   border-radius: 10px;
   border: 2px solid black;
+  font-family: var(--font-second);
+  font-size: 30px;
 }
 .modelo3 .caja .padres .contenedor .mama {
   margin-top: -35px;

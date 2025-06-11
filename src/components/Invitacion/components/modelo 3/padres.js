@@ -109,6 +109,18 @@ function Padres ({evento, datos, fondo, festejado}){
                         </>
                     )}
 
+                    {festejado === 'Xamira Escobar Franco' && (
+                        <>
+                           <p className='titulo-mama'>Y mis hermanos</p> 
+
+                           <div className='contenedor'>
+                                <span className='papa'>Juan Carlos Escobar Franco</span>
+                                <span className='papa'>&</span>
+                                <span className='papa'>Jose Alexander Lopez Franco</span>
+                            </div>
+                        </>
+                    )}
+
                     {festejado === 'Danna Paola Huerta' ? (
                         <div className='iconos'>
                             <img loading='lazy' className='icono top' src={mascaraTop} alt='...' />
