@@ -68,7 +68,7 @@ function Portada(){
                 </h2>
                 <button className='contacto'>
                     <a
-                        href="https://wa.me/529615876932?text=Hola,%2C%20estoy%20interesado%20en%20tus%20invitaciones%20digitales."
+                        href="https://wa.me/529615876932?text=¿Me%20puedes%20proporcionar%20mas%20información%20de%20las%20invitaciones%20digitales?"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

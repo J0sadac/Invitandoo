@@ -9,8 +9,9 @@ import xv from '../icons/invitacion xv.png';
 function Inspiracion(){
     const navigate = useNavigate();
 
-    const changePage = () =>{
-        navigate('/eventos/clase')
+    const changePage = (ruta) =>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        navigate(`/inspiracion/${ruta}`)
     };
 
     return(
@@ -40,7 +41,7 @@ function Inspiracion(){
                     </div>
                     <div className='evento'>
                         <img className='foto' src={boda} alt='invitacion boda' />
-                        <button onClick={changePage} className='boton'>Boda</button>
+                        <button onClick={() => changePage('boda')} className='boton'>Boda</button>
                     </div>
 
                     <img className='vertical' src={vtcl} alt='icono vertical' />
@@ -55,7 +56,7 @@ function Inspiracion(){
 
                     <div className='evento'>
                         <img className='foto' src={xv} alt='invitacion XV años' />
-                        <button onClick={changePage} className='boton'>XV Años</button>
+                        <button onClick={() => changePage('xv')} className='boton'>XV Años</button>
                     </div>
                 </div>
             </div>

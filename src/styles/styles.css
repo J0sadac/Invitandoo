@@ -4156,6 +4156,11 @@
   scrollbar-width: none;
 }
 
+@media (max-width: 480px) {
+  .inspiracion .ejemplos .galeria {
+    width: 350px;
+  }
+}
 body {
   background-color: #f6f2e9;
   scroll-behavior: smooth;

@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 
 function Boda(){
     const [data, setData] = useState([]);
+    const navigate = useNavigate();
+
+    const changePage = (ruta) =>{
+        navigate(`/inspiracion/${ruta}`)
+    };
 
     useEffect(() => {
         const getEventos = async () => {
@@ -20,13 +26,11 @@ function Boda(){
         getEventos();
     }, []);
 
-    console.log(data);
-
     return(
         <div className="ejemplos">
             <div className="botones">
-                <button>CONTACTANOS</button>
-                <button>XV AÑOS</button>
+                <button>CONTÁCTANOS</button>
+                <button onClick={() => changePage('xv')}>XV AÑOS</button>
             </div>
 
             <div className="anuncio">
@@ -40,13 +44,19 @@ function Boda(){
 
             <div className="galeria">
                 {data.map((dato, index) => (
-                    <div className="invitacion" key={index}>
+                    <div 
+                        className="invitacion" 
+                        key={index}
+                        onClick={() => (
+                            navigate(`/evento/${dato.id}/invitado/${dato.invitado}`)
+                        )}
+                    >
                         <img 
                             className="preportada" 
                             src={dato.multimedia.preportada[0].url} 
                             alt={dato.datos.festejado} 
                         />
-                        
+
                         <p className="festejado">{dato.datos.festejado}</p>
                     </div>
                 ))}

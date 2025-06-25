@@ -1,5 +1,6 @@
+import { Outlet } from 'react-router-dom';
+
 import Footer from '../footer';
-import Boda from './components/boda';
 
 import portada from '../Home/icons/inspiracion.png'
 
@@ -17,7 +18,8 @@ function Inspiracion(){
                     más memorable.
                 </p>
 
-                <Boda />
+                <Outlet />
+
             </section>
         
             <Footer />

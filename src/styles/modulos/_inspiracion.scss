@@ -145,14 +145,22 @@ $font-second: "DM Sans", sans-serif;
                 }
             }
         }
-
         .galeria::-webkit-scrollbar {
             display: none;
         }
-
         .galeria {
             -ms-overflow-style: none;  // IE y Edge
             scrollbar-width: none;     // Firefox
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .inspiracion{
+        .ejemplos{
+            .galeria{
+                width: 350px;
+            }
         }
     }
 }
