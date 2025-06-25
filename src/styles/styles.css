@@ -69,12 +69,14 @@
   font-size: 40px;
   letter-spacing: 0px;
   color: #F6F2E9;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   margin-bottom: 15px;
 }
 .home .portada .informacion .subtitulo {
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   color: #F6F2E9;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   margin-bottom: 65px;
 }
 .home .portada .informacion .contacto {
@@ -400,84 +402,6 @@
   font-size: 16px;
   color: #F6F2E9;
 }
-.home .footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #006061;
-  padding: 25px;
-  gap: 30px;
-}
-.home .footer .contenedor {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  width: 100%;
-}
-.home .footer .contenedor .negocio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  color: #F6F2E9;
-}
-.home .footer .contenedor .negocio .logo {
-  width: 80px;
-}
-.home .footer .contenedor .negocio .logotipo {
-  font-family: "DM Serif Display", serif;
-  font-size: 42px;
-  margin: 0;
-}
-.home .footer .contenedor .negocio .eslogan {
-  font-family: "DM Sans", sans-serif;
-  font-size: 20px;
-}
-.home .footer .contenedor .indice {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.home .footer .contenedor .indice .seccion {
-  font-family: "DM Sans", sans-serif;
-  font-size: 18px;
-  color: #F6F2E9;
-  margin: 0;
-}
-.home .footer .contenedor .contacto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.home .footer .contenedor .contacto .email {
-  margin-bottom: 15px;
-}
-.home .footer .contenedor .contacto .email .texto {
-  width: 250px;
-  height: 35px;
-  padding: 10px;
-  background-color: rgba(245, 242, 233, 0.1019607843);
-  border: 1px solid rgba(245, 242, 233, 0.1019607843);
-  color: #F6F2E9;
-  border-radius: 10px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 16px;
-}
-.home .footer .contenedor .contacto .redes .icono {
-  width: 25px;
-  margin-right: 12px;
-}
-.home .footer .copi {
-  text-align: left;
-  font-family: "DM Sans", sans-serif;
-  font-size: 10px;
-  font-weight: 300;
-  color: #F6F2E9;
-}
 
 @media (max-width: 480px) {
   .home .portada .carousel {
@@ -551,34 +475,6 @@
     display: block;
     width: 15px;
     margin: 40px auto 10px;
-  }
-  .home .footer {
-    padding: 0;
-    gap: 20px;
-  }
-  .home .footer .contenedor {
-    flex-direction: column;
-    padding: 33px 36px;
-    gap: 20px;
-  }
-  .home .footer .contenedor .negocio .logo {
-    width: 50px;
-  }
-  .home .footer .contenedor .negocio .logotipo {
-    font-size: 24px;
-  }
-  .home .footer .contenedor .negocio .eslogan {
-    font-size: 12px;
-  }
-  .home .footer .contenedor .indice .seccion {
-    font-size: 14px;
-  }
-  .home .footer .contenedor .contacto {
-    align-items: flex-start;
-    margin-top: 10px;
-  }
-  .home .footer .contenedor .contacto .icono {
-    width: 20px;
   }
 }
 .container-invitaciones {
@@ -1923,6 +1819,8 @@
   --font-main-size: 55px;
   --font-second-size: 25px;
   --font-message-size: 37px;
+  --font-date-size: 60px;
+  --altura-portada: 65px;
 }
 
 .modelo3 {
@@ -1952,7 +1850,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   z-index: 20;
-  top: 350px;
+  top: var(--altura-portada);
   text-align: center;
   font-family: "Crimson Text", serif;
   font-size: 40px;
@@ -2201,7 +2099,7 @@
 }
 .modelo3 .caja .invitacion .contenedor .fecha {
   font-family: var(--font-main);
-  font-size: 60px;
+  font-size: var(--font-date-size);
   font-weight: 800;
   transition: 0.3s linear;
   color: transparent;
@@ -2301,16 +2199,14 @@
   z-index: 100;
   background-color: whitesmoke;
   color: var(--contenido-padres);
-  max-height: 150vh;
-  min-height: 80vh;
   width: 100%;
+  padding: 15px;
   text-align: center;
 }
 .modelo3 .caja .padres .titulo {
   font-family: var(--font-main);
   font-size: var(--font-main-size);
   font-weight: 800;
-  margin-top: -15px;
   z-index: 100;
   background: var(--color-padres);
   background-clip: padding-box;
@@ -2350,8 +2246,7 @@
   font-family: var(--font-second);
   font-size: var(--font-second-size);
   width: 90%;
-  margin-top: 10px;
-  padding-bottom: 20px;
+  margin: 15px 0;
   z-index: 100;
 }
 .modelo3 .caja .padres .contenedor span img {
@@ -2373,6 +2268,9 @@
   margin-top: -35px;
   font-family: var(--font-second);
   font-size: 30px;
+}
+.modelo3 .caja .padres .contenedor p {
+  font-weight: 800;
 }
 .modelo3 .caja .padres .colgante {
   position: absolute;
@@ -2539,8 +2437,8 @@
   color: var(--letras-pase);
 }
 .modelo3 .caja .pase .nin {
-  font-size: var(--font-second-size);
-  width: 200px;
+  font-size: 20px;
+  width: 350px;
   z-index: 100;
 }
 .modelo3 .caja .pase .fondo {
@@ -2642,12 +2540,12 @@
 .modelo3 .caja .mensajedos p {
   font-family: var(--font-message);
   font-size: var(--font-message-size);
-  font-weight: 800;
+  font-weight: 500;
   margin: 0;
   z-index: 100;
 }
 .modelo3 .caja .mensajedos .parrafo {
-  margin: 100px 0 70px;
+  margin: 40px 0;
 }
 .modelo3 .caja .mensajedos .florero {
   display: flex;
@@ -4149,9 +4047,197 @@
   border: 4px solid lightblue;
 }
 
+.inspiracion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.inspiracion .portada {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.inspiracion .spot {
+  margin-top: 20px;
+  width: 275px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #977A48;
+}
+.inspiracion .ejemplos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.inspiracion .ejemplos .botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 350px;
+}
+.inspiracion .ejemplos .botones button {
+  border: 1px solid #977A48;
+  border-radius: 25px;
+  width: 163px;
+  height: 50px;
+  background-color: #977A48;
+  color: #F6F2E9;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+}
+.inspiracion .ejemplos .anuncio {
+  width: 275px;
+  font-family: "DM Sans", sans-serif;
+  margin-top: 35px;
+}
+.inspiracion .ejemplos .anuncio .encabezado {
+  font-size: 20px;
+  font-weight: 600;
+}
+.inspiracion .ejemplos .anuncio .texto {
+  font-size: 16px;
+}
+.inspiracion .ejemplos .galeria {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-x: scroll;
+  gap: 30px;
+  width: 1310px;
+  height: 550px;
+  padding: 5px 15px;
+  margin-bottom: 30px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.inspiracion .ejemplos .galeria .invitacion {
+  flex: 0 0 auto;
+  position: relative;
+  width: 300px;
+  height: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.inspiracion .ejemplos .galeria .invitacion:hover, .inspiracion .ejemplos .galeria .invitacion:focus-within {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+.inspiracion .ejemplos .galeria .invitacion .preportada {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.inspiracion .ejemplos .galeria .invitacion .festejado {
+  font-family: "DM Serif Display", serif;
+  font-size: 26px;
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+.inspiracion .ejemplos .galeria::-webkit-scrollbar {
+  display: none;
+}
+.inspiracion .ejemplos .galeria {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 body {
   background-color: #f6f2e9;
   scroll-behavior: smooth;
+}
+body .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #006061;
+  padding: 25px;
+  gap: 30px;
+  bottom: 0;
+}
+body .footer .contenedor {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  width: 100%;
+}
+body .footer .contenedor .negocio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  color: #F6F2E9;
+}
+body .footer .contenedor .negocio .logo {
+  width: 80px;
+}
+body .footer .contenedor .negocio .logotipo {
+  font-family: "DM Serif Display", serif;
+  font-size: 42px;
+  margin: 0;
+}
+body .footer .contenedor .negocio .eslogan {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+}
+body .footer .contenedor .indice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+body .footer .contenedor .indice .seccion {
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  color: #F6F2E9;
+  margin: 0;
+}
+body .footer .contenedor .contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+body .footer .contenedor .contacto .email {
+  margin-bottom: 15px;
+}
+body .footer .contenedor .contacto .email .texto {
+  width: 250px;
+  height: 35px;
+  padding: 10px;
+  background-color: rgba(245, 242, 233, 0.1019607843);
+  border: 1px solid rgba(245, 242, 233, 0.1019607843);
+  color: #F6F2E9;
+  border-radius: 10px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+}
+body .footer .contenedor .contacto .redes .icono {
+  width: 25px;
+  margin-right: 12px;
+}
+body .footer .copi {
+  text-align: left;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  color: #F6F2E9;
 }
 body .loading {
   display: flex;
@@ -4167,7 +4253,7 @@ body .loading {
   color: #3e4144;
 }
 body .loading p {
-  font-family: "Abel", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 28px;
   margin: 20px;
 }
@@ -4231,7 +4317,7 @@ body .reproductor .cancion .contenedor .contenido {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  font-family: "Abel", sans-serif;
+  font-family: "DM Sans", sans-serif;
   width: 100%;
 }
 body .reproductor .cancion .contenedor .contenido p {
@@ -4373,7 +4459,7 @@ body .desplazar {
   color: white;
 }
 body .desplazar p {
-  font-family: "Abel", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 20px;
   margin-bottom: 5PX;
 }
@@ -4434,6 +4520,37 @@ body .gestion .fondo {
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+
+@media (max-width: 480px) {
+  body .footer {
+    padding: 0;
+    gap: 20px;
+  }
+  body .footer .contenedor {
+    flex-direction: column;
+    padding: 33px 36px;
+    gap: 20px;
+  }
+  body .footer .contenedor .negocio .logo {
+    width: 50px;
+  }
+  body .footer .contenedor .negocio .logotipo {
+    font-size: 24px;
+  }
+  body .footer .contenedor .negocio .eslogan {
+    font-size: 12px;
+  }
+  body .footer .contenedor .indice .seccion {
+    font-size: 14px;
+  }
+  body .footer .contenedor .contacto {
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  body .footer .contenedor .contacto .icono {
+    width: 20px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

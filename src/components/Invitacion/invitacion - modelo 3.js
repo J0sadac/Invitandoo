@@ -51,6 +51,8 @@ function Invitaciones({ evento, festejado }) {
                     --font-second-size: ${styles.fontSecondSize || "25px"};
                     --font-message: ${styles.fontMessage || "'Tangerine', cursive"};
                     --font-message-size: ${styles.fontMessageSize || "37px"};
+                    --font-date-size: ${styles.fontDateSize || "60px"};
+                    --altura-portada: ${styles.alturaPortada || "65px"};
                 }
             `;
             document.head.appendChild(styleSheet);

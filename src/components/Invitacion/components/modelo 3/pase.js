@@ -82,6 +82,12 @@ function Pase ({evento, invitado, fondo, festejado}){
                 </p>
             )}
 
+            {festejado === 'Bruno & Teresa' && (
+                <p className='nin'>
+                    Ceremonia y Recepción: Solo adultos. Gracias por su comprensión.
+                </p>
+            )}
+
             {festejado === 'Lenny Nadxieli' && (
                 <p className='nin'>
                     Por favor, es de vital importancia ser puntuales.
@@ -103,6 +109,8 @@ function Pase ({evento, invitado, fondo, festejado}){
                             <img loading='lazy' className='petalo left' src={amarillas} alt='...' />
                             <img loading='lazy' className='petalo rigth' src={amarillas} alt='...' />
                         </div>
+                    ): festejado === 'Bruno & Teresa' ?(
+                        <></>
                     ):(
                         <div className="flores">
                             <img loading='lazy' className='petalo left' src={petalos} alt='...' />

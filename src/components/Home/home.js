@@ -1,9 +1,9 @@
-import Portada from "./portada";
-import Beneficios from "./beneficios";
-import Inspiracion from "./inspiracion";
-import Paquete from "./paquetes";
-import Footer from "./footer";
-import Planeacion from "./planeacion";
+import Portada from "./components/portada";
+import Beneficios from "./components/beneficios";
+import Inspiracion from "./components/inspiracion";
+import Paquete from "./components/paquetes";
+import Footer from "../footer";
+import Planeacion from "./components/planeacion";
 
 function Home() {
 

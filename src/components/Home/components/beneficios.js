@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import icono from './icons/Icono invitandoo.png';
-import curva from './icons/curva horizontal.png';
+import icono from '../icons/Icono invitandoo.png';
+import curva from '../icons/curva horizontal.png';
 
 function Beneficios() {
   const beneficios = [

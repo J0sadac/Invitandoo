@@ -1,4 +1,4 @@
-import adorno from './icons/curva vertical.png';
+import adorno from '../icons/curva vertical.png';
 
 function Paquete(){
     const paquete =[

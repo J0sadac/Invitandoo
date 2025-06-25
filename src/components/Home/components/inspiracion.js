@@ -1,10 +1,17 @@
-import img from './icons/inspiracion.png';
-import icono from './icons/curva horizontal.png';
-import vtcl from './icons/curva vertical.png';
-import boda from './icons/invitacion boda.png';
-import xv from './icons/invitacion xv.png';
+import { useNavigate } from 'react-router-dom';
+
+import img from '../icons/inspiracion.png';
+import icono from '../icons/curva horizontal.png';
+import vtcl from '../icons/curva vertical.png';
+import boda from '../icons/invitacion boda.png';
+import xv from '../icons/invitacion xv.png';
 
 function Inspiracion(){
+    const navigate = useNavigate();
+
+    const changePage = () =>{
+        navigate('/eventos/clase')
+    };
 
     return(
         <section className="inspiracion">
@@ -33,7 +40,7 @@ function Inspiracion(){
                     </div>
                     <div className='evento'>
                         <img className='foto' src={boda} alt='invitacion boda' />
-                        <button className='boton'>Boda</button>
+                        <button onClick={changePage} className='boton'>Boda</button>
                     </div>
 
                     <img className='vertical' src={vtcl} alt='icono vertical' />
@@ -48,7 +55,7 @@ function Inspiracion(){
 
                     <div className='evento'>
                         <img className='foto' src={xv} alt='invitacion XV años' />
-                        <button className='boton'>XV Años</button>
+                        <button onClick={changePage} className='boton'>XV Años</button>
                     </div>
                 </div>
             </div>

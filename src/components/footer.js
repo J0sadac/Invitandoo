@@ -1,8 +1,8 @@
-import invitandoo from './icons/Icon Invitandoo.png';
-import facebook from './icons/Icon facebook.png';
-import instagram from './icons/Icon instagram.png';
-import tiktok from './icons/Icon tiktok.png';
-import whatsapp from './icons/Icon whatsapp.png';
+import invitandoo from './Home/icons/Icon Invitandoo.png';
+import facebook from './Home/icons/Icon facebook.png';
+import instagram from './Home/icons/Icon instagram.png';
+import tiktok from './Home/icons/Icon tiktok.png';
+import whatsapp from './Home/icons/Icon whatsapp.png';
 
 function Footer(){
 

@@ -1,23 +1,23 @@
 import { useState, useEffect } from 'react';
 
-import img1 from '../../multimedia/portadas/portada 1.jpg';
-import img2 from '../../multimedia/portadas/portada 2.jpg';
-import img3 from '../../multimedia/portadas/portada 3.jpg';
-import img4 from '../../multimedia/portadas/portada 4.jpg';
-import img5 from '../../multimedia/portadas/portada 5.jpg';
-import img6 from '../../multimedia/portadas/portada 6.jpg';
-import img7 from '../../multimedia/portadas/portada 7.jpg';
-import img8 from '../../multimedia/portadas/portada 8.jpg';
-import img9 from '../../multimedia/portadas/portada 9.jpg';
-import img10 from '../../multimedia/portadas/portada 10.jpg';
-import img11 from '../../multimedia/portadas/portada 11.jpg';
-import img12 from '../../multimedia/portadas/portada 12.jpg';
-import img13 from '../../multimedia/portadas/portada 13.jpg';
-import img14 from '../../multimedia/portadas/portada 14.jpg';
-import img15 from '../../multimedia/portadas/portada 15.jpg';
-import img16 from '../../multimedia/portadas/portada 16.jpg';
-import img17 from '../../multimedia/portadas/portada 17.jpg';
-import img18 from '../../multimedia/portadas/portada 18.jpg';
+import img1 from '../../../multimedia/portadas/portada 1.jpg';
+import img2 from '../../../multimedia/portadas/portada 2.jpg';
+import img3 from '../../../multimedia/portadas/portada 3.jpg';
+import img4 from '../../../multimedia/portadas/portada 4.jpg';
+import img5 from '../../../multimedia/portadas/portada 5.jpg';
+import img6 from '../../../multimedia/portadas/portada 6.jpg';
+import img7 from '../../../multimedia/portadas/portada 7.jpg';
+import img8 from '../../../multimedia/portadas/portada 8.jpg';
+import img9 from '../../../multimedia/portadas/portada 9.jpg';
+import img10 from '../../../multimedia/portadas/portada 10.jpg';
+import img11 from '../../../multimedia/portadas/portada 11.jpg';
+import img12 from '../../../multimedia/portadas/portada 12.jpg';
+import img13 from '../../../multimedia/portadas/portada 13.jpg';
+import img14 from '../../../multimedia/portadas/portada 14.jpg';
+import img15 from '../../../multimedia/portadas/portada 15.jpg';
+import img16 from '../../../multimedia/portadas/portada 16.jpg';
+import img17 from '../../../multimedia/portadas/portada 17.jpg';
+import img18 from '../../../multimedia/portadas/portada 18.jpg';
 
 function Portada(){
 

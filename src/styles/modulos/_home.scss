@@ -74,6 +74,7 @@ $font-second: "DM Sans", sans-serif;
                 letter-spacing: 0px;
     
                 color: $color-main;
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 
                 margin-bottom: 15px;
             }
@@ -81,7 +82,9 @@ $font-second: "DM Sans", sans-serif;
             .subtitulo{
                 font-family: $font-second;
                 font-size: 16px;
+
                 color: $color-main;
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 
                 margin-bottom: 65px;
             }
@@ -508,111 +511,6 @@ $font-second: "DM Sans", sans-serif;
             color: $color-main;
         }
     }
-
-    .footer{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-
-        background-color: #006061;
-
-        padding: 25px;
-        gap: 30px;
-
-        .contenedor{
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-around;
-
-            width: 100%;
-
-            .negocio{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                align-content: flex-start;
-    
-                color: $color-main;
-    
-                .logo{
-                    width: 80px;
-                }
-    
-                .logotipo{
-                    font-family: $font-main;
-                    font-size: 42px;
-    
-                    margin: 0;
-                }
-    
-                .eslogan{
-                    font-family: $font-second;
-                    font-size: 20px;
-                }
-            }
-    
-            .indice{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-    
-                .seccion{
-                    font-family: $font-second;
-                    font-size: 18px;
-                    color: $color-main;
-    
-                    margin: 0;
-                }
-            }
-    
-            .contacto{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-
-                .email{
-                    margin-bottom: 15px;
-                    
-                    .texto{
-                        width: 250px;
-                        height: 35px;
-                        padding: 10px;
-
-                        background-color: #F5F2E91A;
-                        border: 1px solid #F5F2E91A;
-                        color: $color-main;
-                        border-radius: 10px;
-
-                        font-family: $font-second;
-                        font-size: 16px;
-                    }
-                }
-    
-                .redes{
-    
-                    .icono{
-                        width: 25px;
-                        margin-right: 12px;
-                    }
-                }
-            }
-        }
-
-
-        .copi{
-            text-align: left;
-
-            font-family: $font-second;
-            font-size: 10px;
-            font-weight: 300;
-
-            color: $color-main;
-        }
-    }
 }
 
 @media (max-width: 480px) {
@@ -718,46 +616,6 @@ $font-second: "DM Sans", sans-serif;
                         width: 15px;
 
                         margin: 40px auto 10px;
-                    }
-                }
-            }
-        }
-
-        .footer{
-            padding: 0;
-            gap: 20px;
-
-            .contenedor{
-                flex-direction: column;
-    
-                padding: 33px 36px;
-    
-                gap: 20px;
-    
-                .negocio{
-                    .logo{
-                        width: 50px;
-                    }
-                    .logotipo{
-                        font-size: 24px;
-                    }
-                    .eslogan{
-                        font-size: 12px;
-                    }
-                }
-    
-                .indice{
-                    .seccion{
-                        font-size: 14px;
-                    }
-                }
-    
-                .contacto{
-                    align-items: flex-start;
-                    margin-top: 10px;
-
-                    .icono{
-                        width: 20px;
                     }
                 }
             }
