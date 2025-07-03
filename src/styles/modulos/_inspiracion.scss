@@ -98,11 +98,12 @@ $font-second: "DM Sans", sans-serif;
 
             margin-bottom: 30px;
             
-            scroll-snap-type: x mandatory; // 👈 (opcional) para que se "anclen" como slide
+            scroll-snap-type: x mandatory;
+            scroll-padding-left: 15px;
             -webkit-overflow-scrolling: touch; 
 
             .invitacion {
-                flex: 0 0 auto; // 👈 Evita que se estiren
+                flex: 0 0 auto; 
                 
                 position: relative;
                 
@@ -149,8 +150,8 @@ $font-second: "DM Sans", sans-serif;
             display: none;
         }
         .galeria {
-            -ms-overflow-style: none;  // IE y Edge
-            scrollbar-width: none;     // Firefox
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
     }
 }

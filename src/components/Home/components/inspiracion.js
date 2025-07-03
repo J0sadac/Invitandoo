@@ -10,7 +10,7 @@ function Inspiracion(){
     const navigate = useNavigate();
 
     const changePage = (ruta) =>{
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 600, behavior: 'smooth' });
         navigate(`/inspiracion/${ruta}`)
     };
 

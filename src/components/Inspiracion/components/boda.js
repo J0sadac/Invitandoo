@@ -8,6 +8,7 @@ function Boda(){
     const navigate = useNavigate();
 
     const changePage = (ruta) =>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         navigate(`/inspiracion/${ruta}`)
     };
 
