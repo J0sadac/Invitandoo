@@ -2467,6 +2467,7 @@
 .modelo3 .caja .pase .nin {
   font-family: var(--font-main);
   font-size: 37px;
+  font-weight: 800;
   width: 350px;
   z-index: 100;
 }
