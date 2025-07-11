@@ -21,6 +21,9 @@ function Pase ({evento, invitado, fondo, festejado}){
                 <div className="invitado">
                     <span className="titulo">Invitado:</span>
                     <span>{invitado.invitado}</span>
+                    {invitado?.titulo && (
+                        <span>{invitado.titulo}</span>
+                    )}
                 </div>
             )}
             
