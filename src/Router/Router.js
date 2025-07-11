@@ -6,7 +6,7 @@ import Invitaciones from '../components/Invitacion/invitaciones';
 //Eliminar de aqui
 import Invitados from '../components/Administrar/components/invitados/invitados';
 import Administrar from '../components/Administrar/components/datos/evento';
-import NavBar from '../components/navbar';
+import NavBar from '../components/tools/navbar';
 //hasta aqui
 
 import Inspiracion from '../components/Inspiracion/inspiracion';
