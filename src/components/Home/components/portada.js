@@ -44,7 +44,7 @@ function Portada(){
     };
 
     return(
-        <section className='portada'>
+        <section id='portada' className='portada'>
             <img
                 src={images[index]}
                 alt={`slide ${index + 1}`}

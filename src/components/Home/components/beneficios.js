@@ -36,7 +36,7 @@ function Beneficios() {
   const anterior = () => setIndex((index - 1 + beneficios.length) % beneficios.length);
 
   return (
-    <section className="beneficios">
+    <section id='beneficios' className="beneficios">
         <div className='contenedor'>
             <img src={icono} className='icono' alt="Invitandoo" />
 

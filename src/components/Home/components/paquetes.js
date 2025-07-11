@@ -75,7 +75,7 @@ function Paquete(){
     ]
 
     return(
-        <section className="paquetes">
+        <section id='paquetes' className="paquetes">
             <h2 className="titulo">Paquetes</h2>
             <p className="subtitulo">Encuentra el paquete se que adapte a tu evento. Hagamos especial tu gran dia.</p>
 

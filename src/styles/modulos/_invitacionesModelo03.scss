@@ -901,7 +901,8 @@ $font-date-size: var(--font-date-size);
             color: var(--letras-pase);
 
             .nin{
-                font-size: 20px;
+                font-family: $font-main;
+                font-size: 37px;
                 width: 350px;
 
                 z-index: 100;
@@ -1595,7 +1596,7 @@ $font-date-size: var(--font-date-size);
             }
         }
 
-        .frase3{
+        .pensamiento{
             display: flex;
             flex-direction: column;
             justify-content: center;

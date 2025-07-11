@@ -21,7 +21,7 @@ function Planeacion(){
       ];
 
     return(
-        <section className="planeacion">
+        <section id="planeacion" className="planeacion">
             <div className="encabezado">
                 <h2 className="titulo">¿Cómo trabajamos?</h2>
                 <p className="parrafo">

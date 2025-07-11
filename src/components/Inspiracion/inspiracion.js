@@ -9,7 +9,7 @@ function Inspiracion(){
 
     return(
         <>
-            <section className="inspiracion">
+            <section id='invitaciones' className="inspiracion">
                 <img className='portada' src={portada} alt='inspiracion' />
                            
                 <p className='spot'>

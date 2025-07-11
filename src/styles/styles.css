@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .contenedor-navbar {
-  background-color: rgba(23, 0, 0, 0) !important;
+  background-color: rgba(0, 0, 0, 0) !important;
 }
 .contenedor-navbar .titulo-link {
   text-decoration: none;
@@ -14,8 +14,36 @@
   margin-left: 36px;
 }
 .contenedor-navbar .links {
-  font-family: "Abel", sans-serif;
-  color: white;
+  font-family: "DM Sans", sans-serif;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  z-index: 100;
+  height: 70px;
+  padding: 10px;
+}
+.navbar .titulo {
+  font-family: "DM Serif Display", serif;
+  font-size: 35px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.claro {
+  color: #F6F2E9;
+}
+
+.oscuro {
+  color: black;
+}
+
+.secundario {
+  color: #977A48;
 }
 
 .home {
@@ -29,7 +57,7 @@
   align-items: center;
   align-content: center;
   position: relative;
-  z-index: 100;
+  z-index: 99;
   width: 100%;
   height: 100vh;
 }
@@ -279,7 +307,7 @@
   align-items: center;
   align-content: center;
   position: relative;
-  z-index: 100;
+  z-index: 99;
   width: 50%;
   height: 555px;
 }
@@ -2437,7 +2465,8 @@
   color: var(--letras-pase);
 }
 .modelo3 .caja .pase .nin {
-  font-size: 20px;
+  font-family: var(--font-main);
+  font-size: 37px;
   width: 350px;
   z-index: 100;
 }
@@ -2953,7 +2982,7 @@
   font-family: var(--font-second);
   font-size: 15px;
 }
-.modelo3 .caja .frase3 {
+.modelo3 .caja .pensamiento {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2964,7 +2993,7 @@
   z-index: 100;
   color: white;
 }
-.modelo3 .caja .frase3 .fondo {
+.modelo3 .caja .pensamiento .fondo {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -2973,7 +3002,7 @@
   z-index: 20;
   object-fit: cover;
 }
-.modelo3 .caja .frase3 .sombra {
+.modelo3 .caja .pensamiento .sombra {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -2982,7 +3011,7 @@
   left: 0;
   z-index: 90;
 }
-.modelo3 .caja .frase3 .frase {
+.modelo3 .caja .pensamiento .frase {
   font-family: var(--font-message);
   font-size: var(--font-message-size);
   font-weight: 800;
@@ -3625,6 +3654,125 @@
     width: 100%;
   }
 }
+.inspiracion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.inspiracion .portada {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.inspiracion .spot {
+  margin-top: 20px;
+  width: 275px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #977A48;
+}
+.inspiracion .ejemplos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.inspiracion .ejemplos .botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 350px;
+}
+.inspiracion .ejemplos .botones button {
+  border: 1px solid #977A48;
+  border-radius: 25px;
+  width: 163px;
+  height: 50px;
+  background-color: #977A48;
+  color: #F6F2E9;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+}
+.inspiracion .ejemplos .anuncio {
+  width: 275px;
+  font-family: "DM Sans", sans-serif;
+  margin-top: 35px;
+}
+.inspiracion .ejemplos .anuncio .encabezado {
+  font-size: 20px;
+  font-weight: 600;
+}
+.inspiracion .ejemplos .anuncio .texto {
+  font-size: 16px;
+}
+.inspiracion .ejemplos .galeria {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-x: scroll;
+  gap: 30px;
+  width: 1310px;
+  height: 550px;
+  padding: 5px 15px;
+  margin-bottom: 30px;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 15px;
+  -webkit-overflow-scrolling: touch;
+}
+.inspiracion .ejemplos .galeria .invitacion {
+  flex: 0 0 auto;
+  position: relative;
+  width: 300px;
+  height: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.inspiracion .ejemplos .galeria .invitacion:hover, .inspiracion .ejemplos .galeria .invitacion:focus-within {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+.inspiracion .ejemplos .galeria .invitacion .preportada {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.inspiracion .ejemplos .galeria .invitacion .festejado {
+  font-family: "DM Serif Display", serif;
+  font-size: 26px;
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+.inspiracion .ejemplos .galeria::-webkit-scrollbar {
+  display: none;
+}
+.inspiracion .ejemplos .galeria {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (max-width: 480px) {
+  .inspiracion .ejemplos .galeria {
+    width: 350px;
+  }
+}
+.gestion {
+  display: flex;
+}
+
 .container-confirmaciones {
   height: 100%;
   margin: 25px 10px;
@@ -4047,122 +4195,9 @@
   border: 4px solid lightblue;
 }
 
-.inspiracion {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  text-align: center;
-}
-.inspiracion .portada {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-.inspiracion .spot {
-  margin-top: 20px;
-  width: 275px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #977A48;
-}
-.inspiracion .ejemplos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-.inspiracion .ejemplos .botones {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 350px;
-}
-.inspiracion .ejemplos .botones button {
-  border: 1px solid #977A48;
-  border-radius: 25px;
-  width: 163px;
-  height: 50px;
-  background-color: #977A48;
-  color: #F6F2E9;
-  font-family: "DM Sans", sans-serif;
-  font-size: 15px;
-}
-.inspiracion .ejemplos .anuncio {
-  width: 275px;
-  font-family: "DM Sans", sans-serif;
-  margin-top: 35px;
-}
-.inspiracion .ejemplos .anuncio .encabezado {
-  font-size: 20px;
-  font-weight: 600;
-}
-.inspiracion .ejemplos .anuncio .texto {
-  font-size: 16px;
-}
-.inspiracion .ejemplos .galeria {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  overflow-x: scroll;
-  gap: 30px;
-  width: 1310px;
-  height: 550px;
-  padding: 5px 15px;
-  margin-bottom: 30px;
-  scroll-snap-type: x mandatory;
-  scroll-padding-left: 15px;
-  -webkit-overflow-scrolling: touch;
-}
-.inspiracion .ejemplos .galeria .invitacion {
-  flex: 0 0 auto;
-  position: relative;
-  width: 300px;
-  height: 500px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  scroll-snap-align: start;
-  border-radius: 15px;
-  overflow: hidden;
-}
-.inspiracion .ejemplos .galeria .invitacion:hover, .inspiracion .ejemplos .galeria .invitacion:focus-within {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  z-index: 100;
-}
-.inspiracion .ejemplos .galeria .invitacion .preportada {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-}
-.inspiracion .ejemplos .galeria .invitacion .festejado {
-  font-family: "DM Serif Display", serif;
-  font-size: 26px;
-  position: absolute;
-  bottom: 20px;
-  left: 15px;
-  color: white;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
-}
-.inspiracion .ejemplos .galeria::-webkit-scrollbar {
-  display: none;
-}
-.inspiracion .ejemplos .galeria {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-@media (max-width: 480px) {
-  .inspiracion .ejemplos .galeria {
-    width: 350px;
-  }
-}
 body {
+  position: relative;
+  z-index: 100;
   background-color: #f6f2e9;
   scroll-behavior: smooth;
 }
@@ -4507,17 +4542,6 @@ body .modeloDos .imagen {
 }
 body .invitados .fondo {
   background-image: url("../multimedia/herramientas/invitados.jpg");
-  background-size: cover;
-  background-position: center top;
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
-body .gestion .fondo {
-  background-image: url("../multimedia/herramientas/editar.jpg");
   background-size: cover;
   background-position: center top;
   position: fixed;

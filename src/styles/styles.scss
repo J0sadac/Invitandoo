@@ -4,9 +4,11 @@
 @use './modulos/invitacionesModelo01';
 @use './modulos/invitacionesModelo02';
 @use './modulos/invitacionesModelo03';
+@use './modulos/inspiracion';
+@use './modulos/gestion';
+
 @use './modulos/confirmaciones';
 @use './modulos/administrar';
-@use './modulos/inspiracion';
 
 
 //Variables
@@ -18,6 +20,9 @@ $font-main: "DM Serif Display", serif;
 $font-second: "DM Sans", sans-serif;
 
 body{
+    position: relative;
+    z-index: 100;
+    
     background-color: #f6f2e9;
 
     scroll-behavior: smooth;
@@ -483,24 +488,6 @@ body{
             height: 100vh;
         }
     }
-
-    .gestion{
-
-        .fondo{
-            background-image: url('../multimedia/herramientas/editar.jpg');
-
-            background-size: cover;
-            background-position: center top;
-
-            position: fixed;
-            z-index: -1;
-            top: 0;
-            left: 0;
-
-            width: 100vw;
-            height: 100vh;
-        }
-    }    
 }
 
 

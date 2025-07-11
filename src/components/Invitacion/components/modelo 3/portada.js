@@ -45,7 +45,9 @@ function Portada({ evento, festejado, foto}) {
                 </>
                 
             ) : (
-                <div>holi intento de cambio</div>
+                <section className='portada'>
+                        <img loading="lazy" className='img' src={foto.url} alt='...' />
+                </section>
             )}
         </div>
     );

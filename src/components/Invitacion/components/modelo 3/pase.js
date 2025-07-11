@@ -38,25 +38,17 @@ function Pase ({evento, invitado, fondo, festejado}){
                 </>
             )}
 
-            {invitado.infantes > 0 ? (
+            {invitado.pase > 0 && (
                 <div className="cantidad">
                     <span className="titulo">Pase para: </span>
                     <span className="contenido">{invitado.pase} {invitado.pase === 1 ? 'adulto' : 'adultos'}</span>
-                    <span className="contenido">{invitado.infantes} {invitado.infantes === 1 ? 'niño' : 'niños'}</span>
-                </div> 
-            ):(
-                <div className="cantidad">
-                    {invitado.pase >= 99 ? (
-                        <span className='titulo'>
-                            Pase libre
-                        </span>
-                    ):(
-                        <span className='titulo'>
-                            Pase para: {invitado.pase}
-                        </span>
+                    {invitado.infantes > 0 && (
+                        <span className="contenido">{invitado.infantes} {invitado.infantes === 1 ? 'niño' : 'niños'}</span>
                     )}
                 </div> 
             )}
+
+            <p className='nin'>Es un honor contar con su presencia</p>
 
             {festejado === 'Danna Paola Huerta' && (
                 <div className="contenedor-fondo">

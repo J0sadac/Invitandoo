@@ -15,7 +15,7 @@ function Inspiracion(){
     };
 
     return(
-        <section className="inspiracion">
+        <section id='inspiracion' className="inspiracion">
             <div className='fondo'>
                 <img src={img} className='img' alt='inspiracion Invitandoo' />
                 <span className='titulo'>

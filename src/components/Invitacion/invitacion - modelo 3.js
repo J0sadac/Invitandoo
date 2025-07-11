@@ -1,5 +1,5 @@
 import { useEffect, lazy } from 'react';
-import Mensaje3 from './components/modelo 3/mensaje3';
+import Pensamiento from './components/modelo 3/pensamiento';
 import Sobre from './components/modelo 3/sobre';
 import Timeline from './components/modelo 3/timeline';
 
@@ -71,9 +71,11 @@ function Invitaciones({ evento, festejado }) {
                     foto={evento.multimedia.portada[0]}
                 />
 
-                <Cancion 
-                    url={evento.multimedia.cancion.url}
-                />
+                {evento.evento !== 'Graduacion' && (
+                    <Cancion 
+                        url={evento.multimedia.cancion.url}
+                    />
+                )}
 
                 {evento.datos.festejado === 'Consuelo & Andrés' && (
                     <Sobre />
@@ -91,20 +93,24 @@ function Invitaciones({ evento, festejado }) {
                         />
                     )}
                     
-                    <MensajeDos 
-                        evento={evento.evento}
-                        fondo={evento.multimedia.fondos.tercero}
-                        festejado={evento.datos.festejado}
-                        frases={evento.frases}
-                    />
+                    {evento?.frase && (
+                        <MensajeDos 
+                            evento={evento.evento}
+                            fondo={evento.multimedia.fondos.tercero}
+                            festejado={evento.datos.festejado}
+                            frases={evento.frases}
+                        />
+                    )}
 
-                    <Padres 
-                        evento={evento.evento}
-                        datos={evento.datos}
-                        festejado={evento.datos.festejado}
-                        fondo={evento.multimedia.fondos.segundo}
-                    />
-                    
+                    {evento.evento !== 'Graduacion' && (
+                        <Padres 
+                            evento={evento.evento}
+                            datos={evento.datos}
+                            festejado={evento.datos.festejado}
+                            fondo={evento.multimedia.fondos.segundo}
+                        />
+                    )}
+
                     <Invitacion 
                         fondo={evento.estilos.estilosInvitacion.fondo}
                         dia={evento.datos.dia}
@@ -113,12 +119,14 @@ function Invitaciones({ evento, festejado }) {
                         evento={evento.evento}
                         festejado={evento.datos.festejado}
                     />
+
                     {evento.confirmaciones.frases === true && (
                         <Frases
                             evento={evento.evento}
                             fondo={evento.multimedia.fondos.primero}
                         />
                     )}
+
                     {evento.padrinos.length > 0 && (
                         <Padrinos 
                             padrinos={evento.padrinos}
@@ -142,18 +150,22 @@ function Invitaciones({ evento, festejado }) {
                         />
                     )}
                     
-                    <Vestimenta 
-                        fondo={evento.multimedia.fondos.primero}
-                        datos={evento.vestimenta}
-                        modo={evento.estilos.estilosVestimenta.modo}
-                        festejado={evento.datos.festejado}
-                    />
+                    {evento.evento !== 'Graduacion' && (
+                        <Vestimenta 
+                            fondo={evento.multimedia.fondos.primero}
+                            datos={evento.vestimenta}
+                            modo={evento.estilos.estilosVestimenta.modo}
+                            festejado={evento.datos.festejado}
+                        />
+                    )}
 
-                    <Itinerario 
-                        protocolo={evento.itinerario}
-                        fondo={evento.multimedia.fondos.segundo}
-                        festejado={evento.datos.festejado}
-                    />
+                    {evento.itinerario.length > 0 && (
+                        <Itinerario 
+                            protocolo={evento.itinerario}
+                            fondo={evento.multimedia.fondos.segundo}
+                            festejado={evento.datos.festejado}
+                        />
+                    )}
 
                     {evento.confirmaciones.mensajeUno === true && (
                         <Mensaje 
@@ -177,10 +189,10 @@ function Invitaciones({ evento, festejado }) {
                         />
                     )}
 
-                    {evento?.frase3?.frase && (
-                        <Mensaje3
-                            img={evento.frase3.img}
-                            frase={evento.frase3.frase}
+                    {evento?.pensamiento?.frase && (
+                        <Pensamiento
+                            img={evento.pensamiento.imagen}
+                            frase={evento.pensamiento.frase}
                             festejado={evento.datos.festejado}
                         />
                     )}
@@ -210,12 +222,14 @@ function Invitaciones({ evento, festejado }) {
                         />
                     )}
 
-                    <Confirmacion 
-                        invitadoId={evento.invitados._id}
-                        eventoId={evento._id}
-                        fondo={evento.multimedia.fondos.tercero}
-                        contacto={evento.datos.contacto}
-                    />
+                    {evento.evento !== 'Graduacion' && (
+                        <Confirmacion 
+                            invitadoId={evento.invitados._id}
+                            eventoId={evento._id}
+                            fondo={evento.multimedia.fondos.tercero}
+                            contacto={evento.datos.contacto}
+                        />
+                    )}
                 </div>
         </div>
     );
