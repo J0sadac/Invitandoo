@@ -1256,8 +1256,6 @@ $font-date-size: var(--font-date-size);
                 align-items: center;
                 align-content: center;
 
-
-
                 z-index: 100;
 
                 margin-bottom: 50px;
@@ -1265,7 +1263,7 @@ $font-date-size: var(--font-date-size);
                 .establecimiento{
                     font-family: $font-second;
                     font-size: $font-second-size;
-                    font-weight: 800;
+                    font-weight: 500;
 
                     z-index: 100;
                 }

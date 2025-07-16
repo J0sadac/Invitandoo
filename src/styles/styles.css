@@ -2739,7 +2739,7 @@
 .modelo3 .caja .ubicacion .lugar .establecimiento {
   font-family: var(--font-second);
   font-size: var(--font-second-size);
-  font-weight: 800;
+  font-weight: 500;
   z-index: 100;
 }
 .modelo3 .caja .ubicacion .lugar .foto {
