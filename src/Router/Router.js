@@ -6,7 +6,7 @@ import Invitaciones from '../components/Invitacion/invitaciones';
 //Eliminar de aqui
 import Invitados from '../components/Administrar/components/invitados/invitados';
 import Administrar from '../components/Administrar/components/datos/evento';
-import NavBar from '../components/tools/navbar';
+import NavBar from '../components/navbar';
 //hasta aqui
 
 import Inspiracion from '../components/Inspiracion/inspiracion';
@@ -25,20 +25,15 @@ const Router = () => {
             <Routes>                
                 <Route exact path='/' element={<Main />} />
                 <Route exact path='/evento/:eventoId/invitado/:invitadoId' element={<Invitaciones />} />
-                <Route exact path='/evento/:eventoId' element={<Invitaciones />} />
-                
-                <Route exact path='/invitados/:eventoId' element={<Invitados />} />
-                <Route exact path='/Administrar/:eventoId' element={<Administrar />} />
-    
-
                 <Route exact path='/inspiracion' element={<Inspiracion />}> 
                     <Route path="boda" element={<Boda />} />
                     <Route path="xv" element={<Xv />} />
                 </Route>
+                <Route exact path='evento/123/gestion' element={<Gestion />} />
 
-                <Route exact path='evento/123/gestion' element={<Gestion />}>
+                <Route exact path='/invitados/:eventoId' element={<Invitados />} />
+                <Route exact path='/Administrar/:eventoId' element={<Administrar />} />
                 
-                </Route>
             </Routes>
 
         </BrowserRouter>

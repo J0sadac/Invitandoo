@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import flecha from '../../multimedia/herramientas/arrow-up.png';
+import { useState, useEffect } from 'react';
+import flecha from '../../../../multimedia/herramientas/arrow-up.png';
 
 function Desplazar() {
     const [isVisible, setIsVisible] = useState(true);

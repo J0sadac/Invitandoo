@@ -1,10 +1,9 @@
 import petalos from '../../../../multimedia/herramientas/adorno petalos.gif';
 import amarillas from '../../../../multimedia/herramientas/flor amarilla.gif';
-import antifazFondo from '../../../../multimedia/herramientas/Adorno animado.png';
 import rosas from '../../../../multimedia/herramientas/Flores rosas.gif';
 
 
-function Pase ({evento, invitado, fondo, festejado}){
+function Pase ({evento, invitado, fondo, festejado, sugerencia}){
 
     return(
         <section className={festejado === 'Leonel y Denisse' ? 'pase leo' : 'pase imprimir'}>
@@ -51,44 +50,9 @@ function Pase ({evento, invitado, fondo, festejado}){
                 </div> 
             )}
 
-            <p className='nin'>Es un honor contar con su presencia</p>
-
-            {festejado === 'Danna Paola Huerta' && (
-                <div className="contenedor-fondo">
-                    <img loading='lazy' className='img' src={antifazFondo} alt='...' />
-                </div>    
+            {sugerencia && (
+                <p className='sugerencia'>{sugerencia}</p>
             )}
-
-            {festejado === 'Kristopher & Cristina' && (
-                <p className='nin'>
-                    Ceremonia y Recepción: Solo adultos. Gracias por su comprensión.
-                </p>
-            )}
-
-            {festejado === 'Leonel y Denisse' && (
-                <p className='nin'>
-                    Ceremonia y Recepción: Solo adultos. Gracias por su comprensión.
-                </p>
-            )}
-
-            {festejado === 'Alejandra & Alexander' && (
-                <p className='nin'>
-                    Ceremonia y Recepción: Solo adultos. Gracias por su comprensión.
-                </p>
-            )}
-
-            {festejado === 'Bruno & Teresa' && (
-                <p className='nin'>
-                    Ceremonia y Recepción: Solo adultos. Gracias por su comprensión.
-                </p>
-            )}
-
-            {festejado === 'Lenny Nadxieli' && (
-                <p className='nin'>
-                    Por favor, es de vital importancia ser puntuales.
-                </p>
-            )}
-
 
             {evento === 'Boda' && (
                 <>

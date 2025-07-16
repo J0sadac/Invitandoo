@@ -17,7 +17,7 @@ const Mesa = lazy(() => import("./components/modelo 3/mesa"));
 const Vestimenta = lazy(() => import("./components/modelo 3/vestimenta"));
 const Cancion = lazy(() => import('./components/modelo 2/cancion'));
 const Confirmacion = lazy(() => import("./components/modelo 3/confirmacion"));
-const Desplazar = lazy(() => import("../tools/desplazar"));
+const Desplazar = lazy(() => import("./components/modelo 3/desplazar"));
 const Frases = lazy(() => import('./components/modelo 3/frase'));
 const Collage = lazy(() => import("./components/modelo 3/collage"));
 const Condiciones = lazy(() => import('./components/modelo 3/condiciones'));
@@ -140,6 +140,7 @@ function Invitaciones({ evento, festejado }) {
                         invitado={evento.invitados}
                         fondo={evento.multimedia.fondos.tercero}
                         festejado={evento.datos.festejado}
+                        sugerencia={evento.sugerencia}
                     />
                     
                     {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (
@@ -197,13 +198,11 @@ function Invitaciones({ evento, festejado }) {
                         />
                     )}
                     
-
                     <Ubicacion 
                         evento={evento.evento}
                         fondo={evento.multimedia.fondos.segundo}
                         ubicacion={evento.ubicacion}
                     />
-
                    
                     {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
                         <Mesa 
