@@ -8,14 +8,10 @@ import Padrinos from './components/modelo 1/padrinos';
 import Galeria from './components/modelo 1/galeria';
 import Padres from './components/modelo 1/padres';
 
-import AlertaConReproductor from '../tools/cancion/alertaReproductor';
-
 function Invitaciones({evento}) {
   
   return (
         <div className='container-invitaciones' style={{ backgroundImage: `url(${evento.multimedia.fondo.url})` }}>
-
-          <AlertaConReproductor />
 
           <Carousel
             foto={evento.multimedia.carousel} 

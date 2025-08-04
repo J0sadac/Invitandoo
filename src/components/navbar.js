@@ -49,9 +49,11 @@ function Navbar() {
       case "paquetes":
         return "navbar claro";
       case "invitaciones":
-        return "navbar oscuro";
+        return "navbar secundario";
       case "gestion":
         return "navbar oscuro";
+      case "loading":
+        return "navbar secundario";
       default:
         return "navbar claro";
     }

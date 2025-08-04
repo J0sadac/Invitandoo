@@ -1263,7 +1263,7 @@ $font-date-size: var(--font-date-size);
                 .establecimiento{
                     font-family: $font-second;
                     font-size: $font-second-size;
-                    font-weight: 500;
+                    font-weight: 800;
 
                     z-index: 100;
                 }
@@ -1292,7 +1292,7 @@ $font-date-size: var(--font-date-size);
 
                     .nombre{
                         font-size: $font-second-size;
-                        font-weight: 800;
+                        font-weight: 500;
                     }
                 }
             }

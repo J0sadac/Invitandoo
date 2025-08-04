@@ -1,13 +1,9 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
-import Main from '../components/main';
-import Invitaciones from '../components/Invitacion/invitaciones';
-
-//Eliminar de aqui
-import Invitados from '../components/Administrar/components/invitados/invitados';
-import Administrar from '../components/Administrar/components/datos/evento';
 import NavBar from '../components/navbar';
-//hasta aqui
+import Main from '../components/main';
+
+import Invitaciones from '../components/Invitacion/invitaciones';
 
 import Inspiracion from '../components/Inspiracion/inspiracion';
 import Boda from '../components/Inspiracion/components/boda';
@@ -24,16 +20,15 @@ const Router = () => {
             
             <Routes>                
                 <Route exact path='/' element={<Main />} />
+
                 <Route exact path='/evento/:eventoId/invitado/:invitadoId' element={<Invitaciones />} />
+
+                <Route exact path='/evento/:eventoId/gestion' element={<Gestion />} />
+
                 <Route exact path='/inspiracion' element={<Inspiracion />}> 
                     <Route path="boda" element={<Boda />} />
                     <Route path="xv" element={<Xv />} />
-                </Route>
-                <Route exact path='evento/123/gestion' element={<Gestion />} />
-
-                <Route exact path='/invitados/:eventoId' element={<Invitados />} />
-                <Route exact path='/Administrar/:eventoId' element={<Administrar />} />
-                
+                </Route>                
             </Routes>
 
         </BrowserRouter>

@@ -139,18 +139,14 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         height: 100vh;
-        width: 100vw;
+        width: 95vw;
 
         text-align: center;
 
-        margin: 40px 5px;
-        //padding: 150px 20px 290px;
-
-        background: url('../multimedia/fondos/background.jpg');
-        background-size: cover;
-
-        color: #3e4144;
+        background-color: $color-main;
+        color: $color-font;
 
         p{
             font-family: $font-second;
@@ -159,10 +155,8 @@ body{
             margin: 20px;
         }
 
-        .spin{
-            width: 120px;
-            height: 120px;
-            border-width: 6px;
+        .gif{
+            width: 230px;
         }
     }
 

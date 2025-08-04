@@ -2,6 +2,8 @@ import Modelo1 from './invitacion - modelo 1';
 import Modelo2 from './invitacion - modelo 2';
 import Modelo3 from './invitacion - modelo 3';
 
+import loading from '../../multimedia/herramientas/gif-loading.gif'
+
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -29,7 +31,7 @@ function Invitaciones (){
     console.log(evento);
 
     return(
-        <div>
+        <>
             {evento?.modelo === 1 ? (
                 <Modelo1 
                     evento = {evento}
@@ -44,17 +46,11 @@ function Invitaciones (){
                     festejado={evento.datos.festejado}
                 />
             ) : (
-                <div className='loading'>
-                    <p>Cargando invitación</p>
-
-                    <div className="spinner-border spin" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </div>
-
-                    <p>¡Por favor espere!</p>
-                </div>
+                <section id='loading' className='loading'>
+                    <img className='gif' src={loading} alt='loading...' />
+                </section>
             )}
-        </div>
+        </>
     );
 };
 
