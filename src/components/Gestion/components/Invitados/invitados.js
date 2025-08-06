@@ -2,9 +2,11 @@ import { useState } from 'react';
 import mas from '../../icons/mas.png';
 import Agregar from './components/agregar';
 import Lista from './components/lista';
+import Eliminar from './components/eliminar';
 
 function Invitados () {
-    const [mostrarForm, setMostrarForm] = useState(false)
+    const [visible, setVisible] = useState(null)
+
     const [estadisticas, setEstadisticas] = useState({
         total: 0,
         confirmados: 0,
@@ -13,9 +15,10 @@ function Invitados () {
     })
 
     const [invitados, setInvitados] = useState(false);
+    const [select, setSelect] = useState(null)
 
-    const abrirForm = () => setMostrarForm(true);
-    const cerrarForm = () => setMostrarForm(false)
+    const abrirVentana = (ventana) => setVisible(ventana);
+    const cerrarVentana = () => setVisible(null)
 
     return(
         <div className="administrar">
@@ -57,7 +60,7 @@ function Invitados () {
                 </div>
             </div>
 
-            <button className="agregar-btn" onClick={abrirForm}>
+            <button className="agregar-btn" onClick={() => abrirVentana('agregar')}>
                 <div className='icono'>
                     <img src={mas} alt='agregar' />
                 </div>
@@ -65,17 +68,26 @@ function Invitados () {
                 <p>AGREGAR INVITADO</p>
             </button>
 
-            {mostrarForm && (
+            {visible === 'agregar' && (
                 <Agregar 
-                   cerrar={cerrarForm}
+                   cerrar={cerrarVentana}
                    recargarLista={setInvitados}  
+                />
+            )}
+
+            {visible === 'eliminar' && (
+                <Eliminar 
+                    setRecargarLista={setInvitados}
+                    cerrar={cerrarVentana}
+                    invitadoSelect={select}
                 />
             )}
 
             <Lista 
                 datos={setEstadisticas}
                 recargarLista={invitados}
-                setRecargarLista={setInvitados}
+                abrirVent = {abrirVentana}
+                seleccionar = {setSelect}
             />
         </div>
     )

@@ -1,13 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 import Invitados from "./components/Invitados/invitados";
 import Mesas from "./components/Mesas/mesas";
 
 import logo from './icons/icono-cian.png';
+import { useParams } from "react-router-dom";
 
 function Gestion (){
+    const {eventoId} = useParams();
+    const [listaDeInvitados, setListaDeInvitados] = useState([])
     const [activo, setActivo] = useState('invitados');
- 
+
+    useEffect(() => {
+        const getInvitados = async (id) => {
+            const res = await axios.get(`https://nueva-invitandodb.onrender.com/invitados/${id}`)
+    
+            setListaDeInvitados(res.data)
+        }
+    
+        getInvitados(eventoId);
+    }, [eventoId]) 
 
     return(
         <section id="gestion" className="gestion">
@@ -25,11 +38,15 @@ function Gestion (){
             </div>
 
             {activo === 'invitados' && (
-                <Invitados />
+                <Invitados 
+                    listaInvitados={listaDeInvitados}
+                />
             )}
 
             {activo === 'mesas' && (
-                <Mesas />
+                <Mesas 
+                    invitados={listaDeInvitados}
+                />
             )}
 
             <img className="logo" src={logo} alt="logotipo Invitandoo" />

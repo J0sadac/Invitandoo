@@ -1,12 +1,14 @@
 import { useState } from "react";
 import Lista from "./components/lista";
 
-function Mesas(){
+function Mesas({invitados}){
     const [estadisticas, setEstadisticas] = useState({
         total: 0,
         completas: 0,
         pendientes: 0
     })
+
+    
 
     return(
         <section className="administrar">

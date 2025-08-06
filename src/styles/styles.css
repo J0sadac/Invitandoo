@@ -3863,20 +3863,20 @@
   color: #977A48;
   margin: 0;
 }
-.gestion .administrar .agregar {
+.gestion .administrar .ventana {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   z-index: 125;
   top: 0;
   left: 0;
 }
-.gestion .administrar .agregar .contenedor {
+.gestion .administrar .ventana .agregar {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -3889,13 +3889,13 @@
   position: relative;
   z-index: 100;
 }
-.gestion .administrar .agregar .contenedor .titulo {
+.gestion .administrar .ventana .agregar .titulo {
   font-family: "DM Serif Display", serif;
   font-size: 24px;
   font-weight: 600;
   margin-left: 15px;
 }
-.gestion .administrar .agregar .contenedor .cerrar {
+.gestion .administrar .ventana .agregar .cerrar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3910,14 +3910,14 @@
   border-radius: 5px;
   border: none;
 }
-.gestion .administrar .agregar .contenedor .formulario {
+.gestion .administrar .ventana .agregar .formulario {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   gap: 15px;
 }
-.gestion .administrar .agregar .contenedor .formulario .dato {
+.gestion .administrar .ventana .agregar .formulario .dato {
   border-radius: 30px;
   border: none;
   width: 300px;
@@ -3925,13 +3925,13 @@
   padding: 15px 30px;
   background-color: #ebe4d8;
 }
-.gestion .administrar .agregar .contenedor .formulario .dato::placeholder {
+.gestion .administrar .ventana .agregar .formulario .dato::placeholder {
   color: #8B7040;
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 500;
 }
-.gestion .administrar .agregar .contenedor .formulario .boton {
+.gestion .administrar .ventana .agregar .formulario .boton {
   background-color: #036061;
   color: #F6F2E9;
   border-radius: 30px;
@@ -3942,6 +3942,56 @@
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 1.6px;
+}
+.gestion .administrar .ventana .eliminar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #F6F2E9;
+  width: 260px;
+  height: 240px;
+  padding: 10px;
+  gap: 20px;
+  border-radius: 10px;
+}
+.gestion .administrar .ventana .eliminar .pregunta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.gestion .administrar .ventana .eliminar .pregunta img {
+  width: 15px;
+}
+.gestion .administrar .ventana .eliminar .pregunta div {
+  display: flex;
+  flex-direction: column;
+}
+.gestion .administrar .ventana .eliminar .pregunta div span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+}
+.gestion .administrar .ventana .eliminar .botones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.gestion .administrar .ventana .eliminar .botones button {
+  border: 2px solid #8B7040;
+  border-radius: 30px;
+  background-color: #F6F2E9;
+  color: #977A48;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  width: 150px;
+  height: 40px;
+}
+.gestion .administrar .ventana .eliminar .botones .confirmar {
+  background-color: #977A48;
+  color: #F6F2E9;
 }
 .gestion .administrar .lista {
   display: flex;
@@ -4033,9 +4083,6 @@
 .gestion .administrar .opciones button span {
   font-family: "DM Sans", sans-serif;
   font-size: 12px;
-}
-.gestion .administrar .eliminar {
-  display: flex;
 }
 .gestion .mesas {
   display: flex;

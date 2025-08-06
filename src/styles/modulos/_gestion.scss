@@ -126,10 +126,10 @@ $font-second: "DM Sans", sans-serif;
             }
         }
 
-        .agregar{
+        .ventana{
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
 
             background-color: rgba(0, 0, 0, 0.5);
@@ -137,12 +137,12 @@ $font-second: "DM Sans", sans-serif;
             width: 100%;
             height: 100vh;
 
-            position: absolute;
+            position: fixed;
             z-index: 125;
             top: 0;
             left: 0;
 
-            .contenedor{
+            .agregar{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
@@ -231,6 +231,74 @@ $font-second: "DM Sans", sans-serif;
                         font-weight: 500;
                         letter-spacing: 1.6px;
                     }
+                }
+            }
+
+            .eliminar{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                background-color: $color-main;
+
+                width: 260px;
+                height: 240px;
+
+                padding: 10px;
+                gap: 20px;
+
+                border-radius: 10px;
+
+                .pregunta{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    text-align: center;
+
+                    img{
+                        width: 15px;
+                    }
+
+                    div{
+                        display: flex;
+                        flex-direction: column;
+
+                        span{
+                            font-family: $font-second;
+                            font-size: 15px;
+                        }
+                    }
+
+                }
+
+                .botones{
+                   display: flex;
+                   flex-direction: column;
+                   gap: 10px;
+
+                   
+                   button{
+                        border: 2px solid #8B7040;
+                        border-radius: 30px;
+
+                        background-color: $color-main;
+                        color: $color-second;
+
+                        font-family: $font-second;
+                        font-size: 13px;
+                        font-weight: 800;
+
+                        width: 150px;
+                        height: 40px;
+                   }
+
+                   .confirmar{
+                        background-color: $color-second;
+                        color: $color-main;
+                   }
                 }
             }
         }
@@ -357,9 +425,6 @@ $font-second: "DM Sans", sans-serif;
             }
         }
 
-        .eliminar{
-            display: flex;
-        }
     }
 
     .mesas{

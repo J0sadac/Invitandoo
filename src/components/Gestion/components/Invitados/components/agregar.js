@@ -45,8 +45,8 @@ function Agregar({cerrar, recargarLista}) {
   };
 
   return (
-    <div className='agregar'>
-      <div className="contenedor">
+    <div className='ventana'>
+      <div className="agregar">
         <p className="titulo">Nuevo invitado</p>
 
         <button className="cerrar" onClick={cerrar}>X</button>

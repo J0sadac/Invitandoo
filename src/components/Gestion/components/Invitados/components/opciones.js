@@ -1,31 +1,34 @@
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 import ver from '../../../icons/ver.png';
 import copiar from '../../../icons/copiar.png';
-import eliminar from '../../../icons/eliminar.png';
+import iconoEliminar from '../../../icons/eliminar.png';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
-function Opciones ({recargar, invitado}) {
+function Opciones ({invitado, abrir, select}) {
     const {eventoId} = useParams();
 
-    const eliminarInvitado = async (id) => {
-        await axios.delete(`https://nueva-invitandodb.onrender.com/evento/${eventoId}/invitado/${id}`);
-
-        recargar(prev => !prev)
-    }
+    const eliminar = () => {
+        select(invitado);
+        abrir('eliminar');
+    };
 
     return(
         <div className="opciones shadow-sm">
-            <button>
+            <button >
                 <img className="iconoVer" src={ver} alt="ver" />
                 <span>Ver invitación</span>
             </button>
-            <button>
-                <img className="iconoCop" src={copiar} alt="ver" />
-                <span>Copiar</span>
-            </button>
-            <button onClick={() => eliminarInvitado(invitado)}>
-                <img className="iconoEli" src={eliminar} alt="ver" />
+
+            <CopyToClipboard text={`https://invitandoo.com/evento/${eventoId}/invitado/${invitado._id}`}>
+                <button>
+                    <img className="iconoCop" src={copiar} alt="copiar" />
+                    <span>Copiar</span>
+                </button>
+            </CopyToClipboard>
+
+            <button onClick={eliminar}>
+                <img className="iconoEli" src={iconoEliminar} alt="ver" />
                 <span>Eliminar</span>
             </button>
         </div>

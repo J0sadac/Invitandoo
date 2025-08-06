@@ -11,7 +11,7 @@ import mostrarMenos from '../../../icons/mostrarMenos.png';
 
 import Opciones from './opciones';
 
-function Lista ({datos, recargarLista, setRecargarLista}) {
+function Lista ({datos, recargarLista, abrirVent, seleccionar}) {
     const {eventoId} = useParams();
 
     const [listaInvitados, setListaInvitados] = useState([]);
@@ -134,8 +134,9 @@ function Lista ({datos, recargarLista, setRecargarLista}) {
                             {opcionesAbiertas === invitado._id && (
                                 <Opciones 
                                     onClose={() => setOpcionesAbiertas(null)}
-                                    recargar={setRecargarLista}
-                                    invitado={invitado._id}
+                                    invitado={invitado}
+                                    abrir={abrirVent}
+                                    select={seleccionar}
                                 />
                             )}
 
