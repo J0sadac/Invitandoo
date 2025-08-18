@@ -1,11 +1,15 @@
 import { useState } from 'react';
+
 import mas from '../../icons/mas.png';
+
 import Agregar from './components/agregar';
 import Lista from './components/lista';
 import Eliminar from './components/eliminar';
+import Notificaciones from './components/notificaciones';
 
-function Invitados () {
+function Invitados ({listaInvitados}) {
     const [visible, setVisible] = useState(null)
+    const [noti, setNoti] = useState(null)
 
     const [estadisticas, setEstadisticas] = useState({
         total: 0,
@@ -18,7 +22,7 @@ function Invitados () {
     const [select, setSelect] = useState(null)
 
     const abrirVentana = (ventana) => setVisible(ventana);
-    const cerrarVentana = () => setVisible(null)
+    const cerrarVentana = () => setVisible(null);
 
     return(
         <div className="administrar">
@@ -79,7 +83,14 @@ function Invitados () {
                 <Eliminar 
                     setRecargarLista={setInvitados}
                     cerrar={cerrarVentana}
-                    invitadoSelect={select}
+                    seleccionar={select}
+                    noti={setNoti}
+                />
+            )}
+
+            {noti && (
+                <Notificaciones 
+                    tipo={noti}
                 />
             )}
 
@@ -87,7 +98,8 @@ function Invitados () {
                 datos={setEstadisticas}
                 recargarLista={invitados}
                 abrirVent = {abrirVentana}
-                seleccionar = {setSelect}
+                setSeleccionar = {setSelect}
+                notificacion= {setNoti}
             />
         </div>
     )

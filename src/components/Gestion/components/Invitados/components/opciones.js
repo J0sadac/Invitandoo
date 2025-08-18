@@ -1,12 +1,21 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 import ver from '../../../icons/ver.png';
 import copiar from '../../../icons/copiar.png';
 import iconoEliminar from '../../../icons/eliminar.png';
-import CopyToClipboard from 'react-copy-to-clipboard';
 
-function Opciones ({invitado, abrir, select}) {
+function Opciones ({invitado, abrir, select, noti}) {
     const {eventoId} = useParams();
+    const navigate = useNavigate();
+
+    const activar = (tipo) => {
+        noti(tipo);
+
+        setTimeout(() => {
+            noti(null)
+        }, 2000)
+    };
 
     const eliminar = () => {
         select(invitado);
@@ -14,23 +23,25 @@ function Opciones ({invitado, abrir, select}) {
     };
 
     return(
-        <div className="opciones shadow-sm">
-            <button >
-                <img className="iconoVer" src={ver} alt="ver" />
-                <span>Ver invitación</span>
-            </button>
-
-            <CopyToClipboard text={`https://invitandoo.com/evento/${eventoId}/invitado/${invitado._id}`}>
-                <button>
-                    <img className="iconoCop" src={copiar} alt="copiar" />
-                    <span>Copiar</span>
+        <div className="opciones">
+            <div className='contOp shadow'>
+                <button onClick={() => (navigate(`/evento/${eventoId}/invitado/${invitado._id}`))}>
+                    <img className="iconoVer" src={ver} alt="ver" />
+                    <span>Ver invitación</span>
                 </button>
-            </CopyToClipboard>
 
-            <button onClick={eliminar}>
-                <img className="iconoEli" src={iconoEliminar} alt="ver" />
-                <span>Eliminar</span>
-            </button>
+                <CopyToClipboard text={`https://invitandoo.com/evento/${eventoId}/invitado/${invitado._id}`}>
+                    <button onClick={() => activar('copiado')}>
+                        <img className="iconoCop" src={copiar} alt="copiar" />
+                        <span>Copiar enlace</span>
+                    </button>
+                </CopyToClipboard>
+
+                <button onClick={eliminar}>
+                    <img className="iconoEli" src={iconoEliminar} alt="ver" />
+                    <span>Eliminar</span>
+                </button>
+            </div>
         </div>
     )
 };

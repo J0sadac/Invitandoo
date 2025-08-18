@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
 import Invitados from "./components/Invitados/invitados";
 import Mesas from "./components/Mesas/mesas";
 
 import logo from './icons/icono-cian.png';
-import { useParams } from "react-router-dom";
 
 function Gestion (){
     const {eventoId} = useParams();
-    const [listaDeInvitados, setListaDeInvitados] = useState([])
+    const [listaDeInvitados, setListaDeInvitados] = useState([]);
     const [activo, setActivo] = useState('invitados');
+    const [recargar, setRecargar] = useState(false);
 
     useEffect(() => {
         const getInvitados = async (id) => {
@@ -20,7 +21,7 @@ function Gestion (){
         }
     
         getInvitados(eventoId);
-    }, [eventoId]) 
+    }, [eventoId, recargar]) 
 
     return(
         <section id="gestion" className="gestion">
@@ -45,7 +46,8 @@ function Gestion (){
 
             {activo === 'mesas' && (
                 <Mesas 
-                    invitados={listaDeInvitados}
+                    listaInvitados={listaDeInvitados}
+                    setRecargado={setRecargar}
                 />
             )}
 

@@ -3809,7 +3809,7 @@
   align-items: center;
   width: 100%;
   margin-top: 35px;
-  gap: 30px;
+  gap: 20px;
   z-index: 100;
 }
 .gestion .administrar .estadisticas {
@@ -3884,7 +3884,7 @@
   width: 350px;
   height: 575px;
   padding: 15px;
-  margin-top: 70px;
+  margin-top: 5px;
   border-radius: 15px;
   position: relative;
   z-index: 100;
@@ -3915,7 +3915,17 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  text-decoration: none;
   gap: 15px;
+}
+.gestion .administrar .ventana .agregar .formulario .formTitulo {
+  width: 100%;
+  margin-left: 25px;
+  margin-bottom: -15px;
+  color: #3D3D3D;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
 }
 .gestion .administrar .ventana .agregar .formulario .dato {
   border-radius: 30px;
@@ -3924,6 +3934,10 @@
   height: 50px;
   padding: 15px 30px;
   background-color: #ebe4d8;
+  color: #8B7040;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 .gestion .administrar .ventana .agregar .formulario .dato::placeholder {
   color: #8B7040;
@@ -3943,6 +3957,18 @@
   font-weight: 500;
   letter-spacing: 1.6px;
 }
+.gestion .administrar .ventana .agregar .formulario .select {
+  appearance: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #977A48;
+}
+.gestion .administrar .ventana .agregar .formulario .select option {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  color: #977A48;
+}
 .gestion .administrar .ventana .eliminar {
   display: flex;
   flex-direction: column;
@@ -3952,7 +3978,7 @@
   width: 260px;
   height: 240px;
   padding: 10px;
-  gap: 20px;
+  gap: 15px;
   border-radius: 10px;
 }
 .gestion .administrar .ventana .eliminar .pregunta {
@@ -3960,6 +3986,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 5px;
   text-align: center;
 }
 .gestion .administrar .ventana .eliminar .pregunta img {
@@ -4027,6 +4054,19 @@
 .gestion .administrar .lista .seccion .encabezado .comprimir img {
   width: 20px;
 }
+.gestion .administrar .lista .seccion .headMesas {
+  display: grid;
+  grid-template-columns: 55px 50px 24px auto 30px;
+  justify-items: start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.gestion .administrar .lista .seccion .headMesas .linea {
+  width: 150px;
+}
+.gestion .administrar .lista .seccion .headMesas .icono {
+  width: 16px;
+}
 .gestion .administrar .lista .seccion .contenedor {
   display: grid;
   align-items: center;
@@ -4052,37 +4092,144 @@
 .gestion .administrar .lista .seccion .contenedor .opciones-btn .icon {
   width: 40px;
 }
-.gestion .administrar .opciones {
+.gestion .administrar .lista .seccion .contenedor .opciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  z-index: 100;
+  width: 300px;
+}
+.gestion .administrar .lista .seccion .contenedor .opciones .contOp {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  z-index: 100;
-  width: 130px;
+  background-color: #F6F2E9;
   border-radius: 6px;
+  padding: 7px 10px;
+  gap: 5px;
 }
-.gestion .administrar .opciones button {
+.gestion .administrar .lista .seccion .contenedor .opciones .contOp button {
   display: grid;
   grid-template-columns: 30px auto;
   align-items: center;
   justify-content: start;
   background-color: #F6F2E9;
   border: none;
-  width: 100%;
+  width: 145px;
   height: 27px;
-  padding-left: 15px;
 }
-.gestion .administrar .opciones button .iconoVer {
+.gestion .administrar .lista .seccion .contenedor .opciones .contOp button .iconoVer {
+  width: 18px;
+}
+.gestion .administrar .lista .seccion .contenedor .opciones .contOp button .iconoCop {
+  width: 15px;
+}
+.gestion .administrar .lista .seccion .contenedor .opciones .contOp button .iconoEli {
+  width: 12px;
+}
+.gestion .administrar .lista .seccion .contenedor .opciones .contOp button span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+}
+.gestion .administrar .lista .seccion .contentMesas {
+  display: grid;
+  grid-template-columns: auto 45px;
+  width: 315px;
+  margin-top: 10px;
+  border-bottom: 1px solid #e4e7df;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+}
+.gestion .administrar .lista .seccion .contentMesas .contenido {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.gestion .administrar .lista .seccion .contentMesas .contenido .invitado {
+  padding-bottom: 7px;
+}
+.gestion .administrar .lista .seccion .contentMesas .contenido .datos {
+  display: grid;
+  grid-template-columns: 100px 100px auto;
+  align-items: center;
+  padding-bottom: 5px;
+}
+.gestion .administrar .lista .seccion .contentMesas .contenido .datos img {
   width: 16px;
 }
-.gestion .administrar .opciones button .iconoCop {
-  width: 13px;
+.gestion .administrar .lista .seccion .contentMesas .opciones-btn {
+  border: none;
+  background-color: #F6F2E9;
 }
-.gestion .administrar .opciones button .iconoEli {
-  width: 10.5px;
+.gestion .administrar .lista .seccion .contentMesas .opciones-btn .icon {
+  width: 40px;
 }
-.gestion .administrar .opciones button span {
+.gestion .administrar .lista .seccion .contentMesas .opciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  z-index: 100;
+  width: 270px;
+}
+.gestion .administrar .lista .seccion .contentMesas .opciones .contOp {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F2E9;
+  border-radius: 6px;
+  padding: 7px 10px;
+  gap: 5px;
+}
+.gestion .administrar .lista .seccion .contentMesas .opciones .contOp button {
+  display: grid;
+  grid-template-columns: 30px auto;
+  align-items: center;
+  justify-content: start;
+  background-color: #F6F2E9;
+  border: none;
+  width: 145px;
+  height: 27px;
+}
+.gestion .administrar .lista .seccion .contentMesas .opciones .contOp button .iconoVer {
+  width: 18px;
+}
+.gestion .administrar .lista .seccion .contentMesas .opciones .contOp button .iconoCop {
+  width: 15px;
+}
+.gestion .administrar .lista .seccion .contentMesas .opciones .contOp button .iconoEli {
+  width: 12px;
+}
+.gestion .administrar .lista .seccion .contentMesas .opciones .contOp button span {
   font-family: "DM Sans", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
+}
+.gestion .administrar .notificacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 40px;
+  z-index: 125;
+}
+.gestion .administrar .notificacion .noti {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  gap: 7px;
+  padding: 5px 15px;
+  border-radius: 30px;
+  background-color: #8B7040;
+  color: #F6F2E9;
+}
+.gestion .administrar .notificacion .noti img {
+  width: 15px;
+}
+.gestion .administrar .notificacion .noti span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
 }
 .gestion .mesas {
   display: flex;

@@ -9,7 +9,7 @@ function Agregar({cerrar, recargarLista}) {
     invitado: '',
     mesa: '',
     pase: '',
-    infantes: 0,
+    infantes: '',
     telefono: '',
     asistir: 'pendiente',
     de: ''
@@ -99,13 +99,13 @@ function Agregar({cerrar, recargarLista}) {
           />
 
           <select
-            className="dato"
+            className="dato select"
             name="de"
             value={nuevoInvitado.de}
             onChange={handleChange}
           >
             <option value="" disabled>
-              De quien es el invitado?
+              ¿De quien es el invitado?
             </option>
             <option value="Novio">Novio</option>
             <option value="Novia">Novia</option>

@@ -3,14 +3,22 @@ import { useParams } from "react-router-dom";
 
 import basura from '../../../icons/eliminar.png';
 
-function Eliminar ({cerrar, setRecargarLista, invitadoSelect}) {
+function Eliminar ({cerrar, setRecargar, seleccionar, noti}) {
     const {eventoId} = useParams();
+
+    const activarNot = (tipo) => {
+        noti(tipo);
+
+        setTimeout(() => {
+            noti(null)
+        }, 2000)
+    }
 
     const eliminarInvitado = async (id) => {
         await axios.delete(`https://nueva-invitandodb.onrender.com/evento/${eventoId}/invitado/${id}`);
 
-        setRecargarLista(prev => !prev);
-
+        setRecargar(prev => !prev);
+        activarNot('eliminado')
         cerrar();
     };
 
@@ -21,14 +29,14 @@ function Eliminar ({cerrar, setRecargarLista, invitadoSelect}) {
                     <img src={basura} alt="icono eliminar" />
                     <div>
                         <span>¿Realmente quieres eliminar a</span>
-                        <span>{invitadoSelect.invitado}</span>
+                        <span>{seleccionar.invitado}</span>
                         <span>de tu lista de invitados?</span>
                     </div>
                 </div>
 
                 <div className="botones">
                     <button onClick={() => cerrar()}>CANCELAR</button>
-                    <button className="confirmar" onClick={() => eliminarInvitado(invitadoSelect._id)}>ELIMINAR</button>
+                    <button className="confirmar" onClick={() => eliminarInvitado(seleccionar._id)}>ELIMINAR</button>
                 </div>
             </div>
         </div>
