@@ -5,10 +5,11 @@ import Estadisticas from "./components/estadisticas";
 import Lista from "./components/lista";
 import Notificaciones from "../Invitados/components/notificaciones";
 import Editar from "./components/editar";
+import Cambiar from "./components/cambiar";
 
 function Mesas({listaInvitados, setRecargado}){
     const [ventana, setVentana] = useState(null);
-    const [seleccionado, setSeleccionado] = useState(null);
+    const [seleccionado, setSeleccionado] = useState(null); //ID del invitado que se esta editando
     const [notifi, setNotifi] = useState(null);
 
     const mesasDivididas = (invitados) => {
@@ -56,7 +57,7 @@ function Mesas({listaInvitados, setRecargado}){
                 <Eliminar 
                     seleccionar={seleccionado}
                     cerrar={cerrarVent}
-                    noti={setNotifi}
+                    setNotifi={setNotifi}
                     setRecargar={setRecargado}
                 />
             )}
@@ -66,6 +67,14 @@ function Mesas({listaInvitados, setRecargado}){
                     cerrar={cerrarVent}
                     seleccionar={seleccionado}
                     setRecargar={setRecargado}
+                    setNoti={setNotifi}
+                />
+            )}
+
+            {ventana === 'cambiar' &&(
+                <Cambiar 
+                    cerrar={cerrarVent}
+                    seleccionar={seleccionado}
                 />
             )}
         </section>

@@ -181,11 +181,15 @@ $font-second: "DM Sans", sans-serif;
                     top: 40px;
                     right: 30px;
 
-                    background-color: #ebe4d8;
+                    background-color: $color-main;
                     color: #8B7040;
                     
                     border-radius: 5px;
                     border: none;
+
+                    font-family: $font-second;
+                    font-size: 20px;
+                    font-weight: 700;
                 }
 
                 .formulario{
@@ -341,6 +345,85 @@ $font-second: "DM Sans", sans-serif;
                    }
                 }
             }
+
+            .cambiar{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                background-color: $color-main;
+                border-radius: 15px;
+
+                width: 350px;
+                height: 575px;
+
+                position: relative;
+                z-index: 100;
+
+                .btnCerrar{
+                    width: 25px;
+                    height: 25px;
+
+                    border: none;
+                
+                    background-color: $color-main;
+                    color: $color-second;
+
+                    font-family: $font-second;
+                    font-size: 20px;
+                    font-weight: 700;
+
+                    position: absolute;
+                    top: 40px;
+                    right: 30px;
+                }
+
+                .titulo{
+                    font-family: $font-main;
+                    font-size: 24px;
+                    font-weight: 600;
+                    
+                    margin-left: 20px;
+                }
+
+                .cambios{
+
+                    .mesa{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        align-items: center;
+
+                        margin: 15px;
+                        padding: 15px 10px;
+
+                        font-family: $font-second;
+                        font-size: 16px;
+                        font-weight: 700;
+
+                        .datos{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-evenly;
+                            align-items: center;
+
+                            .total{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+
+                            .dato{
+                                font-weight: 500;
+
+                                .icon{
+                                    width: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .lista{
@@ -389,14 +472,14 @@ $font-second: "DM Sans", sans-serif;
 
                 .headMesas{
                     display: grid;
-                    grid-template-columns: 55px 50px 24px auto 30px;
+                    grid-template-columns: 60px 55px 24px auto 30px;
                     justify-items: start;
                     align-items: center;
 
-                    margin-bottom: 20px;
+                    margin-bottom: 10px;
 
                     .linea{
-                        width: 150px;
+                        width: 140px;
                     }
 
                     .icono{
@@ -464,7 +547,6 @@ $font-second: "DM Sans", sans-serif;
                                 background-color: $color-main;
                                 border: none;
     
-                                width: 145px;
                                 height: 27px;
     
                                 .iconoVer{
@@ -625,10 +707,6 @@ $font-second: "DM Sans", sans-serif;
             }
         }
 
-    }
-
-    .mesas{
-        display: flex;
     }
 
     .logo{

@@ -1,25 +1,49 @@
-import { useState } from 'react';
-
-import mas from '../../icons/mas.png';
+import { useEffect, useState } from 'react';
 
 import Agregar from './components/agregar';
 import Lista from './components/lista';
 import Eliminar from './components/eliminar';
 import Notificaciones from './components/notificaciones';
 
-function Invitados ({listaInvitados}) {
-    const [visible, setVisible] = useState(null)
-    const [noti, setNoti] = useState(null)
+import mas from '../../icons/mas.png';
 
+function Invitados ({listaInvitados, setRecargado}) {
+    const [visible, setVisible] = useState(null); //permite activar una ventana emergente
+    const [noti, setNoti] = useState(null); //activa notificaciones de retroalimentacion para el usuario
+    const [select, setSelect] = useState(null); //hook para mantener seleccionado el id de un invitado
     const [estadisticas, setEstadisticas] = useState({
         total: 0,
         confirmados: 0,
         pendientes: 0,
         declinados: 0
-    })
+    });
 
-    const [invitados, setInvitados] = useState(false);
-    const [select, setSelect] = useState(null)
+    useEffect(() => { //funcion para obtener las estadisticas del evento
+        let total = 0;
+        let confirmados = 0;
+        let pendientes = 0;
+        let declinados = 0;
+
+        for(let invitado of listaInvitados){
+            const pases = parseInt(invitado.pase || 0);
+            const infantes = parseInt(invitado.infantes || 0);
+            const sumaTotal = pases + infantes;
+    
+            total += sumaTotal;
+    
+            if(invitado.asistir === 'confirmado') confirmados += sumaTotal;
+            if(invitado.asistir === 'pendiente') pendientes += sumaTotal;
+            if(invitado.asistir === 'rechazado') declinados += sumaTotal;
+        }
+
+        setEstadisticas({
+            total,
+            confirmados,
+            pendientes,
+            declinados
+        });
+
+    }, [listaInvitados])
 
     const abrirVentana = (ventana) => setVisible(ventana);
     const cerrarVentana = () => setVisible(null);
@@ -75,16 +99,16 @@ function Invitados ({listaInvitados}) {
             {visible === 'agregar' && (
                 <Agregar 
                    cerrar={cerrarVentana}
-                   recargarLista={setInvitados}  
+                   setRecargar={setRecargado} 
                 />
             )}
 
             {visible === 'eliminar' && (
                 <Eliminar 
-                    setRecargarLista={setInvitados}
+                    setRecargar={setRecargado}
                     cerrar={cerrarVentana}
                     seleccionar={select}
-                    noti={setNoti}
+                    setNotifi={setNoti}
                 />
             )}
 
@@ -95,11 +119,10 @@ function Invitados ({listaInvitados}) {
             )}
 
             <Lista 
-                datos={setEstadisticas}
-                recargarLista={invitados}
                 abrirVent = {abrirVentana}
                 setSeleccionar = {setSelect}
-                notificacion= {setNoti}
+                setNotifi= {setNoti}
+                lista={listaInvitados}
             />
         </div>
     )

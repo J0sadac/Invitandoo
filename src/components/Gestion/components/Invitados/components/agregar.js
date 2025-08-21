@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-function Agregar({cerrar, recargarLista}) {
+function Agregar({cerrar, setRecargar}) {
   const {eventoId} = useParams();
 
   const estadoInicial = {
@@ -41,7 +41,7 @@ function Agregar({cerrar, recargarLista}) {
     await axios.post(`https://nueva-invitandodb.onrender.com/evento/${eventoId}/invitado`, datos);
 
     setNuevoInvitado(estadoInicial);
-    recargarLista(prev => !prev);
+    setRecargar(prev => !prev);
   };
 
   return (

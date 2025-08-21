@@ -17,6 +17,13 @@ function Notificaciones ({tipo}) {
                     <span>INVITADO ELIMINADO</span>
                 </div>
             )}
+
+            {tipo === 'editado' && (
+                <div className='noti'>
+                    <img src={correcto} alt='eliminado' />
+                    <span>CAMBIOS GUARDADOS</span>
+                </div>
+            )}
         </div>
     )
 }

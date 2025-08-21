@@ -1,6 +1,6 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 
 import Invitados from "./components/Invitados/invitados";
 import Mesas from "./components/Mesas/mesas";
@@ -8,10 +8,10 @@ import Mesas from "./components/Mesas/mesas";
 import logo from './icons/icono-cian.png';
 
 function Gestion (){
-    const {eventoId} = useParams();
+    const {eventoId} = useParams(); //ID del evento
     const [listaDeInvitados, setListaDeInvitados] = useState([]);
-    const [activo, setActivo] = useState('invitados');
-    const [recargar, setRecargar] = useState(false);
+    const [activo, setActivo] = useState('invitados'); //mantiene un componente en pantalla y permite cambiar entre lista de invitados y mesas, por defecto 'invitados'.
+    const [recargar, setRecargar] = useState(false); //hook para que las listas se actualicen siempre. Sin necesidad de recargar la pagina.
 
     useEffect(() => {
         const getInvitados = async (id) => {
@@ -41,6 +41,7 @@ function Gestion (){
             {activo === 'invitados' && (
                 <Invitados 
                     listaInvitados={listaDeInvitados}
+                    setRecargado={setRecargar}
                 />
             )}
 

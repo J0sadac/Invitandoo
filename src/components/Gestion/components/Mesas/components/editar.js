@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 
-function Editar ({cerrar, seleccionar, setRecargar}) {
+function Editar ({cerrar, seleccionar, setRecargar, setNoti}) {
     const {eventoId} = useParams();
 
     const estadoActual={
@@ -32,6 +32,14 @@ function Editar ({cerrar, seleccionar, setRecargar}) {
         }));
     };
 
+    const activarNot = (tipo) => {
+        setNoti(tipo);
+
+        setTimeout(() => {
+            setNoti(null)
+        }, 2000)
+    }
+
     const editarInvitado = async (e) => {
         e.preventDefault();
 
@@ -49,6 +57,7 @@ function Editar ({cerrar, seleccionar, setRecargar}) {
 
         setInvEditado(estadoActual);
         setRecargar(prev => !prev);
+        activarNot('editado')
         cerrar();
     }
 

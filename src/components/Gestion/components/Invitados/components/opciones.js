@@ -5,7 +5,7 @@ import ver from '../../../icons/ver.png';
 import copiar from '../../../icons/copiar.png';
 import iconoEliminar from '../../../icons/eliminar.png';
 
-function Opciones ({invitado, abrir, select, noti}) {
+function Opciones ({invitado, abrir, setSelect, noti}) {
     const {eventoId} = useParams();
     const navigate = useNavigate();
 
@@ -18,7 +18,7 @@ function Opciones ({invitado, abrir, select, noti}) {
     };
 
     const eliminar = () => {
-        select(invitado);
+        setSelect(invitado);
         abrir('eliminar');
     };
 

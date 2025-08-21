@@ -17,7 +17,7 @@ function Opciones({abrirVent, invitado, selecto}) {
             <span>Editar invitacion</span>  
           </button>
 
-          <button>
+          <button onClick={() => botonAbrir('cambiar')}>
             <img className='iconoCop' src={mover} alt='Mover invitado' />
             <span>Mover</span>
           </button>

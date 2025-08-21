@@ -3,14 +3,14 @@ import { useParams } from "react-router-dom";
 
 import basura from '../../../icons/eliminar.png';
 
-function Eliminar ({cerrar, setRecargar, seleccionar, noti}) {
+function Eliminar ({cerrar, setRecargar, seleccionar, setNotifi}) {
     const {eventoId} = useParams();
 
     const activarNot = (tipo) => {
-        noti(tipo);
+        setNotifi(tipo);
 
         setTimeout(() => {
-            noti(null)
+            setNotifi(null)
         }, 2000)
     }
 

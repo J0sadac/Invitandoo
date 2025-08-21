@@ -3905,10 +3905,13 @@
   z-index: 100;
   top: 40px;
   right: 30px;
-  background-color: #ebe4d8;
+  background-color: #F6F2E9;
   color: #8B7040;
   border-radius: 5px;
   border: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
 }
 .gestion .administrar .ventana .agregar .formulario {
   display: flex;
@@ -4020,6 +4023,64 @@
   background-color: #977A48;
   color: #F6F2E9;
 }
+.gestion .administrar .ventana .cambiar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #F6F2E9;
+  border-radius: 15px;
+  width: 350px;
+  height: 575px;
+  position: relative;
+  z-index: 100;
+}
+.gestion .administrar .ventana .cambiar .btnCerrar {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: #F6F2E9;
+  color: #977A48;
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+}
+.gestion .administrar .ventana .cambiar .titulo {
+  font-family: "DM Serif Display", serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+.gestion .administrar .ventana .cambiar .cambios .mesa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 15px;
+  padding: 15px 10px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.gestion .administrar .ventana .cambiar .cambios .mesa .datos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gestion .administrar .ventana .cambiar .cambios .mesa .datos .total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gestion .administrar .ventana .cambiar .cambios .mesa .datos .dato {
+  font-weight: 500;
+}
+.gestion .administrar .ventana .cambiar .cambios .mesa .datos .dato .icon {
+  width: 20px;
+}
 .gestion .administrar .lista {
   display: flex;
   flex-direction: column;
@@ -4056,13 +4117,13 @@
 }
 .gestion .administrar .lista .seccion .headMesas {
   display: grid;
-  grid-template-columns: 55px 50px 24px auto 30px;
+  grid-template-columns: 60px 55px 24px auto 30px;
   justify-items: start;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .gestion .administrar .lista .seccion .headMesas .linea {
-  width: 150px;
+  width: 140px;
 }
 .gestion .administrar .lista .seccion .headMesas .icono {
   width: 16px;
@@ -4114,7 +4175,6 @@
   justify-content: start;
   background-color: #F6F2E9;
   border: none;
-  width: 145px;
   height: 27px;
 }
 .gestion .administrar .lista .seccion .contenedor .opciones .contOp button .iconoVer {
@@ -4230,9 +4290,6 @@
   font-family: "DM Sans", sans-serif;
   font-size: 13px;
   font-weight: 600;
-}
-.gestion .mesas {
-  display: flex;
 }
 .gestion .logo {
   width: 65px;
