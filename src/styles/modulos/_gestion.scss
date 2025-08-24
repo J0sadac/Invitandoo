@@ -349,13 +349,14 @@ $font-second: "DM Sans", sans-serif;
             .cambiar{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
+                justify-content: center;
 
                 background-color: $color-main;
                 border-radius: 15px;
 
                 width: 350px;
                 height: 575px;
+                padding-right: 5px;
 
                 position: relative;
                 z-index: 100;
@@ -374,7 +375,7 @@ $font-second: "DM Sans", sans-serif;
                     font-weight: 700;
 
                     position: absolute;
-                    top: 40px;
+                    top: 20px;
                     right: 30px;
                 }
 
@@ -384,45 +385,90 @@ $font-second: "DM Sans", sans-serif;
                     font-weight: 600;
                     
                     margin-left: 20px;
+                    margin-bottom: 0px;
+                }
+
+                .invCambiar{
+                    display: flex;
+                    flex-direction: column;
+            
+                    margin-left: 20px;
+
+                    font-family: $font-second;
+                    font-size: 16px;
+
+                    .invDatos{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 12px;
+                    }
                 }
 
                 .cambios{
+                    height: 450px;
+                    overflow-y: auto;
 
                     .mesa{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-evenly;
+                        display: grid;
+                        grid-template-columns: 75px auto;
                         align-items: center;
 
-                        margin: 15px;
-                        padding: 15px 10px;
+                        border-radius: 15px;
+                        margin: 10px 15px;
+                        padding: 15px 20px;
 
                         font-family: $font-second;
                         font-size: 16px;
                         font-weight: 700;
 
+                        cursor: pointer;
+
                         .datos{
                             display: flex;
                             flex-direction: row;
-                            justify-content: space-evenly;
+                            justify-content: space-around;
                             align-items: center;
 
-                            .total{
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                            }
-
                             .dato{
+                                display: flex;
+                                flex-direction: column-reverse;
+                                align-items: center;
+                    
                                 font-weight: 500;
 
                                 .icon{
                                     width: 20px;
                                 }
                             }
+
+                            .total{
+                                font-weight: 700;
+                            }
                         }
                     }
+
+                    .origen{
+                        border: 1px solid #036061;
+                    }
                 }
+
+                /* Estilo general del scrollbar */
+                .cambios::-webkit-scrollbar {
+                    width: 6px;   /* ancho de la barra vertical */
+                    height: 6px;  /* alto de la barra horizontal */
+                }
+
+                /* El "track" (fondo del scroll) */
+                .cambios::-webkit-scrollbar-track {
+                    background: transparent; /* lo dejamos invisible */
+                }
+
+                /* La "thumb" (la parte que se mueve) */
+                .cambios::-webkit-scrollbar-thumb {
+                    background-color: #af9161; /* café */
+                    border-radius: 10px;       /* redondeada */
+                }
+
             }
         }
 
@@ -472,7 +518,7 @@ $font-second: "DM Sans", sans-serif;
 
                 .headMesas{
                     display: grid;
-                    grid-template-columns: 60px 55px 24px auto 30px;
+                    grid-template-columns: 70px 55px 24px auto 30px;
                     justify-items: start;
                     align-items: center;
 

@@ -4,7 +4,7 @@ function Paquete(){
     const paquete =[
         {
             paquete: "Basico",
-            precio: '$500 / mx',
+            precio: '$1,000 / mx',
             caracteristicas: [
                 {
                     caracteristica: "Detalles de tu evento",
@@ -30,7 +30,7 @@ function Paquete(){
         },
         {
             paquete: "Estandar",
-            precio: '$2,000 / mx',
+            precio: '$3,000 / mx',
             caracteristicas: [
                 {
                     caracteristica: "Basico",
@@ -56,7 +56,7 @@ function Paquete(){
         },
         {
             paquete: "Premium",
-            precio: '$3,000 / mx',
+            precio: '$4,000 / mx',
             caracteristicas: [
                 {
                     caracteristica: "Basico + Estandar",

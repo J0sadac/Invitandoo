@@ -21,7 +21,7 @@ function Notificaciones ({tipo}) {
             {tipo === 'editado' && (
                 <div className='noti'>
                     <img src={correcto} alt='eliminado' />
-                    <span>CAMBIOS GUARDADOS</span>
+                    <span>CAMBIOS GUARDADOS CORRECTAMENTE</span>
                 </div>
             )}
         </div>

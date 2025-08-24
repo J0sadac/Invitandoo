@@ -253,7 +253,7 @@
 .home .paquetes .packs .contenedor {
   background-color: rgba(245, 242, 233, 0.1019607843);
   width: 318px;
-  height: 515px;
+  height: 555px;
   padding: 37px 22px 10px;
   margin-bottom: 20px;
 }
@@ -4026,13 +4026,17 @@
 .gestion .administrar .ventana .cambiar {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   background-color: #F6F2E9;
   border-radius: 15px;
   width: 350px;
   height: 575px;
+  padding-right: 5px;
   position: relative;
   z-index: 100;
+  /* Estilo general del scrollbar */
+  /* El "track" (fondo del scroll) */
+  /* La "thumb" (la parte que se mueve) */
 }
 .gestion .administrar .ventana .cambiar .btnCerrar {
   width: 25px;
@@ -4044,7 +4048,7 @@
   font-size: 20px;
   font-weight: 700;
   position: absolute;
-  top: 40px;
+  top: 20px;
   right: 30px;
 }
 .gestion .administrar .ventana .cambiar .titulo {
@@ -4052,34 +4056,67 @@
   font-size: 24px;
   font-weight: 600;
   margin-left: 20px;
+  margin-bottom: 0px;
 }
-.gestion .administrar .ventana .cambiar .cambios .mesa {
+.gestion .administrar .ventana .cambiar .invCambiar {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+}
+.gestion .administrar .ventana .cambiar .invCambiar .invDatos {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  gap: 12px;
+}
+.gestion .administrar .ventana .cambiar .cambios {
+  height: 450px;
+  overflow-y: auto;
+}
+.gestion .administrar .ventana .cambiar .cambios .mesa {
+  display: grid;
+  grid-template-columns: 75px auto;
   align-items: center;
-  margin: 15px;
-  padding: 15px 10px;
+  border-radius: 15px;
+  margin: 10px 15px;
+  padding: 15px 20px;
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
+  cursor: pointer;
 }
 .gestion .administrar .ventana .cambiar .cambios .mesa .datos {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.gestion .administrar .ventana .cambiar .cambios .mesa .datos .total {
-  display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 .gestion .administrar .ventana .cambiar .cambios .mesa .datos .dato {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
   font-weight: 500;
 }
 .gestion .administrar .ventana .cambiar .cambios .mesa .datos .dato .icon {
   width: 20px;
+}
+.gestion .administrar .ventana .cambiar .cambios .mesa .datos .total {
+  font-weight: 700;
+}
+.gestion .administrar .ventana .cambiar .cambios .origen {
+  border: 1px solid #036061;
+}
+.gestion .administrar .ventana .cambiar .cambios::-webkit-scrollbar {
+  width: 6px; /* ancho de la barra vertical */
+  height: 6px; /* alto de la barra horizontal */
+}
+.gestion .administrar .ventana .cambiar .cambios::-webkit-scrollbar-track {
+  background: transparent; /* lo dejamos invisible */
+}
+.gestion .administrar .ventana .cambiar .cambios::-webkit-scrollbar-thumb {
+  background-color: #af9161; /* café */
+  border-radius: 10px; /* redondeada */
 }
 .gestion .administrar .lista {
   display: flex;
@@ -4117,7 +4154,7 @@
 }
 .gestion .administrar .lista .seccion .headMesas {
   display: grid;
-  grid-template-columns: 60px 55px 24px auto 30px;
+  grid-template-columns: 70px 55px 24px auto 30px;
   justify-items: start;
   align-items: center;
   margin-bottom: 10px;

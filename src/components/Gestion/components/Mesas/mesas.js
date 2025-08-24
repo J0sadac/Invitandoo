@@ -75,6 +75,9 @@ function Mesas({listaInvitados, setRecargado}){
                 <Cambiar 
                     cerrar={cerrarVent}
                     seleccionar={seleccionado}
+                    mesas={listaDeMesas}
+                    setRecargar={setRecargado}
+                    setNoti={setNotifi}
                 />
             )}
         </section>
