@@ -5,15 +5,15 @@ import ver from '../../../icons/ver.png';
 import copiar from '../../../icons/copiar.png';
 import iconoEliminar from '../../../icons/eliminar.png';
 
-function Opciones ({invitado, abrir, setSelect, noti}) {
+function Opciones ({invitado, abrir, setSelect, setNoti}) {
     const {eventoId} = useParams();
     const navigate = useNavigate();
 
     const activar = (tipo) => {
-        noti(tipo);
+        setNoti(tipo);
 
         setTimeout(() => {
-            noti(null)
+            setNoti(null)
         }, 2000)
     };
 

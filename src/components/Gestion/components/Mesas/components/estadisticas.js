@@ -37,7 +37,7 @@ function Estadisticas({mesas}) {
       </div>
 
       <div className="datos">
-        <div className="categoria">Confirmados</div>
+        <div className="categoria">Confirmadas</div>
         <div className="dato">{estadisticas.completas}</div>
       </div>
 
