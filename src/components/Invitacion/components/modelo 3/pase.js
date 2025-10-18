@@ -70,7 +70,7 @@ function Pase ({evento, invitado, fondo, festejado, sugerencia}){
                         </div>
                     ): festejado === 'Bruno & Teresa' ?(
                         <></>
-                    ): festejado === 'Lizbeth y Agustín' ?(
+                    ): festejado === 'Lizbeth & Agustín' ?(
                         <></>
                     ):(
                         <div className="flores">

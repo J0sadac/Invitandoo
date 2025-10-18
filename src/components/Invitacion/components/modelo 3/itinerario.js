@@ -7,6 +7,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+import imgItenerario from '../../../../multimedia/herramientas/itinerario liz&agus.png'
+
 function Itinerario ({protocolo, fondo, festejado}) {
 
     return(
@@ -32,6 +34,15 @@ function Itinerario ({protocolo, fondo, festejado}) {
                             ))}
 
                     </div>
+                </section>
+            ): festejado === 'Lizbeth & Agustín' ? (
+                <section className='itinerario'>
+                    {fondo?.url && (
+                            <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
+                    )}
+                    <p className='titulo'>Itinerario</p>   
+
+                    <img className='imgIten' src={imgItenerario} alt='itinerario' />
                 </section>
             ):(
                 <section className={festejado === 'Leonel y Denisse' ? 'itinerario leo' : 'itinerario imprimir'}>
