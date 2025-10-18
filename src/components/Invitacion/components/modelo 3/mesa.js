@@ -45,7 +45,7 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                                         <img loading="lazy" className='icono' src={violeta} alt='...' />
                                     ) : festejado === 'Andrea Citalan' ? (
                                         <img loading="lazy" className='icono' src={vino} alt='...' />
-                                    ): festejado === 'Lizbeth y Agustín' ? (
+                                    ): festejado === 'Lizbeth & Agustín' ? (
                                         <img loading="lazy" className='icono' src={azul} alt='...' />
                                     ):(
                                         <img loading="lazy" className='icono' src={lluvia} alt='...' />

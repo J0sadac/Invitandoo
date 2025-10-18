@@ -180,7 +180,7 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                         </div>  
                     )}
 
-                    {festejado === 'Lizbeth y Agustín' && (
+                    {festejado === 'Lizbeth & Agustín' && (
                         <div className="contenedor">
                             <img loading='lazy' className='img' src={tonoCafe} alt='...' />
                         </div> 
