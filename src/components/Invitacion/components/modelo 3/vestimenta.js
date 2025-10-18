@@ -27,6 +27,7 @@ import tonoRojo from '../../../../multimedia/herramientas/tonos rojo.png';
 import tonosHM from '../../../../multimedia/herramientas/tonos hombre y mujer.png';
 import colores from '../../../../multimedia/herramientas/Azul.png';
 import fausto from '../../../../multimedia/herramientas/Colores Fausto.png'
+import tonoCafe from '../../../../multimedia/herramientas/paleta dresscode.png';
 
 import icono from '../../../../multimedia/herramientas/adorno dorado.gif';
 import iconoDerecho from '../../../../multimedia/herramientas/Detalle Horizontal derecho.gif';
@@ -147,7 +148,7 @@ function Vestimenta ({fondo, datos, festejado, modo}){
             </>
             {datos?.mensaje && (
                 <>
-                    <p>{datos.mensaje}</p>
+                    <p className='pet'>{datos.mensaje}</p>
 
                     {festejado === 'Danna Paola Huerta' && (
                         <div className="contenedor">
@@ -177,6 +178,12 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                         <div className="contenedor">
                             <img loading='lazy' className='img' src={fausto} alt='...' />
                         </div>  
+                    )}
+
+                    {festejado === 'Lizbeth y Agustín' && (
+                        <div className="contenedor">
+                            <img loading='lazy' className='img' src={tonoCafe} alt='...' />
+                        </div> 
                     )}
                 </>
             )}

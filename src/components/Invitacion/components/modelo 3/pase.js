@@ -70,6 +70,8 @@ function Pase ({evento, invitado, fondo, festejado, sugerencia}){
                         </div>
                     ): festejado === 'Bruno & Teresa' ?(
                         <></>
+                    ): festejado === 'Lizbeth y Agustín' ?(
+                        <></>
                     ):(
                         <div className="flores">
                             <img loading='lazy' className='petalo left' src={petalos} alt='...' />

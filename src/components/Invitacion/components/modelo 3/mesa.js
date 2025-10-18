@@ -5,6 +5,7 @@ import lluvia from '../../../../multimedia/herramientas/Lluvia de sobres.svg';
 import negros from '../../../../multimedia/herramientas/Lluvia de sobres negros.png';
 import violeta from '../../../../multimedia/herramientas/violeta.png';
 import vino from '../../../../multimedia/herramientas/Sobres vino.png';
+import azul from '../../../../multimedia/herramientas/Lluvia de sobres azul.png';
 import bbva from '../../../../multimedia/herramientas/BBVA-logo.png';
 import sears from '../../../../multimedia/herramientas/sears.png'
 import antifaz from '../../../../multimedia/herramientas/antifaz veneciaga.png';
@@ -44,6 +45,8 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                                         <img loading="lazy" className='icono' src={violeta} alt='...' />
                                     ) : festejado === 'Andrea Citalan' ? (
                                         <img loading="lazy" className='icono' src={vino} alt='...' />
+                                    ): festejado === 'Lizbeth y Agustín' ? (
+                                        <img loading="lazy" className='icono' src={azul} alt='...' />
                                     ):(
                                         <img loading="lazy" className='icono' src={lluvia} alt='...' />
                                     )}
@@ -79,7 +82,8 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                             <div className='regalo'>
                                 <div className="contenido">
                                     <img loading="lazy" className='icono' src={bbva} alt='...' />
-                                    <p className='codigo'>Numero de cuenta: {mesa[1].tarjeta}</p>
+                                    <p className='codigo'>Numero de cuenta: </p>
+                                    <p className='codigo'>{mesa[1].tarjeta}</p>
                                     <p className='codigo'>Nombre del destinatario: {mesa[1].destinatario}</p>
                                 </div>
                             </div>
