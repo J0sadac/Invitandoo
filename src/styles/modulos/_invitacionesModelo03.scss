@@ -2464,6 +2464,192 @@ $font-date-size: var(--font-date-size);
                 }
             }
         }
+
+        .recomendacion{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 80vh;
+
+            position: relative;
+            z-index: 100;
+
+            padding: 15px 10px;
+
+            text-align: center;
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 50;
+            }
+
+            .titulo{
+                font-family: $font-main;
+                font-size: $font-main-size;
+                color: var(--color-padit);
+                font-weight: 600;
+
+                z-index: 100;
+            }
+
+            .contenedor{
+              display: flex;
+              flex-direction: column;
+              
+              width: 100%;
+              z-index: 100;
+
+              .grupo{
+                width: 100%;
+                margin-bottom: 35px;
+
+                .subtitulo{
+                    font-family: $font-second;
+                    font-size: $font-main-size;
+
+                    color: var(--color-padit);
+                }
+
+                .swiper-button-next:after{
+                    color: white;
+                    font-size: 35px;
+
+                    width: 5px;
+                }
+
+                .swiper-button-prev:after{
+                    color: white;
+                    font-size: 35px;
+
+                    width: 30px;
+                }
+
+                .swiper-button-prev{
+                    margin-top: 10px;
+                }
+
+                .swiper-button-next{
+                    margin-top: 10px;
+                }
+
+                .swiper-pagination-bullet-active{
+                    background-color: white;
+                }
+
+                .tarjetas{
+                    
+                    .tarjeta{
+                        background-color: var(--color-padit);
+
+                        padding: 20px 15px;
+                        border-radius: 15px;
+            
+                        width: 300px;
+                        min-height: 375px;
+                        max-height: 520px;
+
+                        font-family: $font-second;
+                        font-size: 18px;
+
+                        color: white;
+
+                        img{
+                            width: 325px;
+                            height: 225px;
+    
+                            object-fit: cover;
+    
+                            margin-bottom: 10px;
+                        }
+
+                        .contenido{
+                            margin-bottom: 30px;
+    
+                            .nombre{
+                                font-size: 22px;
+                                margin-top: 10px;
+                            }
+    
+                            a{
+                                margin-bottom: 10px;
+                            }
+
+                            .icon{
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
+              }
+            }
+
+        }
+
+        .hashtag{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 15px;
+            padding-bottom: 25px;
+
+            position: relative;
+            z-index: 100;
+
+            color: white;
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 50;
+            }
+
+            .titulo{
+                font-family: $font-main;
+                font-size: $font-main-size;
+
+                z-index: 100;
+            }
+
+            .subtitulo{
+                font-family: $font-second;
+                font-size: $font-second-size;
+
+                z-index: 100;
+            }
+
+            .content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                z-index: 100;
+
+                .codigo{
+                    width: 250px;
+                }
+
+                .hash{
+                    font-family: $font-second;
+                    font-size: $font-second-size;
+                }
+            }
+            
+        }
     }
 
 }

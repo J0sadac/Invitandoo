@@ -2,6 +2,8 @@ import { useEffect, lazy } from 'react';
 import Pensamiento from './components/modelo 3/pensamiento';
 import Sobre from './components/modelo 3/sobre';
 import Timeline from './components/modelo 3/timeline';
+import Recomendacion from './components/modelo 3/recomendacion';
+import Hashtag from './components/modelo 3/hashtag';
 
 const Portada = lazy(() => import("./components/modelo 3/portada"));
 const Mensaje = lazy(() => import("./components/modelo 3/mensaje"));
@@ -220,6 +222,16 @@ function Invitaciones({ evento, festejado }) {
                             galeria={evento.multimedia.galeria}
                         />
                     )}
+
+                    <Recomendacion 
+                        fondo={evento.multimedia.fondos.segundo}
+                        datos={evento.datos.recomendacion}
+                    />
+
+                    <Hashtag 
+                        fondo={evento.multimedia.fondos.primero}
+                        datos={evento.hashtag}
+                    />
 
                     {evento.evento !== 'Graduacion' && (
                         <Confirmacion 
