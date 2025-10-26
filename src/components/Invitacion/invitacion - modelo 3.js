@@ -143,6 +143,7 @@ function Invitaciones({ evento, festejado }) {
                         fondo={evento.multimedia.fondos.tercero}
                         festejado={evento.datos.festejado}
                         sugerencia={evento.sugerencia}
+                        condiciones={evento.confirmaciones}
                     />
                     
                     {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (

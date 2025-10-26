@@ -22,4 +22,4 @@ function Hashtag ({fondo, datos}) {
     )
 }
 
-export default Hashtag
+export default Hashtag;

@@ -3,7 +3,7 @@ import amarillas from '../../../../multimedia/herramientas/flor amarilla.gif';
 import rosas from '../../../../multimedia/herramientas/Flores rosas.gif';
 
 
-function Pase ({evento, invitado, fondo, festejado, sugerencia}){
+function Pase ({evento, invitado, fondo, festejado, sugerencia, condiciones}){
 
     return(
         <section className={festejado === 'Leonel y Denisse' ? 'pase leo' : 'pase imprimir'}>
@@ -26,11 +26,7 @@ function Pase ({evento, invitado, fondo, festejado, sugerencia}){
                 </div>
             )}
             
-
-            {festejado === 'Ivanna Zoé' || festejado === 'Lenny Nadxieli' ? (
-                <>
-                </>
-            ):(
+            {condiciones.mesa === true && (
                 <>
                     {invitado.mesa > 0 &&(
                         <div className="datos">
