@@ -224,15 +224,19 @@ function Invitaciones({ evento, festejado }) {
                         />
                     )}
 
-                    <Recomendacion 
-                        fondo={evento.multimedia.fondos.segundo}
-                        datos={evento.datos.recomendacion}
-                    />
+                    {evento?.datos?.recomendacion && evento?.datos?.recomendacion.length >= 1 && (
+                        <Recomendacion 
+                            fondo={evento.multimedia.fondos.segundo}
+                            datos={evento.datos.recomendacion}
+                        />
+                    )}
 
-                    <Hashtag 
-                        fondo={evento.multimedia.fondos.primero}
-                        datos={evento.hashtag}
-                    />
+                    {evento?.hashtag && (
+                        <Hashtag 
+                            fondo={evento.multimedia.fondos.primero}
+                            datos={evento.hashtag}
+                        />
+                    )}
 
                     {evento.evento !== 'Graduacion' && (
                         <Confirmacion 
