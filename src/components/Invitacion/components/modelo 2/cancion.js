@@ -1,27 +1,34 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, forwardRef, useImperativeHandle } from "react";
 import close from "../../../../multimedia/herramientas/x-lg.svg";
 import open from "../../../../multimedia/herramientas/soundwave.svg";
 import play from "../../../../multimedia/herramientas/play.png";
 import pause from "../../../../multimedia/herramientas/pause.png";
 
-function Cancion({ url }) {
+const Cancion = forwardRef(({ url }, ref) => {
   const [ventana, setVentana] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
-  //const [volume, setVolume] = useState(1);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef(null);
 
+  useImperativeHandle(ref, () => ({
+    playSong() {
+      setVentana(false); // cierra la ventana
+      if (!isPlaying) {
+        audioRef.current.play();
+        setIsPlaying(true);
+      }
+    },
+    closeWindow() {
+      setVentana(false); // 👈 función separada para cerrar sin reproducir
+    }
+  }));
+
   useEffect(() => {
     const audio = audioRef.current;
 
-    const updateCurrentTime = () => {
-      setCurrentTime(audio.currentTime);
-    };
-
-    const updateDuration = () => {
-      setDuration(audio.duration);
-    };
+    const updateCurrentTime = () => setCurrentTime(audio.currentTime);
+    const updateDuration = () => setDuration(audio.duration);
 
     audio.addEventListener("timeupdate", updateCurrentTime);
     audio.addEventListener("loadedmetadata", updateDuration);
@@ -32,9 +39,7 @@ function Cancion({ url }) {
     };
   }, []);
 
-  const puerta = (estado) => {
-    setVentana(estado);
-  };
+  const puerta = (estado) => setVentana(estado);
 
   const togglePlay = () => {
     if (isPlaying) {
@@ -45,12 +50,6 @@ function Cancion({ url }) {
     setIsPlaying(!isPlaying);
   };
 
-  // const handleVolumeChange = (e) => {
-  //   const volume = e.target.value;
-  //   audioRef.current.volume = volume;
-  //   setVolume(volume);
-  // };
-
   const handleProgressChange = (e) => {
     const time = e.target.value;
     audioRef.current.currentTime = time;
@@ -58,12 +57,7 @@ function Cancion({ url }) {
   };
 
   const handleClickContainer = (event) => {
-    if (
-      event.target.closest(".cerrar") ||
-      event.target.closest(".contenido")
-    ) {
-      return;
-    }
+    if (event.target.closest(".cerrar") || event.target.closest(".contenido")) return;
     setVentana(false);
   };
 
@@ -87,24 +81,18 @@ function Cancion({ url }) {
                   onChange={handleProgressChange}
                 />
               </div>
-              
               <div className="tiempo-control">
                 <span>{formatTime(currentTime)}</span>
-                
                 <button onClick={togglePlay} className="play-pause">
-                  {isPlaying ? (
-                    <img className="icono" src={pause} alt="..." onClick={() => puerta(false)} />
-                  ):(
-                    <img className="icono" src={play} alt="..." onClick={() => puerta(false)}/>
-                  )}
+                  <img className="icono" src={isPlaying ? pause : play} alt="..." />
                 </button>
-
                 <span>{formatTime(duration)}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div className={`${ventana === false ? "puerta" : "cerrado"}`}>
         <button className="abrir" onClick={() => puerta(true)}>
           <img src={open} alt="..." className="icono" />
@@ -112,7 +100,7 @@ function Cancion({ url }) {
       </div>
     </div>
   );
-}
+});
 
 function formatTime(seconds) {
   const minutes = Math.floor(seconds / 60);

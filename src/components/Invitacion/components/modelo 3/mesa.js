@@ -5,6 +5,7 @@ import lluvia from '../../../../multimedia/herramientas/Lluvia de sobres.svg';
 import negros from '../../../../multimedia/herramientas/Lluvia de sobres negros.png';
 import violeta from '../../../../multimedia/herramientas/violeta.png';
 import vino from '../../../../multimedia/herramientas/Sobres vino.png';
+import verde from '../../../../multimedia/herramientas/Lluvia de sobres verde.png';
 import azul from '../../../../multimedia/herramientas/Lluvia de sobres azul.png';
 import bbva from '../../../../multimedia/herramientas/BBVA-logo.png';
 import sears from '../../../../multimedia/herramientas/sears.png'
@@ -45,6 +46,8 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                                         <img loading="lazy" className='icono' src={violeta} alt='...' />
                                     ) : festejado === 'Andrea Citalan' ? (
                                         <img loading="lazy" className='icono' src={vino} alt='...' />
+                                    ): festejado === 'Mar & Adrián' ? (
+                                        <img loading="lazy" className='icono' src={verde} alt='...' />
                                     ): festejado === 'Lizbeth & Agustín' ? (
                                         <img loading="lazy" className='icono' src={azul} alt='...' />
                                     ):(

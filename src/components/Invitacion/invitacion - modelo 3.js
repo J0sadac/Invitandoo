@@ -1,9 +1,10 @@
-import { useEffect, lazy } from 'react';
+import { useEffect, lazy, useRef } from 'react';
 import Pensamiento from './components/modelo 3/pensamiento';
 import Sobre from './components/modelo 3/sobre';
 import Timeline from './components/modelo 3/timeline';
 import Recomendacion from './components/modelo 3/recomendacion';
 import Hashtag from './components/modelo 3/hashtag';
+import Capitulo from './components/modelo 3/capitulo';
 
 const Portada = lazy(() => import("./components/modelo 3/portada"));
 const Mensaje = lazy(() => import("./components/modelo 3/mensaje"));
@@ -23,9 +24,18 @@ const Desplazar = lazy(() => import("./components/modelo 3/desplazar"));
 const Frases = lazy(() => import('./components/modelo 3/frase'));
 const Collage = lazy(() => import("./components/modelo 3/collage"));
 const Condiciones = lazy(() => import('./components/modelo 3/condiciones'));
-const MensajeCompromiso = lazy(() => import('./components/modelo 3/mensajeCompromiso'));
+
 
 function Invitaciones({ evento, festejado }) {
+    const cancionRef = useRef(null);
+
+    const handleCerrarVentanaCancion = () => {
+        cancionRef.current?.closeWindow(); // 👈 cerrar inmediatamente
+    };
+
+    const handleReproducirCancion = () => {
+        cancionRef.current?.playSong(); // 👈 reproducir cuando acabe animación
+    };
     useEffect(() => {
         if (evento.estilos) {
             const styles = evento.estilos;
@@ -75,23 +85,26 @@ function Invitaciones({ evento, festejado }) {
 
                 {evento.evento !== 'Graduacion' && (
                     <Cancion 
+                        ref={cancionRef}
                         url={evento.multimedia.cancion.url}
                     />
                 )}
 
-                {evento.datos.festejado === 'Consuelo & Andrés' && (
-                    <Sobre />
+                {evento?.sobre && (
+                    <Sobre 
+                        sobre={evento.sobre}
+                        onCerrarVentanaCancion={handleCerrarVentanaCancion}
+                        onReproducirCancion={handleReproducirCancion}
+                    />
                 )}
 
                 <Desplazar />
 
                 <div className="caja">
-                    
-                    {festejado === 'Fausto & Yulissa' && (
-                        <MensajeCompromiso 
-                            img={evento.frase3.img}
-                            frase={evento.frase3.frase}
-                            festejado={evento.datos.festejado}
+                    {evento?.capitulo && (
+                        <Capitulo 
+                            capitulo={evento.capitulo}
+                            fondo={evento.multimedia.fondos.primero}
                         />
                     )}
                     

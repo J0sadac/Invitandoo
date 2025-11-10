@@ -1,32 +1,33 @@
 import React, { useState } from 'react';
-import izquierda from '../../../../multimedia/herramientas/sobre izquierda.png';
-import derecha from '../../../../multimedia/herramientas/sobre derecha.png';
-import sello from '../../../../multimedia/herramientas/sello conand.gif';
 
-function Sobre() {
-    const [hideImages, setHideImages] = useState(false);
+function Sobre({ sobre, onCerrarVentanaCancion, onReproducirCancion }) {
+  const [hideImages, setHideImages] = useState(false);
 
-    const handleClick = () => {
-        setHideImages(true);
+  const handleClick = () => {
+    // 🔹 1️⃣ Cierra la ventana de la canción de inmediato
+    if (onCerrarVentanaCancion) onCerrarVentanaCancion();
 
-        const sobre = document.querySelector('.sobre');
-        sobre.classList.add('hidden'); // Agrega la clase para animar
-    
-        // Espera el tiempo de la animación antes de aplicar display: none
-        setTimeout(() => {
-          sobre.style.display = 'none';
-        }, 500); 
-    };
+    // 🔹 2️⃣ Comienza animación del sobre
+    setHideImages(true);
+    const sobreEl = document.querySelector('.sobre');
+    sobreEl.classList.add('hidden');
 
-    return (
-        <section className={`sobre ${hideImages ? 'hidden' : ''}`}>
-            <img className="img izquierda" src={izquierda} alt="..." />
-            <img className="img derecha" src={derecha} alt="..." />
-            <button className={`boton ${hideImages ? 'hidden' : ''}`} onClick={handleClick}>
-                <img className="sello" src={sello} alt="..." />
-            </button>
-        </section>
-    );
+    // 🔹 3️⃣ Espera a que acabe la animación, luego reproduce la música
+    setTimeout(() => {
+      sobreEl.style.display = 'none';
+      if (onReproducirCancion) onReproducirCancion();
+    }, 800); // tiempo de animación del sobre
+  };
+
+  return (
+    <section className={`sobre ${hideImages ? 'hidden' : ''}`}>
+      <img className="img izquierda" src={sobre.cuerpo} alt="..." />
+      <img className="img derecha" src={sobre.solapa} alt="..." />
+      <button className={`boton ${hideImages ? 'hidden' : ''}`} onClick={handleClick}>
+        <img className="sello" src={sobre.sello} alt="..." />
+      </button>
+    </section>
+  );
 }
 
 export default Sobre;

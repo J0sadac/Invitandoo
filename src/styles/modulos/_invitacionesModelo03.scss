@@ -95,9 +95,6 @@ $font-date-size: var(--font-date-size);
             max-width: 450px;
             min-width: 400px;
 
-
-            background-color: rgb(0, 0, 0, 0.6);
-
             position: absolute;
             z-index: 20;
 
@@ -112,22 +109,9 @@ $font-date-size: var(--font-date-size);
             color: rgb(20, 18, 6);
 
             .titulo{
-
                 transition: .3s linear;
-                color: transparent;
-
-                background-image: var(--portada-titulo);
-                background-size: 200%;
-                background-clip: padding-box;
-                -webkit-background-clip: text;
-
-                animation: move 30s linear infinite;
-            }
-
-            @keyframes move {
-                100%{
-                    background-position: 2000px 0;
-                }
+                color: white;
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
             }
 
             .contenedor{
@@ -137,28 +121,11 @@ $font-date-size: var(--font-date-size);
 
                 font-family: $font-main;
                 font-size: $font-main-size;
+                color: white;
+
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 
                 width: 100%;
-
-                background-image: var(--portada-contenido);
-                background-clip: padding-box;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                animation: anim 4s linear alternate infinite;
-            }
-
-            @keyframes anim {
-                0%{
-                    background-position: 0;
-                }
-
-                60%{
-                    background-position: 180px;
-                }
-
-                100%{
-                    background-position: 440px;
-                }
             }
         }
     }
@@ -176,11 +143,10 @@ $font-date-size: var(--font-date-size);
         width: 100%;
         height: 100vh;
 
-        margin-top: 15px;
 
         .img {
             width: 100%;
-            height: 105vh;
+            height: 100vh;
             object-fit: cover;
             transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 
@@ -197,14 +163,14 @@ $font-date-size: var(--font-date-size);
 
         .boton {
             position: absolute;
-            left: 30px;
+            left: 90px;
             z-index: 20;
             background: none;
             border: none;
             cursor: pointer;
 
             img.sello {
-                width: 170px;
+                width: 150px;
                 object-fit: contain;
             }
         }
@@ -1290,6 +1256,9 @@ $font-date-size: var(--font-date-size);
 
                     z-index: 100;
 
+                    margin-top: 15px;
+                    margin-bottom: 10px;
+
                     .nombre{
                         font-size: $font-second-size;
                         font-weight: 500;
@@ -1643,13 +1612,16 @@ $font-date-size: var(--font-date-size);
 
             .frase{
                 font-family: $font-message;
-                font-size: $font-message-size;
+                font-size: calc($font-message-size - 3px);
+
                 font-weight: 800;
 
                 padding: 15px;
                 padding-left: 20px;
 
                 z-index: 100;
+
+                margin-top: 220px;
             }
 
         }
@@ -2649,6 +2621,51 @@ $font-date-size: var(--font-date-size);
                 }
             }
             
+        }
+
+        .capitulo{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+             position: relative;
+            z-index: 100;
+
+            height: 45vh;
+            padding: 20px;
+
+            text-align: center;
+
+            .fondo{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 50;
+
+                object-fit: cover;
+            }
+
+            .texto{
+                z-index: 100;
+
+                font-family: $font-main;
+                font-size: calc($font-main-size - 8px);
+            }
+
+            .verso{
+                align-self: flex-end;
+
+                z-index: 100;
+
+                font-family: $font-second;
+                font-size: $font-second-size;
+
+                margin-bottom: 0;
+            }
         }
     }
 
