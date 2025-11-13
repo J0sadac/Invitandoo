@@ -19,7 +19,8 @@ function Padres ({evento, datos, fondo, festejado}){
                     )}
 
                     {festejado !== 'Alejandra & Alexander' &&
-                    festejado !== 'Bruno & Teresa' ? (
+                    festejado !== 'Bruno & Teresa' &&
+                    festejado !== 'Mar & Adrián' ? (
                         <img loading='lazy' className='colgante' src={colgante} alt='...' />
                     ):(<></>)}
                     
@@ -54,7 +55,8 @@ function Padres ({evento, datos, fondo, festejado}){
                     </div>
 
                     {festejado !== 'Alejandra & Alexander' &&
-                    festejado !== 'Bruno & Teresa' ? (
+                    festejado !== 'Bruno & Teresa' &&
+                    festejado !== 'Mar & Adrián' ? (
                         <img loading='lazy' className='pie' src={pie} alt='...' />
                     ):(
                         <></>

@@ -28,6 +28,7 @@ import tonosHM from '../../../../multimedia/herramientas/tonos hombre y mujer.pn
 import colores from '../../../../multimedia/herramientas/Azul.png';
 import fausto from '../../../../multimedia/herramientas/Colores Fausto.png'
 import tonoCafe from '../../../../multimedia/herramientas/paleta dresscode.png';
+import tonoPastel from '../../../../multimedia/herramientas/tonos pastel.png';
 
 import icono from '../../../../multimedia/herramientas/adorno dorado.gif';
 import iconoDerecho from '../../../../multimedia/herramientas/Detalle Horizontal derecho.gif';
@@ -183,6 +184,12 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                     {festejado === 'Lizbeth & Agustín' && (
                         <div className="contenedor">
                             <img loading='lazy' className='img' src={tonoCafe} alt='...' />
+                        </div> 
+                    )}
+
+                    {festejado === 'Mar & Adrián' && (
+                        <div className="contenedor">
+                            <img loading='lazy' className='img' src={tonoPastel} alt='...' />
                         </div> 
                     )}
                 </>

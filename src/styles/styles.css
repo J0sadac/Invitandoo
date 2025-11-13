@@ -1881,13 +1881,13 @@
   text-align: center;
   font-family: "Crimson Text", serif;
   font-size: 40px;
-  font-weight: 800;
   color: rgb(20, 18, 6);
 }
 .modelo3 .portada .nombres .titulo {
   transition: 0.3s linear;
-  color: white;
+  color: black;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  font-weight: 800;
 }
 .modelo3 .portada .nombres .contenedor {
   display: flex;
@@ -1895,7 +1895,7 @@
   justify-content: space-evenly;
   font-family: var(--font-main);
   font-size: var(--font-main-size);
-  color: white;
+  color: black;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   width: 100%;
 }
@@ -2208,7 +2208,7 @@
 }
 .modelo3 .caja .padres .titulo {
   font-family: var(--font-main);
-  font-size: var(--font-main-size);
+  font-size: calc(var(--font-main-size) - 10px);
   font-weight: 800;
   z-index: 100;
   background: var(--color-padres);
@@ -2256,6 +2256,7 @@
   width: 25px;
 }
 .modelo3 .caja .padres .contenedor .padre {
+  font-family: var(--font-main);
   font-weight: 800;
 }
 .modelo3 .caja .padres .contenedor .papa {
@@ -2273,6 +2274,8 @@
   font-size: 30px;
 }
 .modelo3 .caja .padres .contenedor p {
+  font-family: var(--font-main);
+  font-size: 40px;
   font-weight: 800;
 }
 .modelo3 .caja .padres .colgante {
@@ -2338,8 +2341,8 @@
   background-color: #fff;
 }
 .modelo3 .caja .padrinos .titulo {
-  font-family: "Crimson Text", serif;
-  font-size: 40px;
+  font-family: var(--font-main);
+  font-size: calc(var(--font-main-size) - 10px);
   font-weight: 800;
   color: var(--color-padit);
   margin-top: 20px;
@@ -2836,8 +2839,8 @@
   z-index: 50;
 }
 .modelo3 .caja .itinerario .titulo {
-  font-family: "Crimson Text", serif;
-  font-size: 40px;
+  font-family: var(--font-main);
+  font-size: calc(var(--font-main-size) - 10px);
   font-weight: 800;
   color: var(--color-padit);
   margin-top: 20px;
@@ -3160,8 +3163,8 @@
 }
 .modelo3 .caja .mesa .contenido div .regalo .codigo {
   color: var(--color-mesa);
-  font-family: var(--font-second);
-  font-size: var(--font-second-size);
+  font-family: var(--font-main);
+  font-size: var(--font-date-size);
 }
 .modelo3 .caja .mesa .contenido div .regalo .anuncio {
   color: var(--color-mesa);
@@ -3228,7 +3231,7 @@
 }
 .modelo3 .caja .vestimenta .titulo {
   font-family: var(--font-main);
-  font-size: var(--font-main-size);
+  font-size: calc(var(--font-main-size) - 10px);
   font-weight: 800;
   margin-top: 25px;
   z-index: 100;
@@ -3420,7 +3423,7 @@
 }
 .modelo3 .caja .confirmacion .titulo {
   font-family: var(--font-main);
-  font-size: var(--font-main-size);
+  font-size: calc(var(--font-main-size) - 15px);
   font-weight: 800;
   z-index: 100;
 }
@@ -3450,6 +3453,7 @@
   border-radius: 10px;
   width: 110px;
   height: 47px;
+  color: black;
 }
 .modelo3 .caja .confirmacion .confirmar .botones .si {
   background-color: lightgreen;
@@ -3745,7 +3749,8 @@
 .modelo3 .caja .capitulo .texto {
   z-index: 100;
   font-family: var(--font-main);
-  font-size: calc(var(--font-main-size) - 8px);
+  font-size: calc(var(--font-main-size) - 25px);
+  font-weight: 800;
 }
 .modelo3 .caja .capitulo .verso {
   align-self: flex-end;

@@ -20,7 +20,7 @@ const Ubicacion = ({ fondo, ubicacion, mapa }) => {
                 <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}
             <div className='encabezado'>
-                <p className="titulo">Ubicación GPS</p>
+                <p className="titulo">Ubicación</p>
             </div>
 
             <section>
