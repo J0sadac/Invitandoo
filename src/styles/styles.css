@@ -1885,7 +1885,7 @@
 }
 .modelo3 .portada .nombres .titulo {
   transition: 0.3s linear;
-  color: black;
+  color: white;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   font-weight: 800;
 }
@@ -1895,7 +1895,7 @@
   justify-content: space-evenly;
   font-family: var(--font-main);
   font-size: var(--font-main-size);
-  color: black;
+  color: white;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   width: 100%;
 }
