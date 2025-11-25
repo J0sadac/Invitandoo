@@ -1,7 +1,8 @@
-import fiesta from '../../../../multimedia/herramientas/fiesta.png';
+
 import prohibido from '../../../../multimedia/herramientas/celular prohibido.png';
-import bailar from '../../../../multimedia/herramientas/bailar.png';
+import divertirse from '../../../../multimedia/herramientas/divertirse.png'
 import brindar from '../../../../multimedia/herramientas/brindar.png';
+import dance from '../../../../multimedia/herramientas/dance.gif'
 
 function Condiciones ({fondo, festejado}) {
 
@@ -17,7 +18,7 @@ function Condiciones ({fondo, festejado}) {
                 <p className="condicion">
                     Si decides acompañarme en mi gran día, que sea solo con un motivo ¡DIVERTIRSE!
                 </p>
-                <img loading='lazy' className="icono" src={fiesta} alt='...' />
+                <img loading='lazy' className="icono" src={divertirse} alt='...' />
             </div>
             <div className="contenedor shadow-lg">
                 <p className="condicion">
@@ -29,7 +30,7 @@ function Condiciones ({fondo, festejado}) {
                 <p className="condicion">
                     ¡Bailar TODA la velada junto a la quinceañera!
                 </p>
-                <img loading='lazy' className="icono" src={bailar} alt='...' />
+                <img loading='lazy' className="icono" src={dance} alt='...' />
             </div>
             <div className="contenedor shadow-lg">
                 <p className="condicion">
