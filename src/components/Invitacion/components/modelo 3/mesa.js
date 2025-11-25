@@ -39,10 +39,12 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                             <div className='regalo'>
                                 <div className="contenido">
                                     {festejado === 'Alejandra & Alexander' || 
-                                        festejado === 'Xamira Escobar Franco'
+                                     festejado === 'Xamira Escobar Franco'
                                     ? (
                                         <img loading="lazy" className='icono' src={negros} alt='...' />
-                                    ) : festejado === 'Keila Jozabed' ? (
+                                    ) : festejado === 'Keila Jozabed' ||
+                                        festejado === 'Ham'
+                                    ? (
                                         <img loading="lazy" className='icono' src={violeta} alt='...' />
                                     ) : festejado === 'Andrea Citalan' ? (
                                         <img loading="lazy" className='icono' src={vino} alt='...' />

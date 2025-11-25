@@ -1849,6 +1849,7 @@
   --font-message-size: 37px;
   --font-date-size: 60px;
   --altura-portada: 65px;
+  --distancia-sello: 65px;
 }
 
 .modelo3 {
@@ -1926,7 +1927,7 @@
 }
 .modelo3 .sobre .boton {
   position: absolute;
-  left: 90px;
+  left: var(--distancia-sello);
   z-index: 20;
   background: none;
   border: none;
@@ -2208,7 +2209,7 @@
 }
 .modelo3 .caja .padres .titulo {
   font-family: var(--font-main);
-  font-size: calc(var(--font-main-size) - 10px);
+  font-size: calc(var(--font-main-size) - 5px);
   font-weight: 800;
   z-index: 100;
   background: var(--color-padres);
@@ -2257,6 +2258,7 @@
 }
 .modelo3 .caja .padres .contenedor .padre {
   font-family: var(--font-main);
+  font-size: calc(var(--font-main-size) - 12px);
   font-weight: 800;
 }
 .modelo3 .caja .padres .contenedor .papa {

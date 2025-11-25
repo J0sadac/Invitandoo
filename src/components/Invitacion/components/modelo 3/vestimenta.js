@@ -29,6 +29,7 @@ import colores from '../../../../multimedia/herramientas/Azul.png';
 import fausto from '../../../../multimedia/herramientas/Colores Fausto.png'
 import tonoCafe from '../../../../multimedia/herramientas/paleta dresscode.png';
 import tonoPastel from '../../../../multimedia/herramientas/tonos pastel.png';
+import codigoHam from '../../../../multimedia/herramientas/codigo ham.png';
 
 import icono from '../../../../multimedia/herramientas/adorno dorado.gif';
 import iconoDerecho from '../../../../multimedia/herramientas/Detalle Horizontal derecho.gif';
@@ -190,6 +191,12 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                     {festejado === 'Mar & Adrián' && (
                         <div className="contenedor">
                             <img loading='lazy' className='img' src={tonoPastel} alt='...' />
+                        </div> 
+                    )}
+
+                    {festejado === 'Ham' && (
+                        <div className="contenedor">
+                            <img loading='lazy' className='img' src={codigoHam} alt='...' />
                         </div> 
                     )}
                 </>

@@ -54,6 +54,7 @@ $Crimson: 'Crimson Text', serif;
     --font-message-size: 37px;
     --font-date-size: 60px;
     --altura-portada: 65px;
+    --distancia-sello: 65px;
 }
 
 $font-main: var(--font-main);
@@ -164,7 +165,7 @@ $font-date-size: var(--font-date-size);
 
         .boton {
             position: absolute;
-            left: 90px;
+            left: var(--distancia-sello);
             z-index: 20;
             background: none;
             border: none;
@@ -552,10 +553,8 @@ $font-date-size: var(--font-date-size);
 
             .titulo{
                 font-family: $font-main;
-                font-size: calc($font-main-size - 10px);
-                font-weight: 800;
-
-                
+                font-size: calc($font-main-size - 5px);
+                font-weight: 800; 
 
                 z-index: 100;
 
@@ -619,6 +618,7 @@ $font-date-size: var(--font-date-size);
 
                 .padre{
                     font-family: $font-main;
+                    font-size: calc($font-main-size - 12px);
                     font-weight: 800;
                 }
 

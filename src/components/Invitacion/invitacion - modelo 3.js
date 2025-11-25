@@ -30,12 +30,13 @@ function Invitaciones({ evento, festejado }) {
     const cancionRef = useRef(null);
 
     const handleCerrarVentanaCancion = () => {
-        cancionRef.current?.closeWindow(); // 👈 cerrar inmediatamente
+        cancionRef.current?.closeWindow(); //cerrar inmediatamente
     };
 
     const handleReproducirCancion = () => {
-        cancionRef.current?.playSong(); // 👈 reproducir cuando acabe animación
+        cancionRef.current?.playSong(); //reproducir cuando acabe animación
     };
+
     useEffect(() => {
         if (evento.estilos) {
             const styles = evento.estilos;
@@ -43,28 +44,29 @@ function Invitaciones({ evento, festejado }) {
             styleSheet.type = 'text/css';
             styleSheet.innerText = `
                 :root {
-                    --portada-titulo: ${styles.tituloPortada || 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));'};
-                    --portada-contenido: ${styles.contenidoPortada || 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));'};
-                    --alineamiento-mensaje: ${styles.alineamientoMensaje || 'center'};
-                    --letras-mensaje: ${styles.letraMensaje || 'black'};
-                    --letras-pase: ${styles.letraPase || 'white'};
-                    --letras-ubicacion: ${styles.letraUbicacion || 'rgb(201, 147, 9)'};
-                    --color-padit: ${styles.colorPadit || 'rgb(201, 147, 9)'};
-                    --color-padres: ${styles.colorPadres || 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));'};
-                    --color-confirmar: ${styles.colorConfirmacion || 'white'};
-                    --color-galeria: ${styles.estilosGaleria.color || 'rgb(201, 147, 9)'};
-                    --color-invitacion: ${styles.estilosInvitacion.color || 'white'};
-                    --color-mesa: ${styles.colorMesa || 'white'};
-                    --contenido-padres: ${styles.contenidoPadres || 'white'};
-                    --letras-vestimenta: ${styles.letrasVestimenta || 'black'};
-                    --font-main: ${styles.fontMain || "'Tangerine', cursive"};
-                    --font-main-size: ${styles.fontMainSize || "55px"};
-                    --font-second: ${styles.fontSecond || "'Abel', sans-serif"};
-                    --font-second-size: ${styles.fontSecondSize || "25px"};
-                    --font-message: ${styles.fontMessage || "'Tangerine', cursive"};
-                    --font-message-size: ${styles.fontMessageSize || "37px"};
-                    --font-date-size: ${styles.fontDateSize || "60px"};
-                    --altura-portada: ${styles.alturaPortada || "65px"};
+                    --portada-titulo: ${styles.tituloPortada === '' ? 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));' : styles.tituloPortada};
+                    --portada-contenido: ${styles.contenidoPortada === '' ? 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));' : styles.contenidoPortada};
+                    --alineamiento-mensaje: ${styles.alineamientoMensaje === '' ? 'center' : styles.alineamientoMensaje};
+                    --letras-mensaje: ${styles.letraMensaje === '' ? 'black' : styles.letraMensaje};
+                    --letras-pase: ${styles.letraPase === '' ? 'white' : styles.letraPase};
+                    --letras-ubicacion: ${styles.letraUbicacion === '' ? 'rgb(201, 147, 9)' : styles.letraUbicacion};
+                    --color-padit: ${styles.colorPadit === '' ? 'rgb(201, 147, 9)' : styles.colorPadit};
+                    --color-padres: ${styles.colorPadres === '' ? 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));' : styles.colorPadres};
+                    --color-confirmar: ${styles.colorConfirmacion === '' ? 'white' : styles.colorConfirmacion};
+                    --color-galeria: ${styles.estilosGaleria.color === '' ? 'rgb(201, 147, 9)' : styles.estilosGaleria.color};
+                    --color-invitacion: ${styles.estilosInvitacion.color === '' ? 'white' : styles.estilosInvitacion.color};
+                    --color-mesa: ${styles.colorMesa === '' ? 'white' : styles.colorMesa};
+                    --contenido-padres: ${styles.contenidoPadres === '' ? 'white' : styles.contenidoPadres};
+                    --letras-vestimenta: ${styles.letrasVestimenta === '' ? 'black' : styles.letrasVestimenta};
+                    --font-main: ${styles.fontMain === '' ? "'Tangerine', cursive" : styles.fontMain};
+                    --font-main-size: ${styles.fontMainSize === '' ? "55px" : styles.fontMainSize};
+                    --font-second: ${styles.fontSecond === '' ? "'Abel', sans-serif" : styles.fontSecond};
+                    --font-second-size: ${styles.fontSecondSize === '' ? "25px" : styles.fontSecondSize};
+                    --font-message: ${styles.fontMessage === '' ? "'Tangerine', cursive" : styles.fontMessage};
+                    --font-message-size: ${styles.fontMessageSize === '' ? "37px" : styles.fontMessageSize};
+                    --font-date-size: ${styles.fontDateSize === '' ? "60px" : styles.fontDateSize};
+                    --altura-portada: ${styles.alturaPortada === '' ? "65px" : styles.alturaPortada};
+                    --distancia-sello: ${styles.distanciaSello === '' ? "65px" : styles.distanciaSello};
                 }
             `;
             document.head.appendChild(styleSheet);
