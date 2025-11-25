@@ -15,7 +15,11 @@ function Portada({ evento, festejado, foto}) {
                     ):(
                         <section className='portada'>
                             <div className='nombres'>
-                                <span className='titulo'>NUESTRA BODA</span>
+                                {festejado === 'Mar & Adrián' ? (
+                                    <span className='title'>Tenemos el honor de invitarte a nuestra boda</span>
+                                ):(
+                                    <span className='titulo'>NUESTRA BODA</span>
+                                )}
                                 <div className='contenedor'>
                                     <span>{festejado}</span>
                                 </div>

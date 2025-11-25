@@ -1890,6 +1890,14 @@
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   font-weight: 800;
 }
+.modelo3 .portada .nombres .title {
+  font-family: var(--font-main);
+  font-size: 40px;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  font-weight: 800;
+  padding: 8px;
+}
 .modelo3 .portada .nombres .contenedor {
   display: flex;
   flex-direction: row;
