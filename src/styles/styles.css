@@ -2266,7 +2266,7 @@
 }
 .modelo3 .caja .padres .contenedor .padre {
   font-family: var(--font-main);
-  font-size: calc(var(--font-main-size) - 12px);
+  font-size: calc(var(--font-main-size) - 16px);
   font-weight: 800;
 }
 .modelo3 .caja .padres .contenedor .papa {
