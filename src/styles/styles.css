@@ -2370,8 +2370,9 @@
 }
 .modelo3 .caja .padrinos .pad {
   z-index: 100;
+  text-align: center;
   padding: 10px;
-  padding-left: 65px;
+  padding-left: 35px;
 }
 .modelo3 .caja .padrinos .pad .texto {
   font-family: var(--font-second);
@@ -2388,7 +2389,7 @@
 }
 .modelo3 .caja .padrinos .pad .rino {
   font-family: var(--font-second);
-  font-size: calc(var(--font-second-size) - 3px);
+  font-size: var(--font-second-size);
   font-weight: 600;
 }
 .modelo3 .caja .padrinos .swiper {
@@ -3035,6 +3036,7 @@
   font-family: var(--font-message);
   font-size: calc(var(--font-message-size) - 5px);
   font-weight: 800;
+  text-align: center;
   padding: 15px;
   padding-left: 20px;
   z-index: 100;
