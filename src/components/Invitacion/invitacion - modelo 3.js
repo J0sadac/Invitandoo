@@ -24,6 +24,7 @@ const Desplazar = lazy(() => import("./components/modelo 3/desplazar"));
 const Frases = lazy(() => import('./components/modelo 3/frase'));
 const Collage = lazy(() => import("./components/modelo 3/collage"));
 const Condiciones = lazy(() => import('./components/modelo 3/condiciones'));
+const PensamientoDos = lazy(() => import('./components/modelo 3/pensamientoDos'));
 
 
 function Invitaciones({ evento, festejado }) {
@@ -110,12 +111,20 @@ function Invitaciones({ evento, festejado }) {
                         />
                     )}
                     
-                    {evento?.frase && (
+                    {evento?.frases && (
                         <MensajeDos 
                             evento={evento.evento}
-                            fondo={evento.multimedia.fondos.tercero}
+                            fondo={evento.multimedia.fondos.primero}
                             festejado={evento.datos.festejado}
                             frases={evento.frases}
+                        />
+                    )}
+
+                    {evento?.pensamientoDos?.frase && (
+                        <PensamientoDos
+                            img={evento.pensamientoDos.imagen}
+                            frase={evento.pensamientoDos.frase}
+                            festejado={evento.datos.festejado}
                         />
                     )}
 
@@ -169,7 +178,7 @@ function Invitaciones({ evento, festejado }) {
                         />
                     )}
                     
-                    {evento.evento !== 'Graduacion' && (
+                    {evento?.vestimenta && (
                         <Vestimenta 
                             fondo={evento.multimedia.fondos.primero}
                             datos={evento.vestimenta}

@@ -45,6 +45,21 @@ function Frases ({evento, fondo}){
                 <img className="adorno" src={adorno} alt='...' />
             </section>
         )}
+
+        {evento === 'Bautizo' && (
+            <section className="frases">
+                {/* colocar fondo predeterminado */}
+                <img loading='lazy' className="fondo" src={fondo.url} alt="..." />
+
+                <div className="frase">
+                    <p className="contenido">
+                        Me emociona llegar a mis XV años
+                        rodeada del amor de mi familia y amigos,
+                        me encantará celebrar contigo este dia.
+                    </p>  
+                </div>
+            </section>
+        )}
         </>
     )
 }

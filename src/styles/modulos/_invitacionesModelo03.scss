@@ -1020,7 +1020,7 @@ $font-date-size: var(--font-date-size);
 
             p{
                 font-family: $font-message;
-                font-size: $font-message-size;
+                font-size: calc($font-message-size - 5px);
                 font-weight: 500;
 
                 margin: 0;
@@ -1091,7 +1091,7 @@ $font-date-size: var(--font-date-size);
                 left: 0;
                 z-index: 50;
 
-                object-fit:cover;
+                object-fit: fill;
             }
         }
 
@@ -1627,7 +1627,7 @@ $font-date-size: var(--font-date-size);
 
             .frase{
                 font-family: $font-message;
-                font-size: calc($font-message-size - 3px);
+                font-size: calc($font-message-size - 5px);
 
                 font-weight: 800;
 

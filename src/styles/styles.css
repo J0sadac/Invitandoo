@@ -2557,7 +2557,7 @@
 }
 .modelo3 .caja .mensajedos p {
   font-family: var(--font-message);
-  font-size: var(--font-message-size);
+  font-size: calc(var(--font-message-size) - 5px);
   font-weight: 500;
   margin: 0;
   z-index: 100;
@@ -2611,7 +2611,7 @@
   top: 0;
   left: 0;
   z-index: 50;
-  object-fit: cover;
+  object-fit: fill;
 }
 .modelo3 .caja .galeria {
   display: flex;
@@ -3009,7 +3009,7 @@
 }
 .modelo3 .caja .pensamiento .frase {
   font-family: var(--font-message);
-  font-size: calc(var(--font-message-size) - 3px);
+  font-size: calc(var(--font-message-size) - 5px);
   font-weight: 800;
   padding: 15px;
   padding-left: 20px;
