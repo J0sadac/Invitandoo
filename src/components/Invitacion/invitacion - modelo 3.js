@@ -158,6 +158,7 @@ function Invitaciones({ evento, festejado }) {
                             padrinos={evento.padrinos}
                             fondo={evento.multimedia.fondos.segundo}
                             festejado={evento.datos.festejado}
+                            evento={evento.evento}
                         />
                     )}
 

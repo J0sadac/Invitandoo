@@ -2345,7 +2345,8 @@
   align-items: center;
   align-content: center;
   width: 100%;
-  height: 90vh;
+  min-height: 50vh;
+  max-height: 90vh;
   position: relative;
   z-index: 100;
   background-color: #fff;
@@ -2366,6 +2367,29 @@
   top: 0;
   left: 0;
   z-index: 50;
+}
+.modelo3 .caja .padrinos .pad {
+  z-index: 100;
+  padding: 10px;
+  padding-left: 65px;
+}
+.modelo3 .caja .padrinos .pad .texto {
+  font-family: var(--font-second);
+  font-size: calc(var(--font-second-size));
+  margin-bottom: 30px;
+}
+.modelo3 .caja .padrinos .pad .titulo {
+  font-size: 35px;
+  background: var(--color-padres);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: anim 4s linear alternate infinite;
+}
+.modelo3 .caja .padrinos .pad .rino {
+  font-family: var(--font-second);
+  font-size: calc(var(--font-second-size) - 3px);
+  font-weight: 600;
 }
 .modelo3 .caja .padrinos .swiper {
   width: 100%;
