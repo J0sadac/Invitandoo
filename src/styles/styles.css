@@ -1903,7 +1903,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   font-family: var(--font-main);
-  font-size: var(--font-main-size);
+  font-size: calc(var(--font-main-size) + 10px);
   color: white;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   width: 100%;
@@ -2265,8 +2265,8 @@
   width: 25px;
 }
 .modelo3 .caja .padres .contenedor .padre {
-  font-family: var(--font-main);
-  font-size: calc(var(--font-main-size) - 16px);
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
   font-weight: 800;
 }
 .modelo3 .caja .padres .contenedor .papa {
@@ -2574,21 +2574,26 @@
   align-items: center;
   background-color: #DD969C;
   width: 100%;
-  padding: 16px;
+  padding: 25px 15px;
+  gap: 10px;
   color: var(--letras-mensaje);
   text-align: center;
   position: relative;
   z-index: 100;
 }
 .modelo3 .caja .mensajedos p {
-  font-family: var(--font-message);
-  font-size: calc(var(--font-message-size) - 5px);
+  font-family: var(--font-main);
+  font-size: calc(var(--font-main-size) - 14px);
   font-weight: 500;
   margin: 0;
   z-index: 100;
 }
 .modelo3 .caja .mensajedos .parrafo {
-  margin: 40px 0;
+  margin: 0;
+}
+.modelo3 .caja .mensajedos .iconimg {
+  width: 300px;
+  z-index: 100;
 }
 .modelo3 .caja .mensajedos .florero {
   display: flex;

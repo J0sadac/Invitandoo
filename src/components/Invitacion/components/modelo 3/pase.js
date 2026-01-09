@@ -1,30 +1,24 @@
 import petalos from '../../../../multimedia/herramientas/adorno petalos.gif';
 import amarillas from '../../../../multimedia/herramientas/flor amarilla.gif';
 import rosas from '../../../../multimedia/herramientas/Flores rosas.gif';
+import cerezo from '../../../../multimedia/herramientas/adorno cerezo.png';
 
 
-function Pase ({evento, invitado, fondo, festejado, sugerencia, condiciones}){
+function Pase ({evento, invitado, fondo, festejado, sugerencia, condiciones, id}){
 
     return(
-        <section className={festejado === 'Leonel y Denisse' ? 'pase leo' : 'pase imprimir'}>
+        <section className='pase imprimir'>
             {fondo?.url && (
                 <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
             )}
 
-            {festejado === 'Leonel y Denisse' ? (
-                <div className="invitado">
-                    <span className="titulo">Nos complace invitarte a ti:</span>
-                    <span>{invitado.invitado}</span>
-                </div>
-            ):(
-                <div className="invitado">
-                    <span className="titulo">Invitado:</span>
+            <div className="invitado">
+                <span className="titulo">Invitado:</span>
                     <span>{invitado.invitado}</span>
                     {invitado?.titulo && (
                         <span>{invitado.titulo}</span>
                     )}
-                </div>
-            )}
+            </div>
             
             {condiciones.mesa === true && (
                 <>
@@ -79,7 +73,12 @@ function Pase ({evento, invitado, fondo, festejado, sugerencia, condiciones}){
 
             {evento === 'XV Años' && (
                 <>
-                    {festejado !== 'Yare Madrid' && (
+                    {id === '695ee38755ad4156be37d1b2' ? (
+                        <div className="flores">
+                            <img loading='lazy' className='petalo left' src={cerezo} alt='...' />
+                            <img loading='lazy' className='petalo rigth' src={cerezo} alt='...' />
+                        </div>
+                    ):(
                         <div className="flores">
                             <img loading='lazy' className='petalo left' src={amarillas} alt='...' />
                             <img loading='lazy' className='petalo rigth' src={amarillas} alt='...' />

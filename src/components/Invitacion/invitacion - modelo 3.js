@@ -117,6 +117,7 @@ function Invitaciones({ evento, festejado }) {
                             fondo={evento.multimedia.fondos.primero}
                             festejado={evento.datos.festejado}
                             frases={evento.frases}
+                            id={evento._id}
                         />
                     )}
 
@@ -169,6 +170,7 @@ function Invitaciones({ evento, festejado }) {
                         festejado={evento.datos.festejado}
                         sugerencia={evento.sugerencia}
                         condiciones={evento.confirmaciones}
+                        id={evento._id}
                     />
                     
                     {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (

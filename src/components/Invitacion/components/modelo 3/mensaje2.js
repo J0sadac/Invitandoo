@@ -1,8 +1,10 @@
 import izquierda from '../../../../multimedia/herramientas/petalo izquierda.png';
 import derecha from '../../../../multimedia/herramientas/petalo derecha.png';
 import flor from '../../../../multimedia/herramientas/rosa central.png';
+import cerezos from '../../../../multimedia/herramientas/cerezos.png';
+import ramas from '../../../../multimedia/herramientas/ramas de cerezos.png';
 
-function MensajeDos ({evento, fondo, festejado, frases}){
+function MensajeDos ({evento, fondo, festejado, frases, id}){
 
     return(
         <section className="mensajedos">
@@ -23,9 +25,18 @@ function MensajeDos ({evento, fondo, festejado, frases}){
                         </>
                     )}
 
+                    {id === '695ee38755ad4156be37d1b2' && (
+                        <img className='iconimg' src={ramas} alt='cerezos' />
+                    )}
+
                     <p className='parrafo'>
                         {frases}
                     </p>
+
+                    {id === '695ee38755ad4156be37d1b2' && (
+                        <img className='iconimg' src={cerezos} alt='cerezos' />
+                    )}
+
 
                     {evento === 'Boda' && (
                         <>

@@ -133,7 +133,7 @@ $font-date-size: var(--font-date-size);
                 justify-content: space-evenly;
 
                 font-family: $font-main;
-                font-size: $font-main-size;
+                font-size: calc($font-main-size + 10px);
                 color: white;
 
                 text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
@@ -628,8 +628,8 @@ $font-date-size: var(--font-date-size);
                 }
 
                 .padre{
-                    font-family: $font-main;
-                    font-size: calc($font-main-size - 16px);
+                    font-family: $font-second;
+                    font-size: $font-second-size;
                     font-weight: 800;
                 }
 
@@ -1043,7 +1043,8 @@ $font-date-size: var(--font-date-size);
             background-color: #DD969C;
 
             width: 100%;
-            padding: 16px;
+            padding: 25px 15px;
+            gap: 10px;
 
             color: var(--letras-mensaje);
             text-align: center;
@@ -1052,8 +1053,8 @@ $font-date-size: var(--font-date-size);
             z-index: 100;
 
             p{
-                font-family: $font-message;
-                font-size: calc($font-message-size - 5px);
+                font-family: $font-main;
+                font-size: calc($font-main-size - 14px);
                 font-weight: 500;
 
                 margin: 0;
@@ -1062,7 +1063,13 @@ $font-date-size: var(--font-date-size);
             }
 
             .parrafo{
-                margin: 40px 0;
+                margin: 0;
+            }
+
+            .iconimg{
+                width: 300px;
+
+                z-index: 100;
             }
 
             .florero{
