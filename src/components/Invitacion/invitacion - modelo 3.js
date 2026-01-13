@@ -47,6 +47,7 @@ function Invitaciones({ evento, festejado }) {
                 :root {
                     --portada-titulo: ${styles.tituloPortada === '' ? 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));' : styles.tituloPortada};
                     --portada-contenido: ${styles.contenidoPortada === '' ? 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));' : styles.contenidoPortada};
+                    --color-fecha: ${styles.colorFecha === '' ? 'linear-gradient(to left, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(137, 103, 16), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));' : styles.colorFecha};
                     --alineamiento-mensaje: ${styles.alineamientoMensaje === '' ? 'center' : styles.alineamientoMensaje};
                     --letras-mensaje: ${styles.letraMensaje === '' ? 'black' : styles.letraMensaje};
                     --letras-pase: ${styles.letraPase === '' ? 'white' : styles.letraPase};
@@ -68,6 +69,7 @@ function Invitaciones({ evento, festejado }) {
                     --font-date-size: ${styles.fontDateSize === '' ? "60px" : styles.fontDateSize};
                     --altura-portada: ${styles.alturaPortada === '' ? "65px" : styles.alturaPortada};
                     --distancia-sello: ${styles.distanciaSello === '' ? "65px" : styles.distanciaSello};
+                    --altura-pensamiento: ${styles.alturaPensamiento === '' ? '140px' : styles.alturaPensamiento};
                 }
             `;
             document.head.appendChild(styleSheet);

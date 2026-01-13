@@ -1830,6 +1830,15 @@
       rgb(150, 127, 70),
       rgb(211, 178, 95),
       rgb(180, 159, 105));
+  --color-fecha: linear-gradient(
+      to left,
+      rgb(180, 159, 105),
+      rgb(211, 178, 95),
+      rgb(185, 155, 80),
+      rgb(137, 103, 16),
+      rgb(150, 127, 70),
+      rgb(211, 178, 95),
+      rgb(180, 159, 105));
   --alineamiento-mensaje: center;
   --letras-mensaje: black;
   --letras-pase: white;
@@ -1850,6 +1859,7 @@
   --font-date-size: 60px;
   --altura-portada: 65px;
   --distancia-sello: 65px;
+  --altura-pensamiento: 140px;
 }
 
 .modelo3 {
@@ -2115,7 +2125,7 @@
   font-weight: 800;
   transition: 0.3s linear;
   color: transparent;
-  background-image: linear-gradient(to right, rgb(180, 159, 105), rgb(211, 178, 95), rgb(185, 155, 80), rgb(180, 159, 105), rgb(150, 127, 70), rgb(211, 178, 95), rgb(180, 159, 105));
+  background-image: var(--color-fecha);
   background-size: 200%;
   background-clip: padding-box;
   -webkit-background-clip: text;
@@ -3045,7 +3055,8 @@
   padding: 15px;
   padding-left: 20px;
   z-index: 100;
-  margin-top: 100px;
+  position: absolute;
+  top: var(--altura-pensamiento);
 }
 .modelo3 .caja .compromiso {
   display: flex;
