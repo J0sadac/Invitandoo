@@ -68,6 +68,7 @@ function Invitaciones({ evento, festejado }) {
                     --font-message-size: ${styles.fontMessageSize === '' ? "37px" : styles.fontMessageSize};
                     --font-date-size: ${styles.fontDateSize === '' ? "60px" : styles.fontDateSize};
                     --altura-portada: ${styles.alturaPortada === '' ? "65px" : styles.alturaPortada};
+                    --font-portada: ${styles.fontPortada === '' ? "'Libre Bodon', serif" : styles.fontPortada};
                     --distancia-sello: ${styles.distanciaSello === '' ? "65px" : styles.distanciaSello};
                     --altura-pensamiento: ${styles.alturaPensamiento === '' ? '140px' : styles.alturaPensamiento};
                 }

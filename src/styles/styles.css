@@ -1860,6 +1860,7 @@
   --altura-portada: 65px;
   --distancia-sello: 65px;
   --altura-pensamiento: 140px;
+  --font-portada: "Libre Bodoni", serif;
 }
 
 .modelo3 {
@@ -1912,9 +1913,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  font-family: var(--font-main);
+  font-family: var(--font-portada);
   font-size: calc(var(--font-main-size) + 10px);
   color: white;
+  line-height: 40px;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   width: 100%;
 }
