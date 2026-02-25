@@ -3533,8 +3533,8 @@
   border-radius: 10px;
 }
 .modelo3 .caja .confirmacion .whatsapp p {
-  font-family: calc(var(--font-second) - 10px);
-  font-size: var(--font-second-size);
+  font-family: var(--font-second);
+  font-size: calc(var(--font-second-size) - 5px);
 }
 .modelo3 .caja .confirmacion .whatsapp .planner {
   font-family: var(--font-main);

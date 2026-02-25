@@ -2340,8 +2340,8 @@ $font-date-size: var(--font-date-size);
                 border-radius: 10px;
 
                 p{
-                    font-family: calc($font-second - 10px);
-                    font-size: $font-second-size;
+                    font-family: $font-second;
+                    font-size: calc($font-second-size - 5px);
                 }
 
                 .planner{
