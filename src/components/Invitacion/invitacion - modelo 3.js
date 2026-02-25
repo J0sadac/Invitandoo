@@ -117,7 +117,7 @@ function Invitaciones({ evento, festejado }) {
                     {evento?.frases && (
                         <MensajeDos 
                             evento={evento.evento}
-                            fondo={evento.multimedia.fondos.primero}
+                            fondo={evento.multimedia.fondos.tercero}
                             festejado={evento.datos.festejado}
                             frases={evento.frases}
                             id={evento._id}

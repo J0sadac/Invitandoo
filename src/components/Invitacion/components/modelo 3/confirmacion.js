@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
-//import fondo from '../../../../multimedia/fondos/fondo rojo.png';
 import Whatsapp from '../../../../multimedia/herramientas/whatsapp.png';
 
 function Confirmacion({ invitadoId, eventoId, fondo, contacto}) {
@@ -58,8 +56,8 @@ function Confirmacion({ invitadoId, eventoId, fondo, contacto}) {
             {contacto?.nombre && (
                 <div className="whatsapp shadow">
                     <>
-                        {contacto.nombre === 'Corenia Roldán' ? (
-                            <p>Tambien puedes confirmar por Whatsapp con mi linda madre</p>
+                        {eventoId === '699efe120d588c45820069d1' ? (
+                            <p>Tambien puedes confirmar tu asistencia antes del 5 de marzo por Whatsapp con</p>
                         ):(
                             <p>Tambien puedes confirmar por Whatsapp con nuestro event planner</p>
                         )}

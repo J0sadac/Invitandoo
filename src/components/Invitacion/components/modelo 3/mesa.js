@@ -10,6 +10,7 @@ import azul from '../../../../multimedia/herramientas/Lluvia de sobres azul.png'
 import bbva from '../../../../multimedia/herramientas/BBVA-logo.png';
 import sears from '../../../../multimedia/herramientas/sears.png'
 import antifaz from '../../../../multimedia/herramientas/antifaz veneciaga.png';
+import abrazo from '../../../../multimedia/herramientas/abrazo.png';
 
 function Mesa ({fondo, mesa, confirmacion, festejado}) {
 
@@ -72,6 +73,16 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
 
                             <p className="anuncio">¡Haz click aqui!</p>
                         </Link>
+                    )}
+
+                    {mesa[0]?.tarjeta && (
+
+                        <div className='regalo'>
+                            <div className="contenido">
+                                <img loading="lazy" className='icono' src={abrazo} alt='...' />
+                                <p className='codigo'>{mesa[0].modalidad}</p>
+                            </div>
+                        </div>
                     )}
 
                     {mesa[1]?.tarjeta && (

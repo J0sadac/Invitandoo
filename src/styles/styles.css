@@ -1829,7 +1829,8 @@
       rgb(137, 103, 16),
       rgb(150, 127, 70),
       rgb(211, 178, 95),
-      rgb(180, 159, 105));
+      rgb(180, 159, 105)
+  );
   --color-fecha: linear-gradient(
       to left,
       rgb(180, 159, 105),
@@ -1838,7 +1839,8 @@
       rgb(137, 103, 16),
       rgb(150, 127, 70),
       rgb(211, 178, 95),
-      rgb(180, 159, 105));
+      rgb(180, 159, 105)
+  );
   --alineamiento-mensaje: center;
   --letras-mensaje: black;
   --letras-pase: white;
@@ -2653,7 +2655,7 @@
   top: 0;
   left: 0;
   z-index: 50;
-  object-fit: fill;
+  object-fit: cover;
 }
 .modelo3 .caja .galeria {
   display: flex;
@@ -3349,10 +3351,12 @@
   margin: 0;
   font-family: var(--font-second);
   font-size: var(--font-second-size);
+  font-weight: 900;
   z-index: 100;
 }
 .modelo3 .caja .vestimenta .pet {
   font-size: 16px;
+  margin-top: -40px;
 }
 .modelo3 .caja .vestimenta .contenedor {
   z-index: 100;
@@ -3465,7 +3469,7 @@
   width: 100%;
   padding: 20px;
   position: relative;
-  z-index: 90;
+  z-index: 100;
 }
 .modelo3 .caja .confirmacion .fondo {
   width: 100%;
@@ -3487,6 +3491,8 @@
   justify-content: space-evenly;
   padding: 15px;
   font-family: var(--font-second);
+  text-decoration: none;
+  color: black;
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -3527,7 +3533,7 @@
   border-radius: 10px;
 }
 .modelo3 .caja .confirmacion .whatsapp p {
-  font-family: var(--font-second);
+  font-family: calc(var(--font-second) - 10px);
   font-size: var(--font-second-size);
 }
 .modelo3 .caja .confirmacion .whatsapp .planner {

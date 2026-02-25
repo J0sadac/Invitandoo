@@ -34,7 +34,8 @@ $Crimson: 'Crimson Text', serif;
         rgb(137, 103, 16),
         rgb(150, 127, 70),
         rgb(211, 178, 95),
-        rgb(180, 159, 105));
+        rgb(180, 159, 105)
+    );
     --color-fecha: linear-gradient(
         to left,
         rgb(180, 159, 105),
@@ -43,7 +44,8 @@ $Crimson: 'Crimson Text', serif;
         rgb(137, 103, 16),
         rgb(150, 127, 70),
         rgb(211, 178, 95),
-        rgb(180, 159, 105));
+        rgb(180, 159, 105)
+    );
     --alineamiento-mensaje: center;
     --letras-mensaje: black;
     --letras-pase: white;
@@ -1134,7 +1136,7 @@ $font-date-size: var(--font-date-size);
                 left: 0;
                 z-index: 50;
 
-                object-fit: fill;
+                object-fit: cover;
             }
         }
 
@@ -2080,12 +2082,14 @@ $font-date-size: var(--font-date-size);
 
                 font-family: $font-second;
                 font-size: $font-second-size;
+                font-weight: 900;
 
                 z-index: 100;
             }
 
             .pet{
                 font-size: 16px;
+                margin-top: -40px;
             }
 
             .contenedor{
@@ -2249,7 +2253,7 @@ $font-date-size: var(--font-date-size);
             padding: 20px;
 
             position: relative;
-            z-index: 90;
+            z-index: 100;
 
             .fondo{
                 width: 100%;
@@ -2276,6 +2280,8 @@ $font-date-size: var(--font-date-size);
 
                 padding: 15px;
                 font-family: $font-second;
+                text-decoration: none;
+                color: black;
 
                 background-color: rgba(255, 255, 255, .1);
                 box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
@@ -2334,7 +2340,7 @@ $font-date-size: var(--font-date-size);
                 border-radius: 10px;
 
                 p{
-                    font-family: $font-second;
+                    font-family: calc($font-second - 10px);
                     font-size: $font-second-size;
                 }
 
