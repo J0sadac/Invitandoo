@@ -2894,10 +2894,10 @@
 }
 .modelo3 .caja .itinerario .titulo {
   font-family: var(--font-main);
-  font-size: calc(var(--font-main-size) - 10px);
+  font-size: calc(var(--font-main-size) - 5px);
   font-weight: 800;
   color: var(--color-padit);
-  margin-top: 20px;
+  margin-top: 80px;
   margin-bottom: 0px;
   z-index: 100;
 }
