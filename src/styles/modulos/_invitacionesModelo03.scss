@@ -146,7 +146,7 @@ $font-date-size: var(--font-date-size);
                 justify-content: space-evenly;
 
                 font-family: var(--font-portada);
-                font-size: calc($font-main-size + 10px);
+                font-size: calc($font-main-size + 5px);
                 color: white;
                 line-height: 40px;
 
@@ -1460,7 +1460,7 @@ $font-date-size: var(--font-date-size);
 
                 color: var(--color-padit);
 
-                margin-top: 80px;
+                margin-top: 50px;
                 margin-bottom: 0px;
 
                 z-index: 100;
@@ -1992,7 +1992,7 @@ $font-date-size: var(--font-date-size);
 
             .titulo{
                 font-family: $font-main;
-                font-size: calc($font-main-size - 10px);
+                font-size: calc($font-main-size - 5px);
                 font-weight: 800;
 
                 margin-top: 25px;

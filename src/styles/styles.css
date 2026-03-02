@@ -1916,7 +1916,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   font-family: var(--font-portada);
-  font-size: calc(var(--font-main-size) + 10px);
+  font-size: calc(var(--font-main-size) + 5px);
   color: white;
   line-height: 40px;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
@@ -2897,7 +2897,7 @@
   font-size: calc(var(--font-main-size) - 5px);
   font-weight: 800;
   color: var(--color-padit);
-  margin-top: 80px;
+  margin-top: 50px;
   margin-bottom: 0px;
   z-index: 100;
 }
@@ -3287,7 +3287,7 @@
 }
 .modelo3 .caja .vestimenta .titulo {
   font-family: var(--font-main);
-  font-size: calc(var(--font-main-size) - 10px);
+  font-size: calc(var(--font-main-size) - 5px);
   font-weight: 800;
   margin-top: 25px;
   z-index: 100;
