@@ -3325,12 +3325,13 @@
   z-index: 100;
 }
 .modelo3 .caja .vestimenta .botonesReferencia button {
-  width: 120px;
+  width: 140px;
   padding: 8px 16px;
   cursor: pointer;
   border: none;
   border-radius: 10px;
   background-color: #F6F2E9;
+  color: black;
 }
 .modelo3 .caja .vestimenta .modalOverlay {
   position: fixed;
