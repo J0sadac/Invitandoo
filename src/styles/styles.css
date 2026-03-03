@@ -2597,7 +2597,7 @@
 }
 .modelo3 .caja .mensajedos p {
   font-family: var(--font-main);
-  font-size: calc(var(--font-main-size) - 14px);
+  font-size: calc(var(--font-main-size) - 15px);
   font-weight: 500;
   margin: 0;
   z-index: 100;
@@ -3270,7 +3270,7 @@
   align-content: center;
   text-align: center;
   position: relative;
-  z-index: 100;
+  z-index: 110;
   background-color: #191970;
   color: var(--letras-vestimenta);
   width: 100%;
@@ -3316,6 +3316,51 @@
 .modelo3 .caja .vestimenta .iconos .icono {
   width: 170px;
   padding: 10px;
+}
+.modelo3 .caja .vestimenta .botonesReferencia {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  z-index: 100;
+}
+.modelo3 .caja .vestimenta .botonesReferencia button {
+  width: 120px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: #F6F2E9;
+}
+.modelo3 .caja .vestimenta .modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.modelo3 .caja .vestimenta .modalContenido {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 320px;
+  position: relative;
+}
+.modelo3 .caja .vestimenta .modalContenido img {
+  width: 100%;
+  border-radius: 10px;
+}
+.modelo3 .caja .vestimenta .cerrar {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 22px;
+  cursor: pointer;
 }
 .modelo3 .caja .vestimenta .iconosConand {
   display: flex;

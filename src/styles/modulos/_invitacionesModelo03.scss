@@ -1059,7 +1059,7 @@ $font-date-size: var(--font-date-size);
 
             p{
                 font-family: $font-main;
-                font-size: calc($font-main-size - 14px);
+                font-size: calc($font-main-size - 15px);
                 font-weight: 500;
 
                 margin: 0;
@@ -1970,7 +1970,7 @@ $font-date-size: var(--font-date-size);
             text-align: center;
 
             position: relative;
-            z-index: 100;
+            z-index: 110;
 
             background-color: #191970;
             color: var(--letras-vestimenta);
@@ -2035,6 +2035,61 @@ $font-date-size: var(--font-date-size);
                     padding: 10px;
                 }
             }
+
+            .botonesReferencia {
+                display: flex;
+                justify-content: center;
+
+                gap: 15px;
+                margin-top: 20px;
+                z-index: 100;
+            }
+
+            .botonesReferencia button {
+                width: 120px;
+                padding: 8px 16px;
+
+                cursor: pointer;
+
+                border: none;
+                border-radius: 10px;
+
+                background-color: #F6F2E9;
+            }
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modalContenido {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+    position: relative;
+}
+
+.modalContenido img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
 
             .iconosConand{
                 display: flex;
