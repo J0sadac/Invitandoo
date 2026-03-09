@@ -3832,6 +3832,21 @@
   font-family: var(--font-second);
   font-size: var(--font-second-size);
 }
+.modelo3 .caja .hashtag .content a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.modelo3 .caja .hashtag .content a .icon {
+  width: 70px;
+}
+.modelo3 .caja .hashtag .content a .perfil {
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+}
 .modelo3 .caja .capitulo {
   display: flex;
   flex-direction: column;

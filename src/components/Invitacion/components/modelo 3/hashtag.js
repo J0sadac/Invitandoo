@@ -17,7 +17,10 @@ function Hashtag ({fondo, datos}) {
 
                 <p className='hash'>{datos.hashtag}</p>
 
-                <img className='icon' src={iconBlack} alt='insta' />
+                <a href={datos.perfil}>
+                    <img className='icon' src={iconBlack} alt='insta' />
+                    <p className='perfil'>¡Haz click aqui!</p>
+                </a>
             </div>
         </section>
     )

@@ -2743,6 +2743,26 @@ $font-date-size: var(--font-date-size);
                     font-family: $font-second;
                     font-size: $font-second-size;
                 }
+
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    text-decoration: none;
+                    color: black;
+
+                    .icon{
+                        width: 70px;
+                    }
+
+                    .perfil{
+                        font-family: $font-second;
+                        font-size: $font-second-size;
+                    }
+                }
+
             }
             
         }
