@@ -263,7 +263,7 @@ function Invitaciones({ evento, festejado }) {
 
                     {evento?.hashtag && (
                         <Hashtag 
-                            fondo={evento.multimedia.fondos.primero}
+                            fondo={evento.multimedia.fondos.segundo}
                             datos={evento.hashtag}
                         />
                     )}

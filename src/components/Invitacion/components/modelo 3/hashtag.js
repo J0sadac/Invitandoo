@@ -1,4 +1,5 @@
-import icon from '../../../Home/icons/Icon instagram.png'
+//import icon from '../../../Home/icons/Icon instagram.png'
+import iconBlack from '../../../Home/icons/icono - instagram black.png';
 
 function Hashtag ({fondo, datos}) {
 
@@ -16,7 +17,7 @@ function Hashtag ({fondo, datos}) {
 
                 <p className='hash'>{datos.hashtag}</p>
 
-                <img className='icon' src={icon} alt='insta' />
+                <img className='icon' src={iconBlack} alt='insta' />
             </div>
         </section>
     )
