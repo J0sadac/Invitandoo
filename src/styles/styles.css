@@ -3669,7 +3669,7 @@
   animation-range: entry 5% cover 40%;
 }
 .modelo3 .caja .timeline .contenedor .imagen {
-  width: 130px;
+  width: 40%;
   border-radius: 10px;
 }
 .modelo3 .caja .timeline .contenedor .icono {
@@ -3932,6 +3932,15 @@
   }
   .modelo3 .caja .mesa .contenido div .regalo .contenido {
     width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .modelo3 .caja .vestimenta .iconos .icono {
+    width: 40%;
+    padding: 10px;
+  }
+  .modelo3 .caja .mesa .contenido div .gracias {
+    width: 90%;
   }
 }
 .inspiracion {

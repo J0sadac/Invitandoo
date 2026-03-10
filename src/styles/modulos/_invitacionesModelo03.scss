@@ -1815,7 +1815,6 @@ $font-date-size: var(--font-date-size);
 
             width: 100%;
             
-
             position: relative;
             z-index: 90;
 
@@ -2517,7 +2516,7 @@ $font-date-size: var(--font-date-size);
                 position: relative;
 
                 .imagen{
-                    width: 130px;
+                    width: 40%;
 
                     border-radius: 10px;
                 }
@@ -2891,4 +2890,31 @@ $font-date-size: var(--font-date-size);
     }
   }
 
+@media (max-width: 400px) {
+
+    .modelo3{
+        .caja{
+            .vestimenta{
+
+                .iconos{
+
+                    .icono{
+                        width: 40%;
+                        padding: 10px;
+                    }
+                }
+            }
+
+            .mesa{
+                .contenido{
+                    div{
+                        .gracias{
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
