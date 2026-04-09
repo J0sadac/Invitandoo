@@ -7,7 +7,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import imgItenerario from '../../../../multimedia/herramientas/itinerario liz&agus.png'
+import imgItinerarioLizYAgus from '../../../../multimedia/herramientas/itinerario liz&agus.png';
+import imgItinerarioMafer from '../../../../multimedia/herramientas/Itinerario - Mafer.png'
 
 function Itinerario ({protocolo, fondo, festejado}) {
 
@@ -42,7 +43,16 @@ function Itinerario ({protocolo, fondo, festejado}) {
                     )}
                     <p className='titulo'>Itinerario</p>   
 
-                    <img className='imgIten' src={imgItenerario} alt='itinerario' />
+                    <img className='imgIten' src={imgItinerarioLizYAgus} alt='itinerario' />
+                </section>
+            ): festejado === 'Mafer' ? (
+                <section className='itinerario'>
+                    {fondo?.url && (
+                            <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
+                    )}
+                    <p className='titulo'>Itinerario</p>   
+
+                    <img className='imgIten' src={imgItinerarioMafer} alt='itinerario' />
                 </section>
             ):(
                 <section className={festejado === 'Leonel y Denisse' ? 'itinerario leo' : 'itinerario imprimir'}>
