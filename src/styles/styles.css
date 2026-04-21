@@ -147,7 +147,7 @@
 }
 .home .beneficios .contenedor .contenido {
   margin: 23.5px;
-  height: 160px;
+  min-height: 160px;
 }
 .home .beneficios .contenedor .contenido .encabezado {
   font-family: "DM Serif Display", serif;
@@ -167,7 +167,8 @@
   align-items: center;
   align-content: center;
   gap: 20px;
-  height: 200px;
+  min-height: 200px;
+  overflow: hidden;
 }
 .home .beneficios .carousel .seccion {
   width: 314px;
@@ -2281,7 +2282,7 @@
 .modelo3 .caja .padres .contenedor .padre {
   font-family: var(--font-second);
   font-size: var(--font-second-size);
-  font-weight: 800;
+  font-weight: 600;
 }
 .modelo3 .caja .padres .contenedor .papa {
   position: relative;
@@ -2370,8 +2371,8 @@
   font-size: calc(var(--font-main-size) - 10px);
   font-weight: 800;
   color: var(--color-padit);
-  margin-top: 20px;
-  margin-bottom: 0px;
+  margin-top: 60px;
+  margin-bottom: 5px;
   z-index: 100;
 }
 .modelo3 .caja .padrinos .fondo {
@@ -2436,7 +2437,7 @@
 .modelo3 .caja .padrinos .swiper .contenedor .accion {
   font-family: var(--font-main);
   font-weight: 800;
-  font-size: var(--font-main-size);
+  font-size: calc(var(--font-main-size) - 5px);
 }
 .modelo3 .caja .padrinos .swiper .contenedor .padrino {
   display: flex;
@@ -2598,7 +2599,7 @@
 .modelo3 .caja .mensajedos p {
   font-family: var(--font-message);
   font-size: calc(var(--font-second-size));
-  font-weight: 300;
+  font-weight: 500;
   margin: 0;
   z-index: 100;
 }
@@ -2681,7 +2682,7 @@
 .modelo3 .caja .galeria .titulo {
   color: var(--color-galeria);
   font-family: var(--font-main);
-  font-size: var(--font-main-size);
+  font-size: calc(var(--font-main-size) - 5px);
   font-weight: 800;
   z-index: 100;
 }
@@ -2703,6 +2704,7 @@
   background-position: center;
   background-size: cover;
   width: 300px;
+  padding-top: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2930,7 +2932,7 @@
 .modelo3 .caja .itinerario .swiper .contenedor .accion {
   font-family: var(--font-main);
   font-weight: 800;
-  font-size: var(--font-main-size);
+  font-size: calc(var(--font-main-size) - 5px);
 }
 .modelo3 .caja .itinerario .swiper .contenedor .hora {
   font-size: var(--font-second-size);
@@ -3052,7 +3054,7 @@
 .modelo3 .caja .pensamiento .frase {
   font-family: var(--font-message);
   font-size: calc(var(--font-message-size) - 5px);
-  font-weight: 800;
+  font-weight: 600;
   text-align: center;
   padding: 15px;
   padding-left: 20px;
@@ -3512,6 +3514,7 @@
   color: var(--color-confirmar);
   width: 100%;
   padding: 20px;
+  padding-bottom: 80px;
   position: relative;
   z-index: 100;
 }
@@ -3528,6 +3531,8 @@
   font-size: calc(var(--font-main-size) - 15px);
   font-weight: 800;
   z-index: 100;
+  margin-top: 80px;
+  margin-bottom: 30px;
 }
 .modelo3 .caja .confirmacion .confirmar {
   display: flex;

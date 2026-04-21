@@ -78,6 +78,8 @@ function Pase ({evento, invitado, fondo, festejado, sugerencia, condiciones, id}
                             <img loading='lazy' className='petalo left' src={cerezo} alt='...' />
                             <img loading='lazy' className='petalo rigth' src={cerezo} alt='...' />
                         </div>
+                    ):id === '69db4a8a7d5f52fdbdef0c31' ? (
+                        <></>
                     ):(
                         <div className="flores">
                             <img loading='lazy' className='petalo left' src={amarillas} alt='...' />
