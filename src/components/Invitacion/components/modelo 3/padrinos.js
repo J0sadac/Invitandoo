@@ -6,7 +6,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-function Padrinos({padrinos, fondo, festejado, evento}) {
+import escudo from '../../../../multimedia/herramientas/escudo.png';
+
+function Padrinos({padrinos, fondo, festejado, evento, id}) {
 
   return (
     <section className='padrinos'>
@@ -16,52 +18,81 @@ function Padrinos({padrinos, fondo, festejado, evento}) {
 
         {(evento === 'Boda' || evento === 'XV Años') && (
             <>
-                <p className='titulo'>Padrinos</p>
-      
-                <Swiper
-                    pagination={{
-                    type: 'fraction',
-                    }}
-                    navigation={true}
-                    modules={[Pagination, Navigation]}
-                    className="mySwiper"
-                >
-                    {padrinos.map((pad) => (
-                        <SwiperSlide key={pad._id}>
-                            <div className={festejado === 'Alejandra & Alexander' || 
-                                festejado === 'Ivanna Zoé Montejo Carballo' ||
-                                festejado === 'Yare Madrid' 
-                                ? 'contenedor personalizado' : 'contenedor'}>
+                {id === '69db4a8a7d5f52fdbdef0c31' ? (
+                    <div className='contenedorPads'> 
+                        <p className='anteTitulo'>Quiero agradecer especialmente a mis</p>
+                        <p className='titulo'>Padrinos</p>
+                    
+                        <img className='iconoImg' src={escudo} alt='escudo' />
 
-                                    {festejado === 'Ivanna Zoé Montejo Carballo' ? (
-                                        <>
+                        {padrinos.map((pad) => (
+                         <div className='padrinosFer'> 
+                            {pad.padrino.map((rino, idx) => (
+                                <span key={idx}>
+                                        {rino}
+                                    <p>{idx < pad.padrino.length - 1 && " & "}</p>
+                                </span>
+                            ))}
+                        </div>
+                        ))}
+
+                        <p className='anteTitulo'>
+                            Por su amor, apoyo y compañía
+                            en este camino que hoy
+                            celebro con ilusión.
+                        </p>
+
+                    </div>
+                ):(
+                    <>
+                        <p className='titulo'>Padrinos</p>
+            
+                        <Swiper
+                            pagination={{
+                            type: 'fraction',
+                            }}
+                            navigation={true}
+                            modules={[Pagination, Navigation]}
+                            className="mySwiper"
+                        >
+                            {padrinos.map((pad) => (
+                                <SwiperSlide key={pad._id}>
+                                    <div className={festejado === 'Alejandra & Alexander' || 
+                                        festejado === 'Ivanna Zoé Montejo Carballo' ||
+                                        festejado === 'Yare Madrid' 
+                                        ? 'contenedor personalizado' : 'contenedor'}>
+
+                                            {festejado === 'Ivanna Zoé Montejo Carballo' ? (
+                                                <>
+                                                    
+                                                </>
+                                            ):(
+                                                <img loading='lazy' className='icono' src={pad.icono} alt='...' />
+                                            )}
                                             
-                                        </>
-                                    ):(
-                                        <img loading='lazy' className='icono' src={pad.icono} alt='...' />
-                                    )}
-                                    
-                                    {festejado === 'Ivanna Zoé Montejo Carballo' ? (
-                                        <>
+                                            {festejado === 'Ivanna Zoé Montejo Carballo' ? (
+                                                <>
+                                                    
+                                                </>
+                                            ):(
+                                                <p className='accion'>{pad.de}</p>  
+                                            )}
                                             
-                                        </>
-                                    ):(
-                                        <p className='accion'>{pad.de}</p>  
-                                    )}
-                                    
-                                    <div className='padrino'> 
-                                        {pad.padrino.map((rino, idx) => (
-                                            <span key={idx}>
-                                                {rino}
-                                                <p>{idx < pad.padrino.length - 1 && " & "}</p>
-                                            </span>
-                                        ))}
+                                            <div className='padrino'> 
+                                                {pad.padrino.map((rino, idx) => (
+                                                    <span key={idx}>
+                                                        {rino}
+                                                        <p>{idx < pad.padrino.length - 1 && " & "}</p>
+                                                    </span>
+                                                ))}
+                                            </div>
+
                                     </div>
-
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </>
+                )}
             </>
         )}
 

@@ -163,6 +163,7 @@ function Invitaciones({ evento, festejado }) {
                             fondo={evento.multimedia.fondos.segundo}
                             festejado={evento.datos.festejado}
                             evento={evento.evento}
+                            id={evento._id}
                         />
                     )}
 

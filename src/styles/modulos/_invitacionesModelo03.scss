@@ -106,8 +106,8 @@ $font-date-size: var(--font-date-size);
             flex-direction: column;
             justify-content: space-evenly;
 
-            max-width: 450px;
-            min-width: 400px;
+            max-width: 400px;
+            min-width: 350px;
 
             position: absolute;
             z-index: 20;
@@ -148,7 +148,7 @@ $font-date-size: var(--font-date-size);
                 font-family: var(--font-portada);
                 font-size: calc($font-main-size + 5px);
                 color: white;
-                line-height: 40px;
+                line-height: 55px;
 
                 text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 
@@ -743,13 +743,74 @@ $font-date-size: var(--font-date-size);
 
             width: 100%;
             min-height: 50vh;
-            max-height: 90vh;
+            max-height: 110vh;
 
 
             position: relative;
             z-index: 100;
 
             background-color: #fff;
+
+            .contenedorPads{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                text-align: center;
+
+                z-index: 100;
+
+                padding: 30px 15px;
+                gap: 10px;
+
+                .anteTitulo{
+                    font-family: $font-second;
+                    font-size: $font-second-size;
+                    font-weight: 500;
+
+                    color: rgb(150, 124, 31);
+
+                    width: 325px;
+
+                    z-index: 100;
+                }
+
+                .titulo{
+                    font-family: $font-main;
+                    font-size: $font-main-size;
+                    font-weight: 800;
+
+                    color: rgb(74, 125, 159);
+
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+
+                    z-index: 100;
+                }
+
+                .iconoImg{
+                    width: 200px;
+
+                    z-index: 100;
+                }
+
+                .padrinosFer{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    font-family: $font-second;
+                    font-weight: 400;
+                    font-size: calc($font-second-size + 3px);
+
+                    z-index: 100;
+
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
 
             .titulo{
                 font-family: $font-main;
@@ -1059,8 +1120,8 @@ $font-date-size: var(--font-date-size);
 
             p{
                 font-family: $font-message;
-                font-size: calc($font-second-size);
-                font-weight: 500;
+                font-size: calc($font-message-size - 5px);
+                font-weight: 800;
 
                 margin: 0;
 
@@ -2020,6 +2081,23 @@ $font-date-size: var(--font-date-size);
                 }
             }
 
+            .iconosFer{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                z-index: 100;
+
+                margin: 30px 10px;
+
+                .iconoFer{
+                    width: 180px;
+                    padding: 10px;
+
+
+                }
+            }
+
             .iconos{
                 display: flex;
                 flex-direction: row;
@@ -2144,7 +2222,7 @@ $font-date-size: var(--font-date-size);
 
             .pet{
                 font-size: 16px;
-                margin-top: -40px;
+                margin-top: -20px;
             }
 
             .contenedor{

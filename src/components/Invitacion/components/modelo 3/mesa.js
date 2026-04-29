@@ -53,7 +53,7 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                                         <img loading="lazy" className='icono' src={verde} alt='...' />
                                     ): festejado === 'Lizbeth & Agustín' ? (
                                         <img loading="lazy" className='icono' src={azul} alt='...' />
-                                    ): festejado === 'Fernanda Citalan' ? (
+                                    ): festejado === 'Fernanda Sulidane' ? (
                                         <img loading="lazy" className='icono' src={azul} alt='...' />
                                     ):(
                                         <img loading="lazy" className='icono' src={lluvia} alt='...' />

@@ -1888,8 +1888,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  max-width: 450px;
-  min-width: 400px;
+  max-width: 400px;
+  min-width: 350px;
   position: absolute;
   z-index: 20;
   top: var(--altura-portada);
@@ -1919,7 +1919,7 @@
   font-family: var(--font-portada);
   font-size: calc(var(--font-main-size) + 5px);
   color: white;
-  line-height: 40px;
+  line-height: 55px;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   width: 100%;
 }
@@ -2361,10 +2361,53 @@
   align-content: center;
   width: 100%;
   min-height: 50vh;
-  max-height: 90vh;
+  max-height: 110vh;
   position: relative;
   z-index: 100;
   background-color: #fff;
+}
+.modelo3 .caja .padrinos .contenedorPads {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  z-index: 100;
+  padding: 30px 15px;
+  gap: 10px;
+}
+.modelo3 .caja .padrinos .contenedorPads .anteTitulo {
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+  font-weight: 500;
+  color: rgb(150, 124, 31);
+  width: 325px;
+  z-index: 100;
+}
+.modelo3 .caja .padrinos .contenedorPads .titulo {
+  font-family: var(--font-main);
+  font-size: var(--font-main-size);
+  font-weight: 800;
+  color: rgb(74, 125, 159);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  z-index: 100;
+}
+.modelo3 .caja .padrinos .contenedorPads .iconoImg {
+  width: 200px;
+  z-index: 100;
+}
+.modelo3 .caja .padrinos .contenedorPads .padrinosFer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--font-second);
+  font-weight: 400;
+  font-size: calc(var(--font-second-size) + 3px);
+  z-index: 100;
+}
+.modelo3 .caja .padrinos .contenedorPads .padrinosFer p {
+  margin: 0;
 }
 .modelo3 .caja .padrinos .titulo {
   font-family: var(--font-main);
@@ -2598,8 +2641,8 @@
 }
 .modelo3 .caja .mensajedos p {
   font-family: var(--font-message);
-  font-size: calc(var(--font-second-size));
-  font-weight: 500;
+  font-size: calc(var(--font-message-size) - 5px);
+  font-weight: 800;
   margin: 0;
   z-index: 100;
 }
@@ -3306,6 +3349,17 @@
 .modelo3 .caja .vestimenta .efecto .flor {
   width: 80px;
 }
+.modelo3 .caja .vestimenta .iconosFer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 100;
+  margin: 30px 10px;
+}
+.modelo3 .caja .vestimenta .iconosFer .iconoFer {
+  width: 180px;
+  padding: 10px;
+}
 .modelo3 .caja .vestimenta .iconos {
   display: flex;
   flex-direction: row;
@@ -3402,7 +3456,7 @@
 }
 .modelo3 .caja .vestimenta .pet {
   font-size: 16px;
-  margin-top: -40px;
+  margin-top: -20px;
 }
 .modelo3 .caja .vestimenta .contenedor {
   z-index: 100;

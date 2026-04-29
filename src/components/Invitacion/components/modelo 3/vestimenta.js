@@ -38,6 +38,8 @@ import fausto from '../../../../multimedia/herramientas/Colores Fausto.png'
 import tonoCafe from '../../../../multimedia/herramientas/paleta dresscode.png';
 import tonoPastel from '../../../../multimedia/herramientas/tonos pastel.png';
 import codigoHam from '../../../../multimedia/herramientas/codigo ham.png';
+import vestAliceMAn from '../../../../multimedia/herramientas/vestimenta - alicia hombre.png';
+import vestAliceWoman from '../../../../multimedia/herramientas/vestimenta - alicia.png';
 
 // import icono from '../../../../multimedia/herramientas/adorno dorado.gif';
 // import iconoDerecho from '../../../../multimedia/herramientas/Detalle Horizontal derecho.gif';
@@ -78,12 +80,25 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                             </>
                         ): datos.codigo === 'Formal' ? (
                             <>
-                                <div className='iconos'>
-                                    <img loading='lazy' className="icono" src={trajeFormalOscuro} alt="..." />
-                                    <img loading='lazy' className="icono" src={vestidoFormalOscuro} alt="..." />
-                                </div>
+                                {festejado === 'Fernanda Sulidane' ? (
+                                    <>
+                                        <div className='iconosFer'>
+                                            <img loading='lazy' className="iconoFer" src={vestAliceMAn} alt="..." />
+                                            <img loading='lazy' className="iconoFer" src={vestAliceWoman} alt="..." />
+                                        </div>
 
-                                <p>{datos.codigo}</p>
+                                        <p>{datos.codigo}</p>
+                                    </>
+                                ):(
+                                    <>
+                                        <div className='iconos'>
+                                            <img loading='lazy' className="icono" src={trajeFormalOscuro} alt="..." />
+                                            <img loading='lazy' className="icono" src={vestidoFormalOscuro} alt="..." />
+                                        </div>
+
+                                        <p>{datos.codigo}</p>
+                                    </>
+                                )}
                             </>
                         ): datos.codigo === 'Semi formal' ? (
                             <>
@@ -95,7 +110,6 @@ function Vestimenta ({fondo, datos, festejado, modo}){
                                 <p>{datos.codigo}</p>
                             </>
                         ):(
-                            //esta seccion chato
                             <>
                                 <div className='iconos'>
                                     <img loading='lazy' className="icono" src={trajeInformalOscuro} alt="..." />
