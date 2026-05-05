@@ -21,7 +21,6 @@ function Desplazar() {
     return (
         isVisible && (
             <div className="desplazar">
-                <p>¡Desliza para ver más!</p>
                 <img className='icono' src={flecha} alt='...' />
             </div>
         )

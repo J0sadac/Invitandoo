@@ -393,18 +393,18 @@ body{
 
         position: fixed;
         z-index: 90;
-        bottom: 10vh;
+        bottom: 20px;
         left: 50%;
 
         transform: translateX(-50%);
 
-        width: 200px;
-        height: 75px;
+        width: 50px;
+        height: 50px;
 
         background-color: rgba(0, 0, 0, .3);
         backdrop-filter: blur(5px);
 
-        border-radius: 10px;
+        border-radius: 50%;
 
         color: white;
 
@@ -417,7 +417,7 @@ body{
 
 
         .icono{
-            width: 16px;
+            width: 20px;
             animation: bounce 2s infinite;
 
             margin-top: 3px;
