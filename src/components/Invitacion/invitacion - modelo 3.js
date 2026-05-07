@@ -87,6 +87,7 @@ function Invitaciones({ evento, festejado }) {
                     evento={evento.evento}
                     festejado={evento.datos.festejado}
                     foto={evento.multimedia.portada[0]}
+                    id={evento._id}
                 />
 
                 {evento.evento !== 'Graduacion' && (

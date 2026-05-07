@@ -1,4 +1,4 @@
-function Portada({ evento, festejado, foto}) {
+function Portada({ evento, festejado, foto, id}) {
 
     return (
         <div>
@@ -40,7 +40,10 @@ function Portada({ evento, festejado, foto}) {
                         <div className='nombres'>
                             <span className='titulo'>Mis XV años</span>
                             <div className='contenedor'>
-                                <span>{festejado}</span>
+                                <p>{festejado}</p>
+                                {id === '69fa0629c13531cb5d4c20f2' && (
+                                    <p className="ape">Hernandez Castañon</p>
+                                )}
                             </div>
                         </div>
                         <img loading="lazy" className='img' src={foto.url} alt='...' />

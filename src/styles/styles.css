@@ -1914,7 +1914,7 @@
 }
 .modelo3 .portada .nombres .contenedor {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   font-family: var(--font-portada);
   font-size: calc(var(--font-main-size) + 5px);
@@ -1922,6 +1922,10 @@
   line-height: 55px;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   width: 100%;
+}
+.modelo3 .portada .nombres .contenedor .ape {
+  font-size: 40px;
+  margin-top: -20px;
 }
 .modelo3 .sobre {
   display: flex;
