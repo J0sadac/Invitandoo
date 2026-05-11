@@ -66,7 +66,7 @@ function InvCel ({fecha, fondo}) {
             <img loading="lazy" className="fondoCel" src={fondo} alt="..." />
             
 
-            <div className="contenedor">
+            <div className="contenedorCel">
                 <div className="contenido">
                 {fecha && (
                     <div className="contador">

@@ -2235,6 +2235,66 @@
 .modelo3 .caja .invitacion .contenedor .contador .tiempo .segundero {
   font-size: var(--font-second-size);
 }
+.modelo3 .caja .invitacion .contenedorCel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  height: 100%;
+}
+.modelo3 .caja .invitacion .contenedorCel .fecha {
+  font-family: var(--font-main);
+  font-size: var(--font-date-size);
+  font-weight: 800;
+  transition: 0.3s linear;
+  color: transparent;
+  background-image: var(--color-fecha);
+  background-size: 200%;
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  animation: move 20s linear infinite;
+}
+@keyframes move {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+.modelo3 .caja .invitacion .contenedorCel .direccion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.modelo3 .caja .invitacion .contenedorCel .direccion p {
+  font-family: var(--font-second);
+  font-size: var(--font-second-size);
+}
+.modelo3 .caja .invitacion .contenedorCel .contador {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+.modelo3 .caja .invitacion .contenedorCel .contador .tiempo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 8px;
+  padding: 10px;
+  width: 60px;
+  border-radius: 10px;
+  color: black;
+}
+.modelo3 .caja .invitacion .contenedorCel .contador .tiempo span {
+  font-family: "DM Serif Display", serif;
+  font-size: 15PX;
+}
+.modelo3 .caja .invitacion .contenedorCel .contador .tiempo .segundero {
+  font-size: var(--font-second-size);
+}
 .modelo3 .caja .ubicacionCel {
   display: flex;
   flex-direction: column;
