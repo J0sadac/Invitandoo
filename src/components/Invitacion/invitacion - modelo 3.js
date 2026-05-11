@@ -8,6 +8,7 @@ import Capitulo from './components/modelo 3/capitulo';
 import Apertura from './components/modelo 3/apertura';
 import InvCel from './components/modelo 3/invCelebracion';
 import UbiCel from './components/modelo 3/ubicacionCel';
+import Ending from './components/modelo 3/ending';
 
 const Portada = lazy(() => import("./components/modelo 3/portada"));
 const Mensaje = lazy(() => import("./components/modelo 3/mensaje"));
@@ -314,6 +315,10 @@ function Invitaciones({ evento, festejado }) {
 
                         <UbiCel 
                             fondo={evento.multimedia.ubicacionCel}
+                        />
+
+                        <Ending 
+                            fondo={evento.multimedia.carousel[3]}
                         />
                     </div>
                 )}
