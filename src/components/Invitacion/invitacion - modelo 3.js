@@ -5,6 +5,9 @@ import Timeline from './components/modelo 3/timeline';
 import Recomendacion from './components/modelo 3/recomendacion';
 import Hashtag from './components/modelo 3/hashtag';
 import Capitulo from './components/modelo 3/capitulo';
+import Apertura from './components/modelo 3/apertura';
+import InvCel from './components/modelo 3/invCelebracion';
+import UbiCel from './components/modelo 3/ubicacionCel';
 
 const Portada = lazy(() => import("./components/modelo 3/portada"));
 const Mensaje = lazy(() => import("./components/modelo 3/mensaje"));
@@ -81,6 +84,8 @@ function Invitaciones({ evento, festejado }) {
         }
     }, [evento.estilos]);
 
+    console.log(evento)
+
     return (
         <div className="modelo3">
                 <Portada 
@@ -102,183 +107,216 @@ function Invitaciones({ evento, festejado }) {
                         sobre={evento.sobre}
                         onCerrarVentanaCancion={handleCerrarVentanaCancion}
                         onReproducirCancion={handleReproducirCancion}
+                        evento={evento.evento}
+                    />
+                )}
+
+                {evento?.multimedia?.apertura && (
+                    <Apertura 
+                        multimedia={evento.multimedia}
+                        onCerrarVentanaCancion={handleCerrarVentanaCancion}
+                        onReproducirCancion={handleReproducirCancion}
+                        evento={evento.evento}
                     />
                 )}
 
                 <Desplazar />
 
-                <div className="caja">
-                    {evento?.capitulo && (
-                        <Capitulo 
-                            capitulo={evento.capitulo}
-                            fondo={evento.multimedia.fondos.primero}
-                        />
-                    )}
-                    
-                    {evento?.frases && (
-                        <MensajeDos 
+                {evento.evento !== 'Celebracion' ? (
+                    <div className="caja">
+                        {evento?.capitulo && (
+                            <Capitulo 
+                                capitulo={evento.capitulo}
+                                fondo={evento.multimedia.fondos.primero}
+                            />
+                        )}
+                        
+                        {evento?.frases && (
+                            <MensajeDos 
+                                evento={evento.evento}
+                                fondo={evento.multimedia.fondos.primero}
+                                festejado={evento.datos.festejado}
+                                frases={evento.frases}
+                                id={evento._id}
+                            />
+                        )}
+
+                        {evento?.pensamientoDos?.frase && (
+                            <PensamientoDos
+                                img={evento.pensamientoDos.imagen}
+                                frase={evento.pensamientoDos.frase}
+                                festejado={evento.datos.festejado}
+                            />
+                        )}
+
+                        {evento.evento !== 'Graduacion' && (
+                            <Padres 
+                                evento={evento.evento}
+                                datos={evento.datos}
+                                festejado={evento.datos.festejado}
+                                fondo={evento.multimedia.fondos.segundo}
+                            />
+                        )}
+
+                        <Invitacion 
+                            fondo={evento.estilos.estilosInvitacion.fondo}
+                            dia={evento.datos.dia}
+                            lugar={evento.datos.lugar}
+                            fecha={evento.datos.fecha}
                             evento={evento.evento}
-                            fondo={evento.multimedia.fondos.primero}
-                            festejado={evento.datos.festejado}
-                            frases={evento.frases}
-                            id={evento._id}
-                        />
-                    )}
-
-                    {evento?.pensamientoDos?.frase && (
-                        <PensamientoDos
-                            img={evento.pensamientoDos.imagen}
-                            frase={evento.pensamientoDos.frase}
                             festejado={evento.datos.festejado}
                         />
-                    )}
 
-                    {evento.evento !== 'Graduacion' && (
-                        <Padres 
+                        {evento.confirmaciones.frases === true && (
+                            <Frases
+                                evento={evento.evento}
+                                fondo={evento.multimedia.fondos.primero}
+                            />
+                        )}
+
+                        {evento.padrinos.length > 0 && (
+                            <Padrinos 
+                                padrinos={evento.padrinos}
+                                fondo={evento.multimedia.fondos.segundo}
+                                festejado={evento.datos.festejado}
+                                evento={evento.evento}
+                                id={evento._id}
+                            />
+                        )}
+
+                        <Pase 
                             evento={evento.evento}
-                            datos={evento.datos}
-                            festejado={evento.datos.festejado}
-                            fondo={evento.multimedia.fondos.segundo}
-                        />
-                    )}
-
-                    <Invitacion 
-                        fondo={evento.estilos.estilosInvitacion.fondo}
-                        dia={evento.datos.dia}
-                        lugar={evento.datos.lugar}
-                        fecha={evento.datos.fecha}
-                        evento={evento.evento}
-                        festejado={evento.datos.festejado}
-                    />
-
-                    {evento.confirmaciones.frases === true && (
-                        <Frases
-                            evento={evento.evento}
-                            fondo={evento.multimedia.fondos.primero}
-                        />
-                    )}
-
-                    {evento.padrinos.length > 0 && (
-                        <Padrinos 
-                            padrinos={evento.padrinos}
-                            fondo={evento.multimedia.fondos.segundo}
-                            festejado={evento.datos.festejado}
-                            evento={evento.evento}
-                            id={evento._id}
-                        />
-                    )}
-
-                    <Pase 
-                        evento={evento.evento}
-                        invitado={evento.invitados}
-                        fondo={evento.multimedia.fondos.tercero}
-                        festejado={evento.datos.festejado}
-                        sugerencia={evento.sugerencia}
-                        condiciones={evento.confirmaciones}
-                        id={evento._id}
-                    />
-                    
-                    {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (
-                        <Galeria
-                            carousel={evento.multimedia.carousel}
-                            fondo={evento.estilos.estilosGaleria.fondo}
-                            festejado={evento.datos.festejado}
-                        />
-                    )}
-                    
-                    {evento?.vestimenta && (
-                        <Vestimenta 
-                            fondo={evento.multimedia.fondos.primero}
-                            datos={evento.vestimenta}
-                            modo={evento.estilos.estilosVestimenta.modo}
-                            festejado={evento.datos.festejado}
-                        />
-                    )}
-
-                    {evento.itinerario.length > 0 && (
-                        <Itinerario 
-                            protocolo={evento.itinerario}
-                            fondo={evento.multimedia.fondos.segundo}
-                            festejado={evento.datos.festejado}
-                        />
-                    )}
-
-                    {evento.confirmaciones.mensajeUno === true && (
-                        <Mensaje 
-                            evento={evento.evento}
+                            invitado={evento.invitados}
                             fondo={evento.multimedia.fondos.tercero}
                             festejado={evento.datos.festejado}
+                            sugerencia={evento.sugerencia}
+                            condiciones={evento.confirmaciones}
+                            id={evento._id}
                         />
-                    )}
+                        
+                        {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (
+                            <Galeria
+                                carousel={evento.multimedia.carousel}
+                                fondo={evento.estilos.estilosGaleria.fondo}
+                                festejado={evento.datos.festejado}
+                            />
+                        )}
+                        
+                        {evento?.vestimenta && (
+                            <Vestimenta 
+                                fondo={evento.multimedia.fondos.primero}
+                                datos={evento.vestimenta}
+                                modo={evento.estilos.estilosVestimenta.modo}
+                                festejado={evento.datos.festejado}
+                            />
+                        )}
 
-                    {evento.confirmaciones.condiciones === true && (
-                        <Condiciones 
-                            fondo={evento.multimedia.fondos.primero}
-                            festejado={evento.datos.festejado}
-                        />
-                    )}
+                        {evento.itinerario.length > 0 && (
+                            <Itinerario 
+                                protocolo={evento.itinerario}
+                                fondo={evento.multimedia.fondos.segundo}
+                                festejado={evento.datos.festejado}
+                            />
+                        )}
 
-                    {evento?.multimedia?.timeLine && evento.multimedia.timeLine.length > 1 && (
-                        <Timeline 
-                            fondo={evento.estilos.estilosTimeLine.fondo}
-                            timeLine={evento.multimedia.timeLine}
-                        />
-                    )}
+                        {evento.confirmaciones.mensajeUno === true && (
+                            <Mensaje 
+                                evento={evento.evento}
+                                fondo={evento.multimedia.fondos.tercero}
+                                festejado={evento.datos.festejado}
+                            />
+                        )}
 
-                    {evento?.pensamiento?.frase && (
-                        <Pensamiento
-                            img={evento.pensamiento.imagen}
-                            frase={evento.pensamiento.frase}
-                            festejado={evento.datos.festejado}
+                        {evento.confirmaciones.condiciones === true && (
+                            <Condiciones 
+                                fondo={evento.multimedia.fondos.primero}
+                                festejado={evento.datos.festejado}
+                            />
+                        )}
+
+                        {evento?.multimedia?.timeLine && evento.multimedia.timeLine.length > 1 && (
+                            <Timeline 
+                                fondo={evento.estilos.estilosTimeLine.fondo}
+                                timeLine={evento.multimedia.timeLine}
+                            />
+                        )}
+
+                        {evento?.pensamiento?.frase && (
+                            <Pensamiento
+                                img={evento.pensamiento.imagen}
+                                frase={evento.pensamiento.frase}
+                                festejado={evento.datos.festejado}
+                            />
+                        )}
+                        
+                        <Ubicacion 
+                            evento={evento.evento}
+                            fondo={evento.multimedia.fondos.segundo}
+                            ubicacion={evento.ubicacion}
                         />
-                    )}
                     
-                    <Ubicacion 
-                        evento={evento.evento}
-                        fondo={evento.multimedia.fondos.segundo}
-                        ubicacion={evento.ubicacion}
-                    />
-                   
-                    {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
-                        <Mesa 
-                            fondo={evento.multimedia.fondos.primero} 
-                    
-                            mesa={evento.mesaDeRegalos}
-                            confirmacion={evento.confirmaciones}
-                            festejado={evento.datos.festejado}
-                        />   
-                    )}
+                        {evento?.mesaDeRegalos && evento.mesaDeRegalos.length > 0 && (
+                            <Mesa 
+                                fondo={evento.multimedia.fondos.primero} 
+                        
+                                mesa={evento.mesaDeRegalos}
+                                confirmacion={evento.confirmaciones}
+                                festejado={evento.datos.festejado}
+                            />   
+                        )}
 
-                    {evento?.multimedia?.galeria && evento?.multimedia?.galeria.length > 1 && (
-                        <Collage 
-                            fondo={evento.multimedia.fondos.segundo}
-                            galeria={evento.multimedia.galeria}
-                        />
-                    )}
+                        {evento?.multimedia?.galeria && evento?.multimedia?.galeria.length > 1 && (
+                            <Collage 
+                                fondo={evento.multimedia.fondos.segundo}
+                                galeria={evento.multimedia.galeria}
+                            />
+                        )}
 
-                    {evento?.datos?.recomendacion && evento?.datos?.recomendacion.length >= 1 && (
-                        <Recomendacion 
-                            fondo={evento.multimedia.fondos.segundo}
-                            datos={evento.datos.recomendacion}
-                        />
-                    )}
+                        {evento?.datos?.recomendacion && evento?.datos?.recomendacion.length >= 1 && (
+                            <Recomendacion 
+                                fondo={evento.multimedia.fondos.segundo}
+                                datos={evento.datos.recomendacion}
+                            />
+                        )}
 
-                    {evento?.hashtag && (
-                        <Hashtag 
-                            fondo={evento.multimedia.fondos.segundo}
-                            datos={evento.hashtag}
-                        />
-                    )}
+                        {evento?.hashtag && (
+                            <Hashtag 
+                                fondo={evento.multimedia.fondos.segundo}
+                                datos={evento.hashtag}
+                            />
+                        )}
 
-                    {evento.evento !== 'Graduacion' && (
-                        <Confirmacion 
-                            invitadoId={evento.invitados._id}
-                            eventoId={evento._id}
-                            fondo={evento.multimedia.fondos.tercero}
-                            contacto={evento.datos.contacto}
+                        {evento.evento !== 'Graduacion' && (
+                            <Confirmacion 
+                                invitadoId={evento.invitados._id}
+                                eventoId={evento._id}
+                                fondo={evento.multimedia.fondos.tercero}
+                                contacto={evento.datos.contacto}
+                            />
+                        )}
+                    </div>
+                ):(
+                    <div className='caja'>
+                        {evento?.frases && (
+                            <MensajeDos 
+                                evento={evento.evento}
+                                fondo={evento.multimedia.fondos.primero}
+                                festejado={evento.datos.festejado}
+                                frases={evento.frases}
+                                id={evento._id}
+                            />
+                        )}
+
+                        <InvCel 
+                            fondo={evento.estilos.estilosInvitacion.fondo}
+                            fecha={evento.datos.fecha}
                         />
-                    )}
-                </div>
+
+                        <UbiCel 
+                            fondo={evento.multimedia.ubicacionCel}
+                        />
+                    </div>
+                )}
         </div>
     );
 }

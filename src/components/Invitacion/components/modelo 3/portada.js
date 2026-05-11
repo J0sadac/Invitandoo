@@ -65,11 +65,15 @@ function Portada({ evento, festejado, foto, id}) {
             ): evento === 'Celebracion' ? (
                 <section className='portada'>
                     <div className='nombres'>
-                        <span className='titulo'>Te invito a</span>
+                        {id !== '69ff9a623c19609f55330a3b' && (
+                            <>
+                                <span className='titulo'>Te invito a</span>
 
-                        <div className='contenedor'>
-                            <span>¡MI CUMPLEAÑOS!</span>
-                        </div>
+                                <div className='contenedor'>
+                                    <span>¡MI CUMPLEAÑOS!</span>
+                                </div>
+                            </>
+                        )}
                     </div>
                     <img loading="lazy" className='img' src={foto.url} alt='...' />
                 </section>
