@@ -65,7 +65,8 @@ function Portada({ evento, festejado, foto, id}) {
             ): evento === 'Celebracion' ? (
                 <section className='portada'>
                     <div className='nombres'>
-                        {id !== '69ff9a623c19609f55330a3b' && (
+                        {id !== '69ff9a623c19609f55330a3b' &&
+                        id !== '6a027e7627ac08316e5afb40' && (
                             <>
                                 <span className='titulo'>Te invito a</span>
 

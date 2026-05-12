@@ -5111,7 +5111,7 @@ body .desplazar {
   align-items: center;
   position: fixed;
   z-index: 90;
-  bottom: 20px;
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
