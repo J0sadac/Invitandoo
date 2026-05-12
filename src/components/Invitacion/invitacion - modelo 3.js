@@ -318,9 +318,11 @@ function Invitaciones({ evento, festejado }) {
                             fondo={evento.multimedia.ubicacionCel}
                         />
 
-                        <VestimentaCel
-                            fondo={evento.multimedia.carousel[4]}
-                        />
+                        {evento?.multimedia?.carousel[4] && (
+                            <VestimentaCel
+                                fondo={evento.multimedia.carousel[4]}
+                            />
+                        )}
 
                         <Ending 
                             fondo={evento.multimedia.carousel[3]}
