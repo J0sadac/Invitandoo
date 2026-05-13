@@ -86,7 +86,7 @@ function Invitaciones({ evento, festejado }) {
         }
     }, [evento.estilos]);
 
-    console.log(evento)
+    console.log(evento.evento)
 
     return (
         <div className="modelo3">
@@ -113,7 +113,7 @@ function Invitaciones({ evento, festejado }) {
                     />
                 )}
 
-                {evento?.multimedia?.apertura && (
+                {evento?.multimedia?.apertura?.url && (
                     <Apertura 
                         multimedia={evento.multimedia}
                         onCerrarVentanaCancion={handleCerrarVentanaCancion}
