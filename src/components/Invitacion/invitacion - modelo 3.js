@@ -97,12 +97,11 @@ function Invitaciones({ evento, festejado }) {
                     id={evento._id}
                 />
 
-                {evento.evento !== 'Graduacion' && (
                     <Cancion 
                         ref={cancionRef}
                         url={evento.multimedia.cancion.url}
                     />
-                )}
+        
 
                 {evento?.sobre && (
                     <Sobre 
@@ -288,14 +287,12 @@ function Invitaciones({ evento, festejado }) {
                             />
                         )}
 
-                        {evento.evento !== 'Graduacion' && (
                             <Confirmacion 
                                 invitadoId={evento.invitados._id}
                                 eventoId={evento._id}
                                 fondo={evento.multimedia.fondos.tercero}
                                 contacto={evento.datos.contacto}
                             />
-                        )}
                     </div>
                 ):(
                     <div className='caja'>
