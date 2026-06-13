@@ -1927,6 +1927,9 @@
   font-size: 40px;
   margin-top: -20px;
 }
+.modelo3 .portada .nombres .graduacion {
+  font-size: calc(var(--font-main-size) - 5px);
+}
 .modelo3 .sobre {
   display: flex;
   flex-direction: row;
@@ -2851,7 +2854,7 @@
   align-items: center;
   align-content: center;
   width: 100%;
-  height: 90vh;
+  height: 105vh;
   padding: 20px 0;
   position: relative;
   z-index: 100;

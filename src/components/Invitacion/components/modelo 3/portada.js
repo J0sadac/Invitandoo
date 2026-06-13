@@ -86,7 +86,7 @@ function Portada({ evento, festejado, foto, id}) {
                             <>
                                 <span className='titulo'>Te invito a</span>
 
-                                <div className='contenedor'>
+                                <div className='contenedor graduacion'>
                                     <span>¡MI GRADUACIÓN!</span>
                                 </div>
                             </>
