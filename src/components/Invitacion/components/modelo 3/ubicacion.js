@@ -32,10 +32,13 @@ const Ubicacion = ({ fondo, ubicacion, mapa }) => {
                             <span className='nombre'>{lugar.direccion}</span>
                             <span>{lugar.ciudad}</span>
                         </div>
-                        <button onClick={() => abrirVentanaIglesia(index)}>
-                            <img loading='lazy' className='icono' src={mapaIcon} alt='...' />
-                            <p className='link'>Ubicación GPS</p>
-                        </button>
+
+                        {lugar?.link && (
+                            <button onClick={() => abrirVentanaIglesia(index)}>
+                                <img loading='lazy' className='icono' src={mapaIcon} alt='...' />
+                                <p className='link'>Ubicación GPS</p>
+                            </button>
+                        )}
 
                         {modalIndex === index && (
                             <div className="modal" onClick={cerrarVentanas}>
