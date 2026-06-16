@@ -185,15 +185,17 @@ function Invitaciones({ evento, festejado }) {
                             />
                         )}
 
-                        <Pase 
-                            evento={evento.evento}
-                            invitado={evento.invitados}
-                            fondo={evento.multimedia.fondos.tercero}
-                            festejado={evento.datos.festejado}
-                            sugerencia={evento.sugerencia}
-                            condiciones={evento.confirmaciones}
-                            id={evento._id}
-                        />
+                        {evento.evento ===! 'Graduacion'&& (
+                            <Pase 
+                                evento={evento.evento}
+                                invitado={evento.invitados}
+                                fondo={evento.multimedia.fondos.tercero}
+                                festejado={evento.datos.festejado}
+                                sugerencia={evento.sugerencia}
+                                condiciones={evento.confirmaciones}
+                                id={evento._id}
+                            />
+                        )}
                         
                         {evento?.multimedia?.carousel && evento.multimedia.carousel.length > 1 && (
                             <Galeria
@@ -287,12 +289,14 @@ function Invitaciones({ evento, festejado }) {
                             />
                         )}
 
+                        {evento.evento ===! 'Graduacion' && (
                             <Confirmacion 
                                 invitadoId={evento.invitados._id}
                                 eventoId={evento._id}
                                 fondo={evento.multimedia.fondos.tercero}
                                 contacto={evento.datos.contacto}
                             />
+                        )}
                     </div>
                 ):(
                     <div className='caja'>
