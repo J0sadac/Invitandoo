@@ -185,7 +185,7 @@ function Invitaciones({ evento, festejado }) {
                             />
                         )}
 
-                        {evento.evento ===! 'Graduacion'&& (
+                        {evento.evento !== 'Graduacion'&& (
                             <Pase 
                                 evento={evento.evento}
                                 invitado={evento.invitados}
@@ -289,7 +289,7 @@ function Invitaciones({ evento, festejado }) {
                             />
                         )}
 
-                        {evento.evento ===! 'Graduacion' && (
+                        {evento.evento !== 'Graduacion' && (
                             <Confirmacion 
                                 invitadoId={evento.invitados._id}
                                 eventoId={evento._id}
