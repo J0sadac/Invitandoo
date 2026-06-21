@@ -35,7 +35,13 @@ function Pase ({evento, invitado, fondo, festejado, sugerencia, condiciones, id}
                     <span className="titulo">Pase para: </span>
                     <span className="contenido">{invitado.pase} {invitado.pase === 1 ? 'adulto' : 'adultos'}</span>
                     {invitado.infantes > 0 && (
-                        <span className="contenido">{invitado.infantes} {invitado.infantes === 1 ? 'niño' : 'niños'}</span>
+                        <>
+                            <span className="contenido">{invitado.infantes} {invitado.infantes === 1 ? 'niño' : 'niños'}</span>
+
+                            {festejado === 'Estefani Rivera' && (
+                                <span className='ninos'>Los niños tendran una mesa especial durante el evento.</span>
+                            )}
+                        </>
                     )}
                 </div> 
             )}

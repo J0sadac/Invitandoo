@@ -1918,7 +1918,7 @@
   justify-content: space-evenly;
   font-family: var(--font-portada);
   font-size: calc(var(--font-main-size) + 5px);
-  color: white;
+  color: var(--);
   line-height: 55px;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   width: 100%;
@@ -2720,6 +2720,9 @@
 }
 .modelo3 .caja .pase .cantidad .titulo {
   font-weight: 800;
+}
+.modelo3 .caja .pase .cantidad .ninos {
+  margin-top: 10px;
 }
 .modelo3 .caja .pase .flores {
   display: flex;
