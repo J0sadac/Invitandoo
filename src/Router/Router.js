@@ -1,6 +1,6 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
-import NavBar from '../components/navbar';
+import NavbarController from '../components/navbarController';
 import Main from '../components/main';
 
 import Invitaciones from '../components/Invitacion/invitaciones';
@@ -16,7 +16,7 @@ const Router = () => {
     return(
         <BrowserRouter>
         
-            <NavBar />
+            <NavbarController />
             
             <Routes>                
                 <Route exact path='/' element={<Main />} />

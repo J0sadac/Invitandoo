@@ -1918,7 +1918,7 @@
   justify-content: space-evenly;
   font-family: var(--font-portada);
   font-size: calc(var(--font-main-size) + 5px);
-  color: var(--);
+  color: white;
   line-height: 55px;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
   width: 100%;
@@ -2779,24 +2779,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #DD969C;
   width: 100%;
-  padding: 25px 15px;
+  padding: 20px 15px;
   gap: 10px;
   color: var(--letras-mensaje);
   text-align: center;
   position: relative;
   z-index: 100;
 }
-.modelo3 .caja .mensajedos p {
+.modelo3 .caja .mensajedos .parrafo {
   font-family: var(--font-message);
   font-size: calc(var(--font-message-size) - 5px);
   font-weight: 800;
   margin: 0;
   z-index: 100;
-}
-.modelo3 .caja .mensajedos .parrafo {
-  margin: 0;
 }
 .modelo3 .caja .mensajedos .iconimg {
   width: 300px;
@@ -2809,14 +2805,10 @@
   align-items: center;
   align-content: center;
   width: 100%;
-  position: absolute;
-  top: 15px;
-  left: 0;
   z-index: 100;
 }
 .modelo3 .caja .mensajedos .florero .flor {
-  width: 260px;
-  z-index: 100;
+  width: 230px;
 }
 .modelo3 .caja .mensajedos .adornos {
   display: flex;
@@ -2825,13 +2817,10 @@
   align-items: center;
   align-content: center;
   width: 100%;
-  position: absolute;
-  bottom: 15px;
-  left: 0;
-  z-index: 60;
+  z-index: 100;
 }
 .modelo3 .caja .mensajedos .adornos .icono {
-  width: 150px;
+  width: 120px;
   z-index: 100;
 }
 .modelo3 .caja .mensajedos .logo {

@@ -146,7 +146,7 @@ $font-date-size: var(--font-date-size);
 
                 font-family: var(--font-portada);
                 font-size: calc($font-main-size + 5px);
-                color: var(--);
+                color: white;
                 line-height: 55px;
 
                 text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
@@ -1315,10 +1315,8 @@ $font-date-size: var(--font-date-size);
             justify-content: center;
             align-items: center;
 
-            background-color: #DD969C;
-
             width: 100%;
-            padding: 25px 15px;
+            padding: 20px 15px;
             gap: 10px;
 
             color: var(--letras-mensaje);
@@ -1327,7 +1325,7 @@ $font-date-size: var(--font-date-size);
             position: relative;
             z-index: 100;
 
-            p{
+            .parrafo{
                 font-family: $font-message;
                 font-size: calc($font-message-size - 5px);
                 font-weight: 800;
@@ -1335,10 +1333,6 @@ $font-date-size: var(--font-date-size);
                 margin: 0;
 
                 z-index: 100;
-            }
-
-            .parrafo{
-                margin: 0;
             }
 
             .iconimg{
@@ -1356,14 +1350,10 @@ $font-date-size: var(--font-date-size);
 
                 width: 100%;
 
-                position: absolute;
-                top: 15px;
-                left: 0;
                 z-index: 100;
 
                 .flor{
-                    width: 260px;
-                    z-index: 100;
+                    width: 230px;
                 }
             }
 
@@ -1376,13 +1366,10 @@ $font-date-size: var(--font-date-size);
 
                 width: 100%;
 
-                position: absolute;
-                bottom: 15px;
-                left: 0;
-                z-index: 60;
+                z-index: 100;
 
                 .icono{
-                    width: 150px;
+                    width: 120px;
                     z-index: 100;
                 }
             }
