@@ -1,10 +1,13 @@
 import izquierda from '../../../../multimedia/herramientas/petalo izquierda.png';
 import derecha from '../../../../multimedia/herramientas/petalo derecha.png';
 import flor from '../../../../multimedia/herramientas/rosa central.png';
+import florDorada from '../../../../multimedia/herramientas/Adorno dorado.png';
 import cerezos from '../../../../multimedia/herramientas/cerezos.png';
 import ramas from '../../../../multimedia/herramientas/ramas de cerezos.png';
 import adornoDorado from '../../../../multimedia/herramientas/Horizontal - decoracion 1.png';
 import adornoDoradoInferior from '../../../../multimedia/herramientas/Horizontal - decoracion 2.png';
+import follajeDorIz from '../../../../multimedia/herramientas/follaje dorado izquierdo.png';
+import follajeDorDr from '../../../../multimedia/herramientas/follaje dorado derecho.png';
 
 function MensajeDos ({evento, fondo, festejado, frases, id}){
 
@@ -18,12 +21,17 @@ function MensajeDos ({evento, fondo, festejado, frases, id}){
                 <>
                     {evento === 'Boda' && (
                         <>
-                            {festejado !== 'Alejandra & Alexander' &&
-                            festejado !== 'Bruno & Teresa' ? (
+                            {id === "6a4106191c28177b6b6348b5" ? (
+                                <div className="florero">
+                                    <img loading='lazy' className='flor' src={florDorada} alt='...' />
+                                </div>
+                            ): id === "Bruno & Teresa" ? (
+                                <></>
+                            ):(
                                 <div className="florero">
                                     <img loading='lazy' className='flor' src={flor} alt='...' />
                                 </div>
-                            ):(<></>)} 
+                            )}                            
                         </>
                     )}
 
@@ -49,13 +57,19 @@ function MensajeDos ({evento, fondo, festejado, frases, id}){
 
                     {evento === 'Boda' && (
                         <>
-                            {festejado !== 'Alejandra & Alexander' &&
-                            festejado !== 'Bruno & Teresa' ? (
+                            {id === '6a4106191c28177b6b6348b5' ? (
+                                <div className="adornos">
+                                    <img loading='lazy' className='icono' src={follajeDorIz} alt='...' />
+                                    <img loading='lazy' className='icono' src={follajeDorDr} alt='...' />
+                                </div>
+                            ): id === 'Bruno' ? (
+                             <></>   
+                            ):(
                                 <div className="adornos">
                                     <img loading='lazy' className='icono' src={izquierda} alt='...' />
                                     <img loading='lazy' className='icono' src={derecha} alt='...' />
                                 </div>
-                            ):(<span></span>)}
+                            )}
                         </>
                     )}
                 </>

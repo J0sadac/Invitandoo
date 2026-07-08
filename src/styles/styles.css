@@ -3726,7 +3726,7 @@
   margin-top: 80px;
   margin-bottom: 30px;
 }
-.modelo3 .caja .confirmacion .confirmar {
+.modelo3 .caja .confirmacion .contConfirmar {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -3741,25 +3741,25 @@
   height: 250px;
   z-index: 100;
 }
-.modelo3 .caja .confirmacion .confirmar p {
+.modelo3 .caja .confirmacion .contConfirmar p {
   font-size: var(--font-second-size);
 }
-.modelo3 .caja .confirmacion .confirmar .botones {
+.modelo3 .caja .confirmacion .contConfirmar .botones {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.modelo3 .caja .confirmacion .confirmar .botones button {
+.modelo3 .caja .confirmacion .contConfirmar .botones button {
   border: none;
   border-radius: 10px;
   width: 110px;
   height: 47px;
   color: black;
 }
-.modelo3 .caja .confirmacion .confirmar .botones .si {
+.modelo3 .caja .confirmacion .contConfirmar .botones .si {
   background-color: lightgreen;
 }
-.modelo3 .caja .confirmacion .confirmar .botones .no {
+.modelo3 .caja .confirmacion .contConfirmar .botones .no {
   background-color: lightcoral;
 }
 .modelo3 .caja .confirmacion .whatsapp {
@@ -3807,13 +3807,47 @@
   background-color: white;
   border-radius: 10px;
   width: 80%;
-  height: 230px;
   color: black;
   padding: 15px;
 }
 .modelo3 .caja .confirmacion .alerta .contenido p {
   font-family: var(--font-second);
   font-size: var(--font-second-size);
+}
+.modelo3 .caja .confirmacion .alerta .confirmar-personas {
+  padding: 30px;
+  text-align: center;
+}
+.modelo3 .caja .confirmacion .alerta .confirmar-personas .contador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+.modelo3 .caja .confirmacion .alerta .confirmar-personas .contador button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+}
+.modelo3 .caja .confirmacion .alerta .confirmar-personas .contador span {
+  font-size: 30px;
+  min-width: 40px;
+}
+.modelo3 .caja .confirmacion .alerta .confirmar-personas .confirmar {
+  text-align: center;
+  background-color: #977a48;
+  color: #f6f2e9;
+  border: 1px solid #977a48;
+  border-radius: 25px;
+  font-family: var(--font-second);
+  font-size: calc(var(--font-second-size) - 5px);
+  height: 50px;
+  width: 150px;
+  margin-top: 10px;
 }
 .modelo3 .caja .leo {
   height: 100vh;

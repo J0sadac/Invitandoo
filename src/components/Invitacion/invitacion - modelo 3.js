@@ -327,6 +327,7 @@ function Invitaciones({ evento, festejado }) {
                             {evento.evento !== 'Graduacion' && (
                                 <Confirmacion 
                                     invitadoId={evento.invitados._id}
+                                    pase={evento.invitados.pase}
                                     eventoId={evento._id}
                                     fondo={evento.multimedia.fondos.tercero}
                                     contacto={evento.datos.contacto}
