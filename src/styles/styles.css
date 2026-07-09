@@ -3757,10 +3757,13 @@
   color: black;
 }
 .modelo3 .caja .confirmacion .contConfirmar .botones .si {
-  background-color: lightgreen;
+  background-color: #977a48;
+  color: #f6f2e9;
 }
 .modelo3 .caja .confirmacion .contConfirmar .botones .no {
-  background-color: lightcoral;
+  border: 2px solid #977a48;
+  color: #977a48;
+  background-color: none;
 }
 .modelo3 .caja .confirmacion .whatsapp {
   display: flex;
@@ -3833,8 +3836,13 @@
   font-size: 24px;
   cursor: pointer;
 }
-.modelo3 .caja .confirmacion .alerta .confirmar-personas .contador span {
+.modelo3 .caja .confirmacion .alerta .confirmar-personas .contador button p {
+  margin: 0;
+  padding: 0;
   font-size: 30px;
+}
+.modelo3 .caja .confirmacion .alerta .confirmar-personas .contador .cant {
+  font-size: 25px;
   min-width: 40px;
 }
 .modelo3 .caja .confirmacion .alerta .confirmar-personas .confirmar {
