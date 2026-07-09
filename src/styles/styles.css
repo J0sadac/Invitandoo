@@ -2683,7 +2683,7 @@
 }
 .modelo3 .caja .pase .sugerencia {
   font-family: var(--font-main);
-  font-size: 20px;
+  font-size: calc(var(--font-second-size) + 6px);
   font-weight: 800;
   width: 350px;
   z-index: 100;
