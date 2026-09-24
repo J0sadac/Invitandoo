@@ -70,12 +70,20 @@ function Padres ({evento, datos, fondo, festejado}){
                         <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
                     )}
 
-                    <div className='contenedor'>
-                        <span>
-                            Es un honor para mí invitarte a celebrar la dicha de mis XV años, 
-                            en compañía de
-                        </span>
-                    </div>
+                    {festejado === 'Britany Alondra' ? (
+                        <div className='contenedor'>
+                            <span>
+                                Acompañada siempre por el amor de mis padres
+                            </span>
+                        </div>
+                    ):(
+                        <div className='contenedor'>
+                            <span>
+                                Es un honor para mí invitarte a celebrar la dicha de mis XV años, 
+                                en compañía de
+                            </span>
+                        </div>
+                    )}
 
                     {datos.padres[0]?.papa? (
                         <>

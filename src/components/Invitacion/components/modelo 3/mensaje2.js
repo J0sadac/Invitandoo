@@ -74,7 +74,7 @@ function MensajeDos ({evento, fondo, festejado, frases, id}){
                     )}
                 </>
             ):(
-                <p>
+                <p className='parrafo'>
                     Estos momentos se vuelven eternos al compartirlos con ustedes.
                 </p>
             )}

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import liverpool from '../../../../multimedia/herramientas/liverpool.png';
 import lluvia from '../../../../multimedia/herramientas/Lluvia de sobres.svg';
 import negros from '../../../../multimedia/herramientas/Lluvia de sobres negros.png';
-import violeta from '../../../../multimedia/herramientas/violeta.png';
-import vino from '../../../../multimedia/herramientas/Sobres vino.png';
+import violeta from '../../../../multimedia/herramientas/Lluvia de sobres violeta.png';
+import vino from '../../../../multimedia/herramientas/Lluvia de sobres vino.png';
 import verde from '../../../../multimedia/herramientas/Lluvia de sobres verde.png';
 import azul from '../../../../multimedia/herramientas/Lluvia de sobres azul.png';
 import bbva from '../../../../multimedia/herramientas/BBVA-logo.png';
@@ -32,11 +32,20 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
 
                     {confirmacion.lluvia === true && (
                         <>
-                            <p className="gracias">
-                                Queremos ahorrarte el tiempo y esfuerzo de elegir el regalo
-                                perfecto, si es tu elección obsequiarnos algo, puedes depositarlo
-                                en el sobre que se te entregará en recepción el día del evento.
-                            </p>
+                            {festejado === 'Britany Alondra' ? (
+                                <p className="gracias">
+                                    Mi mejor regalo es compartir este gran dia contigo
+                                    si deseas regalarme algo puedo sugerirte la siguiente
+                                    opcion:
+                                </p>
+                            ):(
+                                <p className="gracias">
+                                    Queremos ahorrarte el tiempo y esfuerzo de elegir el regalo
+                                    perfecto, si es tu elección obsequiarnos algo, puedes depositarlo
+                                    en el sobre que se te entregará en recepción el día del evento.
+                                </p>
+                            )}
+                    
                             <div className='regalo'>
                                 <div className="contenido">
                                     {festejado === 'Alejandra & Alexander' || 
@@ -44,7 +53,8 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                                     ? (
                                         <img loading="lazy" className='icono' src={negros} alt='...' />
                                     ) : festejado === 'Keila Jozabed' ||
-                                        festejado === 'Ham'
+                                        festejado === 'Ham' ||
+                                        festejado === 'Britany Alondra'
                                     ? (
                                         <img loading="lazy" className='icono' src={violeta} alt='...' />
                                     ) : festejado === 'Andrea Citalan' ? (

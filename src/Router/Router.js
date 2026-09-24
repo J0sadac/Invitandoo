@@ -10,6 +10,7 @@ import Boda from '../components/Inspiracion/components/boda';
 import Xv from '../components/Inspiracion/components/xv';
 
 import Gestion from '../components/Gestion/gestion';
+import Recepcion from '../components/Recepcion/recepcion';
 
 const Router = () => {
 
@@ -24,6 +25,8 @@ const Router = () => {
                 <Route exact path='/evento/:eventoId/invitado/:invitadoId' element={<Invitaciones />} />
 
                 <Route exact path='/evento/:eventoId/gestion' element={<Gestion />} />
+
+                <Route exact path='/evento/:eventoId/recepcion' element={<Recepcion />} />
 
                 <Route exact path='/inspiracion' element={<Inspiracion />}> 
                     <Route path="boda" element={<Boda />} />
