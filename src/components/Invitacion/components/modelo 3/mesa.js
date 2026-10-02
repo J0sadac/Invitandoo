@@ -7,6 +7,7 @@ import violeta from '../../../../multimedia/herramientas/Lluvia de sobres violet
 import vino from '../../../../multimedia/herramientas/Lluvia de sobres vino.png';
 import verde from '../../../../multimedia/herramientas/Lluvia de sobres verde.png';
 import azul from '../../../../multimedia/herramientas/Lluvia de sobres azul.png';
+import dorado from '../../../../multimedia/herramientas/Lluvia de sobres dorado.png';
 import bbva from '../../../../multimedia/herramientas/BBVA-logo.png';
 import sears from '../../../../multimedia/herramientas/sears.png'
 import antifaz from '../../../../multimedia/herramientas/antifaz veneciaga.png';
@@ -65,6 +66,8 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                                         <img loading="lazy" className='icono' src={azul} alt='...' />
                                     ): festejado === 'Fernanda Sulidane' ? (
                                         <img loading="lazy" className='icono' src={azul} alt='...' />
+                                    ): festejado === 'Camila Roblero' ? (
+                                        <img loading="lazy" className='icono' src={dorado} alt='...' />
                                     ):(
                                         <img loading="lazy" className='icono' src={lluvia} alt='...' />
                                     )}
@@ -147,8 +150,6 @@ function Mesa ({fondo, mesa, confirmacion, festejado}) {
                 </div>
 
             </div>
-            
-
         </section>
     );
 };
