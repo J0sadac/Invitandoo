@@ -124,7 +124,7 @@ $font-date-size: var(--font-date-size);
 
             .titulo{
                 transition: .3s linear;
-                color: white;
+                color: black;
                 text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
                 font-weight: 800;
             }
@@ -132,7 +132,7 @@ $font-date-size: var(--font-date-size);
             .title{
                 font-family: $font-main;
                 font-size: 40px;
-                color: white;
+                color: black;
                 text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
                 font-weight: 800;
 
@@ -146,7 +146,7 @@ $font-date-size: var(--font-date-size);
 
                 font-family: var(--font-portada);
                 font-size: calc($font-main-size + 5px);
-                color: white;
+                color: black;
                 line-height: 55px;
 
                 text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
