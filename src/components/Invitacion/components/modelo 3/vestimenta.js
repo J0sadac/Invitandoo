@@ -2,13 +2,13 @@
 import trajeEtiquetaOscuro from '../../../../multimedia/herramientas/traje etiqueta oscuro.png';
 import trajeFormalOscuro from '../../../../multimedia/herramientas/traje formal oscuro.png';
 import trajeSemifromalOscuro from '../../../../multimedia/herramientas/traje semi formal oscuro.png';
-import trajeInformalOscuro from '../../../../multimedia/herramientas/guayabera.png';
+import trajeInformalOscuro from '../../../../multimedia/herramientas/icono etiqueta glam man.png';
 
 //vestidos oscuros
 import vestidoEtiquetaOscuro from '../../../../multimedia/herramientas/vestido etiqueta oscuro.png';
 import vestidoFormalOscuro from '../../../../multimedia/herramientas/vestido formal oscuro.png';
 import vestidoSemifromalOscuro from '../../../../multimedia/herramientas/vestido semi formal oscuro.png';
-import vestidoInformalOscuro from '../../../../multimedia/herramientas/blusa pili.png';
+import vestidoInformalOscuro from '../../../../multimedia/herramientas/icono etiqueta glam dama.png';
 
 //trajes claros
 import trajeEtiquetaClaro from '../../../../multimedia/herramientas/traje etiqueta claro.png';
@@ -23,12 +23,12 @@ import vestidoSemifromalClaro from '../../../../multimedia/herramientas/vestido 
 import vestidoInformalClaro from '../../../../multimedia/herramientas/vestido informal claro.png';
 
 //ejemplos de vestimenta - Alonso
-import vestMujer01 from '../../../../multimedia/herramientas/vestimenta-mujer-02.jpeg';
-import vestMujer02 from '../../../../multimedia/herramientas/vestimenta-mujer-03.jpeg';
-import vestMujer03 from '../../../../multimedia/herramientas/vestimenta-mujer-01.jpeg';
-import vestHombre01 from '../../../../multimedia/herramientas/vestimenta-hombre-02.jpeg';
-import vestHombre02 from '../../../../multimedia/herramientas/vestimenta-hombre-01.jpeg';
-import vestHombre03 from '../../../../multimedia/herramientas/vestimenta-hombre-03.jpeg';
+import vestMujer01 from '../../../../multimedia/herramientas/Dresscode dama rojo.png';
+import vestMujer02 from '../../../../multimedia/herramientas/Dresscode dama pantalon.png';
+import vestMujer03 from '../../../../multimedia/herramientas/Dresscode dama oro rosa.png';
+import vestHombre01 from '../../../../multimedia/herramientas/Dresscode man champagne.png';
+import vestHombre02 from '../../../../multimedia/herramientas/dresscode man informal.png';
+import vestHombre03 from '../../../../multimedia/herramientas/Dresscode man clasico.png';
 
 import tonoAzul from '../../../../multimedia/herramientas/tonos azul.png';
 import tonoRojo from '../../../../multimedia/herramientas/tonos rojo.png';
