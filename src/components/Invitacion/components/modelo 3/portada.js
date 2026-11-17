@@ -62,6 +62,17 @@ function Portada({ evento, festejado, foto, id}) {
                     </div>
                     <img loading="lazy" className='img' src={foto.url} alt='...' />
                 </section>
+            ) : evento === 'BabyShower' ? (
+                <section className='portada'>
+                    <div className='nombres'>
+                        <span className='titulo'>MI BABY SHOWER</span>
+
+                        <div className='contenedor'>
+                            <span>{festejado}</span>
+                        </div>
+                    </div>
+                    <img loading="lazy" className='img' src={foto.url} alt='...' />
+                </section>
             ): evento === 'Celebracion' ? (
                 <section className='portada'>
                     <div className='nombres'>

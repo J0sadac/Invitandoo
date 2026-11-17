@@ -179,6 +179,40 @@ function Padres ({evento, datos, fondo, festejado}){
                 
                 </section>
             )}
+
+            {evento === 'BabyShower' && (
+                <section className="padres">
+                    {fondo?.url && (
+                        <img loading='lazy' className='fondo' src={fondo.url} alt='...' />
+                    )}
+
+                    <div className='contenedor'>
+                        <span>
+                            Quiero que seas parte de este capítulo tan hermoso y nos acompañes 
+                            a celebrar, en compañía de
+                        </span>
+                    </div>
+
+                    {datos.padres[0]?.papa? (
+                        <>
+                            <p className='titulo'>Mis amados padres</p>
+                            <div className='contenedor'>
+                                <span className='padre'>{datos.padres[0].mama}</span>
+                                <span className='padre'>&</span>
+                                <span className='padre'>{datos.padres[0].papa}</span>
+                            </div>
+                        </>
+                    ):(
+                        <>
+                            <p className='titulo-mama'>Mi amada madre</p>
+                            <div className='contenedor'>
+                                <span className='mama'>{datos.padres[0].mama}</span>
+                            </div>
+                        </>
+                    )}
+                
+                </section>
+            )}
         </>
     );
 };
