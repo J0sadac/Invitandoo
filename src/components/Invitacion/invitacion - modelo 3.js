@@ -240,12 +240,16 @@ function Invitaciones({ evento, festejado }) {
                             )}
                             
                             {evento?.vestimenta && (
-                                <Vestimenta 
-                                    fondo={evento.multimedia.fondos.primero}
-                                    datos={evento.vestimenta}
-                                    modo={evento.estilos.estilosVestimenta.modo}
-                                    festejado={evento.datos.festejado}
-                                />
+                                <>
+                                {evento?._id !== "6afd34e9a76c82c65d03cfd4" && (
+                                    <Vestimenta 
+                                        fondo={evento.multimedia.fondos.primero}
+                                        datos={evento.vestimenta}
+                                        modo={evento.estilos.estilosVestimenta.modo}
+                                        festejado={evento.datos.festejado}
+                                    />
+                                )}
+                                </>
                             )}
 
                             {evento.itinerario.length > 0 && (
